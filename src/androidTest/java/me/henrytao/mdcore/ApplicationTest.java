@@ -14,27 +14,17 @@
  * limitations under the License.
  */
 
-apply plugin: 'com.android.library'
+package me.henrytao.mdcore;
 
-android {
-  compileSdkVersion 22
-  buildToolsVersion "22.0.1"
+import android.app.Application;
+import android.test.ApplicationTestCase;
 
-  defaultConfig {
-    minSdkVersion 14
-    targetSdkVersion 22
-    versionCode 1
-    versionName "1.0"
+/**
+ * <a href="http://d.android.com/tools/testing/testing_android.html">Testing Fundamentals</a>
+ */
+public class ApplicationTest extends ApplicationTestCase<Application> {
+
+  public ApplicationTest() {
+    super(Application.class);
   }
-  buildTypes {
-    release {
-      minifyEnabled false
-      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-    }
-  }
-}
-
-dependencies {
-  compile fileTree(dir: 'libs', include: ['*.jar'])
-  compile 'com.android.support:appcompat-v7:22.0.0'
 }
