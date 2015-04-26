@@ -16,7 +16,7 @@
 
 <resources>
 
-  <style name="MdTheme">
+  <style name="MdTheme.Stylable" parent="">
 
     <!-- used to represent primary / main interface elements for a user -->
     <item name="mdColor_primary">#03A9F4</item>
@@ -131,6 +131,12 @@
     <item name="mdLineHeight_headline">32sp</item>
     <item name="mdLineHeight_display1">40sp</item>
     <item name="mdLineHeight_display2">48sp</item>
+
+    <item name="mdLayout_spacing">16dp</item>
+
+  </style>
+
+  <style name="MdTheme" parent="MdTheme.Stylable">
 
   </style>
 

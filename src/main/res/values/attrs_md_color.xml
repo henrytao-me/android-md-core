@@ -107,7 +107,7 @@
     <attr name="mdDividerColor_background" format="color|reference" />
     <attr name="mdDividerColor_backgroundDark" format="color|reference" />
     <attr name="mdDividerColor_backgroundLight" format="color|reference" />
-
+    
   </declare-styleable>
 
 </resources>
