@@ -133,6 +133,12 @@
     <item name="mdLineHeight_display2">48sp</item>
 
     <item name="mdLayout_spacing">16dp</item>
+    <item name="mdLayout_contentVerticalSpacing">8dp</item>
+
+    <item name="colorPrimary">?attr/mdColor_primary</item>
+    <item name="colorPrimaryDark">?attr/mdColor_primaryDark</item>
+    <item name="colorAccent">?attr/mdColor_accent</item>
+    <item name="android:windowBackground">?attr/mdColor_background</item>
 
   </style>
 

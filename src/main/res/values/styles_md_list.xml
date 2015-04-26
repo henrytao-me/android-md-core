@@ -16,12 +16,21 @@
 
 <resources>
 
-  <declare-styleable name="MdLayout">
+  <style name="MdList">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+  </style>
 
-    <attr name="mdLayout_spacing" format="reference|dimension" />
-    <attr name="mdLayout_contentVerticalSpacing" format="reference|dimension" />
+  <style name="MdList.TextOnly">
+    <item name="android:layout_height">48dp</item>
+    <item name="android:paddingLeft">?attr/mdLayout_spacing</item>
+    <item name="android:paddingRight">?attr/mdLayout_spacing</item>
+  </style>
 
-  </declare-styleable>
-
+  <style name="MdList.TextOnly.Text" parent="MdText.Primary.SingleLine">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:gravity">left|center_vertical</item>
+  </style>
 
 </resources>
