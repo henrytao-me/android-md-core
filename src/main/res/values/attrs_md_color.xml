@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+
+  <declare-styleable name="MdColor">
+
+    <!-- used to represent primary / main interface elements for a user -->
+    <attr name="mdColor_primary" format="color|reference" />
+    <attr name="mdColor_primaryDark" format="color|reference" />
+    <attr name="mdColor_primaryLight" format="color|reference" />
+
+    <!-- used to represent secondary interface elements for a user -->
+    <attr name="mdColor_accent" format="color|reference" />
+    <attr name="mdColor_accentDark" format="color|reference" />
+    <attr name="mdColor_accentLight" format="color|reference" />
+
+    <!-- used to represent interface elements that the user should be careful of -->
+    <attr name="mdColor_warn" format="color|reference" />
+    <attr name="mdColor_warnDark" format="color|reference" />
+    <attr name="mdColor_warnLight" format="color|reference" />
+
+    <!-- used to represent application background for a user -->
+    <attr name="mdColor_background" format="color|reference" />
+    <attr name="mdColor_backgroundDark" format="color|reference" />
+    <attr name="mdColor_backgroundLight" format="color|reference" />
+
+    <!-- pressed state color for all palettes -->
+    <attr name="mdColor_primary_pressed" format="color|reference" />
+    <attr name="mdColor_primaryDark_pressed" format="color|reference" />
+    <attr name="mdColor_primaryLight_pressed" format="color|reference" />
+    <attr name="mdColor_accent_pressed" format="color|reference" />
+    <attr name="mdColor_accentDark_pressed" format="color|reference" />
+    <attr name="mdColor_accentLight_pressed" format="color|reference" />
+    <attr name="mdColor_warn_pressed" format="color|reference" />
+    <attr name="mdColor_warnDark_pressed" format="color|reference" />
+    <attr name="mdColor_warnLight_pressed" format="color|reference" />
+    <attr name="mdColor_background_pressed" format="color|reference" />
+    <attr name="mdColor_backgroundDark_pressed" format="color|reference" />
+    <attr name="mdColor_backgroundLight_pressed" format="color|reference" />
+
+    <!-- textColor for all palettes -->
+    <attr name="mdTextColor_primary" format="color|reference" />
+    <attr name="mdTextColor_primaryDark" format="color|reference" />
+    <attr name="mdTextColor_primaryLight" format="color|reference" />
+    <attr name="mdTextColor_accent" format="color|reference" />
+    <attr name="mdTextColor_accentDark" format="color|reference" />
+    <attr name="mdTextColor_accentLight" format="color|reference" />
+    <attr name="mdTextColor_warn" format="color|reference" />
+    <attr name="mdTextColor_warnDark" format="color|reference" />
+    <attr name="mdTextColor_warnLight" format="color|reference" />
+    <attr name="mdTextColor_background" format="color|reference" />
+    <attr name="mdTextColor_backgroundDark" format="color|reference" />
+    <attr name="mdTextColor_backgroundLight" format="color|reference" />
+
+    <!-- secondary textColor for all palettes -->
+    <attr name="mdSecondaryTextColor_primary" format="color|reference" />
+    <attr name="mdSecondaryTextColor_primaryDark" format="color|reference" />
+    <attr name="mdSecondaryTextColor_primaryLight" format="color|reference" />
+    <attr name="mdSecondaryTextColor_accent" format="color|reference" />
+    <attr name="mdSecondaryTextColor_accentDark" format="color|reference" />
+    <attr name="mdSecondaryTextColor_accentLight" format="color|reference" />
+    <attr name="mdSecondaryTextColor_warn" format="color|reference" />
+    <attr name="mdSecondaryTextColor_warnDark" format="color|reference" />
+    <attr name="mdSecondaryTextColor_warnLight" format="color|reference" />
+    <attr name="mdSecondaryTextColor_background" format="color|reference" />
+    <attr name="mdSecondaryTextColor_backgroundDark" format="color|reference" />
+    <attr name="mdSecondaryTextColor_backgroundLight" format="color|reference" />
+
+    <!-- textColor for all palettes -->
+    <attr name="mdHintTextColor_primary" format="color|reference" />
+    <attr name="mdHintTextColor_primaryDark" format="color|reference" />
+    <attr name="mdHintTextColor_primaryLight" format="color|reference" />
+    <attr name="mdHintTextColor_accent" format="color|reference" />
+    <attr name="mdHintTextColor_accentDark" format="color|reference" />
+    <attr name="mdHintTextColor_accentLight" format="color|reference" />
+    <attr name="mdHintTextColor_warn" format="color|reference" />
+    <attr name="mdHintTextColor_warnDark" format="color|reference" />
+    <attr name="mdHintTextColor_warnLight" format="color|reference" />
+    <attr name="mdHintTextColor_background" format="color|reference" />
+    <attr name="mdHintTextColor_backgroundDark" format="color|reference" />
+    <attr name="mdHintTextColor_backgroundLight" format="color|reference" />
+
+    <!-- dividerColor for all palettes -->
+    <attr name="mdDividerColor_primary" format="color|reference" />
+    <attr name="mdDividerColor_primaryDark" format="color|reference" />
+    <attr name="mdDividerColor_primaryLight" format="color|reference" />
+    <attr name="mdDividerColor_accent" format="color|reference" />
+    <attr name="mdDividerColor_accentDark" format="color|reference" />
+    <attr name="mdDividerColor_accentLight" format="color|reference" />
+    <attr name="mdDividerColor_warn" format="color|reference" />
+    <attr name="mdDividerColor_warnDark" format="color|reference" />
+    <attr name="mdDividerColor_warnLight" format="color|reference" />
+    <attr name="mdDividerColor_background" format="color|reference" />
+    <attr name="mdDividerColor_backgroundDark" format="color|reference" />
+    <attr name="mdDividerColor_backgroundLight" format="color|reference" />
+
+  </declare-styleable>
+
+</resources>

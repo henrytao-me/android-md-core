@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+
+  <style name="MdTheme">
+
+    <!-- used to represent primary / main interface elements for a user -->
+    <item name="mdColor_primary">#03A9F4</item>
+    <item name="mdColor_primaryDark">#0288D1</item>
+    <item name="mdColor_primaryLight">#B3E5FC</item>
+
+    <!-- used to represent secondary interface elements for a user -->
+    <item name="mdColor_accent">#E91E63</item>
+    <item name="mdColor_accentDark">?attr/mdColor_accent</item>
+    <item name="mdColor_accentLight">?attr/mdColor_accent</item>
+
+    <!-- used to represent interface elements that the user should be careful of -->
+    <item name="mdColor_warn">?attr/mdColor_warn</item>
+    <item name="mdColor_warnDark">?attr/mdColor_warn</item>
+    <item name="mdColor_warnLight">?attr/mdColor_warn</item>
+
+    <!-- used to represent application background for a user -->
+    <item name="mdColor_background">#F5F5F5</item>
+    <item name="mdColor_backgroundDark">?attr/mdColor_background</item>
+    <item name="mdColor_backgroundLight">?attr/mdColor_background</item>
+
+    <!-- pressed state color for all palettes -->
+    <item name="mdColor_primary_pressed">?attr/mdColor_primaryDark</item>
+    <item name="mdColor_primaryDark_pressed">?attr/mdColor_primaryLight</item>
+    <item name="mdColor_primaryLight_pressed">?attr/mdColor_primary</item>
+    <item name="mdColor_accent_pressed">?attr/mdColor_accentDark</item>
+    <item name="mdColor_accentDark_pressed">?attr/mdColor_accentLight</item>
+    <item name="mdColor_accentLight_pressed">?attr/mdColor_accent</item>
+    <item name="mdColor_warn_pressed">?attr/mdColor_warnDark</item>
+    <item name="mdColor_warnDark_pressed">?attr/mdColor_warnLight</item>
+    <item name="mdColor_warnLight_pressed">?attr/mdColor_warn</item>
+    <item name="mdColor_background_pressed">?attr/mdColor_backgroundDark</item>
+    <item name="mdColor_backgroundDark_pressed">?attr/mdColor_backgroundLight</item>
+    <item name="mdColor_backgroundLight_pressed">?attr/mdColor_background</item>
+
+    <!-- Dark text on light backgrounds:  87%:DE 54%:8A 26%:42 12%:1E -->
+    <!-- White text on dark backgrounds: 100%:FF 70%:B3 30%:4C 12%:1E -->
+
+    <!-- textColor for all palettes -->
+    <item name="mdTextColor_primary">#DE000000</item>
+    <item name="mdTextColor_primaryDark">#DEFFFFFF</item>
+    <item name="mdTextColor_primaryLight">?attr/mdTextColor_primary</item>
+    <item name="mdTextColor_accent">#DEFFFFFF</item>
+    <item name="mdTextColor_accentDark">?attr/mdTextColor_accent</item>
+    <item name="mdTextColor_accentLight">#DE000000</item>
+    <item name="mdTextColor_warn">?attr/mdTextColor_accent</item>
+    <item name="mdTextColor_warnDark">?attr/mdTextColor_accentDark</item>
+    <item name="mdTextColor_warnLight">?attr/mdTextColor_accentLight</item>
+    <item name="mdTextColor_background">#DE000000</item>
+    <item name="mdTextColor_backgroundDark">?attr/mdTextColor_background</item>
+    <item name="mdTextColor_backgroundLight">?attr/mdTextColor_background</item>
+
+    <!-- secondary textColor for all palettes -->
+    <item name="mdSecondaryTextColor_primary">#8A000000</item>
+    <item name="mdSecondaryTextColor_primaryDark">#8AFFFFFF</item>
+    <item name="mdSecondaryTextColor_primaryLight">?attr/mdSecondaryTextColor_primary</item>
+    <item name="mdSecondaryTextColor_accent">#8AFFFFFF</item>
+    <item name="mdSecondaryTextColor_accentDark">?attr/mdSecondaryTextColor_accent</item>
+    <item name="mdSecondaryTextColor_accentLight">#8A000000</item>
+    <item name="mdSecondaryTextColor_warn">?attr/mdSecondaryTextColor_accent</item>
+    <item name="mdSecondaryTextColor_warnDark">?attr/mdSecondaryTextColor_accentDark</item>
+    <item name="mdSecondaryTextColor_warnLight">?attr/mdSecondaryTextColor_accentLight</item>
+    <item name="mdSecondaryTextColor_background">#8A000000</item>
+    <item name="mdSecondaryTextColor_backgroundDark">?attr/mdSecondaryTextColor_background</item>
+    <item name="mdSecondaryTextColor_backgroundLight">?attr/mdSecondaryTextColor_background</item>
+
+    <!-- textColor for all palettes -->
+    <item name="mdHintTextColor_primary">#42000000</item>
+    <item name="mdHintTextColor_primaryDark">#42FFFFFF</item>
+    <item name="mdHintTextColor_primaryLight">?attr/mdHintTextColor_primary</item>
+    <item name="mdHintTextColor_accent">#42FFFFFF</item>
+    <item name="mdHintTextColor_accentDark">?attr/mdHintTextColor_accent</item>
+    <item name="mdHintTextColor_accentLight">#42000000</item>
+    <item name="mdHintTextColor_warn">?attr/mdHintTextColor_accent</item>
+    <item name="mdHintTextColor_warnDark">?attr/mdHintTextColor_accentDark</item>
+    <item name="mdHintTextColor_warnLight">?attr/mdHintTextColor_accentLight</item>
+    <item name="mdHintTextColor_background">#42000000</item>
+    <item name="mdHintTextColor_backgroundDark">?attr/mdHintTextColor_background</item>
+    <item name="mdHintTextColor_backgroundLight">?attr/mdHintTextColor_background</item>
+
+    <!-- dividerColor for all palettes -->
+    <item name="mdDividerColor_primary">#1E000000</item>
+    <item name="mdDividerColor_primaryDark">#1EFFFFFF</item>
+    <item name="mdDividerColor_primaryLight">?attr/mdDividerColor_primary</item>
+    <item name="mdDividerColor_accent">#1EFFFFFF</item>
+    <item name="mdDividerColor_accentDark">?attr/mdDividerColor_accent</item>
+    <item name="mdDividerColor_accentLight">#1E000000</item>
+    <item name="mdDividerColor_warn">?attr/mdDividerColor_accent</item>
+    <item name="mdDividerColor_warnDark">?attr/mdDividerColor_accentDark</item>
+    <item name="mdDividerColor_warnLight">?attr/mdDividerColor_accentLight</item>
+    <item name="mdDividerColor_background">#1E000000</item>
+    <item name="mdDividerColor_backgroundDark">?attr/mdDividerColor_background</item>
+    <item name="mdDividerColor_backgroundLight">?attr/mdDividerColor_background</item>
+
+    <item name="mdFontSize_button">14sp</item>
+    <item name="mdFontSize_caption">12sp</item>
+    <item name="mdFontSize_body1">14sp</item>
+    <item name="mdFontSize_body2">14sp</item>
+    <item name="mdFontSize_subhead">16sp</item>
+    <item name="mdFontSize_title">20sp</item>
+    <item name="mdFontSize_headline">24sp</item>
+    <item name="mdFontSize_display1">34sp</item>
+    <item name="mdFontSize_display2">45sp</item>
+    <item name="mdFontSize_display3">56sp</item>
+    <item name="mdFontSize_display4">112sp</item>
+
+    <item name="mdLineHeight_body1">20sp</item>
+    <item name="mdLineHeight_body2">24sp</item>
+    <item name="mdLineHeight_subhead">?attr/mdLineHeight_subhead1</item>
+    <item name="mdLineHeight_subhead1">24sp</item>
+    <item name="mdLineHeight_subhead2">28sp</item>
+    <item name="mdLineHeight_headline">32sp</item>
+    <item name="mdLineHeight_display1">40sp</item>
+    <item name="mdLineHeight_display2">48sp</item>
+
+  </style>
+
+</resources>
