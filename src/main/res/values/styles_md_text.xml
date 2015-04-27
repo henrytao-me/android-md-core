@@ -22,7 +22,7 @@
   </style>
 
   <style name="MdText.Primary">
-    <item name="android:color">?attr/mdTextColor_backgroundPalette</item>
+    <item name="android:textColor">?attr/mdTextColor_backgroundPalette</item>
   </style>
 
   <style name="MdText.Primary.SingleLine">
@@ -32,7 +32,7 @@
   </style>
 
   <style name="MdText.Secondary">
-    <item name="android:color">?attr/mdSecondaryTextColor_backgroundPalette</item>
+    <item name="android:textColor">?attr/mdSecondaryTextColor_backgroundPalette</item>
   </style>
 
   <style name="MdText.Secondary.SingleLine">

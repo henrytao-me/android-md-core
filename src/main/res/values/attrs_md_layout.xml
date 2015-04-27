@@ -18,8 +18,13 @@
 
   <declare-styleable name="MdLayout">
 
-    <attr name="mdLayout_spacing" format="reference|dimension" />
-    <attr name="mdLayout_contentVerticalSpacing" format="reference|dimension" />
+    <attr name="mdLayout_spacing_lg" format="dimension|reference" />
+    <attr name="mdLayout_spacing" format="dimension|reference" />
+    <attr name="mdLayout_spacing_sm" format="dimension|reference" />
+    <attr name="mdLayout_spacing_xs" format="dimension|reference" />
+    <attr name="mdLayout_spacing_xxs" format="dimension|reference" />
+    <attr name="mdLayout_spaceBetweenContentAreas" format="dimension|reference" />
+    <attr name="mdLayout_contentAssociatedWithIconOrAvatarLeftMargin" format="dimension|reference" />
 
   </declare-styleable>
 
