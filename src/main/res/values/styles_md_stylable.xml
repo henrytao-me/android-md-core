@@ -135,7 +135,6 @@
     <item name="mdLayout_spacing">16dp</item>
     <item name="mdLayout_contentVerticalSpacing">8dp</item>
 
-    <item name="mdDrawerLayout_drawerWidth">280dp</item>
     <item name="mdDrawerLayout_translucentNavigationBackground">@null</item>
     <item name="mdDrawerLayout_fitsSystemWindows">false</item>
 
