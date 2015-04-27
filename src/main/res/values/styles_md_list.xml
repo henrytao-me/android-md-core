@@ -84,7 +84,7 @@
     <item name="android:layout_alignParentTop">true</item>
     <item name="android:paddingLeft">?attr/mdLayout_spacing</item>
     <item name="android:paddingRight">?attr/mdLayout_spacing</item>
-    <item name="android:paddingBottom">2dp</item>
+    <item name="android:paddingBottom">1.5dp</item>
     <item name="android:gravity">left|bottom</item>
   </style>
 
@@ -94,9 +94,8 @@
     <item name="android:layout_alignParentBottom">true</item>
     <item name="android:paddingLeft">?attr/mdLayout_spacing</item>
     <item name="android:paddingRight">?attr/mdLayout_spacing</item>
-    <item name="android:paddingTop">2dp</item>
+    <item name="android:paddingTop">1.5dp</item>
     <item name="android:gravity">left|top</item>
-    <item name="android:textColor">?attr/mdSecondaryTextColor_backgroundPalette</item>
   </style>
 
   <!-- TwoLine.IconWithText -->
@@ -131,5 +130,50 @@
 
   <style name="MdList.TwoLine.AvatarWithText.Icon" parent="MdList.SingleLine.AvatarWithText.Icon"></style>
 
+  <!-- ThreeLine.TextOnly -->
+
+  <style name="MdList.ThreeLine.TextOnly" parent="">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">88dp</item>
+  </style>
+
+  <style name="MdList.ThreeLine.TextOnly.Text.First" parent="MdText.Primary.SingleLine">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">32dp</item>
+    <item name="android:layout_alignParentTop">true</item>
+    <item name="android:paddingLeft">?attr/mdLayout_spacing</item>
+    <item name="android:paddingRight">?attr/mdLayout_spacing</item>
+    <item name="android:gravity">left|bottom</item>
+  </style>
+
+  <style name="MdList.ThreeLine.TextOnly.Text.Second" parent="MdText.Secondary.SingleLine">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">24dp</item>
+    <item name="android:layout_centerVertical">true</item>
+    <item name="android:paddingLeft">?attr/mdLayout_spacing</item>
+    <item name="android:paddingRight">?attr/mdLayout_spacing</item>
+    <item name="android:gravity">left|center_vertical</item>
+    <item name="android:textColor">?attr/mdTextColor_backgroundPalette</item>
+  </style>
+
+  <style name="MdList.ThreeLine.TextOnly.Text.Second.MultipleLine">
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_centerVertical">false</item>
+    <item name="android:gravity">left|top</item>
+    <item name="android:layout_marginTop">36dp</item>
+    <item name="android:lineSpacingExtra">4dp</item>
+    <item name="android:singleLine">false</item>
+    <item name="android:lines">2</item>
+    <item name="android:textColor">?attr/mdSecondaryTextColor_backgroundPalette</item>
+  </style>
+
+  <style name="MdList.ThreeLine.TextOnly.Text.Third" parent="MdText.Secondary.SingleLine">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">32dp</item>
+    <item name="android:layout_alignParentBottom">true</item>
+    <item name="android:paddingLeft">?attr/mdLayout_spacing</item>
+    <item name="android:paddingRight">?attr/mdLayout_spacing</item>
+    <item name="android:gravity">left|top</item>
+  </style>
 
 </resources>

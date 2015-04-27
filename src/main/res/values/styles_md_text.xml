@@ -23,6 +23,7 @@
 
   <style name="MdText.Primary">
     <item name="android:textColor">?attr/mdTextColor_backgroundPalette</item>
+    <item name="android:textSize">?attr/mdFontSize_subhead</item>
   </style>
 
   <style name="MdText.Primary.SingleLine">
@@ -33,6 +34,7 @@
 
   <style name="MdText.Secondary">
     <item name="android:textColor">?attr/mdSecondaryTextColor_backgroundPalette</item>
+    <item name="android:textSize">?attr/mdFontSize_body1</item>
   </style>
 
   <style name="MdText.Secondary.SingleLine">
