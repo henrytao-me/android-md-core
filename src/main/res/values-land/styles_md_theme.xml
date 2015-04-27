@@ -16,7 +16,7 @@
 
 <resources>
 
-  <style name="MdTheme" parent="MdTheme.Stylable">
+  <style name="MdTheme" parent="MdStylable">
 
     <item name="mdLayout_spacing">24dp</item>
 

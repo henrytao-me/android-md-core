@@ -16,8 +16,12 @@
 
 <resources>
 
-  <style name="MdTheme" parent="MdStylable">
+  <declare-styleable name="MdDrawerLayout">
 
-  </style>
+    <attr name="mdDrawerLayout_drawerWidth" format="dimension|reference" />
+    <attr name="mdDrawerLayout_translucentNavigationBackground" format="color|reference" />
+    <attr name="mdDrawerLayout_fitsSystemWindows" format="boolean|reference" />
+
+  </declare-styleable>
 
 </resources>
