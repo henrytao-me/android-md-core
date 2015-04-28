@@ -123,14 +123,14 @@
     <item name="mdFontSize_display3">56sp</item>
     <item name="mdFontSize_display4">112sp</item>
 
-    <item name="mdLineHeight_body1">20sp</item>
-    <item name="mdLineHeight_body2">24sp</item>
+    <item name="mdLineHeight_body1">6sp</item>
+    <item name="mdLineHeight_body2">10sp</item>
     <item name="mdLineHeight_subhead">?attr/mdLineHeight_subhead1</item>
-    <item name="mdLineHeight_subhead1">24sp</item>
-    <item name="mdLineHeight_subhead2">28sp</item>
-    <item name="mdLineHeight_headline">32sp</item>
-    <item name="mdLineHeight_display1">40sp</item>
-    <item name="mdLineHeight_display2">48sp</item>
+    <item name="mdLineHeight_subhead1">8sp</item>
+    <item name="mdLineHeight_subhead2">12sp</item>
+    <item name="mdLineHeight_headline">8sp</item>
+    <item name="mdLineHeight_display1">16sp</item>
+    <item name="mdLineHeight_display2">3sp</item>
 
     <item name="mdLayout_spacing_lg">24dp</item>
     <item name="mdLayout_spacing">16dp</item>
