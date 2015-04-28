@@ -159,7 +159,7 @@
   <style name="MdList.ThreeLine.TextOnly.Text.Second.MultipleLine" parent="MdText.Body1">
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">wrap_content</item>
-    <item name="android:layout_marginTop">34dp</item>
+    <item name="android:layout_marginTop">36dp</item>
     <item name="android:gravity">left|top</item>
     <item name="android:paddingLeft">?attr/mdLayout_spacing</item>
     <item name="android:paddingRight">?attr/mdLayout_spacing</item>
@@ -176,6 +176,70 @@
     <item name="android:paddingRight">?attr/mdLayout_spacing</item>
     <item name="android:gravity">left|top</item>
     <item name="android:textColor">?attr/mdSecondaryTextColor_backgroundPalette</item>
+  </style>
+
+  <!-- ThreeLine.IconWithText -->
+
+  <style name="MdList.ThreeLine.IconWithText" parent="">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">88dp</item>
+  </style>
+
+  <style name="MdList.ThreeLine.IconWithText.Icon" parent="MdList.SingleLine.IconWithText.Icon">
+    <item name="android:layout_centerVertical">false</item>
+    <item name="android:layout_alignParentTop">true</item>
+    <item name="android:layout_marginTop">?attr/mdLayout_spacing</item>
+  </style>
+
+  <style name="MdList.ThreeLine.IconWithText.Text.First" parent="MdList.ThreeLine.TextOnly.Text.First">
+    <item name="android:paddingLeft">?attr/mdLayout_contentAssociatedWithIconOrAvatarLeftMargin</item>
+  </style>
+
+  <style name="MdList.ThreeLine.IconWithText.Text.Second" parent="MdList.ThreeLine.TextOnly.Text.Second">
+    <item name="android:paddingLeft">?attr/mdLayout_contentAssociatedWithIconOrAvatarLeftMargin</item>
+  </style>
+
+  <style name="MdList.ThreeLine.IconWithText.Text.Second.MultipleLine" parent="MdList.ThreeLine.TextOnly.Text.Second.MultipleLine">
+    <item name="android:paddingLeft">?attr/mdLayout_contentAssociatedWithIconOrAvatarLeftMargin</item>
+  </style>
+
+  <style name="MdList.ThreeLine.IconWithText.Text.Third" parent="MdList.ThreeLine.TextOnly.Text.Third">
+    <item name="android:paddingLeft">?attr/mdLayout_contentAssociatedWithIconOrAvatarLeftMargin</item>
+  </style>
+
+  <!-- ThreeLine.AvatarWithText -->
+
+  <style name="MdList.ThreeLine.AvatarWithText" parent="">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">88dp</item>
+  </style>
+
+  <style name="MdList.ThreeLine.AvatarWithText.Avatar" parent="MdList.SingleLine.AvatarWithText.Avatar">
+    <item name="android:layout_centerVertical">false</item>
+    <item name="android:layout_alignParentTop">true</item>
+    <item name="android:layout_marginTop">?attr/mdLayout_spacing</item>
+  </style>
+
+  <style name="MdList.ThreeLine.AvatarWithText.Icon" parent="MdList.SingleLine.AvatarWithText.Icon">
+    <item name="android:layout_centerVertical">false</item>
+    <item name="android:layout_alignParentTop">true</item>
+    <item name="android:layout_marginTop">?attr/mdLayout_spacing</item>
+  </style>
+
+  <style name="MdList.ThreeLine.AvatarWithText.Text.First" parent="MdList.ThreeLine.TextOnly.Text.First">
+    <item name="android:paddingLeft">?attr/mdLayout_contentAssociatedWithIconOrAvatarLeftMargin</item>
+  </style>
+
+  <style name="MdList.ThreeLine.AvatarWithText.Text.Second" parent="MdList.ThreeLine.TextOnly.Text.Second">
+    <item name="android:paddingLeft">?attr/mdLayout_contentAssociatedWithIconOrAvatarLeftMargin</item>
+  </style>
+
+  <style name="MdList.ThreeLine.AvatarWithText.Text.Second.MultipleLine" parent="MdList.ThreeLine.TextOnly.Text.Second.MultipleLine">
+    <item name="android:paddingLeft">?attr/mdLayout_contentAssociatedWithIconOrAvatarLeftMargin</item>
+  </style>
+
+  <style name="MdList.ThreeLine.AvatarWithText.Text.Third" parent="MdList.ThreeLine.TextOnly.Text.Third">
+    <item name="android:paddingLeft">?attr/mdLayout_contentAssociatedWithIconOrAvatarLeftMargin</item>
   </style>
 
 </resources>
