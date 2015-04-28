@@ -29,7 +29,7 @@
     <item name="mdColor_accentPalette_light">?attr/mdColor_accentPalette</item>
 
     <!-- used to represent interface elements that the user should be careful of -->
-    <item name="mdColor_warnPalette">?attr/mdColor_warnPalette</item>
+    <item name="mdColor_warnPalette">?attr/mdColor_accentPalette</item>
     <item name="mdColor_warnPalette_dark">?attr/mdColor_warnPalette</item>
     <item name="mdColor_warnPalette_light">?attr/mdColor_warnPalette</item>
 
@@ -62,9 +62,9 @@
     <item name="mdTextColor_accentPalette">#DEFFFFFF</item>
     <item name="mdTextColor_accentPalette_dark">?attr/mdTextColor_accentPalette</item>
     <item name="mdTextColor_accentPalette_light">#DE000000</item>
-    <item name="mdTextColor_warnPalette">?attr/mdTextColor_accentPalette</item>
-    <item name="mdTextColor_warnPalette_dark">?attr/mdTextColor_accentPalette_dark</item>
-    <item name="mdTextColor_warnPalette_light">?attr/mdTextColor_accentPalette_light</item>
+    <item name="mdTextColor_warnPalette">#DEFFFFFF</item>
+    <item name="mdTextColor_warnPalette_dark">?attr/mdTextColor_warnPalette</item>
+    <item name="mdTextColor_warnPalette_light">#DE000000</item>
     <item name="mdTextColor_backgroundPalette">#DE000000</item>
     <item name="mdTextColor_backgroundPalette_dark">?attr/mdTextColor_backgroundPalette</item>
     <item name="mdTextColor_backgroundPalette_light">?attr/mdTextColor_backgroundPalette</item>
@@ -76,9 +76,9 @@
     <item name="mdSecondaryTextColor_accentPalette">#8AFFFFFF</item>
     <item name="mdSecondaryTextColor_accentPalette_dark">?attr/mdSecondaryTextColor_accentPalette</item>
     <item name="mdSecondaryTextColor_accentPalette_light">#8A000000</item>
-    <item name="mdSecondaryTextColor_warnPalette">?attr/mdSecondaryTextColor_accentPalette</item>
-    <item name="mdSecondaryTextColor_warnPalette_dark">?attr/mdSecondaryTextColor_accentPalette_dark</item>
-    <item name="mdSecondaryTextColor_warnPalette_light">?attr/mdSecondaryTextColor_accentPalette_light</item>
+    <item name="mdSecondaryTextColor_warnPalette">#8AFFFFFF</item>
+    <item name="mdSecondaryTextColor_warnPalette_dark">?attr/mdSecondaryTextColor_warnPalette</item>
+    <item name="mdSecondaryTextColor_warnPalette_light">#8A000000</item>
     <item name="mdSecondaryTextColor_backgroundPalette">#8A000000</item>
     <item name="mdSecondaryTextColor_backgroundPalette_dark">?attr/mdSecondaryTextColor_backgroundPalette</item>
     <item name="mdSecondaryTextColor_backgroundPalette_light">?attr/mdSecondaryTextColor_backgroundPalette</item>
@@ -90,9 +90,9 @@
     <item name="mdHintTextColor_accentPalette">#42FFFFFF</item>
     <item name="mdHintTextColor_accentPalette_dark">?attr/mdHintTextColor_accentPalette</item>
     <item name="mdHintTextColor_accentPalette_light">#42000000</item>
-    <item name="mdHintTextColor_warnPalette">?attr/mdHintTextColor_accentPalette</item>
-    <item name="mdHintTextColor_warnPalette_dark">?attr/mdHintTextColor_accentPalette_dark</item>
-    <item name="mdHintTextColor_warnPalette_light">?attr/mdHintTextColor_accentPalette_light</item>
+    <item name="mdHintTextColor_warnPalette">#42FFFFFF</item>
+    <item name="mdHintTextColor_warnPalette_dark">?attr/mdHintTextColor_warnPalette</item>
+    <item name="mdHintTextColor_warnPalette_light">#42000000</item>
     <item name="mdHintTextColor_backgroundPalette">#42000000</item>
     <item name="mdHintTextColor_backgroundPalette_dark">?attr/mdHintTextColor_backgroundPalette</item>
     <item name="mdHintTextColor_backgroundPalette_light">?attr/mdHintTextColor_backgroundPalette</item>
@@ -104,9 +104,9 @@
     <item name="mdDividerColor_accentPalette">#1EFFFFFF</item>
     <item name="mdDividerColor_accentPalette_dark">?attr/mdDividerColor_accentPalette</item>
     <item name="mdDividerColor_accentPalette_light">#1E000000</item>
-    <item name="mdDividerColor_warnPalette">?attr/mdDividerColor_accentPalette</item>
-    <item name="mdDividerColor_warnPalette_dark">?attr/mdDividerColor_accentPalette_dark</item>
-    <item name="mdDividerColor_warnPalette_light">?attr/mdDividerColor_accentPalette_light</item>
+    <item name="mdDividerColor_warnPalette">#1EFFFFFF</item>
+    <item name="mdDividerColor_warnPalette_dark">?attr/mdDividerColor_warnPalette</item>
+    <item name="mdDividerColor_warnPalette_light">#1E000000</item>
     <item name="mdDividerColor_backgroundPalette">#1E000000</item>
     <item name="mdDividerColor_backgroundPalette_dark">?attr/mdDividerColor_backgroundPalette</item>
     <item name="mdDividerColor_backgroundPalette_light">?attr/mdDividerColor_backgroundPalette</item>

@@ -20,4 +20,33 @@
 
   </style>
 
+  <style name="MdTheme.Dark">
+
+    <!-- used to represent primary / main interface elements for a user -->
+    <item name="mdColor_primaryPalette">#2196F3</item>
+    <item name="mdColor_primaryPalette_dark">#1976D2</item>
+    <item name="mdColor_primaryPalette_light">#BBDEFB</item>
+
+    <!-- textColor for all palettes -->
+    <item name="mdTextColor_primaryPalette">#FFFFFFFF</item>
+    <item name="mdTextColor_primaryPalette_dark">?attr/mdTextColor_primaryPalette</item>
+    <item name="mdTextColor_primaryPalette_light">#DE000000</item>
+
+    <!-- secondary textColor for all palettes -->
+    <item name="mdSecondaryTextColor_primaryPalette">#8AFFFFFF</item>
+    <item name="mdSecondaryTextColor_primaryPalette_dark">?attr/mdSecondaryTextColor_primaryPalette</item>
+    <item name="mdSecondaryTextColor_primaryPalette_light">#8A000000</item>
+
+    <!-- textColor for all palettes -->
+    <item name="mdHintTextColor_primaryPalette">#42FFFFFF</item>
+    <item name="mdHintTextColor_primaryPalette_dark">?attr/mdHintTextColor_primaryPalette</item>
+    <item name="mdHintTextColor_primaryPalette_light">#42000000</item>
+
+    <!-- dividerColor for all palettes -->
+    <item name="mdDividerColor_primaryPalette">#1EFFFFFF</item>
+    <item name="mdDividerColor_primaryPalette_dark">?attr/mdDividerColor_primaryPalette</item>
+    <item name="mdDividerColor_primaryPalette_light">#1E000000</item>
+
+  </style>
+
 </resources>
