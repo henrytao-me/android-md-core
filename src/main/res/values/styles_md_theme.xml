@@ -16,133 +16,36 @@
 
 <resources>
 
-  <style name="MdTheme.Stylable" parent="">
-
-    <!-- used to represent primary / main interface elements for a user -->
-    <item name="mdColor_primaryPalette">#03A9F4</item>
-    <item name="mdColor_primaryPalette_dark">#0288D1</item>
-    <item name="mdColor_primaryPalette_light">#B3E5FC</item>
-
-    <!-- used to represent secondary interface elements for a user -->
-    <item name="mdColor_accentPalette">#E91E63</item>
-    <item name="mdColor_accentPalette_dark">?attr/mdColor_accentPalette</item>
-    <item name="mdColor_accentPalette_light">?attr/mdColor_accentPalette</item>
-
-    <!-- used to represent interface elements that the user should be careful of -->
-    <item name="mdColor_warnPalette">?attr/mdColor_warnPalette</item>
-    <item name="mdColor_warnPalette_dark">?attr/mdColor_warnPalette</item>
-    <item name="mdColor_warnPalette_light">?attr/mdColor_warnPalette</item>
-
-    <!-- used to represent application background for a user -->
-    <item name="mdColor_backgroundPalette">#F5F5F5</item>
-    <item name="mdColor_backgroundPalette_dark">?attr/mdColor_backgroundPalette</item>
-    <item name="mdColor_backgroundPalette_light">?attr/mdColor_backgroundPalette</item>
-
-    <!-- pressed state color for all palettes -->
-    <item name="mdColor_primaryPalette_pressed">?attr/mdColor_primaryPalette_dark</item>
-    <item name="mdColor_primaryPalette_dark_pressed">?attr/mdColor_primaryPalette_light</item>
-    <item name="mdColor_primaryPalette_light_pressed">?attr/mdColor_primaryPalette</item>
-    <item name="mdColor_accentPalette_pressed">?attr/mdColor_accentPalette_dark</item>
-    <item name="mdColor_accentPalette_dark_pressed">?attr/mdColor_accentPalette_light</item>
-    <item name="mdColor_accentPalette_light_pressed">?attr/mdColor_accentPalette</item>
-    <item name="mdColor_warnPalette_pressed">?attr/mdColor_warnPalette_dark</item>
-    <item name="mdColor_warnPalette_dark_pressed">?attr/mdColor_warnPalette_light</item>
-    <item name="mdColor_warnPalette_light_pressed">?attr/mdColor_warnPalette</item>
-    <item name="mdColor_backgroundPalette_pressed">?attr/mdColor_backgroundPalette_dark</item>
-    <item name="mdColor_backgroundPalette_dark_pressed">?attr/mdColor_backgroundPalette_light</item>
-    <item name="mdColor_backgroundPalette_light_pressed">?attr/mdColor_backgroundPalette</item>
-
-    <!-- Dark text on light backgrounds:  87%:DE 54%:8A 26%:42 12%:1E -->
-    <!-- White text on dark backgrounds: 100%:FF 70%:B3 30%:4C 12%:1E -->
-
-    <!-- textColor for all palettes -->
-    <item name="mdTextColor_primaryPalette">#DE000000</item>
-    <item name="mdTextColor_primaryPalette_dark">#DEFFFFFF</item>
-    <item name="mdTextColor_primaryPalette_light">?attr/mdTextColor_primaryPalette</item>
-    <item name="mdTextColor_accentPalette">#DEFFFFFF</item>
-    <item name="mdTextColor_accentPalette_dark">?attr/mdTextColor_accentPalette</item>
-    <item name="mdTextColor_accentPalette_light">#DE000000</item>
-    <item name="mdTextColor_warnPalette">?attr/mdTextColor_accentPalette</item>
-    <item name="mdTextColor_warnPalette_dark">?attr/mdTextColor_accentPalette_dark</item>
-    <item name="mdTextColor_warnPalette_light">?attr/mdTextColor_accentPalette_light</item>
-    <item name="mdTextColor_backgroundPalette">#DE000000</item>
-    <item name="mdTextColor_backgroundPalette_dark">?attr/mdTextColor_backgroundPalette</item>
-    <item name="mdTextColor_backgroundPalette_light">?attr/mdTextColor_backgroundPalette</item>
-
-    <!-- secondary textColor for all palettes -->
-    <item name="mdSecondaryTextColor_primaryPalette">#8A000000</item>
-    <item name="mdSecondaryTextColor_primaryPalette_dark">#8AFFFFFF</item>
-    <item name="mdSecondaryTextColor_primaryPalette_light">?attr/mdSecondaryTextColor_primaryPalette</item>
-    <item name="mdSecondaryTextColor_accentPalette">#8AFFFFFF</item>
-    <item name="mdSecondaryTextColor_accentPalette_dark">?attr/mdSecondaryTextColor_accentPalette</item>
-    <item name="mdSecondaryTextColor_accentPalette_light">#8A000000</item>
-    <item name="mdSecondaryTextColor_warnPalette">?attr/mdSecondaryTextColor_accentPalette</item>
-    <item name="mdSecondaryTextColor_warnPalette_dark">?attr/mdSecondaryTextColor_accentPalette_dark</item>
-    <item name="mdSecondaryTextColor_warnPalette_light">?attr/mdSecondaryTextColor_accentPalette_light</item>
-    <item name="mdSecondaryTextColor_backgroundPalette">#8A000000</item>
-    <item name="mdSecondaryTextColor_backgroundPalette_dark">?attr/mdSecondaryTextColor_backgroundPalette</item>
-    <item name="mdSecondaryTextColor_backgroundPalette_light">?attr/mdSecondaryTextColor_backgroundPalette</item>
-
-    <!-- textColor for all palettes -->
-    <item name="mdHintTextColor_primaryPalette">#42000000</item>
-    <item name="mdHintTextColor_primaryPalette_dark">#42FFFFFF</item>
-    <item name="mdHintTextColor_primaryPalette_light">?attr/mdHintTextColor_primaryPalette</item>
-    <item name="mdHintTextColor_accentPalette">#42FFFFFF</item>
-    <item name="mdHintTextColor_accentPalette_dark">?attr/mdHintTextColor_accentPalette</item>
-    <item name="mdHintTextColor_accentPalette_light">#42000000</item>
-    <item name="mdHintTextColor_warnPalette">?attr/mdHintTextColor_accentPalette</item>
-    <item name="mdHintTextColor_warnPalette_dark">?attr/mdHintTextColor_accentPalette_dark</item>
-    <item name="mdHintTextColor_warnPalette_light">?attr/mdHintTextColor_accentPalette_light</item>
-    <item name="mdHintTextColor_backgroundPalette">#42000000</item>
-    <item name="mdHintTextColor_backgroundPalette_dark">?attr/mdHintTextColor_backgroundPalette</item>
-    <item name="mdHintTextColor_backgroundPalette_light">?attr/mdHintTextColor_backgroundPalette</item>
-
-    <!-- dividerColor for all palettes -->
-    <item name="mdDividerColor_primaryPalette">#1E000000</item>
-    <item name="mdDividerColor_primaryPalette_dark">#1EFFFFFF</item>
-    <item name="mdDividerColor_primaryPalette_light">?attr/mdDividerColor_primaryPalette</item>
-    <item name="mdDividerColor_accentPalette">#1EFFFFFF</item>
-    <item name="mdDividerColor_accentPalette_dark">?attr/mdDividerColor_accentPalette</item>
-    <item name="mdDividerColor_accentPalette_light">#1E000000</item>
-    <item name="mdDividerColor_warnPalette">?attr/mdDividerColor_accentPalette</item>
-    <item name="mdDividerColor_warnPalette_dark">?attr/mdDividerColor_accentPalette_dark</item>
-    <item name="mdDividerColor_warnPalette_light">?attr/mdDividerColor_accentPalette_light</item>
-    <item name="mdDividerColor_backgroundPalette">#1E000000</item>
-    <item name="mdDividerColor_backgroundPalette_dark">?attr/mdDividerColor_backgroundPalette</item>
-    <item name="mdDividerColor_backgroundPalette_light">?attr/mdDividerColor_backgroundPalette</item>
-
-    <item name="mdFontSize_button">14sp</item>
-    <item name="mdFontSize_caption">12sp</item>
-    <item name="mdFontSize_body1">14sp</item>
-    <item name="mdFontSize_body2">14sp</item>
-    <item name="mdFontSize_subhead">16sp</item>
-    <item name="mdFontSize_title">20sp</item>
-    <item name="mdFontSize_headline">24sp</item>
-    <item name="mdFontSize_display1">34sp</item>
-    <item name="mdFontSize_display2">45sp</item>
-    <item name="mdFontSize_display3">56sp</item>
-    <item name="mdFontSize_display4">112sp</item>
-
-    <item name="mdLineHeight_body1">20sp</item>
-    <item name="mdLineHeight_body2">24sp</item>
-    <item name="mdLineHeight_subhead">?attr/mdLineHeight_subhead1</item>
-    <item name="mdLineHeight_subhead1">24sp</item>
-    <item name="mdLineHeight_subhead2">28sp</item>
-    <item name="mdLineHeight_headline">32sp</item>
-    <item name="mdLineHeight_display1">40sp</item>
-    <item name="mdLineHeight_display2">48sp</item>
-
-    <item name="mdLayout_spacing">16dp</item>
-    <item name="mdLayout_contentVerticalSpacing">8dp</item>
-
-    <item name="colorPrimary">?attr/mdColor_primaryPalette</item>
-    <item name="colorPrimaryDark">?attr/mdColor_primaryPalette_dark</item>
-    <item name="colorAccent">?attr/mdColor_accentPalette</item>
-    <item name="android:windowBackground">?attr/mdColor_backgroundPalette</item>
+  <style name="MdTheme" parent="MdStylable">
 
   </style>
 
-  <style name="MdTheme" parent="MdTheme.Stylable">
+  <style name="MdTheme.Dark">
+
+    <!-- used to represent primary / main interface elements for a user -->
+    <item name="mdColor_primaryPalette">#2196F3</item>
+    <item name="mdColor_primaryPalette_dark">#1976D2</item>
+    <item name="mdColor_primaryPalette_light">#BBDEFB</item>
+
+    <!-- textColor for all palettes -->
+    <item name="mdTextColor_primaryPalette">#FFFFFFFF</item>
+    <item name="mdTextColor_primaryPalette_dark">?attr/mdTextColor_primaryPalette</item>
+    <item name="mdTextColor_primaryPalette_light">#DE000000</item>
+
+    <!-- secondary textColor for all palettes -->
+    <item name="mdSecondaryTextColor_primaryPalette">#8AFFFFFF</item>
+    <item name="mdSecondaryTextColor_primaryPalette_dark">?attr/mdSecondaryTextColor_primaryPalette</item>
+    <item name="mdSecondaryTextColor_primaryPalette_light">#8A000000</item>
+
+    <!-- textColor for all palettes -->
+    <item name="mdHintTextColor_primaryPalette">#42FFFFFF</item>
+    <item name="mdHintTextColor_primaryPalette_dark">?attr/mdHintTextColor_primaryPalette</item>
+    <item name="mdHintTextColor_primaryPalette_light">#42000000</item>
+
+    <!-- dividerColor for all palettes -->
+    <item name="mdDividerColor_primaryPalette">#1EFFFFFF</item>
+    <item name="mdDividerColor_primaryPalette_dark">?attr/mdDividerColor_primaryPalette</item>
+    <item name="mdDividerColor_primaryPalette_light">#1E000000</item>
 
   </style>
 

@@ -16,16 +16,19 @@
 
 <resources>
 
-  <style name="MdTheme" parent="MdStylable">
+  <style name="MdCardView">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+  </style>
 
-    <item name="mdLayout_spacing_lg">36dp</item>
-    <item name="mdLayout_spacing">24dp</item>
-    <item name="mdLayout_spacing_sm">12dp</item>
-    <item name="mdLayout_spacing_xs">6dp</item>
-    <item name="mdLayout_spacing_xxs">4dp</item>
-    <item name="mdLayout_spaceBetweenContentAreas">8dp</item>
-    <item name="mdLayout_contentAssociatedWithIconOrAvatarLeftMargin">80dp</item>
-
+  <style name="MdCardView.Toolbar">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="contentPaddingLeft">-6dp</item>
+    <item name="contentPaddingRight">-6dp</item>
+    <item name="contentPaddingTop">-8dp</item>
+    <item name="cardElevation">4dp</item>
+    <item name="cardCornerRadius">0dp</item>
   </style>
 
 </resources>

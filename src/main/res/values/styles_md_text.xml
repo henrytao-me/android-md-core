@@ -19,24 +19,128 @@
   <style name="MdText">
     <item name="android:layout_width">wrap_content</item>
     <item name="android:layout_height">wrap_content</item>
+    <item name="android:textColor">?attr/mdTextColor_backgroundPalette</item>
+    <item name="android:textSize">?attr/mdFontSize_body1</item>
   </style>
 
-  <style name="MdText.Primary">
-    <item name="android:color">?attr/mdTextColor_backgroundPalette</item>
-  </style>
+  <!-- textColor, textSize, textStyle (regular|bold), singleline, textAllCaps, lineSpacingExtra -->
 
-  <style name="MdText.Primary.SingleLine">
-    <item name="android:layout_width">fill_parent</item>
+  <style name="MdText.Button">
+    <item name="android:textSize">?attr/mdFontSize_button</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textAllCaps">true</item>
     <item name="android:singleLine">true</item>
     <item name="android:ellipsize">end</item>
   </style>
 
-  <style name="MdText.Secondary">
-    <item name="android:color">?attr/mdSecondaryTextColor_backgroundPalette</item>
+  <style name="MdText.Caption">
+    <item name="android:textSize">?attr/mdFontSize_caption</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:ellipsize">end</item>
   </style>
 
-  <style name="MdText.Secondary.SingleLine">
-    <item name="android:layout_width">fill_parent</item>
+  <style name="MdText.Body1">
+    <item name="android:textSize">?attr/mdFontSize_body1</item>
+    <item name="android:lineSpacingExtra">?attr/mdLineHeight_body1</item>
+  </style>
+
+  <style name="MdText.Body1.SingleLine">
+    <item name="android:lineSpacingExtra">0sp</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:ellipsize">end</item>
+  </style>
+
+  <style name="MdText.Body2">
+    <item name="android:textSize">?attr/mdFontSize_body1</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:lineSpacingExtra">?attr/mdLineHeight_body2</item>
+  </style>
+
+  <style name="MdText.Body2.SingleLine">
+    <item name="android:lineSpacingExtra">0sp</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:ellipsize">end</item>
+  </style>
+
+  <style name="MdText.Subhead1">
+    <item name="android:textSize">?attr/mdFontSize_subhead</item>
+    <item name="android:lineSpacingExtra">?attr/mdLineHeight_subhead1</item>
+  </style>
+
+  <style name="MdText.Subhead1.SingleLine">
+    <item name="android:lineSpacingExtra">0sp</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:ellipsize">end</item>
+  </style>
+
+  <style name="MdText.Subhead2">
+    <item name="android:textSize">?attr/mdFontSize_subhead</item>
+    <item name="android:lineSpacingExtra">?attr/mdLineHeight_subhead2</item>
+  </style>
+
+  <style name="MdText.Subhead2.SingleLine">
+    <item name="android:lineSpacingExtra">0sp</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:ellipsize">end</item>
+  </style>
+
+  <style name="MdText.Subhead" parent="MdText.Subhead1"></style>
+
+  <style name="MdText.Subhead.SingleLine">
+    <item name="android:lineSpacingExtra">0sp</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:ellipsize">end</item>
+  </style>
+
+  <style name="MdText.Title">
+    <item name="android:textSize">?attr/mdFontSize_title</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:ellipsize">end</item>
+  </style>
+
+  <style name="MdText.Headline">
+    <item name="android:textSize">?attr/mdFontSize_headline</item>
+    <item name="android:lineSpacingExtra">?attr/mdLineHeight_headline</item>
+  </style>
+
+  <style name="MdText.Headline.SingleLine">
+    <item name="android:lineSpacingExtra">0sp</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:ellipsize">end</item>
+  </style>
+
+  <style name="MdText.Display1">
+    <item name="android:textSize">?attr/mdFontSize_display1</item>
+    <item name="android:lineSpacingExtra">?attr/mdLineHeight_display1</item>
+  </style>
+
+  <style name="MdText.Display1.SingleLine">
+    <item name="android:lineSpacingExtra">0sp</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:ellipsize">end</item>
+  </style>
+
+  <style name="MdText.Display2">
+    <item name="android:textSize">?attr/mdFontSize_display2</item>
+    <item name="android:lineSpacingExtra">?attr/mdLineHeight_display2</item>
+  </style>
+
+  <style name="MdText.Display2.SingleLine">
+    <item name="android:lineSpacingExtra">0sp</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:ellipsize">end</item>
+  </style>
+
+  <style name="MdText.Display3">
+    <item name="android:textSize">?attr/mdFontSize_display3</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:ellipsize">end</item>
+  </style>
+
+  <style name="MdText.Display4">
+    <item name="android:textSize">?attr/mdFontSize_display4</item>
     <item name="android:singleLine">true</item>
     <item name="android:ellipsize">end</item>
   </style>
