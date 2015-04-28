@@ -16,10 +16,12 @@
 
 <resources>
 
+  <!-- Note: based on experiment, icons in toolbar/menu should be resize (icon only, not the whole image) to 82% -->
+
   <style name="MdToolbar">
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">?attr/actionBarSize</item>
-    <!--<item name="android:paddingRight">@dimen/md_spacing_xs</item>-->
+    <item name="android:paddingRight">?attr/mdLayout_spacing_xs</item>
     <item name="android:background">?attr/mdColor_primaryPalette</item>
     <item name="theme">@style/MdToolbar.Theme</item>
     <item name="popupTheme">@style/MdToolbar.PopupTheme</item>
