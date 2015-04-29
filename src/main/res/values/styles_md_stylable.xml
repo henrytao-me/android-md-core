@@ -145,6 +145,8 @@
     <item name="mdDrawerLayout_translucentNavigationBackground">@null</item>
     <item name="mdDrawerLayout_fitsSystemWindows">false</item>
 
+    <item name="mdToolbar_background">?attr/mdColor_primaryPalette</item>
+
     <!-- override material style -->
     <item name="colorPrimary">?attr/mdColor_primaryPalette</item>
     <item name="colorPrimaryDark">?attr/mdColor_primaryPalette_dark</item>

@@ -16,15 +16,10 @@
 
 <resources>
 
-  <style name="MdCardView.Toolbar">
-    <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">wrap_content</item>
-    <item name="contentPaddingLeft">0dp</item>
-    <item name="contentPaddingRight">0dp</item>
-    <item name="contentPaddingTop">0dp</item>
-    <item name="contentPaddingBottom">0dp</item>
-    <item name="cardElevation">4dp</item>
-    <item name="cardCornerRadius">0dp</item>
-  </style>
+  <declare-styleable name="MdToolbar">
+
+    <attr name="mdToolbar_background" format="color|reference" />
+
+  </declare-styleable>
 
 </resources>
