@@ -65,10 +65,23 @@
 
   <style name="MdList.SingleLine.AvatarWithText.Text" parent="MdList.SingleLine.IconWithText.Text"></style>
 
-  <style name="MdList.SingleLine.AvatarWithText.Icon" parent="MdList.SingleLine.IconWithText.Icon">
-    <item name="android:layout_marginLeft">0dp</item>
-    <item name="android:layout_marginRight">?attr/mdLayout_spacing</item>
+  <!-- SingleLine.AvatarIconWithText -->
+
+  <style name="MdList.SingleLine.AvatarIconWithText" parent="MdList.SingleLine.AvatarWithText"></style>
+
+  <style name="MdList.SingleLine.AvatarIconWithText.Avatar" parent="MdList.SingleLine.AvatarWithText.Avatar"></style>
+
+  <style name="MdList.SingleLine.AvatarIconWithText.Text" parent="MdList.SingleLine.AvatarWithText.Text"></style>
+
+  <style name="MdList.SingleLine.AvatarIconWithText.Icon" parent="">
+    <item name="android:scaleType">fitCenter</item>
     <item name="android:layout_alignParentRight">true</item>
+    <item name="android:layout_width">?attr/mdList_secondaryActionSize</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:paddingTop">?attr/mdLayout_spacing</item>
+    <item name="android:paddingLeft">?attr/mdLayout_spacing</item>
+    <item name="android:paddingRight">?attr/mdLayout_spacing</item>
+    <item name="android:paddingBottom">?attr/mdLayout_spacing</item>
   </style>
 
   <!-- TwoLine.TextOnly -->
@@ -129,7 +142,17 @@
 
   <style name="MdList.TwoLine.AvatarWithText.Text.Second" parent="MdList.TwoLine.IconWithText.Text.Second"></style>
 
-  <style name="MdList.TwoLine.AvatarWithText.Icon" parent="MdList.SingleLine.AvatarWithText.Icon"></style>
+  <!-- TwoLine.AvatarIconWithText -->
+
+  <style name="MdList.TwoLine.AvatarIconWithText" parent="MdList.TwoLine.AvatarWithText"></style>
+
+  <style name="MdList.TwoLine.AvatarIconWithText.Avatar" parent="MdList.TwoLine.AvatarWithText.Avatar"></style>
+
+  <style name="MdList.TwoLine.AvatarIconWithText.Text.First" parent="MdList.TwoLine.AvatarWithText.Text.First"></style>
+
+  <style name="MdList.TwoLine.AvatarIconWithText.Text.Second" parent="MdList.TwoLine.AvatarWithText.Text.Second"></style>
+
+  <style name="MdList.TwoLine.AvatarIconWithText.Icon" parent="MdList.SingleLine.AvatarIconWithText.Icon"></style>
 
   <!-- ThreeLine.TextOnly -->
 
@@ -220,12 +243,6 @@
     <item name="android:layout_marginTop">?attr/mdLayout_spacing</item>
   </style>
 
-  <style name="MdList.ThreeLine.AvatarWithText.Icon" parent="MdList.SingleLine.AvatarWithText.Icon">
-    <item name="android:layout_centerVertical">false</item>
-    <item name="android:layout_alignParentTop">true</item>
-    <item name="android:layout_marginTop">?attr/mdLayout_spacing</item>
-  </style>
-
   <style name="MdList.ThreeLine.AvatarWithText.Text.First" parent="MdList.ThreeLine.TextOnly.Text.First">
     <item name="android:paddingLeft">?attr/mdLayout_contentAssociatedWithIconOrAvatarLeftMargin</item>
   </style>
@@ -240,6 +257,34 @@
 
   <style name="MdList.ThreeLine.AvatarWithText.Text.Third" parent="MdList.ThreeLine.TextOnly.Text.Third">
     <item name="android:paddingLeft">?attr/mdLayout_contentAssociatedWithIconOrAvatarLeftMargin</item>
+  </style>
+
+  <!-- ThreeLine.AvatarIconWithText -->
+
+  <style name="MdList.ThreeLine.AvatarIconWithText" parent="MdList.ThreeLine.AvatarWithText"></style>
+
+  <style name="MdList.ThreeLine.AvatarIconWithText.Avatar" parent="MdList.ThreeLine.AvatarWithText.Avatar"></style>
+
+  <style name="MdList.ThreeLine.AvatarIconWithText.Icon" parent="MdList.SingleLine.AvatarIconWithText.Icon">
+    <item name="android:layout_alignParentTop">true</item>
+    <item name="android:layout_width">?attr/mdList_secondaryActionSize</item>
+    <item name="android:layout_height">?attr/mdList_secondaryActionSize</item>
+  </style>
+
+  <style name="MdList.ThreeLine.AvatarIconWithText.Text.First" parent="MdList.ThreeLine.AvatarWithText.Text.First">
+    <item name="android:paddingRight">0dp</item>
+  </style>
+
+  <style name="MdList.ThreeLine.AvatarIconWithText.Text.Second" parent="MdList.ThreeLine.AvatarWithText.Text.Second">
+    <item name="android:paddingRight">0dp</item>
+  </style>
+
+  <style name="MdList.ThreeLine.AvatarIconWithText.Text.Second.MultipleLine" parent="MdList.ThreeLine.AvatarWithText.Text.Second.MultipleLine">
+    <item name="android:paddingRight">0dp</item>
+  </style>
+
+  <style name="MdList.ThreeLine.AvatarIconWithText.Text.Third" parent="MdList.ThreeLine.AvatarWithText.Text.Third">
+    <item name="android:paddingRight">0dp</item>
   </style>
 
 </resources>

@@ -16,18 +16,11 @@
 
 <resources>
 
-  <style name="MdTheme" parent="MdStylable">
+  <declare-styleable name="MdList">
 
-    <item name="mdLayout_spacing_lg">36dp</item>
-    <item name="mdLayout_spacing">24dp</item>
-    <item name="mdLayout_spacing_sm">12dp</item>
-    <item name="mdLayout_spacing_xs">6dp</item>
-    <item name="mdLayout_spacing_xxs">4dp</item>
-    <item name="mdLayout_spaceBetweenContentAreas">8dp</item>
-    <item name="mdLayout_contentAssociatedWithIconOrAvatarLeftMargin">80dp</item>
+    <!-- `mdList_secondaryActionSize` includes padding `mdLayout_spacing` -->
+    <attr name="mdList_secondaryActionSize" format="dimension|reference" />
 
-    <item name="mdList_secondaryActionSize">80dp</item>
-
-  </style>
+  </declare-styleable>
 
 </resources>

@@ -140,6 +140,8 @@
     <item name="mdLayout_spaceBetweenContentAreas">8dp</item>
     <item name="mdLayout_contentAssociatedWithIconOrAvatarLeftMargin">72dp</item>
 
+    <item name="mdList_secondaryActionSize">56dp</item>
+
     <item name="mdDrawerLayout_translucentNavigationBackground">@null</item>
     <item name="mdDrawerLayout_fitsSystemWindows">false</item>
 

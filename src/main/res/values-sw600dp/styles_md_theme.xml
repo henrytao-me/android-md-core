@@ -26,6 +26,8 @@
     <item name="mdLayout_spaceBetweenContentAreas">8dp</item>
     <item name="mdLayout_contentAssociatedWithIconOrAvatarLeftMargin">80dp</item>
 
+    <item name="mdList_secondaryActionSize">80dp</item>
+
   </style>
 
 </resources>
