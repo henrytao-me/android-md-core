@@ -139,6 +139,7 @@
     <item name="mdLayout_spacing_xxs">2dp</item>
     <item name="mdLayout_spaceBetweenContentAreas">8dp</item>
     <item name="mdLayout_contentAssociatedWithIconOrAvatarLeftMargin">72dp</item>
+    <item name="mdLayout_contentAssociatedWithIconOrAvatarLeftMargin_negative">-72dp</item>
 
     <item name="mdList_secondaryActionSize">56dp</item>
 

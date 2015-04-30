@@ -25,6 +25,7 @@
     <attr name="mdLayout_spacing_xxs" format="dimension|reference" />
     <attr name="mdLayout_spaceBetweenContentAreas" format="dimension|reference" />
     <attr name="mdLayout_contentAssociatedWithIconOrAvatarLeftMargin" format="dimension|reference" />
+    <attr name="mdLayout_contentAssociatedWithIconOrAvatarLeftMargin_negative" format="dimension|reference" />
 
   </declare-styleable>
 

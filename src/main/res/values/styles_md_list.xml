@@ -76,8 +76,9 @@
   <style name="MdList.SingleLine.AvatarIconWithText.Icon" parent="">
     <item name="android:scaleType">fitCenter</item>
     <item name="android:layout_alignParentRight">true</item>
+    <item name="android:layout_centerVertical">true</item>
     <item name="android:layout_width">?attr/mdList_secondaryActionSize</item>
-    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_height">?attr/mdList_secondaryActionSize</item>
     <item name="android:paddingTop">?attr/mdLayout_spacing</item>
     <item name="android:paddingLeft">?attr/mdLayout_spacing</item>
     <item name="android:paddingRight">?attr/mdLayout_spacing</item>
