@@ -274,18 +274,22 @@
 
   <style name="MdList.ThreeLine.AvatarIconWithText.Text.First" parent="MdList.ThreeLine.AvatarWithText.Text.First">
     <item name="android:paddingRight">0dp</item>
+    <item name="android:layout_marginRight">?attr/mdList_secondaryActionSize</item>
   </style>
 
   <style name="MdList.ThreeLine.AvatarIconWithText.Text.Second" parent="MdList.ThreeLine.AvatarWithText.Text.Second">
     <item name="android:paddingRight">0dp</item>
+    <item name="android:layout_marginRight">?attr/mdList_secondaryActionSize</item>
   </style>
 
   <style name="MdList.ThreeLine.AvatarIconWithText.Text.Second.MultipleLine" parent="MdList.ThreeLine.AvatarWithText.Text.Second.MultipleLine">
     <item name="android:paddingRight">0dp</item>
+    <item name="android:layout_marginRight">?attr/mdList_secondaryActionSize</item>
   </style>
 
   <style name="MdList.ThreeLine.AvatarIconWithText.Text.Third" parent="MdList.ThreeLine.AvatarWithText.Text.Third">
     <item name="android:paddingRight">0dp</item>
+    <item name="android:layout_marginRight">?attr/mdList_secondaryActionSize</item>
   </style>
 
 </resources>
