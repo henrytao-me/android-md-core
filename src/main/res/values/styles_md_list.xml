@@ -197,7 +197,7 @@
     <item name="android:paddingLeft">?attr/mdLayout_spacing</item>
     <item name="android:paddingRight">?attr/mdLayout_spacing</item>
     <item name="android:ellipsize">end</item>
-    <item name="android:lines">2</item>
+    <item name="android:maxLines">2</item>
     <item name="android:textColor">?attr/mdSecondaryTextColor_backgroundPalette</item>
   </style>
 
@@ -276,6 +276,7 @@
   <style name="MdList.ThreeLine.AvatarIconWithText.Avatar" parent="MdList.ThreeLine.AvatarWithText.Avatar"></style>
 
   <style name="MdList.ThreeLine.AvatarIconWithText.Icon" parent="MdList.SingleLine.AvatarIconWithText.Icon">
+    <item name="android:layout_centerVertical">false</item>
     <item name="android:layout_alignParentTop">true</item>
     <item name="android:layout_width">?attr/mdList_secondaryActionSize</item>
     <item name="android:layout_height">?attr/mdList_secondaryActionSize</item>

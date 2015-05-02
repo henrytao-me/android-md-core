@@ -35,7 +35,7 @@
 
     <!-- used to represent application background for a user -->
     <item name="mdColor_backgroundPalette">#F5F5F5</item>
-    <item name="mdColor_backgroundPalette_dark">?attr/mdColor_backgroundPalette</item>
+    <item name="mdColor_backgroundPalette_dark">#E0E0E0</item>
     <item name="mdColor_backgroundPalette_light">?attr/mdColor_backgroundPalette</item>
 
     <!-- pressed state color for all palettes -->

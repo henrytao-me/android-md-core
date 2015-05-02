@@ -16,8 +16,54 @@
 
 <resources>
 
-  <style name="MdButton">
+  <style name="MdTheme.MdButton.Primary" parent="@android:style/Widget.Button">
+    <item name="colorButtonNormal">?attr/mdColor_primaryPalette</item>
+  </style>
 
+  <style name="MdTheme.MdButton.Accent" parent="@android:style/Widget.Button">
+    <item name="colorButtonNormal">?attr/mdColor_accentPalette</item>
+  </style>
+
+  <style name="MdTheme.MdButton.Warn" parent="@android:style/Widget.Button">
+    <item name="colorButtonNormal">?attr/mdColor_warnPalette</item>
+  </style>
+
+  <style name="MdTheme.MdButton.Background" parent="@android:style/Widget.Button">
+    <item name="colorButtonNormal">?attr/mdColor_backgroundPalette</item>
+  </style>
+
+  <style name="MdTheme.MdButton.BackgroundDark" parent="@android:style/Widget.Button">
+    <item name="colorButtonNormal">?attr/mdColor_backgroundPalette_dark</item>
+  </style>
+
+  <style name="MdButton">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+  </style>
+
+  <style name="MdButton.Primary">
+    <item name="android:textColor">?attr/mdTextColor_primaryPalette</item>
+    <item name="android:theme">@style/MdTheme.MdButton.Primary</item>
+  </style>
+
+  <style name="MdButton.Accent">
+    <item name="android:textColor">?attr/mdTextColor_accentPalette</item>
+    <item name="android:theme">@style/MdTheme.MdButton.Accent</item>
+  </style>
+
+  <style name="MdButton.Warn">
+    <item name="android:textColor">?attr/mdTextColor_warnPalette</item>
+    <item name="android:theme">@style/MdTheme.MdButton.Warn</item>
+  </style>
+
+  <style name="MdButton.Background">
+    <item name="android:textColor">?attr/mdTextColor_backgroundPalette</item>
+    <item name="android:theme">@style/MdTheme.MdButton.Background</item>
+  </style>
+
+  <style name="MdButton.BackgroundDark">
+    <item name="android:textColor">?attr/mdTextColor_backgroundPalette_dark</item>
+    <item name="android:theme">@style/MdTheme.MdButton.BackgroundDark</item>
   </style>
 
 </resources>
