@@ -28,7 +28,7 @@
     <item name="android:fitsSystemWindows">?attr/mdDrawerLayout_fitsSystemWindows</item>
   </style>
 
-  <style name="MdDrawerLayout.Drawer" parent="">
+  <style name="MdDrawerLayout.Navigation" parent="">
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">match_parent</item>
     <item name="android:layout_gravity">start</item>
