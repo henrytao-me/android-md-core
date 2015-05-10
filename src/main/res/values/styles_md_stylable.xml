@@ -93,7 +93,7 @@
     <item name="mdHintTextColor_warnPalette">#42FFFFFF</item>
     <item name="mdHintTextColor_warnPalette_dark">?attr/mdHintTextColor_warnPalette</item>
     <item name="mdHintTextColor_warnPalette_light">#42000000</item>
-    <item name="mdHintTextColor_backgroundPalette">#42000000</item>
+    <item name="mdHintTextColor_backgroundPalette">#4C000000</item>
     <item name="mdHintTextColor_backgroundPalette_dark">?attr/mdHintTextColor_backgroundPalette</item>
     <item name="mdHintTextColor_backgroundPalette_light">?attr/mdHintTextColor_backgroundPalette</item>
 
@@ -161,7 +161,7 @@
     <item name="colorPrimary">?attr/mdColor_primaryPalette</item>
     <item name="colorPrimaryDark">?attr/mdColor_primaryPalette_dark</item>
     <item name="colorAccent">?attr/mdColor_accentPalette</item>
-    <item name="colorControlNormal">?attr/mdColor_primaryPalette_light</item>
+    <item name="colorControlNormal">?attr/mdSecondaryTextColor_backgroundPalette</item>
     <item name="colorControlActivated">?attr/mdColor_primaryPalette</item>
   </style>
 
