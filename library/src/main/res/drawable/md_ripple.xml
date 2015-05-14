@@ -14,15 +14,18 @@
   ~ limitations under the License.
   -->
 
-<resources>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-  <string name="close">Close</string>
-  <string name="open">Open</string>
+  <item android:state_pressed="true">
+    <shape>
+      <solid android:color="#1E000000" />
+    </shape>
+  </item>
 
-  <!-- auto generated values -->
+  <item>
+    <shape android:shape="rectangle">
+      <solid android:color="@android:color/transparent" />
+    </shape>
+  </item>
 
-  <string name="app_name">MdDemo</string>
-  <string name="hello_world">Hello world!</string>
-  <string name="action_settings">Settings</string>
-
-</resources>
+</selector>

@@ -16,13 +16,14 @@
 
 <resources>
 
-  <string name="close">Close</string>
-  <string name="open">Open</string>
+  <style name="MdEditText">
+    <item name="android:layout_width">fill_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textColorHint">?attr/mdHintTextColor_backgroundPalette</item>
+  </style>
 
-  <!-- auto generated values -->
-
-  <string name="app_name">MdDemo</string>
-  <string name="hello_world">Hello world!</string>
-  <string name="action_settings">Settings</string>
+  <style name="MdEditText.SingleLine">
+    <item name="android:singleLine">true</item>
+  </style>
 
 </resources>

@@ -16,13 +16,11 @@
 
 <resources>
 
-  <string name="close">Close</string>
-  <string name="open">Open</string>
+  <declare-styleable name="MdList">
 
-  <!-- auto generated values -->
+    <!-- `mdList_secondaryActionSize` includes padding `mdLayout_spacing` -->
+    <attr name="mdList_secondaryActionSize" format="dimension|reference" />
 
-  <string name="app_name">MdDemo</string>
-  <string name="hello_world">Hello world!</string>
-  <string name="action_settings">Settings</string>
+  </declare-styleable>
 
 </resources>

@@ -16,13 +16,11 @@
 
 <resources>
 
-  <string name="close">Close</string>
-  <string name="open">Open</string>
+  <declare-styleable name="MdDrawerLayout">
 
-  <!-- auto generated values -->
+    <attr name="mdDrawerLayout_translucentNavigationBackground" format="color|reference" />
+    <attr name="mdDrawerLayout_fitsSystemWindows" format="boolean|reference" />
 
-  <string name="app_name">MdDemo</string>
-  <string name="hello_world">Hello world!</string>
-  <string name="action_settings">Settings</string>
+  </declare-styleable>
 
 </resources>

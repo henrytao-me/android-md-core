@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+
+  <!-- Note: based on experiment, icons in toolbar/menu should be resize (icon only, not the whole image) to 82% -->
+
+  <style name="MdToolbar">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:minHeight">?attr/actionBarSize</item>
+    <item name="android:paddingRight">?attr/mdLayout_spacing_xs</item>
+    <item name="android:background">?attr/mdToolbar_background</item>
+    <item name="theme">@style/MdToolbar.Theme</item>
+    <item name="popupTheme">@style/MdToolbar.PopupTheme</item>
+  </style>
+
+  <style name="MdToolbar.Theme" parent="Theme.AppCompat.NoActionBar">
+    <item name="android:textColorPrimary">?attr/mdTextColor_primaryPalette</item>
+    <item name="android:textColorPrimaryInverse">?attr/mdTextColor_backgroundPalette</item>
+    <!--android:textColorSecondary is the color of subtitle & the menu overflow icon (three vertical dots) -->
+    <item name="android:textColorSecondary">?attr/mdSecondaryTextColor_primaryPalette</item>
+    <item name="android:textColorSecondaryInverse">?attr/mdSecondaryTextColor_backgroundPalette</item>
+  </style>
+
+  <style name="MdToolbar.PopupTheme" parent="MdToolbar.Theme">
+    <item name="android:background">?attr/mdColor_backgroundPalette</item>
+    <item name="android:textColorPrimary">?attr/mdTextColor_backgroundPalette</item>
+    <item name="android:textColorPrimaryInverse">?attr/mdTextColor_primaryPalette</item>
+    <item name="android:textColorSecondary">?attr/mdSecondaryTextColor_backgroundPalette</item>
+    <item name="android:textColorSecondaryInverse">?attr/mdSecondaryTextColor_primaryPalette</item>
+  </style>
+
+</resources>

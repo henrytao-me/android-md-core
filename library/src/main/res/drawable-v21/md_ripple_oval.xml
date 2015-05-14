@@ -14,15 +14,13 @@
   ~ limitations under the License.
   -->
 
-<resources>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+  android:color="#B3000000">
 
-  <string name="close">Close</string>
-  <string name="open">Open</string>
+  <item android:id="@android:id/mask">
+    <shape android:shape="oval">
+      <solid android:color="#42000000" />
+    </shape>
+  </item>
 
-  <!-- auto generated values -->
-
-  <string name="app_name">MdDemo</string>
-  <string name="hello_world">Hello world!</string>
-  <string name="action_settings">Settings</string>
-
-</resources>
+</ripple>

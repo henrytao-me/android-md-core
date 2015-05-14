@@ -16,13 +16,10 @@
 
 <resources>
 
-  <string name="close">Close</string>
-  <string name="open">Open</string>
-
-  <!-- auto generated values -->
-
-  <string name="app_name">MdDemo</string>
-  <string name="hello_world">Hello world!</string>
-  <string name="action_settings">Settings</string>
+  <style name="MdDivider">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">0.4dp</item>
+    <item name="android:background">?attr/mdDividerColor_backgroundPalette</item>
+  </style>
 
 </resources>

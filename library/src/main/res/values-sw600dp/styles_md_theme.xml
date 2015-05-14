@@ -16,13 +16,19 @@
 
 <resources>
 
-  <string name="close">Close</string>
-  <string name="open">Open</string>
+  <style name="MdTheme" parent="MdStylable">
 
-  <!-- auto generated values -->
+    <item name="mdLayout_spacing_lg">36dp</item>
+    <item name="mdLayout_spacing">24dp</item>
+    <item name="mdLayout_spacing_sm">12dp</item>
+    <item name="mdLayout_spacing_xs">6dp</item>
+    <item name="mdLayout_spacing_xxs">4dp</item>
+    <item name="mdLayout_spaceBetweenContentAreas">8dp</item>
+    <item name="mdLayout_contentAssociatedWithIconOrAvatarLeftMargin">80dp</item>
+    <item name="mdLayout_contentAssociatedWithIconOrAvatarLeftMargin_negative">-80dp</item>
 
-  <string name="app_name">MdDemo</string>
-  <string name="hello_world">Hello world!</string>
-  <string name="action_settings">Settings</string>
+    <item name="mdList_secondaryActionSize">80dp</item>
+
+  </style>
 
 </resources>

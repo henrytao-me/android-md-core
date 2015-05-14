@@ -29,6 +29,10 @@ dependencies {
   compile 'com.android.support:cardview-v7:22.1.1'
   compile 'com.android.support:recyclerview-v7:22.1.1'
 
+  compile 'com.jakewharton:butterknife:6.1.0'
+
+  provided 'org.projectlombok:lombok:1.16.4'
+
   compile(project(':library')) {
     exclude group: 'com.android.support', module: 'appcompat-v7'
     exclude group: 'com.android.support', module: 'cardview-v7'

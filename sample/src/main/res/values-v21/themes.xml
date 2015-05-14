@@ -16,13 +16,10 @@
 
 <resources>
 
-  <string name="close">Close</string>
-  <string name="open">Open</string>
-
-  <!-- auto generated values -->
-
-  <string name="app_name">MdDemo</string>
-  <string name="hello_world">Hello world!</string>
-  <string name="action_settings">Settings</string>
+  <style name="AppTheme.TranslucentNavigation" parent="AppTheme">
+    <item name="android:windowTranslucentStatus">true</item>
+    <item name="mdDrawerLayout_fitsSystemWindows">true</item>
+    <item name="mdDrawerLayout_translucentNavigationBackground">?attr/mdColor_primaryPalette</item>
+  </style>
 
 </resources>

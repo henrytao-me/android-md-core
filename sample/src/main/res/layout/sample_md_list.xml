@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <View style="@style/MdDivider" />
+    <RelativeLayout style="@style/MdList.SingleLine.TextOnly">
+      <TextView
+        android:text="CodeLearn Chapter 1"
+        style="@style/MdList.SingleLine.TextOnly.Text" />
+    </RelativeLayout>
+
+
+    <View style="@style/MdDivider" />
+    <RelativeLayout style="@style/MdList.SingleLine.IconWithText">
+      <ImageView
+        android:src="@drawable/ic_blank"
+        style="@style/MdList.SingleLine.IconWithText.Icon" />
+      <TextView
+        android:text="CodeLearn Chapter 1"
+        style="@style/MdList.SingleLine.IconWithText.Text" />
+    </RelativeLayout>
+
+
+    <View style="@style/MdDivider" />
+    <RelativeLayout style="@style/MdList.SingleLine.AvatarWithText">
+      <ImageView
+        android:src="@drawable/ic_blank"
+        style="@style/MdList.SingleLine.AvatarWithText.Avatar" />
+      <TextView
+        android:text="CodeLearn Chapter 1"
+        style="@style/MdList.SingleLine.AvatarWithText.Text" />
+    </RelativeLayout>
+
+
+    <View style="@style/MdDivider" />
+    <RelativeLayout style="@style/MdList.SingleLine.AvatarIconWithText">
+      <ImageView
+        android:src="@drawable/ic_blank"
+        style="@style/MdList.SingleLine.AvatarIconWithText.Avatar" />
+      <TextView
+        android:text="CodeLearn Chapter 1"
+        style="@style/MdList.SingleLine.AvatarIconWithText.Text" />
+      <ImageView
+        android:id="@+id/icon"
+        android:background="@drawable/ic_blank"
+        android:src="@drawable/ic_blank"
+        style="@style/MdList.SingleLine.AvatarIconWithText.Icon" />
+    </RelativeLayout>
+
+
+    <View style="@style/MdDivider" />
+    <RelativeLayout style="@style/MdList.TwoLine.TextOnly">
+      <TextView
+        android:text="Two-line item"
+        style="@style/MdList.TwoLine.TextOnly.Text.First" />
+      <TextView
+        android:text="Secondary text"
+        style="@style/MdList.TwoLine.TextOnly.Text.Second" />
+    </RelativeLayout>
+
+
+    <View style="@style/MdDivider" />
+    <RelativeLayout style="@style/MdList.TwoLine.IconWithText">
+      <ImageView
+        android:src="@drawable/ic_blank"
+        style="@style/MdList.TwoLine.IconWithText.Icon" />
+      <TextView
+        android:text="Two-line item"
+        style="@style/MdList.TwoLine.IconWithText.Text.First" />
+      <TextView
+        android:text="Secondary text"
+        style="@style/MdList.TwoLine.IconWithText.Text.Second" />
+    </RelativeLayout>
+
+
+    <View style="@style/MdDivider" />
+    <RelativeLayout style="@style/MdList.TwoLine.AvatarWithText">
+      <ImageView
+        android:src="@drawable/ic_blank"
+        style="@style/MdList.TwoLine.AvatarWithText.Avatar" />
+      <TextView
+        android:text="Two-line item"
+        style="@style/MdList.TwoLine.AvatarWithText.Text.First" />
+      <TextView
+        android:text="Secondary text"
+        style="@style/MdList.TwoLine.AvatarWithText.Text.Second" />
+    </RelativeLayout>
+
+
+    <View style="@style/MdDivider" />
+    <RelativeLayout style="@style/MdList.TwoLine.AvatarIconWithText">
+      <ImageView
+        android:src="@drawable/ic_blank"
+        style="@style/MdList.TwoLine.AvatarIconWithText.Avatar" />
+      <ImageView
+        android:id="@+id/icon2"
+        android:background="@drawable/ic_blank"
+        android:src="@drawable/ic_blank"
+        style="@style/MdList.TwoLine.AvatarIconWithText.Icon" />
+      <TextView
+        android:text="Two-line item"
+        style="@style/MdList.TwoLine.AvatarIconWithText.Text.First" />
+      <TextView
+        android:text="Secondary text"
+        style="@style/MdList.TwoLine.AvatarIconWithText.Text.Second" />
+    </RelativeLayout>
+
+
+    <View style="@style/MdDivider" />
+    <RelativeLayout style="@style/MdList.ThreeLine.TextOnly">
+      <TextView
+        android:text="Three-line item"
+        style="@style/MdList.ThreeLine.TextOnly.Text.First" />
+      <TextView
+        android:text="Secondary text secondary text secondary text secondary text secondary text secondary text secondary textsecondary text  textsecondary text textsecondary text textsecondary text "
+        style="@style/MdList.ThreeLine.TextOnly.Text.Second.MultipleLine" />
+    </RelativeLayout>
+
+
+    <View style="@style/MdDivider" />
+    <RelativeLayout style="@style/MdList.ThreeLine.TextOnly">
+      <TextView
+        android:text="Three-line item"
+        style="@style/MdList.ThreeLine.TextOnly.Text.First" />
+      <TextView
+        android:text="Secondary text"
+        style="@style/MdList.ThreeLine.TextOnly.Text.Second" />
+      <TextView
+        android:text="Third content text"
+        style="@style/MdList.ThreeLine.TextOnly.Text.Third" />
+    </RelativeLayout>
+
+
+    <View style="@style/MdDivider" />
+    <RelativeLayout style="@style/MdList.ThreeLine.IconWithText">
+      <ImageView
+        android:src="@drawable/ic_blank"
+        style="@style/MdList.ThreeLine.IconWithText.Icon" />
+      <TextView
+        android:text="Three-line item"
+        style="@style/MdList.ThreeLine.IconWithText.Text.First" />
+      <TextView
+        android:text="Secondary text secondary text secondary text secondary text secondary text secondary text secondary textsecondary text  textsecondary text textsecondary text textsecondary text "
+        style="@style/MdList.ThreeLine.IconWithText.Text.Second.MultipleLine" />
+    </RelativeLayout>
+
+
+    <View style="@style/MdDivider" />
+    <RelativeLayout style="@style/MdList.ThreeLine.IconWithText">
+      <ImageView
+        android:src="@drawable/ic_blank"
+        style="@style/MdList.ThreeLine.IconWithText.Icon" />
+      <TextView
+        android:text="Three-line item"
+        style="@style/MdList.ThreeLine.IconWithText.Text.First" />
+      <TextView
+        android:text="Secondary text secondary text secondary text secondary text secondary text secondary text secondary textsecondary text  textsecondary text textsecondary text textsecondary text "
+        style="@style/MdList.ThreeLine.IconWithText.Text.Second" />
+      <TextView
+        android:text="Third text Third text Third text Third text Third text Third text Third text "
+        style="@style/MdList.ThreeLine.IconWithText.Text.Third" />
+    </RelativeLayout>
+
+
+    <View style="@style/MdDivider" />
+    <RelativeLayout style="@style/MdList.ThreeLine.AvatarIconWithText">
+      <ImageView
+        android:src="@drawable/ic_blank"
+        style="@style/MdList.ThreeLine.AvatarIconWithText.Avatar" />
+      <ImageView
+        android:id="@+id/icon3"
+        android:background="@drawable/ic_blank"
+        android:src="@drawable/ic_blank"
+        style="@style/MdList.ThreeLine.AvatarIconWithText.Icon" />
+      <TextView
+        android:text="Three-line item"
+        style="@style/MdList.ThreeLine.AvatarIconWithText.Text.First" />
+      <TextView
+        android:text="Secondary text secondary text secondary text secondary text secondary text secondary text secondary textsecondary text  textsecondary text textsecondary text textsecondary text "
+        style="@style/MdList.ThreeLine.AvatarIconWithText.Text.Second.MultipleLine" />
+    </RelativeLayout>
+
+
+    <View style="@style/MdDivider" />
+    <RelativeLayout style="@style/MdList.ThreeLine.AvatarIconWithText">
+      <ImageView
+        android:src="@drawable/ic_blank"
+        style="@style/MdList.ThreeLine.AvatarIconWithText.Avatar" />
+      <ImageView
+        android:id="@+id/icon4"
+        android:background="@drawable/ic_blank"
+        android:src="@drawable/ic_blank"
+        style="@style/MdList.ThreeLine.AvatarIconWithText.Icon" />
+      <TextView
+        android:text="Three-line item"
+        style="@style/MdList.ThreeLine.AvatarIconWithText.Text.First" />
+      <TextView
+        android:text="Secondary text secondary text secondary text secondary text secondary text secondary text secondary textsecondary text  textsecondary text textsecondary text textsecondary text "
+        style="@style/MdList.ThreeLine.AvatarIconWithText.Text.Second" />
+      <TextView
+        android:text="Third text Third text Third text Third text Third text Third text Third text "
+        style="@style/MdList.ThreeLine.AvatarIconWithText.Text.Third" />
+    </RelativeLayout>
+
+
+    <View style="@style/MdDivider" />
+  </LinearLayout>
+</ScrollView>
