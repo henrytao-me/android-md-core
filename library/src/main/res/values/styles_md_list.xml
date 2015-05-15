@@ -26,6 +26,13 @@
     <item name="android:layout_height">?attr/mdList_spacing</item>
   </style>
 
+  <style name="MdList.Wrapper">
+    <item name="android:orientation">vertical</item>
+    <item name="android:layout_centerVertical">true</item>
+    <item name="android:paddingTop">?attr/mdLayout_spacing_sm</item>
+    <item name="android:paddingBottom">?attr/mdLayout_spacing_sm</item>
+  </style>
+
   <!-- SingleLine.TextOnly -->
 
   <style name="MdList.SingleLine.TextOnly" parent="">
@@ -100,36 +107,30 @@
 
   <style name="MdList.TwoLine.TextOnly" parent="">
     <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">72dp</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:minHeight">72dp</item>
   </style>
 
   <style name="MdList.TwoLine.TextOnly.Text.First" parent="MdText.Subhead.SingleLine">
     <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">36dp</item>
-    <item name="android:layout_alignParentTop">true</item>
+    <item name="android:layout_height">wrap_content</item>
     <item name="android:paddingLeft">?attr/mdLayout_spacing</item>
     <item name="android:paddingRight">?attr/mdLayout_spacing</item>
     <item name="android:paddingBottom">1.5dp</item>
-    <item name="android:gravity">left|bottom</item>
   </style>
 
   <style name="MdList.TwoLine.TextOnly.Text.Second" parent="MdText.Body1.SingleLine">
     <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">36dp</item>
-    <item name="android:layout_alignParentBottom">true</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:paddingTop">1.5dp</item>
     <item name="android:paddingLeft">?attr/mdLayout_spacing</item>
     <item name="android:paddingRight">?attr/mdLayout_spacing</item>
-    <item name="android:paddingTop">1.5dp</item>
-    <item name="android:gravity">left|top</item>
     <item name="android:textColor">?attr/mdSecondaryTextColor_backgroundPalette</item>
   </style>
 
   <!-- TwoLine.IconWithText -->
 
-  <style name="MdList.TwoLine.IconWithText" parent="">
-    <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">72dp</item>
-  </style>
+  <style name="MdList.TwoLine.IconWithText" parent="MdList.TwoLine.TextOnly"></style>
 
   <style name="MdList.TwoLine.IconWithText.Icon" parent="MdList.SingleLine.IconWithText.Icon"></style>
 
@@ -143,10 +144,7 @@
 
   <!-- TwoLine.AvatarWithText -->
 
-  <style name="MdList.TwoLine.AvatarWithText" parent="">
-    <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">72dp</item>
-  </style>
+  <style name="MdList.TwoLine.AvatarWithText" parent="MdList.TwoLine.IconWithText"></style>
 
   <style name="MdList.TwoLine.AvatarWithText.Avatar" parent="MdList.SingleLine.AvatarWithText.Avatar"></style>
 

@@ -156,12 +156,32 @@
       android:background="@drawable/md_ripple"
       android:clickable="true"
       style="@style/MdList.TwoLine.TextOnly">
-      <TextView
-        android:text="Two-line item"
-        style="@style/MdList.TwoLine.TextOnly.Text.First" />
-      <TextView
-        android:text="Secondary text"
-        style="@style/MdList.TwoLine.TextOnly.Text.Second" />
+      <LinearLayout style="@style/MdList.Wrapper">
+        <TextView
+          android:text="@string/text_title"
+          style="@style/MdList.TwoLine.TextOnly.Text.First" />
+        <TextView
+          android:text="@string/text_description"
+          style="@style/MdList.TwoLine.TextOnly.Text.Second" />
+      </LinearLayout>
+      <View style="@style/MdDivider.AlignParentBottom" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdList.TwoLine.TextOnly">
+      <LinearLayout style="@style/MdList.Wrapper">
+        <TextView
+          android:singleLine="false"
+          android:text="@string/text_title"
+          style="@style/MdList.TwoLine.TextOnly.Text.First" />
+        <TextView
+          android:singleLine="false"
+          android:text="@string/text_description"
+          style="@style/MdList.TwoLine.TextOnly.Text.Second" />
+      </LinearLayout>
       <View style="@style/MdDivider.AlignParentBottom" />
     </RelativeLayout>
 
@@ -173,12 +193,35 @@
       <ImageView
         android:src="@drawable/ic_blank"
         style="@style/MdList.TwoLine.IconWithText.Icon" />
-      <TextView
-        android:text="Two-line item"
-        style="@style/MdList.TwoLine.IconWithText.Text.First" />
-      <TextView
-        android:text="Secondary text"
-        style="@style/MdList.TwoLine.IconWithText.Text.Second" />
+      <LinearLayout style="@style/MdList.Wrapper">
+        <TextView
+          android:text="@string/text_title"
+          style="@style/MdList.TwoLine.IconWithText.Text.First" />
+        <TextView
+          android:text="@string/text_description"
+          style="@style/MdList.TwoLine.IconWithText.Text.Second" />
+      </LinearLayout>
+      <View style="@style/MdDivider.AlignParentBottom" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdList.TwoLine.IconWithText">
+      <ImageView
+        android:src="@drawable/ic_blank"
+        style="@style/MdList.TwoLine.IconWithText.Icon" />
+      <LinearLayout style="@style/MdList.Wrapper">
+        <TextView
+          android:singleLine="false"
+          android:text="@string/text_title"
+          style="@style/MdList.TwoLine.IconWithText.Text.First" />
+        <TextView
+          android:singleLine="false"
+          android:text="@string/text_description"
+          style="@style/MdList.TwoLine.IconWithText.Text.Second" />
+      </LinearLayout>
       <View style="@style/MdDivider.AlignParentBottom" />
     </RelativeLayout>
 
@@ -190,12 +233,35 @@
       <ImageView
         android:src="@drawable/ic_blank"
         style="@style/MdList.TwoLine.AvatarWithText.Avatar" />
-      <TextView
-        android:text="Two-line item"
-        style="@style/MdList.TwoLine.AvatarWithText.Text.First" />
-      <TextView
-        android:text="Secondary text"
-        style="@style/MdList.TwoLine.AvatarWithText.Text.Second" />
+      <LinearLayout style="@style/MdList.Wrapper">
+        <TextView
+          android:text="@string/text_title"
+          style="@style/MdList.TwoLine.AvatarWithText.Text.First" />
+        <TextView
+          android:text="@string/text_description"
+          style="@style/MdList.TwoLine.AvatarWithText.Text.Second" />
+      </LinearLayout>
+      <View style="@style/MdDivider.AlignParentBottom" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdList.TwoLine.AvatarWithText">
+      <ImageView
+        android:src="@drawable/ic_blank"
+        style="@style/MdList.TwoLine.AvatarWithText.Avatar" />
+      <LinearLayout style="@style/MdList.Wrapper">
+        <TextView
+          android:singleLine="false"
+          android:text="@string/text_title"
+          style="@style/MdList.TwoLine.AvatarWithText.Text.First" />
+        <TextView
+          android:singleLine="false"
+          android:text="@string/text_description"
+          style="@style/MdList.TwoLine.AvatarWithText.Text.Second" />
+      </LinearLayout>
       <View style="@style/MdDivider.AlignParentBottom" />
     </RelativeLayout>
 
@@ -208,16 +274,42 @@
         android:src="@drawable/ic_blank"
         style="@style/MdList.TwoLine.AvatarIconWithText.Avatar" />
       <ImageView
-        android:id="@+id/icon2"
         android:background="@drawable/ic_blank"
         android:src="@drawable/ic_blank"
         style="@style/MdList.TwoLine.AvatarIconWithText.Icon" />
-      <TextView
-        android:text="Two-line item"
-        style="@style/MdList.TwoLine.AvatarIconWithText.Text.First" />
-      <TextView
-        android:text="Secondary text"
-        style="@style/MdList.TwoLine.AvatarIconWithText.Text.Second" />
+      <LinearLayout style="@style/MdList.Wrapper">
+        <TextView
+          android:text="@string/text_title"
+          style="@style/MdList.TwoLine.AvatarIconWithText.Text.First" />
+        <TextView
+          android:text="@string/text_description"
+          style="@style/MdList.TwoLine.AvatarIconWithText.Text.Second" />
+      </LinearLayout>
+      <View style="@style/MdDivider.AlignParentBottom" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdList.TwoLine.AvatarIconWithText">
+      <ImageView
+        android:src="@drawable/ic_blank"
+        style="@style/MdList.TwoLine.AvatarIconWithText.Avatar" />
+      <ImageView
+        android:background="@drawable/ic_blank"
+        android:src="@drawable/ic_blank"
+        style="@style/MdList.TwoLine.AvatarIconWithText.Icon" />
+      <LinearLayout style="@style/MdList.Wrapper">
+        <TextView
+          android:singleLine="false"
+          android:text="@string/text_title"
+          style="@style/MdList.TwoLine.AvatarIconWithText.Text.First" />
+        <TextView
+          android:singleLine="false"
+          android:text="@string/text_description"
+          style="@style/MdList.TwoLine.AvatarIconWithText.Text.Second" />
+      </LinearLayout>
       <View style="@style/MdDivider.AlignParentBottom" />
     </RelativeLayout>
 
