@@ -28,7 +28,13 @@
     android:paddingTop="?attr/mdList_spacing">
 
 
-    <RelativeLayout style="@style/MdList.SingleLine.TextOnly">
+    <!-- singleline -->
+
+
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdList.SingleLine.TextOnly">
       <TextView
         android:text="@string/text_title"
         style="@style/MdList.SingleLine.TextOnly.Text" />
@@ -36,38 +42,87 @@
     </RelativeLayout>
 
 
-    <RelativeLayout style="@style/MdList.SingleLine.IconWithText">
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdList.SingleLine.TextOnly">
+      <TextView
+        android:singleLine="false"
+        android:text="@string/text_title"
+        style="@style/MdList.SingleLine.TextOnly.Text" />
+      <View style="@style/MdDivider.AlignParentBottom" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdList.SingleLine.IconWithText">
       <ImageView
         android:src="@drawable/ic_blank"
         style="@style/MdList.SingleLine.IconWithText.Icon" />
       <TextView
-        android:text="CodeLearn Chapter 1"
+        android:text="@string/text_title"
         style="@style/MdList.SingleLine.IconWithText.Text" />
       <View style="@style/MdDivider.AlignParentBottom" />
     </RelativeLayout>
 
 
-    <View style="@style/MdDivider" />
-    <RelativeLayout style="@style/MdList.SingleLine.AvatarWithText">
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdList.SingleLine.IconWithText">
+      <ImageView
+        android:src="@drawable/ic_blank"
+        style="@style/MdList.SingleLine.IconWithText.Icon" />
+      <TextView
+        android:singleLine="false"
+        android:text="@string/text_title"
+        style="@style/MdList.SingleLine.IconWithText.Text" />
+      <View style="@style/MdDivider.AlignParentBottom" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdList.SingleLine.AvatarWithText">
       <ImageView
         android:src="@drawable/ic_blank"
         style="@style/MdList.SingleLine.AvatarWithText.Avatar" />
       <TextView
-        android:text="CodeLearn Chapter 1"
+        android:text="@string/text_title"
         style="@style/MdList.SingleLine.AvatarWithText.Text" />
       <View style="@style/MdDivider.AlignParentBottom" />
     </RelativeLayout>
 
 
-    <RelativeLayout style="@style/MdList.SingleLine.AvatarIconWithText">
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdList.SingleLine.AvatarWithText">
+      <ImageView
+        android:src="@drawable/ic_blank"
+        style="@style/MdList.SingleLine.AvatarWithText.Avatar" />
+      <TextView
+        android:singleLine="false"
+        android:text="@string/text_title"
+        style="@style/MdList.SingleLine.AvatarWithText.Text" />
+      <View style="@style/MdDivider.AlignParentBottom" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdList.SingleLine.AvatarIconWithText">
       <ImageView
         android:src="@drawable/ic_blank"
         style="@style/MdList.SingleLine.AvatarIconWithText.Avatar" />
       <TextView
-        android:text="CodeLearn Chapter 1"
+        android:text="@string/text_title"
         style="@style/MdList.SingleLine.AvatarIconWithText.Text" />
       <ImageView
-        android:id="@+id/icon"
         android:background="@drawable/ic_blank"
         android:src="@drawable/ic_blank"
         style="@style/MdList.SingleLine.AvatarIconWithText.Icon" />
@@ -75,8 +130,32 @@
     </RelativeLayout>
 
 
-    <View style="@style/MdDivider" />
-    <RelativeLayout style="@style/MdList.TwoLine.TextOnly">
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdList.SingleLine.AvatarIconWithText">
+      <ImageView
+        android:src="@drawable/ic_blank"
+        style="@style/MdList.SingleLine.AvatarIconWithText.Avatar" />
+      <TextView
+        android:singleLine="false"
+        android:text="@string/text_title"
+        style="@style/MdList.SingleLine.AvatarIconWithText.Text" />
+      <ImageView
+        android:background="@drawable/ic_blank"
+        android:src="@drawable/ic_blank"
+        style="@style/MdList.SingleLine.AvatarIconWithText.Icon" />
+      <View style="@style/MdDivider.AlignParentBottom" />
+    </RelativeLayout>
+
+
+    <!-- twoline -->
+
+
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdList.TwoLine.TextOnly">
       <TextView
         android:text="Two-line item"
         style="@style/MdList.TwoLine.TextOnly.Text.First" />
@@ -87,7 +166,10 @@
     </RelativeLayout>
 
 
-    <RelativeLayout style="@style/MdList.TwoLine.IconWithText">
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdList.TwoLine.IconWithText">
       <ImageView
         android:src="@drawable/ic_blank"
         style="@style/MdList.TwoLine.IconWithText.Icon" />
@@ -101,7 +183,10 @@
     </RelativeLayout>
 
 
-    <RelativeLayout style="@style/MdList.TwoLine.AvatarWithText">
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdList.TwoLine.AvatarWithText">
       <ImageView
         android:src="@drawable/ic_blank"
         style="@style/MdList.TwoLine.AvatarWithText.Avatar" />
@@ -115,7 +200,10 @@
     </RelativeLayout>
 
 
-    <RelativeLayout style="@style/MdList.TwoLine.AvatarIconWithText">
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdList.TwoLine.AvatarIconWithText">
       <ImageView
         android:src="@drawable/ic_blank"
         style="@style/MdList.TwoLine.AvatarIconWithText.Avatar" />
@@ -134,7 +222,10 @@
     </RelativeLayout>
 
 
-    <RelativeLayout style="@style/MdList.ThreeLine.TextOnly">
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdList.ThreeLine.TextOnly">
       <TextView
         android:text="Three-line item"
         style="@style/MdList.ThreeLine.TextOnly.Text.First" />
@@ -145,7 +236,10 @@
     </RelativeLayout>
 
 
-    <RelativeLayout style="@style/MdList.ThreeLine.TextOnly">
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdList.ThreeLine.TextOnly">
       <TextView
         android:text="Three-line item"
         style="@style/MdList.ThreeLine.TextOnly.Text.First" />
@@ -159,7 +253,10 @@
     </RelativeLayout>
 
 
-    <RelativeLayout style="@style/MdList.ThreeLine.IconWithText">
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdList.ThreeLine.IconWithText">
       <ImageView
         android:src="@drawable/ic_blank"
         style="@style/MdList.ThreeLine.IconWithText.Icon" />
@@ -173,7 +270,10 @@
     </RelativeLayout>
 
 
-    <RelativeLayout style="@style/MdList.ThreeLine.IconWithText">
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdList.ThreeLine.IconWithText">
       <ImageView
         android:src="@drawable/ic_blank"
         style="@style/MdList.ThreeLine.IconWithText.Icon" />
@@ -190,7 +290,10 @@
     </RelativeLayout>
 
 
-    <RelativeLayout style="@style/MdList.ThreeLine.AvatarIconWithText">
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdList.ThreeLine.AvatarIconWithText">
       <ImageView
         android:src="@drawable/ic_blank"
         style="@style/MdList.ThreeLine.AvatarIconWithText.Avatar" />
@@ -209,7 +312,10 @@
     </RelativeLayout>
 
 
-    <RelativeLayout style="@style/MdList.ThreeLine.AvatarIconWithText">
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdList.ThreeLine.AvatarIconWithText">
       <ImageView
         android:src="@drawable/ic_blank"
         style="@style/MdList.ThreeLine.AvatarIconWithText.Avatar" />
