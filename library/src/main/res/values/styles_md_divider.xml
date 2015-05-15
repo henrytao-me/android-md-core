@@ -22,4 +22,8 @@
     <item name="android:background">?attr/mdDividerColor_backgroundPalette</item>
   </style>
 
+  <style name="MdDivider.AlignParentBottom">
+    <item name="android:layout_alignParentBottom">true</item>
+  </style>
+
 </resources>

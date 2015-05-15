@@ -23,18 +23,19 @@
   <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingBottom="?attr/mdList_spacing"
+    android:paddingTop="?attr/mdList_spacing">
 
 
-    <View style="@style/MdDivider" />
     <RelativeLayout style="@style/MdList.SingleLine.TextOnly">
       <TextView
-        android:text="CodeLearn Chapter 1"
+        android:text="@string/text_title"
         style="@style/MdList.SingleLine.TextOnly.Text" />
+      <View style="@style/MdDivider.AlignParentBottom" />
     </RelativeLayout>
 
 
-    <View style="@style/MdDivider" />
     <RelativeLayout style="@style/MdList.SingleLine.IconWithText">
       <ImageView
         android:src="@drawable/ic_blank"
@@ -42,6 +43,7 @@
       <TextView
         android:text="CodeLearn Chapter 1"
         style="@style/MdList.SingleLine.IconWithText.Text" />
+      <View style="@style/MdDivider.AlignParentBottom" />
     </RelativeLayout>
 
 
@@ -53,10 +55,10 @@
       <TextView
         android:text="CodeLearn Chapter 1"
         style="@style/MdList.SingleLine.AvatarWithText.Text" />
+      <View style="@style/MdDivider.AlignParentBottom" />
     </RelativeLayout>
 
 
-    <View style="@style/MdDivider" />
     <RelativeLayout style="@style/MdList.SingleLine.AvatarIconWithText">
       <ImageView
         android:src="@drawable/ic_blank"
@@ -69,6 +71,7 @@
         android:background="@drawable/ic_blank"
         android:src="@drawable/ic_blank"
         style="@style/MdList.SingleLine.AvatarIconWithText.Icon" />
+      <View style="@style/MdDivider.AlignParentBottom" />
     </RelativeLayout>
 
 
@@ -80,10 +83,10 @@
       <TextView
         android:text="Secondary text"
         style="@style/MdList.TwoLine.TextOnly.Text.Second" />
+      <View style="@style/MdDivider.AlignParentBottom" />
     </RelativeLayout>
 
 
-    <View style="@style/MdDivider" />
     <RelativeLayout style="@style/MdList.TwoLine.IconWithText">
       <ImageView
         android:src="@drawable/ic_blank"
@@ -94,10 +97,10 @@
       <TextView
         android:text="Secondary text"
         style="@style/MdList.TwoLine.IconWithText.Text.Second" />
+      <View style="@style/MdDivider.AlignParentBottom" />
     </RelativeLayout>
 
 
-    <View style="@style/MdDivider" />
     <RelativeLayout style="@style/MdList.TwoLine.AvatarWithText">
       <ImageView
         android:src="@drawable/ic_blank"
@@ -108,10 +111,10 @@
       <TextView
         android:text="Secondary text"
         style="@style/MdList.TwoLine.AvatarWithText.Text.Second" />
+      <View style="@style/MdDivider.AlignParentBottom" />
     </RelativeLayout>
 
 
-    <View style="@style/MdDivider" />
     <RelativeLayout style="@style/MdList.TwoLine.AvatarIconWithText">
       <ImageView
         android:src="@drawable/ic_blank"
@@ -127,10 +130,10 @@
       <TextView
         android:text="Secondary text"
         style="@style/MdList.TwoLine.AvatarIconWithText.Text.Second" />
+      <View style="@style/MdDivider.AlignParentBottom" />
     </RelativeLayout>
 
 
-    <View style="@style/MdDivider" />
     <RelativeLayout style="@style/MdList.ThreeLine.TextOnly">
       <TextView
         android:text="Three-line item"
@@ -138,10 +141,10 @@
       <TextView
         android:text="Secondary text secondary text secondary text secondary text secondary text secondary text secondary textsecondary text  textsecondary text textsecondary text textsecondary text "
         style="@style/MdList.ThreeLine.TextOnly.Text.Second.MultipleLine" />
+      <View style="@style/MdDivider.AlignParentBottom" />
     </RelativeLayout>
 
 
-    <View style="@style/MdDivider" />
     <RelativeLayout style="@style/MdList.ThreeLine.TextOnly">
       <TextView
         android:text="Three-line item"
@@ -152,10 +155,10 @@
       <TextView
         android:text="Third content text"
         style="@style/MdList.ThreeLine.TextOnly.Text.Third" />
+      <View style="@style/MdDivider.AlignParentBottom" />
     </RelativeLayout>
 
 
-    <View style="@style/MdDivider" />
     <RelativeLayout style="@style/MdList.ThreeLine.IconWithText">
       <ImageView
         android:src="@drawable/ic_blank"
@@ -166,10 +169,10 @@
       <TextView
         android:text="Secondary text secondary text secondary text secondary text secondary text secondary text secondary textsecondary text  textsecondary text textsecondary text textsecondary text "
         style="@style/MdList.ThreeLine.IconWithText.Text.Second.MultipleLine" />
+      <View style="@style/MdDivider.AlignParentBottom" />
     </RelativeLayout>
 
 
-    <View style="@style/MdDivider" />
     <RelativeLayout style="@style/MdList.ThreeLine.IconWithText">
       <ImageView
         android:src="@drawable/ic_blank"
@@ -183,10 +186,10 @@
       <TextView
         android:text="Third text Third text Third text Third text Third text Third text Third text "
         style="@style/MdList.ThreeLine.IconWithText.Text.Third" />
+      <View style="@style/MdDivider.AlignParentBottom" />
     </RelativeLayout>
 
 
-    <View style="@style/MdDivider" />
     <RelativeLayout style="@style/MdList.ThreeLine.AvatarIconWithText">
       <ImageView
         android:src="@drawable/ic_blank"
@@ -202,10 +205,10 @@
       <TextView
         android:text="Secondary text secondary text secondary text secondary text secondary text secondary text secondary textsecondary text  textsecondary text textsecondary text textsecondary text "
         style="@style/MdList.ThreeLine.AvatarIconWithText.Text.Second.MultipleLine" />
+      <View style="@style/MdDivider.AlignParentBottom" />
     </RelativeLayout>
 
 
-    <View style="@style/MdDivider" />
     <RelativeLayout style="@style/MdList.ThreeLine.AvatarIconWithText">
       <ImageView
         android:src="@drawable/ic_blank"
@@ -224,6 +227,7 @@
       <TextView
         android:text="Third text Third text Third text Third text Third text Third text Third text "
         style="@style/MdList.ThreeLine.AvatarIconWithText.Text.Third" />
+      <View style="@style/MdDivider.AlignParentBottom" />
     </RelativeLayout>
 
 

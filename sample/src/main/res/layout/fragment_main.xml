@@ -32,11 +32,10 @@
       android:id="@+id/goto_listview"
       android:background="@drawable/md_ripple"
       style="@style/MdList.SingleLine.TextOnly">
-
       <TextView
         android:text="ListView"
         style="@style/MdList.SingleLine.TextOnly.Text" />
-
+      <View style="@style/MdDivider.AlignParentBottom" />
     </RelativeLayout>
 
     <View style="@style/MdList.Spacing" />

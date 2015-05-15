@@ -23,22 +23,25 @@
 
   <style name="MdList.Spacing">
     <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">8dp</item>
+    <item name="android:layout_height">?attr/mdList_spacing</item>
   </style>
 
   <!-- SingleLine.TextOnly -->
 
   <style name="MdList.SingleLine.TextOnly" parent="">
     <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">48dp</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:minHeight">48dp</item>
   </style>
 
   <style name="MdList.SingleLine.TextOnly.Text" parent="MdText.Subhead.SingleLine">
     <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_centerVertical">true</item>
+    <item name="android:paddingTop">?attr/mdLayout_spacing_sm</item>
     <item name="android:paddingLeft">?attr/mdLayout_spacing</item>
     <item name="android:paddingRight">?attr/mdLayout_spacing</item>
-    <item name="android:gravity">left|center_vertical</item>
+    <item name="android:paddingBottom">?attr/mdLayout_spacing_sm</item>
   </style>
 
   <!-- SingleLine.IconWithText -->

@@ -98,16 +98,16 @@
     <item name="mdHintTextColor_backgroundPalette_light">?attr/mdHintTextColor_backgroundPalette</item>
 
     <!-- dividerColor for all palettes -->
-    <item name="mdDividerColor_primaryPalette">#1E000000</item>
+    <item name="mdDividerColor_primaryPalette">#1E333333</item>
     <item name="mdDividerColor_primaryPalette_dark">#1EFFFFFF</item>
     <item name="mdDividerColor_primaryPalette_light">?attr/mdDividerColor_primaryPalette</item>
     <item name="mdDividerColor_accentPalette">#1EFFFFFF</item>
     <item name="mdDividerColor_accentPalette_dark">?attr/mdDividerColor_accentPalette</item>
-    <item name="mdDividerColor_accentPalette_light">#1E000000</item>
+    <item name="mdDividerColor_accentPalette_light">#1E333333</item>
     <item name="mdDividerColor_warnPalette">#1EFFFFFF</item>
     <item name="mdDividerColor_warnPalette_dark">?attr/mdDividerColor_warnPalette</item>
-    <item name="mdDividerColor_warnPalette_light">#1E000000</item>
-    <item name="mdDividerColor_backgroundPalette">#1E000000</item>
+    <item name="mdDividerColor_warnPalette_light">#1E333333</item>
+    <item name="mdDividerColor_backgroundPalette">#1E333333</item>
     <item name="mdDividerColor_backgroundPalette_dark">?attr/mdDividerColor_backgroundPalette</item>
     <item name="mdDividerColor_backgroundPalette_light">?attr/mdDividerColor_backgroundPalette</item>
 
@@ -142,6 +142,7 @@
     <item name="mdLayout_contentAssociatedWithIconOrAvatarLeftMargin_negative">-72dp</item>
 
     <item name="mdList_secondaryActionSize">56dp</item>
+    <item name="mdList_spacing">8dp</item>
 
     <item name="mdDrawerLayout_translucentNavigationBackground">@null</item>
     <item name="mdDrawerLayout_fitsSystemWindows">false</item>

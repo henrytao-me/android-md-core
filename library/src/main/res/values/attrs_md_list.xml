@@ -20,6 +20,7 @@
 
     <!-- `mdList_secondaryActionSize` includes padding `mdLayout_spacing` -->
     <attr name="mdList_secondaryActionSize" format="dimension|reference" />
+    <attr name="mdList_spacing" format="dimension|reference" />
 
   </declare-styleable>
 
