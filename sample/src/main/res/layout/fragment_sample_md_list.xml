@@ -416,6 +416,35 @@
     </RelativeLayout>
 
 
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdList.ThreeLine.AvatarIconWithText">
+      <ImageView
+        android:src="@drawable/ic_blank"
+        style="@style/MdList.ThreeLine.AvatarIconWithText.Avatar" />
+      <ImageView
+        android:background="@drawable/ic_blank"
+        android:src="@drawable/ic_blank"
+        style="@style/MdList.ThreeLine.AvatarIconWithText.Icon" />
+      <LinearLayout style="@style/MdList.Wrapper">
+        <TextView
+          android:singleLine="false"
+          android:text="@string/text_title"
+          style="@style/MdList.ThreeLine.AvatarIconWithText.Text.First" />
+        <TextView
+          android:singleLine="false"
+          android:text="@string/text_description"
+          style="@style/MdList.ThreeLine.AvatarIconWithText.Text.Second" />
+        <TextView
+          android:singleLine="false"
+          android:text="@string/text_description"
+          style="@style/MdList.ThreeLine.AvatarIconWithText.Text.Third" />
+      </LinearLayout>
+      <View style="@style/MdDivider.AlignParentBottom" />
+    </RelativeLayout>
+
+
     <View style="@style/MdDivider" />
   </LinearLayout>
 </ScrollView>
