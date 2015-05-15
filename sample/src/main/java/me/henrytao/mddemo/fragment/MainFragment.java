@@ -35,4 +35,9 @@ public class MainFragment extends Fragment {
     startActivity(ExampleActivity.getIntent(getActivity(), ExampleMdListFragment.class, "ListView"));
   }
 
+  @OnClick(R.id.goto_textview)
+  protected void onGotoTextviewClicked() {
+    startActivity(ExampleActivity.getIntent(getActivity(), ExampleMdTextFragment.class, "TextView"));
+  }
+
 }

@@ -24,14 +24,20 @@ import android.view.ViewGroup;
 
 import me.henrytao.mddemo.R;
 
-public class ExampleMdListFragment extends Fragment {
+public class ExampleMdTextFragment extends Fragment {
 
-  public ExampleMdListFragment() {
+
+  public ExampleMdTextFragment() {
+
   }
+
 
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
       Bundle savedInstanceState) {
-    return inflater.inflate(R.layout.fragment_example_md_list, container, false);
+    // Inflate the layout for this fragment
+    return inflater.inflate(R.layout.fragment_example_md_text, container, false);
   }
+
+
 }
