@@ -30,11 +30,11 @@ import me.henrytao.mddemo.R;
  */
 public abstract class MdDrawerLayoutActivity extends AppCompatActivity {
 
-  public abstract View getDrawerContent();
+  protected abstract View getDrawerContent();
 
-  public abstract DrawerLayout getDrawerLayout();
+  protected abstract DrawerLayout getDrawerLayout();
 
-  public abstract View getDrawerNavigation();
+  protected abstract View getDrawerNavigation();
 
   ActionBarDrawerToggle mDrawerToggle;
 

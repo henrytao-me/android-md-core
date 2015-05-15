@@ -19,6 +19,7 @@
   <declare-styleable name="MdToolbar">
 
     <attr name="mdToolbar_background" format="color|reference" />
+    <attr name="mdToolbar_elevation" format="dimension|reference" />
 
   </declare-styleable>
 

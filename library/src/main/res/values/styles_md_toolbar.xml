@@ -14,7 +14,23 @@
   ~ limitations under the License.
   -->
 
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+  <style name="MdTheme.MdToolbar.Theme" parent="Theme.AppCompat.NoActionBar">
+    <item name="android:textColorPrimary">?attr/mdTextColor_primaryPalette</item>
+    <item name="android:textColorPrimaryInverse">?attr/mdTextColor_backgroundPalette</item>
+    <!--android:textColorSecondary is the color of subtitle & the menu overflow icon (three vertical dots) -->
+    <item name="android:textColorSecondary">?attr/mdSecondaryTextColor_primaryPalette</item>
+    <item name="android:textColorSecondaryInverse">?attr/mdSecondaryTextColor_backgroundPalette</item>
+  </style>
+
+  <style name="MdTheme.MdToolbar.PopupTheme" parent="MdTheme.MdToolbar.Theme">
+    <item name="android:background">?attr/mdColor_backgroundPalette</item>
+    <item name="android:textColorPrimary">?attr/mdTextColor_backgroundPalette</item>
+    <item name="android:textColorPrimaryInverse">?attr/mdTextColor_primaryPalette</item>
+    <item name="android:textColorSecondary">?attr/mdSecondaryTextColor_backgroundPalette</item>
+    <item name="android:textColorSecondaryInverse">?attr/mdSecondaryTextColor_primaryPalette</item>
+  </style>
 
   <!-- Note: based on experiment, icons in toolbar/menu should be resize (icon only, not the whole image) to 82% -->
 
@@ -24,24 +40,9 @@
     <item name="android:minHeight">?attr/actionBarSize</item>
     <item name="android:paddingRight">?attr/mdLayout_spacing_xs</item>
     <item name="android:background">?attr/mdToolbar_background</item>
-    <item name="theme">@style/MdToolbar.Theme</item>
-    <item name="popupTheme">@style/MdToolbar.PopupTheme</item>
-  </style>
-
-  <style name="MdToolbar.Theme" parent="Theme.AppCompat.NoActionBar">
-    <item name="android:textColorPrimary">?attr/mdTextColor_primaryPalette</item>
-    <item name="android:textColorPrimaryInverse">?attr/mdTextColor_backgroundPalette</item>
-    <!--android:textColorSecondary is the color of subtitle & the menu overflow icon (three vertical dots) -->
-    <item name="android:textColorSecondary">?attr/mdSecondaryTextColor_primaryPalette</item>
-    <item name="android:textColorSecondaryInverse">?attr/mdSecondaryTextColor_backgroundPalette</item>
-  </style>
-
-  <style name="MdToolbar.PopupTheme" parent="MdToolbar.Theme">
-    <item name="android:background">?attr/mdColor_backgroundPalette</item>
-    <item name="android:textColorPrimary">?attr/mdTextColor_backgroundPalette</item>
-    <item name="android:textColorPrimaryInverse">?attr/mdTextColor_primaryPalette</item>
-    <item name="android:textColorSecondary">?attr/mdSecondaryTextColor_backgroundPalette</item>
-    <item name="android:textColorSecondaryInverse">?attr/mdSecondaryTextColor_primaryPalette</item>
+    <item name="android:elevation" tools:ignore="NewApi">?attr/mdToolbar_elevation</item>
+    <item name="theme">@style/MdTheme.MdToolbar.Theme</item>
+    <item name="popupTheme">@style/MdTheme.MdToolbar.PopupTheme</item>
   </style>
 
 </resources>

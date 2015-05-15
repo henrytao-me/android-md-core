@@ -19,9 +19,9 @@
   <style name="MdStylable" parent="Theme.AppCompat.Light.NoActionBar">
 
     <!-- used to represent primary / main interface elements for a user -->
-    <item name="mdColor_primaryPalette">#03A9F4</item>
-    <item name="mdColor_primaryPalette_dark">#0288D1</item>
-    <item name="mdColor_primaryPalette_light">#B3E5FC</item>
+    <item name="mdColor_primaryPalette">#00BCD4</item>
+    <item name="mdColor_primaryPalette_dark">#0097A7</item>
+    <item name="mdColor_primaryPalette_light">#80DEEA</item>
 
     <!-- used to represent secondary interface elements for a user -->
     <item name="mdColor_accentPalette">#E91E63</item>
@@ -147,6 +147,7 @@
     <item name="mdDrawerLayout_fitsSystemWindows">false</item>
 
     <item name="mdToolbar_background">?attr/mdColor_primaryPalette</item>
+    <item name="mdToolbar_elevation">4dp</item>
 
     <!-- override material style -->
     <!--colorPrimary: The primary branding color for the app. By default, this is the color applied to the action bar background.-->

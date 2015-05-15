@@ -23,9 +23,9 @@
   <style name="MdTheme.Dark">
 
     <!-- used to represent primary / main interface elements for a user -->
-    <item name="mdColor_primaryPalette">#2196F3</item>
-    <item name="mdColor_primaryPalette_dark">#1976D2</item>
-    <item name="mdColor_primaryPalette_light">#BBDEFB</item>
+    <item name="mdColor_primaryPalette">#009688</item>
+    <item name="mdColor_primaryPalette_dark">#00796B</item>
+    <item name="mdColor_primaryPalette_light">#80CBC4</item>
 
     <!-- textColor for all palettes -->
     <item name="mdTextColor_primaryPalette">#FFFFFFFF</item>

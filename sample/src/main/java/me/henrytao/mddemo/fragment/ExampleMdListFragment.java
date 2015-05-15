@@ -24,19 +24,14 @@ import android.view.ViewGroup;
 
 import me.henrytao.mddemo.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class NavigationDrawerFragment extends Fragment {
+public class ExampleMdListFragment extends Fragment {
 
-  public NavigationDrawerFragment() {
-
+  public ExampleMdListFragment() {
   }
 
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
       Bundle savedInstanceState) {
-    return inflater.inflate(R.layout.view_navigation_drawer, container, false);
+    return inflater.inflate(R.layout.fragment_sample_md_list, container, false);
   }
-
 }

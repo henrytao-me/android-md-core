@@ -14,13 +14,15 @@
   ~ limitations under the License.
   -->
 
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
   <style name="MdText">
     <item name="android:layout_width">wrap_content</item>
     <item name="android:layout_height">wrap_content</item>
     <item name="android:textColor">?attr/mdTextColor_backgroundPalette</item>
     <item name="android:textSize">?attr/mdFontSize_body1</item>
+    <item name="android:textStyle">normal</item>
+    <item name="android:singleLine">false</item>
   </style>
 
   <!-- textColor, textSize, textStyle (regular|bold), singleline, textAllCaps, lineSpacingExtra -->
@@ -28,7 +30,7 @@
   <style name="MdText.Button">
     <item name="android:textSize">?attr/mdFontSize_button</item>
     <item name="android:textStyle">bold</item>
-    <item name="android:textAllCaps">true</item>
+    <item name="android:textAllCaps" tools:ignore="NewApi">true</item>
     <item name="android:singleLine">true</item>
     <item name="android:ellipsize">end</item>
   </style>
@@ -48,7 +50,6 @@
     <item name="android:lineSpacingExtra">0sp</item>
     <item name="android:singleLine">true</item>
     <item name="android:ellipsize">end</item>
-    <item name="android:layout_width">match_parent</item>
   </style>
 
   <style name="MdText.Body2">
@@ -61,7 +62,6 @@
     <item name="android:lineSpacingExtra">0sp</item>
     <item name="android:singleLine">true</item>
     <item name="android:ellipsize">end</item>
-    <item name="android:layout_width">match_parent</item>
   </style>
 
   <style name="MdText.Subhead1">
@@ -73,7 +73,6 @@
     <item name="android:lineSpacingExtra">0sp</item>
     <item name="android:singleLine">true</item>
     <item name="android:ellipsize">end</item>
-    <item name="android:layout_width">match_parent</item>
   </style>
 
   <style name="MdText.Subhead2">
@@ -85,7 +84,6 @@
     <item name="android:lineSpacingExtra">0sp</item>
     <item name="android:singleLine">true</item>
     <item name="android:ellipsize">end</item>
-    <item name="android:layout_width">match_parent</item>
   </style>
 
   <style name="MdText.Subhead" parent="MdText.Subhead1"></style>
@@ -94,7 +92,6 @@
     <item name="android:lineSpacingExtra">0sp</item>
     <item name="android:singleLine">true</item>
     <item name="android:ellipsize">end</item>
-    <item name="android:layout_width">match_parent</item>
   </style>
 
   <style name="MdText.Title">
@@ -102,7 +99,6 @@
     <item name="android:textStyle">bold</item>
     <item name="android:singleLine">true</item>
     <item name="android:ellipsize">end</item>
-    <item name="android:layout_width">match_parent</item>
   </style>
 
   <style name="MdText.Headline">
@@ -114,7 +110,6 @@
     <item name="android:lineSpacingExtra">0sp</item>
     <item name="android:singleLine">true</item>
     <item name="android:ellipsize">end</item>
-    <item name="android:layout_width">match_parent</item>
   </style>
 
   <style name="MdText.Display1">
@@ -126,7 +121,6 @@
     <item name="android:lineSpacingExtra">0sp</item>
     <item name="android:singleLine">true</item>
     <item name="android:ellipsize">end</item>
-    <item name="android:layout_width">match_parent</item>
   </style>
 
   <style name="MdText.Display2">
@@ -138,7 +132,6 @@
     <item name="android:lineSpacingExtra">0sp</item>
     <item name="android:singleLine">true</item>
     <item name="android:ellipsize">end</item>
-    <item name="android:layout_width">match_parent</item>
   </style>
 
   <style name="MdText.Display3">
@@ -146,14 +139,12 @@
     <item name="android:textStyle">bold</item>
     <item name="android:singleLine">true</item>
     <item name="android:ellipsize">end</item>
-    <item name="android:layout_width">match_parent</item>
   </style>
 
   <style name="MdText.Display4">
     <item name="android:textSize">?attr/mdFontSize_display4</item>
     <item name="android:singleLine">true</item>
     <item name="android:ellipsize">end</item>
-    <item name="android:layout_width">match_parent</item>
   </style>
 
 </resources>

@@ -6,9 +6,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import butterknife.ButterKnife;
 import butterknife.InjectView;
 import me.henrytao.mddemo.R;
-
 
 public class MainActivity extends MdDrawerLayoutActivity {
 
@@ -20,21 +20,6 @@ public class MainActivity extends MdDrawerLayoutActivity {
 
   @InjectView(R.id.drawer)
   View vDrawerNavigation;
-
-  @Override
-  public View getDrawerContent() {
-    return vDrawerContent;
-  }
-
-  @Override
-  public DrawerLayout getDrawerLayout() {
-    return vDrawerLayout;
-  }
-
-  @Override
-  public View getDrawerNavigation() {
-    return vDrawerNavigation;
-  }
 
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
@@ -49,8 +34,24 @@ public class MainActivity extends MdDrawerLayoutActivity {
   }
 
   @Override
+  protected View getDrawerContent() {
+    return vDrawerContent;
+  }
+
+  @Override
+  protected DrawerLayout getDrawerLayout() {
+    return vDrawerLayout;
+  }
+
+  @Override
+  protected View getDrawerNavigation() {
+    return vDrawerNavigation;
+  }
+
+  @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+    ButterKnife.inject(this);
   }
 }
