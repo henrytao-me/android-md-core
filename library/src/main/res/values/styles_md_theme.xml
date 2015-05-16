@@ -24,7 +24,8 @@
 
     <!-- used to represent primary / main interface elements for a user -->
     <item name="mdColor_primaryPalette">#009688</item>
-    <item name="mdColor_primaryPalette_dark">#00796B</item>
+    <item name="mdColor_primaryPalette_dark">#00897B</item>
+    <item name="mdColor_primaryPalette_darker">#00796B</item>
     <item name="mdColor_primaryPalette_light">#80CBC4</item>
 
     <!-- textColor for all palettes -->
