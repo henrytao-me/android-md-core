@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+
+  <!-- AppTheme -->
+
+  <style name="AppTheme.Base" parent="MdTheme">
+
+  </style>
+
+  <style name="AppTheme" parent="AppTheme.Base">
+
+  </style>
+
+  <!-- AppTheme.TranslucentNavigation -->
+
+  <style name="AppTheme.TranslucentNavigation.Base" parent="AppTheme">
+
+  </style>
+
+  <style name="AppTheme.TranslucentNavigation" parent="AppTheme.TranslucentNavigation.Base">
+
+  </style>
+
+  <!-- AppTheme.Green -->
+
+  <style name="AppTheme.Purple.Base" parent="MdTheme">
+    <item name="mdColor_primaryPalette">#9C27B0</item>
+    <item name="mdColor_primaryPalette_dark">#7B1FA2</item>
+    <item name="mdColor_primaryPalette_light">#CE93D8</item>
+    <item name="mdColor_accentPalette">#8BC34A</item>
+  </style>
+
+  <style name="AppTheme.Green" parent="AppTheme.Purple.Base">
+
+  </style>
+
+</resources>
