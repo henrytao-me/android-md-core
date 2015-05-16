@@ -16,6 +16,11 @@
 
 <resources>
 
+  <style name="MdTheme.MdButton.Transparent" parent="@android:style/Widget.Button">
+    <item name="android:buttonStyle">?android:attr/borderlessButtonStyle</item>
+    <item name="colorButtonNormal">@android:color/transparent</item>
+  </style>
+
   <style name="MdTheme.MdButton.Primary" parent="@android:style/Widget.Button">
     <item name="colorButtonNormal">?attr/mdColor_primaryPalette</item>
   </style>
@@ -41,6 +46,8 @@
     <item name="android:layout_height">wrap_content</item>
   </style>
 
+  <!-- Rasised Button -->
+
   <style name="MdButton.Primary">
     <item name="android:textColor">?attr/mdTextColor_primaryPalette</item>
     <item name="android:theme">@style/MdTheme.MdButton.Primary</item>
@@ -64,6 +71,33 @@
   <style name="MdButton.BackgroundDark">
     <item name="android:textColor">?attr/mdTextColor_backgroundPalette_dark</item>
     <item name="android:theme">@style/MdTheme.MdButton.BackgroundDark</item>
+  </style>
+
+  <!-- Flat Button -->
+
+  <style name="MdButton.Primary.Flat">
+    <item name="android:textColor">?attr/mdColor_primaryPalette</item>
+    <item name="android:theme">@style/MdTheme.MdButton.Transparent</item>
+  </style>
+
+  <style name="MdButton.Accent.Flat">
+    <item name="android:textColor">?attr/mdColor_accentPalette</item>
+    <item name="android:theme">@style/MdTheme.MdButton.Transparent</item>
+  </style>
+
+  <style name="MdButton.Warn.Flat">
+    <item name="android:textColor">?attr/mdColor_warnPalette</item>
+    <item name="android:theme">@style/MdTheme.MdButton.Transparent</item>
+  </style>
+
+  <style name="MdButton.Background.Flat">
+    <item name="android:textColor">?attr/mdTextColor_backgroundPalette</item>
+    <item name="android:theme">@style/MdTheme.MdButton.Transparent</item>
+  </style>
+
+  <style name="MdButton.BackgroundDark.Flat">
+    <item name="android:textColor">?attr/mdTextColor_backgroundPalette_dark</item>
+    <item name="android:theme">@style/MdTheme.MdButton.Transparent</item>
   </style>
 
 </resources>

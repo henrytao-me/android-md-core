@@ -39,6 +39,16 @@
     </RelativeLayout>
 
     <RelativeLayout
+      android:id="@+id/goto_button"
+      android:background="@drawable/md_ripple"
+      style="@style/MdList.SingleLine.TextOnly">
+      <TextView
+        android:text="Button"
+        style="@style/MdList.SingleLine.TextOnly.Text" />
+      <View style="@style/MdDivider.AlignParentBottom" />
+    </RelativeLayout>
+
+    <RelativeLayout
       android:id="@+id/goto_listview"
       android:background="@drawable/md_ripple"
       style="@style/MdList.SingleLine.TextOnly">
