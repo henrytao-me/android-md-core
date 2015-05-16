@@ -1,0 +1,202 @@
+<!--
+  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:scrollbars="vertical"
+  tools:context="me.henrytao.mddemo.fragment.ExampleMdButtonFragment">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <!-- Raised Button -->
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="top|center_horizontal">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="?attr/mdLayout_spacing"
+          android:text="Raised Button" />
+
+        <Button
+          android:layout_marginTop="?attr/mdLayout_spacing"
+          android:text="Button"
+          style="@style/MdButton.Raised.Primary" />
+
+        <Button
+          android:layout_marginTop="?attr/mdLayout_spacing"
+          android:text="Button"
+          style="@style/MdButton.Raised.Accent" />
+
+        <Button
+          android:layout_marginTop="?attr/mdLayout_spacing"
+          android:text="Button"
+          style="@style/MdButton.Raised.Warn" />
+
+        <Button
+          android:layout_marginTop="?attr/mdLayout_spacing"
+          android:text="Button"
+          style="@style/MdButton.Raised.Background" />
+
+      </LinearLayout>
+
+      <!-- Flat Button -->
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="top|center_horizontal">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="?attr/mdLayout_spacing"
+          android:text="Flat Button" />
+
+        <Button
+          android:layout_marginTop="?attr/mdLayout_spacing"
+          android:text="Button"
+          style="@style/MdButton.Flat.Primary" />
+
+        <Button
+          android:layout_marginTop="?attr/mdLayout_spacing"
+          android:text="Button"
+          style="@style/MdButton.Flat.Accent" />
+
+        <Button
+          android:layout_marginTop="?attr/mdLayout_spacing"
+          android:text="Button"
+          style="@style/MdButton.Flat.Warn" />
+
+        <Button
+          android:layout_marginTop="?attr/mdLayout_spacing"
+          android:text="Button"
+          style="@style/MdButton.Flat.Background" />
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:orientation="horizontal">
+
+      <!-- Raised Button Disable -->
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="top|center_horizontal">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="?attr/mdLayout_spacing"
+          android:text="Raised Button Disabled" />
+
+        <Button
+          android:layout_marginTop="?attr/mdLayout_spacing"
+          android:enabled="false"
+          android:text="Button"
+          style="@style/MdButton.Raised.Primary" />
+
+        <Button
+          android:layout_marginTop="?attr/mdLayout_spacing"
+          android:enabled="false"
+          android:text="Button"
+          style="@style/MdButton.Raised.Accent" />
+
+        <Button
+          android:layout_marginTop="?attr/mdLayout_spacing"
+          android:enabled="false"
+          android:text="Button"
+          style="@style/MdButton.Raised.Warn" />
+
+        <Button
+          android:layout_marginTop="?attr/mdLayout_spacing"
+          android:enabled="false"
+          android:text="Button"
+          style="@style/MdButton.Raised.Background" />
+
+      </LinearLayout>
+
+      <!-- Flat Button Disabled -->
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="top|center_horizontal">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="?attr/mdLayout_spacing"
+          android:text="Flat Button Disabled" />
+
+        <Button
+          android:layout_marginTop="?attr/mdLayout_spacing"
+          android:enabled="false"
+          android:text="Button"
+          style="@style/MdButton.Flat.Primary" />
+
+        <Button
+          android:layout_marginTop="?attr/mdLayout_spacing"
+          android:enabled="false"
+          android:text="Button"
+          style="@style/MdButton.Flat.Accent" />
+
+        <Button
+          android:layout_marginTop="?attr/mdLayout_spacing"
+          android:enabled="false"
+          android:text="Button"
+          style="@style/MdButton.Flat.Warn" />
+
+        <Button
+          android:layout_marginTop="?attr/mdLayout_spacing"
+          android:enabled="false"
+          android:text="Button"
+          style="@style/MdButton.Flat.Background" />
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+</ScrollView>
