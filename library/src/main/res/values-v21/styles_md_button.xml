@@ -16,8 +16,24 @@
 
 <resources>
 
-  <style name="MdTheme.MdButton.Transparent" parent="@android:style/Widget.Button">
+  <style name="MdTheme.MdButton.Flat" parent="@android:style/Widget.Button">
     <item name="android:buttonStyle">?android:attr/borderlessButtonStyle</item>
+  </style>
+
+  <style name="MdTheme.MdButton.Flat.Primary">
+    <item name="android:textColorSecondary">?attr/mdColor_primaryPalette_light</item>
+  </style>
+
+  <style name="MdTheme.MdButton.Flat.Accent">
+    <item name="android:textColorSecondary">?attr/mdColor_accentPalette_light</item>
+  </style>
+
+  <style name="MdTheme.MdButton.Flat.Warn">
+    <item name="android:textColorSecondary">?attr/mdColor_warnPalette_light</item>
+  </style>
+
+  <style name="MdTheme.MdButton.Flat.Background">
+    <item name="android:textColorSecondary">?attr/mdTextColor_backgroundPalette_light</item>
   </style>
 
 </resources>

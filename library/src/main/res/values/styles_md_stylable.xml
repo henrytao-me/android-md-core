@@ -32,9 +32,9 @@
 
     <!-- used to represent interface elements that the user should be careful of -->
     <item name="mdColor_warnPalette">?attr/mdColor_accentPalette</item>
-    <item name="mdColor_warnPalette_dark">?attr/mdColor_warnPalette_dark</item>
-    <item name="mdColor_warnPalette_darker">?attr/mdColor_warnPalette_darker</item>
-    <item name="mdColor_warnPalette_light">?attr/mdColor_warnPalette_light</item>
+    <item name="mdColor_warnPalette_dark">?attr/mdColor_accentPalette_dark</item>
+    <item name="mdColor_warnPalette_darker">?attr/mdColor_accentPalette_darker</item>
+    <item name="mdColor_warnPalette_light">?attr/mdColor_accentPalette_light</item>
 
     <!-- used to represent application background for a user -->
     <item name="mdColor_backgroundPalette">#F5F5F5</item>
@@ -66,7 +66,7 @@
     <item name="mdTextColor_backgroundPalette">#DE000000</item>
     <item name="mdTextColor_backgroundPalette_dark">?attr/mdTextColor_backgroundPalette</item>
     <item name="mdTextColor_backgroundPalette_darker">?attr/mdTextColor_backgroundPalette_dark</item>
-    <item name="mdTextColor_backgroundPalette_light">?attr/mdTextColor_backgroundPalette</item>
+    <item name="mdTextColor_backgroundPalette_light">#8A000000</item>
 
     <!-- secondary textColor for all palettes -->
     <item name="mdSecondaryTextColor_primaryPalette">#8A000000</item>

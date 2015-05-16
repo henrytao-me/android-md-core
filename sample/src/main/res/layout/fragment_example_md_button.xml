@@ -49,27 +49,22 @@
         <Button
           android:layout_marginTop="?attr/mdLayout_spacing"
           android:text="Button"
-          style="@style/MdButton.Primary" />
+          style="@style/MdButton.Raised.Primary" />
 
         <Button
           android:layout_marginTop="?attr/mdLayout_spacing"
           android:text="Button"
-          style="@style/MdButton.Accent" />
+          style="@style/MdButton.Raised.Accent" />
 
         <Button
           android:layout_marginTop="?attr/mdLayout_spacing"
           android:text="Button"
-          style="@style/MdButton.Warn" />
+          style="@style/MdButton.Raised.Warn" />
 
         <Button
           android:layout_marginTop="?attr/mdLayout_spacing"
           android:text="Button"
-          style="@style/MdButton.Background" />
-
-        <Button
-          android:layout_marginTop="?attr/mdLayout_spacing"
-          android:text="Button"
-          style="@style/MdButton.BackgroundDark" />
+          style="@style/MdButton.Raised.Background" />
 
       </LinearLayout>
 
@@ -91,27 +86,22 @@
         <Button
           android:layout_marginTop="?attr/mdLayout_spacing"
           android:text="Button"
-          style="@style/MdButton.Primary.Flat" />
+          style="@style/MdButton.Flat.Primary" />
 
         <Button
           android:layout_marginTop="?attr/mdLayout_spacing"
           android:text="Button"
-          style="@style/MdButton.Accent.Flat" />
+          style="@style/MdButton.Flat.Accent" />
 
         <Button
           android:layout_marginTop="?attr/mdLayout_spacing"
           android:text="Button"
-          style="@style/MdButton.Warn.Flat" />
+          style="@style/MdButton.Flat.Warn" />
 
         <Button
           android:layout_marginTop="?attr/mdLayout_spacing"
           android:text="Button"
-          style="@style/MdButton.Background.Flat" />
-
-        <Button
-          android:layout_marginTop="?attr/mdLayout_spacing"
-          android:text="Button"
-          style="@style/MdButton.BackgroundDark.Flat" />
+          style="@style/MdButton.Flat.Background" />
 
       </LinearLayout>
 
@@ -142,31 +132,25 @@
           android:layout_marginTop="?attr/mdLayout_spacing"
           android:enabled="false"
           android:text="Button"
-          style="@style/MdButton.Primary" />
+          style="@style/MdButton.Raised.Primary" />
 
         <Button
           android:layout_marginTop="?attr/mdLayout_spacing"
           android:enabled="false"
           android:text="Button"
-          style="@style/MdButton.Accent" />
+          style="@style/MdButton.Raised.Accent" />
 
         <Button
           android:layout_marginTop="?attr/mdLayout_spacing"
           android:enabled="false"
           android:text="Button"
-          style="@style/MdButton.Warn" />
+          style="@style/MdButton.Raised.Warn" />
 
         <Button
           android:layout_marginTop="?attr/mdLayout_spacing"
           android:enabled="false"
           android:text="Button"
-          style="@style/MdButton.Background" />
-
-        <Button
-          android:layout_marginTop="?attr/mdLayout_spacing"
-          android:enabled="false"
-          android:text="Button"
-          style="@style/MdButton.BackgroundDark" />
+          style="@style/MdButton.Raised.Background" />
 
       </LinearLayout>
 
@@ -189,31 +173,25 @@
           android:layout_marginTop="?attr/mdLayout_spacing"
           android:enabled="false"
           android:text="Button"
-          style="@style/MdButton.Primary.Flat" />
+          style="@style/MdButton.Flat.Primary" />
 
         <Button
           android:layout_marginTop="?attr/mdLayout_spacing"
           android:enabled="false"
           android:text="Button"
-          style="@style/MdButton.Accent.Flat" />
+          style="@style/MdButton.Flat.Accent" />
 
         <Button
           android:layout_marginTop="?attr/mdLayout_spacing"
           android:enabled="false"
           android:text="Button"
-          style="@style/MdButton.Warn.Flat" />
+          style="@style/MdButton.Flat.Warn" />
 
         <Button
           android:layout_marginTop="?attr/mdLayout_spacing"
           android:enabled="false"
           android:text="Button"
-          style="@style/MdButton.Background.Flat" />
-
-        <Button
-          android:layout_marginTop="?attr/mdLayout_spacing"
-          android:enabled="false"
-          android:text="Button"
-          style="@style/MdButton.BackgroundDark.Flat" />
+          style="@style/MdButton.Flat.Background" />
 
       </LinearLayout>
 

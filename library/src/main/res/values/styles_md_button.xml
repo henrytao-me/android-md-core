@@ -16,29 +16,47 @@
 
 <resources>
 
-  <style name="MdTheme.MdButton.Transparent" parent="@android:style/Widget.Button">
+  <style name="MdTheme.MdButton.Raised" parent="@android:style/Widget.Button"></style>
+
+  <style name="MdTheme.MdButton.Raised.Primary" parent="MdTheme.MdButton.Raised">
+    <item name="android:textColorSecondary">?attr/mdTextColor_primaryPalette</item>
+    <item name="colorButtonNormal">?attr/mdColor_primaryPalette</item>
+  </style>
+
+  <style name="MdTheme.MdButton.Raised.Accent" parent="MdTheme.MdButton.Raised">
+    <item name="android:textColorSecondary">?attr/mdTextColor_accentPalette</item>
+    <item name="colorButtonNormal">?attr/mdColor_accentPalette</item>
+  </style>
+
+  <style name="MdTheme.MdButton.Raised.Warn" parent="MdTheme.MdButton.Raised">
+    <item name="android:textColorSecondary">?attr/mdTextColor_warnPalette</item>
+    <item name="colorButtonNormal">?attr/mdColor_warnPalette</item>
+  </style>
+
+  <style name="MdTheme.MdButton.Raised.Background" parent="MdTheme.MdButton.Raised">
+    <item name="android:textColorSecondary">?attr/mdTextColor_backgroundPalette</item>
+    <item name="colorButtonNormal">?attr/mdColor_backgroundPalette</item>
+  </style>
+
+  <style name="MdTheme.MdButton.Flat" parent="@android:style/Widget.Button">
     <item name="android:buttonStyle">?android:attr/borderlessButtonStyle</item>
     <item name="colorButtonNormal">@android:color/transparent</item>
   </style>
 
-  <style name="MdTheme.MdButton.Primary" parent="@android:style/Widget.Button">
-    <item name="colorButtonNormal">?attr/mdColor_primaryPalette</item>
+  <style name="MdTheme.MdButton.Flat.Primary">
+    <item name="android:textColorSecondary">?attr/mdColor_primaryPalette</item>
   </style>
 
-  <style name="MdTheme.MdButton.Accent" parent="@android:style/Widget.Button">
-    <item name="colorButtonNormal">?attr/mdColor_accentPalette</item>
+  <style name="MdTheme.MdButton.Flat.Accent">
+    <item name="android:textColorSecondary">?attr/mdColor_accentPalette</item>
   </style>
 
-  <style name="MdTheme.MdButton.Warn" parent="@android:style/Widget.Button">
-    <item name="colorButtonNormal">?attr/mdColor_warnPalette</item>
+  <style name="MdTheme.MdButton.Flat.Warn">
+    <item name="android:textColorSecondary">?attr/mdColor_warnPalette</item>
   </style>
 
-  <style name="MdTheme.MdButton.Background" parent="@android:style/Widget.Button">
-    <item name="colorButtonNormal">?attr/mdColor_backgroundPalette</item>
-  </style>
-
-  <style name="MdTheme.MdButton.BackgroundDark" parent="@android:style/Widget.Button">
-    <item name="colorButtonNormal">?attr/mdColor_backgroundPalette_dark</item>
+  <style name="MdTheme.MdButton.Flat.Background">
+    <item name="android:textColorSecondary">?attr/mdTextColor_backgroundPalette</item>
   </style>
 
   <style name="MdButton">
@@ -48,56 +66,46 @@
 
   <!-- Rasised Button -->
 
-  <style name="MdButton.Primary">
+  <style name="MdButton.Raised.Primary" parent="MdButton">
     <item name="android:textColor">?attr/mdTextColor_primaryPalette</item>
-    <item name="android:theme">@style/MdTheme.MdButton.Primary</item>
+    <item name="android:theme">@style/MdTheme.MdButton.Raised.Primary</item>
   </style>
 
-  <style name="MdButton.Accent">
+  <style name="MdButton.Raised.Accent" parent="MdButton">
     <item name="android:textColor">?attr/mdTextColor_accentPalette</item>
-    <item name="android:theme">@style/MdTheme.MdButton.Accent</item>
+    <item name="android:theme">@style/MdTheme.MdButton.Raised.Accent</item>
   </style>
 
-  <style name="MdButton.Warn">
+  <style name="MdButton.Raised.Warn" parent="MdButton">
     <item name="android:textColor">?attr/mdTextColor_warnPalette</item>
-    <item name="android:theme">@style/MdTheme.MdButton.Warn</item>
+    <item name="android:theme">@style/MdTheme.MdButton.Raised.Warn</item>
   </style>
 
-  <style name="MdButton.Background">
+  <style name="MdButton.Raised.Background" parent="MdButton">
     <item name="android:textColor">?attr/mdTextColor_backgroundPalette</item>
-    <item name="android:theme">@style/MdTheme.MdButton.Background</item>
-  </style>
-
-  <style name="MdButton.BackgroundDark">
-    <item name="android:textColor">?attr/mdTextColor_backgroundPalette_dark</item>
-    <item name="android:theme">@style/MdTheme.MdButton.BackgroundDark</item>
+    <item name="android:theme">@style/MdTheme.MdButton.Raised.Background</item>
   </style>
 
   <!-- Flat Button -->
 
-  <style name="MdButton.Primary.Flat">
+  <style name="MdButton.Flat.Primary" parent="MdButton">
     <item name="android:textColor">?attr/mdColor_primaryPalette</item>
-    <item name="android:theme">@style/MdTheme.MdButton.Transparent</item>
+    <item name="android:theme">@style/MdTheme.MdButton.Flat.Primary</item>
   </style>
 
-  <style name="MdButton.Accent.Flat">
+  <style name="MdButton.Flat.Accent" parent="MdButton">
     <item name="android:textColor">?attr/mdColor_accentPalette</item>
-    <item name="android:theme">@style/MdTheme.MdButton.Transparent</item>
+    <item name="android:theme">@style/MdTheme.MdButton.Flat.Accent</item>
   </style>
 
-  <style name="MdButton.Warn.Flat">
+  <style name="MdButton.Flat.Warn" parent="MdButton">
     <item name="android:textColor">?attr/mdColor_warnPalette</item>
-    <item name="android:theme">@style/MdTheme.MdButton.Transparent</item>
+    <item name="android:theme">@style/MdTheme.MdButton.Flat.Warn</item>
   </style>
 
-  <style name="MdButton.Background.Flat">
+  <style name="MdButton.Flat.Background" parent="MdButton">
     <item name="android:textColor">?attr/mdTextColor_backgroundPalette</item>
-    <item name="android:theme">@style/MdTheme.MdButton.Transparent</item>
-  </style>
-
-  <style name="MdButton.BackgroundDark.Flat">
-    <item name="android:textColor">?attr/mdTextColor_backgroundPalette_dark</item>
-    <item name="android:theme">@style/MdTheme.MdButton.Transparent</item>
+    <item name="android:theme">@style/MdTheme.MdButton.Flat.Background</item>
   </style>
 
 </resources>
