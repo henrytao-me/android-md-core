@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+
+  <style name="MdTheme" parent="MdStylable">
+
+  </style>
+
+  <style name="MdTheme.Dark">
+
+    <!-- used to represent primary / main interface elements for a user -->
+    <item name="mdColor_primaryPalette">#009688</item>
+    <item name="mdColor_primaryPalette_dark">#00897B</item>
+    <item name="mdColor_primaryPalette_darker">#00796B</item>
+    <item name="mdColor_primaryPalette_light">#80CBC4</item>
+
+    <!-- textColor for all palettes -->
+    <item name="mdTextColor_primaryPalette">#FFFFFFFF</item>
+    <item name="mdTextColor_primaryPalette_dark">?attr/mdTextColor_primaryPalette</item>
+    <item name="mdTextColor_primaryPalette_light">#DE000000</item>
+
+    <!-- secondary textColor for all palettes -->
+    <item name="mdSecondaryTextColor_primaryPalette">#8AFFFFFF</item>
+    <item name="mdSecondaryTextColor_primaryPalette_dark">?attr/mdSecondaryTextColor_primaryPalette</item>
+    <item name="mdSecondaryTextColor_primaryPalette_light">#8A000000</item>
+
+    <!-- textColor for all palettes -->
+    <item name="mdHintTextColor_primaryPalette">#42FFFFFF</item>
+    <item name="mdHintTextColor_primaryPalette_dark">?attr/mdHintTextColor_primaryPalette</item>
+    <item name="mdHintTextColor_primaryPalette_light">#42000000</item>
+
+    <!-- dividerColor for all palettes -->
+    <item name="mdDividerColor_primaryPalette">#1EFFFFFF</item>
+    <item name="mdDividerColor_primaryPalette_dark">?attr/mdDividerColor_primaryPalette</item>
+    <item name="mdDividerColor_primaryPalette_light">#1E000000</item>
+
+  </style>
+
+</resources>
