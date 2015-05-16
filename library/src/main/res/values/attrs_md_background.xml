@@ -16,8 +16,13 @@
 
 <resources>
 
-  <style name="MdTheme.MdButton.Transparent" parent="@android:style/Widget.Button">
-    <item name="android:buttonStyle">?android:attr/borderlessButtonStyle</item>
-  </style>
+  <declare-styleable name="MdBackground">
+
+    <attr name="mdBackground_normal" format="color|reference" />
+    <attr name="mdBackground_disabled" format="color|reference" />
+    <attr name="mdBackground_pressed" format="color|reference" />
+    <attr name="mdBackground_selected" format="color|reference" />
+
+  </declare-styleable>
 
 </resources>

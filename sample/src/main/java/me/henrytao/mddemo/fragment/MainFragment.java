@@ -30,14 +30,14 @@ public class MainFragment extends Fragment {
     ButterKnife.reset(this);
   }
 
-  @OnClick(R.id.goto_listview)
-  protected void onGotoListviewClicked() {
-    startActivity(ExampleActivity.getIntent(getActivity(), ExampleMdListFragment.class, "ListView"));
-  }
-
   @OnClick(R.id.goto_button)
   protected void onGotoButtonClicked() {
     startActivity(ExampleActivity.getIntent(getActivity(), ExampleMdButtonFragment.class, "Button"));
+  }
+
+  @OnClick(R.id.goto_listview)
+  protected void onGotoListviewClicked() {
+    startActivity(ExampleActivity.getIntent(getActivity(), ExampleMdListFragment.class, "ListView"));
   }
 
   @OnClick(R.id.goto_textview)

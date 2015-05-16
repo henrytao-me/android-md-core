@@ -2,6 +2,7 @@ package me.henrytao.mddemo.activity;
 
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,6 +21,9 @@ public class MainActivity extends MdDrawerLayoutActivity {
 
   @InjectView(R.id.drawer)
   View vDrawerNavigation;
+
+  @InjectView(R.id.toolbar)
+  Toolbar vToolbar;
 
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
@@ -53,5 +57,13 @@ public class MainActivity extends MdDrawerLayoutActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     ButterKnife.inject(this);
+
+    setSupportActionBar(vToolbar);
+    vToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        openDrawer();
+      }
+    });
   }
 }
