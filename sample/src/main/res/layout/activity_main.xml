@@ -47,7 +47,7 @@
   </RelativeLayout>
 
   <RelativeLayout
-    android:id="@+id/drawer"
+    android:id="@+id/navigation"
     style="@style/MdDrawerLayout.Navigation">
 
     <fragment
@@ -55,6 +55,18 @@
       android:layout_height="match_parent"
       android:name="me.henrytao.mddemo.fragment.NavigationDrawerFragment"
       tools:layout="@layout/view_navigation_drawer" />
+
+  </RelativeLayout>
+
+  <RelativeLayout
+    android:id="@+id/navigation_right"
+    style="@style/MdDrawerLayout.Navigation.Right">
+
+    <fragment
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:name="me.henrytao.mddemo.fragment.NavigationDrawerRightFragment"
+      tools:layout="@layout/view_navigation_drawer_right" />
 
   </RelativeLayout>
 
