@@ -35,4 +35,8 @@
     <item name="android:background">?attr/mdColor_backgroundPalette</item>
   </style>
 
+  <style name="MdDrawerLayout.Navigation.Right">
+    <item name="android:layout_gravity">end</item>
+  </style>
+
 </resources>
