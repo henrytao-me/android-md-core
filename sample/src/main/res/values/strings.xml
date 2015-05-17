@@ -24,9 +24,11 @@
 
   <!-- auto generated values -->
 
+  <string name="action_settings">Settings</string>
+  <string name="action_navigation_drawer_right">Right navigation</string>
+
   <string name="app_name">MdDemo</string>
   <string name="hello_world">Hello world!</string>
-  <string name="action_settings">Settings</string>
   <string name="title_activity_example">ExampleActivity</string>
 
   <!-- TODO: Remove or change this placeholder text -->

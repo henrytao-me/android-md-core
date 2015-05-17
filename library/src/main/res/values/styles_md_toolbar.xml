@@ -16,7 +16,7 @@
 
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-  <style name="MdTheme.MdToolbar.Theme" parent="Theme.AppCompat.NoActionBar">
+  <style name="MdTheme.MdToolbar.Theme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
     <item name="android:textColorPrimary">?attr/mdTextColor_primaryPalette</item>
     <item name="android:textColorPrimaryInverse">?attr/mdTextColor_backgroundPalette</item>
     <!--android:textColorSecondary is the color of subtitle & the menu overflow icon (three vertical dots) -->
@@ -24,7 +24,7 @@
     <item name="android:textColorSecondaryInverse">?attr/mdSecondaryTextColor_backgroundPalette</item>
   </style>
 
-  <style name="MdTheme.MdToolbar.PopupTheme" parent="MdTheme.MdToolbar.Theme">
+  <style name="MdTheme.MdToolbar.PopupTheme" parent="ThemeOverlay.AppCompat.Light">
     <item name="android:background">?attr/mdColor_backgroundPalette</item>
     <item name="android:textColorPrimary">?attr/mdTextColor_backgroundPalette</item>
     <item name="android:textColorPrimaryInverse">?attr/mdTextColor_primaryPalette</item>
