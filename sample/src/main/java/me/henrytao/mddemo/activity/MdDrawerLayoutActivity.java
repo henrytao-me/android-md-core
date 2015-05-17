@@ -30,20 +30,84 @@ import me.henrytao.mddemo.R;
  */
 public abstract class MdDrawerLayoutActivity extends AppCompatActivity {
 
-  protected abstract View getDrawerContent();
+  protected abstract int getDrawerContentResource();
 
-  protected abstract DrawerLayout getDrawerLayout();
+  protected abstract int getDrawerLayoutResource();
 
-  protected abstract View getDrawerNavigation();
+  protected abstract int getDrawerNavigationResource();
 
-  ActionBarDrawerToggle mDrawerToggle;
+  protected View vDrawerContent;
+
+  protected DrawerLayout vDrawerLayout;
+
+  protected View vDrawerNavigation;
+
+  protected ActionBarDrawerToggle vDrawerToggle;
 
   @Override
-  protected void onPostCreate(Bundle savedInstanceState) {
-    super.onPostCreate(savedInstanceState);
-    mDrawerToggle = new ActionBarDrawerToggle(this, getDrawerLayout(), R.string.open, R.string.close);
+  public void setContentView(int layoutResID) {
+    super.setContentView(layoutResID);
+    initDrawer();
+  }
+
+  @Override
+  public void setContentView(View view) {
+    super.setContentView(view);
+    initDrawer();
+  }
+
+  @Override
+  public void setContentView(View view, ViewGroup.LayoutParams params) {
+    super.setContentView(view, params);
+    initDrawer();
+  }
+
+  public View getDrawerContent() {
+    if (vDrawerContent == null) {
+      vDrawerContent = findViewById(getDrawerContentResource());
+    }
+    return vDrawerContent;
+  }
+
+  public DrawerLayout getDrawerLayout() {
+    if (vDrawerLayout == null) {
+      vDrawerLayout = (DrawerLayout) findViewById(getDrawerLayoutResource());
+    }
+    return vDrawerLayout;
+  }
+
+  public View getDrawerNavigation() {
+    if (vDrawerNavigation == null) {
+      vDrawerNavigation = findViewById(getDrawerNavigationResource());
+    }
+    return vDrawerNavigation;
+  }
+
+  public void onDrawerClosed(View drawerView) {
+    // todo
+  }
+
+  public void onDrawerOpened(View drawerView) {
+    // todo
+  }
+
+  public void onDrawerSlide(View drawerView, float slideOffset) {
+    // todo
+  }
+
+  public void onDrawerStateChanged(int newState) {
+    // todo
+  }
+
+  public void openDrawer() {
     if (isValidated()) {
-      mDrawerToggle = new ActionBarDrawerToggle(this, getDrawerLayout(), R.string.open, R.string.close) {
+      getDrawerLayout().openDrawer(getDrawerNavigation());
+    }
+  }
+
+  protected void initDrawer() {
+    if (isValidated()) {
+      vDrawerToggle = new ActionBarDrawerToggle(this, getDrawerLayout(), R.string.open, R.string.close) {
 
         @Override
         public void onDrawerClosed(View drawerView) {
@@ -69,29 +133,7 @@ public abstract class MdDrawerLayoutActivity extends AppCompatActivity {
           MdDrawerLayoutActivity.this.onDrawerStateChanged(newState);
         }
       };
-      getDrawerLayout().setDrawerListener(mDrawerToggle);
-    }
-  }
-
-  public void onDrawerClosed(View drawerView) {
-    // todo
-  }
-
-  public void onDrawerOpened(View drawerView) {
-    // todo
-  }
-
-  public void onDrawerSlide(View drawerView, float slideOffset) {
-    // todo
-  }
-
-  public void onDrawerStateChanged(int newState) {
-    // todo
-  }
-
-  public void openDrawer() {
-    if (isValidated()) {
-      getDrawerLayout().openDrawer(getDrawerNavigation());
+      getDrawerLayout().setDrawerListener(vDrawerToggle);
     }
   }
 
