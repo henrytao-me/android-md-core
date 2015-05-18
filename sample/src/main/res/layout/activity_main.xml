@@ -14,60 +14,102 @@
   ~ limitations under the License.
   -->
 
-<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:id="@+id/container"
-  tools:context=".activity.MainActivity"
-  style="@style/MdDrawerLayout">
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
 
-  <RelativeLayout
-    android:id="@+id/content"
-    style="@style/MdDrawerLayout.Content">
+  <android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    style="@style/MdToolbar" />
 
-    <RelativeLayout
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/toolbar"
+    android:scrollbars="vertical">
+
+    <LinearLayout
       android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:background="?attr/mdColor_backgroundPalette">
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
 
-      <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        app:navigationIcon="@drawable/ic_toolbar_menu"
-        style="@style/MdToolbar" />
+      <View style="@style/MdList.Spacing" />
 
-      <fragment
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@+id/toolbar"
-        android:name="me.henrytao.mddemo.fragment.MainFragment"
-        tools:layout="@layout/fragment_main" />
+      <RelativeLayout
+        android:id="@+id/goto_toolbar_activity"
+        android:background="@drawable/md_ripple"
+        style="@style/MdList.SingleLine.TextOnly">
+        <TextView
+          android:text="ToolbarActivity"
+          style="@style/MdList.SingleLine.TextOnly.Text" />
+        <View style="@style/MdDivider.AlignParentBottom" />
+      </RelativeLayout>
 
-    </RelativeLayout>
+      <RelativeLayout
+        android:id="@+id/goto_drawer_layout_activity"
+        android:background="@drawable/md_ripple"
+        style="@style/MdList.SingleLine.TextOnly">
+        <TextView
+          android:text="DrawerLayoutActivity"
+          style="@style/MdList.SingleLine.TextOnly.Text" />
+        <View style="@style/MdDivider.AlignParentBottom" />
+      </RelativeLayout>
 
-  </RelativeLayout>
+      <RelativeLayout
+        android:id="@+id/goto_pager_tab_activity"
+        android:background="@drawable/md_ripple"
+        style="@style/MdList.SingleLine.TextOnly">
+        <TextView
+          android:text="PagerTabActivity"
+          style="@style/MdList.SingleLine.TextOnly.Text" />
+        <View style="@style/MdDivider.AlignParentBottom" />
+      </RelativeLayout>
 
-  <RelativeLayout
-    android:id="@+id/navigation"
-    style="@style/MdDrawerLayout.Navigation">
+      <RelativeLayout
+        android:id="@+id/goto_drawer_layout_pager_tab_activity"
+        android:background="@drawable/md_ripple"
+        style="@style/MdList.SingleLine.TextOnly">
+        <TextView
+          android:text="DrawerLayoutPagerTabActivity"
+          style="@style/MdList.SingleLine.TextOnly.Text" />
+        <View style="@style/MdDivider.AlignParentBottom" />
+      </RelativeLayout>
 
-    <fragment
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:name="me.henrytao.mddemo.fragment.NavigationDrawerFragment"
-      tools:layout="@layout/view_navigation_drawer" />
+      <RelativeLayout
+        android:id="@+id/goto_textview"
+        android:background="@drawable/md_ripple"
+        style="@style/MdList.SingleLine.TextOnly">
+        <TextView
+          android:text="TextView"
+          style="@style/MdList.SingleLine.TextOnly.Text" />
+        <View style="@style/MdDivider.AlignParentBottom" />
+      </RelativeLayout>
 
-  </RelativeLayout>
+      <RelativeLayout
+        android:id="@+id/goto_button"
+        android:background="@drawable/md_ripple"
+        style="@style/MdList.SingleLine.TextOnly">
+        <TextView
+          android:text="Button"
+          style="@style/MdList.SingleLine.TextOnly.Text" />
+        <View style="@style/MdDivider.AlignParentBottom" />
+      </RelativeLayout>
 
-  <RelativeLayout
-    android:id="@+id/navigation_right"
-    style="@style/MdDrawerLayout.Navigation.Right">
+      <RelativeLayout
+        android:id="@+id/goto_listview"
+        android:background="@drawable/md_ripple"
+        style="@style/MdList.SingleLine.TextOnly">
+        <TextView
+          android:text="ListView"
+          style="@style/MdList.SingleLine.TextOnly.Text" />
+        <View style="@style/MdDivider.AlignParentBottom" />
+      </RelativeLayout>
 
-    <fragment
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:name="me.henrytao.mddemo.fragment.NavigationDrawerRightFragment"
-      tools:layout="@layout/view_navigation_drawer_right" />
+      <View style="@style/MdList.Spacing" />
 
-  </RelativeLayout>
+    </LinearLayout>
 
-</android.support.v4.widget.DrawerLayout>
+  </ScrollView>
+
+</RelativeLayout>

@@ -17,26 +17,23 @@
 package me.henrytao.mddemo.fragment;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import me.henrytao.mddemo.R;
+import me.henrytao.mdwidget.activity.MdPagerTabActivity;
+import me.henrytao.mdwidget.fragment.MdPagerTabFragment;
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class NavigationDrawerRightFragment extends Fragment {
+public class PagerTabBFragment extends MdPagerTabFragment implements MdPagerTabActivity.ObservableScrollViewFragment {
 
-  public NavigationDrawerRightFragment() {
-
+  public PagerTabBFragment() {
   }
 
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
       Bundle savedInstanceState) {
-    return inflater.inflate(R.layout.view_navigation_drawer_right, container, false);
+    return inflater.inflate(R.layout.fragment_pager_tab_b, container, false);
   }
 
 }
