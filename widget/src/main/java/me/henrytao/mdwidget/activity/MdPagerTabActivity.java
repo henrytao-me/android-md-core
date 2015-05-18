@@ -185,7 +185,7 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
       return true;
     }
     int scrollY = scrollView.getCurrentScrollY();
-    if (scrollY >= 0 && scrollY <= getToolbarHeight()) {
+    if (toolbarIsHidden() && scrollY >= 0 && scrollY <= getToolbarHeight()) {
       return true;
     }
     return false;
@@ -222,7 +222,7 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
         showToolbar();
       }
     } else if (scrollState == ScrollState.UP) {
-      if (toolbarHeight <= scrollY) {
+      if (scrollY >= toolbarHeight) {
         hideToolbar();
       } else {
         showToolbar();
