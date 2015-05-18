@@ -15,5 +15,10 @@
   -->
 
 <resources>
+
+  <string name="close">Close</string>
+  <string name="open">Open</string>
+
   <string name="app_name">MdCore</string>
+
 </resources>
