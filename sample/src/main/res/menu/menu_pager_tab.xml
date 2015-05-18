@@ -14,13 +14,7 @@
   ~ limitations under the License.
   -->
 
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="me.henrytao.widget">
+<menu xmlns:tools="http://schemas.android.com/tools"
+  tools:context="me.henrytao.mddemo.activity.PagerTabActivity">
 
-  <application
-    android:allowBackup="true"
-    android:label="@string/app_name">
-
-  </application>
-
-</manifest>
+</menu>

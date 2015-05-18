@@ -47,9 +47,19 @@ public class MainActivity extends MdToolbarActivity {
     startActivity(DrawerLayoutActivity.getIntent(this));
   }
 
+  @OnClick(R.id.goto_drawer_layout_pager_tab_activity)
+  protected void onGotoDrawerLayoutPagerTabActivity() {
+    startActivity(DrawerLayoutPagerTabActivity.getIntent(this));
+  }
+
   @OnClick(R.id.goto_listview)
   protected void onGotoListviewClicked() {
     startActivity(ExampleActivity.getIntent(this, ExampleMdListFragment.class, "ListView"));
+  }
+
+  @OnClick(R.id.goto_pager_tab_activity)
+  protected void onGotoPagerTabActivity() {
+    startActivity(PagerTabActivity.getIntent(this));
   }
 
   @OnClick(R.id.goto_textview)
