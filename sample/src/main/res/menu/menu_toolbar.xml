@@ -14,10 +14,8 @@
   ~ limitations under the License.
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  android:orientation="vertical">
+<menu xmlns:tools="http://schemas.android.com/tools"
+  tools:context="me.henrytao.mddemo.activity.ToolbarActivity">
 
 
-</LinearLayout>
+</menu>

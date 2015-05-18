@@ -16,6 +16,7 @@
 
 <resources>
 
+  <string name="text_put_your_content_here">Put your content here</string>
   <string name="text_title">Padding above title Padding above title Padding above title Padding above title</string>
   <string name="text_description">Add 8dp padding at the top and bottom of a list. One exception is at the top of a list with a subheader, because subheaders contain their own padding.</string>
 
@@ -30,5 +31,7 @@
 
   <!-- TODO: Remove or change this placeholder text -->
   <string name="hello_blank_fragment">Hello blank fragment</string>
+  <string name="title_activity_toolbar">ToolbarActivity</string>
+  <string name="title_activity_drawer_layout">DrawerLayoutActivity</string>
 
 </resources>
