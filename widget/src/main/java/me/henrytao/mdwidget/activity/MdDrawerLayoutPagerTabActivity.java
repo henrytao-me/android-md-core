@@ -14,23 +14,21 @@
  * limitations under the License.
  */
 
-package me.henrytao.mdcore.activity;
+package me.henrytao.mdwidget.activity;
 
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 
 import java.lang.ref.WeakReference;
 
-import me.henrytao.mdcore.R;
-
+import me.henrytao.widget.R;
 
 /**
- * Created by henrytao on 3/28/15.
+ * Created by henrytao on 5/17/15.
  */
-public abstract class MdDrawerLayoutActivity extends AppCompatActivity {
+public abstract class MdDrawerLayoutPagerTabActivity extends MdPagerTabActivity {
 
   protected abstract int getDrawerContentResource();
 
@@ -48,7 +46,7 @@ public abstract class MdDrawerLayoutActivity extends AppCompatActivity {
 
   protected ActionBarDrawerToggle vDrawerToggle;
 
-  private WeakReference<MdDrawerLayoutActivity> mWeakReference;
+  private WeakReference<MdDrawerLayoutPagerTabActivity> mWeakReference;
 
   @Override
   public void setContentView(int layoutResID) {
@@ -126,19 +124,27 @@ public abstract class MdDrawerLayoutActivity extends AppCompatActivity {
     }
   }
 
+  protected int getDrawerCloseStringResource() {
+    return R.string.close;
+  }
+
   protected int getDrawerNavigationRightResource() {
     return 0;
+  }
+
+  protected int getDrawerOpenStringResource() {
+    return R.string.open;
   }
 
   protected void initDrawer() {
     if (isValidated()) {
       getWeakReference();
-      vDrawerToggle = new ActionBarDrawerToggle(this, getDrawerLayout(), R.string.open, R.string.close) {
+      vDrawerToggle = new ActionBarDrawerToggle(this, getDrawerLayout(), getDrawerOpenStringResource(), getDrawerCloseStringResource()) {
 
         @Override
         public void onDrawerClosed(View drawerView) {
           super.onDrawerClosed(drawerView);
-          MdDrawerLayoutActivity activity = getWeakReference().get();
+          MdDrawerLayoutPagerTabActivity activity = getWeakReference().get();
           if (activity != null) {
             NAVIGATION_DRAWER_TYPE type = NAVIGATION_DRAWER_TYPE.LEFT;
             if (activity.getDrawerNavigationRight() != null && drawerView.getId() == activity.getDrawerNavigationRight().getId()) {
@@ -151,7 +157,7 @@ public abstract class MdDrawerLayoutActivity extends AppCompatActivity {
         @Override
         public void onDrawerOpened(View drawerView) {
           super.onDrawerOpened(drawerView);
-          MdDrawerLayoutActivity activity = getWeakReference().get();
+          MdDrawerLayoutPagerTabActivity activity = getWeakReference().get();
           if (activity != null) {
             NAVIGATION_DRAWER_TYPE type = NAVIGATION_DRAWER_TYPE.LEFT;
             if (activity.getDrawerNavigationRight() != null && drawerView.getId() == activity.getDrawerNavigationRight().getId()) {
@@ -164,7 +170,7 @@ public abstract class MdDrawerLayoutActivity extends AppCompatActivity {
         @Override
         public void onDrawerSlide(View drawerView, float slideOffset) {
           super.onDrawerSlide(drawerView, slideOffset);
-          MdDrawerLayoutActivity activity = getWeakReference().get();
+          MdDrawerLayoutPagerTabActivity activity = getWeakReference().get();
           if (activity != null) {
             NAVIGATION_DRAWER_TYPE type = NAVIGATION_DRAWER_TYPE.LEFT;
             if (activity.getDrawerNavigationRight() != null && drawerView.getId() == activity.getDrawerNavigationRight().getId()) {
@@ -177,7 +183,7 @@ public abstract class MdDrawerLayoutActivity extends AppCompatActivity {
         @Override
         public void onDrawerStateChanged(int newState) {
           super.onDrawerStateChanged(newState);
-          MdDrawerLayoutActivity activity = getWeakReference().get();
+          MdDrawerLayoutPagerTabActivity activity = getWeakReference().get();
           if (activity != null) {
             activity.onDrawerStateChanged(newState);
           }
@@ -187,7 +193,7 @@ public abstract class MdDrawerLayoutActivity extends AppCompatActivity {
     }
   }
 
-  private WeakReference<MdDrawerLayoutActivity> getWeakReference() {
+  private WeakReference<MdDrawerLayoutPagerTabActivity> getWeakReference() {
     if (mWeakReference == null) {
       mWeakReference = new WeakReference<>(this);
     }

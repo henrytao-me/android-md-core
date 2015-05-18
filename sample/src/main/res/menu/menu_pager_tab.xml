@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!--
+<!--
   ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,8 +14,7 @@
   ~ limitations under the License.
   -->
 
-<resources>
+<menu xmlns:tools="http://schemas.android.com/tools"
+  tools:context="me.henrytao.mddemo.activity.PagerTabActivity">
 
-  <string name="app_name">MdCore</string>
-
-</resources>
+</menu>

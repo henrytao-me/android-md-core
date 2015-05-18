@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!--
+<!--
   ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,8 +14,15 @@
   ~ limitations under the License.
   -->
 
-<resources>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  tools:context="me.henrytao.mddemo.activity.DrawerLayoutActivity">
 
-  <string name="app_name">MdCore</string>
+  <item
+    android:id="@+id/action_navigation_drawer_right"
+    android:orderInCategory="100"
+    android:title="@string/action_navigation_drawer_right"
+    app:showAsAction="never" />
 
-</resources>
+</menu>
