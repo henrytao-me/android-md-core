@@ -26,6 +26,7 @@ import android.view.MenuItem;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
+import me.henrytao.mdcore.activity.MdToolbarActivity;
 import me.henrytao.mddemo.R;
 
 public class ExampleActivity extends MdToolbarActivity {
