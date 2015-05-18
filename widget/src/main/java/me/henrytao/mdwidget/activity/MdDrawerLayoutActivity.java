@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package me.henrytao.mdcore.activity;
+package me.henrytao.mdwidget.activity;
 
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -24,7 +24,7 @@ import android.view.ViewGroup;
 
 import java.lang.ref.WeakReference;
 
-import me.henrytao.mdcore.R;
+import me.henrytao.widget.R;
 
 
 /**

@@ -8,7 +8,7 @@ import android.view.View;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
-import me.henrytao.mdcore.activity.MdDrawerLayoutActivity;
+import me.henrytao.mdwidget.activity.MdDrawerLayoutActivity;
 import me.henrytao.mddemo.R;
 
 public class MainActivity extends MdDrawerLayoutActivity {

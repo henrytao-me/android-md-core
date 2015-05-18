@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package me.henrytao.mdcore.activity;
+package me.henrytao.mdwidget.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
