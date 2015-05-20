@@ -39,7 +39,8 @@ import android.view.ViewGroup;
 /**
  * Created by henrytao on 5/17/15.
  */
-public abstract class MdPagerTabActivity extends AppCompatActivity implements ObservableScrollViewCallbacks {
+public abstract class MdPagerTabActivity extends AppCompatActivity implements ObservableScrollViewCallbacks,
+    ViewPager.OnPageChangeListener {
 
   public abstract int getPagerTabObservableScrollViewResource();
 
@@ -88,6 +89,42 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
   @Override
   public void onDownMotionEvent() {
 
+  }
+
+  @Override
+  public void onPageScrollStateChanged(int state) {
+
+  }
+
+  @Override
+  public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+  }
+
+  @Override
+  public void onPageSelected(int position) {
+    propagateToolbarState(toolbarIsShown());
+    // check if current doesn't has height to scroll, then showToolbar
+    Fragment f = mPagerAdapter.getItemAt(getViewPager().getCurrentItem());
+    if (f == null) {
+      return;
+    }
+    View view = f.getView();
+    if (view == null) {
+      return;
+    }
+    view = view.findViewById(getPagerTabObservableScrollViewResource());
+    if (!(view instanceof Scrollable)) {
+      return;
+    }
+    Scrollable scrollView = (Scrollable) view;
+    int toolbarHeight = getToolbarHeight();
+    if (toolbarIsHidden() && scrollView.getCurrentScrollY() < toolbarHeight) {
+      scrollView.scrollVerticallyTo(toolbarHeight);
+      if (scrollView.getCurrentScrollY() < toolbarHeight) {
+        showToolbar();
+      }
+    }
   }
 
   @Override
@@ -302,20 +339,7 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
 
     // When the page is selected, other fragments' scrollY should be adjusted
     // according to the toolbar status(shown/hidden)
-    slidingTabLayout.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-      @Override
-      public void onPageScrollStateChanged(int i) {
-      }
-
-      @Override
-      public void onPageScrolled(int i, float v, int i2) {
-      }
-
-      @Override
-      public void onPageSelected(int i) {
-        propagateToolbarState(toolbarIsShown());
-      }
-    });
+    slidingTabLayout.setOnPageChangeListener(this);
     propagateToolbarState(toolbarIsShown());
   }
 
