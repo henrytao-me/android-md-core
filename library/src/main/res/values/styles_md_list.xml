@@ -26,6 +26,17 @@
     <item name="android:layout_height">?attr/mdList_spacing</item>
   </style>
 
+  <style name="MdList.Subheader">
+    <item name="android:layout_height">48dp</item>
+    <item name="android:paddingLeft">?attr/mdLayout_spacing</item>
+    <item name="android:paddingRight">?attr/mdLayout_spacing</item>
+    <item name="android:textSize">?attr/mdFontSize_subhead</item>
+    <item name="android:textColor">?attr/mdSecondaryTextColor_backgroundPalette</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:ellipsize">end</item>
+    <item name="android:gravity">left|center_vertical</item>
+  </style>
+
   <style name="MdList.Wrapper">
     <item name="android:orientation">vertical</item>
     <item name="android:layout_centerVertical">true</item>
