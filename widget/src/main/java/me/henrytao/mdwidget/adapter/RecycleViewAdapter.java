@@ -29,7 +29,7 @@ import me.henrytao.mdwidget.config.Constants;
 /**
  * Created by henrytao on 5/20/15.
  */
-public abstract class RecycleViewHSFAdapter<T extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<T> {
+public abstract class RecycleViewAdapter<T extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<T> {
 
   public abstract void onBindViewHolder(T holder, int position, int dataPosition);
 
