@@ -33,7 +33,7 @@
   </style>
 
   <style name="MdTheme.MdToolbar.TitleTextAppearance" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
-    <item name="android:textSize">?attr/mdFontSize_title</item>
+
   </style>
 
   <!-- Note: based on experiment, icons in toolbar/menu should be resize (icon only, not the whole image) to 82% -->
@@ -45,7 +45,7 @@
     <item name="android:paddingRight">?attr/mdLayout_spacing_xs</item>
     <item name="android:background">?attr/mdToolbar_background</item>
     <item name="android:elevation" tools:ignore="NewApi">?attr/mdToolbar_elevation</item>
-    <!--<item name="titleTextAppearance">@style/MdTheme.MdToolbar.TitleTextAppearance</item>-->
+    <item name="titleTextAppearance">@style/MdTheme.MdToolbar.TitleTextAppearance</item>
     <item name="theme">@style/MdTheme.MdToolbar.Theme</item>
     <item name="popupTheme">@style/MdTheme.MdToolbar.PopupTheme</item>
   </style>
