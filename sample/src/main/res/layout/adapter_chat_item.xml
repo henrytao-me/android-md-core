@@ -14,30 +14,49 @@
   ~ limitations under the License.
   -->
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/md_ripple" android:clickable="true"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:background="@drawable/md_ripple"
+  android:clickable="true"
   style="@style/MdList.ThreeLine.AvatarIconWithText">
 
-  <ImageView android:id="@+id/main_avatar" android:src="@drawable/ic_blank_circle"
+  <ImageView
+    android:id="@+id/main_avatar"
+    android:src="@drawable/ic_blank_circle"
     style="@style/MdList.ThreeLine.AvatarIconWithText.Avatar" />
 
   <LinearLayout style="@style/MdList.Wrapper">
 
     <RelativeLayout style="@style/MdList.ThreeLine.AvatarIconWithText.Text.First">
-      <TextView android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true" android:layout_toLeftOf="@+id/unread_count" android:text="Chat room name"
+      <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/unread_count"
+        android:text="Chat room name"
         style="@style/MdText.Body1.SingleLine" />
-      <TextView android:id="@+id/unread_count" android:layout_alignParentRight="true" android:text="(9)"
-        android:textColor="?attr/mdSecondaryTextColor_backgroundPalette" style="@style/MdText.Body1.SingleLine" />
+      <TextView
+        android:id="@+id/unread_count"
+        android:layout_alignParentRight="true"
+        android:text="(9)"
+        android:textColor="?attr/mdSecondaryTextColor_backgroundPalette"
+        style="@style/MdText.Body1.SingleLine" />
     </RelativeLayout>
 
-    <TextView android:id="@+id/description" android:singleLine="false"
+    <TextView
+      android:id="@+id/description"
+      android:singleLine="false"
       android:text="20/05/2015 - Chat room description abc xyz. Chat room description abc xyz. Chat room description abc xyz"
       style="@style/MdList.ThreeLine.AvatarIconWithText.Text.Second.MultipleLine" />
 
   </LinearLayout>
 
-  <ImageView android:src="@drawable/ic_blank" style="@style/MdList.ThreeLine.AvatarIconWithText.Icon" />
+  <ImageView
+    android:src="@drawable/ic_blank"
+    style="@style/MdList.ThreeLine.AvatarIconWithText.Icon" />
 
-  <View android:layout_marginLeft="?attr/mdLayout_contentAssociatedWithIconOrAvatarLeftMargin" style="@style/MdDivider.AlignParentBottom" />
+  <View
+    android:layout_marginLeft="?attr/mdLayout_contentAssociatedWithIconOrAvatarLeftMargin"
+    style="@style/MdDivider.AlignParentBottom" />
 
 </RelativeLayout>

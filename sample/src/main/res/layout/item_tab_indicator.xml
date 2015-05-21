@@ -13,12 +13,23 @@
   ~ ITS DERIVATIVES.
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
-  android:layout_width="wrap_content" android:layout_height="?attr/actionBarSize" android:orientation="vertical"
-  android:background="@drawable/md_ripple_dark" android:gravity="center" android:paddingLeft="?attr/mdLayout_spacing_lg"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="wrap_content"
+  android:layout_height="?attr/actionBarSize"
+  android:orientation="vertical"
+  android:background="@drawable/md_ripple_dark"
+  android:gravity="center"
+  android:paddingLeft="?attr/mdLayout_spacing_lg"
   android:paddingRight="?attr/mdLayout_spacing_lg">
 
-  <TextView android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="true"
-    android:textColor="?attr/mdTextColor_primaryPalette" tools:text="Title" style="@style/MdText.Body2.SingleLine" />
+  <TextView
+    android:id="@+id/title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAllCaps="true"
+    android:textColor="?attr/mdTextColor_primaryPalette"
+    tools:text="Title"
+    style="@style/MdText.Body2.SingleLine" />
 
 </LinearLayout>

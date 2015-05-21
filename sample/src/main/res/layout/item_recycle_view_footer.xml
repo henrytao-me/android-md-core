@@ -14,10 +14,16 @@
   ~ limitations under the License.
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-  android:layout_height="match_parent" android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
 
-  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="?attr/mdLayout_spacing"
-    android:text="Footer" android:textSize="?attr/mdFontSize_title" />
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="?attr/mdLayout_spacing"
+    android:text="Footer"
+    android:textSize="?attr/mdFontSize_title" />
 
 </LinearLayout>

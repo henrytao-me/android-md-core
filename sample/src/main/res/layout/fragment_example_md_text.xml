@@ -14,40 +14,73 @@
   ~ limitations under the License.
   -->
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
-  android:layout_width="match_parent" android:layout_height="match_parent" android:scrollbars="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:scrollbars="vertical"
   tools:context="me.henrytao.mddemo.fragment.ExampleMdTextFragment">
 
-  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"
-    android:paddingLeft="?attr/mdLayout_spacing" android:paddingRight="?attr/mdLayout_spacing">
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="?attr/mdLayout_spacing"
+    android:paddingRight="?attr/mdLayout_spacing">
 
     <View style="@style/MdList.Spacing" />
 
-    <TextView android:text="Display4 Light 112sp" style="@style/MdText.Display4" />
+    <TextView
+      android:text="Display4 Light 112sp"
+      style="@style/MdText.Display4" />
 
-    <TextView android:text="Display3 Regular 56sp" style="@style/MdText.Display3" />
+    <TextView
+      android:text="Display3 Regular 56sp"
+      style="@style/MdText.Display3" />
 
-    <TextView android:text="Display2 Regular 45sp" style="@style/MdText.Display2" />
+    <TextView
+      android:text="Display2 Regular 45sp"
+      style="@style/MdText.Display2" />
 
-    <TextView android:text="Display1 Regular 34sp" style="@style/MdText.Display1" />
+    <TextView
+      android:text="Display1 Regular 34sp"
+      style="@style/MdText.Display1" />
 
-    <TextView android:text="Headline Regular 24sp" style="@style/MdText.Headline" />
+    <TextView
+      android:text="Headline Regular 24sp"
+      style="@style/MdText.Headline" />
 
-    <TextView android:text="Title Medium 24sp" style="@style/MdText.Title" />
+    <TextView
+      android:text="Title Medium 24sp"
+      style="@style/MdText.Title" />
 
-    <TextView android:text="Subhead2 Regular 16sp" style="@style/MdText.Subhead2" />
+    <TextView
+      android:text="Subhead2 Regular 16sp"
+      style="@style/MdText.Subhead2" />
 
-    <TextView android:text="Subhead1 Regular 16sp" style="@style/MdText.Subhead1" />
+    <TextView
+      android:text="Subhead1 Regular 16sp"
+      style="@style/MdText.Subhead1" />
 
-    <TextView android:text="Subhead Regular 16sp" style="@style/MdText.Subhead" />
+    <TextView
+      android:text="Subhead Regular 16sp"
+      style="@style/MdText.Subhead" />
 
-    <TextView android:text="Body2 Medium 14sp" style="@style/MdText.Body2" />
+    <TextView
+      android:text="Body2 Medium 14sp"
+      style="@style/MdText.Body2" />
 
-    <TextView android:text="Body1 Regular 14sp" style="@style/MdText.Body1" />
+    <TextView
+      android:text="Body1 Regular 14sp"
+      style="@style/MdText.Body1" />
 
-    <TextView android:text="Caption Regular 12sp" style="@style/MdText.Caption" />
+    <TextView
+      android:text="Caption Regular 12sp"
+      style="@style/MdText.Caption" />
 
-    <TextView android:text="Button All Caps 14sp" style="@style/MdText.Button" />
+    <TextView
+      android:text="Button All Caps 14sp"
+      style="@style/MdText.Button" />
 
     <View style="@style/MdList.Spacing" />
 

@@ -28,9 +28,9 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import me.henrytao.mdcore.adapter.RecycleViewAdapter;
+import me.henrytao.mdcore.config.Constants;
 import me.henrytao.mddemo.R;
-import me.henrytao.mdwidget.adapter.RecycleViewAdapter;
-import me.henrytao.mdwidget.config.Constants;
 
 /**
  * Created by henrytao on 5/21/15.
@@ -60,10 +60,6 @@ public class ChatItemAdapter extends RecycleViewAdapter<RecyclerView.ViewHolder>
 
     addSection(0, "Recent chat");
     addSection(3, "Previous chat");
-  }
-
-  public Context getContext() {
-    return mContext;
   }
 
   @Override
@@ -104,6 +100,10 @@ public class ChatItemAdapter extends RecycleViewAdapter<RecyclerView.ViewHolder>
   @Override
   protected boolean hasHeader() {
     return mHeaderView != null;
+  }
+
+  public Context getContext() {
+    return mContext;
   }
 
   public class FooterHolder extends RecyclerView.ViewHolder {

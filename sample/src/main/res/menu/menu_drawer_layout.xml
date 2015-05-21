@@ -14,10 +14,15 @@
   ~ limitations under the License.
   -->
 
-<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:tools="http://schemas.android.com/tools" tools:context="me.henrytao.mddemo.activity.DrawerLayoutActivity">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  tools:context="me.henrytao.mddemo.activity.DrawerLayoutActivity">
 
-  <item android:id="@+id/action_navigation_drawer_right" android:orderInCategory="100"
-    android:title="@string/action_navigation_drawer_right" app:showAsAction="never" />
+  <item
+    android:id="@+id/action_navigation_drawer_right"
+    android:orderInCategory="100"
+    android:title="@string/action_navigation_drawer_right"
+    app:showAsAction="never" />
 
 </menu>
