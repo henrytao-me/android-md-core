@@ -25,7 +25,7 @@ public final class Constants {
     FOOTER,
     HEADER,
     ITEM,
-    SUBHEADER
+    SECTION
   }
 
   public interface RECYCLE_VIEW_ITEM_TYPE {
@@ -34,7 +34,7 @@ public final class Constants {
     int FOOTER = 2;
     int HEADER = 0;
     int ITEM = 1;
-    int SUBHEADER = 3;
+    int SECTION = 3;
   }
 
 }

@@ -41,13 +41,13 @@ public abstract class RecycleViewAdapter<T extends RecyclerView.ViewHolder> exte
 
   protected abstract boolean hasHeader();
 
-  protected Integer[] mSubheaderIndexes;
+  protected Integer[] mSectionIndexes;
 
-  protected Map<Integer, Object> mSubheaders;
+  protected Map<Integer, Object> mSections;
 
   @Override
   public int getItemCount() {
-    return getDataItemCount() + (hasHeader() ? 1 : 0) + (hasFooter() ? 1 : 0) + getSubheaderIndexes().length;
+    return getDataItemCount() + (hasHeader() ? 1 : 0) + (hasFooter() ? 1 : 0) + getSectionIndexes().length;
   }
 
   @Override
@@ -56,8 +56,8 @@ public abstract class RecycleViewAdapter<T extends RecyclerView.ViewHolder> exte
       return Constants.RECYCLE_VIEW_ITEM_TYPE.HEADER;
     } else if (isFooter(position)) {
       return Constants.RECYCLE_VIEW_ITEM_TYPE.FOOTER;
-    } else if (isSubheader(position)) {
-      return Constants.RECYCLE_VIEW_ITEM_TYPE.SUBHEADER;
+    } else if (isSection(position)) {
+      return Constants.RECYCLE_VIEW_ITEM_TYPE.SECTION;
     } else if (isBlank(position)) {
       return Constants.RECYCLE_VIEW_ITEM_TYPE.BLANK;
     }
@@ -74,8 +74,8 @@ public abstract class RecycleViewAdapter<T extends RecyclerView.ViewHolder> exte
     Constants.ItemViewType itemViewType = Constants.ItemViewType.BLANK;
     if (viewType == Constants.RECYCLE_VIEW_ITEM_TYPE.HEADER) {
       itemViewType = Constants.ItemViewType.HEADER;
-    } else if (viewType == Constants.RECYCLE_VIEW_ITEM_TYPE.SUBHEADER) {
-      itemViewType = Constants.ItemViewType.SUBHEADER;
+    } else if (viewType == Constants.RECYCLE_VIEW_ITEM_TYPE.SECTION) {
+      itemViewType = Constants.ItemViewType.SECTION;
     } else if (viewType == Constants.RECYCLE_VIEW_ITEM_TYPE.ITEM) {
       itemViewType = Constants.ItemViewType.ITEM;
     }
@@ -87,42 +87,42 @@ public abstract class RecycleViewAdapter<T extends RecyclerView.ViewHolder> exte
    * Ex:
    * originalIndex == 0: originalIndex will be above first item / first item in the list without header
    * originalIndex == 8: originalIndex will be above item index 8 /
-   *                     8th item in the list without header if it's the first subheader /
-   *                     9th item in the list without header if it's the second subheader
+   *                     8th item in the list without header if it's the first section /
+   *                     9th item in the list without header if it's the second section
    */
-  public void addSubheader(int dataIndex, Object title) {
-    getSubheaders().put(dataIndex, title);
-    calculateSubheaderIndexes();
+  public void addSection(int dataIndex, Object title) {
+    getSections().put(dataIndex, title);
+    calculateSectionIndexes();
   }
 
-  public void clearSubheaders() {
-    getSubheaders().clear();
-    calculateSubheaderIndexes();
+  public void clearAllSection() {
+    getSections().clear();
+    calculateSectionIndexes();
   }
 
-  public Integer[] getSubheaderIndexes() {
-    if (mSubheaderIndexes == null) {
-      mSubheaderIndexes = new Integer[0];
+  public Integer[] getSectionIndexes() {
+    if (mSectionIndexes == null) {
+      mSectionIndexes = new Integer[0];
     }
-    return mSubheaderIndexes;
+    return mSectionIndexes;
   }
 
-  public Map<Integer, Object> getSubheaders() {
-    if (mSubheaders == null) {
-      mSubheaders = new HashMap<>();
+  public Map<Integer, Object> getSections() {
+    if (mSections == null) {
+      mSections = new HashMap<>();
     }
-    return mSubheaders;
+    return mSections;
   }
 
-  public void removeSubheader(int dataIndex) {
-    getSubheaders().remove(dataIndex);
-    calculateSubheaderIndexes();
+  public void removeSection(int dataIndex) {
+    getSections().remove(dataIndex);
+    calculateSectionIndexes();
   }
 
   protected boolean isBlank(int position) {
     int count = getDataItemCount();
     int offset = 0;
-    for (int i : getSubheaderIndexes()) {
+    for (int i : getSectionIndexes()) {
       if (i < count) {
         offset += 1;
       } else {
@@ -141,10 +141,10 @@ public abstract class RecycleViewAdapter<T extends RecyclerView.ViewHolder> exte
     return hasHeader() && position == 0;
   }
 
-  protected boolean isSubheader(int position) {
+  protected boolean isSection(int position) {
     position -= hasHeader() ? 1 : 0;
     int offset = 0;
-    for (int i : getSubheaderIndexes()) {
+    for (int i : getSectionIndexes()) {
       if (position < (i + offset)) {
         break;
       }
@@ -161,7 +161,7 @@ public abstract class RecycleViewAdapter<T extends RecyclerView.ViewHolder> exte
       return -1;
     }
     position -= hasHeader() ? 1 : 0;
-    for (int i : getSubheaderIndexes()) {
+    for (int i : getSectionIndexes()) {
       if (position > i) {
         position -= 1;
       } else {
@@ -171,9 +171,9 @@ public abstract class RecycleViewAdapter<T extends RecyclerView.ViewHolder> exte
     return position;
   }
 
-  private void calculateSubheaderIndexes() {
-    mSubheaderIndexes = getSubheaders().keySet().toArray(new Integer[getSubheaders().size()]);
-    Arrays.sort(mSubheaderIndexes);
+  private void calculateSectionIndexes() {
+    mSectionIndexes = getSections().keySet().toArray(new Integer[getSections().size()]);
+    Arrays.sort(mSectionIndexes);
   }
 
   public static class BlankHolder extends RecyclerView.ViewHolder {
