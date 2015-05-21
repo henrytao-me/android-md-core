@@ -37,6 +37,36 @@
       <View style="@style/MdList.Spacing" />
 
       <RelativeLayout
+        android:id="@+id/goto_textview"
+        android:background="@drawable/md_ripple"
+        style="@style/MdList.SingleLine.TextOnly">
+        <TextView
+          android:text="TextView"
+          style="@style/MdList.SingleLine.TextOnly.Text" />
+        <View style="@style/MdDivider.AlignParentBottom" />
+      </RelativeLayout>
+
+      <RelativeLayout
+        android:id="@+id/goto_button"
+        android:background="@drawable/md_ripple"
+        style="@style/MdList.SingleLine.TextOnly">
+        <TextView
+          android:text="Button"
+          style="@style/MdList.SingleLine.TextOnly.Text" />
+        <View style="@style/MdDivider.AlignParentBottom" />
+      </RelativeLayout>
+
+      <RelativeLayout
+        android:id="@+id/goto_listview"
+        android:background="@drawable/md_ripple"
+        style="@style/MdList.SingleLine.TextOnly">
+        <TextView
+          android:text="ListView"
+          style="@style/MdList.SingleLine.TextOnly.Text" />
+        <View style="@style/MdDivider.AlignParentBottom" />
+      </RelativeLayout>
+
+      <RelativeLayout
         android:id="@+id/goto_toolbar_activity"
         android:background="@drawable/md_ripple"
         style="@style/MdList.SingleLine.TextOnly">
@@ -77,31 +107,11 @@
       </RelativeLayout>
 
       <RelativeLayout
-        android:id="@+id/goto_textview"
+        android:id="@+id/goto_recycle_view_header_footer_section_activity"
         android:background="@drawable/md_ripple"
         style="@style/MdList.SingleLine.TextOnly">
         <TextView
-          android:text="TextView"
-          style="@style/MdList.SingleLine.TextOnly.Text" />
-        <View style="@style/MdDivider.AlignParentBottom" />
-      </RelativeLayout>
-
-      <RelativeLayout
-        android:id="@+id/goto_button"
-        android:background="@drawable/md_ripple"
-        style="@style/MdList.SingleLine.TextOnly">
-        <TextView
-          android:text="Button"
-          style="@style/MdList.SingleLine.TextOnly.Text" />
-        <View style="@style/MdDivider.AlignParentBottom" />
-      </RelativeLayout>
-
-      <RelativeLayout
-        android:id="@+id/goto_listview"
-        android:background="@drawable/md_ripple"
-        style="@style/MdList.SingleLine.TextOnly">
-        <TextView
-          android:text="ListView"
+          android:text="RecycleViewHeaderFooterSectionActivity"
           style="@style/MdList.SingleLine.TextOnly.Text" />
         <View style="@style/MdDivider.AlignParentBottom" />
       </RelativeLayout>

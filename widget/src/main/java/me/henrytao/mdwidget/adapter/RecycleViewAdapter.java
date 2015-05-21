@@ -17,14 +17,17 @@ package me.henrytao.mdwidget.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 import me.henrytao.mdwidget.config.Constants;
+import me.henrytao.widget.R;
 
 /**
  * Created by henrytao on 5/20/15.
@@ -188,4 +191,33 @@ public abstract class RecycleViewAdapter<T extends RecyclerView.ViewHolder> exte
     }
   }
 
+  public static class SectionHolder extends RecyclerView.ViewHolder {
+
+    public static SectionHolder newInstance(Context context, ViewGroup parent) {
+      View view = LayoutInflater.from(context).inflate(R.layout.md_list_section, parent, false);
+      return new SectionHolder(view);
+    }
+
+    View vContainer;
+
+    TextView vTitle;
+
+    public SectionHolder(View itemView) {
+      super(itemView);
+      vContainer = itemView;
+      vTitle = (TextView) vContainer.findViewById(R.id.title);
+    }
+
+    public void bind(Object title) {
+      vContainer.setVisibility(title == null ? View.GONE : View.VISIBLE);
+      if (title != null) {
+        if (title instanceof Integer) {
+          // resouceId
+          vTitle.setText((Integer) title);
+        } else {
+          vTitle.setText(title.toString());
+        }
+      }
+    }
+  }
 }

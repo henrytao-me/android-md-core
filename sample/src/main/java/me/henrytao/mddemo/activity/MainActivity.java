@@ -62,6 +62,11 @@ public class MainActivity extends MdToolbarActivity {
     startActivity(PagerTabActivity.getIntent(this));
   }
 
+  @OnClick(R.id.goto_recycle_view_header_footer_section_activity)
+  protected void onGotoRecycleViewHeaderFooterSectionActivity() {
+    startActivity(RecycleViewHeaderFooterSectionActivity.getIntent(this));
+  }
+
   @OnClick(R.id.goto_textview)
   protected void onGotoTextviewClicked() {
     startActivity(ExampleActivity.getIntent(this, ExampleMdTextFragment.class, "TextView"));
