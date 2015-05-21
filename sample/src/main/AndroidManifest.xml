@@ -46,7 +46,10 @@
       android:name=".activity.PagerTabActivity" />
     <activity
       android:label="@string/title_activity_drawer_layout_pager_tab"
-      android:name=".activity.DrawerLayoutPagerTabActivity"></activity>
+      android:name=".activity.DrawerLayoutPagerTabActivity" />
+    <activity
+      android:label="@string/title_activity_recycle_view_header_footer_section"
+      android:name=".activity.RecycleViewHeaderFooterSectionActivity"></activity>
   </application>
 
 </manifest>
