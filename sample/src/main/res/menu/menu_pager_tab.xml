@@ -14,7 +14,6 @@
   ~ limitations under the License.
   -->
 
-<menu xmlns:tools="http://schemas.android.com/tools"
-  tools:context="me.henrytao.mddemo.activity.PagerTabActivity">
+<menu xmlns:tools="http://schemas.android.com/tools" tools:context="me.henrytao.mddemo.activity.PagerTabActivity">
 
 </menu>

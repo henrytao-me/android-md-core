@@ -62,6 +62,10 @@ public class ChatItemAdapter extends RecycleViewAdapter<RecyclerView.ViewHolder>
     addSection(3, "Previous chat");
   }
 
+  public Context getContext() {
+    return mContext;
+  }
+
   @Override
   public void onBindViewHolder(RecyclerView.ViewHolder holder, int position, int dataPosition) {
     if (holder instanceof SectionHolder) {
@@ -100,10 +104,6 @@ public class ChatItemAdapter extends RecycleViewAdapter<RecyclerView.ViewHolder>
   @Override
   protected boolean hasHeader() {
     return mHeaderView != null;
-  }
-
-  public Context getContext() {
-    return mContext;
   }
 
   public class FooterHolder extends RecyclerView.ViewHolder {

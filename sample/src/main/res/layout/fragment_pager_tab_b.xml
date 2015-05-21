@@ -15,33 +15,18 @@
   -->
 
 <com.github.ksoichiro.android.observablescrollview.ObservableScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-  android:id="@+id/scrollView"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent">
+  android:id="@+id/scrollView" android:layout_width="match_parent" android:layout_height="match_parent">
 
-  <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="?attr/mdLayout_spacing">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical"
+    android:gravity="center" android:padding="?attr/mdLayout_spacing">
 
     <include layout="@layout/item_pager_tab_spacing" />
 
-    <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="Tab B" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tab B" />
 
-    <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="@string/text_put_your_content_here" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_put_your_content_here" />
 
-    <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="?attr/mdLayout_spacing"
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="?attr/mdLayout_spacing"
       android:text="@string/text_long" />
 
   </LinearLayout>

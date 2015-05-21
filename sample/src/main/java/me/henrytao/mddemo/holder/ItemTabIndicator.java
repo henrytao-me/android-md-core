@@ -41,6 +41,11 @@ public class ItemTabIndicator extends BaseHolder<ItemTabIndicator> {
     super(context, parent);
   }
 
+  public ItemTabIndicator setTitle(CharSequence title) {
+    vTitle.setText(title);
+    return this;
+  }
+
   @Override
   protected int getLayoutId() {
     return R.layout.item_tab_indicator;
@@ -55,10 +60,5 @@ public class ItemTabIndicator extends BaseHolder<ItemTabIndicator> {
   protected void onDestroy() {
     super.onDestroy();
     ButterKnife.reset(this);
-  }
-
-  public ItemTabIndicator setTitle(CharSequence title) {
-    vTitle.setText(title);
-    return this;
   }
 }

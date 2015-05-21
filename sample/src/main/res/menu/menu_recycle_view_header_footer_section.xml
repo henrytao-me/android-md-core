@@ -14,7 +14,6 @@
   ~ limitations under the License.
   -->
 
-<menu xmlns:tools="http://schemas.android.com/tools"
-  tools:context="me.henrytao.mddemo.activity.RecycleViewHeaderFooterSectionActivity">
+<menu xmlns:tools="http://schemas.android.com/tools" tools:context="me.henrytao.mddemo.activity.RecycleViewHeaderFooterSectionActivity">
 
 </menu>

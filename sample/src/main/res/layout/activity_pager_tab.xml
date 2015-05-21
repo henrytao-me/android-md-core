@@ -15,40 +15,22 @@
   -->
 
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  android:id="@+id/container"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/container" android:layout_width="match_parent" android:layout_height="match_parent">
 
-  <FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <android.support.v4.view.ViewPager
-      android:id="@+id/view_pager"
-      android:layout_width="match_parent"
+  <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+    <android.support.v4.view.ViewPager android:id="@+id/view_pager" android:layout_width="match_parent"
       android:layout_height="match_parent" />
   </FrameLayout>
 
-  <FrameLayout
-    android:id="@+id/header"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="?attr/mdColor_primaryPalette"
-    android:elevation="?attr/mdToolbar_elevation">
+  <FrameLayout android:id="@+id/header" android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="?attr/mdColor_primaryPalette" android:elevation="?attr/mdToolbar_elevation">
 
-    <android.support.v7.widget.Toolbar
-      android:id="@+id/toolbar"
-      android:elevation="0dp"
-      android:paddingBottom="?attr/actionBarSize"
-      app:navigationIcon="@drawable/ic_toolbar_arrow_back"
-      style="@style/MdToolbar" />
+    <android.support.v7.widget.Toolbar android:id="@+id/toolbar" android:elevation="0dp" android:paddingBottom="?attr/actionBarSize"
+      app:navigationIcon="@drawable/ic_toolbar_arrow_back" style="@style/MdToolbar" />
 
-    <com.google.samples.apps.iosched.ui.widget.SlidingTabLayout
-      android:id="@+id/sliding_tab"
-      android:layout_width="match_parent"
-      android:layout_height="?attr/actionBarSize"
-      android:layout_marginTop="?attr/actionBarSize" />
+    <com.google.samples.apps.iosched.ui.widget.SlidingTabLayout android:id="@+id/sliding_tab" android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize" android:layout_marginTop="?attr/actionBarSize" />
   </FrameLayout>
 
 </FrameLayout>

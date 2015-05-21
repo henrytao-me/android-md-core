@@ -14,105 +14,60 @@
   ~ limitations under the License.
   -->
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  android:id="@+id/container"
-  android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/container" android:layout_width="match_parent"
   android:layout_height="match_parent">
 
-  <android.support.v7.widget.Toolbar
-    android:id="@+id/toolbar"
-    style="@style/MdToolbar" />
+  <android.support.v7.widget.Toolbar android:id="@+id/toolbar" style="@style/MdToolbar" />
 
-  <ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_below="@+id/toolbar"
+  <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/toolbar"
     android:scrollbars="vertical">
 
-    <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
 
       <View style="@style/MdList.Spacing" />
 
-      <RelativeLayout
-        android:id="@+id/goto_textview"
-        android:background="@drawable/md_ripple"
-        style="@style/MdList.SingleLine.TextOnly">
-        <TextView
-          android:text="TextView"
-          style="@style/MdList.SingleLine.TextOnly.Text" />
+      <RelativeLayout android:id="@+id/goto_textview" android:background="@drawable/md_ripple" style="@style/MdList.SingleLine.TextOnly">
+        <TextView android:text="TextView" style="@style/MdList.SingleLine.TextOnly.Text" />
         <View style="@style/MdDivider.AlignParentBottom" />
       </RelativeLayout>
 
-      <RelativeLayout
-        android:id="@+id/goto_button"
-        android:background="@drawable/md_ripple"
-        style="@style/MdList.SingleLine.TextOnly">
-        <TextView
-          android:text="Button"
-          style="@style/MdList.SingleLine.TextOnly.Text" />
+      <RelativeLayout android:id="@+id/goto_button" android:background="@drawable/md_ripple" style="@style/MdList.SingleLine.TextOnly">
+        <TextView android:text="Button" style="@style/MdList.SingleLine.TextOnly.Text" />
         <View style="@style/MdDivider.AlignParentBottom" />
       </RelativeLayout>
 
-      <RelativeLayout
-        android:id="@+id/goto_listview"
-        android:background="@drawable/md_ripple"
-        style="@style/MdList.SingleLine.TextOnly">
-        <TextView
-          android:text="ListView"
-          style="@style/MdList.SingleLine.TextOnly.Text" />
+      <RelativeLayout android:id="@+id/goto_listview" android:background="@drawable/md_ripple" style="@style/MdList.SingleLine.TextOnly">
+        <TextView android:text="ListView" style="@style/MdList.SingleLine.TextOnly.Text" />
         <View style="@style/MdDivider.AlignParentBottom" />
       </RelativeLayout>
 
-      <RelativeLayout
-        android:id="@+id/goto_toolbar_activity"
-        android:background="@drawable/md_ripple"
+      <RelativeLayout android:id="@+id/goto_toolbar_activity" android:background="@drawable/md_ripple"
         style="@style/MdList.SingleLine.TextOnly">
-        <TextView
-          android:text="ToolbarActivity"
-          style="@style/MdList.SingleLine.TextOnly.Text" />
+        <TextView android:text="ToolbarActivity" style="@style/MdList.SingleLine.TextOnly.Text" />
         <View style="@style/MdDivider.AlignParentBottom" />
       </RelativeLayout>
 
-      <RelativeLayout
-        android:id="@+id/goto_drawer_layout_activity"
-        android:background="@drawable/md_ripple"
+      <RelativeLayout android:id="@+id/goto_drawer_layout_activity" android:background="@drawable/md_ripple"
         style="@style/MdList.SingleLine.TextOnly">
-        <TextView
-          android:text="DrawerLayoutActivity"
-          style="@style/MdList.SingleLine.TextOnly.Text" />
+        <TextView android:text="DrawerLayoutActivity" style="@style/MdList.SingleLine.TextOnly.Text" />
         <View style="@style/MdDivider.AlignParentBottom" />
       </RelativeLayout>
 
-      <RelativeLayout
-        android:id="@+id/goto_pager_tab_activity"
-        android:background="@drawable/md_ripple"
+      <RelativeLayout android:id="@+id/goto_pager_tab_activity" android:background="@drawable/md_ripple"
         style="@style/MdList.SingleLine.TextOnly">
-        <TextView
-          android:text="PagerTabActivity"
-          style="@style/MdList.SingleLine.TextOnly.Text" />
+        <TextView android:text="PagerTabActivity" style="@style/MdList.SingleLine.TextOnly.Text" />
         <View style="@style/MdDivider.AlignParentBottom" />
       </RelativeLayout>
 
-      <RelativeLayout
-        android:id="@+id/goto_drawer_layout_pager_tab_activity"
-        android:background="@drawable/md_ripple"
+      <RelativeLayout android:id="@+id/goto_drawer_layout_pager_tab_activity" android:background="@drawable/md_ripple"
         style="@style/MdList.SingleLine.TextOnly">
-        <TextView
-          android:text="DrawerLayoutPagerTabActivity"
-          style="@style/MdList.SingleLine.TextOnly.Text" />
+        <TextView android:text="DrawerLayoutPagerTabActivity" style="@style/MdList.SingleLine.TextOnly.Text" />
         <View style="@style/MdDivider.AlignParentBottom" />
       </RelativeLayout>
 
-      <RelativeLayout
-        android:id="@+id/goto_recycle_view_header_footer_section_activity"
-        android:background="@drawable/md_ripple"
+      <RelativeLayout android:id="@+id/goto_recycle_view_header_footer_section_activity" android:background="@drawable/md_ripple"
         style="@style/MdList.SingleLine.TextOnly">
-        <TextView
-          android:text="RecycleViewHeaderFooterSectionActivity"
-          style="@style/MdList.SingleLine.TextOnly.Text" />
+        <TextView android:text="RecycleViewHeaderFooterSectionActivity" style="@style/MdList.SingleLine.TextOnly.Text" />
         <View style="@style/MdDivider.AlignParentBottom" />
       </RelativeLayout>
 

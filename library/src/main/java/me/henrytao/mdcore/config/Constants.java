@@ -13,7 +13,7 @@
  * ITS DERIVATIVES.
  */
 
-package me.henrytao.mdwidget.config;
+package me.henrytao.mdcore.config;
 
 /**
  * Created by henrytao on 5/5/15.

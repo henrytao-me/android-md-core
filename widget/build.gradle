@@ -42,10 +42,4 @@ dependencies {
 
   compile 'com.github.ksoichiro:android-observablescrollview:1.5.1'
   compile 'com.nineoldandroids:library:2.4.0'
-
-  compile(project(':library')) {
-    exclude group: 'com.android.support', module: 'appcompat-v7'
-    exclude group: 'com.android.support', module: 'cardview-v7'
-    exclude group: 'com.android.support', module: 'recyclerview-v7'
-  }
 }

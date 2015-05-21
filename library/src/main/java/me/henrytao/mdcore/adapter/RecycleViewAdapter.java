@@ -13,7 +13,7 @@
  * ITS DERIVATIVES.
  */
 
-package me.henrytao.mdwidget.adapter;
+package me.henrytao.mdcore.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -26,8 +26,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-import me.henrytao.mdwidget.config.Constants;
-import me.henrytao.widget.R;
+import me.henrytao.mdcore.R;
+import me.henrytao.mdcore.config.Constants;
 
 /**
  * Created by henrytao on 5/20/15.

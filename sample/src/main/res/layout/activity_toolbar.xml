@@ -14,29 +14,17 @@
   ~ limitations under the License.
   -->
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  android:id="@+id/container"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/container" android:layout_width="match_parent" android:layout_height="match_parent">
 
-  <android.support.v7.widget.Toolbar
-    android:id="@+id/toolbar"
-    app:navigationIcon="@drawable/ic_toolbar_arrow_back"
+  <android.support.v7.widget.Toolbar android:id="@+id/toolbar" app:navigationIcon="@drawable/ic_toolbar_arrow_back"
     style="@style/MdToolbar" />
 
-  <RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_below="@id/toolbar"
+  <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/toolbar"
     android:padding="?attr/mdLayout_spacing">
 
-    <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_centerHorizontal="true"
-      android:layout_centerVertical="true"
-      android:text="@string/text_put_your_content_here" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true"
+      android:layout_centerVertical="true" android:text="@string/text_put_your_content_here" />
 
   </RelativeLayout>
 
