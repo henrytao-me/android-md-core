@@ -18,6 +18,7 @@ package me.henrytao.mdwidget.adapter;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.view.ViewGroup;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -31,6 +32,8 @@ import me.henrytao.mdwidget.config.Constants;
 public abstract class RecycleViewHSFAdapter<T extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<T> {
 
   public abstract void onBindViewHolder(T holder, int position, int dataPosition);
+
+  public abstract T onCreateViewHolder(ViewGroup parent, int viewType, Constants.ItemViewType itemViewType);
 
   protected abstract int getDataItemCount();
 
@@ -50,20 +53,33 @@ public abstract class RecycleViewHSFAdapter<T extends RecyclerView.ViewHolder> e
   @Override
   public int getItemViewType(int position) {
     if (isHeader(position)) {
-      return Constants.RECYCLE_ITEM_VIEW_TYPE.HEADER;
+      return Constants.RECYCLE_VIEW_ITEM_TYPE.HEADER;
     } else if (isFooter(position)) {
-      return Constants.RECYCLE_ITEM_VIEW_TYPE.FOOTER;
+      return Constants.RECYCLE_VIEW_ITEM_TYPE.FOOTER;
     } else if (isSubheader(position)) {
-      return Constants.RECYCLE_ITEM_VIEW_TYPE.SUBHEADER;
+      return Constants.RECYCLE_VIEW_ITEM_TYPE.SUBHEADER;
     } else if (isBlank(position)) {
-      return Constants.RECYCLE_ITEM_VIEW_TYPE.BLANK;
+      return Constants.RECYCLE_VIEW_ITEM_TYPE.BLANK;
     }
-    return Constants.RECYCLE_ITEM_VIEW_TYPE.ITEM;
+    return Constants.RECYCLE_VIEW_ITEM_TYPE.ITEM;
   }
 
   @Override
   public void onBindViewHolder(T holder, int position) {
     onBindViewHolder(holder, position, positionToDataPosition(position));
+  }
+
+  @Override
+  public T onCreateViewHolder(ViewGroup parent, int viewType) {
+    Constants.ItemViewType itemViewType = Constants.ItemViewType.BLANK;
+    if (viewType == Constants.RECYCLE_VIEW_ITEM_TYPE.HEADER) {
+      itemViewType = Constants.ItemViewType.HEADER;
+    } else if (viewType == Constants.RECYCLE_VIEW_ITEM_TYPE.SUBHEADER) {
+      itemViewType = Constants.ItemViewType.SUBHEADER;
+    } else if (viewType == Constants.RECYCLE_VIEW_ITEM_TYPE.ITEM) {
+      itemViewType = Constants.ItemViewType.ITEM;
+    }
+    return onCreateViewHolder(parent, viewType, itemViewType);
   }
 
   /*

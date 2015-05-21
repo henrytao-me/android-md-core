@@ -20,7 +20,15 @@ package me.henrytao.mdwidget.config;
  */
 public final class Constants {
 
-  public interface RECYCLE_ITEM_VIEW_TYPE {
+  public enum ItemViewType {
+    BLANK,
+    FOOTER,
+    HEADER,
+    ITEM,
+    SUBHEADER
+  }
+
+  public interface RECYCLE_VIEW_ITEM_TYPE {
 
     int BLANK = 4;
     int FOOTER = 2;
