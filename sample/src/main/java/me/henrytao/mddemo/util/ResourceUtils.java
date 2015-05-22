@@ -18,6 +18,7 @@ package me.henrytao.mddemo.util;
 
 import android.app.Activity;
 import android.content.Context;
+import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,6 +41,10 @@ public class ResourceUtils {
     }
   }
 
+  public static int getActionBarSizeInPixel(Activity context) {
+    return getDimensionPixelSizeFromAttribute(context, android.R.attr.actionBarSize);
+  }
+
   public static int getColorFromAttribute(Context context, int attrId) {
     if (attrId == 0) {
       return 0;
@@ -47,6 +52,17 @@ public class ResourceUtils {
     TypedValue typedValue = new TypedValue();
     context.getTheme().resolveAttribute(attrId, typedValue, true);
     return typedValue.data;
+  }
+
+  public static int getDimensionPixelSizeFromAttribute(Activity context, int attrId) {
+    if (attrId == 0) {
+      return 0;
+    }
+    TypedValue typedValue = new TypedValue();
+    context.getTheme().resolveAttribute(attrId, typedValue, true);
+    DisplayMetrics metrics = new DisplayMetrics();
+    context.getWindowManager().getDefaultDisplay().getMetrics(metrics);
+    return (int) typedValue.getDimension(metrics);
   }
 
   public static int getDrawableIdFromAttribute(Context context, int attrId) {
@@ -58,19 +74,19 @@ public class ResourceUtils {
     return typedValue.resourceId;
   }
 
-  public static View inflate(Context context, int layoutResId, ViewGroup root, boolean attachToRoot) {
-    if (context instanceof Activity) {
-      return ((Activity) context).getLayoutInflater().inflate(layoutResId, root, attachToRoot);
-    }
-    return null;
-  }
-
   public static View inflate(Context context, int layoutResId) {
     return inflate(context, layoutResId, null, false);
   }
 
   public static View inflate(Context context, int layoutResId, ViewGroup parent) {
     return inflate(context, layoutResId, parent, false);
+  }
+
+  public static View inflate(Context context, int layoutResId, ViewGroup root, boolean attachToRoot) {
+    if (context instanceof Activity) {
+      return ((Activity) context).getLayoutInflater().inflate(layoutResId, root, attachToRoot);
+    }
+    return null;
   }
 
   public static void moveCursorToTheEnd(EditText editText) {

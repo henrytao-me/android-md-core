@@ -174,5 +174,9 @@ public class DrawerLayoutPagerTabActivity extends MdDrawerLayoutPagerTabActivity
         openDrawer();
       }
     });
+
+    // workaround for fixing toolbar height issue in landscape mode
+    ViewGroup.LayoutParams params = vToolbar.getLayoutParams();
+    params.height = ResourceUtils.getActionBarSizeInPixel(this) * 2;
   }
 }
