@@ -28,7 +28,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import me.henrytao.mddemo.R;
 import me.henrytao.mddemo.adapter.ChatItemAdapter;
-import me.henrytao.mddemo.util.ViewUtils;
+import me.henrytao.mddemo.util.ResourceUtils;
 import me.henrytao.mdwidget.activity.MdToolbarActivity;
 
 public class RecycleViewHeaderFooterSectionActivity extends MdToolbarActivity {
@@ -65,8 +65,8 @@ public class RecycleViewHeaderFooterSectionActivity extends MdToolbarActivity {
 
     ChatItemAdapter mChatItemAdapter = new ChatItemAdapter(
         this,
-        ViewUtils.inflate(this, R.layout.item_recycle_view_header),
-        ViewUtils.inflate(this, R.layout.item_recycle_view_footer),
+        ResourceUtils.inflate(this, R.layout.item_recycle_view_header),
+        ResourceUtils.inflate(this, R.layout.item_recycle_view_footer),
         null);
     vRecyclerView.setHasFixedSize(false);
     vRecyclerView.setLayoutManager(new LinearLayoutManager(this));

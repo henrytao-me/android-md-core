@@ -21,7 +21,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 
-import me.henrytao.mddemo.util.ViewUtils;
+import me.henrytao.mddemo.util.ResourceUtils;
 
 
 /**
@@ -67,7 +67,7 @@ public abstract class BaseHolder<T extends BaseHolder> {
 
   public View getView() {
     if (mView == null) {
-      mView = ViewUtils.inflate(getContext(), getLayoutId(), mParent, mAttachToRoot);
+      mView = ResourceUtils.inflate(getContext(), getLayoutId(), mParent, mAttachToRoot);
     }
     return mView;
   }

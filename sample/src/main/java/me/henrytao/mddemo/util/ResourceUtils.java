@@ -16,13 +16,29 @@
 
 package me.henrytao.mddemo.util;
 
+import android.app.Activity;
 import android.content.Context;
 import android.util.TypedValue;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 
 /**
  * Created by henrytao on 5/10/15.
  */
 public class ResourceUtils {
+
+  public static void closeKeyBoard(Activity activity) {
+    closeKeyBoard(activity, activity.getCurrentFocus());
+  }
+
+  public static void closeKeyBoard(Context context, View view) {
+    if (view != null) {
+      ((InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE))
+          .hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+    }
+  }
 
   public static int getColorFromAttribute(Context context, int attrId) {
     if (attrId == 0) {
@@ -40,6 +56,32 @@ public class ResourceUtils {
     TypedValue typedValue = new TypedValue();
     context.getTheme().resolveAttribute(attrId, typedValue, true);
     return typedValue.resourceId;
+  }
+
+  public static View inflate(Context context, int layoutResId, ViewGroup root, boolean attachToRoot) {
+    if (context instanceof Activity) {
+      return ((Activity) context).getLayoutInflater().inflate(layoutResId, root, attachToRoot);
+    }
+    return null;
+  }
+
+  public static View inflate(Context context, int layoutResId) {
+    return inflate(context, layoutResId, null, false);
+  }
+
+  public static View inflate(Context context, int layoutResId, ViewGroup parent) {
+    return inflate(context, layoutResId, parent, false);
+  }
+
+  public static void moveCursorToTheEnd(EditText editText) {
+    int length = editText.getText().length();
+    editText.setSelection(length, length);
+  }
+
+  public static void showKeyboard(Context context, EditText editText) {
+    editText.requestFocus();
+    InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+    imm.showSoftInput(editText, InputMethodManager.SHOW_IMPLICIT);
   }
 
 }
