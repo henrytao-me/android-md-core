@@ -144,5 +144,15 @@ public class PagerTabActivity extends MdPagerTabActivity {
     ButterKnife.inject(this);
 
     setSupportActionBar(vToolbar);
+    vToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        onBackPressed();
+      }
+    });
+
+    // workaround for fixing toolbar height issue in landscape mode
+    ViewGroup.LayoutParams params = vToolbar.getLayoutParams();
+    params.height = ResourceUtils.getActionBarSizeInPixel(this) * 2;
   }
 }
