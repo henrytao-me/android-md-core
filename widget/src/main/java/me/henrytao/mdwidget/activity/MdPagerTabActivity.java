@@ -19,6 +19,9 @@ package me.henrytao.mdwidget.activity;
 import com.google.samples.apps.iosched.ui.widget.SlidingTabLayout;
 
 import com.github.ksoichiro.android.observablescrollview.CacheFragmentStatePagerAdapter;
+import com.github.ksoichiro.android.observablescrollview.ObservableListView;
+import com.github.ksoichiro.android.observablescrollview.ObservableRecyclerView;
+import com.github.ksoichiro.android.observablescrollview.ObservableScrollView;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCallbacks;
 import com.github.ksoichiro.android.observablescrollview.ScrollState;
 import com.github.ksoichiro.android.observablescrollview.ScrollUtils;
@@ -118,12 +121,10 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
       return;
     }
     Scrollable scrollView = (Scrollable) view;
-    int toolbarHeight = getToolbarHeight();
-    if (toolbarIsHidden() && scrollView.getCurrentScrollY() < toolbarHeight) {
-      scrollView.scrollVerticallyTo(toolbarHeight);
-      if (scrollView.getCurrentScrollY() < toolbarHeight) {
-        showToolbar();
-      }
+    if (toolbarIsShown()) {
+      scrollView.scrollVerticallyTo(0);
+    } else if (toolbarIsHidden() && !isScrollable(view)) {
+      showToolbar();
     }
   }
 
@@ -142,7 +143,6 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
       ViewPropertyAnimator.animate(getPagerHeader()).cancel();
       ViewHelper.setTranslationY(getPagerHeader(), headerTranslationY);
     } else if (scrollY < mScrollStartY && toolbarIsHidden() && scrollY < getToolbarHeight()) {
-      // scrolldown
       showToolbar();
     }
   }
@@ -256,7 +256,7 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
           getPagerHeader().getHeight(),
           getToolbarHeight())) {
         hideToolbar();
-      } else {
+      } else if (!toolbarIsHidden() && !toolbarIsShown()) {
         showToolbar();
       }
     } else {
@@ -275,6 +275,25 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
 
   protected int getScrollYAdjustmentInDP() {
     return SCROLL_ADJUSTMENT_IN_DP;
+  }
+
+  protected boolean isScrollable(View view) {
+    if (view instanceof ObservableScrollView) {
+      ObservableScrollView observableScrollView = (ObservableScrollView) view;
+      if (observableScrollView.getChildAt(0).getHeight() + getToolbarHeight() > view.getHeight()) {
+        return true;
+      }
+    } else if (view instanceof ObservableRecyclerView) {
+      ObservableRecyclerView observableRecyclerView = (ObservableRecyclerView) view;
+      if (observableRecyclerView.computeVerticalScrollRange() > view.getHeight() + getToolbarHeight()) {
+        return true;
+      }
+    } else if (view instanceof ObservableListView) {
+      ObservableListView observableListView = (ObservableListView) view;
+      // Todo: need to test
+      // return true;
+    }
+    return false;
   }
 
   protected boolean shouldHideToolbarIfScrollUp(View scroller, int currentScrollY, int startScrollY, int scrollYAdjustment,
