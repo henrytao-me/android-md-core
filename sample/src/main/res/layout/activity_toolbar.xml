@@ -29,7 +29,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_below="@id/toolbar"
-    android:padding="?attr/mdLayout_spacing">
+    android:padding="?attr/mdLayout_spacing_md">
 
     <TextView
       android:layout_width="wrap_content"

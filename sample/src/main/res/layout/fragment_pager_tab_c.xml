@@ -24,7 +24,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:padding="?attr/mdLayout_spacing">
+    android:padding="?attr/mdLayout_spacing_md">
 
     <include layout="@layout/item_pager_tab_spacing" />
 
@@ -41,7 +41,7 @@
     <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="?attr/mdLayout_spacing"
+      android:layout_marginTop="?attr/mdLayout_spacing_md"
       android:text="@string/text_long" />
 
   </LinearLayout>
