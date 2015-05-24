@@ -26,4 +26,8 @@
     <item name="android:layout_alignParentBottom">true</item>
   </style>
 
+  <style name="MdDivider.AlignParentBottom.LeftMargin">
+    <item name="android:layout_marginLeft">?attr/mdLayout_contentAssociatedWithIconOrAvatarLeftMargin</item>
+  </style>
+
 </resources>

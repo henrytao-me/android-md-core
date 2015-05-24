@@ -144,7 +144,7 @@
     <item name="mdLineHeight_display2">3sp</item>
 
     <item name="mdLayout_spacing_lg">24dp</item>
-    <item name="mdLayout_spacing">16dp</item>
+    <item name="mdLayout_spacing_md">16dp</item>
     <item name="mdLayout_spacing_sm">8dp</item>
     <item name="mdLayout_spacing_xs">4dp</item>
     <item name="mdLayout_spacing_xxs">2dp</item>
@@ -154,6 +154,10 @@
 
     <item name="mdList_secondaryActionSize">56dp</item>
     <item name="mdList_spacing">8dp</item>
+    <item name="mdList_itemHeight_sm">48dp</item>
+    <item name="mdList_itemHeight_md">56dp</item>
+    <item name="mdList_itemHeight_lg">72dp</item>
+    <item name="mdList_itemHeight_xlg">88dp</item>
 
     <item name="mdDrawerLayout_translucentNavigationBackground">@null</item>
     <item name="mdDrawerLayout_fitsSystemWindows">false</item>
