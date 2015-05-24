@@ -71,6 +71,12 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
 
   protected static final int SCROLL_ADJUSTMENT_IN_DP = 48;
 
+  private boolean isToolbarHidding;
+
+  private boolean isToolbarShowing;
+
+  private ScrollState lastScrollState;
+
   private int mBaseTranslationY;
 
   private NavigationAdapter mPagerAdapter;
@@ -123,7 +129,9 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     Scrollable scrollView = (Scrollable) view;
     if (toolbarIsShown()) {
       scrollView.scrollVerticallyTo(0);
-    } else if (toolbarIsHidden() && !isScrollable(view)) {
+    } else if (toolbarIsHidden() && shouldShowToolbarIfPageSelected(view, position)) {
+      showToolbar();
+    } else if (!toolbarIsHidden() && !toolbarIsShown()) {
       showToolbar();
     }
   }
@@ -142,8 +150,13 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
       float headerTranslationY = ScrollUtils.getFloat(-(scrollY - mBaseTranslationY), -toolbarHeight, 0);
       ViewPropertyAnimator.animate(getPagerHeader()).cancel();
       ViewHelper.setTranslationY(getPagerHeader(), headerTranslationY);
-    } else if (scrollY < mScrollStartY && toolbarIsHidden() && scrollY < getToolbarHeight()) {
-      showToolbar();
+      lastScrollState = ScrollState.STOP;
+    } else {
+      if (lastScrollState == ScrollState.UP && !toolbarIsHidden() && !isToolbarHidding && scrollY >= getToolbarHeight()) {
+        hideToolbar();
+      } else if (lastScrollState == ScrollState.DOWN && !toolbarIsShown() && !isToolbarShowing && scrollY < getToolbarHeight()) {
+        showToolbar();
+      }
     }
   }
 
@@ -180,6 +193,10 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     initPagerTab();
   }
 
+  public Fragment getCurrentFragment() {
+    return mPagerAdapter.getItemAt(getViewPager().getCurrentItem());
+  }
+
   public View getPagerContainer() {
     if (vPagerContainer == null) {
       vPagerContainer = findViewById(getPagerContainerResource());
@@ -208,11 +225,36 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     return vPagerStickyHeader;
   }
 
+  public int getScrollYAdjustmentInPixel() {
+    if (mScrollYAdjustmentInPixel < 0) {
+      DisplayMetrics metrics = getResources().getDisplayMetrics();
+      mScrollYAdjustmentInPixel = Math.round(getScrollYAdjustmentInDP() * (metrics.densityDpi / 160f));
+      mScrollYAdjustmentInPixel = mScrollYAdjustmentInPixel < 0 ? 0 : mScrollYAdjustmentInPixel;
+    }
+    return mScrollYAdjustmentInPixel;
+  }
+
+  public int getToolbarHeight() {
+    return getPagerHeader().getHeight() - getPagerStickyHeader().getHeight();
+  }
+
   public ViewPager getViewPager() {
     if (vViewPager == null) {
       vViewPager = (ViewPager) findViewById(getPagerViewResource());
     }
     return vViewPager;
+  }
+
+  public void hideToolbar() {
+    isToolbarHidding = true;
+    isToolbarShowing = false;
+    float headerTranslationY = ViewHelper.getTranslationY(getPagerHeader());
+    int toolbarHeight = getToolbarHeight();
+    if (headerTranslationY != -toolbarHeight) {
+      ViewPropertyAnimator.animate(getPagerHeader()).cancel();
+      ViewPropertyAnimator.animate(getPagerHeader()).translationY(-toolbarHeight).setDuration(200).start();
+    }
+    propagateToolbarState(false);
   }
 
   public boolean keepPagerTabItemScrollPosition() {
@@ -231,6 +273,25 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     return false;
   }
 
+  public void showToolbar() {
+    isToolbarShowing = true;
+    isToolbarHidding = false;
+    float headerTranslationY = ViewHelper.getTranslationY(getPagerHeader());
+    if (headerTranslationY != 0) {
+      ViewPropertyAnimator.animate(getPagerHeader()).cancel();
+      ViewPropertyAnimator.animate(getPagerHeader()).translationY(0).setDuration(200).start();
+    }
+    propagateToolbarState(true);
+  }
+
+  public boolean toolbarIsHidden() {
+    return ViewHelper.getTranslationY(getPagerHeader()) == -getToolbarHeight();
+  }
+
+  public boolean toolbarIsShown() {
+    return ViewHelper.getTranslationY(getPagerHeader()) == 0;
+  }
+
   protected void adjustToolbar(ScrollState scrollState, View view) {
     final Scrollable scrollView = (Scrollable) view.findViewById(getPagerTabObservableScrollViewResource());
     if (scrollView == null) {
@@ -238,6 +299,7 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     }
     int scrollY = scrollView.getCurrentScrollY();
     if (scrollState == ScrollState.DOWN) {
+      lastScrollState = ScrollState.DOWN;
       if (shouldShowToolbarIfScrollDown(
           view.findViewById(getPagerTabObservableScrollViewResource()),
           scrollY,
@@ -248,6 +310,7 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
         showToolbar();
       }
     } else if (scrollState == ScrollState.UP) {
+      lastScrollState = ScrollState.UP;
       if (shouldHideToolbarIfScrollUp(
           view.findViewById(getPagerTabObservableScrollViewResource()),
           scrollY,
@@ -260,6 +323,7 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
         showToolbar();
       }
     } else {
+      lastScrollState = ScrollState.STOP;
       // Even if onScrollChanged occurs without scrollY changing, toolbar should be adjusted
       if (toolbarIsShown() || toolbarIsHidden()) {
         // Toolbar is completely moved, so just keep its state
@@ -277,31 +341,33 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     return SCROLL_ADJUSTMENT_IN_DP;
   }
 
-  protected boolean isScrollable(View view) {
-    if (view instanceof ObservableScrollView) {
-      ObservableScrollView observableScrollView = (ObservableScrollView) view;
-      if (observableScrollView.getChildAt(0).getHeight() + getToolbarHeight() > view.getHeight()) {
-        return true;
-      }
-    } else if (view instanceof ObservableRecyclerView) {
-      ObservableRecyclerView observableRecyclerView = (ObservableRecyclerView) view;
-      if (observableRecyclerView.computeVerticalScrollRange() > view.getHeight() + getToolbarHeight()) {
-        return true;
-      }
-    } else if (view instanceof ObservableListView) {
-      ObservableListView observableListView = (ObservableListView) view;
-      // Todo: need to test
-      // return true;
-    }
-    return false;
-  }
-
   protected boolean shouldHideToolbarIfScrollUp(View scroller, int currentScrollY, int startScrollY, int scrollYAdjustment,
       int headerHeight, int toolbarHeight) {
     if (currentScrollY >= toolbarHeight) {
       return true;
     }
     return false;
+  }
+
+  protected boolean shouldShowToolbarIfPageSelected(View view, final int position) {
+    if (view instanceof ObservableScrollView) {
+      ObservableScrollView observableScrollView = (ObservableScrollView) view;
+      if (observableScrollView.getCurrentScrollY() >= getToolbarHeight() ||
+          observableScrollView.getChildAt(0).getHeight() >= view.getHeight() + getToolbarHeight()) {
+        return false;
+      }
+    } else if (view instanceof ObservableRecyclerView) {
+      ObservableRecyclerView observableRecyclerView = (ObservableRecyclerView) view;
+      if (observableRecyclerView.getCurrentScrollY() >= getToolbarHeight() ||
+          observableRecyclerView.computeVerticalScrollRange() >= view.getHeight() + getToolbarHeight()) {
+        return false;
+      }
+    } else if (view instanceof ObservableListView) {
+      ObservableListView observableListView = (ObservableListView) view;
+      // Todo: need to test
+      // return true;
+    }
+    return true;
   }
 
   protected boolean shouldShowToolbarIfScrollDown(View scroller, int currentScrollY, int startScrollY, int scrollYAdjustment,
@@ -312,33 +378,6 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
       return true;
     }
     return false;
-  }
-
-  private Fragment getCurrentFragment() {
-    return mPagerAdapter.getItemAt(getViewPager().getCurrentItem());
-  }
-
-  private int getScrollYAdjustmentInPixel() {
-    if (mScrollYAdjustmentInPixel < 0) {
-      DisplayMetrics metrics = getResources().getDisplayMetrics();
-      mScrollYAdjustmentInPixel = Math.round(getScrollYAdjustmentInDP() * (metrics.densityDpi / 160f));
-      mScrollYAdjustmentInPixel = mScrollYAdjustmentInPixel < 0 ? 0 : mScrollYAdjustmentInPixel;
-    }
-    return mScrollYAdjustmentInPixel;
-  }
-
-  private int getToolbarHeight() {
-    return getPagerHeader().getHeight() - getPagerStickyHeader().getHeight();
-  }
-
-  private void hideToolbar() {
-    float headerTranslationY = ViewHelper.getTranslationY(getPagerHeader());
-    int toolbarHeight = getToolbarHeight();
-    if (headerTranslationY != -toolbarHeight) {
-      ViewPropertyAnimator.animate(getPagerHeader()).cancel();
-      ViewPropertyAnimator.animate(getPagerHeader()).translationY(-toolbarHeight).setDuration(200).start();
-    }
-    propagateToolbarState(false);
   }
 
   private void initPagerTab() {
@@ -401,23 +440,6 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
         scrollView.scrollVerticallyTo(toolbarHeight);
       }
     }
-  }
-
-  private void showToolbar() {
-    float headerTranslationY = ViewHelper.getTranslationY(getPagerHeader());
-    if (headerTranslationY != 0) {
-      ViewPropertyAnimator.animate(getPagerHeader()).cancel();
-      ViewPropertyAnimator.animate(getPagerHeader()).translationY(0).setDuration(200).start();
-    }
-    propagateToolbarState(true);
-  }
-
-  private boolean toolbarIsHidden() {
-    return ViewHelper.getTranslationY(getPagerHeader()) == -getToolbarHeight();
-  }
-
-  private boolean toolbarIsShown() {
-    return ViewHelper.getTranslationY(getPagerHeader()) == 0;
   }
 
   /**
