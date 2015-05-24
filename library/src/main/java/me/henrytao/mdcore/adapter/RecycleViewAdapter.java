@@ -122,6 +122,31 @@ public abstract class RecycleViewAdapter<T extends RecyclerView.ViewHolder> exte
     calculateSectionIndexes();
   }
 
+  protected int dataPositionToPosition(int dataPosition) {
+    Integer[] indexes = getSectionIndexes();
+    int offset = indexes.length;
+    for (int i = indexes.length - 1; i >= 0; i--) {
+      if (dataPosition >= i) {
+        break;
+      }
+      offset -= 1;
+    }
+    return dataPosition + offset + (hasHeader() ? 1 : 0);
+  }
+
+  protected int getSectionPosition(int dataPosition) {
+    Integer[] indexes = getSectionIndexes();
+    int offset = indexes.length;
+    for (int i = indexes.length - 1; i >= 0; i--) {
+      if (dataPosition >= indexes[i]) {
+        dataPosition = indexes[i];
+        break;
+      }
+      offset -= 1;
+    }
+    return dataPosition - 1 + offset + (hasHeader() ? 1 : 0);
+  }
+
   protected boolean isBlank(int position) {
     int count = getDataItemCount();
     int offset = 0;
