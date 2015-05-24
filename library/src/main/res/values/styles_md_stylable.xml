@@ -144,7 +144,7 @@
     <item name="mdLineHeight_display2">3sp</item>
 
     <item name="mdLayout_spacing_lg">24dp</item>
-    <item name="mdLayout_spacing">16dp</item>
+    <item name="mdLayout_spacing_md">16dp</item>
     <item name="mdLayout_spacing_sm">8dp</item>
     <item name="mdLayout_spacing_xs">4dp</item>
     <item name="mdLayout_spacing_xxs">2dp</item>

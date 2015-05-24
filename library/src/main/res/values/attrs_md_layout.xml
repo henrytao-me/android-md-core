@@ -19,7 +19,7 @@
   <declare-styleable name="MdLayout">
 
     <attr name="mdLayout_spacing_lg" format="dimension|reference" />
-    <attr name="mdLayout_spacing" format="dimension|reference" />
+    <attr name="mdLayout_spacing_md" format="dimension|reference" />
     <attr name="mdLayout_spacing_sm" format="dimension|reference" />
     <attr name="mdLayout_spacing_xs" format="dimension|reference" />
     <attr name="mdLayout_spacing_xxs" format="dimension|reference" />
