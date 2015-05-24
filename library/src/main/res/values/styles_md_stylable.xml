@@ -161,7 +161,7 @@
     <item name="mdToolbar_background">?attr/mdColor_primaryPalette</item>
     <item name="mdToolbar_elevation">4dp</item>
 
-    <item name="alertDialogTheme">@style/MdAlertDialog</item>
+    <item name="mdIcon_lg">56dp</item>
 
     <!-- override material style -->
     <!--colorPrimary: The primary branding color for the app. By default, this is the color applied to the action bar background.-->
@@ -178,6 +178,8 @@
     <item name="colorAccent">?attr/mdColor_accentPalette</item>
     <item name="colorControlNormal">?attr/mdSecondaryTextColor_backgroundPalette</item>
     <item name="colorControlActivated">?attr/mdColor_primaryPalette</item>
+
+    <item name="alertDialogTheme">@style/MdAlertDialog</item>
 
   </style>
 
