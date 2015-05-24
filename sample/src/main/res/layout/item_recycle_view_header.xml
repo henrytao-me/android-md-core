@@ -22,7 +22,7 @@
   <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="?attr/mdLayout_spacing"
+    android:padding="?attr/mdLayout_spacing_md"
     android:text="Header"
     android:textSize="?attr/mdFontSize_title" />
 
