@@ -66,6 +66,26 @@ public abstract class MdDrawerLayoutPagerTabActivity extends MdPagerTabActivity 
     initDrawer();
   }
 
+  public void closeDrawer() {
+    closeDrawer(NAVIGATION_DRAWER_TYPE.LEFT);
+  }
+
+  public void closeDrawer(NAVIGATION_DRAWER_TYPE type) {
+    if (isValidated()) {
+      if (type == NAVIGATION_DRAWER_TYPE.LEFT) {
+        getDrawerLayout().closeDrawer(getDrawerNavigation());
+      } else if (type == NAVIGATION_DRAWER_TYPE.RIGHT && getDrawerNavigationRight() != null) {
+        getDrawerLayout().closeDrawer(getDrawerNavigationRight());
+      }
+    }
+  }
+
+  public void closeDrawers() {
+    if (isValidated()) {
+      getDrawerLayout().closeDrawers();
+    }
+  }
+
   public View getDrawerContent() {
     if (vDrawerContent == null) {
       vDrawerContent = findViewById(getDrawerContentResource());
@@ -111,16 +131,16 @@ public abstract class MdDrawerLayoutPagerTabActivity extends MdPagerTabActivity 
   }
 
   public void openDrawer() {
-    if (isValidated()) {
-      getDrawerLayout().openDrawer(getDrawerNavigation());
-    }
+    openDrawer(NAVIGATION_DRAWER_TYPE.LEFT);
   }
 
   public void openDrawer(NAVIGATION_DRAWER_TYPE type) {
-    if (type == NAVIGATION_DRAWER_TYPE.LEFT) {
-      getDrawerLayout().openDrawer(getDrawerNavigation());
-    } else if (type == NAVIGATION_DRAWER_TYPE.RIGHT && getDrawerNavigationRight() != null) {
-      getDrawerLayout().openDrawer(getDrawerNavigationRight());
+    if (isValidated()) {
+      if (type == NAVIGATION_DRAWER_TYPE.LEFT) {
+        getDrawerLayout().openDrawer(getDrawerNavigation());
+      } else if (type == NAVIGATION_DRAWER_TYPE.RIGHT && getDrawerNavigationRight() != null) {
+        getDrawerLayout().openDrawer(getDrawerNavigationRight());
+      }
     }
   }
 
