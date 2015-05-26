@@ -167,6 +167,9 @@
 
     <item name="mdIcon_lg">56dp</item>
 
+    <item name="mdFab_size">56dp</item>
+    <item name="mdFab_size_mini">40dp</item>
+
     <!-- override material style -->
     <!--colorPrimary: The primary branding color for the app. By default, this is the color applied to the action bar background.-->
     <!--colorPrimaryDark: Dark variant of the primary branding color. By default, this is the color applied to the status bar (via statusBarColor) and navigation bar (via navigationBarColor).-->
