@@ -22,11 +22,11 @@
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">wrap_content</item>
     <item name="android:layout_marginTop">?attr/mdLayout_spacing_sm</item>
-    <item name="android:layout_marginLeft">?attr/mdLayout_spacing_sm</item>
-    <item name="android:layout_marginRight">?attr/mdLayout_spacing_sm</item>
-    <item name="android:layout_marginBottom">?attr/mdLayout_spacing_sm</item>
+    <item name="android:layout_marginLeft">?attr/mdLayout_spacing_xs</item>
+    <item name="android:layout_marginRight">?attr/mdLayout_spacing_xs</item>
+    <item name="android:layout_marginBottom">?attr/mdLayout_spacing_xs</item>
     <item name="cardCornerRadius">?attr/mdLayout_spacing_xxs</item>
-    <item name="cardElevation">?attr/mdLayout_spacing_xs</item>
+    <item name="cardElevation">?attr/mdLayout_spacing_xxs</item>
   </style>
 
   <style name="MdCardView.Medium.Wrapper" parent="">
@@ -43,10 +43,10 @@
   <style name="MdCardView.Small" parent="">
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">wrap_content</item>
-    <item name="android:layout_marginTop">?attr/mdLayout_spacing_xs</item>
-    <item name="android:layout_marginLeft">?attr/mdLayout_spacing_xs</item>
-    <item name="android:layout_marginRight">?attr/mdLayout_spacing_xs</item>
-    <item name="android:layout_marginBottom">?attr/mdLayout_spacing_xs</item>
+    <item name="android:layout_marginTop">?attr/mdLayout_spacing_xxs</item>
+    <item name="android:layout_marginLeft">?attr/mdLayout_spacing_xxs</item>
+    <item name="android:layout_marginRight">?attr/mdLayout_spacing_xxs</item>
+    <item name="android:layout_marginBottom">?attr/mdLayout_spacing_xxs</item>
     <item name="cardCornerRadius">?attr/mdLayout_spacing_xxs</item>
     <item name="cardElevation">?attr/mdLayout_spacing_xxs</item>
   </style>
