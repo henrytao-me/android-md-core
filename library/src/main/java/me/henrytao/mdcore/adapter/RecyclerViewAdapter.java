@@ -34,15 +34,15 @@ import me.henrytao.mdcore.config.Constants;
  */
 public abstract class RecyclerViewAdapter<T extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<T> {
 
+  public abstract int getDataItemCount();
+
+  public abstract boolean hasFooter();
+
+  public abstract boolean hasHeader();
+
   public abstract void onBindViewHolder(T holder, int position, int dataPosition);
 
   public abstract T onCreateViewHolder(ViewGroup parent, int viewType, Constants.ItemViewType itemViewType);
-
-  protected abstract int getDataItemCount();
-
-  protected abstract boolean hasFooter();
-
-  protected abstract boolean hasHeader();
 
   protected Integer[] mSectionIndexes;
 
@@ -103,6 +103,18 @@ public abstract class RecyclerViewAdapter<T extends RecyclerView.ViewHolder> ext
     calculateSectionIndexes();
   }
 
+  public int dataPositionToPosition(int dataPosition) {
+    Integer[] indexes = getSectionIndexes();
+    int offset = indexes.length;
+    for (int i = indexes.length - 1; i >= 0; i--) {
+      if (dataPosition >= i) {
+        break;
+      }
+      offset -= 1;
+    }
+    return dataPosition + offset + (hasHeader() ? 1 : 0);
+  }
+
   public Integer[] getSectionIndexes() {
     if (mSectionIndexes == null) {
       mSectionIndexes = new Integer[0];
@@ -117,21 +129,24 @@ public abstract class RecyclerViewAdapter<T extends RecyclerView.ViewHolder> ext
     return mSections;
   }
 
+  public int positionToDataPosition(int position) {
+    if (isHeader(position) || isFooter(position) || isBlank(position)) {
+      return -1;
+    }
+    position -= hasHeader() ? 1 : 0;
+    for (int i : getSectionIndexes()) {
+      if (position > i) {
+        position -= 1;
+      } else {
+        break;
+      }
+    }
+    return position;
+  }
+
   public void removeSection(int dataIndex) {
     getSections().remove(dataIndex);
     calculateSectionIndexes();
-  }
-
-  protected int dataPositionToPosition(int dataPosition) {
-    Integer[] indexes = getSectionIndexes();
-    int offset = indexes.length;
-    for (int i = indexes.length - 1; i >= 0; i--) {
-      if (dataPosition >= i) {
-        break;
-      }
-      offset -= 1;
-    }
-    return dataPosition + offset + (hasHeader() ? 1 : 0);
   }
 
   protected int getSectionPosition(int dataPosition) {
@@ -182,21 +197,6 @@ public abstract class RecyclerViewAdapter<T extends RecyclerView.ViewHolder> ext
       offset += 1;
     }
     return false;
-  }
-
-  protected int positionToDataPosition(int position) {
-    if (isHeader(position) || isFooter(position) || isBlank(position)) {
-      return -1;
-    }
-    position -= hasHeader() ? 1 : 0;
-    for (int i : getSectionIndexes()) {
-      if (position > i) {
-        position -= 1;
-      } else {
-        break;
-      }
-    }
-    return position;
   }
 
   private void calculateSectionIndexes() {
