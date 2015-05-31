@@ -32,7 +32,7 @@ import me.henrytao.mdcore.config.Constants;
 /**
  * Created by henrytao on 5/20/15.
  */
-public abstract class RecycleViewAdapter<T extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<T> {
+public abstract class RecyclerViewAdapter<T extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<T> {
 
   public abstract void onBindViewHolder(T holder, int position, int dataPosition);
 
@@ -56,15 +56,15 @@ public abstract class RecycleViewAdapter<T extends RecyclerView.ViewHolder> exte
   @Override
   public int getItemViewType(int position) {
     if (isHeader(position)) {
-      return Constants.RECYCLE_VIEW_ITEM_TYPE.HEADER;
+      return Constants.RECYCLER_VIEW_ITEM_TYPE.HEADER;
     } else if (isFooter(position)) {
-      return Constants.RECYCLE_VIEW_ITEM_TYPE.FOOTER;
+      return Constants.RECYCLER_VIEW_ITEM_TYPE.FOOTER;
     } else if (isSection(position)) {
-      return Constants.RECYCLE_VIEW_ITEM_TYPE.SECTION;
+      return Constants.RECYCLER_VIEW_ITEM_TYPE.SECTION;
     } else if (isBlank(position)) {
-      return Constants.RECYCLE_VIEW_ITEM_TYPE.BLANK;
+      return Constants.RECYCLER_VIEW_ITEM_TYPE.BLANK;
     }
-    return Constants.RECYCLE_VIEW_ITEM_TYPE.ITEM;
+    return Constants.RECYCLER_VIEW_ITEM_TYPE.ITEM;
   }
 
   @Override
@@ -75,11 +75,11 @@ public abstract class RecycleViewAdapter<T extends RecyclerView.ViewHolder> exte
   @Override
   public T onCreateViewHolder(ViewGroup parent, int viewType) {
     Constants.ItemViewType itemViewType = Constants.ItemViewType.BLANK;
-    if (viewType == Constants.RECYCLE_VIEW_ITEM_TYPE.HEADER) {
+    if (viewType == Constants.RECYCLER_VIEW_ITEM_TYPE.HEADER) {
       itemViewType = Constants.ItemViewType.HEADER;
-    } else if (viewType == Constants.RECYCLE_VIEW_ITEM_TYPE.SECTION) {
+    } else if (viewType == Constants.RECYCLER_VIEW_ITEM_TYPE.SECTION) {
       itemViewType = Constants.ItemViewType.SECTION;
-    } else if (viewType == Constants.RECYCLE_VIEW_ITEM_TYPE.ITEM) {
+    } else if (viewType == Constants.RECYCLER_VIEW_ITEM_TYPE.ITEM) {
       itemViewType = Constants.ItemViewType.ITEM;
     }
     return onCreateViewHolder(parent, viewType, itemViewType);

@@ -28,7 +28,7 @@ public final class Constants {
     SECTION
   }
 
-  public interface RECYCLE_VIEW_ITEM_TYPE {
+  public interface RECYCLER_VIEW_ITEM_TYPE {
 
     int BLANK = 4;
     int FOOTER = 2;

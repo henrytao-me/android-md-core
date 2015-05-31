@@ -30,4 +30,12 @@
     <item name="android:layout_marginLeft">?attr/mdLayout_contentAssociatedWithIconOrAvatarLeftMargin</item>
   </style>
 
+  <style name="MdDivider.AlignParentTop">
+    <item name="android:layout_alignParentTop">true</item>
+  </style>
+
+  <style name="MdDivider.AlignParentTop.LeftMargin">
+    <item name="android:layout_marginLeft">?attr/mdLayout_contentAssociatedWithIconOrAvatarLeftMargin</item>
+  </style>
+
 </resources>
