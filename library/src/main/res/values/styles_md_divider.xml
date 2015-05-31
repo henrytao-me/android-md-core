@@ -18,7 +18,7 @@
 
   <style name="MdDivider">
     <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">0.4dp</item>
+    <item name="android:layout_height">0.6dp</item>
     <item name="android:background">?attr/mdDividerColor_backgroundPalette</item>
   </style>
 
@@ -36,6 +36,21 @@
 
   <style name="MdDivider.AlignParentTop.LeftMargin">
     <item name="android:layout_marginLeft">?attr/mdLayout_contentAssociatedWithIconOrAvatarLeftMargin</item>
+  </style>
+
+  <!-- Vertical -->
+
+  <style name="MdDivider.Vertical">
+    <item name="android:layout_width">0.6dp</item>
+    <item name="android:layout_height">match_parent</item>
+  </style>
+
+  <style name="MdDivider.Vertical.AlignParentLeft">
+    <item name="android:layout_alignParentLeft">true</item>
+  </style>
+
+  <style name="MdDivider.Vertical.AlignParentRight">
+    <item name="android:layout_alignParentRight">true</item>
   </style>
 
 </resources>
