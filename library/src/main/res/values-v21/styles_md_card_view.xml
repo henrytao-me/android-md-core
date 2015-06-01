@@ -49,9 +49,20 @@
     <item name="android:layout_marginTop">0dp</item>
     <item name="android:layout_marginLeft">0dp</item>
     <item name="android:layout_marginRight">0dp</item>
-    <item name="android:layout_marginBottom">?attr/mdLayout_spacing_sm</item>
+    <item name="android:layout_marginBottom">?attr/mdLayout_spacing_md</item>
     <item name="cardCornerRadius">0dp</item>
     <item name="cardElevation">?attr/mdLayout_spacing_xs</item>
+  </style>
+
+  <style name="MdCardView.Full.Small" parent="">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_marginTop">0dp</item>
+    <item name="android:layout_marginLeft">0dp</item>
+    <item name="android:layout_marginRight">0dp</item>
+    <item name="android:layout_marginBottom">?attr/mdLayout_spacing_md</item>
+    <item name="cardCornerRadius">0dp</item>
+    <item name="cardElevation">?attr/mdLayout_spacing_xxs</item>
   </style>
 
 </resources>
