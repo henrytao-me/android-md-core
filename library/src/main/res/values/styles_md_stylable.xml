@@ -165,7 +165,13 @@
     <item name="mdToolbar_background">?attr/mdColor_primaryPalette</item>
     <item name="mdToolbar_elevation">4dp</item>
 
+    <item name="mdIcon_xxlg">96dp</item>
+    <item name="mdIcon_xlg">72dp</item>
     <item name="mdIcon_lg">56dp</item>
+    <item name="mdIcon_md">48dp</item>
+    <item name="mdIcon_sm">32dp</item>
+    <item name="mdIcon_xs">24dp</item>
+    <item name="mdIcon_xxs">16dp</item>
 
     <item name="mdFab_size">56dp</item>
     <item name="mdFab_size_mini">40dp</item>
