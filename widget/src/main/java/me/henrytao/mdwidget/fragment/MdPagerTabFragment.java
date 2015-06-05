@@ -65,7 +65,7 @@ public class MdPagerTabFragment extends Fragment {
             }
             MdPagerTabActivity activity = pagerActivityWeakReference.get();
             ObservableListView view = listViewWeakReference.get();
-            if (!activity.keepPagerTabItemScrollPosition() || activity.shouldScrollPagerTabItem(view)) {
+            if (activity.shouldScrollPagerTabItem(view)) {
               // scrollTo() doesn't work, should use setSelection()
               view.setSelection(initialPosition);
             }
@@ -102,7 +102,7 @@ public class MdPagerTabFragment extends Fragment {
             }
             MdPagerTabActivity activity = pagerActivityWeakReference.get();
             ObservableRecyclerView view = recyclerViewWeakReference.get();
-            if (!activity.keepPagerTabItemScrollPosition() || activity.shouldScrollPagerTabItem(view)) {
+            if (activity.shouldScrollPagerTabItem(view)) {
               view.scrollVerticallyToPosition(initialPosition);
             }
           }
@@ -132,7 +132,7 @@ public class MdPagerTabFragment extends Fragment {
             }
             MdPagerTabActivity activity = pagerActivityWeakReference.get();
             ObservableScrollView view = scrollViewWeakReference.get();
-            if (!activity.keepPagerTabItemScrollPosition() || activity.shouldScrollPagerTabItem(view)) {
+            if (activity.shouldScrollPagerTabItem(view)) {
               view.scrollTo(0, scrollY);
             }
           }
