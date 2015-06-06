@@ -278,7 +278,11 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
       } else {
         // Toolbar is moving but doesn't know which to move:
         // you can change this to hideToolbar()
-        //showToolbar();
+        if (scrollY < toolbarHeight) {
+          showToolbar();
+        } else {
+          hideToolbar();
+        }
       }
     }
   }
@@ -287,10 +291,10 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     int toolbarHeight = getToolbarHeight();
     float currentHeaderTranslationY = ViewHelper.getTranslationY(getPagerHeader());
     float headerTranslationY = ScrollUtils.getFloat(-(scrollY - mLastScrollY) + currentHeaderTranslationY, -toolbarHeight, 0);
-    if (mScrollState == ScrollState.DOWN && scrollY < toolbarHeight && !mIsShowingToolbarWhenScrolling) {
+    if ((mScrollState == ScrollState.DOWN || scrollY < mLastScrollY) && scrollY < toolbarHeight && !mIsShowingToolbarWhenScrolling) {
       mIsShowingToolbarWhenScrolling = true;
       showToolbar();
-    } else if (mScrollState == ScrollState.UP) {
+    } else if (mScrollState == ScrollState.UP || scrollY > mLastScrollY) {
       ViewPropertyAnimator.animate(getPagerHeader()).cancel();
       ViewHelper.setTranslationY(getPagerHeader(), headerTranslationY);
       if (scrollY < toolbarHeight) {
@@ -299,6 +303,9 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
         hideToolbar();
       }
     }
+    //Log.i("onScrolling", String.format("%s | %d | %f | %f",
+    //    mScrollState == ScrollState.DOWN ? "down" : (mScrollState == ScrollState.UP ? "up" : "unknow"),
+    //    toolbarHeight, currentHeaderTranslationY, headerTranslationY));
   }
 
   public void showToolbar() {
