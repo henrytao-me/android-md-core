@@ -19,15 +19,12 @@ package me.henrytao.mdwidget.fragment;
 import com.github.ksoichiro.android.observablescrollview.ObservableListView;
 import com.github.ksoichiro.android.observablescrollview.ObservableRecyclerView;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollView;
-import com.github.ksoichiro.android.observablescrollview.ScrollUtils;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 import android.view.ViewGroup;
-
-import java.lang.ref.WeakReference;
 
 import me.henrytao.mdwidget.activity.MdPagerTabActivity;
 
@@ -51,27 +48,6 @@ public class MdPagerTabFragment extends Fragment {
           (MdPagerTabActivity) getActivity();
       ObservableListView listView =
           (ObservableListView) view.findViewById(pagerActivity.getPagerTabObservableScrollViewResource());
-      final WeakReference<MdPagerTabActivity> pagerActivityWeakReference = new WeakReference<>(pagerActivity);
-      final WeakReference<ObservableListView> listViewWeakReference = new WeakReference<>(listView);
-      // Scroll to the specified position after layout
-      Bundle args = getArguments();
-      if (args != null && args.containsKey(MdPagerTabActivity.ARG_SCROLL_Y)) {
-        final int initialPosition = args.getInt(MdPagerTabActivity.ARG_SCROLL_Y, 0);
-        ScrollUtils.addOnGlobalLayoutListener(listView, new Runnable() {
-          @Override
-          public void run() {
-            if (pagerActivityWeakReference.get() == null || listViewWeakReference.get() == null) {
-              return;
-            }
-            MdPagerTabActivity activity = pagerActivityWeakReference.get();
-            ObservableListView view = listViewWeakReference.get();
-            if (activity.shouldScrollPagerTabItem(view)) {
-              // scrollTo() doesn't work, should use setSelection()
-              view.setSelection(initialPosition);
-            }
-          }
-        });
-      }
       // TouchInterceptionViewGroup should be a parent view other than ViewPager.
       // This is a workaround for the issue #117:
       // https://github.com/ksoichiro/Android-ObservableScrollView/issues/117
@@ -88,26 +64,7 @@ public class MdPagerTabFragment extends Fragment {
           (ObservableRecyclerView) view.findViewById(pagerActivity.getPagerTabObservableScrollViewResource());
       recyclerView.setLayoutManager(new LinearLayoutManager(pagerActivity));
       recyclerView.setHasFixedSize(false);
-      final WeakReference<MdPagerTabActivity> pagerActivityWeakReference = new WeakReference<>(pagerActivity);
-      final WeakReference<ObservableRecyclerView> recyclerViewWeakReference = new WeakReference<>(recyclerView);
       // Scroll to the specified offset after layout
-      Bundle args = getArguments();
-      if (args != null && args.containsKey(MdPagerTabActivity.ARG_SCROLL_Y)) {
-        final int initialPosition = args.getInt(MdPagerTabActivity.ARG_SCROLL_Y, 0);
-        ScrollUtils.addOnGlobalLayoutListener(recyclerView, new Runnable() {
-          @Override
-          public void run() {
-            if (pagerActivityWeakReference.get() == null || recyclerViewWeakReference.get() == null) {
-              return;
-            }
-            MdPagerTabActivity activity = pagerActivityWeakReference.get();
-            ObservableRecyclerView view = recyclerViewWeakReference.get();
-            if (activity.shouldScrollPagerTabItem(view)) {
-              view.scrollVerticallyToPosition(initialPosition);
-            }
-          }
-        });
-      }
       recyclerView.setScrollViewCallbacks(pagerActivity);
     }
   }
@@ -118,26 +75,6 @@ public class MdPagerTabFragment extends Fragment {
           (MdPagerTabActivity) getActivity();
       ObservableScrollView scrollView =
           (ObservableScrollView) view.findViewById(pagerActivity.getPagerTabObservableScrollViewResource());
-      final WeakReference<MdPagerTabActivity> pagerActivityWeakReference = new WeakReference<>(pagerActivity);
-      final WeakReference<ObservableScrollView> scrollViewWeakReference = new WeakReference<>(scrollView);
-      // Scroll to the specified offset after layout
-      Bundle args = getArguments();
-      if (args != null && args.containsKey(MdPagerTabActivity.ARG_SCROLL_Y)) {
-        final int scrollY = args.getInt(MdPagerTabActivity.ARG_SCROLL_Y, 0);
-        ScrollUtils.addOnGlobalLayoutListener(scrollView, new Runnable() {
-          @Override
-          public void run() {
-            if (pagerActivityWeakReference.get() == null || scrollViewWeakReference.get() == null) {
-              return;
-            }
-            MdPagerTabActivity activity = pagerActivityWeakReference.get();
-            ObservableScrollView view = scrollViewWeakReference.get();
-            if (activity.shouldScrollPagerTabItem(view)) {
-              view.scrollTo(0, scrollY);
-            }
-          }
-        });
-      }
       // TouchInterceptionViewGroup should be a parent view other than ViewPager.
       // This is a workaround for the issue #117:
       // https://github.com/ksoichiro/Android-ObservableScrollView/issues/117
