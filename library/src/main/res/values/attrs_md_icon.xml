@@ -15,12 +15,6 @@
 
 <resources>
 
-  <attr name="mdIcon_xxlg" format="dimension|reference" />
-  <attr name="mdIcon_xlg" format="dimension|reference" />
   <attr name="mdIcon_lg" format="dimension|reference" />
-  <attr name="mdIcon_md" format="dimension|reference" />
-  <attr name="mdIcon_sm" format="dimension|reference" />
-  <attr name="mdIcon_xs" format="dimension|reference" />
-  <attr name="mdIcon_xxs" format="dimension|reference" />
 
 </resources>
