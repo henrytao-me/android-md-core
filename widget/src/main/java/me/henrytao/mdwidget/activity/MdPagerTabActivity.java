@@ -241,7 +241,7 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
   }
 
   public boolean keepStickyHeaderOnTop() {
-    return false;
+    return true;
   }
 
   public void onDragging(int scrollY, boolean firstScroll) {
@@ -252,7 +252,12 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     int toolbarHeight = getToolbarHeight();
     float currentHeaderTranslationY = ViewHelper.getTranslationY(getPagerHeader());
     float headerTranslationY = ScrollUtils.getFloat(-(scrollY - mLastScrollY) + currentHeaderTranslationY, -toolbarHeight, 0);
-    if (!(toolbarIsHidden() && scrollY < mLastScrollY && scrollY >= toolbarHeight)) {
+    if (keepStickyHeaderOnTop()) {
+      if (!(toolbarIsHidden() && scrollY < mLastScrollY && scrollY >= toolbarHeight)) {
+        ViewPropertyAnimator.animate(getPagerHeader()).cancel();
+        ViewHelper.setTranslationY(getPagerHeader(), headerTranslationY);
+      }
+    } else {
       ViewPropertyAnimator.animate(getPagerHeader()).cancel();
       ViewHelper.setTranslationY(getPagerHeader(), headerTranslationY);
     }
@@ -262,14 +267,20 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     mScrollState = scrollState;
     int toolbarHeight = getToolbarHeight();
     if (scrollState == ScrollState.DOWN) {
-      if (!toolbarIsHidden()) {
+      if (keepStickyHeaderOnTop()) {
+        if (!toolbarIsHidden()) {
+          showToolbar();
+        }
+      } else {
         showToolbar();
       }
     } else if (scrollState == ScrollState.UP) {
-      if (scrollY < toolbarHeight) {
-        showToolbar();
-      } else {
-        hideToolbar();
+      if (keepStickyHeaderOnTop()) {
+        if (scrollY < toolbarHeight) {
+          showToolbar();
+        } else {
+          hideToolbar();
+        }
       }
     } else {
       // Even if onScrollChanged occurs without scrollY changing, toolbar should be adjusted
@@ -278,10 +289,14 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
       } else {
         // Toolbar is moving but doesn't know which to move:
         // you can change this to hideToolbar()
-        if (scrollY < toolbarHeight) {
-          showToolbar();
+        if (keepStickyHeaderOnTop()) {
+          if (scrollY < toolbarHeight) {
+            showToolbar();
+          } else {
+            hideToolbar();
+          }
         } else {
-          hideToolbar();
+          showToolbar();
         }
       }
     }
@@ -291,17 +306,22 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     int toolbarHeight = getToolbarHeight();
     float currentHeaderTranslationY = ViewHelper.getTranslationY(getPagerHeader());
     float headerTranslationY = ScrollUtils.getFloat(-(scrollY - mLastScrollY) + currentHeaderTranslationY, -toolbarHeight, 0);
-    if ((mScrollState == ScrollState.DOWN || scrollY < mLastScrollY) && scrollY < toolbarHeight && !mIsShowingToolbarWhenScrolling) {
-      mIsShowingToolbarWhenScrolling = true;
-      showToolbar();
-    } else if (mScrollState == ScrollState.UP || scrollY > mLastScrollY) {
+    if (keepStickyHeaderOnTop()) {
+      if ((mScrollState == ScrollState.DOWN || scrollY < mLastScrollY) && scrollY < toolbarHeight && !mIsShowingToolbarWhenScrolling) {
+        mIsShowingToolbarWhenScrolling = true;
+        showToolbar();
+      } else if (mScrollState == ScrollState.UP || scrollY > mLastScrollY) {
+        ViewPropertyAnimator.animate(getPagerHeader()).cancel();
+        ViewHelper.setTranslationY(getPagerHeader(), headerTranslationY);
+        if (scrollY < toolbarHeight) {
+          showToolbar();
+        } else {
+          hideToolbar();
+        }
+      }
+    } else {
       ViewPropertyAnimator.animate(getPagerHeader()).cancel();
       ViewHelper.setTranslationY(getPagerHeader(), headerTranslationY);
-      if (scrollY < toolbarHeight) {
-        showToolbar();
-      } else {
-        hideToolbar();
-      }
     }
     //Log.i("onScrolling", String.format("%s | %d | %f | %f",
     //    mScrollState == ScrollState.DOWN ? "down" : (mScrollState == ScrollState.UP ? "up" : "unknow"),
@@ -395,8 +415,6 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
   private static class NavigationAdapter extends CacheFragmentStatePagerAdapter {
 
     private MdPagerTabActivity mContext;
-
-    private int mScrollY;
 
     public NavigationAdapter(Context context, FragmentManager fm) {
       this(fm);
