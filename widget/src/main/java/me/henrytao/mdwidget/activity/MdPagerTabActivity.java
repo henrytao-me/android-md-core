@@ -248,7 +248,6 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     if (firstScroll) {
       mScrollState = ScrollState.STOP;
       mIsShowingToolbarWhenScrolling = false;
-      mIsHiddingToolbarWhenScrolling = false;
     }
     int toolbarHeight = getToolbarHeight();
     float currentHeaderTranslationY = ViewHelper.getTranslationY(getPagerHeader());
