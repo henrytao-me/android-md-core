@@ -36,7 +36,7 @@ import me.henrytao.mdwidget.activity.MdPagerTabActivity;
 public class MdPagerTabFragment extends Fragment implements MdPagerTabActivity.MdPagerTabListeners {
 
   @Override
-  public void onPagerSelected(int scrollY) {
+  public void onPagerSelected(int scrollY, boolean toolbarIsShown) {
 
   }
 
