@@ -163,8 +163,16 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     initPagerTab();
   }
 
+  public boolean dispatchPagerTabListeners() {
+    return false;
+  }
+
   public int getAnimationDuration() {
     return 200;
+  }
+
+  public Fragment getCurrentFragment() {
+    return mPagerAdapter.getItemAt(vViewPager.getCurrentItem());
   }
 
   public View getPagerContainer() {
@@ -261,6 +269,12 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
       ViewPropertyAnimator.animate(getPagerHeader()).cancel();
       ViewHelper.setTranslationY(getPagerHeader(), headerTranslationY);
     }
+    if (dispatchPagerTabListeners()) {
+      Fragment fragment = getCurrentFragment();
+      if (fragment != null && fragment instanceof MdPagerTabListeners) {
+        ((MdPagerTabListeners) fragment).onPagerTabDragging(scrollY, firstScroll);
+      }
+    }
   }
 
   public void onHandUp(int scrollY, ScrollState scrollState) {
@@ -278,7 +292,7 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
       if (keepStickyHeaderOnTop()) {
         if (scrollY < toolbarHeight) {
           showToolbar();
-        } else {
+        } else if (!toolbarIsHidden()) {
           hideToolbar();
         }
       }
@@ -292,12 +306,18 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
         if (keepStickyHeaderOnTop()) {
           if (scrollY < toolbarHeight) {
             showToolbar();
-          } else {
+          } else if (!toolbarIsHidden()) {
             hideToolbar();
           }
         } else {
           showToolbar();
         }
+      }
+    }
+    if (dispatchPagerTabListeners()) {
+      Fragment fragment = getCurrentFragment();
+      if (fragment != null && fragment instanceof MdPagerTabListeners) {
+        ((MdPagerTabListeners) fragment).onPagerTabHandUp(scrollY, scrollState);
       }
     }
   }
@@ -326,6 +346,12 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     } else {
       ViewPropertyAnimator.animate(getPagerHeader()).cancel();
       ViewHelper.setTranslationY(getPagerHeader(), headerTranslationY);
+    }
+    if (dispatchPagerTabListeners()) {
+      Fragment fragment = getCurrentFragment();
+      if (fragment != null && fragment instanceof MdPagerTabListeners) {
+        ((MdPagerTabListeners) fragment).onPagerTabScrolling(scrollY);
+      }
     }
     //Log.i("onScrolling", String.format("%s | %d | %f | %f",
     //    mScrollState == ScrollState.DOWN ? "down" : (mScrollState == ScrollState.UP ? "up" : "unknow"),
@@ -453,6 +479,15 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
       }
       return fragment;
     }
+  }
+
+  public interface MdPagerTabListeners {
+
+    void onPagerTabDragging(int scrollY, boolean firstScroll);
+
+    void onPagerTabHandUp(int scrollY, ScrollState scrollState);
+
+    void onPagerTabScrolling(int scrollY);
   }
 
   public interface ObservableGridViewFragment {

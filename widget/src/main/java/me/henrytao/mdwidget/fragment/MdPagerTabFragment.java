@@ -19,6 +19,7 @@ package me.henrytao.mdwidget.fragment;
 import com.github.ksoichiro.android.observablescrollview.ObservableListView;
 import com.github.ksoichiro.android.observablescrollview.ObservableRecyclerView;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollView;
+import com.github.ksoichiro.android.observablescrollview.ScrollState;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -32,7 +33,22 @@ import me.henrytao.mdwidget.activity.MdPagerTabActivity;
 /**
  * Created by henrytao on 5/17/15.
  */
-public class MdPagerTabFragment extends Fragment {
+public class MdPagerTabFragment extends Fragment implements MdPagerTabActivity.MdPagerTabListeners {
+
+  @Override
+  public void onPagerTabDragging(int scrollY, boolean firstScroll) {
+
+  }
+
+  @Override
+  public void onPagerTabHandUp(int scrollY, ScrollState scrollState) {
+
+  }
+
+  @Override
+  public void onPagerTabScrolling(int scrollY) {
+
+  }
 
   @Override
   public void onViewCreated(View view, Bundle savedInstanceState) {
