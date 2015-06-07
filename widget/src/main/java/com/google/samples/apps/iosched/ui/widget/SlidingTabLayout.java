@@ -64,6 +64,8 @@ public class SlidingTabLayout extends HorizontalScrollView {
 
   private OnPopulateTabStripListener mOnPopulateTabStripListener;
 
+  private OnClickListener mOnTabClickListener;
+
   private int mTabViewLayoutId;
 
   private int mTabViewTextViewId;
@@ -152,6 +154,10 @@ public class SlidingTabLayout extends HorizontalScrollView {
     mOnPopulateTabStripListener = onPopulateTabStripListener;
   }
 
+  public void setOnTabClickListener(OnClickListener onTabClickListener) {
+    mOnTabClickListener = onTabClickListener;
+  }
+
   /**
    * Sets the colors to be used for indicating the selected tab. These colors are treated as a
    * circular array. Providing one color will mean that all tabs are indicated with the same color.
@@ -232,7 +238,15 @@ public class SlidingTabLayout extends HorizontalScrollView {
         }
       }
 
-      tabView.setOnClickListener(tabClickListener);
+      tabView.setOnClickListener(new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+          tabClickListener.onClick(v);
+          if (mOnTabClickListener != null) {
+            mOnTabClickListener.onClick(v);
+          }
+        }
+      });
       String desc = mContentDescriptions.get(i, null);
       if (desc != null) {
         tabView.setContentDescription(desc);

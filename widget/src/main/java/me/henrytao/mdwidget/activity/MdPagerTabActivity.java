@@ -302,6 +302,10 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     }
   }
 
+  public void onPagerTabClicked(int position) {
+
+  }
+
   public void onScrolling(int scrollY) {
     int toolbarHeight = getToolbarHeight();
     float currentHeaderTranslationY = ViewHelper.getTranslationY(getPagerHeader());
@@ -380,6 +384,12 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     slidingTabLayout.setSelectedIndicatorColors(getPagerTabItemSelectedIndicatorColors());
     slidingTabLayout.setDistributeEvenly(isDistributeEvenly());
     slidingTabLayout.setViewPager(getViewPager());
+    slidingTabLayout.setOnTabClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        onPagerTabClicked(getViewPager().getCurrentItem());
+      }
+    });
 
     // When the page is selected, other fragments' scrollY should be adjusted
     // according to the toolbar status(shown/hidden)
