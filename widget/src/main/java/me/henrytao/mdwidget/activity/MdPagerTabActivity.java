@@ -65,6 +65,8 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
 
   protected abstract boolean isDistributeEvenly();
 
+  private boolean mIsHiddingToolbarWhenScrolling;
+
   private boolean mIsShowingToolbarWhenScrolling;
 
   private int mLastScrollY;
@@ -248,6 +250,7 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     if (firstScroll) {
       mScrollState = ScrollState.STOP;
       mIsShowingToolbarWhenScrolling = false;
+      mIsHiddingToolbarWhenScrolling = false;
     }
     int toolbarHeight = getToolbarHeight();
     float currentHeaderTranslationY = ViewHelper.getTranslationY(getPagerHeader());
@@ -317,10 +320,13 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
       } else if (mScrollState == ScrollState.UP || scrollY > mLastScrollY) {
         ViewPropertyAnimator.animate(getPagerHeader()).cancel();
         ViewHelper.setTranslationY(getPagerHeader(), headerTranslationY);
-        if (scrollY < toolbarHeight) {
-          showToolbar();
-        } else {
-          hideToolbar();
+        if (!mIsHiddingToolbarWhenScrolling) {
+          if (scrollY < toolbarHeight) {
+            showToolbar();
+          } else {
+            mIsHiddingToolbarWhenScrolling = true;
+            hideToolbar();
+          }
         }
       }
     } else {
