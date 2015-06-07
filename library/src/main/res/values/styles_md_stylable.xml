@@ -40,7 +40,7 @@
     <item name="mdColor_backgroundPalette">#F5F5F5</item>
     <item name="mdColor_backgroundPalette_dark">#EEEEEE</item>
     <item name="mdColor_backgroundPalette_darker">#E0E0E0</item>
-    <item name="mdColor_backgroundPalette_light">#FAFAFA</item>
+    <item name="mdColor_backgroundPalette_light">#FDFDFD</item>
 
     <item name="mdBackground_normal">@android:color/transparent</item>
     <item name="mdBackground_disabled">?attr/mdColor_backgroundPalette_light</item>
@@ -165,6 +165,7 @@
     <item name="mdToolbar_background">?attr/mdColor_primaryPalette</item>
     <item name="mdToolbar_elevation">4dp</item>
 
+    <item name="mdIcon_xxxlg">192dp</item>
     <item name="mdIcon_xxlg">96dp</item>
     <item name="mdIcon_xlg">72dp</item>
     <item name="mdIcon_lg">56dp</item>
