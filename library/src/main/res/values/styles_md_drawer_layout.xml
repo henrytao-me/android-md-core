@@ -21,10 +21,20 @@
     <item name="android:layout_height">match_parent</item>
   </style>
 
+  <style name="MdDrawerLayout.StatusBar">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">match_parent</item>
+  </style>
+
+  <style name="MdDrawerLayout.StatusBar.Background">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">?attr/actionBarSize</item>
+    <item name="android:background">?attr/mdDrawerLayout_translucentNavigationBackground</item>
+  </style>
+
   <style name="MdDrawerLayout.Content" parent="">
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">match_parent</item>
-    <item name="android:background">?attr/mdDrawerLayout_translucentNavigationBackground</item>
     <item name="android:fitsSystemWindows">?attr/mdDrawerLayout_fitsSystemWindows</item>
   </style>
 
@@ -32,7 +42,6 @@
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">match_parent</item>
     <item name="android:layout_gravity">start</item>
-    <item name="android:background">?attr/mdColor_backgroundPalette</item>
   </style>
 
   <style name="MdDrawerLayout.Navigation.Right">
