@@ -37,6 +37,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.lang.ref.WeakReference;
+
 /**
  * Created by henrytao on 5/17/15.
  */
@@ -44,6 +46,10 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     ViewPager.OnPageChangeListener {
 
   public abstract int getPagerTabObservableScrollViewResource();
+
+  protected abstract Fragment createPagerTabItemFragment(int position);
+
+  protected abstract View createPagerTabItemView(int position, ViewGroup parent);
 
   protected abstract int getNumberOfTabs();
 
@@ -55,15 +61,23 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
 
   protected abstract int getPagerStickyHeaderResource();
 
-  protected abstract Fragment getPagerTabItemFragment(int position);
-
   protected abstract int getPagerTabItemSelectedIndicatorColors(int... colors);
-
-  protected abstract View getPagerTabItemView(int position, ViewGroup parent);
 
   protected abstract int getPagerViewResource();
 
   protected abstract boolean isDistributeEvenly();
+
+  protected NavigationAdapter mPagerAdapter;
+
+  protected View vPagerContainer;
+
+  protected View vPagerHeader;
+
+  protected SlidingTabLayout vPagerSlidingTab;
+
+  protected View vPagerStickyHeader;
+
+  protected ViewPager vViewPager;
 
   private boolean mIsShowingToolbarWhenScrolling;
 
@@ -71,21 +85,9 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
 
   private int mPageScrollState;
 
-  private NavigationAdapter mPagerAdapter;
-
   private int mScrollIndex;
 
   private ScrollState mScrollState;
-
-  private View vPagerContainer;
-
-  private View vPagerHeader;
-
-  private SlidingTabLayout vPagerSlidingTab;
-
-  private View vPagerStickyHeader;
-
-  private ViewPager vViewPager;
 
   @Override
   public void onDownMotionEvent() {
@@ -432,7 +434,7 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     slidingTabLayout.setOnPopulateTabStripListener(new SlidingTabLayout.OnPopulateTabStripListener() {
       @Override
       public View onPopulateTabStrip(int position, ViewGroup parent) {
-        return getPagerTabItemView(position, parent);
+        return createPagerTabItemView(position, parent);
       }
     });
     slidingTabLayout.setSelectedIndicatorColors(getPagerTabItemSelectedIndicatorColors());
@@ -476,13 +478,15 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     }
   }
 
-  private static class NavigationAdapter extends CacheFragmentStatePagerAdapter {
+  protected static class NavigationAdapter extends CacheFragmentStatePagerAdapter {
 
-    private MdPagerTabActivity mContext;
+    private WeakReference<MdPagerTabActivity> mWeakReference;
 
     public NavigationAdapter(Context context, FragmentManager fm) {
       this(fm);
-      mContext = context instanceof MdPagerTabActivity ? (MdPagerTabActivity) context : null;
+      if (context instanceof MdPagerTabActivity) {
+        mWeakReference = new WeakReference<>((MdPagerTabActivity) context);
+      }
     }
 
     public NavigationAdapter(FragmentManager fm) {
@@ -491,7 +495,10 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
 
     @Override
     public int getCount() {
-      return mContext == null ? 0 : mContext.getNumberOfTabs();
+      if (mWeakReference != null && mWeakReference.get() != null) {
+        return mWeakReference.get().getNumberOfTabs();
+      }
+      return 0;
     }
 
     @Override
@@ -502,8 +509,8 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     @Override
     protected Fragment createItem(int position) {
       Fragment fragment = null;
-      if (mContext != null) {
-        fragment = mContext.getPagerTabItemFragment(position);
+      if (mWeakReference != null && mWeakReference.get() != null) {
+        fragment = mWeakReference.get().createPagerTabItemFragment(position);
       }
       return fragment;
     }
