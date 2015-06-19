@@ -26,7 +26,6 @@ import java.lang.ref.WeakReference;
 
 import me.henrytao.widget.R;
 
-
 /**
  * Created by henrytao on 3/28/15.
  */
