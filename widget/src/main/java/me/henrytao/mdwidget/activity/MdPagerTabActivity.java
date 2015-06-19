@@ -420,8 +420,23 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
       }
     } else if (view instanceof ObservableListView) {
       ObservableListView observableListView = (ObservableListView) view;
-      // Todo: need to test
-      // return true;
+      if (observableListView.getCurrentScrollY() >= getToolbarHeight()) {
+        return false;
+      }
+      int minHeight = view.getHeight() + getToolbarHeight();
+      int totalHeight = 0;
+      View listItem;
+      int desiredWidth = View.MeasureSpec.makeMeasureSpec(observableListView.getWidth(), View.MeasureSpec.AT_MOST);
+      if (observableListView.getAdapter() != null) {
+        for (int i = 0; i < observableListView.getAdapter().getCount(); i++) {
+          listItem = observableListView.getAdapter().getView(i, null, observableListView);
+          listItem.measure(desiredWidth, View.MeasureSpec.UNSPECIFIED);
+          totalHeight += listItem.getMeasuredHeight();
+          if (totalHeight >= minHeight) {
+            return false;
+          }
+        }
+      }
     }
     return true;
   }
