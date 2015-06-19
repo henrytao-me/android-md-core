@@ -143,6 +143,8 @@
     <item name="mdLineHeight_display1">16sp</item>
     <item name="mdLineHeight_display2">3sp</item>
 
+    <item name="mdLayout_spacing_xxlg">48dp</item>
+    <item name="mdLayout_spacing_xlg">32dp</item>
     <item name="mdLayout_spacing_lg">24dp</item>
     <item name="mdLayout_spacing_md">16dp</item>
     <item name="mdLayout_spacing_sm">8dp</item>
@@ -165,7 +167,7 @@
     <item name="mdToolbar_background">?attr/mdColor_primaryPalette</item>
     <item name="mdToolbar_elevation">4dp</item>
 
-    <item name="mdIcon_xxxlg">192dp</item>
+    <item name="mdIcon_xxxlg">112dp</item>
     <item name="mdIcon_xxlg">96dp</item>
     <item name="mdIcon_xlg">72dp</item>
     <item name="mdIcon_lg">56dp</item>
