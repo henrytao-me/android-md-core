@@ -17,8 +17,7 @@
 <resources>
 
   <style name="MdTheme" parent="MdStylable">
-    <item name="actionModeStyle">@style/MdStyle.ActionMode</item>
-    <item name="windowActionModeOverlay">true</item>
+
   </style>
 
   <style name="MdTheme.Dark">

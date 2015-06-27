@@ -198,6 +198,8 @@
 
     <item name="alertDialogTheme">@style/MdAlertDialog</item>
 
+    <item name="actionModeStyle">@style/MdTheme.MdToolbar.ActionMode</item>
+    <item name="windowActionModeOverlay">true</item>
   </style>
 
 </resources>
