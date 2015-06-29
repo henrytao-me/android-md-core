@@ -28,14 +28,14 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
-import me.henrytao.mdcore.adapter.RecycleViewAdapter;
+import me.henrytao.mdcore.adapter.RecyclerViewAdapter;
 import me.henrytao.mdcore.config.Constants;
 import me.henrytao.mddemo.R;
 
 /**
  * Created by henrytao on 5/21/15.
  */
-public class ChatItemAdapter extends RecycleViewAdapter<RecyclerView.ViewHolder> {
+public class ChatItemAdapter extends RecyclerViewAdapter<RecyclerView.ViewHolder> {
 
   Context mContext;
 
@@ -47,6 +47,7 @@ public class ChatItemAdapter extends RecycleViewAdapter<RecyclerView.ViewHolder>
 
   public ChatItemAdapter(Context context, View headerView, View footerView, List<Integer> data) {
     mContext = context;
+
     mHeaderView = headerView;
     mFooterView = footerView;
     mData = data;
@@ -57,9 +58,23 @@ public class ChatItemAdapter extends RecycleViewAdapter<RecyclerView.ViewHolder>
         mData.add(i);
       }
     }
-
     addSection(0, "Recent chat");
     addSection(3, "Previous chat");
+  }
+
+  @Override
+  public int getDataItemCount() {
+    return mData.size();
+  }
+
+  @Override
+  public boolean hasFooter() {
+    return mFooterView != null;
+  }
+
+  @Override
+  public boolean hasHeader() {
+    return mHeaderView != null;
   }
 
   @Override
@@ -85,21 +100,6 @@ public class ChatItemAdapter extends RecycleViewAdapter<RecyclerView.ViewHolder>
       return itemHolder;
     }
     return BlankHolder.newInstance(getContext());
-  }
-
-  @Override
-  protected int getDataItemCount() {
-    return mData.size();
-  }
-
-  @Override
-  protected boolean hasFooter() {
-    return mFooterView != null;
-  }
-
-  @Override
-  protected boolean hasHeader() {
-    return mHeaderView != null;
   }
 
   public Context getContext() {
