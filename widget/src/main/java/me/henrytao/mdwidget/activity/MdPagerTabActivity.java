@@ -135,7 +135,7 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     }
     if (dispatchPagerTabListeners()) {
       Fragment fragment = getCurrentFragment();
-      if (fragment != null && fragment instanceof MdPagerTabListeners) {
+      if (fragment != null && fragment.isAdded() && fragment instanceof MdPagerTabListeners) {
         ((MdPagerTabListeners) fragment).onPagerSelected(scrollY, toolbarIsShown);
       }
     }
@@ -345,7 +345,7 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     }
     if (dispatchPagerTabListeners()) {
       Fragment fragment = getCurrentFragment();
-      if (fragment != null && fragment instanceof MdPagerTabListeners) {
+      if (fragment != null && fragment.isAdded() && fragment instanceof MdPagerTabListeners) {
         ((MdPagerTabListeners) fragment).onPagerTabHandUp(scrollY, scrollState);
       }
     }
@@ -379,7 +379,7 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     }
     if (dispatchPagerTabListeners()) {
       Fragment fragment = getCurrentFragment();
-      if (fragment != null && fragment instanceof MdPagerTabListeners) {
+      if (fragment != null && fragment.isAdded() && fragment instanceof MdPagerTabListeners) {
         ((MdPagerTabListeners) fragment).onPagerTabScrolling(scrollY);
       }
     }
@@ -561,5 +561,4 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
   public interface ObservableWebViewFragment {
 
   }
-
 }

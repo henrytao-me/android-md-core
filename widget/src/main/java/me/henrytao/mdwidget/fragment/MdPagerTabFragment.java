@@ -29,7 +29,6 @@ import android.view.ViewGroup;
 
 import me.henrytao.mdwidget.activity.MdPagerTabActivity;
 
-
 /**
  * Created by henrytao on 5/17/15.
  */
@@ -103,6 +102,4 @@ public class MdPagerTabFragment extends Fragment implements MdPagerTabActivity.M
       scrollView.setScrollViewCallbacks(pagerActivity);
     }
   }
-
-
 }
