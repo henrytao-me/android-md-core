@@ -28,26 +28,35 @@ public class RecycleEmptyErrorView extends ObservableRecyclerView {
 
   private boolean mIsError;
 
+  private boolean mIsLoading;
+
   private View vEmptyView;
+
+  private View vLoadingView;
 
   private View vErrorView;
 
   private int mVisibility;
 
+  private OnRecyclerViewChangeListener mOnRecyclerViewChangeListener;
+
   final private AdapterDataObserver mObserver = new AdapterDataObserver() {
     @Override
     public void onChanged() {
       updateEmptyView();
+      updateRecyclerView();
     }
 
     @Override
     public void onItemRangeInserted(int positionStart, int itemCount) {
       updateEmptyView();
+      updateRecyclerView();
     }
 
     @Override
     public void onItemRangeRemoved(int positionStart, int itemCount) {
       updateEmptyView();
+      updateRecyclerView();
     }
   };
 
@@ -77,6 +86,7 @@ public class RecycleEmptyErrorView extends ObservableRecyclerView {
       adapter.registerAdapterDataObserver(mObserver);
     }
     updateEmptyView();
+    updateRecyclerView();
   }
 
   @Override
@@ -85,12 +95,23 @@ public class RecycleEmptyErrorView extends ObservableRecyclerView {
     mVisibility = visibility;
     updateErrorView();
     updateEmptyView();
+    updateLoadingView();
+    updateRecyclerView();
+  }
+
+  public void hideLoadingView() {
+    mIsLoading = true;
+    updateEmptyView();
+    updateLoadingView();
+    updateRecyclerView();
   }
 
   public RecycleEmptyErrorView hideErrorView() {
     mIsError = false;
-    updateErrorView();
     updateEmptyView();
+    updateLoadingView();
+    updateErrorView();
+    updateRecyclerView();
     return this;
   }
 
@@ -101,6 +122,19 @@ public class RecycleEmptyErrorView extends ObservableRecyclerView {
     vEmptyView = emptyView;
     vEmptyView.setVisibility(GONE);
     updateEmptyView();
+    updateRecyclerView();
+    return this;
+  }
+
+  public RecycleEmptyErrorView setLoadingView(View loadingView) {
+    if (vLoadingView != null) {
+      vLoadingView.setVisibility(GONE);
+    }
+    vLoadingView = loadingView;
+    vLoadingView.setVisibility(GONE);
+    updateEmptyView();
+    updateLoadingView();
+    updateRecyclerView();
     return this;
   }
 
@@ -110,16 +144,35 @@ public class RecycleEmptyErrorView extends ObservableRecyclerView {
     }
     vErrorView = errorView;
     vErrorView.setVisibility(GONE);
-    updateErrorView();
     updateEmptyView();
+    updateLoadingView();
+    updateErrorView();
+    updateRecyclerView();
     return this;
   }
 
   public RecycleEmptyErrorView showErrorView() {
     mIsError = true;
-    updateErrorView();
     updateEmptyView();
+    updateLoadingView();
+    updateErrorView();
+    updateRecyclerView();
     return this;
+  }
+
+  private boolean shouldShowEmptyView() {
+    if (vEmptyView != null && getAdapter() != null && getAdapter().getItemCount() == 0
+        && !shouldShowLoadingView() && !shouldShowErrorView()) {
+      return true;
+    }
+    return false;
+  }
+
+  private boolean shouldShowLoadingView() {
+    if (vLoadingView != null && !mIsLoading && !shouldShowErrorView()) {
+      return true;
+    }
+    return false;
   }
 
   private boolean shouldShowErrorView() {
@@ -130,10 +183,14 @@ public class RecycleEmptyErrorView extends ObservableRecyclerView {
   }
 
   private void updateEmptyView() {
-    if (vEmptyView != null && getAdapter() != null) {
-      boolean isShowEmptyView = getAdapter().getItemCount() == 0;
-      vEmptyView.setVisibility(isShowEmptyView && !shouldShowErrorView() && mVisibility == VISIBLE ? VISIBLE : GONE);
-      super.setVisibility(!isShowEmptyView && !shouldShowErrorView() && mVisibility == VISIBLE ? VISIBLE : GONE);
+    if (vEmptyView != null) {
+      vEmptyView.setVisibility(shouldShowEmptyView() && mVisibility == VISIBLE ? VISIBLE : GONE);
+    }
+  }
+
+  private void updateLoadingView() {
+    if (vLoadingView != null) {
+      vLoadingView.setVisibility(shouldShowLoadingView() && mVisibility == VISIBLE ? VISIBLE : GONE);
     }
   }
 
@@ -141,5 +198,71 @@ public class RecycleEmptyErrorView extends ObservableRecyclerView {
     if (vErrorView != null) {
       vErrorView.setVisibility(shouldShowErrorView() && mVisibility == VISIBLE ? VISIBLE : GONE);
     }
+  }
+
+  private void updateRecyclerView() {
+    super.setVisibility(
+        !shouldShowEmptyView() && !shouldShowLoadingView() && !shouldShowErrorView() && mVisibility == VISIBLE ? VISIBLE : GONE);
+    if (mOnRecyclerViewChangeListener != null) {
+      if (isShowingErrorView()) {
+        mOnRecyclerViewChangeListener.onRecyclerViewChange(ViewType.ERROR);
+      } else if (isShowingLoadingView()) {
+        mOnRecyclerViewChangeListener.onRecyclerViewChange(ViewType.LOADING);
+      } else if (isShowingEmptyView()) {
+        mOnRecyclerViewChangeListener.onRecyclerViewChange(ViewType.EMPTY);
+      } else {
+        mOnRecyclerViewChangeListener.onRecyclerViewChange(ViewType.RECYCLER);
+      }
+    }
+  }
+
+  public View getLoadingView() {
+    return vLoadingView;
+  }
+
+  public View getEmptyView() {
+    return vEmptyView;
+  }
+
+  public View getErrorView() {
+    return vErrorView;
+  }
+
+  public boolean isShowingLoadingView() {
+    if (vLoadingView != null && vLoadingView.getVisibility() == VISIBLE) {
+      return true;
+    }
+    return false;
+  }
+
+  public boolean isShowingEmptyView() {
+    if (vEmptyView != null && vEmptyView.getVisibility() == VISIBLE) {
+      return true;
+    }
+    return false;
+  }
+
+  public boolean isShowingErrorView() {
+    if (vErrorView != null && vEmptyView.getVisibility() == VISIBLE) {
+      return true;
+    }
+    return false;
+  }
+
+  public boolean isShowingRecyclerView() {
+    return getVisibility() == VISIBLE;
+  }
+
+  public void setOnRecyclerViewChangeListener(OnRecyclerViewChangeListener onRecyclerViewChangeListener) {
+    mOnRecyclerViewChangeListener = onRecyclerViewChangeListener;
+  }
+
+  public enum ViewType {
+    LOADING, EMPTY, ERROR, RECYCLER
+  }
+
+  public interface OnRecyclerViewChangeListener {
+
+    void onRecyclerViewChange(ViewType type);
   }
 }
