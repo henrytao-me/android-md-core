@@ -37,6 +37,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.lang.ref.WeakReference;
+
 /**
  * Created by henrytao on 5/17/15.
  */
@@ -44,6 +46,10 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     ViewPager.OnPageChangeListener {
 
   public abstract int getPagerTabObservableScrollViewResource();
+
+  protected abstract Fragment createPagerTabItemFragment(int position);
+
+  protected abstract View createPagerTabItemView(int position, ViewGroup parent);
 
   protected abstract int getNumberOfTabs();
 
@@ -55,35 +61,33 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
 
   protected abstract int getPagerStickyHeaderResource();
 
-  protected abstract Fragment getPagerTabItemFragment(int position);
-
   protected abstract int getPagerTabItemSelectedIndicatorColors(int... colors);
-
-  protected abstract View getPagerTabItemView(int position, ViewGroup parent);
 
   protected abstract int getPagerViewResource();
 
   protected abstract boolean isDistributeEvenly();
 
+  protected NavigationAdapter mPagerAdapter;
+
+  protected View vPagerContainer;
+
+  protected View vPagerHeader;
+
+  protected SlidingTabLayout vPagerSlidingTab;
+
+  protected View vPagerStickyHeader;
+
+  protected ViewPager vViewPager;
+
   private boolean mIsShowingToolbarWhenScrolling;
 
   private int mLastScrollY;
 
-  private NavigationAdapter mPagerAdapter;
+  private int mPageScrollState;
 
   private int mScrollIndex;
 
   private ScrollState mScrollState;
-
-  private View vPagerContainer;
-
-  private View vPagerHeader;
-
-  private SlidingTabLayout vPagerSlidingTab;
-
-  private View vPagerStickyHeader;
-
-  private ViewPager vViewPager;
 
   @Override
   public void onDownMotionEvent() {
@@ -92,12 +96,13 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
 
   @Override
   public void onPageScrollStateChanged(int state) {
-
+    mPageScrollState = state;
+    //Log.i("custom", String.format("%s | %d", "onPageScrollStateChanged", state));
   }
 
   @Override
   public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
+    //Log.i("custom", String.format("%s | %d | %f | %d", "onPageScrolled", position, positionOffset, positionOffsetPixels));
   }
 
   @Override
@@ -108,20 +113,39 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
       return;
     }
     Scrollable scrollView = (Scrollable) view;
+    int scrollY = scrollView.getCurrentScrollY();
     int toolbarHeight = getToolbarHeight();
+    boolean toolbarIsShown = !toolbarIsHidden();
     if (toolbarIsShown()) {
       scrollView.scrollVerticallyTo(0);
+      scrollY = 0;
+      toolbarIsShown = true;
     } else if (toolbarIsHidden() && showToolbarIfPageSelected(view, position)) {
       showToolbar();
+      scrollY = 0;
+      toolbarIsShown = true;
     } else if (!toolbarIsHidden() && !toolbarIsShown()) {
       showToolbar();
+      scrollY = 0;
+      toolbarIsShown = true;
     } else if (scrollView.getCurrentScrollY() < toolbarHeight) {
       scrollView.scrollVerticallyTo(toolbarHeight);
+      scrollY = toolbarHeight;
+      toolbarIsShown = false;
+    }
+    if (dispatchPagerTabListeners()) {
+      Fragment fragment = getCurrentFragment();
+      if (fragment != null && fragment.isAdded() && fragment instanceof MdPagerTabListeners) {
+        ((MdPagerTabListeners) fragment).onPagerSelected(scrollY, toolbarIsShown);
+      }
     }
   }
 
   @Override
   public void onScrollChanged(int scrollY, boolean firstScroll, boolean dragging) {
+    if (mPageScrollState != 0) {
+      return;
+    }
     if (firstScroll) {
       mScrollIndex = getViewPager().getCurrentItem();
       mLastScrollY = scrollY;
@@ -138,6 +162,9 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
 
   @Override
   public void onUpOrCancelMotionEvent(ScrollState scrollState) {
+    if (mPageScrollState != 0) {
+      return;
+    }
     Scrollable scrollView = getScrollable(getViewPager().getCurrentItem());
     if (scrollView == null) {
       return;
@@ -163,8 +190,16 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     initPagerTab();
   }
 
+  public boolean dispatchPagerTabListeners() {
+    return false;
+  }
+
   public int getAnimationDuration() {
     return 200;
+  }
+
+  public Fragment getCurrentFragment() {
+    return mPagerAdapter.getItemAt(vViewPager.getCurrentItem());
   }
 
   public View getPagerContainer() {
@@ -245,6 +280,7 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
   }
 
   public void onDragging(int scrollY, boolean firstScroll) {
+    //Log.i("custom", "onDragging");
     if (firstScroll) {
       mScrollState = ScrollState.STOP;
       mIsShowingToolbarWhenScrolling = false;
@@ -261,9 +297,16 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
       ViewPropertyAnimator.animate(getPagerHeader()).cancel();
       ViewHelper.setTranslationY(getPagerHeader(), headerTranslationY);
     }
+    if (dispatchPagerTabListeners()) {
+      Fragment fragment = getCurrentFragment();
+      if (fragment != null && fragment instanceof MdPagerTabListeners) {
+        ((MdPagerTabListeners) fragment).onPagerTabDragging(scrollY, firstScroll);
+      }
+    }
   }
 
   public void onHandUp(int scrollY, ScrollState scrollState) {
+    //Log.i("custom", "onHandUp");
     mScrollState = scrollState;
     int toolbarHeight = getToolbarHeight();
     if (scrollState == ScrollState.DOWN) {
@@ -278,7 +321,7 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
       if (keepStickyHeaderOnTop()) {
         if (scrollY < toolbarHeight) {
           showToolbar();
-        } else {
+        } else if (!toolbarIsHidden()) {
           hideToolbar();
         }
       }
@@ -292,12 +335,18 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
         if (keepStickyHeaderOnTop()) {
           if (scrollY < toolbarHeight) {
             showToolbar();
-          } else {
+          } else if (!toolbarIsHidden()) {
             hideToolbar();
           }
         } else {
           showToolbar();
         }
+      }
+    }
+    if (dispatchPagerTabListeners()) {
+      Fragment fragment = getCurrentFragment();
+      if (fragment != null && fragment.isAdded() && fragment instanceof MdPagerTabListeners) {
+        ((MdPagerTabListeners) fragment).onPagerTabHandUp(scrollY, scrollState);
       }
     }
   }
@@ -307,6 +356,7 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
   }
 
   public void onScrolling(int scrollY) {
+    //Log.i("custom", "onScrolling");
     int toolbarHeight = getToolbarHeight();
     float currentHeaderTranslationY = ViewHelper.getTranslationY(getPagerHeader());
     float headerTranslationY = ScrollUtils.getFloat(-(scrollY - mLastScrollY) + currentHeaderTranslationY, -toolbarHeight, 0);
@@ -314,7 +364,7 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
       if ((mScrollState == ScrollState.DOWN || scrollY < mLastScrollY) && scrollY < toolbarHeight && !mIsShowingToolbarWhenScrolling) {
         mIsShowingToolbarWhenScrolling = true;
         showToolbar();
-      } else if (mScrollState == ScrollState.UP || scrollY > mLastScrollY) {
+      } else if ((mScrollState == ScrollState.UP || scrollY > mLastScrollY) && !toolbarIsHidden()) {
         ViewPropertyAnimator.animate(getPagerHeader()).cancel();
         ViewHelper.setTranslationY(getPagerHeader(), headerTranslationY);
         if (scrollY < toolbarHeight) {
@@ -326,6 +376,12 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     } else {
       ViewPropertyAnimator.animate(getPagerHeader()).cancel();
       ViewHelper.setTranslationY(getPagerHeader(), headerTranslationY);
+    }
+    if (dispatchPagerTabListeners()) {
+      Fragment fragment = getCurrentFragment();
+      if (fragment != null && fragment.isAdded() && fragment instanceof MdPagerTabListeners) {
+        ((MdPagerTabListeners) fragment).onPagerTabScrolling(scrollY);
+      }
     }
     //Log.i("onScrolling", String.format("%s | %d | %f | %f",
     //    mScrollState == ScrollState.DOWN ? "down" : (mScrollState == ScrollState.UP ? "up" : "unknow"),
@@ -364,8 +420,23 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
       }
     } else if (view instanceof ObservableListView) {
       ObservableListView observableListView = (ObservableListView) view;
-      // Todo: need to test
-      // return true;
+      if (observableListView.getCurrentScrollY() >= getToolbarHeight()) {
+        return false;
+      }
+      int minHeight = view.getHeight() + getToolbarHeight();
+      int totalHeight = 0;
+      View listItem;
+      int desiredWidth = View.MeasureSpec.makeMeasureSpec(observableListView.getWidth(), View.MeasureSpec.AT_MOST);
+      if (observableListView.getAdapter() != null) {
+        for (int i = 0; i < observableListView.getAdapter().getCount(); i++) {
+          listItem = observableListView.getAdapter().getView(i, null, observableListView);
+          listItem.measure(desiredWidth, View.MeasureSpec.UNSPECIFIED);
+          totalHeight += listItem.getMeasuredHeight();
+          if (totalHeight >= minHeight) {
+            return false;
+          }
+        }
+      }
     }
     return true;
   }
@@ -378,7 +449,7 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     slidingTabLayout.setOnPopulateTabStripListener(new SlidingTabLayout.OnPopulateTabStripListener() {
       @Override
       public View onPopulateTabStrip(int position, ViewGroup parent) {
-        return getPagerTabItemView(position, parent);
+        return createPagerTabItemView(position, parent);
       }
     });
     slidingTabLayout.setSelectedIndicatorColors(getPagerTabItemSelectedIndicatorColors());
@@ -422,13 +493,15 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     }
   }
 
-  private static class NavigationAdapter extends CacheFragmentStatePagerAdapter {
+  protected static class NavigationAdapter extends CacheFragmentStatePagerAdapter {
 
-    private MdPagerTabActivity mContext;
+    private WeakReference<MdPagerTabActivity> mWeakReference;
 
     public NavigationAdapter(Context context, FragmentManager fm) {
       this(fm);
-      mContext = context instanceof MdPagerTabActivity ? (MdPagerTabActivity) context : null;
+      if (context instanceof MdPagerTabActivity) {
+        mWeakReference = new WeakReference<>((MdPagerTabActivity) context);
+      }
     }
 
     public NavigationAdapter(FragmentManager fm) {
@@ -437,7 +510,10 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
 
     @Override
     public int getCount() {
-      return mContext == null ? 0 : mContext.getNumberOfTabs();
+      if (mWeakReference != null && mWeakReference.get() != null) {
+        return mWeakReference.get().getNumberOfTabs();
+      }
+      return 0;
     }
 
     @Override
@@ -448,11 +524,22 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
     @Override
     protected Fragment createItem(int position) {
       Fragment fragment = null;
-      if (mContext != null) {
-        fragment = mContext.getPagerTabItemFragment(position);
+      if (mWeakReference != null && mWeakReference.get() != null) {
+        fragment = mWeakReference.get().createPagerTabItemFragment(position);
       }
       return fragment;
     }
+  }
+
+  public interface MdPagerTabListeners {
+
+    void onPagerSelected(int scrollY, boolean toolbarIsShown);
+
+    void onPagerTabDragging(int scrollY, boolean firstScroll);
+
+    void onPagerTabHandUp(int scrollY, ScrollState scrollState);
+
+    void onPagerTabScrolling(int scrollY);
   }
 
   public interface ObservableGridViewFragment {
@@ -474,5 +561,4 @@ public abstract class MdPagerTabActivity extends AppCompatActivity implements Ob
   public interface ObservableWebViewFragment {
 
   }
-
 }

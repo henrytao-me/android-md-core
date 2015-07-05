@@ -14,14 +14,18 @@
   ~ limitations under the License.
   -->
 
-<resources>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-  <declare-styleable name="MdToolbar">
+  <item android:state_pressed="true">
+    <shape>
+      <solid android:color="#1E000000" />
+    </shape>
+  </item>
 
-    <attr name="mdToolbar_background" format="color|reference" />
-    <attr name="mdToolbar_elevation" format="dimension|reference" />
-    <attr name="mdToolbar_iconPadding" format="dimension|reference" />
+  <item>
+    <shape android:shape="rectangle">
+      <solid android:color="@android:color/transparent" />
+    </shape>
+  </item>
 
-  </declare-styleable>
-
-</resources>
+</selector>

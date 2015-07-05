@@ -63,6 +63,40 @@ public class PagerTabActivity extends MdPagerTabActivity {
   }
 
   @Override
+  protected Fragment createPagerTabItemFragment(int position) {
+    MdPagerTabFragment fragment = null;
+    switch (position) {
+      case 0:
+        fragment = new PagerTabAFragment();
+        break;
+      case 1:
+        fragment = new PagerTabBFragment();
+        break;
+      case 2:
+        fragment = new PagerTabCFragment();
+        break;
+    }
+    return fragment;
+  }
+
+  @Override
+  protected View createPagerTabItemView(int position, ViewGroup parent) {
+    ItemTabIndicator tab = new ItemTabIndicator(this, parent);
+    switch (position) {
+      case 0:
+        tab.setTitle("Tab A");
+        break;
+      case 1:
+        tab.setTitle("Tab B");
+        break;
+      case 2:
+        tab.setTitle("Tab C");
+        break;
+    }
+    return tab.getView();
+  }
+
+  @Override
   protected int getNumberOfTabs() {
     return 3;
   }
@@ -88,42 +122,8 @@ public class PagerTabActivity extends MdPagerTabActivity {
   }
 
   @Override
-  protected Fragment getPagerTabItemFragment(int position, int scrollY) {
-    MdPagerTabFragment fragment = null;
-    switch (position) {
-      case 0:
-        fragment = new PagerTabAFragment();
-        break;
-      case 1:
-        fragment = new PagerTabBFragment();
-        break;
-      case 2:
-        fragment = new PagerTabCFragment();
-        break;
-    }
-    return fragment;
-  }
-
-  @Override
   protected int getPagerTabItemSelectedIndicatorColors(int... colors) {
     return ResourceUtils.getColorFromAttribute(this, R.attr.mdColor_accentPalette);
-  }
-
-  @Override
-  protected View getPagerTabItemView(int position, ViewGroup parent) {
-    ItemTabIndicator tab = new ItemTabIndicator(this, parent);
-    switch (position) {
-      case 0:
-        tab.setTitle("Tab A");
-        break;
-      case 1:
-        tab.setTitle("Tab B");
-        break;
-      case 2:
-        tab.setTitle("Tab C");
-        break;
-    }
-    return tab.getView();
   }
 
   @Override

@@ -66,6 +66,7 @@
 
   <RelativeLayout
     android:id="@+id/navigation"
+    android:background="?attr/mdColor_backgroundPalette"
     style="@style/MdDrawerLayout.Navigation">
 
     <TextView
@@ -80,6 +81,7 @@
 
   <RelativeLayout
     android:id="@+id/navigation_right"
+    android:background="?attr/mdColor_backgroundPalette"
     style="@style/MdDrawerLayout.Navigation.Right">
 
     <TextView

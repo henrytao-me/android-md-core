@@ -77,6 +77,8 @@ public abstract class RecyclerViewAdapter<T extends RecyclerView.ViewHolder> ext
     Constants.ItemViewType itemViewType = Constants.ItemViewType.BLANK;
     if (viewType == Constants.RECYCLER_VIEW_ITEM_TYPE.HEADER) {
       itemViewType = Constants.ItemViewType.HEADER;
+    } else if (viewType == Constants.RECYCLER_VIEW_ITEM_TYPE.FOOTER) {
+      itemViewType = Constants.ItemViewType.FOOTER;
     } else if (viewType == Constants.RECYCLER_VIEW_ITEM_TYPE.SECTION) {
       itemViewType = Constants.ItemViewType.SECTION;
     } else if (viewType == Constants.RECYCLER_VIEW_ITEM_TYPE.ITEM) {

@@ -16,12 +16,6 @@
 
 <resources>
 
-  <declare-styleable name="MdToolbar">
-
-    <attr name="mdToolbar_background" format="color|reference" />
-    <attr name="mdToolbar_elevation" format="dimension|reference" />
-    <attr name="mdToolbar_iconPadding" format="dimension|reference" />
-
-  </declare-styleable>
+  <color name="mdColor_backgroundPalette">@color/background_material_light</color>
 
 </resources>

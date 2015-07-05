@@ -46,8 +46,6 @@ public abstract class MdDrawerLayoutPagerTabActivity extends MdPagerTabActivity 
 
   protected ActionBarDrawerToggle vDrawerToggle;
 
-  private WeakReference<MdDrawerLayoutPagerTabActivity> mWeakReference;
-
   @Override
   public void setContentView(int layoutResID) {
     super.setContentView(layoutResID);
@@ -114,6 +112,19 @@ public abstract class MdDrawerLayoutPagerTabActivity extends MdPagerTabActivity 
     return vDrawerNavigationRight;
   }
 
+  public boolean isDrawerOpen() {
+    return isDrawerOpen(NAVIGATION_DRAWER_TYPE.LEFT);
+  }
+
+  public boolean isDrawerOpen(NAVIGATION_DRAWER_TYPE type) {
+    if (type == NAVIGATION_DRAWER_TYPE.LEFT && getDrawerNavigation() != null) {
+      return vDrawerLayout.isDrawerOpen(getDrawerNavigation());
+    } else if (type == NAVIGATION_DRAWER_TYPE.RIGHT && getDrawerNavigationRight() != null) {
+      return vDrawerLayout.isDrawerOpen(getDrawerNavigationRight());
+    }
+    return false;
+  }
+
   public void onDrawerClosed(NAVIGATION_DRAWER_TYPE type, View drawerView) {
 
   }
@@ -158,66 +169,49 @@ public abstract class MdDrawerLayoutPagerTabActivity extends MdPagerTabActivity 
 
   protected void initDrawer() {
     if (isValidated()) {
-      getWeakReference();
       vDrawerToggle = new ActionBarDrawerToggle(this, getDrawerLayout(), getDrawerOpenStringResource(), getDrawerCloseStringResource()) {
 
         @Override
         public void onDrawerClosed(View drawerView) {
           super.onDrawerClosed(drawerView);
-          MdDrawerLayoutPagerTabActivity activity = getWeakReference().get();
-          if (activity != null) {
-            NAVIGATION_DRAWER_TYPE type = NAVIGATION_DRAWER_TYPE.LEFT;
-            if (activity.getDrawerNavigationRight() != null && drawerView.getId() == activity.getDrawerNavigationRight().getId()) {
-              type = NAVIGATION_DRAWER_TYPE.RIGHT;
-            }
-            activity.onDrawerClosed(type, drawerView);
+          NAVIGATION_DRAWER_TYPE type = NAVIGATION_DRAWER_TYPE.LEFT;
+          if (MdDrawerLayoutPagerTabActivity.this.getDrawerNavigationRight() != null
+              && drawerView.getId() == MdDrawerLayoutPagerTabActivity.this.getDrawerNavigationRight().getId()) {
+            type = NAVIGATION_DRAWER_TYPE.RIGHT;
           }
+          MdDrawerLayoutPagerTabActivity.this.onDrawerClosed(type, drawerView);
         }
 
         @Override
         public void onDrawerOpened(View drawerView) {
           super.onDrawerOpened(drawerView);
-          MdDrawerLayoutPagerTabActivity activity = getWeakReference().get();
-          if (activity != null) {
-            NAVIGATION_DRAWER_TYPE type = NAVIGATION_DRAWER_TYPE.LEFT;
-            if (activity.getDrawerNavigationRight() != null && drawerView.getId() == activity.getDrawerNavigationRight().getId()) {
-              type = NAVIGATION_DRAWER_TYPE.RIGHT;
-            }
-            activity.onDrawerOpened(type, drawerView);
+          NAVIGATION_DRAWER_TYPE type = NAVIGATION_DRAWER_TYPE.LEFT;
+          if (MdDrawerLayoutPagerTabActivity.this.getDrawerNavigationRight() != null
+              && drawerView.getId() == MdDrawerLayoutPagerTabActivity.this.getDrawerNavigationRight().getId()) {
+            type = NAVIGATION_DRAWER_TYPE.RIGHT;
           }
+          MdDrawerLayoutPagerTabActivity.this.onDrawerOpened(type, drawerView);
         }
 
         @Override
         public void onDrawerSlide(View drawerView, float slideOffset) {
           super.onDrawerSlide(drawerView, slideOffset);
-          MdDrawerLayoutPagerTabActivity activity = getWeakReference().get();
-          if (activity != null) {
-            NAVIGATION_DRAWER_TYPE type = NAVIGATION_DRAWER_TYPE.LEFT;
-            if (activity.getDrawerNavigationRight() != null && drawerView.getId() == activity.getDrawerNavigationRight().getId()) {
-              type = NAVIGATION_DRAWER_TYPE.RIGHT;
-            }
-            activity.onDrawerSlide(type, drawerView, slideOffset);
+          NAVIGATION_DRAWER_TYPE type = NAVIGATION_DRAWER_TYPE.LEFT;
+          if (MdDrawerLayoutPagerTabActivity.this.getDrawerNavigationRight() != null
+              && drawerView.getId() == MdDrawerLayoutPagerTabActivity.this.getDrawerNavigationRight().getId()) {
+            type = NAVIGATION_DRAWER_TYPE.RIGHT;
           }
+          MdDrawerLayoutPagerTabActivity.this.onDrawerSlide(type, drawerView, slideOffset);
         }
 
         @Override
         public void onDrawerStateChanged(int newState) {
           super.onDrawerStateChanged(newState);
-          MdDrawerLayoutPagerTabActivity activity = getWeakReference().get();
-          if (activity != null) {
-            activity.onDrawerStateChanged(newState);
-          }
+          MdDrawerLayoutPagerTabActivity.this.onDrawerStateChanged(newState);
         }
       };
       getDrawerLayout().setDrawerListener(vDrawerToggle);
     }
-  }
-
-  private WeakReference<MdDrawerLayoutPagerTabActivity> getWeakReference() {
-    if (mWeakReference == null) {
-      mWeakReference = new WeakReference<>(this);
-    }
-    return mWeakReference;
   }
 
   private boolean isValidated() {
@@ -229,5 +223,4 @@ public abstract class MdDrawerLayoutPagerTabActivity extends MdPagerTabActivity 
     LEFT,
     RIGHT
   }
-
 }

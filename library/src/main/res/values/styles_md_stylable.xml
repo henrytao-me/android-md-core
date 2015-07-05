@@ -37,7 +37,7 @@
     <item name="mdColor_warnPalette_light">?attr/mdColor_accentPalette_light</item>
 
     <!-- used to represent application background for a user -->
-    <item name="mdColor_backgroundPalette">#F5F5F5</item>
+    <item name="mdColor_backgroundPalette">@color/background_material_light</item>
     <item name="mdColor_backgroundPalette_dark">#EEEEEE</item>
     <item name="mdColor_backgroundPalette_darker">#E0E0E0</item>
     <item name="mdColor_backgroundPalette_light">#FDFDFD</item>
@@ -143,6 +143,8 @@
     <item name="mdLineHeight_display1">16sp</item>
     <item name="mdLineHeight_display2">3sp</item>
 
+    <item name="mdLayout_spacing_xxlg">48dp</item>
+    <item name="mdLayout_spacing_xlg">32dp</item>
     <item name="mdLayout_spacing_lg">24dp</item>
     <item name="mdLayout_spacing_md">16dp</item>
     <item name="mdLayout_spacing_sm">8dp</item>
@@ -164,8 +166,9 @@
 
     <item name="mdToolbar_background">?attr/mdColor_primaryPalette</item>
     <item name="mdToolbar_elevation">4dp</item>
+    <item name="mdToolbar_iconPadding">12dp</item>
 
-    <item name="mdIcon_xxxlg">192dp</item>
+    <item name="mdIcon_xxxlg">112dp</item>
     <item name="mdIcon_xxlg">96dp</item>
     <item name="mdIcon_xlg">72dp</item>
     <item name="mdIcon_lg">56dp</item>
@@ -192,8 +195,13 @@
     <item name="colorAccent">?attr/mdColor_accentPalette</item>
     <item name="colorControlNormal">?attr/mdSecondaryTextColor_backgroundPalette</item>
     <item name="colorControlActivated">?attr/mdColor_primaryPalette</item>
+    <item name="android:colorBackground">@color/mdColor_backgroundPalette</item>
+    <item name="android:windowBackground">@color/mdColor_backgroundPalette</item>
 
     <item name="alertDialogTheme">@style/MdAlertDialog</item>
+
+    <item name="actionModeStyle">@style/MdTheme.MdToolbar.ActionMode</item>
+    <item name="windowActionModeOverlay">true</item>
 
   </style>
 
