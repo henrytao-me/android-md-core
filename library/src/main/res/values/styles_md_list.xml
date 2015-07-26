@@ -27,7 +27,7 @@
   </style>
 
   <style name="MdList.Subheader" parent="MdText.Body1.SingleLine">
-    <item name="android:layout_height">?attr/mdList_itemHeight_sm</item>
+    <item name="android:layout_height">?attr/mdList_itemHeight_md</item>
     <item name="android:paddingLeft">?attr/mdLayout_spacing_md</item>
     <item name="android:paddingRight">?attr/mdLayout_spacing_md</item>
     <item name="android:textColor">?attr/mdSecondaryTextColor_backgroundPalette</item>
@@ -47,7 +47,7 @@
   <style name="MdList.SingleLine.TextOnly" parent="">
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">wrap_content</item>
-    <item name="android:minHeight">?attr/mdList_itemHeight_sm</item>
+    <item name="android:minHeight">?attr/mdList_itemHeight_md</item>
   </style>
 
   <style name="MdList.SingleLine.TextOnly.Text" parent="MdText.Subhead.SingleLine">
@@ -79,7 +79,7 @@
   <!-- SingleLine.AvatarWithText -->
 
   <style name="MdList.SingleLine.AvatarWithText" parent="MdList.SingleLine.IconWithText">
-    <item name="android:minHeight">?attr/mdList_itemHeight_md</item>
+    <item name="android:minHeight">?attr/mdList_itemHeight_lg</item>
   </style>
 
   <style name="MdList.SingleLine.AvatarWithText.Avatar" parent="MdList.SingleLine.IconWithText.Icon">
@@ -117,7 +117,7 @@
   <style name="MdList.TwoLine.TextOnly" parent="">
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">wrap_content</item>
-    <item name="android:minHeight">?attr/mdList_itemHeight_lg</item>
+    <item name="android:minHeight">?attr/mdList_itemHeight_xlg</item>
   </style>
 
   <style name="MdList.TwoLine.TextOnly.Text.First" parent="MdText.Subhead.SingleLine">
@@ -183,7 +183,7 @@
   <style name="MdList.ThreeLine.TextOnly" parent="">
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">wrap_content</item>
-    <item name="android:minHeight">?attr/mdList_itemHeight_xlg</item>
+    <item name="android:minHeight">?attr/mdList_itemHeight_xxlg</item>
   </style>
 
   <style name="MdList.ThreeLine.TextOnly.Text.First" parent="MdList.TwoLine.TextOnly.Text.First"></style>

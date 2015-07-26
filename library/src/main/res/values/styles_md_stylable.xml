@@ -156,10 +156,10 @@
 
     <item name="mdList_secondaryActionSize">56dp</item>
     <item name="mdList_spacing">8dp</item>
-    <item name="mdList_itemHeight_sm">48dp</item>
-    <item name="mdList_itemHeight_md">56dp</item>
-    <item name="mdList_itemHeight_lg">72dp</item>
-    <item name="mdList_itemHeight_xlg">88dp</item>
+    <item name="mdList_itemHeight_md">48dp</item>
+    <item name="mdList_itemHeight_lg">56dp</item>
+    <item name="mdList_itemHeight_xlg">72dp</item>
+    <item name="mdList_itemHeight_xxlg">88dp</item>
 
     <item name="mdDrawerLayout_translucentNavigationBackground">@null</item>
     <item name="mdDrawerLayout_fitsSystemWindows">false</item>
@@ -169,7 +169,7 @@
     <item name="mdToolbar_iconPadding">12dp</item>
 
     <item name="mdIcon_xxxlg">112dp</item>
-    <item name="mdIcon_xxlg">96dp</item>
+    <item name="mdIcon_xxlg">88dp</item>
     <item name="mdIcon_xlg">72dp</item>
     <item name="mdIcon_lg">56dp</item>
     <item name="mdIcon_md">48dp</item>
