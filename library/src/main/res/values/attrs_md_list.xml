@@ -22,10 +22,10 @@
     <attr name="mdList_secondaryActionSize" format="dimension|reference" />
     <attr name="mdList_spacing" format="dimension|reference" />
 
-    <attr name="mdList_itemHeight_sm" format="dimension|reference" />
     <attr name="mdList_itemHeight_md" format="dimension|reference" />
     <attr name="mdList_itemHeight_lg" format="dimension|reference" />
     <attr name="mdList_itemHeight_xlg" format="dimension|reference" />
+    <attr name="mdList_itemHeight_xxlg" format="dimension|reference" />
 
   </declare-styleable>
 
