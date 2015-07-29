@@ -168,7 +168,7 @@
     <item name="mdToolbar_elevation">4dp</item>
     <item name="mdToolbar_iconPadding">12dp</item>
 
-    <item name="mdIcon_xxxlg">112dp</item>
+    <item name="mdIcon_xxxlg">104dp</item>
     <item name="mdIcon_xxlg">88dp</item>
     <item name="mdIcon_xlg">72dp</item>
     <item name="mdIcon_lg">56dp</item>
