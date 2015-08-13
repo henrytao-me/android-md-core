@@ -1,8 +1,16 @@
 .DS_Store
 
 # Android Studio
-.idea/workspace.xml
+.idea/runConfigurations.xml
+.idea/inspectionProfiles
 .idea/libraries
+.idea/.name
+.idea/compiler.xml
+.idea/gradle.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
 *.iml
 
 # Built application files
