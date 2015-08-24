@@ -143,6 +143,7 @@
     <item name="mdLineHeight_display1">16sp</item>
     <item name="mdLineHeight_display2">3sp</item>
 
+    <item name="mdLayout_secondaryActionBarSize">48dp</item>
     <item name="mdLayout_spacing_xxlg">48dp</item>
     <item name="mdLayout_spacing_xlg">32dp</item>
     <item name="mdLayout_spacing_lg">24dp</item>
