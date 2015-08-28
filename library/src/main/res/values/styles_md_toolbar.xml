@@ -33,12 +33,12 @@
   </style>
 
   <style name="MdTheme.MdToolbar.TitleTextAppearance" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
-
+    <item name="android:textColor">?attr/mdTextColor_primaryPalette</item>
   </style>
 
   <style name="MdTheme.MdToolbar.SubtitleTextAppearance" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
     <item name="android:textSize">?attr/mdFontSize_caption</item>
-    <item name="android:textColor">?attr/mdTextColor_primaryPalette</item>
+    <item name="android:textColor">?attr/mdSecondaryTextColor_primaryPalette</item>
   </style>
 
   <style name="MdTheme.MdToolbar.ActionMode" parent="@style/Widget.AppCompat.ActionMode">
