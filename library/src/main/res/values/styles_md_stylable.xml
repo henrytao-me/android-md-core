@@ -201,6 +201,7 @@
 
     <item name="alertDialogTheme">@style/MdAlertDialog</item>
 
+    <item name="actionModeCloseDrawable">@drawable/ic_toolbar_close</item>
     <item name="actionModeStyle">@style/MdTheme.MdToolbar.ActionMode</item>
     <item name="windowActionModeOverlay">true</item>
 
