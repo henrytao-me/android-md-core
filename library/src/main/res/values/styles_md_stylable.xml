@@ -168,6 +168,7 @@
     <item name="mdToolbar_background">?attr/mdColor_primaryPalette</item>
     <item name="mdToolbar_elevation">4dp</item>
     <item name="mdToolbar_iconPadding">12dp</item>
+    <item name="mdToolbar_actionOverflowMenuStyle_popupBackground">?attr/mdColor_backgroundPalette</item>
 
     <item name="mdIcon_xxxlg">104dp</item>
     <item name="mdIcon_xxlg">88dp</item>
@@ -204,6 +205,8 @@
     <item name="actionModeCloseDrawable">@drawable/ic_toolbar_close</item>
     <item name="actionModeStyle">@style/MdTheme.MdToolbar.ActionMode</item>
     <item name="windowActionModeOverlay">true</item>
+
+    <item name="actionOverflowMenuStyle">@style/MdTheme.MdToolbar.ActionOverflowMenuStyle</item>
 
   </style>
 

@@ -59,6 +59,10 @@
     <item name="subtitleTextStyle">@style/MdTheme.MdToolbar.ActionMode.SubtitleTextStyle</item>
   </style>
 
+  <style name="MdTheme.MdToolbar.ActionOverflowMenuStyle" parent="Widget.AppCompat.PopupMenu.Overflow">
+
+  </style>
+
   <!-- Note: based on experiment, icons in toolbar/menu should be resize (icon only, not the whole image) to 82% -->
 
   <style name="MdToolbar">

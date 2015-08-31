@@ -16,13 +16,8 @@
 
 <resources>
 
-  <declare-styleable name="MdToolbar">
-
-    <attr name="mdToolbar_background" format="color|reference" />
-    <attr name="mdToolbar_elevation" format="dimension|reference" />
-    <attr name="mdToolbar_iconPadding" format="dimension|reference" />
-    <attr name="mdToolbar_actionOverflowMenuStyle_popupBackground" format="dimension|reference" />
-
-  </declare-styleable>
+  <style name="MdTheme.MdToolbar.ActionOverflowMenuStyle" parent="Widget.AppCompat.PopupMenu.Overflow">
+    <item name="android:popupBackground">@drawable/popup_background_material</item>
+  </style>
 
 </resources>
