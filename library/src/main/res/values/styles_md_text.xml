@@ -23,6 +23,7 @@
     <item name="android:textSize">?attr/mdFontSize_body1</item>
     <item name="android:textStyle">normal</item>
     <item name="android:singleLine">false</item>
+    <item name="android:textColorLink">?attr/colorControlActivated</item>
   </style>
 
   <!-- textColor, textSize, textStyle (regular|bold), singleline, textAllCaps, lineSpacingExtra -->
