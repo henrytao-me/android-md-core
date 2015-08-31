@@ -25,11 +25,14 @@
   </style>
 
   <style name="MdTheme.MdToolbar.PopupTheme" parent="ThemeOverlay.AppCompat.Light">
-    <item name="android:background">?attr/mdColor_backgroundPalette</item>
     <item name="android:textColorPrimary">?attr/mdTextColor_backgroundPalette</item>
     <item name="android:textColorPrimaryInverse">?attr/mdTextColor_primaryPalette</item>
     <item name="android:textColorSecondary">?attr/mdSecondaryTextColor_backgroundPalette</item>
     <item name="android:textColorSecondaryInverse">?attr/mdSecondaryTextColor_primaryPalette</item>
+  </style>
+
+  <style name="MdTheme.MdToolbar.PopupMenuStyle" parent="Widget.AppCompat.PopupMenu">
+
   </style>
 
   <style name="MdTheme.MdToolbar.TitleTextAppearance" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
@@ -69,6 +72,7 @@
     <item name="subtitleTextAppearance">@style/MdTheme.MdToolbar.SubtitleTextAppearance</item>
     <item name="theme">@style/MdTheme.MdToolbar.Theme</item>
     <item name="popupTheme">@style/MdTheme.MdToolbar.PopupTheme</item>
+    <item name="popupMenuStyle">@style/MdTheme.MdToolbar.PopupMenuStyle</item>
   </style>
 
 </resources>
