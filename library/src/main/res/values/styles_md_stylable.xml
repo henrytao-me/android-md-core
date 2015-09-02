@@ -37,10 +37,10 @@
     <item name="mdColor_warnPalette_light">?attr/mdColor_accentPalette_light</item>
 
     <!-- used to represent application background for a user -->
-    <item name="mdColor_backgroundPalette">@color/background_material_light</item>
-    <item name="mdColor_backgroundPalette_dark">#EEEEEE</item>
-    <item name="mdColor_backgroundPalette_darker">#E0E0E0</item>
-    <item name="mdColor_backgroundPalette_light">#FDFDFD</item>
+    <item name="mdColor_backgroundPalette">@color/mdColor_backgroundPalette</item>
+    <item name="mdColor_backgroundPalette_dark">@color/mdColor_backgroundPalette_dark</item>
+    <item name="mdColor_backgroundPalette_darker">@color/mdColor_backgroundPalette_darker</item>
+    <item name="mdColor_backgroundPalette_light">@color/mdColor_backgroundPalette_light</item>
 
     <item name="mdBackground_normal">@android:color/transparent</item>
     <item name="mdBackground_disabled">?attr/mdColor_backgroundPalette_light</item>
