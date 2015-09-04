@@ -169,6 +169,7 @@
     <item name="mdDrawerLayout_translucentNavigationBackground">@null</item>
     <item name="mdDrawerLayout_fitsSystemWindows">false</item>
 
+    <item name="actionBarSize">?android:attr/actionBarSize</item>
     <item name="secondaryActionBarSize">@dimen/secondaryActionBarSize</item>
     <item name="secondaryActionBarSizeWithIcon">@dimen/secondaryActionBarSizeWithIcon</item>
 

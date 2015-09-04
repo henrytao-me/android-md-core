@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package me.henrytao.mddemo.util;
+package me.henrytao.mdwidget.util;
 
 import android.app.Activity;
 import android.content.Context;
@@ -41,8 +41,8 @@ public class ResourceUtils {
     }
   }
 
-  public static int getActionBarSizeInPixel(Activity context) {
-    return getDimensionPixelSizeFromAttribute(context, android.R.attr.actionBarSize);
+  public static int getColorFromAttribute(Activity activity, int attrId) {
+    return getColorFromAttribute(activity, attrId);
   }
 
   public static int getColorFromAttribute(Context context, int attrId) {
@@ -54,14 +54,14 @@ public class ResourceUtils {
     return typedValue.data;
   }
 
-  public static int getDimensionPixelSizeFromAttribute(Activity context, int attrId) {
+  public static int getDimensionPixelSizeFromAttribute(Activity activity, int attrId) {
     if (attrId == 0) {
       return 0;
     }
     TypedValue typedValue = new TypedValue();
-    context.getTheme().resolveAttribute(attrId, typedValue, true);
+    activity.getTheme().resolveAttribute(attrId, typedValue, true);
     DisplayMetrics metrics = new DisplayMetrics();
-    context.getWindowManager().getDefaultDisplay().getMetrics(metrics);
+    activity.getWindowManager().getDefaultDisplay().getMetrics(metrics);
     return (int) typedValue.getDimension(metrics);
   }
 
@@ -74,19 +74,16 @@ public class ResourceUtils {
     return typedValue.resourceId;
   }
 
-  public static View inflate(Context context, int layoutResId) {
-    return inflate(context, layoutResId, null, false);
+  public static View inflate(Activity activity, int layoutResId) {
+    return inflate(activity, layoutResId, null, false);
   }
 
-  public static View inflate(Context context, int layoutResId, ViewGroup parent) {
-    return inflate(context, layoutResId, parent, false);
+  public static View inflate(Activity activity, int layoutResId, ViewGroup parent) {
+    return inflate(activity, layoutResId, parent, false);
   }
 
-  public static View inflate(Context context, int layoutResId, ViewGroup root, boolean attachToRoot) {
-    if (context instanceof Activity) {
-      return ((Activity) context).getLayoutInflater().inflate(layoutResId, root, attachToRoot);
-    }
-    return null;
+  public static View inflate(Activity activity, int layoutResId, ViewGroup root, boolean attachToRoot) {
+    return activity.getLayoutInflater().inflate(layoutResId, root, attachToRoot);
   }
 
   public static void moveCursorToTheEnd(EditText editText) {
@@ -99,5 +96,4 @@ public class ResourceUtils {
     InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
     imm.showSoftInput(editText, InputMethodManager.SHOW_IMPLICIT);
   }
-
 }
