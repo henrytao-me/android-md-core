@@ -21,19 +21,19 @@ import android.util.AttributeSet;
 /**
  * Created by henrytao on 5/10/15.
  */
-public class CheckableSwitchCompat extends android.support.v7.widget.SwitchCompat {
+public class MdSwitchCompat extends android.support.v7.widget.SwitchCompat {
 
   private OnCheckedChangeListener mOnCheckedChangeListener;
 
-  public CheckableSwitchCompat(Context context) {
+  public MdSwitchCompat(Context context) {
     super(context);
   }
 
-  public CheckableSwitchCompat(Context context, AttributeSet attrs) {
+  public MdSwitchCompat(Context context, AttributeSet attrs) {
     super(context, attrs);
   }
 
-  public CheckableSwitchCompat(Context context, AttributeSet attrs, int defStyleAttr) {
+  public MdSwitchCompat(Context context, AttributeSet attrs, int defStyleAttr) {
     super(context, attrs, defStyleAttr);
   }
 

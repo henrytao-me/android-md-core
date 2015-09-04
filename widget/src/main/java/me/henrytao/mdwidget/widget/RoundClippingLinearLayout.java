@@ -78,14 +78,13 @@ public class RoundClippingLinearLayout extends LinearLayout {
   }
 
   protected void init(Context context, AttributeSet attrs) {
+    mBackgroundColor = Color.TRANSPARENT;
+    mCornerRadius = 0;
     if (attrs != null) {
       TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.RoundClippingLinearLayout, 0, 0);
-      mBackgroundColor = a.getColor(R.styleable.RoundClippingLinearLayout_rcll_background_color, Color.TRANSPARENT);
-      mCornerRadius = a.getDimensionPixelSize(R.styleable.RoundClippingLinearLayout_rcll_corner_radius, 0);
+      mBackgroundColor = a.getColor(R.styleable.RoundClippingLinearLayout_md_background_color, Color.TRANSPARENT);
+      mCornerRadius = a.getDimensionPixelSize(R.styleable.RoundClippingLinearLayout_md_corner_radius, 0);
       a.recycle();
-    } else {
-      mBackgroundColor = Color.TRANSPARENT;
-      mCornerRadius = 0;
     }
 
     mBounds = new RectF();

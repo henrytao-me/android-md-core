@@ -16,8 +16,8 @@
 <resources>
 
   <declare-styleable name="RoundClippingLinearLayout">
-    <attr name="rcll_background_color" format="color|reference" />
-    <attr name="rcll_corner_radius" format="dimension|reference" />
+    <attr name="md_background_color" format="color|reference" />
+    <attr name="md_corner_radius" format="dimension|reference" />
   </declare-styleable>
 
 </resources>

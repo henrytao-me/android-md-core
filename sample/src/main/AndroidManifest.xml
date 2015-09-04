@@ -13,6 +13,7 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
 -->
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   package="me.henrytao.mddemo">
 
@@ -31,22 +32,6 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity
-      android:label="@string/title_activity_example"
-      android:name=".activity.ExampleActivity" />
-    <activity
-      android:label="@string/title_activity_toolbar"
-      android:name=".activity.ToolbarActivity" />
-    <activity
-      android:label="@string/title_activity_drawer_layout"
-      android:name=".activity.DrawerLayoutActivity"
-      android:theme="@style/AppTheme.TranslucentNavigation" />
-    <activity
-      android:label="@string/title_activity_pager_tab"
-      android:name=".activity.PagerTabActivity" />
-    <activity
-      android:label="@string/title_activity_drawer_layout_pager_tab"
-      android:name=".activity.DrawerLayoutPagerTabActivity" />
   </application>
 
 </manifest>

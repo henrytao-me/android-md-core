@@ -156,7 +156,11 @@
     <item name="mdLayout_contentAssociatedWithIconOrAvatarLeftMargin_negative">-72dp</item>
 
     <item name="mdList_secondaryActionSize">56dp</item>
+
     <item name="mdList_spacing">8dp</item>
+
+    <item name="mdList_subheader">48dp</item>
+
     <item name="mdList_itemHeight_md">48dp</item>
     <item name="mdList_itemHeight_lg">56dp</item>
     <item name="mdList_itemHeight_xlg">72dp</item>
