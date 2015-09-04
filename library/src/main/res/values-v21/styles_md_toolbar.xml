@@ -16,9 +16,8 @@
 
 <resources>
 
-  <color name="mdColor_backgroundPalette">#F9F9F9</color>
-  <color name="mdColor_backgroundPalette_dark">#EEEEEE</color>
-  <color name="mdColor_backgroundPalette_darker">#E0E0E0</color>
-  <color name="mdColor_backgroundPalette_light">#FDFDFD</color>
+  <style name="MdTheme.MdToolbar.ActionOverflowMenuStyle" parent="Widget.AppCompat.PopupMenu.Overflow">
+    <item name="android:popupBackground">@drawable/popup_background_material</item>
+  </style>
 
 </resources>

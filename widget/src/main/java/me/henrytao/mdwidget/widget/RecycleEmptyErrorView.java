@@ -30,6 +30,8 @@ public class RecycleEmptyErrorView extends ObservableRecyclerView {
 
   private boolean mIsLoading;
 
+  private boolean mIsEmpty;
+
   private View vEmptyView;
 
   private View vLoadingView;
@@ -115,6 +117,15 @@ public class RecycleEmptyErrorView extends ObservableRecyclerView {
     return this;
   }
 
+  public RecycleEmptyErrorView hideEmptyView() {
+    mIsEmpty = false;
+    updateEmptyView();
+    updateLoadingView();
+    updateErrorView();
+    updateRecyclerView();
+    return this;
+  }
+
   public RecycleEmptyErrorView setEmptyView(View emptyView) {
     if (vEmptyView != null) {
       vEmptyView.setVisibility(GONE);
@@ -151,6 +162,15 @@ public class RecycleEmptyErrorView extends ObservableRecyclerView {
     return this;
   }
 
+  public RecycleEmptyErrorView showEmptyView() {
+    mIsEmpty = true;
+    updateEmptyView();
+    updateLoadingView();
+    updateErrorView();
+    updateRecyclerView();
+    return this;
+  }
+
   public RecycleEmptyErrorView showErrorView() {
     mIsError = true;
     updateEmptyView();
@@ -161,8 +181,8 @@ public class RecycleEmptyErrorView extends ObservableRecyclerView {
   }
 
   private boolean shouldShowEmptyView() {
-    if (vEmptyView != null && getAdapter() != null && getAdapter().getItemCount() == 0
-        && !shouldShowLoadingView() && !shouldShowErrorView()) {
+    if (vEmptyView != null &&
+        ((getAdapter() != null && getAdapter().getItemCount() == 0 && !shouldShowLoadingView() && !shouldShowErrorView()) || mIsEmpty)) {
       return true;
     }
     return false;
