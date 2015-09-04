@@ -27,8 +27,6 @@
     <item name="mdLayout_contentAssociatedWithIconOrAvatarLeftMargin">80dp</item>
     <item name="mdLayout_contentAssociatedWithIconOrAvatarLeftMargin_negative">-80dp</item>
 
-    <item name="mdList_secondaryActionSize">80dp</item>
-
   </style>
 
 </resources>

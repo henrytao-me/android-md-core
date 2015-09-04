@@ -42,10 +42,11 @@
     <item name="mdColor_backgroundPalette_darker">@color/mdColor_backgroundPalette_darker</item>
     <item name="mdColor_backgroundPalette_light">@color/mdColor_backgroundPalette_light</item>
 
-    <item name="mdBackground_normal">@android:color/transparent</item>
-    <item name="mdBackground_disabled">?attr/mdColor_backgroundPalette_light</item>
-    <item name="mdBackground_selected">?attr/mdColor_backgroundPalette_dark</item>
-    <item name="mdBackground_pressed">?attr/mdColor_backgroundPalette_darker</item>
+    <!-- list state color -->
+    <item name="mdBackground_normal">@color/mdBackground_normal</item>
+    <item name="mdBackground_disabled">@color/mdBackground_disabled</item>
+    <item name="mdBackground_selected">@color/mdBackground_selected</item>
+    <item name="mdBackground_pressed">@color/mdBackground_pressed</item>
 
     <!-- Dark text on light backgrounds:  87%:DE 54%:8A 26%:42 12%:1E -->
     <!-- White text on dark backgrounds: 100%:FF 70%:B3 30%:4C 12%:1E -->
@@ -143,7 +144,6 @@
     <item name="mdLineHeight_display1">16sp</item>
     <item name="mdLineHeight_display2">3sp</item>
 
-    <item name="mdLayout_secondaryActionBarSize">48dp</item>
     <item name="mdLayout_spacing_xxlg">48dp</item>
     <item name="mdLayout_spacing_xlg">32dp</item>
     <item name="mdLayout_spacing_lg">24dp</item>
@@ -165,11 +165,15 @@
     <item name="mdDrawerLayout_translucentNavigationBackground">@null</item>
     <item name="mdDrawerLayout_fitsSystemWindows">false</item>
 
+    <item name="secondaryActionBarSize">@dimen/secondaryActionBarSize</item>
+    <item name="secondaryActionBarSizeWithIcon">@dimen/secondaryActionBarSizeWithIcon</item>
+
     <item name="mdToolbar_background">?attr/mdColor_primaryPalette</item>
     <item name="mdToolbar_elevation">4dp</item>
     <item name="mdToolbar_iconPadding">12dp</item>
     <item name="mdToolbar_actionOverflowMenuStyle_popupBackground">?attr/mdColor_backgroundPalette</item>
 
+    <item name="mdIcon_xxxxlg">120dp</item>
     <item name="mdIcon_xxxlg">104dp</item>
     <item name="mdIcon_xxlg">88dp</item>
     <item name="mdIcon_xlg">72dp</item>

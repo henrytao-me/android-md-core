@@ -78,12 +78,40 @@
         <option name="FOR_BRACE_FORCE" value="3" />
         <AndroidXmlCodeStyleSettings>
           <option name="USE_CUSTOM_SETTINGS" value="true" />
-          <option name="LAYOUT_SETTINGS">
+          <option name="VALUE_RESOURCE_FILE_SETTINGS">
             <value>
-              <option name="INSERT_BLANK_LINE_BEFORE_TAG" value="false" />
+              <option name="WRAP_ATTRIBUTES" value="1" />
             </value>
           </option>
         </AndroidXmlCodeStyleSettings>
+        <Objective-C-extensions>
+          <option name="GENERATE_INSTANCE_VARIABLES_FOR_PROPERTIES" value="ASK" />
+          <option name="RELEASE_STYLE" value="IVAR" />
+          <option name="TYPE_QUALIFIERS_PLACEMENT" value="BEFORE" />
+          <file>
+            <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Import" />
+            <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Macro" />
+            <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Typedef" />
+            <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Enum" />
+            <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Constant" />
+            <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Global" />
+            <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Struct" />
+            <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="FunctionPredecl" />
+            <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Function" />
+          </file>
+          <class>
+            <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Property" />
+            <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Synthesize" />
+            <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="InitMethod" />
+            <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="StaticMethod" />
+            <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="InstanceMethod" />
+            <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="DeallocMethod" />
+          </class>
+          <extensions>
+            <pair source="cpp" header="h" />
+            <pair source="c" header="h" />
+          </extensions>
+        </Objective-C-extensions>
         <XML>
           <option name="XML_KEEP_LINE_BREAKS" value="false" />
           <option name="XML_ALIGN_ATTRIBUTES" value="false" />
@@ -692,7 +720,51 @@
                 <rule>
                   <match>
                     <AND>
-                      <NAME>.*:id</NAME>
+                      <NAME>android:id</NAME>
+                      <XML_NAMESPACE>.*</XML_NAMESPACE>
+                    </AND>
+                  </match>
+                  <order>BY_NAME</order>
+                </rule>
+              </section>
+              <section>
+                <rule>
+                  <match>
+                    <AND>
+                      <NAME>android:layout_width</NAME>
+                      <XML_NAMESPACE>.*</XML_NAMESPACE>
+                    </AND>
+                  </match>
+                  <order>BY_NAME</order>
+                </rule>
+              </section>
+              <section>
+                <rule>
+                  <match>
+                    <AND>
+                      <NAME>android:layout_height</NAME>
+                      <XML_NAMESPACE>.*</XML_NAMESPACE>
+                    </AND>
+                  </match>
+                  <order>BY_NAME</order>
+                </rule>
+              </section>
+              <section>
+                <rule>
+                  <match>
+                    <AND>
+                      <NAME>android:layout_.*</NAME>
+                      <XML_NAMESPACE>.*</XML_NAMESPACE>
+                    </AND>
+                  </match>
+                  <order>BY_NAME</order>
+                </rule>
+              </section>
+              <section>
+                <rule>
+                  <match>
+                    <AND>
+                      <NAME>android:orientation</NAME>
                       <XML_NAMESPACE>.*</XML_NAMESPACE>
                     </AND>
                   </match>
@@ -704,50 +776,6 @@
                   <match>
                     <AND>
                       <NAME>name</NAME>
-                      <XML_NAMESPACE>.*</XML_NAMESPACE>
-                    </AND>
-                  </match>
-                  <order>BY_NAME</order>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <AND>
-                      <NAME>.*:layout_width</NAME>
-                      <XML_NAMESPACE>.*</XML_NAMESPACE>
-                    </AND>
-                  </match>
-                  <order>BY_NAME</order>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <AND>
-                      <NAME>.*:layout_height</NAME>
-                      <XML_NAMESPACE>.*</XML_NAMESPACE>
-                    </AND>
-                  </match>
-                  <order>BY_NAME</order>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <AND>
-                      <NAME>.*:layout_.*</NAME>
-                      <XML_NAMESPACE>.*</XML_NAMESPACE>
-                    </AND>
-                  </match>
-                  <order>BY_NAME</order>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <AND>
-                      <NAME>.*:orientation</NAME>
                       <XML_NAMESPACE>.*</XML_NAMESPACE>
                     </AND>
                   </match>

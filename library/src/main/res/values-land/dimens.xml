@@ -1,4 +1,4 @@
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +14,9 @@
   ~ limitations under the License.
   -->
 
-<menu xmlns:tools="http://schemas.android.com/tools"
-  tools:context="me.henrytao.mddemo.activity.RecycleViewHeaderFooterSectionActivity">
+<resources>
 
-</menu>
+  <dimen name="secondaryActionBarSize">42dp</dimen>
+  <dimen name="secondaryActionBarSizeWithIcon">62dp</dimen>
+
+</resources>

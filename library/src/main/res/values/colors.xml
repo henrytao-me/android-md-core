@@ -21,4 +21,9 @@
   <color name="mdColor_backgroundPalette_darker">#E0E0E0</color>
   <color name="mdColor_backgroundPalette_light">#FDFDFD</color>
 
+  <color name="mdBackground_normal">@android:color/transparent</color>
+  <color name="mdBackground_disabled">@color/mdColor_backgroundPalette_darker</color>
+  <color name="mdBackground_selected">@color/mdColor_backgroundPalette_dark</color>
+  <color name="mdBackground_pressed">@color/mdColor_backgroundPalette_darker</color>
+
 </resources>
