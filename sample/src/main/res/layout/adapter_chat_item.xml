@@ -27,6 +27,7 @@
   <LinearLayout style="@style/MdList.Wrapper">
 
     <RelativeLayout style="@style/MdList.ThreeLine.AvatarIconWithText.Text.First">
+
       <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
@@ -35,6 +36,7 @@
         android:layout_toLeftOf="@+id/unread_count"
         android:text="Chat room name"
         style="@style/MdText.Body1.SingleLine" />
+
       <TextView
         android:id="@+id/unread_count"
         android:layout_alignParentRight="true"

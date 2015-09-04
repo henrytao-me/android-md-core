@@ -18,7 +18,6 @@
 
   <declare-styleable name="MdLayout">
 
-    <attr name="mdLayout_secondaryActionBarSize" format="dimension|reference" />
     <attr name="mdLayout_spacing_xxlg" format="dimension|reference" />
     <attr name="mdLayout_spacing_xlg" format="dimension|reference" />
     <attr name="mdLayout_spacing_lg" format="dimension|reference" />

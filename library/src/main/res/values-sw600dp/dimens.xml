@@ -14,16 +14,9 @@
   ~ limitations under the License.
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  android:orientation="vertical">
+<resources>
 
-  <TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="?attr/mdLayout_spacing_md"
-    android:text="Header"
-    android:textSize="?attr/mdFontSize_title" />
+  <dimen name="secondaryActionBarSize">54dp</dimen>
+  <dimen name="secondaryActionBarSizeWithIcon">82dp</dimen>
 
-</LinearLayout>
+</resources>
