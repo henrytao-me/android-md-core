@@ -16,6 +16,10 @@
 
 <resources>
 
+  <style name="CustomSpinner" parent="Widget.AppCompat.Spinner.DropDown">
+    <item name="android:popupBackground">@drawable/abc_popup_background_mtrl_mult</item>
+  </style>
+
   <style name="MdStylable" parent="Theme.AppCompat.Light.NoActionBar">
 
     <!-- used to represent primary / main interface elements for a user -->

@@ -37,7 +37,10 @@
     <activity
       android:label="@string/title_activity_theme"
       android:name=".activity.ThemeActivity"
-      android:theme="@style/AppTheme.Purple"></activity>
+      android:theme="@style/AppTheme.Purple" />
+    <activity
+      android:label="@string/title_activity_typo"
+      android:name=".activity.TypoActivity"></activity>
   </application>
 
 </manifest>

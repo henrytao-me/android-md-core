@@ -30,7 +30,6 @@
 
     <!-- singleline -->
 
-
     <RelativeLayout
       android:background="@drawable/md_ripple"
       android:clickable="true"

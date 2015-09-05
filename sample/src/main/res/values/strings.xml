@@ -16,6 +16,20 @@
 
 <resources>
 
+  <string name="typo_display_4">Display4 Light 112sp</string>
+  <string name="typo_display_3">Display3 Regular 56sp</string>
+  <string name="typo_display_2">Display2 Regular 45sp</string>
+  <string name="typo_display_1">Display1 Regular 34sp</string>
+  <string name="typo_headline">Headline Regular 24sp</string>
+  <string name="typo_title">Title Medium 20sp</string>
+  <string name="typo_subhead_2">Subhead2 Regular 16sp</string>
+  <string name="typo_subhead_1">Subhead1 Regular 16sp</string>
+  <string name="typo_subhead">Subhead Regular 16sp</string>
+  <string name="typo_body_2">Body2 Medium 14sp</string>
+  <string name="typo_body_1">Body1 Regular 14sp</string>
+  <string name="typo_caption">Caption Regular 12sp</string>
+  <string name="typo_button">Button All Caps 14sp</string>
+
   <string name="text_put_your_content_here">Put your content here</string>
   <string name="text_title">Padding above title Padding above title Padding above title Padding above title</string>
   <string name="text_description">Add 8dp padding at the top and bottom of a list. One exception is at the top of a list with a subheader,
@@ -103,5 +117,6 @@
   <string name="title_activity_recycle_view_header_footer_section">RecycleViewHeaderFooterSectionActivity</string>
   <string name="title_activity_simple">SimpleActivity</string>
   <string name="title_activity_theme">ThemeActivity</string>
+  <string name="title_activity_typo">TypoActivity</string>
 
 </resources>

@@ -30,56 +30,56 @@
     <View style="@style/MdList.Spacing" />
 
     <TextView
-      android:text="Display4 Light 112sp"
-      style="@style/MdText.Display4" />
+      android:text="@string/typo_button"
+      style="@style/MdText.Button" />
 
     <TextView
-      android:text="Display3 Regular 56sp"
-      style="@style/MdText.Display3" />
-
-    <TextView
-      android:text="Display2 Regular 45sp"
-      style="@style/MdText.Display2" />
-
-    <TextView
-      android:text="Display1 Regular 34sp"
-      style="@style/MdText.Display1" />
-
-    <TextView
-      android:text="Headline Regular 24sp"
-      style="@style/MdText.Headline" />
-
-    <TextView
-      android:text="Title Medium 24sp"
-      style="@style/MdText.Title" />
-
-    <TextView
-      android:text="Subhead2 Regular 16sp"
-      style="@style/MdText.Subhead2" />
-
-    <TextView
-      android:text="Subhead1 Regular 16sp"
-      style="@style/MdText.Subhead1" />
-
-    <TextView
-      android:text="Subhead Regular 16sp"
-      style="@style/MdText.Subhead" />
-
-    <TextView
-      android:text="Body2 Medium 14sp"
-      style="@style/MdText.Body2" />
-
-    <TextView
-      android:text="Body1 Regular 14sp"
-      style="@style/MdText.Body1" />
-
-    <TextView
-      android:text="Caption Regular 12sp"
+      android:text="@string/typo_caption"
       style="@style/MdText.Caption" />
 
     <TextView
-      android:text="Button All Caps 14sp"
-      style="@style/MdText.Button" />
+      android:text="@string/typo_body_1"
+      style="@style/MdText.Body1" />
+
+    <TextView
+      android:text="@string/typo_body_2"
+      style="@style/MdText.Body2" />
+
+    <TextView
+      android:text="@string/typo_subhead"
+      style="@style/MdText.Subhead" />
+
+    <TextView
+      android:text="@string/typo_subhead_1"
+      style="@style/MdText.Subhead1" />
+
+    <TextView
+      android:text="@string/typo_subhead_2"
+      style="@style/MdText.Subhead2" />
+
+    <TextView
+      android:text="@string/typo_title"
+      style="@style/MdText.Title" />
+
+    <TextView
+      android:text="@string/typo_headline"
+      style="@style/MdText.Headline" />
+
+    <TextView
+      android:text="@string/typo_display_1"
+      style="@style/MdText.Display1" />
+
+    <TextView
+      android:text="@string/typo_display_2"
+      style="@style/MdText.Display2" />
+
+    <TextView
+      android:text="@string/typo_display_3"
+      style="@style/MdText.Display3" />
+
+    <TextView
+      android:text="@string/typo_display_4"
+      style="@style/MdText.Display4" />
 
     <View style="@style/MdList.Spacing" />
   </LinearLayout>

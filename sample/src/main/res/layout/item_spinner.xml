@@ -1,4 +1,4 @@
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,15 +14,15 @@
   ~ limitations under the License.
   -->
 
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
-  tools:context="me.henrytao.mddemo.activity.DrawerLayoutPagerTabActivity">
+  android:layout_width="180dp"
+  android:background="@drawable/md_ripple"
+  style="@style/MdList.SingleLine.TextOnly">
 
-  <item
-    android:id="@+id/action_navigation_drawer_right"
-    android:orderInCategory="100"
-    android:title="@string/action_navigation_drawer_right"
-    app:showAsAction="never" />
-
-</menu>
+  <TextView
+    android:id="@+id/title"
+    android:layout_width="wrap_content"
+    tools:text="Hello moto"
+    style="@style/MdList.SingleLine.TextOnly.Text" />
+</RelativeLayout>

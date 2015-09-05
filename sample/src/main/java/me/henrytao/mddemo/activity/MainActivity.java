@@ -13,7 +13,6 @@ import me.henrytao.mddemo.R;
 import me.henrytao.mddemo.fragment.ExampleCardViewFragment;
 import me.henrytao.mddemo.fragment.ExampleMdButtonFragment;
 import me.henrytao.mddemo.fragment.ExampleMdListFragment;
-import me.henrytao.mddemo.fragment.ExampleMdTextFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -52,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
   @OnClick(R.id.goto_textview)
   protected void onGotoTextViewClick() {
-    startActivity(SimpleActivity.newIntent(this, ExampleMdTextFragment.class, "TextView"));
+    startActivity(TypoActivity.newIntent(this));
   }
 
   @OnClick(R.id.goto_theme)

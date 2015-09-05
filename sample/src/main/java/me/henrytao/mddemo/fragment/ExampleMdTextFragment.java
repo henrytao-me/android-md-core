@@ -19,6 +19,8 @@ package me.henrytao.mddemo.fragment;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -26,12 +28,22 @@ import me.henrytao.mddemo.R;
 
 public class ExampleMdTextFragment extends Fragment {
 
+  public static ExampleMdTextFragment newInstance() {
+    return new ExampleMdTextFragment();
+  }
+
   public ExampleMdTextFragment() {
 
   }
 
   @Override
+  public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+    super.onCreateOptionsMenu(menu, inflater);
+  }
+
+  @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    setHasOptionsMenu(true);
     return inflater.inflate(R.layout.fragment_example_md_text, container, false);
   }
 }
