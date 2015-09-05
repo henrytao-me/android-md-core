@@ -14,17 +14,27 @@
   ~ limitations under the License.
   -->
 
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
-  <declare-styleable name="MdToolbar">
+  <style name="MdSpinner">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+  </style>
 
-    <attr name="secondaryActionBarSize" format="dimension|reference" />
-    <attr name="secondaryActionBarSizeWithIcon" format="dimension|reference" />
+  <!-- Dropdown -->
 
-    <attr name="mdToolbar_background" format="color|reference" />
-    <attr name="mdToolbar_elevation" format="dimension|reference" />
-    <attr name="mdToolbar_iconPadding" format="dimension|reference" />
+  <style name="Base.MdSpinner.Dropdown" parent="MdSpinner">
+    <item name="android:popupBackground">@drawable/popup_background_drawable</item>
+  </style>
 
-  </declare-styleable>
+  <style name="MdSpinner.Dropdown" parent="Base.MdSpinner.Dropdown">
+    <item name="android:spinnerMode" tools:ignore="NewApi">dropdown</item>
+  </style>
+
+  <!-- Dialog -->
+
+  <style name="MdSpinner.Dialog">
+    <item name="android:spinnerMode" tools:ignore="NewApi">dialog</item>
+  </style>
 
 </resources>

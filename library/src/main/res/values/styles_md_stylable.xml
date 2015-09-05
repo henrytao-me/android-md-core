@@ -16,10 +16,6 @@
 
 <resources>
 
-  <style name="CustomSpinner" parent="Widget.AppCompat.Spinner.DropDown">
-    <item name="android:popupBackground">@drawable/abc_popup_background_mtrl_mult</item>
-  </style>
-
   <style name="MdStylable" parent="Theme.AppCompat.Light.NoActionBar">
 
     <!-- used to represent primary / main interface elements for a user -->
@@ -127,6 +123,7 @@
     <item name="mdDividerColor_backgroundPalette_darker">?attr/mdDividerColor_backgroundPalette_dark</item>
     <item name="mdDividerColor_backgroundPalette_light">?attr/mdDividerColor_backgroundPalette</item>
 
+    <!-- fontSize -->
     <item name="mdFontSize_button">@dimen/mdFontSize_button</item>
     <item name="mdFontSize_caption">@dimen/mdFontSize_caption</item>
     <item name="mdFontSize_body1">@dimen/mdFontSize_body1</item>
@@ -177,10 +174,11 @@
     <item name="secondaryActionBarSize">@dimen/secondaryActionBarSize</item>
     <item name="secondaryActionBarSizeWithIcon">@dimen/secondaryActionBarSizeWithIcon</item>
 
+    <item name="mdPopup_background">?attr/mdColor_backgroundPalette</item>
+
     <item name="mdToolbar_background">?attr/mdColor_primaryPalette</item>
     <item name="mdToolbar_elevation">4dp</item>
     <item name="mdToolbar_iconPadding">12dp</item>
-    <item name="mdToolbar_actionOverflowMenuStyle_popupBackground">?attr/mdColor_backgroundPalette</item>
 
     <item name="mdIcon_xxxxlg">120dp</item>
     <item name="mdIcon_xxxlg">104dp</item>
