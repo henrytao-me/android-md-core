@@ -34,7 +34,7 @@
     <TextView
       android:layout_marginBottom="?attr/mdLayout_spacing_sm"
       android:gravity="center"
-      android:text="Demo app for android-md-core - Unify theme system for material apps"
+      android:text="Demo app for android-md-core - Material bootstrap for Android development"
       style="@style/MdText.Body1" />
 
     <ImageView
