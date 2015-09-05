@@ -14,7 +14,20 @@
   ~ limitations under the License.
   -->
 
-<menu xmlns:tools="http://schemas.android.com/tools"
-  tools:context="me.henrytao.mddemo.activity.SimpleActivity">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/container"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
 
-</menu>
+  <android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    app:navigationIcon="@drawable/ic_toolbar_arrow_back_white"
+    style="@style/MdToolbar" />
+
+  <include
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/toolbar"
+    layout="@layout/fragment_example_md_button" />
+</RelativeLayout>

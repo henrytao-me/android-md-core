@@ -41,36 +41,41 @@ public class MainActivity extends AppCompatActivity {
 
   @OnClick(R.id.goto_button)
   protected void onGotoButtonClicked() {
-    startActivity(ExampleActivity.getIntent(this, ExampleMdButtonFragment.class, "Button"));
+    startActivity(SimpleActivity.newIntent(this, ExampleMdButtonFragment.class, "Button"));
   }
 
   //@OnClick(R.id.goto_drawer_layout_activity)
   //protected void onGotoDrawerLayoutActivity() {
-  //  startActivity(DrawerLayoutActivity.getIntent(this));
+  //  startActivity(DrawerLayoutActivity.newIntent(this));
   //}
   //
   //@OnClick(R.id.goto_drawer_layout_pager_tab_activity)
   //protected void onGotoDrawerLayoutPagerTabActivity() {
-  //  startActivity(DrawerLayoutPagerTabActivity.getIntent(this));
+  //  startActivity(DrawerLayoutPagerTabActivity.newIntent(this));
   //}
 
   @OnClick(R.id.goto_list_view)
-  protected void onGotoListViewClicked() {
-    startActivity(ExampleActivity.getIntent(this, ExampleMdListFragment.class, "ListView"));
+  protected void onGotoListViewClick() {
+    startActivity(SimpleActivity.newIntent(this, ExampleMdListFragment.class, "ListView"));
+  }
+
+  @OnClick(R.id.goto_textview)
+  protected void onGotoTextViewClick() {
+    startActivity(SimpleActivity.newIntent(this, ExampleMdTextFragment.class, "TextView"));
   }
 
   //@OnClick(R.id.goto_pager_tab_activity)
   //protected void onGotoPagerTabActivity() {
-  //  startActivity(PagerTabActivity.getIntent(this));
+  //  startActivity(PagerTabActivity.newIntent(this));
   //}
 
-  @OnClick(R.id.goto_textview)
-  protected void onGotoTextViewClicked() {
-    startActivity(ExampleActivity.getIntent(this, ExampleMdTextFragment.class, "TextView"));
+  @OnClick(R.id.goto_theme)
+  protected void onGotoThemeClick() {
+    startActivity(ThemeActivity.newIntent(this));
   }
 
   //@OnClick(R.id.goto_toolbar_activity)
   //protected void onGotoToolbarActivity() {
-  //  startActivity(ToolbarActivity.getIntent(this));
+  //  startActivity(ToolbarActivity.newIntent(this));
   //}
 }

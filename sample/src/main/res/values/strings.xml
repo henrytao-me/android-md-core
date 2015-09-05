@@ -102,5 +102,6 @@
   <string name="title_activity_pager_tab">PagerTabActivity</string>
   <string name="title_activity_drawer_layout_pager_tab">DrawerLayoutPagerTabActivity</string>
   <string name="title_activity_recycle_view_header_footer_section">RecycleViewHeaderFooterSectionActivity</string>
+  <string name="title_activity_theme">ThemeActivity</string>
 
 </resources>

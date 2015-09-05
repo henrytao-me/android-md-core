@@ -72,6 +72,18 @@
       </RelativeLayout>
 
       <RelativeLayout
+        android:id="@+id/goto_theme"
+        android:background="@drawable/md_ripple"
+        style="@style/MdList.SingleLine.TextOnly">
+
+        <TextView
+          android:text="Theme"
+          style="@style/MdList.SingleLine.TextOnly.Text" />
+
+        <View style="@style/MdDivider.AlignParentBottom" />
+      </RelativeLayout>
+
+      <RelativeLayout
         android:id="@+id/goto_toolbar_activity"
         android:background="@drawable/md_ripple"
         style="@style/MdList.SingleLine.TextOnly">

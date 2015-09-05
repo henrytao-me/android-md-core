@@ -33,14 +33,14 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import me.henrytao.mddemo.R;
 
-public class ExampleActivity extends AppCompatActivity {
+public class SimpleActivity extends AppCompatActivity {
 
   private static String FRAGMENT_NAME = "fragment_name";
 
   private static String FRAGMENT_TITLE = "fragment_title";
 
-  public static Intent getIntent(Context context, Class fragment, String title) {
-    Intent intent = new Intent(context, ExampleActivity.class);
+  public static Intent newIntent(Context context, Class fragment, String title) {
+    Intent intent = new Intent(context, SimpleActivity.class);
     intent.putExtra(FRAGMENT_NAME, fragment.getName());
     intent.putExtra(FRAGMENT_TITLE, title);
     return intent;
@@ -63,7 +63,7 @@ public class ExampleActivity extends AppCompatActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_example);
+    setContentView(R.layout.activity_simple);
     ButterKnife.bind(this);
 
     setSupportActionBar(vToolbar);
