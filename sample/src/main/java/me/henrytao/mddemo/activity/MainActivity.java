@@ -8,7 +8,11 @@ import android.view.MenuItem;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import me.henrytao.mddemo.R;
+import me.henrytao.mddemo.fragment.ExampleMdButtonFragment;
+import me.henrytao.mddemo.fragment.ExampleMdListFragment;
+import me.henrytao.mddemo.fragment.ExampleMdTextFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,11 +39,11 @@ public class MainActivity extends AppCompatActivity {
     setSupportActionBar(vToolbar);
   }
 
-  //@OnClick(R.id.goto_button)
-  //protected void onGotoButtonClicked() {
-  //  startActivity(ExampleActivity.getIntent(this, ExampleMdButtonFragment.class, "Button"));
-  //}
-  //
+  @OnClick(R.id.goto_button)
+  protected void onGotoButtonClicked() {
+    startActivity(ExampleActivity.getIntent(this, ExampleMdButtonFragment.class, "Button"));
+  }
+
   //@OnClick(R.id.goto_drawer_layout_activity)
   //protected void onGotoDrawerLayoutActivity() {
   //  startActivity(DrawerLayoutActivity.getIntent(this));
@@ -49,22 +53,22 @@ public class MainActivity extends AppCompatActivity {
   //protected void onGotoDrawerLayoutPagerTabActivity() {
   //  startActivity(DrawerLayoutPagerTabActivity.getIntent(this));
   //}
-  //
-  //@OnClick(R.id.goto_list_view)
-  //protected void onGotoListViewClicked() {
-  //  startActivity(ExampleActivity.getIntent(this, ExampleMdListFragment.class, "ListView"));
-  //}
-  //
+
+  @OnClick(R.id.goto_list_view)
+  protected void onGotoListViewClicked() {
+    startActivity(ExampleActivity.getIntent(this, ExampleMdListFragment.class, "ListView"));
+  }
+
   //@OnClick(R.id.goto_pager_tab_activity)
   //protected void onGotoPagerTabActivity() {
   //  startActivity(PagerTabActivity.getIntent(this));
   //}
-  //
-  //@OnClick(R.id.goto_textview)
-  //protected void onGotoTextviewClicked() {
-  //  startActivity(ExampleActivity.getIntent(this, ExampleMdTextFragment.class, "TextView"));
-  //}
-  //
+
+  @OnClick(R.id.goto_textview)
+  protected void onGotoTextViewClicked() {
+    startActivity(ExampleActivity.getIntent(this, ExampleMdTextFragment.class, "TextView"));
+  }
+
   //@OnClick(R.id.goto_toolbar_activity)
   //protected void onGotoToolbarActivity() {
   //  startActivity(ToolbarActivity.getIntent(this));

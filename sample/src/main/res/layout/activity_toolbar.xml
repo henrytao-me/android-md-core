@@ -37,7 +37,5 @@
       android:layout_centerHorizontal="true"
       android:layout_centerVertical="true"
       android:text="@string/text_put_your_content_here" />
-
   </RelativeLayout>
-
 </RelativeLayout>

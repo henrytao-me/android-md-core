@@ -51,9 +51,7 @@ public class MdButton extends AppCompatButton {
   @Override
   public void setEnabled(boolean enabled) {
     super.setEnabled(enabled);
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-      setAlpha(enabled ? 1 : mDisableAlpha);
-    }
+    setDisableAlpha(enabled);
   }
 
   protected void init(Context context, AttributeSet attrs) {
@@ -62,6 +60,13 @@ public class MdButton extends AppCompatButton {
       TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.MdButton, 0, 0);
       mDisableAlpha = a.getFloat(R.styleable.MdButton_md_disable_alpha, sDisableAlpha);
       a.recycle();
+    }
+    setDisableAlpha(isEnabled());
+  }
+
+  protected void setDisableAlpha(boolean enabled) {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+      setAlpha(enabled ? 1 : mDisableAlpha);
     }
   }
 }

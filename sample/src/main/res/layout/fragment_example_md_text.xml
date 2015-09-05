@@ -22,11 +22,10 @@
   tools:context="me.henrytao.mddemo.fragment.ExampleMdTextFragment">
 
   <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:paddingLeft="?attr/mdLayout_spacing_md"
-    android:paddingRight="?attr/mdLayout_spacing_md">
+    android:paddingRight="?attr/mdLayout_spacing_md"
+    style="@style/MdList">
 
     <View style="@style/MdList.Spacing" />
 
@@ -83,7 +82,5 @@
       style="@style/MdText.Button" />
 
     <View style="@style/MdList.Spacing" />
-
   </LinearLayout>
-
 </ScrollView>

@@ -541,7 +541,6 @@
       <View style="@style/MdDivider.AlignParentBottom" />
     </RelativeLayout>
 
-
     <View style="@style/MdDivider" />
   </LinearLayout>
 </ScrollView>
