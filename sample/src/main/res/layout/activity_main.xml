@@ -83,54 +83,6 @@
         <View style="@style/MdDivider.AlignParentBottom" />
       </RelativeLayout>
 
-      <RelativeLayout
-        android:id="@+id/goto_toolbar_activity"
-        android:background="@drawable/md_ripple"
-        style="@style/MdList.SingleLine.TextOnly">
-
-        <TextView
-          android:text="ToolbarActivity"
-          style="@style/MdList.SingleLine.TextOnly.Text" />
-
-        <View style="@style/MdDivider.AlignParentBottom" />
-      </RelativeLayout>
-
-      <RelativeLayout
-        android:id="@+id/goto_drawer_layout_activity"
-        android:background="@drawable/md_ripple"
-        style="@style/MdList.SingleLine.TextOnly">
-
-        <TextView
-          android:text="DrawerLayoutActivity"
-          style="@style/MdList.SingleLine.TextOnly.Text" />
-
-        <View style="@style/MdDivider.AlignParentBottom" />
-      </RelativeLayout>
-
-      <RelativeLayout
-        android:id="@+id/goto_pager_tab_activity"
-        android:background="@drawable/md_ripple"
-        style="@style/MdList.SingleLine.TextOnly">
-
-        <TextView
-          android:text="PagerTabActivity"
-          style="@style/MdList.SingleLine.TextOnly.Text" />
-
-        <View style="@style/MdDivider.AlignParentBottom" />
-      </RelativeLayout>
-
-      <RelativeLayout
-        android:id="@+id/goto_drawer_layout_pager_tab_activity"
-        android:background="@drawable/md_ripple"
-        style="@style/MdList.SingleLine.TextOnly">
-
-        <TextView
-          android:text="DrawerLayoutPagerTabActivity"
-          style="@style/MdList.SingleLine.TextOnly.Text" />
-
-        <View style="@style/MdDivider.AlignParentBottom" />
-      </RelativeLayout>
-
       <View style="@style/MdList.Spacing" />
     </LinearLayout>
   </ScrollView>

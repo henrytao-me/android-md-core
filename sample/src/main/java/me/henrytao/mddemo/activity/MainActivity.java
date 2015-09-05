@@ -44,16 +44,6 @@ public class MainActivity extends AppCompatActivity {
     startActivity(SimpleActivity.newIntent(this, ExampleMdButtonFragment.class, "Button"));
   }
 
-  //@OnClick(R.id.goto_drawer_layout_activity)
-  //protected void onGotoDrawerLayoutActivity() {
-  //  startActivity(DrawerLayoutActivity.newIntent(this));
-  //}
-  //
-  //@OnClick(R.id.goto_drawer_layout_pager_tab_activity)
-  //protected void onGotoDrawerLayoutPagerTabActivity() {
-  //  startActivity(DrawerLayoutPagerTabActivity.newIntent(this));
-  //}
-
   @OnClick(R.id.goto_list_view)
   protected void onGotoListViewClick() {
     startActivity(SimpleActivity.newIntent(this, ExampleMdListFragment.class, "ListView"));
@@ -64,18 +54,8 @@ public class MainActivity extends AppCompatActivity {
     startActivity(SimpleActivity.newIntent(this, ExampleMdTextFragment.class, "TextView"));
   }
 
-  //@OnClick(R.id.goto_pager_tab_activity)
-  //protected void onGotoPagerTabActivity() {
-  //  startActivity(PagerTabActivity.newIntent(this));
-  //}
-
   @OnClick(R.id.goto_theme)
   protected void onGotoThemeClick() {
     startActivity(ThemeActivity.newIntent(this));
   }
-
-  //@OnClick(R.id.goto_toolbar_activity)
-  //protected void onGotoToolbarActivity() {
-  //  startActivity(ToolbarActivity.newIntent(this));
-  //}
 }
