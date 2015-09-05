@@ -12,6 +12,7 @@ import butterknife.OnClick;
 import me.henrytao.mddemo.R;
 import me.henrytao.mddemo.fragment.ExampleCardViewFragment;
 import me.henrytao.mddemo.fragment.ExampleMdButtonFragment;
+import me.henrytao.mddemo.fragment.ExampleMdEditTextFragment;
 import me.henrytao.mddemo.fragment.ExampleMdListFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -42,6 +43,11 @@ public class MainActivity extends AppCompatActivity {
   @OnClick(R.id.goto_button)
   protected void onGotoButtonClick() {
     startActivity(SimpleActivity.newIntent(this, ExampleMdButtonFragment.class, "Button"));
+  }
+
+  @OnClick(R.id.goto_edit_text)
+  protected void onGotoEditTextClick() {
+    startActivity(SimpleActivity.newIntent(this, ExampleMdEditTextFragment.class, "EditText"));
   }
 
   @OnClick(R.id.goto_list_view)

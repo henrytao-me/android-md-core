@@ -36,24 +36,37 @@
       <View style="@style/MdList.Spacing" />
 
       <RelativeLayout
-        android:id="@+id/goto_textview"
-        android:background="@drawable/md_ripple"
-        style="@style/MdList.SingleLine.TextOnly">
-
-        <TextView
-          android:text="TextView"
-          style="@style/MdList.SingleLine.TextOnly.Text" />
-
-        <View style="@style/MdDivider.AlignParentBottom" />
-      </RelativeLayout>
-
-      <RelativeLayout
         android:id="@+id/goto_button"
         android:background="@drawable/md_ripple"
         style="@style/MdList.SingleLine.TextOnly">
 
         <TextView
           android:text="Button"
+          style="@style/MdList.SingleLine.TextOnly.Text" />
+
+        <View style="@style/MdDivider.AlignParentBottom" />
+      </RelativeLayout>
+
+      <RelativeLayout
+        android:id="@+id/goto_card_view"
+        android:background="@drawable/md_ripple"
+        style="@style/MdList.SingleLine.TextOnly">
+
+        <TextView
+          android:text="CardView"
+          style="@style/MdList.SingleLine.TextOnly.Text" />
+
+        <View style="@style/MdDivider.AlignParentBottom" />
+      </RelativeLayout>
+
+      <RelativeLayout
+        android:id="@+id/goto_edit_text"
+        android:background="@drawable/md_ripple"
+        android:visibility="gone"
+        style="@style/MdList.SingleLine.TextOnly">
+
+        <TextView
+          android:text="EditText"
           style="@style/MdList.SingleLine.TextOnly.Text" />
 
         <View style="@style/MdDivider.AlignParentBottom" />
@@ -72,24 +85,24 @@
       </RelativeLayout>
 
       <RelativeLayout
-        android:id="@+id/goto_theme"
+        android:id="@+id/goto_textview"
         android:background="@drawable/md_ripple"
         style="@style/MdList.SingleLine.TextOnly">
 
         <TextView
-          android:text="Theme"
+          android:text="TextView"
           style="@style/MdList.SingleLine.TextOnly.Text" />
 
         <View style="@style/MdDivider.AlignParentBottom" />
       </RelativeLayout>
 
       <RelativeLayout
-        android:id="@+id/goto_card_view"
+        android:id="@+id/goto_theme"
         android:background="@drawable/md_ripple"
         style="@style/MdList.SingleLine.TextOnly">
 
         <TextView
-          android:text="CardView"
+          android:text="Theme"
           style="@style/MdList.SingleLine.TextOnly.Text" />
 
         <View style="@style/MdDivider.AlignParentBottom" />
