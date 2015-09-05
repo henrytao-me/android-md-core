@@ -18,7 +18,6 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:background="?attr/mdColor_backgroundPalette_dark"
   tools:context=".MainActivity">
 
   <LinearLayout
@@ -26,13 +25,13 @@
     android:paddingBottom="?attr/mdList_spacing"
     style="@style/MdList">
 
+    <TextView
+      android:text="CardView Small"
+      style="@style/MdList.Subheader" />
+
     <LinearLayout
       android:orientation="vertical"
       style="@style/MdCardView.Small.Wrapper">
-
-      <TextView
-        android:text="CardView Small"
-        style="@style/MdList.Subheader" />
 
       <android.support.v7.widget.CardView style="@style/MdCardView.Small">
 
@@ -49,15 +48,15 @@
         <include layout="@layout/item_card_view" />
       </android.support.v7.widget.CardView>
     </LinearLayout>
+
+    <TextView
+      android:text="CardView Medium"
+      style="@style/MdList.Subheader" />
 
     <LinearLayout
       android:orientation="vertical"
       style="@style/MdCardView.Medium.Wrapper">
 
-      <TextView
-        android:text="CardView Medium"
-        style="@style/MdList.Subheader" />
-
       <android.support.v7.widget.CardView style="@style/MdCardView.Medium">
 
         <include layout="@layout/item_card_view" />
@@ -74,49 +73,25 @@
       </android.support.v7.widget.CardView>
     </LinearLayout>
 
-    <LinearLayout
-      android:orientation="vertical"
-      style="@style/MdCardView.Full.Wrapper">
-
-      <TextView
-        android:text="CardView Full"
-        style="@style/MdList.Subheader" />
-
-      <android.support.v7.widget.CardView style="@style/MdCardView.Full">
-
-        <include layout="@layout/item_card_view" />
-      </android.support.v7.widget.CardView>
-
-      <android.support.v7.widget.CardView style="@style/MdCardView.Full">
-
-        <include layout="@layout/item_card_view" />
-      </android.support.v7.widget.CardView>
-
-      <android.support.v7.widget.CardView style="@style/MdCardView.Full">
-
-        <include layout="@layout/item_card_view" />
-      </android.support.v7.widget.CardView>
-    </LinearLayout>
+    <TextView
+      android:text="CardView Full"
+      style="@style/MdList.Subheader" />
 
     <LinearLayout
       android:orientation="vertical"
       style="@style/MdCardView.Full.Wrapper">
 
-      <TextView
-        android:text="CardView Full Light"
-        style="@style/MdList.Subheader" />
-
-      <android.support.v7.widget.CardView style="@style/MdCardView.Full.Small">
+      <android.support.v7.widget.CardView style="@style/MdCardView.Full">
 
         <include layout="@layout/item_card_view" />
       </android.support.v7.widget.CardView>
 
-      <android.support.v7.widget.CardView style="@style/MdCardView.Full.Small">
+      <android.support.v7.widget.CardView style="@style/MdCardView.Full">
 
         <include layout="@layout/item_card_view" />
       </android.support.v7.widget.CardView>
 
-      <android.support.v7.widget.CardView style="@style/MdCardView.Full.Small">
+      <android.support.v7.widget.CardView style="@style/MdCardView.Full">
 
         <include layout="@layout/item_card_view" />
       </android.support.v7.widget.CardView>

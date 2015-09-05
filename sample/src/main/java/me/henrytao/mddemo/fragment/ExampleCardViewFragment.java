@@ -23,6 +23,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import me.henrytao.mddemo.R;
+import me.henrytao.mdwidget.util.ResourceUtils;
 
 public class ExampleCardViewFragment extends Fragment {
 
@@ -33,5 +34,12 @@ public class ExampleCardViewFragment extends Fragment {
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
       Bundle savedInstanceState) {
     return inflater.inflate(R.layout.fragment_example_card_view, container, false);
+  }
+
+  @Override
+  public void onViewCreated(View view, Bundle savedInstanceState) {
+    super.onViewCreated(view, savedInstanceState);
+    getActivity().getWindow().getDecorView()
+        .setBackgroundColor(ResourceUtils.getColorFromAttribute(getActivity(), R.attr.mdColor_backgroundPalette_dark));
   }
 }
