@@ -48,6 +48,9 @@
     <item name="mdDividerColor_primaryPalette_dark">?attr/mdDividerColor_primaryPalette</item>
     <item name="mdDividerColor_primaryPalette_light">#1E000000</item>
 
+    <!-- override material style -->
+    <item name="actionModeCloseDrawable">@drawable/ic_toolbar_close_white</item>
+
   </style>
 
 </resources>

@@ -60,7 +60,7 @@
   </style>
 
   <style name="MdTheme.MdToolbar.ActionOverflowMenuStyle" parent="Widget.AppCompat.PopupMenu.Overflow">
-
+    <item name="android:popupBackground">@drawable/popup_background_drawable</item>
   </style>
 
   <!-- Note: based on experiment, icons in toolbar/menu should be resize (icon only, not the whole image) to 82% -->

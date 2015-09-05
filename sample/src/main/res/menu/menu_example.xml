@@ -15,6 +15,6 @@
   -->
 
 <menu xmlns:tools="http://schemas.android.com/tools"
-  tools:context="me.henrytao.mddemo.activity.ExampleActivity">
+  tools:context="me.henrytao.mddemo.activity.SimpleActivity">
 
 </menu>

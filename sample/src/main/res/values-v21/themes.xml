@@ -16,7 +16,7 @@
 
 <resources>
 
-  <style name="AppTheme.TranslucentNavigation" parent="AppTheme">
+  <style name="AppTheme.TranslucentNavigation" parent="Base.AppTheme.TranslucentNavigation">
     <item name="android:windowTranslucentStatus">true</item>
     <item name="mdDrawerLayout_fitsSystemWindows">true</item>
     <item name="mdDrawerLayout_translucentNavigationBackground">?attr/mdColor_primaryPalette</item>

@@ -30,23 +30,10 @@
     android:scrollbars="vertical">
 
     <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="vertical">
+      android:orientation="vertical"
+      style="@style/MdList">
 
       <View style="@style/MdList.Spacing" />
-
-      <RelativeLayout
-        android:id="@+id/goto_textview"
-        android:background="@drawable/md_ripple"
-        style="@style/MdList.SingleLine.TextOnly">
-
-        <TextView
-          android:text="TextView"
-          style="@style/MdList.SingleLine.TextOnly.Text" />
-
-        <View style="@style/MdDivider.AlignParentBottom" />
-      </RelativeLayout>
 
       <RelativeLayout
         android:id="@+id/goto_button"
@@ -55,6 +42,31 @@
 
         <TextView
           android:text="Button"
+          style="@style/MdList.SingleLine.TextOnly.Text" />
+
+        <View style="@style/MdDivider.AlignParentBottom" />
+      </RelativeLayout>
+
+      <RelativeLayout
+        android:id="@+id/goto_card_view"
+        android:background="@drawable/md_ripple"
+        style="@style/MdList.SingleLine.TextOnly">
+
+        <TextView
+          android:text="CardView"
+          style="@style/MdList.SingleLine.TextOnly.Text" />
+
+        <View style="@style/MdDivider.AlignParentBottom" />
+      </RelativeLayout>
+
+      <RelativeLayout
+        android:id="@+id/goto_edit_text"
+        android:background="@drawable/md_ripple"
+        android:visibility="gone"
+        style="@style/MdList.SingleLine.TextOnly">
+
+        <TextView
+          android:text="EditText"
           style="@style/MdList.SingleLine.TextOnly.Text" />
 
         <View style="@style/MdDivider.AlignParentBottom" />
@@ -73,48 +85,24 @@
       </RelativeLayout>
 
       <RelativeLayout
-        android:id="@+id/goto_toolbar_activity"
+        android:id="@+id/goto_textview"
         android:background="@drawable/md_ripple"
         style="@style/MdList.SingleLine.TextOnly">
 
         <TextView
-          android:text="ToolbarActivity"
+          android:text="TextView"
           style="@style/MdList.SingleLine.TextOnly.Text" />
 
         <View style="@style/MdDivider.AlignParentBottom" />
       </RelativeLayout>
 
       <RelativeLayout
-        android:id="@+id/goto_drawer_layout_activity"
+        android:id="@+id/goto_theme"
         android:background="@drawable/md_ripple"
         style="@style/MdList.SingleLine.TextOnly">
 
         <TextView
-          android:text="DrawerLayoutActivity"
-          style="@style/MdList.SingleLine.TextOnly.Text" />
-
-        <View style="@style/MdDivider.AlignParentBottom" />
-      </RelativeLayout>
-
-      <RelativeLayout
-        android:id="@+id/goto_pager_tab_activity"
-        android:background="@drawable/md_ripple"
-        style="@style/MdList.SingleLine.TextOnly">
-
-        <TextView
-          android:text="PagerTabActivity"
-          style="@style/MdList.SingleLine.TextOnly.Text" />
-
-        <View style="@style/MdDivider.AlignParentBottom" />
-      </RelativeLayout>
-
-      <RelativeLayout
-        android:id="@+id/goto_drawer_layout_pager_tab_activity"
-        android:background="@drawable/md_ripple"
-        style="@style/MdList.SingleLine.TextOnly">
-
-        <TextView
-          android:text="DrawerLayoutPagerTabActivity"
+          android:text="Theme"
           style="@style/MdList.SingleLine.TextOnly.Text" />
 
         <View style="@style/MdDivider.AlignParentBottom" />

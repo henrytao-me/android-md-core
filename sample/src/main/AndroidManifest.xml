@@ -32,21 +32,15 @@
       </intent-filter>
     </activity>
     <activity
-      android:label="@string/title_activity_example"
-      android:name=".activity.ExampleActivity" />
+      android:label="@string/title_activity_simple"
+      android:name=".activity.SimpleActivity" />
     <activity
-      android:label="@string/title_activity_toolbar"
-      android:name=".activity.ToolbarActivity" />
+      android:label="@string/title_activity_theme"
+      android:name=".activity.ThemeActivity"
+      android:theme="@style/AppTheme.Purple" />
     <activity
-      android:label="@string/title_activity_drawer_layout"
-      android:name=".activity.DrawerLayoutActivity"
-      android:theme="@style/AppTheme.TranslucentNavigation" />
-    <activity
-      android:label="@string/title_activity_pager_tab"
-      android:name=".activity.PagerTabActivity" />
-    <activity
-      android:label="@string/title_activity_drawer_layout_pager_tab"
-      android:name=".activity.DrawerLayoutPagerTabActivity" />
+      android:label="@string/title_activity_typo"
+      android:name=".activity.TypoActivity"></activity>
   </application>
 
 </manifest>

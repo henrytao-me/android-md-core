@@ -30,7 +30,6 @@
 
     <!-- singleline -->
 
-
     <RelativeLayout
       android:background="@drawable/md_ripple"
       android:clickable="true"
@@ -540,7 +539,6 @@
 
       <View style="@style/MdDivider.AlignParentBottom" />
     </RelativeLayout>
-
 
     <View style="@style/MdDivider" />
   </LinearLayout>

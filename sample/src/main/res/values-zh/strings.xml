@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+
+  <string name="typo_display_4">Display4 Light 112sp</string>
+  <string name="typo_display_3">Display3 Regular 56sp</string>
+  <string name="typo_display_2">Display2 Regular 45sp</string>
+  <string name="typo_display_1">Display1 Regular 34sp</string>
+  <string name="typo_headline">Headline Regular 24sp</string>
+  <string name="typo_title">Title Medium 21sp</string>
+  <string name="typo_subhead_2">Subhead2 Regular 17sp</string>
+  <string name="typo_subhead_1">Subhead1 Regular 17sp</string>
+  <string name="typo_subhead">Subhead Regular 17sp</string>
+  <string name="typo_body_2">Body2 Medium 15sp</string>
+  <string name="typo_body_1">Body1 Regular 15sp</string>
+  <string name="typo_caption">Caption Regular 13sp</string>
+  <string name="typo_button">Button All Caps 15sp</string>
+
+</resources>

@@ -18,34 +18,39 @@
 
   <!-- AppTheme -->
 
-  <style name="AppTheme.Base" parent="MdTheme">
+  <style name="Base.AppTheme" parent="MdTheme">
 
   </style>
 
-  <style name="AppTheme" parent="AppTheme.Base">
+  <style name="AppTheme" parent="Base.AppTheme">
 
   </style>
 
   <!-- AppTheme.TranslucentNavigation -->
 
-  <style name="AppTheme.TranslucentNavigation.Base" parent="AppTheme">
+  <style name="Base.AppTheme.TranslucentNavigation" parent="AppTheme">
 
   </style>
 
-  <style name="AppTheme.TranslucentNavigation" parent="AppTheme.TranslucentNavigation.Base">
+  <style name="AppTheme.TranslucentNavigation" parent="Base.AppTheme.TranslucentNavigation">
 
   </style>
 
-  <!-- AppTheme.Green -->
+  <!-- AppTheme.Purple -->
 
-  <style name="AppTheme.Purple.Base" parent="MdTheme">
+  <style name="Base.AppTheme.Purple" parent="MdTheme.Dark">
     <item name="mdColor_primaryPalette">#9C27B0</item>
     <item name="mdColor_primaryPalette_dark">#7B1FA2</item>
+    <item name="mdColor_primaryPalette_darker">#6A1B9A</item>
     <item name="mdColor_primaryPalette_light">#CE93D8</item>
+
     <item name="mdColor_accentPalette">#8BC34A</item>
+    <item name="mdColor_accentPalette_dark">#689F38</item>
+    <item name="mdColor_accentPalette_darker">#558B2F</item>
+    <item name="mdColor_accentPalette_light">#AED581</item>
   </style>
 
-  <style name="AppTheme.Green" parent="AppTheme.Purple.Base">
+  <style name="AppTheme.Purple" parent="Base.AppTheme.Purple">
 
   </style>
 

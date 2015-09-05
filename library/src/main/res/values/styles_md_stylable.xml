@@ -123,26 +123,27 @@
     <item name="mdDividerColor_backgroundPalette_darker">?attr/mdDividerColor_backgroundPalette_dark</item>
     <item name="mdDividerColor_backgroundPalette_light">?attr/mdDividerColor_backgroundPalette</item>
 
-    <item name="mdFontSize_button">14sp</item>
-    <item name="mdFontSize_caption">12sp</item>
-    <item name="mdFontSize_body1">14sp</item>
-    <item name="mdFontSize_body2">14sp</item>
-    <item name="mdFontSize_subhead">16sp</item>
-    <item name="mdFontSize_title">20sp</item>
-    <item name="mdFontSize_headline">24sp</item>
-    <item name="mdFontSize_display1">34sp</item>
-    <item name="mdFontSize_display2">45sp</item>
-    <item name="mdFontSize_display3">56sp</item>
-    <item name="mdFontSize_display4">112sp</item>
+    <!-- fontSize -->
+    <item name="mdFontSize_button">@dimen/mdFontSize_button</item>
+    <item name="mdFontSize_caption">@dimen/mdFontSize_caption</item>
+    <item name="mdFontSize_body1">@dimen/mdFontSize_body1</item>
+    <item name="mdFontSize_body2">@dimen/mdFontSize_body2</item>
+    <item name="mdFontSize_subhead">@dimen/mdFontSize_subhead</item>
+    <item name="mdFontSize_title">@dimen/mdFontSize_title</item>
+    <item name="mdFontSize_headline">@dimen/mdFontSize_headline</item>
+    <item name="mdFontSize_display1">@dimen/mdFontSize_display1</item>
+    <item name="mdFontSize_display2">@dimen/mdFontSize_display2</item>
+    <item name="mdFontSize_display3">@dimen/mdFontSize_display3</item>
+    <item name="mdFontSize_display4">@dimen/mdFontSize_display4</item>
 
-    <item name="mdLineHeight_body1">6sp</item>
-    <item name="mdLineHeight_body2">10sp</item>
-    <item name="mdLineHeight_subhead">?attr/mdLineHeight_subhead1</item>
-    <item name="mdLineHeight_subhead1">8sp</item>
-    <item name="mdLineHeight_subhead2">12sp</item>
-    <item name="mdLineHeight_headline">8sp</item>
-    <item name="mdLineHeight_display1">16sp</item>
-    <item name="mdLineHeight_display2">3sp</item>
+    <item name="mdLineHeight_body1">@dimen/mdLineHeight_body1</item>
+    <item name="mdLineHeight_body2">@dimen/mdLineHeight_body2</item>
+    <item name="mdLineHeight_subhead">@dimen/mdLineHeight_subhead</item>
+    <item name="mdLineHeight_subhead1">@dimen/mdLineHeight_subhead1</item>
+    <item name="mdLineHeight_subhead2">@dimen/mdLineHeight_subhead2</item>
+    <item name="mdLineHeight_headline">@dimen/mdLineHeight_headline</item>
+    <item name="mdLineHeight_display1">@dimen/mdLineHeight_display1</item>
+    <item name="mdLineHeight_display2">@dimen/mdLineHeight_display2</item>
 
     <item name="mdLayout_spacing_xxlg">48dp</item>
     <item name="mdLayout_spacing_xlg">32dp</item>
@@ -156,7 +157,11 @@
     <item name="mdLayout_contentAssociatedWithIconOrAvatarLeftMargin_negative">-72dp</item>
 
     <item name="mdList_secondaryActionSize">56dp</item>
+
     <item name="mdList_spacing">8dp</item>
+
+    <item name="mdList_subheader">48dp</item>
+
     <item name="mdList_itemHeight_md">48dp</item>
     <item name="mdList_itemHeight_lg">56dp</item>
     <item name="mdList_itemHeight_xlg">72dp</item>
@@ -165,13 +170,15 @@
     <item name="mdDrawerLayout_translucentNavigationBackground">@null</item>
     <item name="mdDrawerLayout_fitsSystemWindows">false</item>
 
+    <item name="actionBarSize">?android:attr/actionBarSize</item>
     <item name="secondaryActionBarSize">@dimen/secondaryActionBarSize</item>
     <item name="secondaryActionBarSizeWithIcon">@dimen/secondaryActionBarSizeWithIcon</item>
+
+    <item name="mdPopup_background">?attr/mdColor_backgroundPalette</item>
 
     <item name="mdToolbar_background">?attr/mdColor_primaryPalette</item>
     <item name="mdToolbar_elevation">4dp</item>
     <item name="mdToolbar_iconPadding">12dp</item>
-    <item name="mdToolbar_actionOverflowMenuStyle_popupBackground">?attr/mdColor_backgroundPalette</item>
 
     <item name="mdIcon_xxxxlg">120dp</item>
     <item name="mdIcon_xxxlg">104dp</item>
