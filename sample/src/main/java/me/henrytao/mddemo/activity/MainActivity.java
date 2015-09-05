@@ -14,6 +14,7 @@ import me.henrytao.mddemo.fragment.ExampleCardViewFragment;
 import me.henrytao.mddemo.fragment.ExampleMdButtonFragment;
 import me.henrytao.mddemo.fragment.ExampleMdEditTextFragment;
 import me.henrytao.mddemo.fragment.ExampleMdListFragment;
+import me.henrytao.mddemo.fragment.InfoFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +29,11 @@ public class MainActivity extends AppCompatActivity {
 
   @Override
   public boolean onOptionsItemSelected(MenuItem item) {
+    switch (item.getItemId()) {
+      case R.id.action_info:
+        startActivity(SimpleActivity.newIntent(this, InfoFragment.class, getString(R.string.text_about)));
+        return true;
+    }
     return super.onOptionsItemSelected(item);
   }
 

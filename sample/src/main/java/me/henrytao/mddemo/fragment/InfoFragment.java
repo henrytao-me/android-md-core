@@ -19,23 +19,25 @@ package me.henrytao.mddemo.fragment;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import me.henrytao.mddemo.R;
 
-public class ExampleMdTextFragment extends Fragment {
+public class InfoFragment extends Fragment {
 
-  public static ExampleMdTextFragment newInstance() {
-    return new ExampleMdTextFragment();
+  public static InfoFragment newInstance() {
+    return new InfoFragment();
   }
 
-  public ExampleMdTextFragment() {
+  public InfoFragment() {
 
   }
 
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-    return inflater.inflate(R.layout.fragment_example_md_text, container, false);
+    return inflater.inflate(R.layout.fragment_info, container, false);
   }
 }
