@@ -16,7 +16,7 @@
 
 <resources>
 
-  <declare-styleable name="MdTyop">
+  <declare-styleable name="MdTypo">
 
     <attr name="mdFontSize_button" format="dimension|reference" />
     <attr name="mdFontSize_caption" format="dimension|reference" />

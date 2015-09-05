@@ -16,28 +16,25 @@
 
 <resources>
 
-  <dimen name="secondaryActionBarSize">48dp</dimen>
-  <dimen name="secondaryActionBarSizeWithIcon">72dp</dimen>
-
-  <dimen name="mdFontSize_button">14sp</dimen>
-  <dimen name="mdFontSize_caption">12sp</dimen>
-  <dimen name="mdFontSize_body1">14sp</dimen>
-  <dimen name="mdFontSize_body2">14sp</dimen>
-  <dimen name="mdFontSize_subhead">16sp</dimen>
-  <dimen name="mdFontSize_title">20sp</dimen>
+  <dimen name="mdFontSize_button">15sp</dimen>
+  <dimen name="mdFontSize_caption">13sp</dimen>
+  <dimen name="mdFontSize_body1">15sp</dimen>
+  <dimen name="mdFontSize_body2">15sp</dimen>
+  <dimen name="mdFontSize_subhead">17sp</dimen>
+  <dimen name="mdFontSize_title">21sp</dimen>
   <dimen name="mdFontSize_headline">24sp</dimen>
   <dimen name="mdFontSize_display1">34sp</dimen>
   <dimen name="mdFontSize_display2">45sp</dimen>
   <dimen name="mdFontSize_display3">56sp</dimen>
   <dimen name="mdFontSize_display4">112sp</dimen>
 
-  <dimen name="mdLineHeight_body1">6sp</dimen>
-  <dimen name="mdLineHeight_body2">10sp</dimen>
+  <dimen name="mdLineHeight_body1">8sp</dimen>
+  <dimen name="mdLineHeight_body2">11sp</dimen>
   <dimen name="mdLineHeight_subhead">@dimen/mdLineHeight_subhead1</dimen>
-  <dimen name="mdLineHeight_subhead1">8sp</dimen>
-  <dimen name="mdLineHeight_subhead2">12sp</dimen>
-  <dimen name="mdLineHeight_headline">8sp</dimen>
-  <dimen name="mdLineHeight_display1">16sp</dimen>
-  <dimen name="mdLineHeight_display2">3sp</dimen>
+  <dimen name="mdLineHeight_subhead1">9sp</dimen>
+  <dimen name="mdLineHeight_subhead2">13sp</dimen>
+  <dimen name="mdLineHeight_headline">10sp</dimen>
+  <dimen name="mdLineHeight_display1">14sp</dimen>
+  <dimen name="mdLineHeight_display2">18sp</dimen>
 
 </resources>
