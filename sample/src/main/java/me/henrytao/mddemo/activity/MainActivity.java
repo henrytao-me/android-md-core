@@ -10,6 +10,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import me.henrytao.mddemo.R;
+import me.henrytao.mddemo.fragment.ExampleCardViewFragment;
 import me.henrytao.mddemo.fragment.ExampleMdButtonFragment;
 import me.henrytao.mddemo.fragment.ExampleMdListFragment;
 import me.henrytao.mddemo.fragment.ExampleMdTextFragment;
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
   }
 
   @OnClick(R.id.goto_button)
-  protected void onGotoButtonClicked() {
+  protected void onGotoButtonClick() {
     startActivity(SimpleActivity.newIntent(this, ExampleMdButtonFragment.class, "Button"));
   }
 
@@ -57,5 +58,10 @@ public class MainActivity extends AppCompatActivity {
   @OnClick(R.id.goto_theme)
   protected void onGotoThemeClick() {
     startActivity(ThemeActivity.newIntent(this));
+  }
+
+  @OnClick(R.id.goto_card_view)
+  protected void onGototCardViewClick() {
+    startActivity(SimpleActivity.newIntent(this, ExampleCardViewFragment.class, "CardView"));
   }
 }
