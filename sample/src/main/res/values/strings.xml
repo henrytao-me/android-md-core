@@ -30,15 +30,15 @@
   <string name="typo_caption">Caption Regular 12sp</string>
   <string name="typo_button">Button All Caps 14sp</string>
 
-  <string name="text_put_your_content_here">Put your content here</string>
-  <string name="text_title">Padding above title Padding above title Padding above title Padding above title</string>
-  <string name="text_description">Add 8dp padding at the top and bottom of a list. One exception is at the top of a list with a subheader,
+  <string name="text_put_your_content_here" translatable="false">Put your content here</string>
+  <string name="text_title" translatable="false">Padding above title Padding above title Padding above title Padding above title</string>
+  <string name="text_description" translatable="false">Add 8dp padding at the top and bottom of a list. One exception is at the top of a list with a subheader,
     because subheaders contain their own padding.
   </string>
 
-  <string name="license">Copyright 2015 "Henry Tao &lt;hi@henrytao.me&gt;"\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</string>
+  <string name="license" translatable="false">Copyright 2015 "Henry Tao &lt;hi@henrytao.me&gt;"\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</string>
 
-  <string name="text_long">Lorem ipsum dolor sit amet, ut duis lorem provident sed felis blandit, condimentum donec lectus ipsum et mauris,
+  <string name="text_long" translatable="false">Lorem ipsum dolor sit amet, ut duis lorem provident sed felis blandit, condimentum donec lectus ipsum et mauris,
     morbi porttitor interdum feugiat nulla donec sodales, vestibulum nisl primis a molestie vestibulum quam, sapien mauris metus risus
     suspendisse magnis. Augue viverra nulla faucibus egestas eu, a etiam id congue rutrum ante, arcu tincidunt donec quam felis at ornare,
     iaculis ligula sodales venenatis commodo volutpat neque, suspendisse elit praesent tellus felis mi amet. Inceptos amet tempor lectus
@@ -104,23 +104,23 @@
 
   <!-- auto generated values -->
 
-  <string name="action_settings">Settings</string>
-  <string name="action_navigation_drawer_right">Right navigation</string>
+  <string name="action_settings" translatable="false">Settings</string>
+  <string name="action_navigation_drawer_right" translatable="false">Right navigation</string>
 
-  <string name="app_name">MdDemo</string>
-  <string name="hello_world">Hello world!</string>
+  <string name="app_name" translatable="false">MdDemo</string>
+  <string name="hello_world" translatable="false">Hello world!</string>
 
   <!-- TODO: Remove or change this placeholder text -->
-  <string name="hello_blank_fragment">Hello blank fragment</string>
-  <string name="title_activity_toolbar">ToolbarActivity</string>
-  <string name="title_activity_drawer_layout">DrawerLayoutActivity</string>
-  <string name="title_activity_pager_tab">PagerTabActivity</string>
-  <string name="title_activity_drawer_layout_pager_tab">DrawerLayoutPagerTabActivity</string>
-  <string name="title_activity_recycle_view_header_footer_section">RecycleViewHeaderFooterSectionActivity</string>
-  <string name="title_activity_simple">SimpleActivity</string>
-  <string name="title_activity_theme">ThemeActivity</string>
-  <string name="title_activity_typo">TypoActivity</string>
-  <string name="text_info">Info</string>
-  <string name="text_about">About this app</string>
+  <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+  <string name="title_activity_toolbar" translatable="false">ToolbarActivity</string>
+  <string name="title_activity_drawer_layout" translatable="false">DrawerLayoutActivity</string>
+  <string name="title_activity_pager_tab" translatable="false">PagerTabActivity</string>
+  <string name="title_activity_drawer_layout_pager_tab" translatable="false">DrawerLayoutPagerTabActivity</string>
+  <string name="title_activity_recycle_view_header_footer_section" translatable="false">RecycleViewHeaderFooterSectionActivity</string>
+  <string name="title_activity_simple" translatable="false">SimpleActivity</string>
+  <string name="title_activity_theme" translatable="false">ThemeActivity</string>
+  <string name="title_activity_typo" translatable="false">TypoActivity</string>
+  <string name="text_info" translatable="false">Info</string>
+  <string name="text_about" translatable="false">About this app</string>
 
 </resources>
