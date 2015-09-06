@@ -20,7 +20,7 @@ We are working hard to predefine element styles as many as we can. If you find t
 
  ![Button](./screenshots/all-in-one.jpg)
 
-More: we are working hard to predefine more and more elements. They are coming soon. 
+More? we are working hard to predefine more and more elements. They are coming soon.
 
 
 ## Demo
