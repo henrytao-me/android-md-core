@@ -13,27 +13,14 @@ We are working hard to predefine element styles as many as we can. If you find t
 - **Simplicity:** used `attribute-based` theme system rather than `value-based` theme system. This increases the flexibility to have multiple theme in one app. 
 - **Ease to use:** predefined style for most of base elements. So that, you can easy to use like `Bootstrap` or `Foundation` for web. 
 - **Consistency:** consistent UI for both Lollipop and Non-Lollipop devices. 
-- **Modern:** keep up to date with `Google Material Design`.
+- **Modern:** keep up to date with [Google Material Design](https://www.google.com/design/spec/material-design/introduction.html).
 
 
 ## Features
 
-1. Button
+ ![Button](./screenshots/all-in-one.jpg)
 
-
-2. CardView
-
-
-3. ListView
-
-
-4. TextView
-
-
-5. Theme
-
-
-6. More: we are working hard to predefine more and more elements. They are coming soon. 
+More: we are working hard to predefine more and more elements. They are coming soon. 
 
 
 ## Demo
@@ -45,14 +32,70 @@ Please note that the app on the Play store is not always the latest version.
 
 ## Installation
 
+Waiting for maven. 
+
 
 ## Usage
+
+#### Step 1. Define your theme in `themes.xml`
+
+Please checkout [Google Material Color Section](https://www.google.com/design/spec/style/color.html) to understand about app color. Here are my summaries: 
+
+- Limit your selection of colors by choosing three hues from the primary palette and one accent color from the secondary palette.
+- There are 4 main palettes: `primary, accent, warn and background`. Each palette has 4 main colors: `normal, dark, darker and lighter`. It will end up with 16 colors that being used across the app. 
+- LightTheme is `LIGHT` background on `BLACK` text color.
+- DarkTheme is `DARK` background on `WHITE` text color. 
+
+```
+<resources>
+
+  <!-- AppTheme based on LightTheme -->
+  <style name="AppTheme" parent="MdTheme">
+
+  </style>
+
+  <!-- AppTheme.Purple based on DarkTheme -->
+  <style name="AppTheme.Purple" parent="MdTheme.Dark">
+    <item name="mdColor_primaryPalette">#9C27B0</item>
+    <item name="mdColor_primaryPalette_dark">#7B1FA2</item>
+    <item name="mdColor_primaryPalette_darker">#6A1B9A</item>
+    <item name="mdColor_primaryPalette_light">#CE93D8</item>
+
+    <item name="mdColor_accentPalette">#8BC34A</item>
+    <item name="mdColor_accentPalette_dark">#689F38</item>
+    <item name="mdColor_accentPalette_darker">#558B2F</item>
+    <item name="mdColor_accentPalette_light">#AED581</item>
+  </style>
+</resources>
+```
+
+#### Step 2. Apply predefined styles to your app
+
+Please checkout sample section in repo. Below is how you define singleline ListItem with icon and divider. 
+
+```
+<RelativeLayout
+  android:background="@drawable/md_ripple"
+  android:clickable="true"
+  style="@style/MdList.SingleLine.IconWithText">
+
+  <ImageView
+    android:src="@drawable/ic_blank"
+    style="@style/MdList.SingleLine.IconWithText.Icon" />
+
+  <TextView
+    android:text="@string/text_title"
+    style="@style/MdList.SingleLine.IconWithText.Text" />
+
+  <View style="@style/MdDivider.AlignParentBottom" />
+</RelativeLayout>
+```
 
 
 ## Contributing
 
 Any contributions are welcome!  
-Please check the [contributing guideline](CONTRIBUTING.md) before submitting a new issue. [Wanna send PR? Click HERE](https://github.com/henrytao-me/android-md-core/pulls)
+Please check the [CONTRIBUTING](CONTRIBUTING.md) guideline before submitting a new issue. Wanna send PR? [Click HERE](https://github.com/henrytao-me/android-md-core/pulls)
 
 
 ## License
