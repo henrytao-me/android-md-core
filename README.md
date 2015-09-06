@@ -13,12 +13,14 @@ We are working hard to predefine element styles as many as we can. If you find t
 - **Simplicity:** used `attribute-based` theme system rather than `value-based` theme system. This increases the flexibility to have multiple theme in one app. 
 - **Ease to use:** predefined style for most of base elements. So that, you can easy to use like `Bootstrap` or `Foundation` for web. 
 - **Consistency:** consistent UI for both Lollipop and Non-Lollipop devices. 
-- **Modern:** keep up to date with `Google Material Design`.
+- **Modern:** keep up to date with [Google Material Design](https://www.google.com/design/spec/material-design/introduction.html).
 
 
 ## Features
 
 1. Button
+
+ ![Button](./screenshots/Button.png)
 
 
 2. CardView
@@ -52,7 +54,7 @@ Please note that the app on the Play store is not always the latest version.
 ## Contributing
 
 Any contributions are welcome!  
-Please check the [contributing guideline](CONTRIBUTING.md) before submitting a new issue. [Wanna send PR? Click HERE](https://github.com/henrytao-me/android-md-core/pulls)
+Please check the [CONTRIBUTING](CONTRIBUTING.md) guideline before submitting a new issue. Wanna send PR? [Click HERE](https://github.com/henrytao-me/android-md-core/pulls)
 
 
 ## License
