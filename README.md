@@ -3,7 +3,7 @@ android-md-core
 
 `AppCompat` and `Google Support Design` are really awesome but they also have some limitations. Theming android app is not an easy task, especially keeping consistent UI on both Lollipop and Non-Lollipop devices is even harder. If you've tried `CardView`, `Spinner`, `Theme`, you know what I mean. So, I propose `android-md-core` - Material bootstrap for Android development. 
 
-We are working hard to predefine element styles as many as we can. If you find that it still doesn't meet your need, don't hersitate to send us a request. We love to work with you to solve problems. [Send a request HERE](https://github.com/henrytao-me/android-md-core/issues)
+I am working hard to predefine element styles as many as I can. If you find that it still doesn't meet your need, don't hesitate to send me a request. I love to work with you to solve problems. [Send a request HERE](https://github.com/henrytao-me/android-md-core/issues)
 
 
 ## Concepts
@@ -20,7 +20,7 @@ We are working hard to predefine element styles as many as we can. If you find t
 
  ![Button](./screenshots/all-in-one.jpg)
 
-More? we are working hard to predefine more and more elements. They are coming soon.
+More? I are working hard to predefine more and more elements. They are coming soon.
 
 
 ## Demo
