@@ -1,6 +1,6 @@
 # Thank you for your contribution!
 
-We are working hard to predefine element styles as many as we can. If you find that it still doesn't meet your need, don't hersitate to send us a request. We love to work with you to solve problems. [Send a request HERE](https://github.com/henrytao-me/android-md-core/issues)
+I am working hard to predefine element styles as many as I can. If you find that it still doesn't meet your need, don't hesitate to send me a request. I love to work with you to solve problems. [Send a request HERE](https://github.com/henrytao-me/recyclerview-multistate-section-endless-adapter/issues)
 
 Any contributions will be greatly appreciated.
 
