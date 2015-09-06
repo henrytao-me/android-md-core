@@ -18,24 +18,9 @@ We are working hard to predefine element styles as many as we can. If you find t
 
 ## Features
 
-1. Button
+ ![Button](./screenshots/all-in-one.jpg)
 
- ![Button](./screenshots/Button.png)
-
-
-2. CardView
-
-
-3. ListView
-
-
-4. TextView
-
-
-5. Theme
-
-
-6. More: we are working hard to predefine more and more elements. They are coming soon. 
+More: we are working hard to predefine more and more elements. They are coming soon. 
 
 
 ## Demo
