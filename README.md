@@ -11,7 +11,7 @@ We are working hard to predefine element styles as many as we can. If you find t
 
 - **Widely support:** based on `appcompat` and `google support design` for sure.
 - **Simplicity:** used `attribute-based` theme system rather than `value-based` theme system. This increases the flexibility to have multiple theme in one app. 
-- **Ease to use:** predefined style for most of base elements. So that, you can easy to use like `Bootstrap` or `Foundation` for web. 
+- **Ease to use:** predefined style for most of base elements. So that, you can use easily like `Bootstrap` or `Foundation` for web.
 - **Consistency:** consistent UI for both Lollipop and Non-Lollipop devices. 
 - **Modern:** keep up to date with [Google Material Design](https://www.google.com/design/spec/material-design/introduction.html).
 
