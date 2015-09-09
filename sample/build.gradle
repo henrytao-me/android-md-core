@@ -33,7 +33,7 @@ dependencies {
 
   compile rootProject.ext.dependencies["com.jakewharton:butterknife"]
 
-  compile(project(":library")) {
+  compile(project(":mdcore")) {
     exclude group: "com.android.support"
   }
 }
