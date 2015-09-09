@@ -1,3 +1,5 @@
+[ ![Download](https://api.bintray.com/packages/henrytao-me/maven/recyclerview/images/download.svg) ](https://bintray.com/henrytao-me/maven/recyclerview/_latestVersion)
+
 android-md-core
 ================
 
@@ -32,7 +34,11 @@ Please note that the app on the Play store is not always the latest version.
 
 ## Installation
 
-Waiting for maven. 
+```
+compile "me.henrytao:mdcore:<latest-version>"
+```
+
+`android-md-core` is deployed to `jCenter`. Make sure you have `jcenter()` in your project gradle.
 
 
 ## Usage
