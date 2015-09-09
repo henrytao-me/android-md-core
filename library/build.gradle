@@ -1,5 +1,28 @@
 apply plugin: "com.android.library"
-//apply from: "maven-push.gradle"
+
+ext {
+  bintrayRepo = "maven"
+  bintrayName = "android-md-core"
+
+  publishedGroupId = "me.henrytao"
+  libraryName = "AndroidMdCore"
+  artifact = "android-md-core"
+
+  libraryDescription = "Material bootstrap for Android development like Bootstrap or Foundation for web."
+
+  siteUrl = "https://github.com/henrytao-me/android-md-core"
+  gitUrl = "https://github.com/henrytao-me/android-md-core.git"
+
+  libraryVersion = "1.2.0"
+
+  developerId = "henrytao"
+  developerName = "Henry Tao"
+  developerEmail = "hi@henrytao.me"
+
+  licenseName = "The Apache Software License, Version 2.0"
+  licenseUrl = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+  allLicenses = ["Apache-2.0"]
+}
 
 android {
   compileSdkVersion rootProject.ext.android.compileSdkVersion
@@ -26,3 +49,6 @@ dependencies {
   compile rootProject.ext.dependencies["com.android.support:appcompat-v7"]
   compile rootProject.ext.dependencies["com.android.support:cardview-v7"]
 }
+
+apply from: "https://raw.githubusercontent.com/henrytao-me/JCenter/master/installv1.gradle"
+apply from: "https://raw.githubusercontent.com/henrytao-me/JCenter/master/bintrayv1.gradle"
