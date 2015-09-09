@@ -2,11 +2,11 @@ apply plugin: "com.android.library"
 
 ext {
   bintrayRepo = "maven"
-  bintrayName = "android-md-core"
+  bintrayName = "mdcore"
 
   publishedGroupId = "me.henrytao"
-  libraryName = "AndroidMdCore"
-  artifact = "android-md-core"
+  libraryName = "MdCore"
+  artifact = "mdcore"
 
   libraryDescription = "Material bootstrap for Android development like Bootstrap or Foundation for web."
 

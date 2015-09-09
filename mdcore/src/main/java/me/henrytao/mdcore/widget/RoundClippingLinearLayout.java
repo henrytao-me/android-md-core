@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package me.henrytao.mdwidget.widget;
+package me.henrytao.mdcore.widget;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -27,7 +27,7 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
 
-import me.henrytao.widget.R;
+import me.henrytao.mdcore.R;
 
 /**
  * Created by henrytao on 5/31/15.
