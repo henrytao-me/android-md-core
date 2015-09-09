@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package me.henrytao.mdwidget.widget;
+package me.henrytao.mdcore.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;

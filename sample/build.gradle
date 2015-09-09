@@ -36,8 +36,4 @@ dependencies {
   compile(project(":library")) {
     exclude group: "com.android.support"
   }
-
-  compile(project(":widget")) {
-    exclude group: "com.android.support"
-  }
 }

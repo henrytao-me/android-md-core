@@ -22,8 +22,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import me.henrytao.mdcore.util.ResourceUtils;
 import me.henrytao.mddemo.R;
-import me.henrytao.mdwidget.util.ResourceUtils;
 
 public class ExampleCardViewFragment extends Fragment {
 

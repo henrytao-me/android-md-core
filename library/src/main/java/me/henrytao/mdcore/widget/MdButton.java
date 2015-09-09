@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package me.henrytao.mdwidget.widget;
+package me.henrytao.mdcore.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -22,7 +22,7 @@ import android.os.Build;
 import android.support.v7.widget.AppCompatButton;
 import android.util.AttributeSet;
 
-import me.henrytao.widget.R;
+import me.henrytao.mdcore.R;
 
 /**
  * Created by henrytao on 8/23/15.

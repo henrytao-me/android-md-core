@@ -51,4 +51,5 @@ dependencies {
 }
 
 apply from: "https://raw.githubusercontent.com/henrytao-me/JCenter/master/installv1.gradle"
-apply from: "https://raw.githubusercontent.com/henrytao-me/JCenter/master/bintrayv1.gradle"
+//apply from: "https://raw.githubusercontent.com/henrytao-me/JCenter/master/bintrayv1.gradle"
+apply from: "deploy.gradle"
