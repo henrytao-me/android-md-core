@@ -8,6 +8,22 @@ android-md-core
 I am working hard to predefine element styles as many as I can. If you find that it still doesn't meet your need, don't hesitate to send me a request. I love to work with you to solve problems. [Send a request HERE](https://github.com/henrytao-me/android-md-core/issues)
 
 
+## Installation
+
+```
+compile "me.henrytao:mdcore:<latest-version>"
+```
+
+`android-md-core` is deployed to `jCenter`. Make sure you have `jcenter()` in your project gradle.
+
+
+## Demo
+
+[![Get it on Google Play](https://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](https://play.google.com/store/apps/details?id=me.henrytao.mdcore)
+
+Please note that the app on the Play store is not always the latest version.
+
+
 ## Concepts
 `android-md-core` is designed base on some priciples:
 
@@ -23,22 +39,6 @@ I am working hard to predefine element styles as many as I can. If you find that
  ![Button](./screenshots/all-in-one.jpg)
 
 More? I are working hard to predefine more and more elements. They are coming soon.
-
-
-## Demo
-
-[![Get it on Google Play](https://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](https://play.google.com/store/apps/details?id=me.henrytao.mdcore)
-
-Please note that the app on the Play store is not always the latest version. 
-
-
-## Installation
-
-```
-compile "me.henrytao:mdcore:<latest-version>"
-```
-
-`android-md-core` is deployed to `jCenter`. Make sure you have `jcenter()` in your project gradle.
 
 
 ## Usage
