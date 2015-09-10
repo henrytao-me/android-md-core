@@ -212,25 +212,25 @@
           android:layout_marginTop="?attr/mdLayout_spacing_md"
           android:text="Raised MdButton Disabled" />
 
-        <me.henrytao.mdwidget.widget.MdButton
+        <me.henrytao.mdcore.widget.MdButton
           android:layout_marginTop="?attr/mdLayout_spacing_md"
           android:enabled="false"
           android:text="Button"
           style="@style/MdButton.Raised.Primary" />
 
-        <me.henrytao.mdwidget.widget.MdButton
+        <me.henrytao.mdcore.widget.MdButton
           android:layout_marginTop="?attr/mdLayout_spacing_md"
           android:enabled="false"
           android:text="Button"
           style="@style/MdButton.Raised.Accent" />
 
-        <me.henrytao.mdwidget.widget.MdButton
+        <me.henrytao.mdcore.widget.MdButton
           android:layout_marginTop="?attr/mdLayout_spacing_md"
           android:enabled="false"
           android:text="Button"
           style="@style/MdButton.Raised.Warn" />
 
-        <me.henrytao.mdwidget.widget.MdButton
+        <me.henrytao.mdcore.widget.MdButton
           android:layout_marginTop="?attr/mdLayout_spacing_md"
           android:enabled="false"
           android:text="Button"
@@ -252,25 +252,25 @@
           android:layout_marginTop="?attr/mdLayout_spacing_md"
           android:text="Flat MdButton Disabled" />
 
-        <me.henrytao.mdwidget.widget.MdButton
+        <me.henrytao.mdcore.widget.MdButton
           android:layout_marginTop="?attr/mdLayout_spacing_md"
           android:enabled="false"
           android:text="Button"
           style="@style/MdButton.Flat.Primary" />
 
-        <me.henrytao.mdwidget.widget.MdButton
+        <me.henrytao.mdcore.widget.MdButton
           android:layout_marginTop="?attr/mdLayout_spacing_md"
           android:enabled="false"
           android:text="Button"
           style="@style/MdButton.Flat.Accent" />
 
-        <me.henrytao.mdwidget.widget.MdButton
+        <me.henrytao.mdcore.widget.MdButton
           android:layout_marginTop="?attr/mdLayout_spacing_md"
           android:enabled="false"
           android:text="Button"
           style="@style/MdButton.Flat.Warn" />
 
-        <me.henrytao.mdwidget.widget.MdButton
+        <me.henrytao.mdcore.widget.MdButton
           android:layout_marginTop="?attr/mdLayout_spacing_md"
           android:enabled="false"
           android:text="Button"
