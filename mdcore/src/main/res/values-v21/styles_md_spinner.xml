@@ -16,7 +16,7 @@
 
 <resources>
 
-  <style name="Base.MdSpinner.Dropdown" parent="MdSpinner">
+  <style name="Base.MdSpinner.Dropdown" parent="Base.MdSpinner">
     <item name="android:popupBackground">@drawable/popup_background_material</item>
   </style>
 

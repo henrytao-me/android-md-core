@@ -16,14 +16,14 @@
 
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-  <style name="MdSpinner">
+  <style name="Base.MdSpinner" parent="">
     <item name="android:layout_width">wrap_content</item>
     <item name="android:layout_height">wrap_content</item>
   </style>
 
   <!-- Dropdown -->
 
-  <style name="Base.MdSpinner.Dropdown" parent="MdSpinner">
+  <style name="Base.MdSpinner.Dropdown" parent="Base.MdSpinner">
     <item name="android:popupBackground">@drawable/popup_background_drawable</item>
   </style>
 
@@ -33,7 +33,7 @@
 
   <!-- Dialog -->
 
-  <style name="MdSpinner.Dialog">
+  <style name="MdSpinner.Dialog" parent="Base.MdSpinner">
     <item name="android:spinnerMode" tools:ignore="NewApi">dialog</item>
   </style>
 
