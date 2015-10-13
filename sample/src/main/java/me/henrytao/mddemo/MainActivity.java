@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package me.henrytao.bootstrapandroidlibrarydemo.activity;
+package me.henrytao.mddemo;
 
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -23,7 +23,6 @@ import android.view.MenuItem;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import me.henrytao.bootstrapandroidlibrarydemo.R;
 
 public class MainActivity extends BaseActivity {
 

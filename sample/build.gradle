@@ -5,7 +5,7 @@ android {
   buildToolsVersion rootProject.ext.android.buildToolsVersion
 
   defaultConfig {
-    applicationId rootProject.ext.android.applicationId
+    applicationId rootProject.ext.android.applicationId + "inaction"
     minSdkVersion rootProject.ext.android.minSdkVersion
     targetSdkVersion rootProject.ext.android.targetSdkVersion
     versionCode rootProject.ext.android.versionCode

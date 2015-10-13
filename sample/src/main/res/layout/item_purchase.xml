@@ -17,25 +17,28 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
-  android:layout_height="?attr/mdList_itemHeight_md"
-  android:background="@drawable/md_ripple"
-  android:paddingLeft="?attr/mdLayout_spacing_md"
-  android:paddingRight="?attr/mdLayout_spacing_md">
+  android:layout_height="wrap_content">
 
   <TextView
     android:id="@+id/title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:layout_alignParentLeft="true"
     android:layout_centerVertical="true"
     android:layout_toLeftOf="@+id/description"
-    android:paddingLeft="?attr/mdLayout_spacing_sm"
-    tools:text="Buy me a coffee"
-    style="@style/MdText.Subhead.SingleLine" />
+    tools:text="Buy me a coffee" />
 
   <TextView
     android:id="@+id/description"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:layout_alignParentRight="true"
     android:layout_centerVertical="true"
-    android:paddingRight="?attr/mdLayout_spacing_sm"
-    tools:text="$0.99"
-    style="@style/MdText.Body1.SingleLine" />
+    tools:text="$0.99" />
 </RelativeLayout>
+
+  <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:tools="http://schemas.android.com/tools"--><!--android:layout_width="match_parent"--><!--android:layout_height="?attr/mdList_itemHeight_md"--><!--android:background="@drawable/md_ripple"--><!--android:paddingLeft="?attr/mdLayout_spacing_md"--><!--android:paddingRight="?attr/mdLayout_spacing_md">-->
+
+  <!--<TextView--><!--android:id="@+id/title"--><!--android:layout_alignParentLeft="true"--><!--android:layout_centerVertical="true"--><!--android:layout_toLeftOf="@+id/description"--><!--android:paddingLeft="?attr/mdLayout_spacing_sm"--><!--tools:text="Buy me a coffee"--><!--style="@style/MdText.Subhead.SingleLine" />-->
+
+  <!--<TextView--><!--android:id="@+id/description"--><!--android:layout_alignParentRight="true"--><!--android:layout_centerVertical="true"--><!--android:paddingRight="?attr/mdLayout_spacing_sm"--><!--tools:text="$0.99"--><!--style="@style/MdText.Body1.SingleLine" />--><!--</RelativeLayout>-->

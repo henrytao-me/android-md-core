@@ -41,8 +41,7 @@
   <string name="text_donate_progress_message" translatable="false">This may take a while. Make sure you turned on the internet</string>
   <string name="text_donate_help_offer" translatable="false">Let me know if I can be of any help. Happy coding!</string>
   <string name="text_donate_thanks" translatable="false">Thanks for your gift. Happy coding!</string>
-  <string name="text_donate_error"
-    translatable="false">Something just happened. You can not donate at the moment. Keep in touch. Thanks!</string>
+  <string name="text_donate_error" translatable="false">Something just happened. You can not donate at the moment. Keep in touch. Thanks!</string>
 
   <string name="text_short" translatable="false">Lorem ipsum dolor sit amet, ut duis lorem provident sed felis blandit, condimentum donec lectus ipsum et mauris,
     morbi porttitor interdum feugiat nulla donec sodales, vestibulum nisl primis a molestie vestibulum quam, sapien mauris metus risus

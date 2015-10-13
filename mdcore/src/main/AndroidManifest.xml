@@ -15,7 +15,7 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="me.henrytao.bootstrapandroidlibrary">
+  package="me.henrytao.mdcore">
 
   <application
     android:allowBackup="true"
