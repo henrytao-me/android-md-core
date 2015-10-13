@@ -23,25 +23,27 @@ ext {
   android = [
       compileSdkVersion: 23,
       buildToolsVersion: "23.0.1",
-      applicationId    : "me.henrytao.bootstrapandroidlibrary",
+      applicationId    : "me.henrytao.mdcore",
       minSdkVersion    : 8,
       targetSdkVersion : 23,
       versionCode      : 1,
-      versionName      : "0.0.1"
+      versionName      : "1.9.0"
   ]
 
   bintray = [
       bintrayRepo       : "maven",
-      bintrayName       : "bootrap-android-library",
+      bintrayName       : "mdcore",
 
       publishedGroupId  : "me.henrytao",
-      libraryName       : "Bootstrap Android Library",
-      artifact          : "bootrap-android-library",
+      libraryName       : "MdCore",
+      artifact          : "mdcore",
 
-      libraryDescription: "Bootstrapping android library",
+      libraryDescription: "Material bootstrap for Android development like Bootstrap or Foundation for web",
 
-      siteUrl           : "https://github.com/henrytao-me/bootstrap-android-library",
-      gitUrl            : "https://github.com/henrytao-me/bootstrap-android-library.git",
+      siteUrl           : "https://github.com/henrytao-me/android-md-core",
+      gitUrl            : "https://github.com/henrytao-me/android-md-core.git",
+
+      libraryVersion    : rootProject.ext.android.versionName,
 
       developerId       : "henrytao",
       developerName     : "Henry Tao",
@@ -59,7 +61,7 @@ ext {
       "com.android.support:recyclerview-v7": "com.android.support:recyclerview-v7:23.0.1",
 
       "me.henrytao:recyclerview"           : "me.henrytao:recyclerview:1.2.0",
-      "me.henrytao:mdcore"                 : "me.henrytao:mdcore:1.2.0",
+      "me.henrytao:smooth-app-bar-layout"  : "me.henrytao:smooth-app-bar-layout:0.1.8",
 
       "com.jakewharton:butterknife"        : "com.jakewharton:butterknife:7.0.1"
   ]

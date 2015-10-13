@@ -35,10 +35,10 @@ dependencies {
   compile(rootProject.ext.dependencies["me.henrytao:recyclerview"]) {
     exclude group: "com.android.support"
   }
-  compile(rootProject.ext.dependencies["me.henrytao:mdcore"]) {
+  compile(rootProject.ext.dependencies["me.henrytao:smooth-app-bar-layout"]) {
     exclude group: "com.android.support"
   }
-  compile(project(":library")) {
+  compile(project(":mdcore")) {
     exclude group: "com.android.support"
   }
 

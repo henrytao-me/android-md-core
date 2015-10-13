@@ -78,11 +78,6 @@
         <option name="FOR_BRACE_FORCE" value="3" />
         <AndroidXmlCodeStyleSettings>
           <option name="USE_CUSTOM_SETTINGS" value="true" />
-          <option name="VALUE_RESOURCE_FILE_SETTINGS">
-            <value>
-              <option name="WRAP_ATTRIBUTES" value="1" />
-            </value>
-          </option>
         </AndroidXmlCodeStyleSettings>
         <Objective-C-extensions>
           <option name="GENERATE_INSTANCE_VARIABLES_FOR_PROPERTIES" value="ASK" />
@@ -834,5 +829,6 @@
       </value>
     </option>
     <option name="USE_PER_PROJECT_SETTINGS" value="true" />
+    <option name="PREFERRED_PROJECT_CODE_STYLE" value="Henry" />
   </component>
 </project>

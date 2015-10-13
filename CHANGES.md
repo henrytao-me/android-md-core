@@ -1,5 +1,5 @@
-# library releases #
+# android-md-core releases #
 
-### Version 0.1.0 – October 12th 2015 ###
+### Version 2.0.0 – October 12th 2015 ###
 
 Initial release

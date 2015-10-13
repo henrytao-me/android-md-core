@@ -16,7 +16,7 @@
 
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-  <style name="AppStyle.MdToolbar" parent="MdToolbar">
+  <style name="AppStyle.MdToolbar" parent="Theme.AppCompat.Light.NoActionBar">
     <item name="android:elevation" tools:targetApi="lollipop">0dp</item>
   </style>
 
