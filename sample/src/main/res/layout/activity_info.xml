@@ -23,8 +23,9 @@
 
   <android.support.v7.widget.Toolbar
     android:id="@+id/toolbar"
-    app:navigationIcon="@drawable/ic_toolbar_arrow_back"
-    style="@style/AppStyle.MdToolbar" />
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:navigationIcon="@drawable/ic_toolbar_arrow_back" />
 
   <ScrollView
     android:layout_width="match_parent"
@@ -32,72 +33,72 @@
     android:layout_below="@+id/toolbar">
 
     <!--<LinearLayout-->
-      <!--android:layout_width="match_parent"-->
-      <!--android:layout_height="wrap_content"-->
-      <!--android:orientation="vertical"-->
-      <!--android:gravity="center"-->
-      <!--android:paddingBottom="?attr/mdLayout_spacing_md"-->
-      <!--android:paddingLeft="?attr/mdLayout_spacing_md"-->
-      <!--android:paddingRight="?attr/mdLayout_spacing_md"-->
-      <!--android:paddingTop="?attr/mdLayout_spacing_md">-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--android:gravity="center"-->
+    <!--android:paddingBottom="?attr/mdLayout_spacing_md"-->
+    <!--android:paddingLeft="?attr/mdLayout_spacing_md"-->
+    <!--android:paddingRight="?attr/mdLayout_spacing_md"-->
+    <!--android:paddingTop="?attr/mdLayout_spacing_md">-->
 
-      <!--<TextView-->
-        <!--android:layout_marginBottom="?attr/mdLayout_spacing_sm"-->
-        <!--android:text="@string/app_code"-->
-        <!--style="@style/MdText.Headline" />-->
+    <!--<TextView-->
+    <!--android:layout_marginBottom="?attr/mdLayout_spacing_sm"-->
+    <!--android:text="@string/app_code"-->
+    <!--style="@style/MdText.Headline" />-->
 
-      <!--<TextView-->
-        <!--android:layout_marginBottom="?attr/mdLayout_spacing_sm"-->
-        <!--android:gravity="center"-->
-        <!--android:text="@string/app_description"-->
-        <!--style="@style/MdText.Body1" />-->
+    <!--<TextView-->
+    <!--android:layout_marginBottom="?attr/mdLayout_spacing_sm"-->
+    <!--android:gravity="center"-->
+    <!--android:text="@string/app_description"-->
+    <!--style="@style/MdText.Body1" />-->
 
-      <!--<View-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="?attr/mdLayout_spacing_lg" />-->
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="?attr/mdLayout_spacing_lg" />-->
 
-      <!--<ImageView-->
-        <!--android:layout_width="?attr/mdIcon_xlg"-->
-        <!--android:layout_height="?attr/mdIcon_xlg"-->
-        <!--android:layout_marginBottom="?attr/mdLayout_spacing_md"-->
-        <!--android:src="@drawable/ic_logo" />-->
+    <!--<ImageView-->
+    <!--android:layout_width="?attr/mdIcon_xlg"-->
+    <!--android:layout_height="?attr/mdIcon_xlg"-->
+    <!--android:layout_marginBottom="?attr/mdLayout_spacing_md"-->
+    <!--android:src="@drawable/ic_logo" />-->
 
-      <!--<TextView-->
-        <!--android:layout_marginBottom="?attr/mdLayout_spacing_sm"-->
-        <!--android:gravity="center"-->
-        <!--android:text="@string/app_copyright"-->
-        <!--style="@style/MdText.Body1" />-->
+    <!--<TextView-->
+    <!--android:layout_marginBottom="?attr/mdLayout_spacing_sm"-->
+    <!--android:gravity="center"-->
+    <!--android:text="@string/app_copyright"-->
+    <!--style="@style/MdText.Body1" />-->
 
-      <!--<View-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="?attr/mdLayout_spacing_xlg" />-->
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="?attr/mdLayout_spacing_xlg" />-->
 
-      <!--<TextView-->
-        <!--android:layout_marginBottom="?attr/mdLayout_spacing_sm"-->
-        <!--android:gravity="center"-->
-        <!--android:text="@string/text_fork"-->
-        <!--style="@style/MdText.Body1" />-->
+    <!--<TextView-->
+    <!--android:layout_marginBottom="?attr/mdLayout_spacing_sm"-->
+    <!--android:gravity="center"-->
+    <!--android:text="@string/text_fork"-->
+    <!--style="@style/MdText.Body1" />-->
 
-      <!--<TextView-->
-        <!--android:layout_marginBottom="?attr/mdLayout_spacing_sm"-->
-        <!--android:autoLink="web"-->
-        <!--android:gravity="center"-->
-        <!--android:text="@string/app_repo"-->
-        <!--style="@style/MdText.Body1" />-->
+    <!--<TextView-->
+    <!--android:layout_marginBottom="?attr/mdLayout_spacing_sm"-->
+    <!--android:autoLink="web"-->
+    <!--android:gravity="center"-->
+    <!--android:text="@string/app_repo"-->
+    <!--style="@style/MdText.Body1" />-->
 
-      <!--<View-->
-        <!--android:layout_marginBottom="?attr/mdLayout_spacing_sm"-->
-        <!--style="@style/MdDivider" />-->
+    <!--<View-->
+    <!--android:layout_marginBottom="?attr/mdLayout_spacing_sm"-->
+    <!--style="@style/MdDivider" />-->
 
-      <!--<TextView-->
-        <!--android:layout_marginBottom="?attr/mdLayout_spacing_sm"-->
-        <!--android:text="@string/text_license"-->
-        <!--style="@style/MdText.Headline" />-->
+    <!--<TextView-->
+    <!--android:layout_marginBottom="?attr/mdLayout_spacing_sm"-->
+    <!--android:text="@string/text_license"-->
+    <!--style="@style/MdText.Headline" />-->
 
-      <!--<TextView-->
-        <!--android:layout_marginBottom="?attr/mdLayout_spacing_sm"-->
-        <!--android:text="@string/app_license"-->
-        <!--style="@style/MdText.Body1" />-->
+    <!--<TextView-->
+    <!--android:layout_marginBottom="?attr/mdLayout_spacing_sm"-->
+    <!--android:text="@string/app_license"-->
+    <!--style="@style/MdText.Body1" />-->
     <!--</LinearLayout>-->
   </ScrollView>
 </RelativeLayout>

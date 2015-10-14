@@ -18,8 +18,7 @@
 
   <!-- AppTheme -->
 
-  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+  <style name="AppTheme" parent="MdTheme.Light">
 
   </style>
-
 </resources>

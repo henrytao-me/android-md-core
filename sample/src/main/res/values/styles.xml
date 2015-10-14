@@ -14,10 +14,6 @@
   ~ limitations under the License.
   -->
 
-<resources xmlns:tools="http://schemas.android.com/tools">
-
-  <style name="AppStyle.MdToolbar" parent="">
-    <item name="android:elevation" tools:targetApi="lollipop">0dp</item>
-  </style>
+<resources>
 
 </resources>
