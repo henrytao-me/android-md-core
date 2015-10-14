@@ -16,18 +16,19 @@
 
 <resources>
 
+  <!-- Dark text on light backgrounds:  87%:DE 54%:8A 38%:61 12%:1E -->
   <color name="mdTextColorPrimary_light">@color/abc_primary_text_material_light</color>
   <color name="mdTextColorSecondary_light">@color/abc_secondary_text_material_light</color>
   <color name="mdTextColorHint_light">#61000000</color>
   <color name="mdColorDivider_light">#1E000000</color>
 
+  <!-- White text on dark backgrounds: 100%:FF 70%:B3 30%:4C 12%:1E -->
   <color name="mdTextColorPrimary_dark">@color/abc_primary_text_material_dark</color>
   <color name="mdTextColorSecondary_dark">@color/abc_secondary_text_material_dark</color>
   <color name="mdTextColorHint_dark">#4CFFFFFF</color>
   <color name="mdColorDivider_dark">#1EFFFFFF</color>
 
   <!-- 500 - 700 - 100 in the palette -->
-
   <color name="mdColor_red">#F44336</color>
   <color name="mdColor_red_dark">#D32F2F</color>
   <color name="mdColor_red_light">#FFCDD2</color>

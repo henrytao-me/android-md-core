@@ -38,59 +38,113 @@
     <item name="mdColor_backgroundPalette_dark">@color/mdColor_background_light</item>
     <item name="mdColor_backgroundPalette_light">@color/mdColor_background_light</item>
 
-    <!-- Dark text on light backgrounds:  87%:DE 54%:8A 38%:61 12%:1E -->
-
+    <!-- textColor for primary palette -->
     <item name="mdTextColorPrimary_primaryPalette">@color/mdTextColorPrimary_light</item>
     <item name="mdTextColorPrimary_primaryPalette_dark">@color/mdTextColorPrimary_dark</item>
     <item name="mdTextColorPrimary_primaryPalette_light">@color/mdTextColorPrimary_light</item>
-    <item name="mdTextColorPrimary_accentPalette">@color/mdTextColorPrimary_dark</item>
-    <item name="mdTextColorPrimary_accentPalette_dark">@color/mdTextColorPrimary_dark</item>
-    <item name="mdTextColorPrimary_accentPalette_light">@color/mdTextColorPrimary_light</item>
-    <item name="mdTextColorPrimary_warnPalette">@color/mdTextColorPrimary_dark</item>
-    <item name="mdTextColorPrimary_warnPalette_dark">@color/mdTextColorPrimary_dark</item>
-    <item name="mdTextColorPrimary_warnPalette_light">@color/mdTextColorPrimary_light</item>
-    <item name="mdTextColorPrimary_backgroundPalette">@color/mdTextColorPrimary_light</item>
-    <item name="mdTextColorPrimary_backgroundPalette_dark">@color/mdTextColorPrimary_light</item>
-    <item name="mdTextColorPrimary_backgroundPalette_light">@color/mdTextColorPrimary_light</item>
-
     <item name="mdTextColorSecondary_primaryPalette">@color/mdTextColorSecondary_light</item>
     <item name="mdTextColorSecondary_primaryPalette_dark">@color/mdTextColorSecondary_dark</item>
     <item name="mdTextColorSecondary_primaryPalette_light">@color/mdTextColorSecondary_light</item>
-    <item name="mdTextColorSecondary_accentPalette">@color/mdTextColorSecondary_dark</item>
-    <item name="mdTextColorSecondary_accentPalette_dark">@color/mdTextColorSecondary_dark</item>
-    <item name="mdTextColorSecondary_accentPalette_light">@color/mdTextColorSecondary_light</item>
-    <item name="mdTextColorSecondary_warnPalette">@color/mdTextColorSecondary_dark</item>
-    <item name="mdTextColorSecondary_warnPalette_dark">@color/mdTextColorSecondary_dark</item>
-    <item name="mdTextColorSecondary_warnPalette_light">@color/mdTextColorSecondary_light</item>
-    <item name="mdTextColorSecondary_backgroundPalette">@color/mdTextColorSecondary_light</item>
-    <item name="mdTextColorSecondary_backgroundPalette_dark">@color/mdTextColorSecondary_light</item>
-    <item name="mdTextColorSecondary_backgroundPalette_light">@color/mdTextColorSecondary_light</item>
-
     <item name="mdTextColorHint_primaryPalette">@color/mdTextColorHint_light</item>
     <item name="mdTextColorHint_primaryPalette_dark">@color/mdTextColorHint_dark</item>
     <item name="mdTextColorHint_primaryPalette_light">@color/mdTextColorHint_light</item>
-    <item name="mdTextColorHint_accentPalette">@color/mdTextColorHint_dark</item>
-    <item name="mdTextColorHint_accentPalette_dark">@color/mdTextColorHint_dark</item>
-    <item name="mdTextColorHint_accentPalette_light">@color/mdTextColorHint_light</item>
-    <item name="mdTextColorHint_warnPalette">@color/mdTextColorHint_dark</item>
-    <item name="mdTextColorHint_warnPalette_dark">@color/mdTextColorHint_dark</item>
-    <item name="mdTextColorHint_warnPalette_light">@color/mdTextColorHint_light</item>
-    <item name="mdTextColorHint_backgroundPalette">@color/mdTextColorHint_light</item>
-    <item name="mdTextColorHint_backgroundPalette_dark">@color/mdTextColorHint_light</item>
-    <item name="mdTextColorHint_backgroundPalette_light">@color/mdTextColorHint_light</item>
-
     <item name="mdColorDivider_primaryPalette">@color/mdColorDivider_light</item>
     <item name="mdColorDivider_primaryPalette_dark">@color/mdColorDivider_dark</item>
     <item name="mdColorDivider_primaryPalette_light">@color/mdColorDivider_light</item>
+
+    <item name="mdTextColorPrimaryInverse_primaryPalette">@color/mdTextColorPrimary_dark</item>
+    <item name="mdTextColorPrimaryInverse_primaryPalette_dark">@color/mdTextColorPrimary_light</item>
+    <item name="mdTextColorPrimaryInverse_primaryPalette_light">@color/mdTextColorPrimary_dark</item>
+    <item name="mdTextColorSecondaryInverse_primaryPalette">@color/mdTextColorSecondary_dark</item>
+    <item name="mdTextColorSecondaryInverse_primaryPalette_dark">@color/mdTextColorSecondary_light</item>
+    <item name="mdTextColorSecondaryInverse_primaryPalette_light">@color/mdTextColorSecondary_dark</item>
+    <item name="mdTextColorHintInverse_primaryPalette">@color/mdTextColorHint_dark</item>
+    <item name="mdTextColorHintInverse_primaryPalette_dark">@color/mdTextColorHint_light</item>
+    <item name="mdTextColorHintInverse_primaryPalette_light">@color/mdTextColorHint_dark</item>
+    <item name="mdColorDividerInverse_primaryPalette">@color/mdColorDivider_dark</item>
+    <item name="mdColorDividerInverse_primaryPalette_dark">@color/mdColorDivider_light</item>
+    <item name="mdColorDividerInverse_primaryPalette_light">@color/mdColorDivider_dark</item>
+
+    <!-- textColor for accent palette -->
+    <item name="mdTextColorPrimary_accentPalette">@color/mdTextColorPrimary_dark</item>
+    <item name="mdTextColorPrimary_accentPalette_dark">@color/mdTextColorPrimary_dark</item>
+    <item name="mdTextColorPrimary_accentPalette_light">@color/mdTextColorPrimary_light</item>
+    <item name="mdTextColorSecondary_accentPalette">@color/mdTextColorSecondary_dark</item>
+    <item name="mdTextColorSecondary_accentPalette_dark">@color/mdTextColorSecondary_dark</item>
+    <item name="mdTextColorSecondary_accentPalette_light">@color/mdTextColorSecondary_light</item>
+    <item name="mdTextColorHint_accentPalette">@color/mdTextColorHint_dark</item>
+    <item name="mdTextColorHint_accentPalette_dark">@color/mdTextColorHint_dark</item>
+    <item name="mdTextColorHint_accentPalette_light">@color/mdTextColorHint_light</item>
     <item name="mdColorDivider_accentPalette">@color/mdColorDivider_dark</item>
     <item name="mdColorDivider_accentPalette_dark">@color/mdColorDivider_dark</item>
     <item name="mdColorDivider_accentPalette_light">@color/mdColorDivider_light</item>
+
+    <item name="mdTextColorPrimaryInverse_accentPalette">@color/mdTextColorPrimary_light</item>
+    <item name="mdTextColorPrimaryInverse_accentPalette_dark">@color/mdTextColorPrimary_light</item>
+    <item name="mdTextColorPrimaryInverse_accentPalette_light">@color/mdTextColorPrimary_dark</item>
+    <item name="mdTextColorSecondaryInverse_accentPalette">@color/mdTextColorSecondary_light</item>
+    <item name="mdTextColorSecondaryInverse_accentPalette_dark">@color/mdTextColorSecondary_light</item>
+    <item name="mdTextColorSecondaryInverse_accentPalette_light">@color/mdTextColorSecondary_dark</item>
+    <item name="mdTextColorHintInverse_accentPalette">@color/mdTextColorHint_light</item>
+    <item name="mdTextColorHintInverse_accentPalette_dark">@color/mdTextColorHint_light</item>
+    <item name="mdTextColorHintInverse_accentPalette_light">@color/mdTextColorHint_dark</item>
+    <item name="mdColorDividerInverse_accentPalette">@color/mdColorDivider_light</item>
+    <item name="mdColorDividerInverse_accentPalette_dark">@color/mdColorDivider_light</item>
+    <item name="mdColorDividerInverse_accentPalette_light">@color/mdColorDivider_dark</item>
+
+    <!-- textColor for warn palette -->
+    <item name="mdTextColorPrimary_warnPalette">@color/mdTextColorPrimary_dark</item>
+    <item name="mdTextColorPrimary_warnPalette_dark">@color/mdTextColorPrimary_dark</item>
+    <item name="mdTextColorPrimary_warnPalette_light">@color/mdTextColorPrimary_light</item>
+    <item name="mdTextColorSecondary_warnPalette">@color/mdTextColorSecondary_dark</item>
+    <item name="mdTextColorSecondary_warnPalette_dark">@color/mdTextColorSecondary_dark</item>
+    <item name="mdTextColorSecondary_warnPalette_light">@color/mdTextColorSecondary_light</item>
+    <item name="mdTextColorHint_warnPalette">@color/mdTextColorHint_dark</item>
+    <item name="mdTextColorHint_warnPalette_dark">@color/mdTextColorHint_dark</item>
+    <item name="mdTextColorHint_warnPalette_light">@color/mdTextColorHint_light</item>
     <item name="mdColorDivider_warnPalette">@color/mdColorDivider_dark</item>
     <item name="mdColorDivider_warnPalette_dark">@color/mdColorDivider_dark</item>
     <item name="mdColorDivider_warnPalette_light">@color/mdColorDivider_light</item>
+
+    <item name="mdTextColorPrimaryInverse_warnPalette">@color/mdTextColorPrimary_light</item>
+    <item name="mdTextColorPrimaryInverse_warnPalette_dark">@color/mdTextColorPrimary_light</item>
+    <item name="mdTextColorPrimaryInverse_warnPalette_light">@color/mdTextColorPrimary_dark</item>
+    <item name="mdTextColorSecondaryInverse_warnPalette">@color/mdTextColorSecondary_light</item>
+    <item name="mdTextColorSecondaryInverse_warnPalette_dark">@color/mdTextColorSecondary_light</item>
+    <item name="mdTextColorSecondaryInverse_warnPalette_light">@color/mdTextColorSecondary_dark</item>
+    <item name="mdTextColorHintInverse_warnPalette">@color/mdTextColorHint_light</item>
+    <item name="mdTextColorHintInverse_warnPalette_dark">@color/mdTextColorHint_light</item>
+    <item name="mdTextColorHintInverse_warnPalette_light">@color/mdTextColorHint_dark</item>
+    <item name="mdColorDividerInverse_warnPalette">@color/mdColorDivider_light</item>
+    <item name="mdColorDividerInverse_warnPalette_dark">@color/mdColorDivider_light</item>
+    <item name="mdColorDividerInverse_warnPalette_light">@color/mdColorDivider_dark</item>
+
+    <!-- textColor for background palette -->
+    <item name="mdTextColorPrimary_backgroundPalette">@color/mdTextColorPrimary_light</item>
+    <item name="mdTextColorPrimary_backgroundPalette_dark">@color/mdTextColorPrimary_light</item>
+    <item name="mdTextColorPrimary_backgroundPalette_light">@color/mdTextColorPrimary_light</item>
+    <item name="mdTextColorSecondary_backgroundPalette">@color/mdTextColorSecondary_light</item>
+    <item name="mdTextColorSecondary_backgroundPalette_dark">@color/mdTextColorSecondary_light</item>
+    <item name="mdTextColorSecondary_backgroundPalette_light">@color/mdTextColorSecondary_light</item>
+    <item name="mdTextColorHint_backgroundPalette">@color/mdTextColorHint_light</item>
+    <item name="mdTextColorHint_backgroundPalette_dark">@color/mdTextColorHint_light</item>
+    <item name="mdTextColorHint_backgroundPalette_light">@color/mdTextColorHint_light</item>
     <item name="mdColorDivider_backgroundPalette">@color/mdColorDivider_light</item>
     <item name="mdColorDivider_backgroundPalette_dark">@color/mdColorDivider_light</item>
     <item name="mdColorDivider_backgroundPalette_light">@color/mdColorDivider_light</item>
+
+    <item name="mdTextColorPrimaryInverse_backgroundPalette">@color/mdTextColorPrimary_dark</item>
+    <item name="mdTextColorPrimaryInverse_backgroundPalette_dark">@color/mdTextColorPrimary_dark</item>
+    <item name="mdTextColorPrimaryInverse_backgroundPalette_light">@color/mdTextColorPrimary_dark</item>
+    <item name="mdTextColorSecondaryInverse_backgroundPalette">@color/mdTextColorSecondary_dark</item>
+    <item name="mdTextColorSecondaryInverse_backgroundPalette_dark">@color/mdTextColorSecondary_dark</item>
+    <item name="mdTextColorSecondaryInverse_backgroundPalette_light">@color/mdTextColorSecondary_dark</item>
+    <item name="mdTextColorHintInverse_backgroundPalette">@color/mdTextColorHint_dark</item>
+    <item name="mdTextColorHintInverse_backgroundPalette_dark">@color/mdTextColorHint_dark</item>
+    <item name="mdTextColorHintInverse_backgroundPalette_light">@color/mdTextColorHint_dark</item>
+    <item name="mdColorDividerInverse_backgroundPalette">@color/mdColorDivider_dark</item>
+    <item name="mdColorDividerInverse_backgroundPalette_dark">@color/mdColorDivider_dark</item>
+    <item name="mdColorDividerInverse_backgroundPalette_light">@color/mdColorDivider_dark</item>
 
     <!-- override material style -->
     <!--colorPrimary: The primary branding color for the app. By default, this is the color applied to the action bar background.-->
@@ -147,59 +201,113 @@
     <item name="mdColor_backgroundPalette_dark">@color/mdColor_background_dark</item>
     <item name="mdColor_backgroundPalette_light">@color/mdColor_background_dark</item>
 
-    <!-- White text on dark backgrounds: 100%:FF 70%:B3 30%:4C 12%:1E -->
+    <!-- textColor for primary palette -->
+    <item name="mdTextColorPrimary_primaryPalette">@color/mdTextColorPrimary_dark</item>
+    <item name="mdTextColorPrimary_primaryPalette_dark">@color/mdTextColorPrimary_dark</item>
+    <item name="mdTextColorPrimary_primaryPalette_light">@color/mdTextColorPrimary_light</item>
+    <item name="mdTextColorSecondary_primaryPalette">@color/mdTextColorSecondary_dark</item>
+    <item name="mdTextColorSecondary_primaryPalette_dark">@color/mdTextColorSecondary_dark</item>
+    <item name="mdTextColorSecondary_primaryPalette_light">@color/mdTextColorSecondary_light</item>
+    <item name="mdTextColorHint_primaryPalette">@color/mdTextColorHint_dark</item>
+    <item name="mdTextColorHint_primaryPalette_dark">@color/mdTextColorHint_dark</item>
+    <item name="mdTextColorHint_primaryPalette_light">@color/mdTextColorHint_light</item>
+    <item name="mdColorDivider_primaryPalette">@color/mdColorDivider_dark</item>
+    <item name="mdColorDivider_primaryPalette_dark">@color/mdColorDivider_dark</item>
+    <item name="mdColorDivider_primaryPalette_light">@color/mdColorDivider_light</item>
 
-    <item name="mdTextColorPrimary_primaryPalette">#FFFFFFFF</item>
-    <item name="mdTextColorPrimary_primaryPalette_dark">#FFFFFFFF</item>
-    <item name="mdTextColorPrimary_primaryPalette_light">#FF000000</item>
-    <item name="mdTextColorPrimary_accentPalette">#FFFFFFFF</item>
-    <item name="mdTextColorPrimary_accentPalette_dark">#FFFFFFFF</item>
-    <item name="mdTextColorPrimary_accentPalette_light">#FF000000</item>
-    <item name="mdTextColorPrimary_warnPalette">#FFFFFFFF</item>
-    <item name="mdTextColorPrimary_warnPalette_dark">#FFFFFFFF</item>
-    <item name="mdTextColorPrimary_warnPalette_light">#FF000000</item>
-    <item name="mdTextColorPrimary_backgroundPalette">#FFFFFFFF</item>
-    <item name="mdTextColorPrimary_backgroundPalette_dark">#FFFFFFFF</item>
-    <item name="mdTextColorPrimary_backgroundPalette_light">#FFFFFFFF</item>
+    <item name="mdTextColorPrimaryInverse_primaryPalette">@color/mdTextColorPrimary_light</item>
+    <item name="mdTextColorPrimaryInverse_primaryPalette_dark">@color/mdTextColorPrimary_light</item>
+    <item name="mdTextColorPrimaryInverse_primaryPalette_light">@color/mdTextColorPrimary_dark</item>
+    <item name="mdTextColorSecondaryInverse_primaryPalette">@color/mdTextColorSecondary_light</item>
+    <item name="mdTextColorSecondaryInverse_primaryPalette_dark">@color/mdTextColorSecondary_light</item>
+    <item name="mdTextColorSecondaryInverse_primaryPalette_light">@color/mdTextColorSecondary_dark</item>
+    <item name="mdTextColorHintInverse_primaryPalette">@color/mdTextColorHint_light</item>
+    <item name="mdTextColorHintInverse_primaryPalette_dark">@color/mdTextColorHint_light</item>
+    <item name="mdTextColorHintInverse_primaryPalette_light">@color/mdTextColorHint_dark</item>
+    <item name="mdColorDividerInverse_primaryPalette">@color/mdColorDivider_light</item>
+    <item name="mdColorDividerInverse_primaryPalette_dark">@color/mdColorDivider_light</item>
+    <item name="mdColorDividerInverse_primaryPalette_light">@color/mdColorDivider_dark</item>
 
-    <item name="mdTextColorSecondary_primaryPalette">#B3FFFFFF</item>
-    <item name="mdTextColorSecondary_primaryPalette_dark">#B3FFFFFF</item>
-    <item name="mdTextColorSecondary_primaryPalette_light">#B3000000</item>
-    <item name="mdTextColorSecondary_accentPalette">#B3FFFFFF</item>
-    <item name="mdTextColorSecondary_accentPalette_dark">#B3FFFFFF</item>
-    <item name="mdTextColorSecondary_accentPalette_light">#B3000000</item>
-    <item name="mdTextColorSecondary_warnPalette">#B3FFFFFF</item>
-    <item name="mdTextColorSecondary_warnPalette_dark">#B3FFFFFF</item>
-    <item name="mdTextColorSecondary_warnPalette_light">#B3000000</item>
-    <item name="mdTextColorSecondary_backgroundPalette">#B3FFFFFF</item>
-    <item name="mdTextColorSecondary_backgroundPalette_dark">#B3FFFFFF</item>
-    <item name="mdTextColorSecondary_backgroundPalette_light">#B3FFFFFF</item>
+    <!-- textColor for accent palette -->
+    <item name="mdTextColorPrimary_accentPalette">@color/mdTextColorPrimary_dark</item>
+    <item name="mdTextColorPrimary_accentPalette_dark">@color/mdTextColorPrimary_dark</item>
+    <item name="mdTextColorPrimary_accentPalette_light">@color/mdTextColorPrimary_light</item>
+    <item name="mdTextColorSecondary_accentPalette">@color/mdTextColorSecondary_dark</item>
+    <item name="mdTextColorSecondary_accentPalette_dark">@color/mdTextColorSecondary_dark</item>
+    <item name="mdTextColorSecondary_accentPalette_light">@color/mdTextColorSecondary_light</item>
+    <item name="mdTextColorHint_accentPalette">@color/mdTextColorHint_dark</item>
+    <item name="mdTextColorHint_accentPalette_dark">@color/mdTextColorHint_dark</item>
+    <item name="mdTextColorHint_accentPalette_light">@color/mdTextColorHint_light</item>
+    <item name="mdColorDivider_accentPalette">@color/mdColorDivider_dark</item>
+    <item name="mdColorDivider_accentPalette_dark">@color/mdColorDivider_dark</item>
+    <item name="mdColorDivider_accentPalette_light">@color/mdColorDivider_light</item>
 
-    <item name="mdTextColorHint_primaryPalette">#4CFFFFFF</item>
-    <item name="mdTextColorHint_primaryPalette_dark">#4CFFFFFF</item>
-    <item name="mdTextColorHint_primaryPalette_light">#4C000000</item>
-    <item name="mdTextColorHint_accentPalette">#4CFFFFFF</item>
-    <item name="mdTextColorHint_accentPalette_dark">#4CFFFFFF</item>
-    <item name="mdTextColorHint_accentPalette_light">#4C000000</item>
-    <item name="mdTextColorHint_warnPalette">#4CFFFFFF</item>
-    <item name="mdTextColorHint_warnPalette_dark">#4CFFFFFF</item>
-    <item name="mdTextColorHint_warnPalette_light">#4C000000</item>
-    <item name="mdTextColorHint_backgroundPalette">#4CFFFFFF</item>
-    <item name="mdTextColorHint_backgroundPalette_dark">#4CFFFFFF</item>
-    <item name="mdTextColorHint_backgroundPalette_light">#4CFFFFFF</item>
+    <item name="mdTextColorPrimaryInverse_accentPalette">@color/mdTextColorPrimary_light</item>
+    <item name="mdTextColorPrimaryInverse_accentPalette_dark">@color/mdTextColorPrimary_light</item>
+    <item name="mdTextColorPrimaryInverse_accentPalette_light">@color/mdTextColorPrimary_dark</item>
+    <item name="mdTextColorSecondaryInverse_accentPalette">@color/mdTextColorSecondary_light</item>
+    <item name="mdTextColorSecondaryInverse_accentPalette_dark">@color/mdTextColorSecondary_light</item>
+    <item name="mdTextColorSecondaryInverse_accentPalette_light">@color/mdTextColorSecondary_dark</item>
+    <item name="mdTextColorHintInverse_accentPalette">@color/mdTextColorHint_light</item>
+    <item name="mdTextColorHintInverse_accentPalette_dark">@color/mdTextColorHint_light</item>
+    <item name="mdTextColorHintInverse_accentPalette_light">@color/mdTextColorHint_dark</item>
+    <item name="mdColorDividerInverse_accentPalette">@color/mdColorDivider_light</item>
+    <item name="mdColorDividerInverse_accentPalette_dark">@color/mdColorDivider_light</item>
+    <item name="mdColorDividerInverse_accentPalette_light">@color/mdColorDivider_dark</item>
 
-    <item name="mdColorDivider_primaryPalette">#1EFFFFFF</item>
-    <item name="mdColorDivider_primaryPalette_dark">#1EFFFFFF</item>
-    <item name="mdColorDivider_primaryPalette_light">#1E000000</item>
-    <item name="mdColorDivider_accentPalette">#1EFFFFFF</item>
-    <item name="mdColorDivider_accentPalette_dark">#1EFFFFFF</item>
-    <item name="mdColorDivider_accentPalette_light">#1E000000</item>
-    <item name="mdColorDivider_warnPalette">#1EFFFFFF</item>
-    <item name="mdColorDivider_warnPalette_dark">#1EFFFFFF</item>
-    <item name="mdColorDivider_warnPalette_light">#1E000000</item>
-    <item name="mdColorDivider_backgroundPalette">#1EFFFFFF</item>
-    <item name="mdColorDivider_backgroundPalette_dark">#1EFFFFFF</item>
-    <item name="mdColorDivider_backgroundPalette_light">#1EFFFFFF</item>
+    <!-- textColor for warn palette -->
+    <item name="mdTextColorPrimary_warnPalette">@color/mdTextColorPrimary_dark</item>
+    <item name="mdTextColorPrimary_warnPalette_dark">@color/mdTextColorPrimary_dark</item>
+    <item name="mdTextColorPrimary_warnPalette_light">@color/mdTextColorPrimary_light</item>
+    <item name="mdTextColorSecondary_warnPalette">@color/mdTextColorSecondary_dark</item>
+    <item name="mdTextColorSecondary_warnPalette_dark">@color/mdTextColorSecondary_dark</item>
+    <item name="mdTextColorSecondary_warnPalette_light">@color/mdTextColorSecondary_light</item>
+    <item name="mdTextColorHint_warnPalette">@color/mdTextColorHint_dark</item>
+    <item name="mdTextColorHint_warnPalette_dark">@color/mdTextColorHint_dark</item>
+    <item name="mdTextColorHint_warnPalette_light">@color/mdTextColorHint_light</item>
+    <item name="mdColorDivider_warnPalette">@color/mdColorDivider_dark</item>
+    <item name="mdColorDivider_warnPalette_dark">@color/mdColorDivider_dark</item>
+    <item name="mdColorDivider_warnPalette_light">@color/mdColorDivider_light</item>
+
+    <item name="mdTextColorPrimaryInverse_warnPalette">@color/mdTextColorPrimary_light</item>
+    <item name="mdTextColorPrimaryInverse_warnPalette_dark">@color/mdTextColorPrimary_light</item>
+    <item name="mdTextColorPrimaryInverse_warnPalette_light">@color/mdTextColorPrimary_dark</item>
+    <item name="mdTextColorSecondaryInverse_warnPalette">@color/mdTextColorSecondary_light</item>
+    <item name="mdTextColorSecondaryInverse_warnPalette_dark">@color/mdTextColorSecondary_light</item>
+    <item name="mdTextColorSecondaryInverse_warnPalette_light">@color/mdTextColorSecondary_dark</item>
+    <item name="mdTextColorHintInverse_warnPalette">@color/mdTextColorHint_light</item>
+    <item name="mdTextColorHintInverse_warnPalette_dark">@color/mdTextColorHint_light</item>
+    <item name="mdTextColorHintInverse_warnPalette_light">@color/mdTextColorHint_dark</item>
+    <item name="mdColorDividerInverse_warnPalette">@color/mdColorDivider_light</item>
+    <item name="mdColorDividerInverse_warnPalette_dark">@color/mdColorDivider_light</item>
+    <item name="mdColorDividerInverse_warnPalette_light">@color/mdColorDivider_dark</item>
+
+    <!-- textColor for background palette -->
+    <item name="mdTextColorPrimary_backgroundPalette">@color/mdTextColorPrimary_dark</item>
+    <item name="mdTextColorPrimary_backgroundPalette_dark">@color/mdTextColorPrimary_dark</item>
+    <item name="mdTextColorPrimary_backgroundPalette_light">@color/mdTextColorPrimary_dark</item>
+    <item name="mdTextColorSecondary_backgroundPalette">@color/mdTextColorSecondary_dark</item>
+    <item name="mdTextColorSecondary_backgroundPalette_dark">@color/mdTextColorSecondary_dark</item>
+    <item name="mdTextColorSecondary_backgroundPalette_light">@color/mdTextColorSecondary_dark</item>
+    <item name="mdTextColorHint_backgroundPalette">@color/mdTextColorHint_dark</item>
+    <item name="mdTextColorHint_backgroundPalette_dark">@color/mdTextColorHint_dark</item>
+    <item name="mdTextColorHint_backgroundPalette_light">@color/mdTextColorHint_dark</item>
+    <item name="mdColorDivider_backgroundPalette">@color/mdColorDivider_dark</item>
+    <item name="mdColorDivider_backgroundPalette_dark">@color/mdColorDivider_dark</item>
+    <item name="mdColorDivider_backgroundPalette_light">@color/mdColorDivider_dark</item>
+
+    <item name="mdTextColorPrimaryInverse_backgroundPalette">@color/mdTextColorPrimary_light</item>
+    <item name="mdTextColorPrimaryInverse_backgroundPalette_dark">@color/mdTextColorPrimary_light</item>
+    <item name="mdTextColorPrimaryInverse_backgroundPalette_light">@color/mdTextColorPrimary_light</item>
+    <item name="mdTextColorSecondaryInverse_backgroundPalette">@color/mdTextColorSecondary_light</item>
+    <item name="mdTextColorSecondaryInverse_backgroundPalette_dark">@color/mdTextColorSecondary_light</item>
+    <item name="mdTextColorSecondaryInverse_backgroundPalette_light">@color/mdTextColorSecondary_light</item>
+    <item name="mdTextColorHintInverse_backgroundPalette">@color/mdTextColorHint_light</item>
+    <item name="mdTextColorHintInverse_backgroundPalette_dark">@color/mdTextColorHint_light</item>
+    <item name="mdTextColorHintInverse_backgroundPalette_light">@color/mdTextColorHint_light</item>
+    <item name="mdColorDividerInverse_backgroundPalette">@color/mdColorDivider_light</item>
+    <item name="mdColorDividerInverse_backgroundPalette_dark">@color/mdColorDivider_light</item>
+    <item name="mdColorDividerInverse_backgroundPalette_light">@color/mdColorDivider_light</item>
 
     <!-- override material style -->
     <!--colorPrimary: The primary branding color for the app. By default, this is the color applied to the action bar background.-->
