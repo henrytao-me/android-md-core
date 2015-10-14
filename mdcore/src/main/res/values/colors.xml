@@ -16,17 +16,25 @@
 
 <resources>
 
-  <!-- Dark text on light backgrounds:  87%:DE 54%:8A 38%:61 12%:1E -->
+  <!-- Dark text on light background:  87%:DE 54%:8A 38%:61 12%:1E -->
   <color name="mdTextColorPrimary_light">@color/abc_primary_text_material_light</color>
   <color name="mdTextColorSecondary_light">@color/abc_secondary_text_material_light</color>
   <color name="mdTextColorHint_light">#61000000</color>
   <color name="mdColorDivider_light">#1E000000</color>
 
-  <!-- White text on dark backgrounds: 100%:FF 70%:B3 30%:4C 12%:1E -->
+  <!-- White text on dark background: 100%:FF 70%:B3 30%:4C 12%:1E -->
   <color name="mdTextColorPrimary_dark">@color/abc_primary_text_material_dark</color>
   <color name="mdTextColorSecondary_dark">@color/abc_secondary_text_material_dark</color>
   <color name="mdTextColorHint_dark">#4CFFFFFF</color>
   <color name="mdColorDivider_dark">#1EFFFFFF</color>
+
+  <!-- Icon color on light background: 54%:8A 26%:42 -->
+  <color name="mdIconColor_light">#8A000000</color>
+  <color name="mdIconColor_inactive_light">#42000000</color>
+
+  <!-- Icon color on dark background: 100%:8A 30%:4C -->
+  <color name="mdIconColor_dark">#FFFFFFFF</color>
+  <color name="mdIconColor_inactive_dark">#4CFFFFFF</color>
 
   <!-- 500 - 700 - 100 in the palette -->
   <color name="mdColor_red">#F44336</color>
