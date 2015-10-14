@@ -36,4 +36,6 @@
   <dimen name="mdLineSpacingExtra_headline">8sp</dimen>
   <dimen name="mdLineSpacingExtra_display1">6sp</dimen>
   <dimen name="mdLineSpacingExtra_display2">3sp</dimen>
+
+  <dimen name="mdLayoutSpacing_md">16dp</dimen>
 </resources>
