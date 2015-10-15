@@ -19,6 +19,9 @@ package me.henrytao.mdcore.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
+import android.os.Build;
+import android.view.Window;
 import android.view.WindowManager;
 
 /**
@@ -27,7 +30,13 @@ import android.view.WindowManager;
 public class ResourceUtils {
 
   public static void enableTranslucentStatus(Activity activity) {
-    activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+    Window window = activity.getWindow();
+    window.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+      window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+      window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+      window.setStatusBarColor(Color.TRANSPARENT);
+    }
   }
 
   public static int getActionBarSize(Context context) {
