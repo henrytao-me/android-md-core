@@ -37,5 +37,8 @@
   <dimen name="mdLineSpacingExtra_display1">6sp</dimen>
   <dimen name="mdLineSpacingExtra_display2">3sp</dimen>
 
+  <dimen name="mdFontSize_toolbarTitle">20dp</dimen>
+  <dimen name="mdFontSize_toolbarSubtitle">16dp</dimen>
+
   <dimen name="mdLayoutSpacing_md">16dp</dimen>
 </resources>

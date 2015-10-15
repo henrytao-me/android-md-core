@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package me.henrytao.mddemo;
+package me.henrytao.mddemo.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -26,6 +26,7 @@ import android.view.View;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import me.henrytao.mddemo.R;
 
 public class InfoActivity extends BaseActivity {
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package me.henrytao.mddemo;
+package me.henrytao.mddemo.activity;
 
 import com.android.vending.billing.IInAppBillingService;
 
@@ -51,6 +51,7 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import me.henrytao.mddemo.R;
 
 /**
  * Created by henrytao on 10/11/15.

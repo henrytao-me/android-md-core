@@ -17,8 +17,20 @@
 <resources>
 
   <style name="MdToolbar" parent="Widget.AppCompat.Toolbar">
-    <item name="android:layout_height">wrap_content</item>
     <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">?attr/actionBarSize</item>
     <item name="android:background">?attr/mdColor_primaryPalette</item>
+  </style>
+
+  <style name="MdToolbar.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textSize">@dimen/mdFontSize_toolbarTitle</item>
+  </style>
+
+  <style name="MdToolbar.Subtitle" parent="TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textSize">@dimen/mdFontSize_toolbarSubtitle</item>
   </style>
 </resources>

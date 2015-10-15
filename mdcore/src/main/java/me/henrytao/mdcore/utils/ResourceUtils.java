@@ -16,13 +16,19 @@
 
 package me.henrytao.mdcore.utils;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.view.WindowManager;
 
 /**
  * Created by henrytao on 10/10/15.
  */
 public class ResourceUtils {
+
+  public static void enableTranslucentStatus(Activity activity) {
+    activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+  }
 
   public static int getActionBarSize(Context context) {
     TypedArray styledAttributes = context.getTheme().obtainStyledAttributes(new int[]{android.R.attr.actionBarSize});
