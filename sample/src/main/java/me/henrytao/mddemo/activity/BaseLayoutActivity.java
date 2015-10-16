@@ -19,6 +19,7 @@ package me.henrytao.mddemo.activity;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -29,6 +30,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -41,6 +43,12 @@ import me.henrytao.mddemo.R;
 public class BaseLayoutActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
 
   protected static final long DRAWER_CLOSE_DELAY = 200;
+
+  private static final int BACK_PRESSED_DELAY = 2000;
+
+  private static Handler sHandler = new Handler();
+
+  private static boolean sIsBackPressed;
 
   @Bind(R.id.collapsing_toolbar_layout)
   CollapsingToolbarLayout vCollapsingToolbarLayout;
@@ -68,6 +76,10 @@ public class BaseLayoutActivity extends BaseActivity implements NavigationView.O
   public void onBackPressed() {
     if (vDrawerLayout.isDrawerOpen(GravityCompat.START)) {
       vDrawerLayout.closeDrawer(GravityCompat.START);
+    } else if (!sIsBackPressed && isTaskRoot()) {
+      Toast.makeText(this, R.string.text_back_pressed_confirmation, Toast.LENGTH_SHORT).show();
+      sIsBackPressed = true;
+      sHandler.postDelayed(() -> sIsBackPressed = false, BACK_PRESSED_DELAY);
     } else {
       super.onBackPressed();
     }
@@ -138,6 +150,7 @@ public class BaseLayoutActivity extends BaseActivity implements NavigationView.O
         break;
     }
     if (intent != null) {
+      intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
       startActivity(intent);
     }
   }

@@ -18,10 +18,25 @@ package me.henrytao.mddemo.activity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
+
+import butterknife.Bind;
+import me.henrytao.mddemo.R;
 
 public class ListsActivity extends BaseLayoutActivity {
 
   public static Intent newIntent(Context context) {
     return new Intent(context, ListsActivity.class);
+  }
+
+  @Bind(R.id.container)
+  ViewGroup vContainer;
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    LayoutInflater.from(this).inflate(R.layout.fragment_lists, vContainer, true);
   }
 }

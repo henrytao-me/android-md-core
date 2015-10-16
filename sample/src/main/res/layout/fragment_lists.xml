@@ -16,20 +16,9 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
-  android:layout_height="wrap_content"
-  android:orientation="vertical">
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:padding="@dimen/mdLayoutSpacing">
 
-  <View
-    android:id="@+id/translucent_status_holder"
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/mdStatusBarSize" />
 
-  <ImageView
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/mdIconSize"
-    android:layout_margin="@dimen/mdLayoutSpacing"
-    android:scaleType="fitStart"
-    android:src="@drawable/nav_google_logo" />
-
-  <View style="@style/MdDivider" />
 </LinearLayout>

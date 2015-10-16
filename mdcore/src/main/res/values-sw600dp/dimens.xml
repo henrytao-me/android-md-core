@@ -14,22 +14,15 @@
   ~ limitations under the License.
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="match_parent"
-  android:layout_height="wrap_content"
-  android:orientation="vertical">
+<resources>
 
-  <View
-    android:id="@+id/translucent_status_holder"
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/mdStatusBarSize" />
+  <dimen name="mdListItemHeight">64dp</dimen>
+  <dimen name="mdListItemHeight_sm">48dp</dimen>
+  <dimen name="mdListItemHeight_lg">72dp</dimen>
+  <dimen name="mdListItemHeight_xlg">88dp</dimen>
 
-  <ImageView
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/mdIconSize"
-    android:layout_margin="@dimen/mdLayoutSpacing"
-    android:scaleType="fitStart"
-    android:src="@drawable/nav_google_logo" />
-
-  <View style="@style/MdDivider" />
-</LinearLayout>
+  <dimen name="mdListItemPaddingLeft">24dp</dimen>
+  <dimen name="mdListItemPaddingLeft_lg">104dp</dimen>
+  <dimen name="mdListItemPaddingRight">16dp</dimen>
+  <dimen name="mdListItemPaddingRight_lg">72dp</dimen>
+</resources>

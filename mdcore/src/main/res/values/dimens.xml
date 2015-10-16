@@ -40,9 +40,29 @@
   <dimen name="mdFontSize_toolbarTitle">20dp</dimen>
   <dimen name="mdFontSize_toolbarSubtitle">16dp</dimen>
 
-  <dimen name="mdIcon">48dp</dimen>
+  <dimen name="mdIconSize">48dp</dimen>
+  <dimen name="mdIconSize_log">56dp</dimen>
 
   <dimen name="mdLayoutSpacing">16dp</dimen>
+  <dimen name="mdLayoutSpacing_sm">8dp</dimen>
+  <dimen name="mdLayoutSpacing_lg">32dp</dimen>
+
+  <dimen name="mdListItemHeight">56dp</dimen>
+  <dimen name="mdListItemHeight_sm">48dp</dimen>
+  <dimen name="mdListItemHeight_lg">72dp</dimen>
+  <dimen name="mdListItemHeight_xlg">88dp</dimen>
+
+  <dimen name="mdListItemPaddingLeft">16dp</dimen>
+  <dimen name="mdListItemPaddingLeft_lg">72dp</dimen>
+  <dimen name="mdListItemPaddingRight">16dp</dimen>
+  <dimen name="mdListItemPaddingRight_lg">56dp</dimen>
+
+  <dimen name="mdListIconSize">48dp</dimen>
+  <dimen name="mdListIconPadding">16dp</dimen>
+  <dimen name="mdListAvatarSize">48dp</dimen>
+  <dimen name="mdListAvatarPadding">4dp</dimen>
+
+  <dimen name="mdListItemSpacing">8dp</dimen>
 
   <dimen name="mdStatusBarSize">24dp</dimen>
 </resources>
