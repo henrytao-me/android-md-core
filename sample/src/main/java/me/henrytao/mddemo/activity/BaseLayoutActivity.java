@@ -22,6 +22,7 @@ import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.TextView;
 
 import butterknife.Bind;
@@ -50,6 +51,9 @@ public class BaseLayoutActivity extends BaseActivity {
   @Bind(R.id.toolbar)
   Toolbar vToolbar;
 
+  @Bind(R.id.translucent_status_holder)
+  View vTranslucentStatusHolder;
+
   private ActionBarDrawerToggle mActionBarDrawerToggle;
 
   private CharSequence mTitle;
@@ -71,6 +75,7 @@ public class BaseLayoutActivity extends BaseActivity {
     setSupportActionBar(vToolbar);
 
     boolean isFitSystemWindows = ViewCompat.getFitsSystemWindows(vDrawerLayout);
+    vTranslucentStatusHolder.setVisibility(isFitSystemWindows ? View.VISIBLE : View.GONE);
     if (isFitSystemWindows) {
       ResourceUtils.enableTranslucentStatus(this);
     }

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+
+  <style name="MdDivider">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">1dp</item>
+    <item name="android:background">?attr/mdColorDivider_backgroundPalette</item>
+  </style>
+
+  <style name="MdDivider.AlignParentBottom">
+    <item name="android:layout_alignParentBottom">true</item>
+  </style>
+
+  <!--<style name="MdDivider.AlignParentBottom.LeftMargin">-->
+  <!--<item name="android:layout_marginLeft">?attr/mdLayout_contentAssociatedWithIconOrAvatarLeftMargin</item>-->
+  <!--</style>-->
+
+  <style name="MdDivider.AlignParentTop">
+    <item name="android:layout_alignParentTop">true</item>
+  </style>
+
+  <!--<style name="MdDivider.AlignParentTop.LeftMargin">-->
+  <!--<item name="android:layout_marginLeft">?attr/mdLayout_contentAssociatedWithIconOrAvatarLeftMargin</item>-->
+  <!--</style>-->
+
+  <!-- Vertical -->
+
+  <style name="MdDivider.Vertical">
+    <item name="android:layout_width">0.6dp</item>
+    <item name="android:layout_height">match_parent</item>
+  </style>
+
+  <style name="MdDivider.Vertical.AlignParentLeft">
+    <item name="android:layout_alignParentLeft">true</item>
+  </style>
+
+  <style name="MdDivider.Vertical.AlignParentRight">
+    <item name="android:layout_alignParentRight">true</item>
+  </style>
+</resources>

@@ -14,23 +14,22 @@
   ~ limitations under the License.
   -->
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
   android:orientation="vertical">
 
-  <TextView
-    android:text="hello moto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content" />
-
   <View
+    android:id="@+id/translucent_status_holder"
     android:layout_width="match_parent"
-    android:layout_height="80dp" />
+    android:layout_height="@dimen/mdStatusBarSize" />
 
-  <!--<ImageView-->
-  <!--android:layout_width="match_parent"-->
-  <!--android:layout_height="wrap_content"-->
-  <!--android:scaleType="fitXY"-->
-  <!--android:src="@drawable/cover" />-->
-</FrameLayout>
+  <ImageView
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mdIcon"
+    android:layout_margin="@dimen/mdLayoutSpacing"
+    android:scaleType="fitStart"
+    android:src="@drawable/nav_google_logo" />
+
+  <View style="@style/MdDivider" />
+</LinearLayout>
