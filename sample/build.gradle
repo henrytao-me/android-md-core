@@ -1,13 +1,19 @@
 apply plugin: "com.android.application"
+apply plugin: "me.tatarka.retrolambda"
 apply plugin: "io.fabric"
 
 android {
+  compileOptions {
+    sourceCompatibility rootProject.ext.java.sourceCompatibility
+    targetCompatibility rootProject.ext.java.targetCompatibility
+  }
+
   compileSdkVersion rootProject.ext.android.compileSdkVersion
   buildToolsVersion rootProject.ext.android.buildToolsVersion
 
   defaultConfig {
     applicationId rootProject.ext.android.applicationId
-    minSdkVersion rootProject.ext.android.minSdkVersion
+    minSdkVersion rootProject.ext.sample.minSdkVersion
     targetSdkVersion rootProject.ext.android.targetSdkVersion
     versionCode rootProject.ext.android.versionCode
     versionName rootProject.ext.android.versionName
@@ -24,6 +30,10 @@ android {
     disable "InvalidPackage"
     lintConfig file("lint.xml")
   }
+}
+
+retrolambda {
+  jvmArgs "-noverify"
 }
 
 dependencies {
@@ -48,5 +58,7 @@ dependencies {
   }
 
   compile rootProject.ext.dependencies["com.jakewharton:butterknife"]
-  compile 'com.android.support:support-v4:23.0.1'
+
+  compile rootProject.ext.dependencies["io.reactivex:rxjava"]
+  compile rootProject.ext.dependencies["io.reactivex:rxandroid"]
 }

@@ -20,6 +20,7 @@
     <item android:title="Material Design">
       <menu>
         <item
+          android:id="@+id/menu_introduction"
           android:icon="@drawable/ic_blank_transparent"
           android:title="Introduction" />
       </menu>
@@ -110,7 +111,7 @@
       <menu>
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Bootom sheets" />
+          android:title="Bottom sheets" />
         <item
           android:icon="@drawable/ic_blank_transparent"
           android:title="Buttons" />
@@ -136,6 +137,7 @@
           android:icon="@drawable/ic_blank_transparent"
           android:title="Grid lists" />
         <item
+          android:id="@+id/menu_lists"
           android:icon="@drawable/ic_blank_transparent"
           android:title="Lists" />
         <item

@@ -16,17 +16,12 @@
 
 package me.henrytao.mddemo.activity;
 
+import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 
-public class MainActivity extends BaseActivity {
+public class IntroductionActivity extends BaseLayoutActivity {
 
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    Intent intent = IntroductionActivity.newIntent(this);
-    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-    startActivity(intent);
-    finish();
+  public static Intent newIntent(Context context) {
+    return new Intent(context, IntroductionActivity.class);
   }
 }

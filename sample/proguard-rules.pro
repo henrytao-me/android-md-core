@@ -16,4 +16,8 @@
 #   public *;
 #}
 
+# https://github.com/henrytao-me/smooth-app-bar-layout
 -keep class me.henrytao.smoothappbarlayout.** { *; }
+
+# https://github.com/evant/gradle-retrolambda
+-dontwarn java.lang.invoke.*
