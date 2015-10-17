@@ -17,8 +17,51 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:orientation="vertical"
-  android:padding="@dimen/mdLayoutSpacing">
+  android:orientation="vertical">
 
+  <View style="@style/MdListSpacing" />
 
+  <RelativeLayout
+    android:background="@drawable/md_ripple"
+    android:clickable="true"
+    style="@style/MdListItem.SingleLine.TextOnly">
+
+    <TextView
+      android:text="@string/hello_world"
+      style="@style/Base.MdListItem.SingleLine.TextOnly.Title" />
+  </RelativeLayout>
+
+  <View style="@style/MdDivider.AlignParentBottom" />
+
+  <RelativeLayout
+    android:background="@drawable/md_ripple"
+    android:clickable="true"
+    style="@style/MdListItem.SingleLine.IconWithText">
+
+    <ImageView
+      android:src="@drawable/ic_blank"
+      style="@style/Base.MdListItem.SingleLine.IconWithText.Icon" />
+
+    <TextView
+      android:text="@string/hello_world"
+      style="@style/Base.MdListItem.SingleLine.IconWithText.Title" />
+  </RelativeLayout>
+
+  <View style="@style/MdDivider.AlignParentBottom" />
+
+  <RelativeLayout
+    android:background="@drawable/md_ripple"
+    android:clickable="true"
+    style="@style/MdListItem.SingleLine.AvatarWithText">
+
+    <ImageView
+      android:src="@drawable/ic_blank"
+      style="@style/Base.MdListItem.SingleLine.AvatarWithText.Avatar" />
+
+    <TextView
+      android:text="@string/hello_world"
+      style="@style/Base.MdListItem.SingleLine.AvatarWithText.Title" />
+  </RelativeLayout>
+
+  <View style="@style/MdDivider.AlignParentBottom" />
 </LinearLayout>

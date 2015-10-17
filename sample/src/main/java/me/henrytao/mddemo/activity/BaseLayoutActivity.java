@@ -151,6 +151,7 @@ public class BaseLayoutActivity extends BaseActivity implements NavigationView.O
     }
     if (intent != null) {
       intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+      intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
       startActivity(intent);
     }
   }

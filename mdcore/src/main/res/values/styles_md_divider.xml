@@ -18,8 +18,12 @@
 
   <style name="MdDivider">
     <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">1dp</item>
+    <item name="android:layout_height">0.6dp</item>
     <item name="android:background">?attr/mdColorDivider_backgroundPalette</item>
+  </style>
+
+  <style name="MdDivider.Thick">
+    <item name="android:layout_height">1dp</item>
   </style>
 
   <style name="MdDivider.AlignParentBottom">

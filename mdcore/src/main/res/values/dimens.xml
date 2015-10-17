@@ -58,9 +58,9 @@
   <dimen name="mdListItemPaddingRight_lg">56dp</dimen>
 
   <dimen name="mdListIconSize">48dp</dimen>
-  <dimen name="mdListIconPadding">16dp</dimen>
-  <dimen name="mdListAvatarSize">48dp</dimen>
-  <dimen name="mdListAvatarPadding">4dp</dimen>
+  <dimen name="mdListIconPadding">12dp</dimen>
+  <dimen name="mdListAvatarSize">40dp</dimen>
+  <dimen name="mdListAvatarPadding">0dp</dimen>
 
   <dimen name="mdListItemSpacing">8dp</dimen>
 
