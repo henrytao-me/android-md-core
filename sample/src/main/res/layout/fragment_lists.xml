@@ -21,47 +21,289 @@
 
   <View style="@style/MdListSpacing" />
 
-  <RelativeLayout
-    android:background="@drawable/md_ripple"
-    android:clickable="true"
-    style="@style/MdListItem.SingleLine.TextOnly">
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+  <!-- SingleLine -->
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
 
-    <TextView
-      android:text="@string/hello_world"
-      style="@style/Base.MdListItem.SingleLine.TextOnly.Title" />
-  </RelativeLayout>
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-  <View style="@style/MdDivider.AlignParentBottom" />
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdListItem.SingleLine.TextOnly">
 
-  <RelativeLayout
-    android:background="@drawable/md_ripple"
-    android:clickable="true"
-    style="@style/MdListItem.SingleLine.IconWithText">
+      <TextView
+        android:text="@string/text_short"
+        style="@style/Base.MdListItem.Title" />
+    </RelativeLayout>
 
-    <ImageView
-      android:src="@drawable/ic_blank"
-      style="@style/Base.MdListItem.SingleLine.IconWithText.Icon" />
+    <View style="@style/MdDivider.AlignParentBottom" />
 
-    <TextView
-      android:text="@string/hello_world"
-      style="@style/Base.MdListItem.SingleLine.IconWithText.Title" />
-  </RelativeLayout>
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdListItem.SingleLine.IconWithText">
 
-  <View style="@style/MdDivider.AlignParentBottom" />
+      <ImageView
+        android:src="@drawable/ic_blank_circle"
+        style="@style/Base.MdListItem.Icon" />
 
-  <RelativeLayout
-    android:background="@drawable/md_ripple"
-    android:clickable="true"
-    style="@style/MdListItem.SingleLine.AvatarWithText">
+      <TextView
+        android:text="@string/text_short"
+        style="@style/Base.MdListItem.Title.Left" />
+    </RelativeLayout>
 
-    <ImageView
-      android:src="@drawable/ic_blank"
-      style="@style/Base.MdListItem.SingleLine.AvatarWithText.Avatar" />
+    <View style="@style/MdDivider.AlignParentBottom" />
 
-    <TextView
-      android:text="@string/hello_world"
-      style="@style/Base.MdListItem.SingleLine.AvatarWithText.Title" />
-  </RelativeLayout>
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdListItem.SingleLine.AvatarWithText">
 
-  <View style="@style/MdDivider.AlignParentBottom" />
+      <ImageView
+        android:src="@drawable/ic_blank_circle"
+        style="@style/Base.MdListItem.Avatar" />
+
+      <TextView
+        android:text="@string/text_short"
+        style="@style/Base.MdListItem.Title.Left" />
+    </RelativeLayout>
+
+    <View style="@style/MdDivider.AlignParentBottom" />
+
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdListItem.SingleLine.AvatarWithTextAndIcon">
+
+      <ImageView
+        android:src="@drawable/ic_blank_circle"
+        style="@style/Base.MdListItem.Avatar" />
+
+      <ImageView
+        android:src="@drawable/ic_blank_circle"
+        style="@style/Base.MdListItem.Icon.Right" />
+
+      <TextView
+        android:text="@string/text_short"
+        style="@style/Base.MdListItem.Title.Both" />
+    </RelativeLayout>
+
+    <View style="@style/MdDivider" />
+  </LinearLayout>
+
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+  <!-- TwoLine -->
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdListItem.TwoLine.TextOnly">
+
+      <LinearLayout style="@style/Base.MdListItem.Wrapper">
+
+        <TextView
+          android:text="@string/text_short"
+          style="@style/Base.MdListItem.Title" />
+
+        <TextView
+          android:text="@string/text_short"
+          style="@style/Base.MdListItem.Subtitle" />
+      </LinearLayout>
+    </RelativeLayout>
+
+    <View style="@style/MdDivider" />
+
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdListItem.TwoLine.IconWithText">
+
+      <ImageView
+        android:src="@drawable/ic_blank_circle"
+        style="@style/Base.MdListItem.Icon" />
+
+      <LinearLayout style="@style/Base.MdListItem.Wrapper">
+
+        <TextView
+          android:text="@string/text_short"
+          style="@style/Base.MdListItem.Title.Left" />
+
+        <TextView
+          android:text="@string/text_short"
+          style="@style/Base.MdListItem.Subtitle.Left" />
+      </LinearLayout>
+    </RelativeLayout>
+
+    <View style="@style/MdDivider" />
+
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdListItem.TwoLine.AvatarWithText">
+
+      <ImageView
+        android:src="@drawable/ic_blank_circle"
+        style="@style/Base.MdListItem.Avatar" />
+
+      <LinearLayout style="@style/Base.MdListItem.Wrapper">
+
+        <TextView
+          android:text="@string/text_short"
+          style="@style/Base.MdListItem.Title.Left" />
+
+        <TextView
+          android:text="@string/text_short"
+          style="@style/Base.MdListItem.Subtitle.Left" />
+      </LinearLayout>
+    </RelativeLayout>
+
+    <View style="@style/MdDivider" />
+
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdListItem.TwoLine.AvatarWithTextAndIcon">
+
+      <ImageView
+        android:src="@drawable/ic_blank_circle"
+        style="@style/Base.MdListItem.Avatar" />
+
+      <ImageView
+        android:src="@drawable/ic_blank_circle"
+        style="@style/Base.MdListItem.Icon.Right" />
+
+      <LinearLayout style="@style/Base.MdListItem.Wrapper">
+
+        <TextView
+          android:text="@string/text_short"
+          style="@style/Base.MdListItem.Title.Both" />
+
+        <TextView
+          android:text="@string/text_short"
+          style="@style/Base.MdListItem.Subtitle.Both" />
+      </LinearLayout>
+    </RelativeLayout>
+
+    <View style="@style/MdDivider" />
+  </LinearLayout>
+
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+  <!-- ThreeLine -->
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdListItem.ThreeLine.TextOnly">
+
+      <LinearLayout style="@style/Base.MdListItem.Wrapper">
+
+        <TextView
+          android:text="@string/text_short"
+          style="@style/Base.MdListItem.Title" />
+
+        <TextView
+          android:maxLines="2"
+          android:singleLine="false"
+          android:text="@string/text_short"
+          style="@style/Base.MdListItem.Subtitle" />
+      </LinearLayout>
+    </RelativeLayout>
+
+    <View style="@style/MdDivider" />
+
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdListItem.ThreeLine.IconWithText">
+
+      <ImageView
+        android:src="@drawable/ic_blank_circle"
+        style="@style/Base.MdListItem.Icon.Top" />
+
+      <LinearLayout style="@style/Base.MdListItem.Wrapper">
+
+        <TextView
+          android:text="@string/text_short"
+          style="@style/Base.MdListItem.Title.Left" />
+
+        <TextView
+          android:maxLines="2"
+          android:singleLine="false"
+          android:text="@string/text_short"
+          style="@style/Base.MdListItem.Subtitle.Left" />
+      </LinearLayout>
+    </RelativeLayout>
+
+    <View style="@style/MdDivider" />
+
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdListItem.ThreeLine.AvatarWithText">
+
+      <ImageView
+        android:src="@drawable/ic_blank_circle"
+        style="@style/Base.MdListItem.Avatar.Top" />
+
+      <LinearLayout style="@style/Base.MdListItem.Wrapper">
+
+        <TextView
+          android:text="@string/text_short"
+          style="@style/Base.MdListItem.Title.Left" />
+
+        <TextView
+          android:maxLines="2"
+          android:singleLine="false"
+          android:text="@string/text_short"
+          style="@style/Base.MdListItem.Subtitle.Left" />
+      </LinearLayout>
+    </RelativeLayout>
+
+    <View style="@style/MdDivider" />
+
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdListItem.ThreeLine.AvatarWithTextAndIcon">
+
+      <ImageView
+        android:src="@drawable/ic_blank_circle"
+        style="@style/Base.MdListItem.Avatar.Top" />
+
+      <ImageView
+        android:src="@drawable/ic_blank_circle"
+        style="@style/Base.MdListItem.Icon.TopRight" />
+
+      <LinearLayout style="@style/Base.MdListItem.Wrapper">
+
+        <TextView
+          android:text="@string/text_short"
+          style="@style/Base.MdListItem.Title.Both" />
+
+        <TextView
+          android:maxLines="2"
+          android:singleLine="false"
+          android:text="@string/text_short"
+          style="@style/Base.MdListItem.Subtitle.Both" />
+      </LinearLayout>
+    </RelativeLayout>
+
+    <View style="@style/MdDivider" />
+  </LinearLayout>
 </LinearLayout>
