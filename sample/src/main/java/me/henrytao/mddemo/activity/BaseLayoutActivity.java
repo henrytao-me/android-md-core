@@ -36,6 +36,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import me.henrytao.mdcore.utils.ResourceUtils;
 import me.henrytao.mddemo.R;
+import me.henrytao.smoothappbarlayout.SmoothCollapsingToolbarLayout;
 
 /**
  * Created by henrytao on 10/15/15.
@@ -58,6 +59,9 @@ public class BaseLayoutActivity extends BaseActivity implements NavigationView.O
 
   @Bind(R.id.navigation_view)
   NavigationView vNavigationView;
+
+  @Bind(R.id.smooth_collapsing_toolbar_layout)
+  SmoothCollapsingToolbarLayout vSmoothCollapsingToolbarLayout;
 
   @Bind(R.id.title)
   TextView vTitle;

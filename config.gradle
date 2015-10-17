@@ -65,7 +65,7 @@ ext {
       "com.android.support:recyclerview-v7"    : "com.android.support:recyclerview-v7:23.0.1",
 
       "me.henrytao:recyclerview"               : "me.henrytao:recyclerview:1.2.0",
-      "me.henrytao:smooth-app-bar-layout"      : "me.henrytao:smooth-app-bar-layout:0.1.8",
+      "me.henrytao:smooth-app-bar-layout"      : "me.henrytao:smooth-app-bar-layout:0.1.9",
 
       "com.crashlytics.sdk.android:crashlytics": "com.crashlytics.sdk.android:crashlytics:2.5.2@aar",
 

@@ -37,6 +37,7 @@ public class ListsActivity extends BaseLayoutActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+    vSmoothCollapsingToolbarLayout.setCollapsedOffsetX(getResources().getDimensionPixelOffset(R.dimen.mdListItemPaddingLeft_lg));
     LayoutInflater.from(this).inflate(R.layout.fragment_lists, vContainer, true);
   }
 }
