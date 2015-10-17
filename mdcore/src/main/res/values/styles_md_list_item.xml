@@ -109,9 +109,16 @@
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight_lg</item>
   </style>
 
-  <style name="Base.MdListItem.Title.Both">
-    <item name="android:paddingLeft">@dimen/mdListItemPaddingLeft_lg</item>
+  <style name="Base.MdListItem.Title.RightLarge">
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight_xlg</item>
+  </style>
+
+  <style name="Base.MdListItem.Title.LeftRight" parent="Base.MdListItem.Title.Left">
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight_lg</item>
+  </style>
+
+  <style name="Base.MdListItem.Title.LeftRightLarge" parent="Base.MdListItem.Title.Left">
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight_xlg</item>
   </style>
 
   <style name="Base.MdListItem.Subtitle" parent="MdText.Body1.SingleLine">
@@ -131,13 +138,20 @@
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight_lg</item>
   </style>
 
-  <style name="Base.MdListItem.Subtitle.Both">
-    <item name="android:paddingLeft">@dimen/mdListItemPaddingLeft_lg</item>
+  <style name="Base.MdListItem.Subtitle.RightLarge">
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight_xlg</item>
+  </style>
+
+  <style name="Base.MdListItem.Subtitle.LeftRight" parent="Base.MdListItem.Subtitle.Left">
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight_lg</item>
   </style>
 
+  <style name="Base.MdListItem.Subtitle.LeftRightLarge" parent="Base.MdListItem.Subtitle.Left">
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight_xlg</item>
+  </style>
+
   <style name="Base.MdListItem.Icon" parent="">
-    <item name="android:scaleType">fitCenter</item>
+    <item name="android:scaleType">fitXY</item>
     <item name="android:layout_width">@dimen/mdListIconSize</item>
     <item name="android:layout_height">@dimen/mdListIconSize</item>
     <item name="android:paddingTop">@dimen/mdListIconPadding</item>
@@ -164,7 +178,7 @@
   </style>
 
   <style name="Base.MdListItem.Avatar" parent="">
-    <item name="android:scaleType">fitCenter</item>
+    <item name="android:scaleType">fitXY</item>
     <item name="android:layout_width">@dimen/mdListAvatarSize</item>
     <item name="android:layout_height">@dimen/mdListAvatarSize</item>
     <item name="android:paddingTop">@dimen/mdListAvatarPadding</item>
@@ -180,5 +194,13 @@
     <item name="android:layout_centerVertical">false</item>
     <item name="android:layout_marginTop">@dimen/mdListItemPaddingLeft</item>
     <item name="android:layout_marginBottom">@dimen/mdListItemPaddingLeft</item>
+  </style>
+
+  <style name="Base.MdListItem.Avatar.Right">
+    <item name="android:layout_alignParentRight">true</item>
+  </style>
+
+  <style name="Base.MdListItem.Avatar.TopRight" parent="Base.MdListItem.Avatar.Top">
+    <item name="android:layout_alignParentRight">true</item>
   </style>
 </resources>

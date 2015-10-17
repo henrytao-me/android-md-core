@@ -89,7 +89,27 @@
 
       <TextView
         android:text="@string/text_short"
-        style="@style/Base.MdListItem.Title.Both" />
+        style="@style/Base.MdListItem.Title.LeftRight" />
+    </RelativeLayout>
+
+    <View style="@style/MdDivider" />
+
+    <RelativeLayout
+      android:background="@drawable/md_ripple"
+      android:clickable="true"
+      style="@style/MdListItem.SingleLine.AvatarWithTextAndIcon">
+
+      <ImageView
+        android:src="@drawable/ic_blank_circle"
+        style="@style/Base.MdListItem.Avatar.Right" />
+
+      <ImageView
+        android:src="@drawable/ic_blank_circle"
+        style="@style/Base.MdListItem.Icon" />
+
+      <TextView
+        android:text="@string/text_short"
+        style="@style/Base.MdListItem.Title.LeftRightLarge" />
     </RelativeLayout>
 
     <View style="@style/MdDivider" />
@@ -186,11 +206,11 @@
 
         <TextView
           android:text="@string/text_short"
-          style="@style/Base.MdListItem.Title.Both" />
+          style="@style/Base.MdListItem.Title.LeftRight" />
 
         <TextView
           android:text="@string/text_short"
-          style="@style/Base.MdListItem.Subtitle.Both" />
+          style="@style/Base.MdListItem.Subtitle.LeftRight" />
       </LinearLayout>
     </RelativeLayout>
 
@@ -294,13 +314,13 @@
 
         <TextView
           android:text="@string/text_short"
-          style="@style/Base.MdListItem.Title.Both" />
+          style="@style/Base.MdListItem.Title.LeftRight" />
 
         <TextView
           android:maxLines="2"
           android:singleLine="false"
           android:text="@string/text_short"
-          style="@style/Base.MdListItem.Subtitle.Both" />
+          style="@style/Base.MdListItem.Subtitle.LeftRight" />
       </LinearLayout>
     </RelativeLayout>
 
