@@ -146,6 +146,21 @@
     <item name="mdColorDividerInverse_backgroundPalette_dark">@color/mdColorDivider_dark</item>
     <item name="mdColorDividerInverse_backgroundPalette_light">@color/mdColorDivider_dark</item>
 
+    <item name="MdListItemSingleLineTextOnly">@style/MdListItem.SingleLine.TextOnly</item>
+    <item name="MdListItemSingleLineIconWithText">@style/MdListItem.SingleLine.IconWithText</item>
+    <item name="MdListItemSingleLineAvatarWithText">@style/MdListItem.SingleLine.AvatarWithText</item>
+    <item name="MdListItemSingleLineAvatarWithTextAndIcon">@style/MdListItem.SingleLine.AvatarWithTextAndIcon</item>
+
+    <item name="MdListItemTwoLineTextOnly">@style/MdListItem.TwoLine.TextOnly</item>
+    <item name="MdListItemTwoLineIconWithText">@style/MdListItem.TwoLine.IconWithText</item>
+    <item name="MdListItemTwoLineAvatarWithText">@style/MdListItem.TwoLine.AvatarWithText</item>
+    <item name="MdListItemTwoLineAvatarWithTextAndIcon">@style/MdListItem.TwoLine.AvatarWithTextAndIcon</item>
+
+    <item name="MdListItemThreeLineTextOnly">@style/MdListItem.ThreeLine.TextOnly</item>
+    <item name="MdListItemThreeLineIconWithText">@style/MdListItem.ThreeLine.IconWithText</item>
+    <item name="MdListItemThreeLineAvatarWithText">@style/MdListItem.ThreeLine.AvatarWithText</item>
+    <item name="MdListItemThreeLineAvatarWithTextAndIcon">@style/MdListItem.ThreeLine.AvatarWithTextAndIcon</item>
+
     <!-- override material style -->
     <!--colorPrimary: The primary branding color for the app. By default, this is the color applied to the action bar background.-->
     <!--colorPrimaryDark: Dark variant of the primary branding color. By default, this is the color applied to the status bar (via statusBarColor) and navigation bar (via navigationBarColor).-->
@@ -308,6 +323,21 @@
     <item name="mdColorDividerInverse_backgroundPalette">@color/mdColorDivider_light</item>
     <item name="mdColorDividerInverse_backgroundPalette_dark">@color/mdColorDivider_light</item>
     <item name="mdColorDividerInverse_backgroundPalette_light">@color/mdColorDivider_light</item>
+
+    <item name="MdListItemSingleLineTextOnly">@style/MdListItem.SingleLine.TextOnly</item>
+    <item name="MdListItemSingleLineIconWithText">@style/MdListItem.SingleLine.IconWithText</item>
+    <item name="MdListItemSingleLineAvatarWithText">@style/MdListItem.SingleLine.AvatarWithText</item>
+    <item name="MdListItemSingleLineAvatarWithTextAndIcon">@style/MdListItem.SingleLine.AvatarWithTextAndIcon</item>
+
+    <item name="MdListItemTwoLineTextOnly">@style/MdListItem.TwoLine.TextOnly</item>
+    <item name="MdListItemTwoLineIconWithText">@style/MdListItem.TwoLine.IconWithText</item>
+    <item name="MdListItemTwoLineAvatarWithText">@style/MdListItem.TwoLine.AvatarWithText</item>
+    <item name="MdListItemTwoLineAvatarWithTextAndIcon">@style/MdListItem.TwoLine.AvatarWithTextAndIcon</item>
+
+    <item name="MdListItemThreeLineTextOnly">@style/MdListItem.ThreeLine.TextOnly</item>
+    <item name="MdListItemThreeLineIconWithText">@style/MdListItem.ThreeLine.IconWithText</item>
+    <item name="MdListItemThreeLineAvatarWithText">@style/MdListItem.ThreeLine.AvatarWithText</item>
+    <item name="MdListItemThreeLineAvatarWithTextAndIcon">@style/MdListItem.ThreeLine.AvatarWithTextAndIcon</item>
 
     <!-- override material style -->
     <!--colorPrimary: The primary branding color for the app. By default, this is the color applied to the action bar background.-->

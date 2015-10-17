@@ -15,11 +15,26 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:orientation="vertical">
 
   <View style="@style/MdListSpacing" />
+
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+  <!-- Widget -->
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+  <me.henrytao.mdcore.widgets.MdListItem
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/md_ripple"
+    android:clickable="true"
+    app:mdli_type="single_line_icon_with_text">
+
+    <include layout="@layout/mdli_single_line_icon_with_text" />
+  </me.henrytao.mdcore.widgets.MdListItem>
 
   <!-- ////////////////////////////////////////////////////////////////////////// -->
   <!-- SingleLine -->
@@ -28,7 +43,8 @@
   <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:visibility="gone">
 
     <RelativeLayout
       android:background="@drawable/md_ripple"
@@ -93,26 +109,6 @@
     </RelativeLayout>
 
     <View style="@style/MdDivider" />
-
-    <RelativeLayout
-      android:background="@drawable/md_ripple"
-      android:clickable="true"
-      style="@style/MdListItem.SingleLine.AvatarWithTextAndIcon">
-
-      <ImageView
-        android:src="@drawable/ic_blank_circle"
-        style="@style/Base.MdListItem.Avatar.Right" />
-
-      <ImageView
-        android:src="@drawable/ic_blank_circle"
-        style="@style/Base.MdListItem.Icon" />
-
-      <TextView
-        android:text="@string/text_short"
-        style="@style/Base.MdListItem.Title.LeftRightLarge" />
-    </RelativeLayout>
-
-    <View style="@style/MdDivider" />
   </LinearLayout>
 
   <!-- ////////////////////////////////////////////////////////////////////////// -->
@@ -122,7 +118,8 @@
   <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:visibility="gone">
 
     <RelativeLayout
       android:background="@drawable/md_ripple"
@@ -224,7 +221,8 @@
   <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:visibility="gone">
 
     <RelativeLayout
       android:background="@drawable/md_ripple"
