@@ -1,4 +1,4 @@
-[ ![Download](https://api.bintray.com/packages/henrytao-me/maven/recyclerview/images/download.svg) ](https://bintray.com/henrytao-me/maven/recyclerview/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/henrytao-me/maven/mdcore/images/download.svg) ](https://bintray.com/henrytao-me/maven/mdcore/_latestVersion)
 
 android-md-core
 ================
