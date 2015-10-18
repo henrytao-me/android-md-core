@@ -21,12 +21,12 @@
 
   <ImageView
     android:id="@android:id/icon1"
-    tools:src="@drawable/ic_blank_circle"
+    tools:src="?attr/ic_blank_circle"
     style="@style/Base.MdListItem.Avatar" />
 
   <ImageView
     android:id="@android:id/icon2"
-    tools:src="@drawable/ic_blank_circle"
+    tools:src="?attr/ic_blank_circle"
     style="@style/Base.MdListItem.Icon.Right" />
 
   <LinearLayout style="@style/Base.MdListItem.Wrapper">

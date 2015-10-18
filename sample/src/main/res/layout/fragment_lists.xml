@@ -32,8 +32,8 @@
     android:layout_height="wrap_content"
     android:background="@drawable/md_ripple"
     android:clickable="true"
-    app:mdli_avatar="@drawable/ic_blank_circle"
-    app:mdli_icon="@drawable/ic_blank_circle"
+    app:mdli_avatar="?attr/ic_blank_circle"
+    app:mdli_icon="?attr/ic_blank_circle"
     app:mdli_subtitle="This is subtitle"
     app:mdli_title="Hello moto"
     app:mdli_type="two_line_avatar_with_text_and_icon" />
@@ -66,7 +66,7 @@
       style="@style/MdListItem.SingleLine.IconWithText">
 
       <ImageView
-        android:src="@drawable/ic_blank_circle"
+        android:src="?attr/ic_blank_circle"
         style="@style/Base.MdListItem.Icon" />
 
       <TextView
@@ -82,7 +82,7 @@
       style="@style/MdListItem.SingleLine.AvatarWithText">
 
       <ImageView
-        android:src="@drawable/ic_blank_circle"
+        android:src="?attr/ic_blank_circle"
         style="@style/Base.MdListItem.Avatar" />
 
       <TextView
@@ -98,11 +98,11 @@
       style="@style/MdListItem.SingleLine.AvatarWithTextAndIcon">
 
       <ImageView
-        android:src="@drawable/ic_blank_circle"
+        android:src="?attr/ic_blank_circle"
         style="@style/Base.MdListItem.Avatar" />
 
       <ImageView
-        android:src="@drawable/ic_blank_circle"
+        android:src="?attr/ic_blank_circle"
         style="@style/Base.MdListItem.Icon.Right" />
 
       <TextView
@@ -148,7 +148,7 @@
       style="@style/MdListItem.TwoLine.IconWithText">
 
       <ImageView
-        android:src="@drawable/ic_blank_circle"
+        android:src="?attr/ic_blank_circle"
         style="@style/Base.MdListItem.Icon" />
 
       <LinearLayout style="@style/Base.MdListItem.Wrapper">
@@ -171,7 +171,7 @@
       style="@style/MdListItem.TwoLine.AvatarWithText">
 
       <ImageView
-        android:src="@drawable/ic_blank_circle"
+        android:src="?attr/ic_blank_circle"
         style="@style/Base.MdListItem.Avatar" />
 
       <LinearLayout style="@style/Base.MdListItem.Wrapper">
@@ -194,11 +194,11 @@
       style="@style/MdListItem.TwoLine.AvatarWithTextAndIcon">
 
       <ImageView
-        android:src="@drawable/ic_blank_circle"
+        android:src="?attr/ic_blank_circle"
         style="@style/Base.MdListItem.Avatar" />
 
       <ImageView
-        android:src="@drawable/ic_blank_circle"
+        android:src="?attr/ic_blank_circle"
         style="@style/Base.MdListItem.Icon.Right" />
 
       <LinearLayout style="@style/Base.MdListItem.Wrapper">
@@ -253,7 +253,7 @@
       style="@style/MdListItem.ThreeLine.IconWithText">
 
       <ImageView
-        android:src="@drawable/ic_blank_circle"
+        android:src="?attr/ic_blank_circle"
         style="@style/Base.MdListItem.Icon.Top" />
 
       <LinearLayout style="@style/Base.MdListItem.Wrapper">
@@ -278,7 +278,7 @@
       style="@style/MdListItem.ThreeLine.AvatarWithText">
 
       <ImageView
-        android:src="@drawable/ic_blank_circle"
+        android:src="?attr/ic_blank_circle"
         style="@style/Base.MdListItem.Avatar.Top" />
 
       <LinearLayout style="@style/Base.MdListItem.Wrapper">
@@ -303,11 +303,11 @@
       style="@style/MdListItem.ThreeLine.AvatarWithTextAndIcon">
 
       <ImageView
-        android:src="@drawable/ic_blank_circle"
+        android:src="?attr/ic_blank_circle"
         style="@style/Base.MdListItem.Avatar.Top" />
 
       <ImageView
-        android:src="@drawable/ic_blank_circle"
+        android:src="?attr/ic_blank_circle"
         style="@style/Base.MdListItem.Icon.TopRight" />
 
       <LinearLayout style="@style/Base.MdListItem.Wrapper">

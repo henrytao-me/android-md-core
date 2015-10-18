@@ -158,6 +158,8 @@
     <item name="MdListItemThreeLineAvatarWithTextAndIcon">@style/MdListItem.ThreeLine.AvatarWithTextAndIcon</item>
 
     <item name="ic_toolbar_arrow_back">@drawable/ic_toolbar_arrow_back</item>
+    <item name="ic_blank_circle">@drawable/ic_blank_circle</item>
+    <item name="ic_blank">@drawable/ic_blank</item>
 
     <!-- override material style -->
     <!--colorPrimary: The primary branding color for the app. By default, this is the color applied to the action bar background.-->

@@ -21,7 +21,7 @@
 
   <ImageView
     android:id="@android:id/icon1"
-    tools:src="@drawable/ic_blank_circle"
+    tools:src="?attr/ic_blank_circle"
     style="@style/Base.MdListItem.Avatar.Top" />
 
   <LinearLayout style="@style/Base.MdListItem.Wrapper">

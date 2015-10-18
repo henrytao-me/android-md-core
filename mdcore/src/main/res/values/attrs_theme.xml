@@ -16,5 +16,7 @@
 
 <resources>
 
+  <attr name="ic_blank_circle" format="reference" />
+  <attr name="ic_blank" format="reference" />
   <attr name="ic_toolbar_arrow_back" format="reference" />
 </resources>
