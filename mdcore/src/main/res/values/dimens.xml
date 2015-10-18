@@ -41,7 +41,7 @@
   <dimen name="mdFontSize_toolbarSubtitle">16dp</dimen>
 
   <dimen name="mdIconSize">48dp</dimen>
-  <dimen name="mdIconSize_log">56dp</dimen>
+  <dimen name="mdIconSize_lg">56dp</dimen>
 
   <dimen name="mdLayoutSpacing">16dp</dimen>
   <dimen name="mdLayoutSpacing_sm">8dp</dimen>
