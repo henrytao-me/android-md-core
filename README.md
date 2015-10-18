@@ -1,28 +1,53 @@
-[ ![Download](https://api.bintray.com/packages/henrytao-me/maven/bootstrap-android-library/images/download.svg) ](https://bintray.com/henrytao-me/maven/bootstrap-android-library/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/henrytao-me/maven/recyclerview/images/download.svg) ](https://bintray.com/henrytao-me/maven/recyclerview/_latestVersion)
 
-bootstrap-android-library
+android-md-core
 ================
 
-Bootstrapping android library
+`AppCompat` and `Google Support Design` are really awesome but they also have some limitations. Theming android app is not an easy task, especially keeping consistent UI on both Lollipop and Non-Lollipop devices is even harder. If you've tried `CardView`, `Spinner`, `Theme`, you know what I mean. So, I propose `android-md-core` - Material bootstrap for Android development like Bootstrap or Foundation for web.
+
+I am working hard to predefine element styles as many as I can. If you find that it still doesn't meet your need, don't hesitate to send me a request. I love to work with you to solve problems. [Send a request HERE](https://github.com/henrytao-me/android-md-core/issues)
 
 
-## Configuration
-
-1. Rename `library` module to your library name. Ex: `bootstrap-android-library`
-2. Check out some of these files: `config.gradle`, `sample/src/main/res/values/strings.xml`
-3. Setup bintray account and add these information into project `local.properties`
+## Installation
 
 ```
-bintray.apikey=xxx
-bintray.user=xxx
-bintray.gpg.password=xxx
+compile "me.henrytao:mdcore:<latest-version>"
 ```
+
+`android-md-core` is deployed to `jCenter`. Make sure you have `jcenter()` in your project gradle.
+
+
+## Demo
+
+[![Get it on Google Play](https://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](https://play.google.com/store/apps/details?id=me.henrytao.mdcore)
+
+Please note that the app on the Play store is not always the latest version.
+
+
+## Concepts
+`android-md-core` is designed base on some priciples:
+
+- **Widely support:** based on `appcompat` and `google support design` for sure.
+- **Simplicity:** used `attribute-based` theme system rather than `value-based` theme system. This increases the flexibility to have multiple theme in one app. 
+- **Ease to use:** predefined style for most of base elements. So that, you can use easily like `Bootstrap` or `Foundation` for web.
+- **Consistency:** consistent UI for both Lollipop and Non-Lollipop devices. 
+- **Modern:** keep up to date with [Google Material Design](https://www.google.com/design/spec/material-design/introduction.html).
+
+
+## Features
+
+ ![Button](./screenshots/all-in-one.jpg)
+
+
+## Usage
+
+- Updating
 
 
 ## Contributing
 
 Any contributions are welcome!  
-Please check the [CONTRIBUTING](CONTRIBUTING.md) guideline before submitting a new PR.
+Please check the [CONTRIBUTING](CONTRIBUTING.md) guideline before submitting a new issue. Wanna send PR? [Click HERE](https://github.com/henrytao-me/android-md-core/pulls)
 
 
 ## License
@@ -40,5 +65,3 @@ Please check the [CONTRIBUTING](CONTRIBUTING.md) guideline before submitting a n
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
-
