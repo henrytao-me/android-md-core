@@ -57,6 +57,12 @@ public class BaseLayoutActivity extends BaseActivity implements NavigationView.O
   @Bind(R.id.drawer_layout)
   DrawerLayout vDrawerLayout;
 
+  @Bind(R.id.menu_donate)
+  View vMenuDonate;
+
+  @Bind(R.id.menu_help_and_feedback)
+  View vMenuHelpAndFeedback;
+
   @Bind(R.id.navigation_view)
   NavigationView vNavigationView;
 
@@ -137,6 +143,14 @@ public class BaseLayoutActivity extends BaseActivity implements NavigationView.O
     mActionBarDrawerToggle.syncState();
 
     vNavigationView.setNavigationItemSelectedListener(this);
+
+    vMenuDonate.setOnClickListener(v -> onFooterMenuClick(v));
+    vMenuHelpAndFeedback.setOnClickListener(v -> onFooterMenuClick(v));
+  }
+
+  protected void onFooterMenuClick(View view) {
+    vDrawerLayout.closeDrawer(GravityCompat.START);
+    vDrawerLayout.postDelayed(() -> BaseLayoutActivity.this.onNavigationItemSelected(view.getId()), DRAWER_CLOSE_DELAY);
   }
 
   protected void onNavigationItemSelected(int id) {
@@ -152,6 +166,12 @@ public class BaseLayoutActivity extends BaseActivity implements NavigationView.O
           intent = ListsActivity.newIntent(this);
         }
         break;
+      case R.id.menu_donate:
+        showDonateDialog();
+        return;
+      case R.id.menu_help_and_feedback:
+        startActivity(InfoActivity.newIntent(this));
+        return;
     }
     if (intent != null) {
       intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);

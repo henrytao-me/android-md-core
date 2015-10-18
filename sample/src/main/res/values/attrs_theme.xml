@@ -16,21 +16,7 @@
 
 <resources>
 
-  <style name="Base.AppTheme.Light" parent="MdTheme.Light">
-    <item name="ic_donate_circle">@drawable/ic_donate_circle</item>
-    <item name="ic_help">@drawable/ic_help</item>
-    <item name="img_nav_google_logo">@drawable/img_nav_google_logo</item>
-  </style>
-
-  <style name="Base.AppTheme.Dark" parent="MdTheme.Dark">
-    <item name="ic_donate_circle">@drawable/ic_donate_circle_white</item>
-    <item name="ic_help">@drawable/ic_help_white</item>
-    <item name="img_nav_google_logo">@drawable/img_nav_google_logo_white</item>
-  </style>
-
-  <!-- AppTheme -->
-
-  <style name="AppTheme" parent="Base.AppTheme.Dark">
-
-  </style>
+  <attr name="ic_donate_circle" format="reference" />
+  <attr name="ic_help" format="reference" />
+  <attr name="img_nav_google_logo" format="reference" />
 </resources>

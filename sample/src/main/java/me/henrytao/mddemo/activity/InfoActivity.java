@@ -20,9 +20,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -38,33 +35,12 @@ public class InfoActivity extends BaseActivity {
   Toolbar vToolbar;
 
   @Override
-  public boolean onCreateOptionsMenu(Menu menu) {
-    getMenuInflater().inflate(R.menu.menu_info, menu);
-    return true;
-  }
-
-  @Override
-  public boolean onOptionsItemSelected(MenuItem item) {
-    switch (item.getItemId()) {
-      //case R.id.action_donate:
-      //  showDonateDialog();
-      //  return true;
-    }
-    return super.onOptionsItemSelected(item);
-  }
-
-  @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_info);
     ButterKnife.bind(this);
 
     setSupportActionBar(vToolbar);
-    vToolbar.setNavigationOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        onBackPressed();
-      }
-    });
+    vToolbar.setNavigationOnClickListener(v -> onBackPressed());
   }
 }

@@ -109,11 +109,12 @@
       <View style="@style/MdListSpacing" />
 
       <me.henrytao.mdcore.widgets.MdListItem
+        android:id="@+id/menu_donate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/md_ripple"
         android:clickable="true"
-        app:mdli_icon="@drawable/ic_donate_circle"
+        app:mdli_icon="?attr/ic_donate_circle"
         app:mdli_title="@string/text_donate"
         app:mdli_type="single_line_icon_with_text">
 
@@ -129,13 +130,14 @@
       </me.henrytao.mdcore.widgets.MdListItem>
 
       <me.henrytao.mdcore.widgets.MdListItem
+        android:id="@+id/menu_help_and_feedback"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/md_ripple"
         android:clickable="true"
         android:textSize="@dimen/mdFontSize_body1"
-        app:mdli_icon="@drawable/ic_help"
-        app:mdli_title="@string/text_help_feedback"
+        app:mdli_icon="?attr/ic_help"
+        app:mdli_title="@string/text_help_and_feedback"
         app:mdli_type="single_line_icon_with_text">
 
         <ImageView

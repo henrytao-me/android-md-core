@@ -29,7 +29,7 @@
     android:layout_height="@dimen/mdIconSize"
     android:layout_margin="@dimen/mdLayoutSpacing"
     android:scaleType="fitStart"
-    android:src="@drawable/nav_google_logo" />
+    android:src="?attr/img_nav_google_logo" />
 
   <View style="@style/MdDivider.Thick" />
 </LinearLayout>

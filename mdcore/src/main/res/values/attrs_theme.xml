@@ -14,12 +14,7 @@
   ~ limitations under the License.
   -->
 
-<menu xmlns:tools="http://schemas.android.com/tools"
-  tools:context="me.henrytao.mddemo.activity.InfoActivity">
+<resources>
 
-  <!--<item-->
-  <!--android:id="@+id/action_donate"-->
-  <!--android:icon="@drawable/ic_toolbar_donate_circle"-->
-  <!--android:title="@string/text_donate"-->
-  <!--compat:showAsAction="always" />-->
-</menu>
+  <attr name="ic_toolbar_arrow_back" format="reference" />
+</resources>
