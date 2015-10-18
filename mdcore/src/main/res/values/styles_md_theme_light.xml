@@ -22,13 +22,13 @@
     <item name="mdColor_primaryPalette_dark">@color/mdColor_cyan_dark</item>
     <item name="mdColor_primaryPalette_light">@color/mdColor_cyan_light</item>
 
-    <item name="mdColor_accentPalette">@color/mdColor_pink</item>
-    <item name="mdColor_accentPalette_dark">@color/mdColor_pink_dark</item>
-    <item name="mdColor_accentPalette_light">@color/mdColor_pink_light</item>
+    <item name="mdColor_accentPalette">@color/mdColor_pink_accent</item>
+    <item name="mdColor_accentPalette_dark">@color/mdColor_pink_accent_dark</item>
+    <item name="mdColor_accentPalette_light">@color/mdColor_pink_accent_light</item>
 
-    <item name="mdColor_warnPalette">@color/mdColor_red</item>
-    <item name="mdColor_warnPalette_dark">@color/mdColor_red_dark</item>
-    <item name="mdColor_warnPalette_light">@color/mdColor_red_light</item>
+    <item name="mdColor_warnPalette">@color/mdColor_red_accent</item>
+    <item name="mdColor_warnPalette_dark">@color/mdColor_red_accent_dark</item>
+    <item name="mdColor_warnPalette_light">@color/mdColor_red_accent_light</item>
 
     <item name="mdColor_backgroundPalette">@color/mdColor_background_light</item>
     <item name="mdColor_backgroundPalette_dark">@color/mdColor_background_light</item>
