@@ -27,14 +27,16 @@
   <!-- ////////////////////////////////////////////////////////////////////////// -->
 
   <me.henrytao.mdcore.widgets.MdListItem
+    android:id="@+id/md_list_item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/md_ripple"
     android:clickable="true"
-    app:mdli_type="single_line_icon_with_text">
-
-    <include layout="@layout/mdli_single_line_icon_with_text" />
-  </me.henrytao.mdcore.widgets.MdListItem>
+    app:mdli_avatar="@drawable/ic_blank_circle"
+    app:mdli_icon="@drawable/ic_blank_circle"
+    app:mdli_subtitle="This is subtitle"
+    app:mdli_title="Hello moto"
+    app:mdli_type="two_line_avatar_with_text_and_icon" />
 
   <!-- ////////////////////////////////////////////////////////////////////////// -->
   <!-- SingleLine -->

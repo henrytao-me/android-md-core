@@ -30,6 +30,10 @@
   <attr name="MdListItemThreeLineAvatarWithTextAndIcon" format="reference" />
 
   <declare-styleable name="MdListItem">
+    <attr name="mdli_title" format="string|reference" />
+    <attr name="mdli_subtitle" format="string|reference" />
+    <attr name="mdli_avatar" format="reference" />
+    <attr name="mdli_icon" format="reference" />
     <attr name="mdli_type" format="integer">
       <enum name="single_line_text_only" value="11" />
       <enum name="single_line_icon_with_text" value="12" />

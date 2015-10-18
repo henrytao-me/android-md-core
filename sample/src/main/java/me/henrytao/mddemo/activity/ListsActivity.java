@@ -23,6 +23,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import butterknife.Bind;
+import butterknife.ButterKnife;
 import me.henrytao.mddemo.R;
 
 public class ListsActivity extends BaseLayoutActivity {
@@ -39,5 +40,6 @@ public class ListsActivity extends BaseLayoutActivity {
     super.onCreate(savedInstanceState);
     vSmoothCollapsingToolbarLayout.setCollapsedOffsetX(getResources().getDimensionPixelOffset(R.dimen.mdListItemPaddingLeft_lg));
     LayoutInflater.from(this).inflate(R.layout.fragment_lists, vContainer, true);
+    ButterKnife.bind(this);
   }
 }
