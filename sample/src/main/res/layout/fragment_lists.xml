@@ -32,7 +32,6 @@
     android:layout_height="wrap_content"
     android:background="@drawable/md_ripple"
     android:clickable="true"
-    app:mdli_avatar="@drawable/ic_blank_circle"
     app:mdli_icon="@drawable/ic_blank_circle"
     app:mdli_subtitle="This is subtitle"
     app:mdli_title="Hello moto"

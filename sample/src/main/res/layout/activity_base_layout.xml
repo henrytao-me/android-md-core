@@ -91,7 +91,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="start"
     android:clipToPadding="false"
-    android:paddingBottom="48dp"
+    android:paddingBottom="112dp"
     app:headerLayout="@layout/drawer_header"
     app:itemIconTint="?attr/mdTextColorPrimary_backgroundPalette"
     app:itemTextColor="?attr/mdTextColorPrimary_backgroundPalette"
@@ -101,14 +101,55 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_gravity="bottom"
-      android:layout_marginBottom="-48dp"
+      android:layout_marginBottom="-112dp"
       android:orientation="vertical">
 
       <View style="@style/MdDivider" />
 
-      <TextView
-        android:text="Hello moto"
-        style="@style/MdText.Body1.SingleLine" />
+      <View style="@style/MdListSpacing" />
+
+      <me.henrytao.mdcore.widgets.MdListItem
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/md_ripple"
+        android:clickable="true"
+        app:mdli_icon="@drawable/ic_donate_circle"
+        app:mdli_title="@string/text_donate"
+        app:mdli_type="single_line_icon_with_text">
+
+        <ImageView
+          android:id="@android:id/icon2"
+          tools:src="@drawable/ic_blank_circle"
+          style="@style/Base.MdListItem.Icon" />
+
+        <TextView
+          android:id="@android:id/text1"
+          tools:text="List item title"
+          style="@style/Base.MdListItem.MenuTitle.Left" />
+      </me.henrytao.mdcore.widgets.MdListItem>
+
+      <me.henrytao.mdcore.widgets.MdListItem
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/md_ripple"
+        android:clickable="true"
+        android:textSize="@dimen/mdFontSize_body1"
+        app:mdli_icon="@drawable/ic_help"
+        app:mdli_title="@string/text_help_feedback"
+        app:mdli_type="single_line_icon_with_text">
+
+        <ImageView
+          android:id="@android:id/icon2"
+          tools:src="@drawable/ic_blank_circle"
+          style="@style/Base.MdListItem.Icon" />
+
+        <TextView
+          android:id="@android:id/text1"
+          tools:text="List item title"
+          style="@style/Base.MdListItem.MenuTitle.Left" />
+      </me.henrytao.mdcore.widgets.MdListItem>
+
+      <View style="@style/MdListSpacing" />
     </LinearLayout>
   </android.support.design.widget.NavigationView>
 </android.support.v4.widget.DrawerLayout>

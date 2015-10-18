@@ -14,14 +14,12 @@
   ~ limitations under the License.
   -->
 
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:tools="http://schemas.android.com/tools"
-  xmlns:compat="http://schemas.android.com/apk/res-auto"
+<menu xmlns:tools="http://schemas.android.com/tools"
   tools:context="me.henrytao.mddemo.activity.InfoActivity">
 
-  <item
-    android:id="@+id/action_donate"
-    android:icon="@drawable/ic_toolbar_donate_circle"
-    android:title="@string/text_donate"
-    compat:showAsAction="always" />
+  <!--<item-->
+  <!--android:id="@+id/action_donate"-->
+  <!--android:icon="@drawable/ic_toolbar_donate_circle"-->
+  <!--android:title="@string/text_donate"-->
+  <!--compat:showAsAction="always" />-->
 </menu>

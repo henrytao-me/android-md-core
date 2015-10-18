@@ -46,9 +46,9 @@ public class InfoActivity extends BaseActivity {
   @Override
   public boolean onOptionsItemSelected(MenuItem item) {
     switch (item.getItemId()) {
-      case R.id.action_donate:
-        showDonateDialog();
-        return true;
+      //case R.id.action_donate:
+      //  showDonateDialog();
+      //  return true;
     }
     return super.onOptionsItemSelected(item);
   }

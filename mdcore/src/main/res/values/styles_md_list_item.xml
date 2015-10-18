@@ -92,6 +92,8 @@
     <item name="android:layout_marginBottom">@dimen/mdListItemSpacing</item>
   </style>
 
+  <!-- Title -->
+
   <style name="Base.MdListItem.Title" parent="MdText.Subhead1.SingleLine">
     <item name="android:layout_marginTop">@dimen/mdListItemLineSpacingExtra</item>
     <item name="android:layout_marginBottom">@dimen/mdListItemLineSpacingExtra</item>
@@ -120,6 +122,39 @@
   <style name="Base.MdListItem.Title.LeftRightLarge" parent="Base.MdListItem.Title.Left">
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight_xlg</item>
   </style>
+
+  <!-- MenuTitle -->
+
+  <style name="Base.MdListItem.MenuTitle" parent="MdText.Body2.SingleLine">
+    <item name="android:layout_marginTop">@dimen/mdListItemLineSpacingExtra</item>
+    <item name="android:layout_marginBottom">@dimen/mdListItemLineSpacingExtra</item>
+    <item name="android:lineSpacingExtra">@dimen/mdListItemLineSpacingExtra</item>
+    <item name="android:paddingLeft">@dimen/mdListItemPaddingLeft</item>
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight</item>
+    <item name="android:layout_centerVertical">true</item>
+  </style>
+
+  <style name="Base.MdListItem.MenuTitle.Left">
+    <item name="android:paddingLeft">@dimen/mdListItemPaddingLeft_lg</item>
+  </style>
+
+  <style name="Base.MdListItem.MenuTitle.Right">
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight_lg</item>
+  </style>
+
+  <style name="Base.MdListItem.MenuTitle.RightLarge">
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight_xlg</item>
+  </style>
+
+  <style name="Base.MdListItem.MenuTitle.LeftRight" parent="Base.MdListItem.MenuTitle.Left">
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight_lg</item>
+  </style>
+
+  <style name="Base.MdListItem.MenuTitle.LeftRightLarge" parent="Base.MdListItem.MenuTitle.Left">
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight_xlg</item>
+  </style>
+
+  <!-- Subtitle -->
 
   <style name="Base.MdListItem.Subtitle" parent="MdText.Body1.SingleLine">
     <item name="android:textColor">?attr/mdTextColorSecondary_backgroundPalette</item>
@@ -150,6 +185,8 @@
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight_xlg</item>
   </style>
 
+  <!-- Icon -->
+
   <style name="Base.MdListItem.Icon" parent="">
     <item name="android:scaleType">fitXY</item>
     <item name="android:layout_width">@dimen/mdListIconSize</item>
@@ -176,6 +213,8 @@
   <style name="Base.MdListItem.Icon.TopRight" parent="Base.MdListItem.Icon.Top">
     <item name="android:layout_alignParentRight">true</item>
   </style>
+
+  <!-- Avatar -->
 
   <style name="Base.MdListItem.Avatar" parent="">
     <item name="android:scaleType">fitXY</item>
