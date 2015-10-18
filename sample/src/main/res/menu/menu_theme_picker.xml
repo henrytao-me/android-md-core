@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <item
+    android:id="@+id/action_theme_red"
+    android:icon="@drawable/ic_theme_red"
+    android:title="Red" />
+  <item
+    android:id="@+id/action_theme_pink"
+    android:icon="@drawable/ic_theme_pink"
+    android:title="Pink" />
+  <item
+    android:id="@+id/action_theme_purple"
+    android:icon="@drawable/ic_theme_purple"
+    android:title="Purple" />
+  <item
+    android:id="@+id/action_theme_deep_purple"
+    android:icon="@drawable/ic_theme_deep_purple"
+    android:title="Deep Purple" />
+  <item
+    android:id="@+id/action_theme_indigo"
+    android:icon="@drawable/ic_theme_indigo"
+    android:title="Indigo" />
+  <item
+    android:id="@+id/action_theme_blue"
+    android:icon="@drawable/ic_theme_blue"
+    android:title="Blue" />
+  <item
+    android:id="@+id/action_theme_light_blue"
+    android:icon="@drawable/ic_theme_light_blue"
+    android:title="Light Blue" />
+  <item
+    android:id="@+id/action_theme_cyan"
+    android:icon="@drawable/ic_theme_cyan"
+    android:title="Cyan" />
+  <item
+    android:id="@+id/action_theme_teal"
+    android:icon="@drawable/ic_theme_teal"
+    android:title="Teal" />
+  <item
+    android:id="@+id/action_theme_green"
+    android:icon="@drawable/ic_theme_green"
+    android:title="Green" />
+  <item
+    android:id="@+id/action_theme_light_green"
+    android:icon="@drawable/ic_theme_light_green"
+    android:title="Light Green" />
+  <item
+    android:id="@+id/action_theme_lime"
+    android:icon="@drawable/ic_theme_lime"
+    android:title="Lime" />
+  <item
+    android:id="@+id/action_theme_yellow"
+    android:icon="@drawable/ic_theme_yellow"
+    android:title="Yellow" />
+  <item
+    android:id="@+id/action_theme_amber"
+    android:icon="@drawable/ic_theme_amber"
+    android:title="Amber" />
+  <item
+    android:id="@+id/action_theme_orange"
+    android:icon="@drawable/ic_theme_orange"
+    android:title="Orange" />
+  <item
+    android:id="@+id/action_theme_deep_orange"
+    android:icon="@drawable/ic_theme_deep_orange"
+    android:title="Deep Orange" />
+  <item
+    android:id="@+id/action_theme_brown"
+    android:icon="@drawable/ic_theme_brown"
+    android:title="Brown" />
+  <item
+    android:id="@+id/action_theme_grey"
+    android:icon="@drawable/ic_theme_grey"
+    android:title="Grey" />
+  <item
+    android:id="@+id/action_theme_blue_grey"
+    android:icon="@drawable/ic_theme_blue_grey"
+    android:title="Blue Grey" />
+  <item
+    android:id="@+id/action_theme_white"
+    android:icon="@drawable/ic_theme_white"
+    android:title="White" />
+  <item
+    android:id="@+id/action_theme_black"
+    android:icon="@drawable/ic_theme_black"
+    android:title="Black" />
+</menu>

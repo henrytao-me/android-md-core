@@ -52,6 +52,7 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import me.henrytao.mddemo.R;
+import me.henrytao.mddemo.utils.ThemeUtils;
 
 /**
  * Created by henrytao on 10/11/15.
@@ -98,6 +99,7 @@ public class BaseActivity extends AppCompatActivity {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
+    ThemeUtils.onCreate(this);
     super.onCreate(savedInstanceState);
     mDonateItems = getResources().getStringArray(R.array.donate_items);
     Intent serviceIntent = new Intent("com.android.vending.billing.InAppBillingService.BIND");

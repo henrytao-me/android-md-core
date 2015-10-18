@@ -19,18 +19,104 @@
   <style name="Base.AppTheme.Light" parent="MdTheme.Light">
     <item name="ic_donate_circle">@drawable/ic_donate_circle</item>
     <item name="ic_help">@drawable/ic_help</item>
+    <item name="ic_toolbar_color_lens">@drawable/ic_toolbar_color_lens</item>
     <item name="img_nav_google_logo">@drawable/img_nav_google_logo</item>
   </style>
 
   <style name="Base.AppTheme.Dark" parent="MdTheme.Dark">
     <item name="ic_donate_circle">@drawable/ic_donate_circle_white</item>
     <item name="ic_help">@drawable/ic_help_white</item>
+    <item name="ic_toolbar_color_lens">@drawable/ic_toolbar_color_lens_white</item>
     <item name="img_nav_google_logo">@drawable/img_nav_google_logo_white</item>
   </style>
 
   <!-- AppTheme -->
 
-  <style name="AppTheme" parent="Base.AppTheme.Dark">
+  <style name="AppTheme" parent="Base.AppTheme.Light">
+
+  </style>
+
+  <style name="AppTheme.Red" parent="Base.AppTheme.Dark">
+
+  </style>
+
+  <style name="AppTheme.Pink" parent="Base.AppTheme.Light">
+
+  </style>
+
+  <style name="AppTheme.Purple" parent="Base.AppTheme.Light">
+
+  </style>
+
+  <style name="AppTheme.DeepPurple" parent="Base.AppTheme.Light">
+
+  </style>
+
+  <style name="AppTheme.Indigo" parent="Base.AppTheme.Light">
+
+  </style>
+
+  <style name="AppTheme.Blue" parent="Base.AppTheme.Light">
+
+  </style>
+
+  <style name="AppTheme.LightBlue" parent="Base.AppTheme.Light">
+
+  </style>
+
+  <style name="AppTheme.Cyan" parent="Base.AppTheme.Light">
+
+  </style>
+
+  <style name="AppTheme.Teal" parent="Base.AppTheme.Light">
+
+  </style>
+
+  <style name="AppTheme.Green" parent="Base.AppTheme.Light">
+
+  </style>
+
+  <style name="AppTheme.LightGreen" parent="Base.AppTheme.Light">
+
+  </style>
+
+  <style name="AppTheme.Lime" parent="Base.AppTheme.Light">
+
+  </style>
+
+  <style name="AppTheme.Yellow" parent="Base.AppTheme.Light">
+
+  </style>
+
+  <style name="AppTheme.Amber" parent="Base.AppTheme.Light">
+
+  </style>
+
+  <style name="AppTheme.Orange" parent="Base.AppTheme.Light">
+
+  </style>
+
+  <style name="AppTheme.DeepOrange" parent="Base.AppTheme.Light">
+
+  </style>
+
+  <style name="AppTheme.Brown" parent="Base.AppTheme.Light">
+
+  </style>
+
+  <style name="AppTheme.Grey" parent="Base.AppTheme.Light">
+
+  </style>
+
+  <style name="AppTheme.BlueGrey" parent="Base.AppTheme.Light">
+
+  </style>
+
+  <style name="AppTheme.White" parent="Base.AppTheme.Light">
+
+  </style>
+
+  <style name="AppTheme.Black" parent="Base.AppTheme.Light">
 
   </style>
 </resources>

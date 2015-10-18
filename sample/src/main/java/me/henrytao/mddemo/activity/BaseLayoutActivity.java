@@ -16,6 +16,8 @@
 
 package me.henrytao.mddemo.activity;
 
+import com.cocosw.bottomsheet.BottomSheet;
+
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -27,6 +29,7 @@ import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -36,6 +39,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import me.henrytao.mdcore.utils.ResourceUtils;
 import me.henrytao.mddemo.R;
+import me.henrytao.mddemo.utils.ThemeUtils;
 import me.henrytao.smoothappbarlayout.SmoothCollapsingToolbarLayout;
 
 /**
@@ -102,6 +106,12 @@ public class BaseLayoutActivity extends BaseActivity implements NavigationView.O
   }
 
   @Override
+  public boolean onCreateOptionsMenu(Menu menu) {
+    getMenuInflater().inflate(R.menu.menu_main, menu);
+    return true;
+  }
+
+  @Override
   public boolean onNavigationItemSelected(final MenuItem item) {
     vDrawerLayout.closeDrawer(GravityCompat.START);
     vDrawerLayout.postDelayed(() -> BaseLayoutActivity.this.onNavigationItemSelected(item.getItemId()), DRAWER_CLOSE_DELAY);
@@ -110,6 +120,11 @@ public class BaseLayoutActivity extends BaseActivity implements NavigationView.O
 
   @Override
   public boolean onOptionsItemSelected(MenuItem item) {
+    switch (item.getItemId()) {
+      case R.id.action_theme:
+        showThemePicker();
+        return true;
+    }
     return super.onOptionsItemSelected(item);
   }
 
@@ -178,5 +193,15 @@ public class BaseLayoutActivity extends BaseActivity implements NavigationView.O
       intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
       startActivity(intent);
     }
+  }
+
+  protected void showThemePicker() {
+    new BottomSheet.Builder(this)
+        .title("Pick your favorite color")
+        .grid()
+        .sheet(R.menu.menu_theme_picker)
+        .listener((dialog, which) -> {
+          ThemeUtils.changeToTheme(this, which);
+        }).show();
   }
 }

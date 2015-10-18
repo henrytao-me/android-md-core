@@ -57,6 +57,8 @@ dependencies {
     exclude group: "com.android.support"
   }
 
+  compile rootProject.ext.dependencies["com.cocosw:bottomsheet"]
+
   compile rootProject.ext.dependencies["com.jakewharton:butterknife"]
 
   compile rootProject.ext.dependencies["io.reactivex:rxjava"]
