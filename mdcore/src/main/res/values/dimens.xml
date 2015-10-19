@@ -15,6 +15,9 @@
   -->
 
 <resources>
+  
+  <dimen name="mdDividerSize">0.6dp</dimen>
+  <dimen name="mdDividerSize_lg">1dp</dimen>
 
   <dimen name="mdFontSize_button">14sp</dimen>
   <dimen name="mdFontSize_caption">12sp</dimen>

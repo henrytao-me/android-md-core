@@ -14,24 +14,9 @@
   ~ limitations under the License.
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="match_parent"
-  android:layout_height="wrap_content"
-  android:orientation="vertical">
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
 
   <View
-    android:id="@+id/translucent_status_holder"
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/mdStatusBarSize" />
-
-  <ImageView
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/mdIconSize"
-    android:layout_margin="@dimen/mdLayoutSpacing"
-    android:scaleType="fitStart"
-    android:src="?attr/img_nav_google_logo" />
-
-  <View
-    android:layout_height="@dimen/mdDividerSize_lg"
+    android:layout_alignParentBottom="true"
     style="@style/MdDivider" />
-</LinearLayout>
+</merge>

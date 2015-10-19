@@ -24,7 +24,7 @@
 
   <style name="MdListSpacing">
     <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">@dimen/mdLayoutSpacing_sm</item>
+    <item name="android:layout_height">@dimen/mdListItemSpacing</item>
   </style>
 
   <style name="MdListItem.SingleLine.TextOnly" parent="Base.MdListItem">

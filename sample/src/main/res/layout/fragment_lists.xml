@@ -16,49 +16,28 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  android:orientation="vertical">
-
-  <View style="@style/MdListSpacing" />
-
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-  <!-- Widget -->
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-
-  <me.henrytao.mdcore.widgets.MdListItem
-    android:id="@+id/md_list_item"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="?attr/selectableItemBackground"
-    android:clickable="true"
-    app:mdli_avatar="?attr/ic_blank_circle"
-    app:mdli_icon="?attr/ic_blank_circle"
-    app:mdli_subtitle="This is subtitle"
-    app:mdli_title="Hello moto"
-    app:mdli_type="two_line_avatar_with_text_and_icon" />
+  xmlns:tools="http://schemas.android.com/tools"
+  tools:context=".activity.ListsActivity"
+  style="@style/MdList">
 
   <!-- ////////////////////////////////////////////////////////////////////////// -->
   <!-- SingleLine -->
   <!-- ////////////////////////////////////////////////////////////////////////// -->
 
-  <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:visibility="visible">
+  <LinearLayout style="@style/MdList">
 
-    <RelativeLayout
+    <TextView
+      android:text="Single Line - Text Only"
+      style="@style/MdSubHeader.List" />
+
+    <me.henrytao.mdcore.widgets.MdListItem
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
-      style="@style/MdListItem.SingleLine.TextOnly">
-
-      <TextView
-        android:text="@string/text_short"
-        style="@style/Base.MdListItem.Title" />
-    </RelativeLayout>
-
-    <View style="@style/MdDivider.AlignParentBottom" />
+      app:mdli_divider_layout="@layout/mdli_divider"
+      app:mdli_title="Single-line item"
+      app:mdli_type="single_line_text_only" />
 
     <RelativeLayout
       android:background="?attr/selectableItemBackground"
@@ -74,8 +53,6 @@
         style="@style/Base.MdListItem.Title.Left" />
     </RelativeLayout>
 
-    <View style="@style/MdDivider.AlignParentBottom" />
-
     <RelativeLayout
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
@@ -90,7 +67,6 @@
         style="@style/Base.MdListItem.Title.Left" />
     </RelativeLayout>
 
-    <View style="@style/MdDivider.AlignParentBottom" />
 
     <RelativeLayout
       android:background="?attr/selectableItemBackground"

@@ -25,6 +25,7 @@ import android.support.annotation.DrawableRes;
 import android.support.annotation.StringRes;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -89,6 +90,8 @@ public class MdListItem extends RelativeLayout {
 
   protected Drawable mAvatar;
 
+  protected int mDividerLayout;
+
   protected Drawable mIcon;
 
   protected String mSubtitle;
@@ -129,6 +132,10 @@ public class MdListItem extends RelativeLayout {
     int count = getChildCount();
     if (count == 0) {
       LayoutInflater.from(getContext()).inflate(getDefaultLayout(mType), this, true);
+    }
+    if (mDividerLayout > 0) {
+      //View dividerLayout = LayoutInflater.from(getContext()).inflate(mDividerLayout, this, false);
+      //addView(dividerLayout);
     }
     super.onFinishInflate();
     vTitle = (TextView) findViewById(android.R.id.text1);
@@ -194,6 +201,7 @@ public class MdListItem extends RelativeLayout {
     TypedArray a = getContext().getTheme().obtainStyledAttributes(attrs, R.styleable.MdListItem, 0, 0);
     try {
       mType = a.getInteger(R.styleable.MdListItem_mdli_type, DEFAULT_TYPE);
+      mDividerLayout = a.getResourceId(R.styleable.MdListItem_mdli_divider_layout, 0);
       mTitle = a.getString(R.styleable.MdListItem_mdli_title);
       mSubtitle = a.getString(R.styleable.MdListItem_mdli_subtitle);
       mAvatar = a.getDrawable(R.styleable.MdListItem_mdli_avatar);
@@ -205,13 +213,7 @@ public class MdListItem extends RelativeLayout {
 
   protected void renderInEditMode(AttributeSet attrs) {
     if (isInEditMode()) {
-      int[] attributes = new int[]{android.R.attr.minHeight};
-      TypedArray a = getContext().getTheme().obtainStyledAttributes(attrs, attributes, 0, 0);
-      try {
-        setMinimumHeight(a.getDimensionPixelSize(0, 0));
-      } finally {
-        a.recycle();
-      }
+      // TODO: render some special ui in preview mode
     }
   }
 

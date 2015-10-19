@@ -16,44 +16,42 @@
 
 <resources>
 
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+  <!-- Horizontal -->
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+
   <style name="MdDivider">
     <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">0.6dp</item>
+    <item name="android:layout_height">@dimen/mdDividerSize</item>
     <item name="android:background">?attr/mdColorDivider_backgroundPalette</item>
   </style>
 
-  <style name="MdDivider.Thick">
-    <item name="android:layout_height">1dp</item>
+  <style name="MdDivider.Left">
+    <item name="android:layout_marginLeft">@dimen/mdListItemPaddingLeft_lg</item>
   </style>
 
-  <style name="MdDivider.AlignParentBottom">
-    <item name="android:layout_alignParentBottom">true</item>
+  <style name="MdDivider.Right">
+    <item name="android:layout_marginLeft">@dimen/mdListItemPaddingRight_lg</item>
   </style>
 
-  <!--<style name="MdDivider.AlignParentBottom.LeftMargin">-->
-  <!--<item name="android:layout_marginLeft">?attr/mdLayout_contentAssociatedWithIconOrAvatarLeftMargin</item>-->
-  <!--</style>-->
-
-  <style name="MdDivider.AlignParentTop">
-    <item name="android:layout_alignParentTop">true</item>
+  <style name="MdDivider.RightLarge">
+    <item name="android:layout_marginLeft">@dimen/mdListItemPaddingRight_xlg</item>
   </style>
 
-  <!--<style name="MdDivider.AlignParentTop.LeftMargin">-->
-  <!--<item name="android:layout_marginLeft">?attr/mdLayout_contentAssociatedWithIconOrAvatarLeftMargin</item>-->
-  <!--</style>-->
+  <style name="MdDivider.LeftRight" parent="MdDivider.Left">
+    <item name="android:layout_marginLeft">@dimen/mdListItemPaddingRight_lg</item>
+  </style>
 
+  <style name="MdDivider.LeftRightLarge" parent="MdDivider.Left">
+    <item name="android:layout_marginLeft">@dimen/mdListItemPaddingRight_xlg</item>
+  </style>
+
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
   <!-- Vertical -->
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
 
   <style name="MdDivider.Vertical">
-    <item name="android:layout_width">0.6dp</item>
+    <item name="android:layout_width">@dimen/mdDividerSize</item>
     <item name="android:layout_height">match_parent</item>
-  </style>
-
-  <style name="MdDivider.Vertical.AlignParentLeft">
-    <item name="android:layout_alignParentLeft">true</item>
-  </style>
-
-  <style name="MdDivider.Vertical.AlignParentRight">
-    <item name="android:layout_alignParentRight">true</item>
   </style>
 </resources>
