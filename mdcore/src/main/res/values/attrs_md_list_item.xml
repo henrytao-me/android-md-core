@@ -30,6 +30,7 @@
   <attr name="MdListItemThreeLineAvatarWithTextAndIcon" format="reference" />
 
   <declare-styleable name="MdListItem">
+    <attr name="mdli_divider_layout" format="reference" />
     <attr name="mdli_title" format="string|reference" />
     <attr name="mdli_subtitle" format="string|reference" />
     <attr name="mdli_avatar" format="reference" />
