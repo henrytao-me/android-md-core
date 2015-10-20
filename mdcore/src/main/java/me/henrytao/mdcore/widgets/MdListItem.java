@@ -134,7 +134,7 @@ public class MdListItem extends RelativeLayout {
       LayoutInflater.from(getContext()).inflate(getDefaultLayout(mType), this, true);
     }
     if (mDividerLayout > 0) {
-      //View dividerLayout = LayoutInflater.from(getContext()).inflate(mDividerLayout, this, false);
+      //View dividerLayout = LayoutInflater.from(getContext()).inflate(mDividerLayout, null, false);
       //addView(dividerLayout);
     }
     super.onFinishInflate();
