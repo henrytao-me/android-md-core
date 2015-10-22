@@ -133,10 +133,10 @@ public class MdListItem extends RelativeLayout {
     if (count == 0) {
       LayoutInflater.from(getContext()).inflate(getDefaultLayout(mType), this, true);
     }
-    if (mDividerLayout > 0) {
+    //if (mDividerLayout > 0) {
       //View dividerLayout = LayoutInflater.from(getContext()).inflate(mDividerLayout, null, false);
       //addView(dividerLayout);
-    }
+    //}
     super.onFinishInflate();
     vTitle = (TextView) findViewById(android.R.id.text1);
     vSubtitle = (TextView) findViewById(android.R.id.text2);
