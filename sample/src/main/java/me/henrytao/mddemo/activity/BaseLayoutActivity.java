@@ -79,9 +79,6 @@ public class BaseLayoutActivity extends BaseActivity implements NavigationView.O
   @Bind(R.id.toolbar)
   Toolbar vToolbar;
 
-  @Bind(R.id.translucent_status_holder)
-  View vTranslucentStatusHolder;
-
   private ActionBarDrawerToggle mActionBarDrawerToggle;
 
   private CharSequence mTitle;
@@ -145,7 +142,6 @@ public class BaseLayoutActivity extends BaseActivity implements NavigationView.O
     setSupportActionBar(vToolbar);
 
     boolean isFitSystemWindows = ViewCompat.getFitsSystemWindows(vDrawerLayout);
-    vTranslucentStatusHolder.setVisibility(isFitSystemWindows ? View.VISIBLE : View.GONE);
     if (isFitSystemWindows) {
       ResourceUtils.enableTranslucentStatus(this);
     }

@@ -91,6 +91,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="start"
     android:clipToPadding="false"
+    android:fitsSystemWindows="@bool/isFitSystemWindows"
     android:paddingBottom="112dp"
     app:headerLayout="@layout/drawer_header"
     app:itemIconTint="?attr/mdTextColorPrimary_backgroundPalette"
