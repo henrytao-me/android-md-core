@@ -15,7 +15,7 @@
   -->
 
 <resources>
-  
+
   <dimen name="mdDividerSize">0.6dp</dimen>
   <dimen name="mdDividerSize_lg">1dp</dimen>
 
