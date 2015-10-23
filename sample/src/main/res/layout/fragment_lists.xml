@@ -490,4 +490,155 @@
       app:mdli_title="@string/text_three_line_item"
       app:mdli_type="three_line_avatar_with_text_and_icon" />
   </LinearLayout>
+
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+  <!-- ThreeLine -->
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+  <LinearLayout style="@style/MdList">
+
+    <TextView
+      android:text="Custom ListItem - Section 1"
+      style="@style/MdSubHeader.List" />
+
+    <me.henrytao.mdcore.widgets.MdListItem
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="?attr/selectableItemBackground"
+      android:clickable="true"
+      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_title="@string/text_three_line_item"
+      style="@style/MdListItem.SingleLine.AvatarWithText">
+
+      <ImageView
+        android:id="@android:id/icon1"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentRight="true"
+        tools:src="?attr/ic_blank_circle"
+        style="@style/Base.MdListItem.Avatar" />
+
+      <TextView
+        android:id="@android:id/text1"
+        tools:text="List item title"
+        style="@style/Base.MdListItem.Title.Left" />
+    </me.henrytao.mdcore.widgets.MdListItem>
+
+    <me.henrytao.mdcore.widgets.MdListItem
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="?attr/selectableItemBackground"
+      android:clickable="true"
+      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_title="@string/text_three_line_item"
+      style="@style/MdListItem.SingleLine.AvatarWithText">
+
+      <ImageView
+        android:id="@android:id/icon1"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentRight="true"
+        tools:src="?attr/ic_blank_circle"
+        style="@style/Base.MdListItem.Avatar" />
+
+      <TextView
+        android:id="@android:id/text1"
+        tools:text="List item title"
+        style="@style/Base.MdListItem.Title.Left" />
+    </me.henrytao.mdcore.widgets.MdListItem>
+
+    <me.henrytao.mdcore.widgets.MdListItem
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="?attr/selectableItemBackground"
+      android:clickable="true"
+      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_title="@string/text_three_line_item"
+      style="@style/MdListItem.SingleLine.AvatarWithText">
+
+      <ImageView
+        android:id="@android:id/icon1"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentRight="true"
+        tools:src="?attr/ic_blank_circle"
+        style="@style/Base.MdListItem.Avatar" />
+
+      <TextView
+        android:id="@android:id/text1"
+        tools:text="List item title"
+        style="@style/Base.MdListItem.Title.Left" />
+
+      <View
+        android:layout_alignParentBottom="true"
+        style="@style/MdDivider.Left" />
+    </me.henrytao.mdcore.widgets.MdListItem>
+
+    <TextView
+      android:text="Custom ListItem - Section 2"
+      style="@style/MdSubHeader.List" />
+
+    <me.henrytao.mdcore.widgets.MdListItem
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="?attr/selectableItemBackground"
+      android:clickable="true"
+      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_title="@string/text_three_line_item"
+      style="@style/MdListItem.SingleLine.AvatarWithText">
+
+      <ImageView
+        android:id="@android:id/icon1"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentRight="true"
+        tools:src="?attr/ic_blank_circle"
+        style="@style/Base.MdListItem.Avatar" />
+
+      <TextView
+        android:id="@android:id/text1"
+        tools:text="List item title"
+        style="@style/Base.MdListItem.Title.Left" />
+    </me.henrytao.mdcore.widgets.MdListItem>
+
+    <me.henrytao.mdcore.widgets.MdListItem
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="?attr/selectableItemBackground"
+      android:clickable="true"
+      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_title="@string/text_three_line_item"
+      style="@style/MdListItem.SingleLine.AvatarWithText">
+
+      <ImageView
+        android:id="@android:id/icon1"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentRight="true"
+        tools:src="?attr/ic_blank_circle"
+        style="@style/Base.MdListItem.Avatar" />
+
+      <TextView
+        android:id="@android:id/text1"
+        tools:text="List item title"
+        style="@style/Base.MdListItem.Title.Left" />
+    </me.henrytao.mdcore.widgets.MdListItem>
+
+    <me.henrytao.mdcore.widgets.MdListItem
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="?attr/selectableItemBackground"
+      android:clickable="true"
+      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_title="@string/text_three_line_item"
+      style="@style/MdListItem.SingleLine.AvatarWithText">
+
+      <ImageView
+        android:id="@android:id/icon1"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentRight="true"
+        tools:src="?attr/ic_blank_circle"
+        style="@style/Base.MdListItem.Avatar" />
+
+      <TextView
+        android:id="@android:id/text1"
+        tools:text="List item title"
+        style="@style/Base.MdListItem.Title.Left" />
+    </me.henrytao.mdcore.widgets.MdListItem>
+  </LinearLayout>
 </LinearLayout>
