@@ -14,31 +14,25 @@
   ~ limitations under the License.
   -->
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<me.henrytao.mdcore.widgets.MdListItem xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
-  android:layout_height="wrap_content">
+  android:layout_height="wrap_content"
+  style="@style/MdListItem.SingleLine.TextOnly">
 
   <TextView
     android:id="@+id/title"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
     android:layout_alignParentLeft="true"
-    android:layout_centerVertical="true"
+    android:layout_marginLeft="@dimen/mdLayoutSpacing_sm"
     android:layout_toLeftOf="@+id/description"
-    tools:text="Buy me a coffee" />
+    tools:text="Buy me a coffee"
+    style="@style/Base.MdListItem.Title" />
 
   <TextView
     android:id="@+id/description"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
     android:layout_alignParentRight="true"
-    android:layout_centerVertical="true"
-    tools:text="$0.99" />
-</RelativeLayout>
+    android:layout_marginRight="@dimen/mdLayoutSpacing_sm"
+    tools:text="$0.99"
+    style="@style/Base.MdListItem.Title" />
+</me.henrytao.mdcore.widgets.MdListItem>
 
-  <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:tools="http://schemas.android.com/tools"--><!--android:layout_width="match_parent"--><!--android:layout_height="?attr/mdList_itemHeight_md"--><!--android:background="?attr/selectableItemBackground"--><!--android:paddingLeft="?attr/mdLayout_spacing_md"--><!--android:paddingRight="?attr/mdLayout_spacing_md">-->
-
-  <!--<TextView--><!--android:id="@+id/title"--><!--android:layout_alignParentLeft="true"--><!--android:layout_centerVertical="true"--><!--android:layout_toLeftOf="@+id/description"--><!--android:paddingLeft="?attr/mdLayout_spacing_sm"--><!--tools:text="Buy me a coffee"--><!--style="@style/MdText.Subhead.SingleLine" />-->
-
-  <!--<TextView--><!--android:id="@+id/description"--><!--android:layout_alignParentRight="true"--><!--android:layout_centerVertical="true"--><!--android:paddingRight="?attr/mdLayout_spacing_sm"--><!--tools:text="$0.99"--><!--style="@style/MdText.Body1.SingleLine" />--><!--</RelativeLayout>-->
