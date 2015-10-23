@@ -14,18 +14,6 @@
   ~ limitations under the License.
   -->
 
-<merge xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:layout_width="match_parent"
-  android:layout_height="wrap_content">
-
-  <ImageView
-    android:id="@android:id/icon1"
-    tools:src="?attr/ic_blank_circle"
-    style="@style/Base.MdListItem.Avatar" />
-
-  <TextView
-    android:id="@android:id/text1"
-    tools:text="List item title"
-    style="@style/Base.MdListItem.Title.Left" />
-</merge>
+<View xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_alignParentBottom="true"
+  style="@style/MdDivider.LeftRightLarge" />
