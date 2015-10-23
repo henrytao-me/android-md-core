@@ -27,21 +27,21 @@
     </item>
   </group>
 
-  <group android:id="@+id/group_what_is_material">
-    <item android:title="What is material?">
-      <menu>
-        <item
-          android:icon="@drawable/ic_blank_transparent"
-          android:title="Environment (x)" />
-        <item
-          android:icon="@drawable/ic_blank_transparent"
-          android:title="Material properties (x)" />
-        <item
-          android:icon="@drawable/ic_blank_transparent"
-          android:title="Elevation and shadows (x)" />
-      </menu>
-    </item>
-  </group>
+  <!--<group android:id="@+id/group_what_is_material">-->
+  <!--<item android:title="What is material?">-->
+  <!--<menu>-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Environment (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Material properties (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Elevation and shadows (x)" />-->
+  <!--</menu>-->
+  <!--</item>-->
+  <!--</group>-->
 
   <group android:id="@+id/Animation">
     <item android:title="Animation">
@@ -254,35 +254,35 @@
     </item>
   </group>
 
-  <group android:id="@+id/group_resources">
-    <item android:title="Resources">
-      <menu>
-        <item
-          android:icon="@drawable/ic_blank_transparent"
-          android:title="Color palettes (x)" />
-        <item
-          android:icon="@drawable/ic_blank_transparent"
-          android:title="Devices (x)" />
-        <item
-          android:icon="@drawable/ic_blank_transparent"
-          android:title="Layout templates (x)" />
-        <item
-          android:icon="@drawable/ic_blank_transparent"
-          android:title="Roboto &amp; Noto fonts (x)" />
-        <item
-          android:icon="@drawable/ic_blank_transparent"
-          android:title="Sticker sheets &amp; icons (x)" />
-      </menu>
-    </item>
-  </group>
+  <!--<group android:id="@+id/group_resources">-->
+  <!--<item android:title="Resources">-->
+  <!--<menu>-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Color palettes (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Devices (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Layout templates (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Roboto &amp; Noto fonts (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Sticker sheets &amp; icons (x)" />-->
+  <!--</menu>-->
+  <!--</item>-->
+  <!--</group>-->
 
-  <group android:id="@+id/group_whats_new">
-    <item android:title="What's new">
-      <menu>
-        <item
-          android:icon="@drawable/ic_blank_transparent"
-          android:title="What's new (x)" />
-      </menu>
-    </item>
-  </group>
+  <!--<group android:id="@+id/group_whats_new">-->
+  <!--<item android:title="What's new">-->
+  <!--<menu>-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="What's new (x)" />-->
+  <!--</menu>-->
+  <!--</item>-->
+  <!--</group>-->
 </menu>
