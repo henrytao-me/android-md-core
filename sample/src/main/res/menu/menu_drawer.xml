@@ -22,42 +22,42 @@
         <item
           android:id="@+id/menu_introduction"
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Introduction" />
+          android:title="Introduction (x)" />
       </menu>
     </item>
   </group>
 
-  <group android:id="@+id/group_what_is_material">
-    <item android:title="What is material?">
-      <menu>
-        <item
-          android:icon="@drawable/ic_blank_transparent"
-          android:title="Environment" />
-        <item
-          android:icon="@drawable/ic_blank_transparent"
-          android:title="Material properties" />
-        <item
-          android:icon="@drawable/ic_blank_transparent"
-          android:title="Elevation and shadows" />
-      </menu>
-    </item>
-  </group>
+  <!--<group android:id="@+id/group_what_is_material">-->
+  <!--<item android:title="What is material?">-->
+  <!--<menu>-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Environment (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Material properties (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Elevation and shadows (x)" />-->
+  <!--</menu>-->
+  <!--</item>-->
+  <!--</group>-->
 
   <group android:id="@+id/Animation">
     <item android:title="Animation">
       <menu>
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Authentic motion" />
+          android:title="Authentic motion (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Responsive interaction" />
+          android:title="Responsive interaction (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Meaningful transitions" />
+          android:title="Meaningful transitions (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Delightful details" />
+          android:title="Delightful details (x)" />
       </menu>
     </item>
   </group>
@@ -67,19 +67,19 @@
       <menu>
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Color" />
+          android:title="Color (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Icons" />
+          android:title="Icons (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Imagery" />
+          android:title="Imagery (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Typography" />
+          android:title="Typography (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Writing" />
+          android:title="Writing (x)" />
       </menu>
     </item>
   </group>
@@ -89,19 +89,19 @@
       <menu>
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Principles" />
+          android:title="Principles (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Units and measurements" />
+          android:title="Units and measurements (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Metrics &amp; keylines" />
+          android:title="Metrics &amp; keylines (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Structure" />
+          android:title="Structure (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Adaptive UI" />
+          android:title="Adaptive UI (x)" />
       </menu>
     </item>
   </group>
@@ -111,74 +111,75 @@
       <menu>
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Bottom sheets" />
+          android:title="Bottom sheets (x)" />
         <item
+          android:id="@+id/menu_buttons"
           android:icon="@drawable/ic_blank_transparent"
           android:title="Buttons" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Buttons: Floating Action Button" />
+          android:title="Buttons: Floating Action Button (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Cards" />
+          android:title="Cards (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Chips" />
+          android:title="Chips (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Data tables" />
+          android:title="Data tables (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Dialogs" />
+          android:title="Dialogs (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Dividers" />
+          android:title="Dividers (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Grid lists" />
+          android:title="Grid lists (x)" />
         <item
           android:id="@+id/menu_lists"
           android:icon="@drawable/ic_blank_transparent"
           android:title="Lists" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Lists: Controls" />
+          android:title="Lists: Controls (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Menus" />
+          android:title="Menus (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Pickers" />
+          android:title="Pickers (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Progress &amp; activity" />
+          android:title="Progress &amp; activity (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Selection controls" />
+          android:title="Selection controls (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Sliders" />
+          android:title="Sliders (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Snackbars &amp; toasts" />
+          android:title="Snackbars &amp; toasts (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Subheaders" />
+          android:title="Subheaders (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Steppers" />
+          android:title="Steppers (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Tabs" />
+          android:title="Tabs (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Text fields" />
+          android:title="Text fields (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Toolbars" />
+          android:title="Toolbars (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Tooltips" />
+          android:title="Tooltips (x)" />
       </menu>
     </item>
   </group>
@@ -188,55 +189,55 @@
       <menu>
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Data formats" />
+          android:title="Data formats (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Empty states" />
+          android:title="Empty states (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Errors" />
+          android:title="Errors (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Gestures" />
+          android:title="Gestures (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Fingerprint" />
+          android:title="Fingerprint (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Launch screens" />
+          android:title="Launch screens (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Loading images" />
+          android:title="Loading images (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Navigation" />
+          android:title="Navigation (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Navigation drawer" />
+          android:title="Navigation drawer (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Navigational transitions" />
+          android:title="Navigational transitions (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Notifications" />
+          android:title="Notifications (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Permissions" />
+          android:title="Permissions (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Scrolling techniques" />
+          android:title="Scrolling techniques (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Search" />
+          android:title="Search (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Selection" />
+          android:title="Selection (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Settings" />
+          android:title="Settings (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Swipe to refresh" />
+          android:title="Swipe to refresh (x)" />
       </menu>
     </item>
   </group>
@@ -246,43 +247,43 @@
       <menu>
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Accessibility" />
+          android:title="Accessibility (x)" />
         <item
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Bidirectionality" />
+          android:title="Bidirectionality (x)" />
       </menu>
     </item>
   </group>
 
-  <group android:id="@+id/group_resources">
-    <item android:title="Resources">
-      <menu>
-        <item
-          android:icon="@drawable/ic_blank_transparent"
-          android:title="Color palettes" />
-        <item
-          android:icon="@drawable/ic_blank_transparent"
-          android:title="Devices" />
-        <item
-          android:icon="@drawable/ic_blank_transparent"
-          android:title="Layout templates" />
-        <item
-          android:icon="@drawable/ic_blank_transparent"
-          android:title="Roboto &amp; Noto fonts" />
-        <item
-          android:icon="@drawable/ic_blank_transparent"
-          android:title="Sticker sheets &amp; icons" />
-      </menu>
-    </item>
-  </group>
+  <!--<group android:id="@+id/group_resources">-->
+  <!--<item android:title="Resources">-->
+  <!--<menu>-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Color palettes (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Devices (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Layout templates (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Roboto &amp; Noto fonts (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Sticker sheets &amp; icons (x)" />-->
+  <!--</menu>-->
+  <!--</item>-->
+  <!--</group>-->
 
-  <group android:id="@+id/group_whats_new">
-    <item android:title="What's new">
-      <menu>
-        <item
-          android:icon="@drawable/ic_blank_transparent"
-          android:title="What's new" />
-      </menu>
-    </item>
-  </group>
+  <!--<group android:id="@+id/group_whats_new">-->
+  <!--<item android:title="What's new">-->
+  <!--<menu>-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="What's new (x)" />-->
+  <!--</menu>-->
+  <!--</item>-->
+  <!--</group>-->
 </menu>

@@ -116,6 +116,8 @@
     nullam quis.
   </string>
 
+  <string name="text_button">Button</string>
+
   <string name="text_back_pressed_confirmation">Press back again to exit</string>
   <string name="text_help_and_feedback">Help &amp; feedback</string>
   <string name="text_themes">Themes</string>
@@ -129,8 +131,9 @@
   <!-- TODO: Remove or change this placeholder text -->
   <string name="hello_world" translatable="false">Hello world!</string>
   <string name="hello_blank_fragment">Hello blank fragment</string>
-  <string name="title_activity_info">@string/text_info</string>
   <string name="action_settings">Settings</string>
-  <string name="title_activity_lists">Lists</string>
+  <string name="title_activity_info">@string/text_info</string>
+  <string name="title_activity_list">List</string>
   <string name="title_activity_introduction">Material Design</string>
+  <string name="title_activity_button">Button</string>
 </resources>

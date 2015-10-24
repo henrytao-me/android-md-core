@@ -26,10 +26,10 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import me.henrytao.mddemo.R;
 
-public class ListsActivity extends BaseLayoutActivity {
+public class ButtonActivity extends BaseLayoutActivity {
 
   public static Intent newIntent(Context context) {
-    return new Intent(context, ListsActivity.class);
+    return new Intent(context, ButtonActivity.class);
   }
 
   @Bind(R.id.container)
@@ -38,8 +38,7 @@ public class ListsActivity extends BaseLayoutActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    vSmoothCollapsingToolbarLayout.setCollapsedOffsetX(getResources().getDimensionPixelOffset(R.dimen.mdListItemPaddingLeft_lg));
-    LayoutInflater.from(this).inflate(R.layout.fragment_lists, vContainer, true);
+    LayoutInflater.from(this).inflate(R.layout.fragment_button, vContainer, true);
     ButterKnife.bind(this);
   }
 }

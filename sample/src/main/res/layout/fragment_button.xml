@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  tools:context=".activity.ListsActivity"
+  style="@style/MdList">
+
+  <LinearLayout style="@style/MdList">
+
+    <TextView
+      android:text="Button types"
+      style="@style/MdSubHeader.List" />
+
+    <!-- ////////////////////////////////////////////////////////////////////////// -->
+    <!-- Enable -->
+    <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+    <LinearLayout style="@style/AppStyle.Grid">
+
+      <RelativeLayout style="@style/AppStyle.Grid.Item">
+
+        <Button
+          android:text="@string/text_button"
+          style="@style/MdButton" />
+      </RelativeLayout>
+
+      <RelativeLayout style="@style/AppStyle.Grid.Item">
+
+        <Button
+          android:text="@string/text_button"
+          style="@style/MdButton" />
+      </RelativeLayout>
+
+      <RelativeLayout style="@style/AppStyle.Grid.Item">
+
+        <Button
+          android:text="@string/text_button"
+          style="@style/MdButton.Borderless" />
+      </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/AppStyle.Grid">
+
+      <RelativeLayout style="@style/AppStyle.Grid.Item">
+
+        <Button
+          android:text="@string/text_button"
+          style="@style/MdButton" />
+      </RelativeLayout>
+
+      <RelativeLayout style="@style/AppStyle.Grid.Item">
+
+        <Button
+          android:text="@string/text_button"
+          style="@style/MdButton.Colored" />
+      </RelativeLayout>
+
+      <RelativeLayout style="@style/AppStyle.Grid.Item">
+
+        <Button
+          android:text="@string/text_button"
+          style="@style/MdButton.Borderless.Colored" />
+      </RelativeLayout>
+    </LinearLayout>
+
+    <!-- ////////////////////////////////////////////////////////////////////////// -->
+    <!-- Disable -->
+    <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+    <LinearLayout style="@style/AppStyle.Grid">
+
+      <RelativeLayout style="@style/AppStyle.Grid.Item">
+
+        <Button
+          android:enabled="false"
+          android:text="@string/text_button"
+          style="@style/MdButton" />
+      </RelativeLayout>
+
+      <RelativeLayout style="@style/AppStyle.Grid.Item">
+
+        <Button
+          android:enabled="false"
+          android:text="@string/text_button"
+          style="@style/MdButton" />
+      </RelativeLayout>
+
+      <RelativeLayout style="@style/AppStyle.Grid.Item">
+
+        <Button
+          android:enabled="false"
+          android:text="@string/text_button"
+          style="@style/MdButton.Borderless" />
+      </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/AppStyle.Grid">
+
+      <RelativeLayout style="@style/AppStyle.Grid.Item">
+
+        <Button
+          android:enabled="false"
+          android:text="@string/text_button"
+          style="@style/MdButton" />
+      </RelativeLayout>
+
+      <RelativeLayout style="@style/AppStyle.Grid.Item">
+
+        <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:enabled="false"
+          android:text="@string/text_button"
+          style="@style/MdButton.Colored" />
+      </RelativeLayout>
+
+      <RelativeLayout style="@style/AppStyle.Grid.Item">
+
+        <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:enabled="false"
+          android:text="@string/text_button"
+          style="@style/MdButton.Borderless.Colored" />
+      </RelativeLayout>
+    </LinearLayout>
+  </LinearLayout>
+</LinearLayout>

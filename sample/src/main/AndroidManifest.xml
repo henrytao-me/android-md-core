@@ -38,11 +38,13 @@
       android:label="@string/title_activity_info"
       android:name=".activity.InfoActivity" />
     <activity
-      android:label="@string/title_activity_lists"
-      android:name=".activity.ListsActivity"></activity>
+      android:label="@string/title_activity_list"
+      android:name=".activity.ListActivity" />
     <activity
       android:label="@string/title_activity_introduction"
-      android:name=".activity.IntroductionActivity"></activity>
+      android:name=".activity.IntroductionActivity" />
+    <activity
+      android:label="@string/title_activity_button"
+      android:name=".activity.ButtonActivity" />
   </application>
-
 </manifest>

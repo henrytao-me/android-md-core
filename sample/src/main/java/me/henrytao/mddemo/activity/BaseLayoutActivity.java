@@ -79,9 +79,6 @@ public class BaseLayoutActivity extends BaseActivity implements NavigationView.O
   @Bind(R.id.toolbar)
   Toolbar vToolbar;
 
-  @Bind(R.id.translucent_status_holder)
-  View vTranslucentStatusHolder;
-
   private ActionBarDrawerToggle mActionBarDrawerToggle;
 
   private CharSequence mTitle;
@@ -145,7 +142,6 @@ public class BaseLayoutActivity extends BaseActivity implements NavigationView.O
     setSupportActionBar(vToolbar);
 
     boolean isFitSystemWindows = ViewCompat.getFitsSystemWindows(vDrawerLayout);
-    vTranslucentStatusHolder.setVisibility(isFitSystemWindows ? View.VISIBLE : View.GONE);
     if (isFitSystemWindows) {
       ResourceUtils.enableTranslucentStatus(this);
     }
@@ -176,9 +172,14 @@ public class BaseLayoutActivity extends BaseActivity implements NavigationView.O
           intent = IntroductionActivity.newIntent(this);
         }
         break;
+      case R.id.menu_buttons:
+        if (!(this instanceof ButtonActivity)) {
+          intent = ButtonActivity.newIntent(this);
+        }
+        break;
       case R.id.menu_lists:
-        if (!(this instanceof ListsActivity)) {
-          intent = ListsActivity.newIntent(this);
+        if (!(this instanceof ListActivity)) {
+          intent = ListActivity.newIntent(this);
         }
         break;
       case R.id.menu_donate:
