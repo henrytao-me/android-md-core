@@ -42,8 +42,6 @@ public class ButtonActivity extends BaseLayoutActivity {
     LayoutInflater.from(this).inflate(R.layout.fragment_button, vContainer, true);
     ButterKnife.bind(this);
 
-    vBtnDialog.setOnClickListener(v -> {
-      DialogUtils.showInfoDialog(this, "Pay attention to the button color.", null, null);
-    });
+    vBtnDialog.setOnClickListener(v -> DialogUtils.showInfoDialog(this, getString(R.string.text_button_color_in_dialog_info), null, null));
   }
 }

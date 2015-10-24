@@ -116,7 +116,7 @@
 
         <Button
           android:id="@+id/btn_dialog"
-          android:text="@string/text_button"
+          android:text="@string/text_click_me"
           style="@style/MdButton" />
       </RelativeLayout>
 

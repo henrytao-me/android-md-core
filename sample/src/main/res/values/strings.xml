@@ -117,9 +117,11 @@
   </string>
 
   <string name="text_cancel">Cancel</string>
+  <string name="text_click_me">Click me</string>
   <string name="text_ok">OK</string>
 
   <string name="text_button">Button</string>
+  <string name="text_button_color_in_dialog_info">Pay attention to the button color. It should match with your current theme accentColor</string>
 
   <string name="text_back_pressed_confirmation">Press back again to exit</string>
   <string name="text_help_and_feedback">Help &amp; feedback</string>
