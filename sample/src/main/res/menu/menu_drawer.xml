@@ -113,8 +113,9 @@
           android:icon="@drawable/ic_blank_transparent"
           android:title="Bottom sheets (x)" />
         <item
+          android:id="@+id/menu_buttons"
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Buttons (x)" />
+          android:title="Buttons" />
         <item
           android:icon="@drawable/ic_blank_transparent"
           android:title="Buttons: Floating Action Button (x)" />

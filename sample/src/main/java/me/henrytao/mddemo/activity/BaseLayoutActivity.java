@@ -172,9 +172,14 @@ public class BaseLayoutActivity extends BaseActivity implements NavigationView.O
           intent = IntroductionActivity.newIntent(this);
         }
         break;
+      case R.id.menu_buttons:
+        if (!(this instanceof ButtonActivity)) {
+          intent = ButtonActivity.newIntent(this);
+        }
+        break;
       case R.id.menu_lists:
-        if (!(this instanceof ListsActivity)) {
-          intent = ListsActivity.newIntent(this);
+        if (!(this instanceof ListActivity)) {
+          intent = ListActivity.newIntent(this);
         }
         break;
       case R.id.menu_donate:

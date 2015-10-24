@@ -14,34 +14,30 @@
  * limitations under the License.
  */
 
-package me.henrytao.mddemo;
-
-import com.crashlytics.android.Crashlytics;
+package me.henrytao.mddemo.utils;
 
 import android.app.Application;
+import android.content.Context;
+import android.content.SharedPreferences;
 
-import io.fabric.sdk.android.Fabric;
-import me.henrytao.mddemo.utils.SharePreferenceUtils;
+import java.util.Locale;
 
 /**
- * Created by henrytao on 10/16/15.
+ * Created by henrytao on 10/24/15.
  */
-public class App extends Application {
+public class SharePreferenceUtils {
 
-  private static App sInstance;
+  private static Application sApplication;
 
-  public static App getInstance() {
-    return sInstance;
+  public static SharedPreferences getInstance() {
+    return sApplication.getSharedPreferences(getPreferenceKey(), Context.MODE_PRIVATE);
   }
 
-  public App() {
-    sInstance = this;
+  public static void init(Application application) {
+    sApplication = application;
   }
 
-  @Override
-  public void onCreate() {
-    super.onCreate();
-    Fabric.with(this, new Crashlytics());
-    SharePreferenceUtils.init(this);
+  protected static String getPreferenceKey() {
+    return String.format(Locale.US, "%s.preferences.application", sApplication.getPackageName());
   }
 }

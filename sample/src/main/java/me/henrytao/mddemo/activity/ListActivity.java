@@ -16,18 +16,30 @@
 
 package me.henrytao.mddemo.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
 
-public class MainActivity extends BaseActivity {
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import me.henrytao.mddemo.R;
+
+public class ListActivity extends BaseLayoutActivity {
+
+  public static Intent newIntent(Context context) {
+    return new Intent(context, ListActivity.class);
+  }
+
+  @Bind(R.id.container)
+  ViewGroup vContainer;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    Intent intent = IntroductionActivity.newIntent(this);
-    intent = ButtonActivity.newIntent(this);
-    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-    startActivity(intent);
-    finish();
+    vSmoothCollapsingToolbarLayout.setCollapsedOffsetX(getResources().getDimensionPixelOffset(R.dimen.mdListItemPaddingLeft_lg));
+    LayoutInflater.from(this).inflate(R.layout.fragment_list, vContainer, true);
+    ButterKnife.bind(this);
   }
 }

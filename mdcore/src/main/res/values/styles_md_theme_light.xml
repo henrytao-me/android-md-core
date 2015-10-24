@@ -157,6 +157,8 @@
     <item name="MdListItemThreeLineAvatarWithText">@style/MdListItem.ThreeLine.AvatarWithText</item>
     <item name="MdListItemThreeLineAvatarWithTextAndIcon">@style/MdListItem.ThreeLine.AvatarWithTextAndIcon</item>
 
+    <item name="mdButton_Colored_textColor">@drawable/md_button_text_color_dark_light</item>
+
     <item name="ic_toolbar_arrow_back">@drawable/ic_toolbar_arrow_back</item>
     <item name="ic_blank_circle">@drawable/ic_blank_circle</item>
     <item name="ic_blank">@drawable/ic_blank</item>
@@ -181,16 +183,20 @@
     <item name="colorControlActivated">?attr/mdColor_accentPalette</item>
 
     <item name="android:textColorPrimary">?attr/mdTextColorPrimary_backgroundPalette</item>
-    <item name="android:textColorPrimaryInverse">@color/abc_primary_text_material_dark</item>
+    <item name="android:textColorPrimaryInverse">?attr/mdTextColorPrimaryInverse_backgroundPalette</item>
     <item name="android:textColorSecondary">?attr/mdTextColorSecondary_backgroundPalette</item>
-    <item name="android:textColorSecondaryInverse">@color/abc_secondary_text_material_dark</item>
+    <item name="android:textColorSecondaryInverse">?attr/mdTextColorSecondaryInverse_backgroundPalette</item>
     <item name="android:textColorTertiary">?attr/mdTextColorSecondary_backgroundPalette</item>
-    <item name="android:textColorTertiaryInverse">@color/abc_secondary_text_material_dark</item>
+    <item name="android:textColorTertiaryInverse">?attr/mdTextColorSecondaryInverse_backgroundPalette</item>
     <item name="android:textColorPrimaryDisableOnly">?attr/mdTextColorPrimary_backgroundPalette</item>
-    <item name="android:textColorPrimaryInverseDisableOnly">@color/abc_primary_text_disable_only_material_dark</item>
+    <item name="android:textColorPrimaryInverseDisableOnly">?attr/mdTextColorPrimaryInverse_backgroundPalette</item>
     <item name="android:textColorHint">?attr/mdTextColorHint_backgroundPalette</item>
-    <item name="android:textColorHintInverse">@color/hint_foreground_material_dark</item>
+    <item name="android:textColorHintInverse">?attr/mdTextColorHintInverse_backgroundPalette</item>
     <item name="android:textColorHighlight">?attr/mdColor_accentPalette_light</item>
     <item name="android:textColorLink">?attr/mdColor_accentPalette</item>
+
+    <item name="buttonStyle">@style/MdButton</item>
+    <item name="buttonStyleSmall">@style/MdButton.Small</item>
+    <item name="android:textAppearanceButton">@style/MdText.Button</item>
   </style>
 </resources>
