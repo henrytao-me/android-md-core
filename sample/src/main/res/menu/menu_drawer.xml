@@ -113,12 +113,13 @@
           android:icon="@drawable/ic_blank_transparent"
           android:title="Bottom sheets (x)" />
         <item
-          android:id="@+id/menu_buttons"
+          android:id="@+id/menu_button"
           android:icon="@drawable/ic_blank_transparent"
           android:title="Buttons" />
         <item
+          android:id="@+id/menu_fab"
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Buttons: Floating Action Button (x)" />
+          android:title="Buttons: Floating Action Button" />
         <item
           android:icon="@drawable/ic_blank_transparent"
           android:title="Cards (x)" />
@@ -138,7 +139,7 @@
           android:icon="@drawable/ic_blank_transparent"
           android:title="Grid lists (x)" />
         <item
-          android:id="@+id/menu_lists"
+          android:id="@+id/menu_list"
           android:icon="@drawable/ic_blank_transparent"
           android:title="Lists" />
         <item

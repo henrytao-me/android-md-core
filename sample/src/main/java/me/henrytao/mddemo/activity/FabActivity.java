@@ -26,17 +26,16 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import me.henrytao.mddemo.R;
 
-public class ListActivity extends BaseLayoutActivity {
+public class FabActivity extends BaseLayoutActivity {
 
   public static Intent newIntent(Context context) {
-    return new Intent(context, ListActivity.class);
+    return new Intent(context, FabActivity.class);
   }
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    vSmoothCollapsingToolbarLayout.setCollapsedOffsetX(getResources().getDimensionPixelOffset(R.dimen.mdListItemPaddingLeft_lg));
-    LayoutInflater.from(this).inflate(R.layout.fragment_list, vContainer, true);
+    LayoutInflater.from(this).inflate(R.layout.fragment_fab, vContainer, true);
     ButterKnife.bind(this);
   }
 }

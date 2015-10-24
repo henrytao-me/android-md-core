@@ -31,9 +31,6 @@ public class IntroductionActivity extends BaseLayoutActivity {
     return new Intent(context, IntroductionActivity.class);
   }
 
-  @Bind(R.id.container)
-  ViewGroup vContainer;
-
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);

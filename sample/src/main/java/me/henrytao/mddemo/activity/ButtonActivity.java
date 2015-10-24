@@ -20,11 +20,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.ViewGroup;
+import android.widget.Button;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import me.henrytao.mddemo.R;
+import me.henrytao.mddemo.utils.DialogUtils;
 
 public class ButtonActivity extends BaseLayoutActivity {
 
@@ -32,13 +33,17 @@ public class ButtonActivity extends BaseLayoutActivity {
     return new Intent(context, ButtonActivity.class);
   }
 
-  @Bind(R.id.container)
-  ViewGroup vContainer;
+  @Bind(R.id.btn_dialog)
+  Button vBtnDialog;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     LayoutInflater.from(this).inflate(R.layout.fragment_button, vContainer, true);
     ButterKnife.bind(this);
+
+    vBtnDialog.setOnClickListener(v -> {
+      DialogUtils.showInfoDialog(this, "Pay attention to the button color.", null, null);
+    });
   }
 }
