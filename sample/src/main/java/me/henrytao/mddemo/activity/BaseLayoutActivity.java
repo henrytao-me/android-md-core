@@ -32,11 +32,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
 import me.henrytao.mdcore.utils.ResourceUtils;
 import me.henrytao.mddemo.R;
 import me.henrytao.mddemo.utils.ThemeUtils;
@@ -55,29 +54,23 @@ public class BaseLayoutActivity extends BaseActivity implements NavigationView.O
 
   private static boolean sIsBackPressed;
 
-  @Bind(R.id.collapsing_toolbar_layout)
-  CollapsingToolbarLayout vCollapsingToolbarLayout;
+  protected CollapsingToolbarLayout vCollapsingToolbarLayout;
 
-  @Bind(R.id.drawer_layout)
-  DrawerLayout vDrawerLayout;
+  protected ViewGroup vContainer;
 
-  @Bind(R.id.menu_donate)
-  View vMenuDonate;
+  protected DrawerLayout vDrawerLayout;
 
-  @Bind(R.id.menu_help_and_feedback)
-  View vMenuHelpAndFeedback;
+  protected View vMenuDonate;
 
-  @Bind(R.id.navigation_view)
-  NavigationView vNavigationView;
+  protected View vMenuHelpAndFeedback;
 
-  @Bind(R.id.smooth_collapsing_toolbar_layout)
-  SmoothCollapsingToolbarLayout vSmoothCollapsingToolbarLayout;
+  protected NavigationView vNavigationView;
 
-  @Bind(R.id.title)
-  TextView vTitle;
+  protected SmoothCollapsingToolbarLayout vSmoothCollapsingToolbarLayout;
 
-  @Bind(R.id.toolbar)
-  Toolbar vToolbar;
+  protected TextView vTitle;
+
+  protected Toolbar vToolbar;
 
   private ActionBarDrawerToggle mActionBarDrawerToggle;
 
@@ -138,7 +131,17 @@ public class BaseLayoutActivity extends BaseActivity implements NavigationView.O
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_base_layout);
-    ButterKnife.bind(this);
+
+    vCollapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar_layout);
+    vContainer = (ViewGroup) findViewById(R.id.container);
+    vDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+    vMenuDonate = findViewById(R.id.menu_donate);
+    vMenuHelpAndFeedback = findViewById(R.id.menu_help_and_feedback);
+    vNavigationView = (NavigationView) findViewById(R.id.navigation_view);
+    vSmoothCollapsingToolbarLayout = (SmoothCollapsingToolbarLayout) findViewById(R.id.smooth_collapsing_toolbar_layout);
+    vTitle = (TextView) findViewById(R.id.title);
+    vToolbar = (Toolbar) findViewById(R.id.toolbar);
+
     setSupportActionBar(vToolbar);
 
     boolean isFitSystemWindows = ViewCompat.getFitsSystemWindows(vDrawerLayout);
@@ -172,12 +175,17 @@ public class BaseLayoutActivity extends BaseActivity implements NavigationView.O
           intent = IntroductionActivity.newIntent(this);
         }
         break;
-      case R.id.menu_buttons:
+      case R.id.menu_button:
         if (!(this instanceof ButtonActivity)) {
           intent = ButtonActivity.newIntent(this);
         }
         break;
-      case R.id.menu_lists:
+      case R.id.menu_fab:
+        if (!(this instanceof FabActivity)) {
+          intent = FabActivity.newIntent(this);
+        }
+        break;
+      case R.id.menu_list:
         if (!(this instanceof ListActivity)) {
           intent = ListActivity.newIntent(this);
         }

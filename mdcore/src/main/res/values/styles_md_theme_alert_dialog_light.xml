@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+
+  <style name="MdAlertDialog.Theme.Light" parent="Base.MdAlertDialog.Theme.Light" />
+
+  <style name="MdAlertDialog.Style.Light" parent="Base.MdAlertDialog.Style.Light" />
+
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+  <!-- Base -->
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+  <style name="Base.MdAlertDialog.Theme.Light" parent="Theme.AppCompat.Light.Dialog.Alert">
+    <item name="colorAccent">@color/mdColor_pink_accent</item>
+    <item name="alertDialogStyle">@style/MdAlertDialog.Style.Light</item>
+  </style>
+
+  <style name="Base.MdAlertDialog.Style.Light" parent="AlertDialog.AppCompat.Light">
+    <item name="android:layout">@layout/md_alert_dialog_layout</item>
+  </style>
+</resources>

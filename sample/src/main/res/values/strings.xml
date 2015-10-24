@@ -116,7 +116,13 @@
     nullam quis.
   </string>
 
+  <string name="text_cancel">Cancel</string>
+  <string name="text_click_me">Click me</string>
+  <string name="text_custom_dialog">Custom dialog</string>
+  <string name="text_ok">OK</string>
+
   <string name="text_button">Button</string>
+  <string name="text_button_color_in_dialog_info">Pay attention to the button color. It should match with your current theme accentColor</string>
 
   <string name="text_back_pressed_confirmation">Press back again to exit</string>
   <string name="text_help_and_feedback">Help &amp; feedback</string>
@@ -136,4 +142,5 @@
   <string name="title_activity_list">List</string>
   <string name="title_activity_introduction">Material Design</string>
   <string name="title_activity_button">Button</string>
+  <string name="title_activity_fab">Floating Action Button</string>
 </resources>

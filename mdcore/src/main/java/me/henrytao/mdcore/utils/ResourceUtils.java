@@ -21,6 +21,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.os.Build;
+import android.util.TypedValue;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -44,6 +45,24 @@ public class ResourceUtils {
     int size = (int) styledAttributes.getDimension(0, 0);
     styledAttributes.recycle();
     return size;
+  }
+
+  public static int getColorFromAttribute(Context context, int attrId) {
+    if (attrId == 0) {
+      return 0;
+    }
+    TypedValue typedValue = new TypedValue();
+    context.getTheme().resolveAttribute(attrId, typedValue, true);
+    return typedValue.data;
+  }
+
+  public static float getFloatFromAttribute(Context context, int attrId) {
+    if (attrId == 0) {
+      return 0;
+    }
+    TypedValue typedValue = new TypedValue();
+    context.getTheme().resolveAttribute(attrId, typedValue, true);
+    return typedValue.getFloat();
   }
 
   public static int getStatusBarSize(Context context) {

@@ -195,6 +195,8 @@
     <item name="android:textColorHighlight">?attr/mdColor_accentPalette_light</item>
     <item name="android:textColorLink">?attr/mdColor_accentPalette</item>
 
+    <item name="alertDialogTheme">@style/MdAlertDialog.Theme.Dark</item>
+
     <item name="buttonStyle">@style/MdButton</item>
     <item name="buttonStyleSmall">@style/MdButton.Small</item>
     <item name="android:textAppearanceButton">@style/MdText.Button</item>

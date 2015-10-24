@@ -46,5 +46,8 @@
     <activity
       android:label="@string/title_activity_button"
       android:name=".activity.ButtonActivity" />
+    <activity
+      android:label="@string/title_activity_fab"
+      android:name=".activity.FabActivity" />
   </application>
 </manifest>

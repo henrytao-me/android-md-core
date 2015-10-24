@@ -19,16 +19,16 @@
   tools:context=".activity.ListsActivity"
   style="@style/MdList">
 
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+  <!-- Button -->
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+
   <LinearLayout style="@style/MdList">
 
     <TextView
       android:text="Button types"
       style="@style/MdSubHeader.List" />
 
-    <!-- ////////////////////////////////////////////////////////////////////////// -->
-    <!-- Enable -->
-    <!-- ////////////////////////////////////////////////////////////////////////// -->
-
     <LinearLayout style="@style/AppStyle.Grid">
 
       <RelativeLayout style="@style/AppStyle.Grid.Item">
@@ -41,6 +41,7 @@
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
         <Button
+          android:enabled="false"
           android:text="@string/text_button"
           style="@style/MdButton" />
       </RelativeLayout>
@@ -50,53 +51,6 @@
         <Button
           android:text="@string/text_button"
           style="@style/MdButton.Borderless" />
-      </RelativeLayout>
-    </LinearLayout>
-
-    <LinearLayout style="@style/AppStyle.Grid">
-
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
-
-        <Button
-          android:text="@string/text_button"
-          style="@style/MdButton" />
-      </RelativeLayout>
-
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
-
-        <Button
-          android:text="@string/text_button"
-          style="@style/MdButton.Colored" />
-      </RelativeLayout>
-
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
-
-        <Button
-          android:text="@string/text_button"
-          style="@style/MdButton.Borderless.Colored" />
-      </RelativeLayout>
-    </LinearLayout>
-
-    <!-- ////////////////////////////////////////////////////////////////////////// -->
-    <!-- Disable -->
-    <!-- ////////////////////////////////////////////////////////////////////////// -->
-
-    <LinearLayout style="@style/AppStyle.Grid">
-
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
-
-        <Button
-          android:enabled="false"
-          android:text="@string/text_button"
-          style="@style/MdButton" />
-      </RelativeLayout>
-
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
-
-        <Button
-          android:enabled="false"
-          android:text="@string/text_button"
-          style="@style/MdButton" />
       </RelativeLayout>
 
       <RelativeLayout style="@style/AppStyle.Grid.Item">
@@ -113,16 +67,13 @@
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
         <Button
-          android:enabled="false"
           android:text="@string/text_button"
-          style="@style/MdButton" />
+          style="@style/MdButton.Colored" />
       </RelativeLayout>
 
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
-        <Button
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
+        <me.henrytao.mdcore.widgets.MdButton
           android:enabled="false"
           android:text="@string/text_button"
           style="@style/MdButton.Colored" />
@@ -131,11 +82,74 @@
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
         <Button
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
+          android:text="@string/text_button"
+          style="@style/MdButton.Borderless.Colored" />
+      </RelativeLayout>
+
+      <RelativeLayout style="@style/AppStyle.Grid.Item">
+
+        <me.henrytao.mdcore.widgets.MdButton
           android:enabled="false"
           android:text="@string/text_button"
           style="@style/MdButton.Borderless.Colored" />
+      </RelativeLayout>
+    </LinearLayout>
+  </LinearLayout>
+
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+  <!-- Buttons in dialogs -->
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+  <LinearLayout style="@style/MdList">
+
+    <TextView
+      android:text="Buttons in dialogs"
+      style="@style/MdSubHeader.List" />
+
+    <LinearLayout style="@style/AppStyle.Grid">
+
+      <RelativeLayout style="@style/AppStyle.Grid.Item">
+
+        <Button
+          android:id="@+id/btn_dialog"
+          android:text="@string/text_click_me"
+          style="@style/MdButton" />
+      </RelativeLayout>
+
+      <RelativeLayout style="@style/AppStyle.Grid.Item">
+
+        <Button
+          android:id="@+id/btn_dialog_2"
+          android:text="@string/text_click_me"
+          style="@style/MdButton" />
+      </RelativeLayout>
+
+      <RelativeLayout style="@style/AppStyle.Grid.Item" />
+
+      <RelativeLayout style="@style/AppStyle.Grid.Item" />
+    </LinearLayout>
+  </LinearLayout>
+
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+  <!-- ImageButton -->
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+  <LinearLayout style="@style/MdList">
+
+    <TextView
+      android:text="Icon toggles"
+      style="@style/MdSubHeader.List" />
+
+    <LinearLayout style="@style/AppStyle.Grid">
+
+      <RelativeLayout style="@style/AppStyle.Grid.Item">
+
+        <!--<ImageButton-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/ic_blank_circle"-->
+        <!--android:text="@string/text_button"-->
+        <!--style="@style/Widget.AppCompat.ImageButton" />-->
       </RelativeLayout>
     </LinearLayout>
   </LinearLayout>

@@ -16,6 +16,9 @@
 
 <resources>
 
+  <dimen name="mdDialogPadding">24dp</dimen>
+  <dimen name="mdDialogPadding_inset">16dp</dimen>
+
   <dimen name="mdDividerSize">0.6dp</dimen>
   <dimen name="mdDividerSize_lg">1dp</dimen>
 

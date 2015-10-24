@@ -16,6 +16,38 @@
 
 <resources>
 
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+  <!-- List -->
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+  <style name="MdSubHeader.List" parent="Base.MdSubHeader" />
+
+  <style name="MdSubHeader.List.Left" parent="Base.MdSubHeader.Left" />
+
+  <style name="MdSubHeader.List.Right" parent="Base.MdSubHeader.Right" />
+
+  <style name="MdSubHeader.List.RightLarge" parent="Base.MdSubHeader.RightLarge" />
+
+  <style name="MdSubHeader.List.LeftRight" parent="Base.MdSubHeader.LeftRight" />
+
+  <style name="MdSubHeader.List.LeftRightLarge" parent="Base.MdSubHeader.LeftRightLarge" />
+
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+  <!-- Grid -->
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+  <style name="MdSubHeader.Grid" parent="Base.MdSubHeader" />
+
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+  <!-- Menu -->
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+  <style name="MdSubHeader.Menu" parent="Base.MdSubHeader" />
+
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+  <!-- Base -->
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+
   <style name="Base.MdSubHeader" parent="MdText.Body2.SingleLine">
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">@dimen/mdListItemHeight_sm</item>
@@ -44,32 +76,4 @@
   <style name="Base.MdSubHeader.LeftRightLarge" parent="Base.MdSubHeader.Left">
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight_xlg</item>
   </style>
-
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-  <!-- List -->
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-
-  <style name="MdSubHeader.List" parent="Base.MdSubHeader" />
-
-  <style name="MdSubHeader.List.Left" parent="Base.MdSubHeader.Left" />
-
-  <style name="MdSubHeader.List.Right" parent="Base.MdSubHeader.Right" />
-
-  <style name="MdSubHeader.List.RightLarge" parent="Base.MdSubHeader.RightLarge" />
-
-  <style name="MdSubHeader.List.LeftRight" parent="Base.MdSubHeader.LeftRight" />
-
-  <style name="MdSubHeader.List.LeftRightLarge" parent="Base.MdSubHeader.LeftRightLarge" />
-
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-  <!-- Grid -->
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-
-  <style name="MdSubHeader.Grid" parent="Base.MdSubHeader" />
-
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-  <!-- Menu -->
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-
-  <style name="MdSubHeader.Menu" parent="Base.MdSubHeader" />
 </resources>
