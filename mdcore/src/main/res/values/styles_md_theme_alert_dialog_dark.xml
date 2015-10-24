@@ -16,7 +16,20 @@
 
 <resources>
 
-  <style name="MdAlertDialog.Theme.Dark" parent="Theme.AppCompat.Dialog.Alert">
+  <style name="MdAlertDialog.Theme.Dark" parent="Base.MdAlertDialog.Theme.Dark" />
+
+  <style name="MdAlertDialog.Style.Dark" parent="Base.MdAlertDialog.Style.Dark" />
+
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+  <!-- Base -->
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+  <style name="Base.MdAlertDialog.Theme.Dark" parent="Theme.AppCompat.Dialog.Alert">
     <item name="colorAccent">@color/mdColor_blue_accent</item>
+    <item name="alertDialogStyle">@style/MdAlertDialog.Style.Dark</item>
+  </style>
+
+  <style name="Base.MdAlertDialog.Style.Dark" parent="AlertDialog.AppCompat">
+    <item name="android:layout">@layout/md_alert_dialog_layout</item>
   </style>
 </resources>

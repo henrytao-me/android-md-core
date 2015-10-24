@@ -16,10 +16,6 @@
 
 <resources>
 
-  <style name="Base.MdButton.Colored.TextAppearance" parent="MdText.Button">
-    <item name="android:textColor">?attr/mdButton_Colored_textColor</item>
-  </style>
-
   <!-- ////////////////////////////////////////////////////////////////////////// -->
   <!-- Button -->
   <!-- ////////////////////////////////////////////////////////////////////////// -->
@@ -48,5 +44,13 @@
   <style name="MdButton.Small" parent="Widget.AppCompat.Button.Small">
     <item name="android:layout_width">wrap_content</item>
     <item name="android:layout_height">wrap_content</item>
+  </style>
+
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+  <!-- Base -->
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+  <style name="Base.MdButton.Colored.TextAppearance" parent="MdText.Button">
+    <item name="android:textColor">?attr/mdButton_Colored_textColor</item>
   </style>
 </resources>

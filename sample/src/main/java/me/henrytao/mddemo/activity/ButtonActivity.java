@@ -17,13 +17,17 @@
 package me.henrytao.mddemo.activity;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.widget.Button;
+import android.widget.CheckBox;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import me.henrytao.mdcore.utils.AlertDialogBuilder;
 import me.henrytao.mddemo.R;
 import me.henrytao.mddemo.utils.DialogUtils;
 
@@ -36,6 +40,9 @@ public class ButtonActivity extends BaseLayoutActivity {
   @Bind(R.id.btn_dialog)
   Button vBtnDialog;
 
+  @Bind(R.id.btn_dialog_2)
+  Button vBtnDialog2;
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -43,5 +50,20 @@ public class ButtonActivity extends BaseLayoutActivity {
     ButterKnife.bind(this);
 
     vBtnDialog.setOnClickListener(v -> DialogUtils.showInfoDialog(this, getString(R.string.text_button_color_in_dialog_info), null, null));
+    vBtnDialog2.setOnClickListener(v -> {
+      new AlertDialogBuilder(ButtonActivity.this)
+          .setTitle(getString(R.string.text_custom_dialog))
+          .setView(R.layout.custom_dialog)
+          .setPositiveButton(R.string.text_ok, null)
+          .setNegativeButton(R.string.text_cancel, null)
+          .setOnShowListener(dialog -> {
+            AlertDialog alertDialog = (AlertDialog) dialog;
+            Button positiveButton = alertDialog.getButton(DialogInterface.BUTTON_POSITIVE);
+            CheckBox checkBox = (CheckBox) alertDialog.findViewById(R.id.checkbox);
+            checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> positiveButton.setEnabled(isChecked));
+            positiveButton.setEnabled(checkBox.isChecked());
+          })
+          .show();
+    });
   }
 }

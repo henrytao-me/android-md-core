@@ -73,9 +73,7 @@
 
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
-        <Button
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
+        <me.henrytao.mdcore.widgets.MdButton
           android:enabled="false"
           android:text="@string/text_button"
           style="@style/MdButton.Colored" />
@@ -90,9 +88,7 @@
 
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
-        <Button
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
+        <me.henrytao.mdcore.widgets.MdButton
           android:enabled="false"
           android:text="@string/text_button"
           style="@style/MdButton.Borderless.Colored" />
@@ -120,7 +116,13 @@
           style="@style/MdButton" />
       </RelativeLayout>
 
-      <RelativeLayout style="@style/AppStyle.Grid.Item" />
+      <RelativeLayout style="@style/AppStyle.Grid.Item">
+
+        <Button
+          android:id="@+id/btn_dialog_2"
+          android:text="@string/text_click_me"
+          style="@style/MdButton" />
+      </RelativeLayout>
 
       <RelativeLayout style="@style/AppStyle.Grid.Item" />
 

@@ -16,7 +16,20 @@
 
 <resources>
 
-  <style name="MdAlertDialog.Theme.Light" parent="Theme.AppCompat.Light.Dialog.Alert">
+  <style name="MdAlertDialog.Theme.Light" parent="Base.MdAlertDialog.Theme.Light" />
+
+  <style name="MdAlertDialog.Style.Light" parent="Base.MdAlertDialog.Style.Light" />
+
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+  <!-- Base -->
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+  <style name="Base.MdAlertDialog.Theme.Light" parent="Theme.AppCompat.Light.Dialog.Alert">
     <item name="colorAccent">@color/mdColor_pink_accent</item>
+    <item name="alertDialogStyle">@style/MdAlertDialog.Style.Light</item>
+  </style>
+
+  <style name="Base.MdAlertDialog.Style.Light" parent="AlertDialog.AppCompat.Light">
+    <item name="android:layout">@layout/md_alert_dialog_layout</item>
   </style>
 </resources>

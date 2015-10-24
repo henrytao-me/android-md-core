@@ -118,6 +118,7 @@
 
   <string name="text_cancel">Cancel</string>
   <string name="text_click_me">Click me</string>
+  <string name="text_custom_dialog">Custom dialog</string>
   <string name="text_ok">OK</string>
 
   <string name="text_button">Button</string>
