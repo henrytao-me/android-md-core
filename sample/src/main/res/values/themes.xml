@@ -27,6 +27,8 @@
     <item name="ic_help">@drawable/ic_help</item>
     <item name="ic_toolbar_color_lens">@drawable/ic_toolbar_color_lens</item>
     <item name="img_nav_google_logo">@drawable/img_nav_google_logo</item>
+
+    <item name="custom_color">@color/md_control_checkable</item>
   </style>
 
   <style name="Base.AppTheme.Dark" parent="MdTheme.Dark">
@@ -36,6 +38,8 @@
     <item name="ic_help">@drawable/ic_help_white</item>
     <item name="ic_toolbar_color_lens">@drawable/ic_toolbar_color_lens_white</item>
     <item name="img_nav_google_logo">@drawable/img_nav_google_logo_white</item>
+
+    <item name="custom_color">@color/md_control_checkable</item>
   </style>
 
   <!-- ////////////////////////////////////////////////////////////////////////// -->

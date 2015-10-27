@@ -14,12 +14,7 @@
   ~ limitations under the License.
   -->
 
-<resources>
-
-  <attr name="custom_color" format="reference" />
-
-  <attr name="ic_donate_circle" format="reference" />
-  <attr name="ic_help" format="reference" />
-  <attr name="ic_toolbar_color_lens" format="reference" />
-  <attr name="img_nav_google_logo" format="reference" />
-</resources>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:drawable="@drawable/abc_btn_check_to_on_mtrl_015" android:state_checked="true" />
+  <item android:drawable="@drawable/abc_btn_check_to_on_mtrl_000" />
+</selector>
