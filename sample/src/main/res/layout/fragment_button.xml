@@ -15,8 +15,8 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:tools="http://schemas.android.com/tools"
   xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
   tools:context=".activity.ListsActivity"
   style="@style/MdList">
 
@@ -149,15 +149,17 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:button="@drawable/ic_checkable_check_box"
-          app:customTint="@color/md_control_checkable" />
+          app:buttonTint="@color/md_control_checkable" />
       </RelativeLayout>
 
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
-        <CheckBox
+        <me.henrytao.mdcore.widgets.MdIconToggle
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:button="@drawable/abc_btn_check_material" />
+          android:button="@drawable/ic_checkable_check_box"
+          android:enabled="false"
+          app:buttonTint="@color/md_control_checkable" />
       </RelativeLayout>
 
       <RelativeLayout style="@style/AppStyle.Grid.Item">
