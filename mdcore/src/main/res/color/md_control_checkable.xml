@@ -14,12 +14,12 @@
   ~ limitations under the License.
   -->
 
-<resources>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-  <attr name="custom_color" format="reference" />
+  <item android:color="?attr/colorControlActivated" android:state_checked="true" />
+  <item android:color="?attr/colorControlNormal" android:state_checked="false" />
 
-  <attr name="ic_donate_circle" format="reference" />
-  <attr name="ic_help" format="reference" />
-  <attr name="ic_toolbar_color_lens" format="reference" />
-  <attr name="img_nav_google_logo" format="reference" />
-</resources>
+  <!--<item android:alpha="?android:attr/disabledAlpha" android:color="?attr/colorControlNormal" android:state_enabled="false" />-->
+  <!--<item android:color="?attr/colorControlActivated" android:state_checked="true" />-->
+  <!--<item android:color="?attr/colorControlNormal" />-->
+</selector>

@@ -16,6 +16,7 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
   tools:context=".activity.ListsActivity"
   style="@style/MdList">
 
@@ -144,12 +145,33 @@
 
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
-        <!--<ImageButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:src="@drawable/ic_blank_circle"-->
-        <!--android:text="@string/text_button"-->
-        <!--style="@style/Widget.AppCompat.ImageButton" />-->
+        <me.henrytao.mdcore.widgets.MdIconToggle
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/ic_checkable_check_box"
+          app:customTint="@color/md_control_checkable" />
+      </RelativeLayout>
+
+      <RelativeLayout style="@style/AppStyle.Grid.Item">
+
+        <CheckBox
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/abc_btn_check_material" />
+      </RelativeLayout>
+
+      <RelativeLayout style="@style/AppStyle.Grid.Item">
+
+        <CheckBox
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
+      </RelativeLayout>
+
+      <RelativeLayout style="@style/AppStyle.Grid.Item">
+
+        <ToggleButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
       </RelativeLayout>
     </LinearLayout>
   </LinearLayout>

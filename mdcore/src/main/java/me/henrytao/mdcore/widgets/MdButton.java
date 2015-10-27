@@ -62,8 +62,7 @@ public class MdButton extends AppCompatButton {
   }
 
   private void refresh() {
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB && Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP &&
-        mDisabledTextColor > 0) {
+    if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP && mDisabledTextColor > 0) {
       if (isEnabled()) {
         setTextColor(mActiveTextColorStateList);
       } else {
