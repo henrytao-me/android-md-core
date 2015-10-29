@@ -38,8 +38,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import me.henrytao.mdcore.R;
-
 /**
  * Created by henrytao on 10/10/15.
  */
@@ -59,47 +57,42 @@ public class ResourceUtils {
 
     while ((type = parser.next()) != XmlPullParser.END_DOCUMENT
         && ((depth = parser.getDepth()) >= innerDepth || type != XmlPullParser.END_TAG)) {
-      if (type != XmlPullParser.START_TAG || depth > innerDepth
-          || !parser.getName().equals("item")) {
+      if (type != XmlPullParser.START_TAG || depth > innerDepth || !parser.getName().equals("item")) {
         continue;
       }
-
-      int color = 0;
-      //TypedValue typedValue = new TypedValue();
-      //context.getTheme().resolveAttribute(android.R.attr.textAppearanceLarge, typedValue, true);
-      //TypedArray a = context.getTheme().obtainStyledAttributes( new int[]{android.R.attr.color});
-      //int color = a.getColor(0, 0);
-      //a.recycle();
-
       // Parse all unrecognized attributes as state specifiers.
       int j = 0;
       final int numAttrs = attrs.getAttributeCount();
+      int color = 0;
+      float alpha = 1.0f;
       int[] stateSpec = new int[numAttrs];
       for (int i = 0; i < numAttrs; i++) {
         final int stateResId = attrs.getAttributeNameResource(i);
         switch (stateResId) {
           case android.R.attr.color:
             int colorAttrId = attrs.getAttributeResourceValue(i, 0);
-            String colorAttrValue = attrs.getAttributeValue(i);
             if (colorAttrId == 0) {
+              String colorAttrValue = attrs.getAttributeValue(i);
               colorAttrId = Integer.valueOf(colorAttrValue.replace("?", ""));
+              color = getColorFromAttribute(context, colorAttrId);
+            } else {
+              color = r.getColor(colorAttrId);
             }
-            //TypedArray a = context.obtainStyledAttributes(colorAttrId, new int[] {android.R.attr.color});
-            //color = a.getColor(0, 0);
-            //a.recycle();
-            color = getColorFromAttribute(context, colorAttrId);
-
-            //color = r.getColor(attrs.getAttributeResourceValue(i, 0));
-            //color = getColorFromAttribute(context, attrs.getAttributeResourceValue(i, 0));
             break;
           case android.R.attr.alpha:
-            // Recognized attribute, ignore.
+            try {
+              alpha = attrs.getAttributeFloatValue(i, 1.0f);
+            } catch (Exception e) {
+              String alphaAttrValue = attrs.getAttributeValue(i);
+              alpha = getFloatFromAttribute(context, Integer.valueOf(alphaAttrValue.replace("?", "")));
+            }
             break;
           default:
             stateSpec[j++] = attrs.getAttributeBooleanValue(i, false) ? stateResId : -stateResId;
         }
       }
       stateSpec = StateSet.trimStateSet(stateSpec, j);
+      color = modulateColorAlpha(color, alpha);
 
       customColorList.add(color);
       customStateList.add(stateSpec);
@@ -159,5 +152,15 @@ public class ResourceUtils {
       }
     }
     return statusBarSize;
+  }
+
+  private static int modulateColorAlpha(int baseColor, float alphaMod) {
+    if (alphaMod == 1.0f) {
+      return baseColor;
+    }
+    int baseAlpha = Color.alpha(baseColor);
+    int alpha = (int) (baseAlpha * alphaMod + 0.5f);
+    alpha = Math.min(Math.max(alpha, 0), 255);
+    return (baseColor & 0xFFFFFF) | (alpha << 24);
   }
 }
