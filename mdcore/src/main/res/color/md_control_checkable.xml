@@ -15,7 +15,10 @@
   -->
 
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-  <item android:alpha="?android:attr/disabledAlpha" android:color="?attr/colorControlNormal" android:state_enabled="false" />
-  <item android:color="?attr/colorControlActivated" android:state_checked="true" />
-  <item android:color="?attr/colorControlNormal" />
+  <item android:color="@color/mdColor_amber" android:state_checked="true" />
+  <item android:color="@color/mdColor_brown" />
+
+  <!--<item android:alpha="?android:attr/disabledAlpha" android:color="?attr/colorControlNormal" android:state_enabled="false" />-->
+  <!--<item android:color="?attr/colorControlActivated" android:state_checked="true" />-->
+  <!--<item android:color="?attr/colorControlNormal" />-->
 </selector>

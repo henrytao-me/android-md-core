@@ -16,8 +16,6 @@
 
 <resources>
 
-  <attr name="custom_color" format="reference" />
-
   <attr name="ic_donate_circle" format="reference" />
   <attr name="ic_help" format="reference" />
   <attr name="ic_toolbar_color_lens" format="reference" />

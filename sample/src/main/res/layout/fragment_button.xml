@@ -145,19 +145,19 @@
 
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
-        <me.henrytao.mdcore.widgets.MdIconToggle
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
+        <CheckBox
+          android:layout_width="48dp"
+          android:layout_height="48dp"
           android:button="@drawable/ic_checkable_check_box"
-          app:buttonTint="@color/md_control_checkable" />
+          android:buttonTint="@color/md_control_checkable" />
       </RelativeLayout>
 
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
         <me.henrytao.mdcore.widgets.MdIconToggle
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:button="@drawable/ic_checkable_check_box"
+          android:layout_width="48dp"
+          android:layout_height="48dp"
+          android:button="@drawable/ic_favorite"
           android:enabled="false"
           app:buttonTint="@color/md_control_checkable" />
       </RelativeLayout>

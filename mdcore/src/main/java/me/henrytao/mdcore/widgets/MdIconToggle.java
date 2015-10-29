@@ -67,22 +67,5 @@ public class MdIconToggle extends AppCompatCheckBox {
         }
       }
     }
-    //TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.MdIconToggle, 0, 0);
-    //try {
-    //  int resId = a.getResourceId(R.styleable.MdIconToggle_customTint, 0);
-    //  if (resId > 0) {
-    //    try {
-    //      setSupportButtonTintList(ResourceUtils.createColorStateListFromResId(context, resId));
-    //    } catch (XmlPullParserException e) {
-    //      e.printStackTrace();
-    //    } catch (IOException e) {
-    //      e.printStackTrace();
-    //    }
-    //  }
-    //} catch (Exception e) {
-    //  e.printStackTrace();
-    //} finally {
-    //  a.recycle();
-    //}
   }
 }
