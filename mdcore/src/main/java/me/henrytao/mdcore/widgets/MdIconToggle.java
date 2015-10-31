@@ -19,6 +19,7 @@ package me.henrytao.mdcore.widgets;
 import org.xmlpull.v1.XmlPullParserException;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.os.Build;
 import android.support.v7.widget.AppCompatCheckBox;
 import android.util.AttributeSet;
@@ -51,19 +52,20 @@ public class MdIconToggle extends AppCompatCheckBox {
   protected void initFromAttributes(AttributeSet attrs) {
     Context context = getContext();
     if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-      int numAttrs = attrs.getAttributeCount();
-      for (int i = 0; i < numAttrs; i++) {
-        if (attrs.getAttributeNameResource(i) == R.attr.buttonTint) {
-          int buttonTintId = attrs.getAttributeResourceValue(i, 0);
-          if (buttonTintId > 0) {
-            try {
-              setSupportButtonTintList(ResourceUtils.createColorStateListFromResId(context, buttonTintId));
-            } catch (XmlPullParserException e) {
-              e.printStackTrace();
-            } catch (IOException e) {
-              e.printStackTrace();
-            }
-          }
+      TypedArray a = getContext().getTheme().obtainStyledAttributes(attrs, R.styleable.CompoundButton, 0, 0);
+      int buttonTintId = 0;
+      try {
+        buttonTintId = a.getResourceId(R.styleable.CompoundButton_buttonTint, 0);
+      } finally {
+        a.recycle();
+      }
+      if (buttonTintId > 0) {
+        try {
+          setSupportButtonTintList(ResourceUtils.createColorStateListFromResId(context, buttonTintId));
+        } catch (XmlPullParserException e) {
+          e.printStackTrace();
+        } catch (IOException e) {
+          e.printStackTrace();
         }
       }
     }
