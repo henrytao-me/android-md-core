@@ -16,18 +16,18 @@
 
 <resources>
 
-  <attr name="MdListItemSingleLineTextOnly" format="reference" />
-  <attr name="MdListItemSingleLineIconWithText" format="reference" />
-  <attr name="MdListItemSingleLineAvatarWithText" format="reference" />
-  <attr name="MdListItemSingleLineAvatarWithTextAndIcon" format="reference" />
-  <attr name="MdListItemTwoLineTextOnly" format="reference" />
-  <attr name="MdListItemTwoLineIconWithText" format="reference" />
-  <attr name="MdListItemTwoLineAvatarWithText" format="reference" />
-  <attr name="MdListItemTwoLineAvatarWithTextAndIcon" format="reference" />
-  <attr name="MdListItemThreeLineTextOnly" format="reference" />
-  <attr name="MdListItemThreeLineIconWithText" format="reference" />
-  <attr name="MdListItemThreeLineAvatarWithText" format="reference" />
-  <attr name="MdListItemThreeLineAvatarWithTextAndIcon" format="reference" />
+  <attr name="MdListItemSingleLineTextOnlyStyle" format="reference" />
+  <attr name="MdListItemSingleLineIconWithTextStyle" format="reference" />
+  <attr name="MdListItemSingleLineAvatarWithTextStyle" format="reference" />
+  <attr name="MdListItemSingleLineAvatarWithTextAndIconStyle" format="reference" />
+  <attr name="MdListItemTwoLineTextOnlyStyle" format="reference" />
+  <attr name="MdListItemTwoLineIconWithTextStyle" format="reference" />
+  <attr name="MdListItemTwoLineAvatarWithTextStyle" format="reference" />
+  <attr name="MdListItemTwoLineAvatarWithTextAndIconStyle" format="reference" />
+  <attr name="MdListItemThreeLineTextOnlyStyle" format="reference" />
+  <attr name="MdListItemThreeLineIconWithTextStyle" format="reference" />
+  <attr name="MdListItemThreeLineAvatarWithTextStyle" format="reference" />
+  <attr name="MdListItemThreeLineAvatarWithTextAndIconStyle" format="reference" />
 
   <declare-styleable name="MdListItem">
     <attr name="mdli_divider_layout" format="reference" />

@@ -44,22 +44,22 @@ public class MdListItem extends RelativeLayout {
   protected static Map<Integer, ListItemInfo> sListItemInfos = new HashMap<>();
 
   static {
-    sListItemInfos.put(11, new ListItemInfo(R.attr.MdListItemSingleLineTextOnly, R.layout.mdli_single_line_text_only));
-    sListItemInfos.put(12, new ListItemInfo(R.attr.MdListItemSingleLineIconWithText, R.layout.mdli_single_line_icon_with_text));
-    sListItemInfos.put(13, new ListItemInfo(R.attr.MdListItemSingleLineAvatarWithText, R.layout.mdli_single_line_avatar_with_text));
-    sListItemInfos.put(14, new ListItemInfo(R.attr.MdListItemSingleLineAvatarWithTextAndIcon,
+    sListItemInfos.put(11, new ListItemInfo(R.attr.MdListItemSingleLineTextOnlyStyle, R.layout.mdli_single_line_text_only));
+    sListItemInfos.put(12, new ListItemInfo(R.attr.MdListItemSingleLineIconWithTextStyle, R.layout.mdli_single_line_icon_with_text));
+    sListItemInfos.put(13, new ListItemInfo(R.attr.MdListItemSingleLineAvatarWithTextStyle, R.layout.mdli_single_line_avatar_with_text));
+    sListItemInfos.put(14, new ListItemInfo(R.attr.MdListItemSingleLineAvatarWithTextAndIconStyle,
         R.layout.mdli_single_line_avatar_with_text_and_icon));
 
-    sListItemInfos.put(21, new ListItemInfo(R.attr.MdListItemTwoLineTextOnly, R.layout.mdli_two_line_text_only));
-    sListItemInfos.put(22, new ListItemInfo(R.attr.MdListItemTwoLineIconWithText, R.layout.mdli_two_line_icon_with_text));
-    sListItemInfos.put(23, new ListItemInfo(R.attr.MdListItemTwoLineAvatarWithText, R.layout.mdli_two_line_avatar_with_text));
-    sListItemInfos.put(24, new ListItemInfo(R.attr.MdListItemTwoLineAvatarWithTextAndIcon,
+    sListItemInfos.put(21, new ListItemInfo(R.attr.MdListItemTwoLineTextOnlyStyle, R.layout.mdli_two_line_text_only));
+    sListItemInfos.put(22, new ListItemInfo(R.attr.MdListItemTwoLineIconWithTextStyle, R.layout.mdli_two_line_icon_with_text));
+    sListItemInfos.put(23, new ListItemInfo(R.attr.MdListItemTwoLineAvatarWithTextStyle, R.layout.mdli_two_line_avatar_with_text));
+    sListItemInfos.put(24, new ListItemInfo(R.attr.MdListItemTwoLineAvatarWithTextAndIconStyle,
         R.layout.mdli_two_line_avatar_with_text_and_icon));
 
-    sListItemInfos.put(31, new ListItemInfo(R.attr.MdListItemThreeLineTextOnly, R.layout.mdli_three_line_text_only));
-    sListItemInfos.put(32, new ListItemInfo(R.attr.MdListItemThreeLineIconWithText, R.layout.mdli_three_line_icon_with_text));
-    sListItemInfos.put(33, new ListItemInfo(R.attr.MdListItemThreeLineAvatarWithText, R.layout.mdli_three_line_avatar_with_text));
-    sListItemInfos.put(34, new ListItemInfo(R.attr.MdListItemThreeLineAvatarWithTextAndIcon,
+    sListItemInfos.put(31, new ListItemInfo(R.attr.MdListItemThreeLineTextOnlyStyle, R.layout.mdli_three_line_text_only));
+    sListItemInfos.put(32, new ListItemInfo(R.attr.MdListItemThreeLineIconWithTextStyle, R.layout.mdli_three_line_icon_with_text));
+    sListItemInfos.put(33, new ListItemInfo(R.attr.MdListItemThreeLineAvatarWithTextStyle, R.layout.mdli_three_line_avatar_with_text));
+    sListItemInfos.put(34, new ListItemInfo(R.attr.MdListItemThreeLineAvatarWithTextAndIconStyle,
         R.layout.mdli_three_line_avatar_with_text_and_icon));
   }
 
@@ -117,13 +117,13 @@ public class MdListItem extends RelativeLayout {
 
   public MdListItem(Context context, AttributeSet attrs, int defStyleAttr) {
     super(context, attrs, getDefaultStyleAttr(context, attrs, defStyleAttr));
-    initFromAttributes(attrs);
+    initFromAttributes(attrs, getDefaultStyleAttr(context, attrs, defStyleAttr));
   }
 
   @TargetApi(Build.VERSION_CODES.LOLLIPOP)
   public MdListItem(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
     super(context, attrs, getDefaultStyleAttr(context, attrs, defStyleAttr), defStyleRes);
-    initFromAttributes(attrs);
+    initFromAttributes(attrs, getDefaultStyleAttr(context, attrs, defStyleAttr));
   }
 
   @Override
@@ -194,9 +194,9 @@ public class MdListItem extends RelativeLayout {
     }
   }
 
-  protected void initFromAttributes(AttributeSet attrs) {
+  protected void initFromAttributes(AttributeSet attrs, int defStyleAttr) {
     renderInEditMode(attrs);
-    TypedArray a = getContext().getTheme().obtainStyledAttributes(attrs, R.styleable.MdListItem, 0, 0);
+    TypedArray a = getContext().getTheme().obtainStyledAttributes(attrs, R.styleable.MdListItem, defStyleAttr, 0);
     try {
       mType = a.getInteger(R.styleable.MdListItem_mdli_type, DEFAULT_TYPE);
       mDividerLayout = a.getResourceId(R.styleable.MdListItem_mdli_divider_layout, 0);

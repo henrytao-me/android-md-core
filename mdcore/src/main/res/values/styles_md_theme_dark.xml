@@ -144,20 +144,20 @@
 
     <item name="MdIconToggleStyle">@style/MdIconToggle</item>
 
-    <item name="MdListItemSingleLineTextOnly">@style/MdListItem.SingleLine.TextOnly</item>
-    <item name="MdListItemSingleLineIconWithText">@style/MdListItem.SingleLine.IconWithText</item>
-    <item name="MdListItemSingleLineAvatarWithText">@style/MdListItem.SingleLine.AvatarWithText</item>
-    <item name="MdListItemSingleLineAvatarWithTextAndIcon">@style/MdListItem.SingleLine.AvatarWithTextAndIcon</item>
+    <item name="MdListItemSingleLineTextOnlyStyle">@style/MdListItem.SingleLine.TextOnly</item>
+    <item name="MdListItemSingleLineIconWithTextStyle">@style/MdListItem.SingleLine.IconWithText</item>
+    <item name="MdListItemSingleLineAvatarWithTextStyle">@style/MdListItem.SingleLine.AvatarWithText</item>
+    <item name="MdListItemSingleLineAvatarWithTextAndIconStyle">@style/MdListItem.SingleLine.AvatarWithTextAndIcon</item>
 
-    <item name="MdListItemTwoLineTextOnly">@style/MdListItem.TwoLine.TextOnly</item>
-    <item name="MdListItemTwoLineIconWithText">@style/MdListItem.TwoLine.IconWithText</item>
-    <item name="MdListItemTwoLineAvatarWithText">@style/MdListItem.TwoLine.AvatarWithText</item>
-    <item name="MdListItemTwoLineAvatarWithTextAndIcon">@style/MdListItem.TwoLine.AvatarWithTextAndIcon</item>
+    <item name="MdListItemTwoLineTextOnlyStyle">@style/MdListItem.TwoLine.TextOnly</item>
+    <item name="MdListItemTwoLineIconWithTextStyle">@style/MdListItem.TwoLine.IconWithText</item>
+    <item name="MdListItemTwoLineAvatarWithTextStyle">@style/MdListItem.TwoLine.AvatarWithText</item>
+    <item name="MdListItemTwoLineAvatarWithTextAndIconStyle">@style/MdListItem.TwoLine.AvatarWithTextAndIcon</item>
 
-    <item name="MdListItemThreeLineTextOnly">@style/MdListItem.ThreeLine.TextOnly</item>
-    <item name="MdListItemThreeLineIconWithText">@style/MdListItem.ThreeLine.IconWithText</item>
-    <item name="MdListItemThreeLineAvatarWithText">@style/MdListItem.ThreeLine.AvatarWithText</item>
-    <item name="MdListItemThreeLineAvatarWithTextAndIcon">@style/MdListItem.ThreeLine.AvatarWithTextAndIcon</item>
+    <item name="MdListItemThreeLineTextOnlyStyle">@style/MdListItem.ThreeLine.TextOnly</item>
+    <item name="MdListItemThreeLineIconWithTextStyle">@style/MdListItem.ThreeLine.IconWithText</item>
+    <item name="MdListItemThreeLineAvatarWithTextStyle">@style/MdListItem.ThreeLine.AvatarWithText</item>
+    <item name="MdListItemThreeLineAvatarWithTextAndIconStyle">@style/MdListItem.ThreeLine.AvatarWithTextAndIcon</item>
 
     <item name="mdButton_Colored_textColor">@drawable/md_button_text_color_dark_dark</item>
 
