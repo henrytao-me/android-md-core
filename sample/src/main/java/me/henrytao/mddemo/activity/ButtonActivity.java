@@ -43,7 +43,11 @@ public class ButtonActivity extends BaseLayoutActivity {
 
   @Bind(R.id.btn_dialog_2) Button vBtnDialog2;
 
-  @Bind(R.id.icon_inactivated) MdImageView vIconActivated;
+  @Bind(R.id.icon_activated) MdImageView vIconActivated;
+
+  @Bind(R.id.icon_activated_2) MdImageView vIconActivated2;
+
+  @Bind(R.id.icon_activated_3) MdImageView vIconActivated3;
 
   @Bind(R.id.toggle_up) MdIconToggle vMdIconToggleUp;
 
@@ -78,5 +82,7 @@ public class ButtonActivity extends BaseLayoutActivity {
     });
 
     vIconActivated.setActivated(true);
+    vIconActivated2.setActivated(true);
+    vIconActivated3.setActivated(true);
   }
 }

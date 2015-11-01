@@ -219,18 +219,56 @@
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
         <me.henrytao.mdcore.widgets.MdImageView
-          android:id="@+id/icon_inactivated"
+          android:id="@+id/icon_activated"
           android:layout_width="@dimen/mdIconSize"
           android:layout_height="@dimen/mdIconSize"
           android:src="@drawable/ic_android" />
       </RelativeLayout>
 
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
+      <RelativeLayout
+        android:background="@color/mdColor_background"
+        style="@style/AppStyle.Grid.Item">
 
+        <me.henrytao.mdcore.widgets.MdImageView
+          android:layout_width="@dimen/mdIconSize"
+          android:layout_height="@dimen/mdIconSize"
+          android:src="@drawable/ic_android"
+          app:tint="@color/md_image_view_color_light" />
       </RelativeLayout>
 
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
+      <RelativeLayout
+        android:background="@color/mdColor_background"
+        style="@style/AppStyle.Grid.Item">
 
+        <me.henrytao.mdcore.widgets.MdImageView
+          android:id="@+id/icon_activated_2"
+          android:layout_width="@dimen/mdIconSize"
+          android:layout_height="@dimen/mdIconSize"
+          android:src="@drawable/ic_android"
+          app:tint="@color/md_image_view_color_light" />
+      </RelativeLayout>
+
+      <RelativeLayout
+        android:background="@color/mdColor_pink"
+        style="@style/AppStyle.Grid.Item">
+
+        <me.henrytao.mdcore.widgets.MdImageView
+          android:layout_width="@dimen/mdIconSize"
+          android:layout_height="@dimen/mdIconSize"
+          android:src="@drawable/ic_android"
+          app:tint="@color/md_image_view_color_dark" />
+      </RelativeLayout>
+
+      <RelativeLayout
+        android:background="@color/mdColor_pink"
+        style="@style/AppStyle.Grid.Item">
+
+        <me.henrytao.mdcore.widgets.MdImageView
+          android:id="@+id/icon_activated_3"
+          android:layout_width="@dimen/mdIconSize"
+          android:layout_height="@dimen/mdIconSize"
+          android:src="@drawable/ic_android"
+          app:tint="@color/md_image_view_color_dark" />
       </RelativeLayout>
     </LinearLayout>
   </LinearLayout>
