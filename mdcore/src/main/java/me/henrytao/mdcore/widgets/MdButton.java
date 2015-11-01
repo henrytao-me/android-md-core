@@ -16,11 +16,17 @@
 
 package me.henrytao.mdcore.widgets;
 
+import org.xmlpull.v1.XmlPullParserException;
+
 import android.content.Context;
-import android.content.res.ColorStateList;
+import android.content.res.TypedArray;
 import android.os.Build;
 import android.support.v7.widget.AppCompatButton;
 import android.util.AttributeSet;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import me.henrytao.mdcore.R;
 import me.henrytao.mdcore.utils.ResourceUtils;
@@ -30,43 +36,71 @@ import me.henrytao.mdcore.utils.ResourceUtils;
  */
 public class MdButton extends AppCompatButton {
 
-  private ColorStateList mActiveTextColorStateList;
+  protected static final int DEFAULT_TYPE = 11;
 
-  private int mDisabledTextColor;
+  protected static Map<Integer, Integer> sButtonInfos = new HashMap<>();
+
+  static {
+    sButtonInfos.put(11, R.attr.MdButtonStyle);
+    sButtonInfos.put(12, R.attr.MdButtonColoredStyle);
+    sButtonInfos.put(13, R.attr.MdButtonBorderlessStyle);
+    sButtonInfos.put(14, R.attr.MdButtonBorderlessColoredStyle);
+  }
+
+  protected static int getDefaultStyleAttr(Context context, AttributeSet attrs, int styleAttr) {
+    if (styleAttr > 0) {
+      return styleAttr;
+    }
+    TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.MdButton, 0, 0);
+    int defStyleAttr = sButtonInfos.get(DEFAULT_TYPE);
+    try {
+      int type = a.getInteger(R.styleable.MdButton_mdb_type, DEFAULT_TYPE);
+      if (sButtonInfos.containsKey(type)) {
+        defStyleAttr = sButtonInfos.get(type);
+      }
+    } finally {
+      a.recycle();
+    }
+    return defStyleAttr;
+  }
+
+  protected int mType;
+
+  private int mTextColorId;
 
   public MdButton(Context context) {
-    super(context);
-    init(context);
+    this(context, null);
   }
 
   public MdButton(Context context, AttributeSet attrs) {
-    super(context, attrs);
-    init(context);
+    this(context, attrs, 0);
   }
 
   public MdButton(Context context, AttributeSet attrs, int defStyleAttr) {
-    super(context, attrs, defStyleAttr);
-    init(context);
+    super(context, attrs, getDefaultStyleAttr(context, attrs, defStyleAttr));
+    initFromAttributes(attrs, getDefaultStyleAttr(context, attrs, defStyleAttr));
   }
 
-  @Override
-  public void setEnabled(boolean enabled) {
-    super.setEnabled(enabled);
-    refresh();
-  }
+  protected void initFromAttributes(AttributeSet attrs, int defStyleAttr) {
+    Context context = getContext();
 
-  private void init(Context context) {
-    mDisabledTextColor = ResourceUtils.getColorFromAttribute(context, R.attr.mdTextColorHint_backgroundPalette);
-    mActiveTextColorStateList = getTextColors();
-    refresh();
-  }
+    TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.MdButton, defStyleAttr, 0);
+    try {
+      mType = a.getInteger(R.styleable.MdButton_mdb_type, DEFAULT_TYPE);
+      mTextColorId = a.getResourceId(R.styleable.TextAppearance_android_textColor, 0);
+    } finally {
+      a.recycle();
+    }
 
-  private void refresh() {
-    if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP && mDisabledTextColor > 0) {
-      if (isEnabled()) {
-        setTextColor(mActiveTextColorStateList);
-      } else {
-        setTextColor(mDisabledTextColor);
+    if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+      if (mTextColorId > 0) {
+        try {
+          setTextColor(ResourceUtils.createColorStateListFromResId(context, mTextColorId));
+        } catch (XmlPullParserException e) {
+          e.printStackTrace();
+        } catch (IOException e) {
+          e.printStackTrace();
+        }
       }
     }
   }

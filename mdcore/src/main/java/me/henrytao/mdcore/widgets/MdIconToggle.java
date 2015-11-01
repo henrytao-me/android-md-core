@@ -116,7 +116,7 @@ public class MdIconToggle extends AppCompatCheckBox {
     });
 
     if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-      TypedArray a = getContext().getTheme().obtainStyledAttributes(attrs, R.styleable.CompoundButton, defStyleAttr, 0);
+      TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.CompoundButton, defStyleAttr, 0);
       int buttonTintId = 0;
       try {
         buttonTintId = a.getResourceId(R.styleable.CompoundButton_buttonTint, 0);

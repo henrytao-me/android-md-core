@@ -15,8 +15,6 @@
   -->
 
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-
-  <item android:color="@color/mdTextColorHint_dark" android:state_enabled="false" />
-
-  <item android:color="@color/mdTextColorPrimary_light" />
+  <item android:color="?attr/mdTextColorHint_backgroundPalette" android:state_enabled="false" />
+  <item android:color="?attr/mdTextColorPrimary_accentPalette" />
 </selector>

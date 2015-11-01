@@ -16,8 +16,17 @@
 
 <resources>
 
-  <declare-styleable name="MdButton">
+  <attr name="MdButtonStyle" format="reference" />
+  <attr name="MdButtonColoredStyle" format="reference" />
+  <attr name="MdButtonBorderlessStyle" format="reference" />
+  <attr name="MdButtonBorderlessColoredStyle" format="reference" />
 
-    <attr name="mdButton_Colored_textColor" format="color|reference" />
+  <declare-styleable name="MdButton">
+    <attr name="mdb_type" format="integer">
+      <enum name="normal" value="11" />
+      <enum name="colored" value="12" />
+      <enum name="borderless" value="13" />
+      <enum name="borderless_colored" value="14" />
+    </attr>
   </declare-styleable>
 </resources>

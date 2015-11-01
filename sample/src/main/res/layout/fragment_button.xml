@@ -15,6 +15,7 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   tools:context=".activity.ListsActivity"
   style="@style/MdList">
@@ -33,32 +34,38 @@
 
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
-        <Button
-          android:text="@string/text_button"
-          style="@style/MdButton" />
+        <me.henrytao.mdcore.widgets.MdButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/text_button" />
       </RelativeLayout>
 
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
-        <Button
+        <me.henrytao.mdcore.widgets.MdButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:enabled="false"
+          android:text="@string/text_button" />
+      </RelativeLayout>
+
+      <RelativeLayout style="@style/AppStyle.Grid.Item">
+
+        <me.henrytao.mdcore.widgets.MdButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/text_button"
+          app:mdb_type="borderless" />
+      </RelativeLayout>
+
+      <RelativeLayout style="@style/AppStyle.Grid.Item">
+
+        <me.henrytao.mdcore.widgets.MdButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
           android:enabled="false"
           android:text="@string/text_button"
-          style="@style/MdButton" />
-      </RelativeLayout>
-
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
-
-        <Button
-          android:text="@string/text_button"
-          style="@style/MdButton.Borderless" />
-      </RelativeLayout>
-
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
-
-        <Button
-          android:enabled="false"
-          android:text="@string/text_button"
-          style="@style/MdButton.Borderless" />
+          app:mdb_type="borderless" />
       </RelativeLayout>
     </LinearLayout>
 
@@ -66,32 +73,40 @@
 
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
-        <Button
+        <me.henrytao.mdcore.widgets.MdButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
           android:text="@string/text_button"
-          style="@style/MdButton.Colored" />
+          app:mdb_type="colored" />
       </RelativeLayout>
 
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
-        <Button
+        <me.henrytao.mdcore.widgets.MdButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
           android:enabled="false"
           android:text="@string/text_button"
-          style="@style/MdButton.Colored" />
+          app:mdb_type="colored" />
       </RelativeLayout>
 
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
-        <Button
+        <me.henrytao.mdcore.widgets.MdButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
           android:text="@string/text_button"
-          style="@style/MdButton.Borderless.Colored" />
+          app:mdb_type="borderless_colored" />
       </RelativeLayout>
 
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
-        <Button
+        <me.henrytao.mdcore.widgets.MdButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
           android:enabled="false"
           android:text="@string/text_button"
-          style="@style/MdButton.Borderless.Colored" />
+          app:mdb_type="borderless_colored" />
       </RelativeLayout>
     </LinearLayout>
   </LinearLayout>
