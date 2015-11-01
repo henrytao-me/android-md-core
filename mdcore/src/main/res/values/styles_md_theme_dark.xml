@@ -142,6 +142,11 @@
     <item name="mdColorDividerInverse_backgroundPalette_dark">@color/mdColorDivider_light</item>
     <item name="mdColorDividerInverse_backgroundPalette_light">@color/mdColorDivider_light</item>
 
+    <item name="MdButtonStyle">@style/MdButton</item>
+    <item name="MdButtonColoredStyle">@style/MdButton.Colored</item>
+    <item name="MdButtonBorderlessStyle">@style/MdButton.Borderless</item>
+    <item name="MdButtonBorderlessColoredStyle">@style/MdButton.Borderless.Colored</item>
+
     <item name="MdIconToggleStyle">@style/MdIconToggle</item>
 
     <item name="MdListItemSingleLineTextOnlyStyle">@style/MdListItem.SingleLine.TextOnly</item>
@@ -158,8 +163,6 @@
     <item name="MdListItemThreeLineIconWithTextStyle">@style/MdListItem.ThreeLine.IconWithText</item>
     <item name="MdListItemThreeLineAvatarWithTextStyle">@style/MdListItem.ThreeLine.AvatarWithText</item>
     <item name="MdListItemThreeLineAvatarWithTextAndIconStyle">@style/MdListItem.ThreeLine.AvatarWithTextAndIcon</item>
-
-    <item name="mdButton_Colored_textColor">@drawable/md_button_text_color_dark_dark</item>
 
     <item name="ic_toolbar_arrow_back">@drawable/ic_toolbar_arrow_back_white</item>
     <item name="ic_blank_circle">@drawable/ic_blank_circle_white</item>
