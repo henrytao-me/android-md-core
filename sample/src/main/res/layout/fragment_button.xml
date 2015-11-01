@@ -73,7 +73,7 @@
 
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
-        <me.henrytao.mdcore.widgets.MdButton
+        <Button
           android:enabled="false"
           android:text="@string/text_button"
           style="@style/MdButton.Colored" />
@@ -88,7 +88,7 @@
 
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
-        <me.henrytao.mdcore.widgets.MdButton
+        <Button
           android:enabled="false"
           android:text="@string/text_button"
           style="@style/MdButton.Borderless.Colored" />
@@ -145,37 +145,37 @@
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
         <me.henrytao.mdcore.widgets.MdIconToggle
-          android:button="@drawable/ic_drawable_favorite"
-          android:gravity="center"
-          style="@style/MdIconToggle" />
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/ic_drawable_favorite" />
       </RelativeLayout>
 
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
         <me.henrytao.mdcore.widgets.MdIconToggle
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
           android:button="@drawable/ic_drawable_favorite"
-          android:enabled="false"
-          android:gravity="center"
-          style="@style/MdIconToggle" />
+          android:enabled="false" />
       </RelativeLayout>
 
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
         <me.henrytao.mdcore.widgets.MdIconToggle
           android:id="@+id/toggle_up"
-          android:button="@drawable/ic_drawable_favorite"
-          android:gravity="center"
-          style="@style/MdIconToggle" />
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:button="@drawable/ic_drawable_favorite" />
       </RelativeLayout>
 
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
         <me.henrytao.mdcore.widgets.MdIconToggle
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
           android:button="@drawable/ic_drawable_favorite"
           android:enabled="false"
-          android:gravity="center"
-          android:text="10"
-          style="@style/MdIconToggle" />
+          android:text="10" />
       </RelativeLayout>
     </LinearLayout>
   </LinearLayout>
