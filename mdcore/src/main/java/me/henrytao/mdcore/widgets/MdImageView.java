@@ -23,7 +23,6 @@ import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
-import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v7.graphics.drawable.DrawableUtils;
 import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
@@ -110,19 +109,6 @@ public class MdImageView extends AppCompatImageView {
   }
 
   private void invalidateImageTint() {
-    Drawable icon = getDrawable();
-    if (icon != null && (mImageTintList != null || mImageTintMode != null)) {
-      icon = DrawableCompat.wrap(icon).mutate();
-      if (mImageTintList != null) {
-        DrawableCompat.setTintList(icon, mImageTintList);
-      }
-      if (mImageTintMode != null) {
-        DrawableCompat.setTintMode(icon, mImageTintMode);
-      }
-      if (icon.isStateful()) {
-        icon.setState(getDrawableState());
-      }
-      super.setImageDrawable(icon);
-    }
+    super.setImageDrawable(ResourceUtils.createDrawableTint(getDrawable(), getDrawableState(), mImageTintList, mImageTintMode));
   }
 }

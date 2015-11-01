@@ -153,8 +153,6 @@
   <color name="mdColor_brown_dark">#5D4037</color>
   <color name="mdColor_brown_light">#D7CCC8</color>
 
-  <color name="mdColor_brown_alpha">#90795548</color>
-
   <color name="mdColor_grey">#9E9E9E</color>
   <color name="mdColor_grey_dark">#616161</color>
   <color name="mdColor_grey_light">#F5F5F5</color>

@@ -26,8 +26,11 @@ import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.content.res.XmlResourceParser;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.v4.graphics.ColorUtils;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.util.AttributeSet;
 import android.util.StateSet;
 import android.util.TypedValue;
@@ -109,6 +112,22 @@ public class ResourceUtils {
     return new ColorStateList(states, colors);
   }
 
+  public static Drawable createDrawableTint(Drawable drawable, int[] drawableState, ColorStateList tintList, PorterDuff.Mode tintMode) {
+    if (drawable != null && (tintList != null || tintMode != null)) {
+      drawable = DrawableCompat.wrap(drawable).mutate();
+      if (tintList != null) {
+        DrawableCompat.setTintList(drawable, tintList);
+      }
+      if (tintMode != null) {
+        DrawableCompat.setTintMode(drawable, tintMode);
+      }
+      if (drawable.isStateful()) {
+        drawable.setState(drawableState);
+      }
+    }
+    return drawable;
+  }
+
   public static void enableTranslucentStatus(Activity activity) {
     Window window = activity.getWindow();
     window.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
@@ -155,15 +174,12 @@ public class ResourceUtils {
     return statusBarSize;
   }
 
-  private static int modulateColorAlpha(int baseColor, float alphaMod) {
+  public static int modulateColorAlpha(int baseColor, float alphaMod) {
     if (alphaMod == 1.0f) {
       return baseColor;
     }
-    int alpha = Math.min(Math.max((int) (alphaMod * 255), 0), 255);
+    int alpha = (int) (Color.alpha(baseColor) * alphaMod + 0.5f);
+    alpha = Math.min(Math.max(alpha, 0), 255);
     return ColorUtils.setAlphaComponent(baseColor, alpha);
-    //int baseAlpha = Color.alpha(baseColor);
-    //int alpha = (int) (baseAlpha * alphaMod + 0.5f);
-    //alpha = Math.min(Math.max(alpha, 0), 255);
-    //return (baseColor & 0xFFFFFF) | (alpha << 24);
   }
 }
