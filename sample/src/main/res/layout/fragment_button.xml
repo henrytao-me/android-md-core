@@ -15,7 +15,6 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   tools:context=".activity.ListsActivity"
   style="@style/MdList">
@@ -146,9 +145,7 @@
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
         <me.henrytao.mdcore.widgets.MdIconToggle
-          android:button="@drawable/ic_favorite"
-          android:drawableLeft="@android:color/transparent"
-          android:drawablePadding="8dp"
+          android:button="@drawable/ic_drawable_favorite"
           android:gravity="center"
           style="@style/MdIconToggle" />
       </RelativeLayout>
@@ -156,24 +153,29 @@
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
         <me.henrytao.mdcore.widgets.MdIconToggle
-          android:layout_width="wrap_content"
-          android:layout_height="48dp"
-          android:button="@drawable/ic_favorite"
+          android:button="@drawable/ic_drawable_favorite"
           android:enabled="false"
-          android:text="Sample"
-          app:buttonTint="@color/md_control_checkable" />
+          android:gravity="center"
+          style="@style/MdIconToggle" />
       </RelativeLayout>
 
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
-        <CheckBox
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:padding="14dp" />
+        <me.henrytao.mdcore.widgets.MdIconToggle
+          android:id="@+id/toggle_up"
+          android:button="@drawable/ic_drawable_favorite"
+          android:gravity="center"
+          style="@style/MdIconToggle" />
       </RelativeLayout>
 
       <RelativeLayout style="@style/AppStyle.Grid.Item">
 
+        <me.henrytao.mdcore.widgets.MdIconToggle
+          android:button="@drawable/ic_drawable_favorite"
+          android:enabled="false"
+          android:gravity="center"
+          android:text="10"
+          style="@style/MdIconToggle" />
       </RelativeLayout>
     </LinearLayout>
   </LinearLayout>

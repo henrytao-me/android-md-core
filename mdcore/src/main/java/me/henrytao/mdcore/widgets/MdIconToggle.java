@@ -20,8 +20,15 @@ import org.xmlpull.v1.XmlPullParserException;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Canvas;
+import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.support.v7.internal.widget.ViewUtils;
 import android.support.v7.widget.AppCompatCheckBox;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.util.AttributeSet;
 
 import java.io.IOException;
@@ -33,6 +40,16 @@ import me.henrytao.mdcore.utils.ResourceUtils;
  * Created by henrytao on 10/26/15.
  */
 public class MdIconToggle extends AppCompatCheckBox {
+
+  private int mDrawablePadding;
+
+  private int mPaddingBottom;
+
+  private int mPaddingLeft;
+
+  private int mPaddingRight;
+
+  private int mPaddingTop;
 
   public MdIconToggle(Context context) {
     super(context);
@@ -49,8 +66,57 @@ public class MdIconToggle extends AppCompatCheckBox {
     initFromAttributes(attrs);
   }
 
+  @Override
+  public void setButtonDrawable(Drawable buttonDrawable) {
+    super.setButtonDrawable(buttonDrawable);
+  }
+
+  @Override
+  protected void onDraw(Canvas canvas) {
+    if (isLayoutRtl()) {
+      canvas.translate(-mPaddingRight, 0);
+    } else {
+      canvas.translate(mPaddingLeft, 0);
+    }
+    super.onDraw(canvas);
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+      Drawable background = getBackground();
+      Rect bounds = background.getBounds();
+      int size = Math.abs(bounds.bottom - bounds.top);
+      int top = bounds.top;
+      int bottom = bounds.bottom;
+      int left = isLayoutRtl() ? getWidth() - size : 0;
+      int right = isLayoutRtl() ? getWidth() : size;
+      background.setHotspotBounds(left, top, right, bottom);
+    }
+  }
+
   protected void initFromAttributes(AttributeSet attrs) {
     Context context = getContext();
+
+    mPaddingLeft = getPaddingLeft();
+    mPaddingTop = getPaddingTop();
+    mPaddingRight = getPaddingRight();
+    mPaddingBottom = getPaddingBottom();
+    mDrawablePadding = getCompoundDrawablePadding();
+    invalidatePadding();
+    addTextChangedListener(new TextWatcher() {
+      @Override
+      public void afterTextChanged(Editable s) {
+        invalidatePadding();
+      }
+
+      @Override
+      public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+      }
+
+      @Override
+      public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+      }
+    });
+
     if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
       TypedArray a = getContext().getTheme().obtainStyledAttributes(attrs, R.styleable.CompoundButton, 0, 0);
       int buttonTintId = 0;
@@ -69,5 +135,17 @@ public class MdIconToggle extends AppCompatCheckBox {
         }
       }
     }
+  }
+
+  private void invalidatePadding() {
+    if (isLayoutRtl()) {
+      setPadding(mPaddingLeft + mPaddingRight, mPaddingTop, TextUtils.isEmpty(getText()) ? 0 : mDrawablePadding, mPaddingBottom);
+    } else {
+      setPadding(TextUtils.isEmpty(getText()) ? 0 : mDrawablePadding, mPaddingTop, mPaddingRight + mPaddingLeft, mPaddingBottom);
+    }
+  }
+
+  private boolean isLayoutRtl() {
+    return ViewUtils.isLayoutRtl(this);
   }
 }
