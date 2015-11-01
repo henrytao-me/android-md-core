@@ -142,6 +142,8 @@
     <item name="mdColorDividerInverse_backgroundPalette_dark">@color/mdColorDivider_light</item>
     <item name="mdColorDividerInverse_backgroundPalette_light">@color/mdColorDivider_light</item>
 
+    <item name="MdIconToggleStyle">@style/MdIconToggle</item>
+
     <item name="MdListItemSingleLineTextOnly">@style/MdListItem.SingleLine.TextOnly</item>
     <item name="MdListItemSingleLineIconWithText">@style/MdListItem.SingleLine.IconWithText</item>
     <item name="MdListItemSingleLineAvatarWithText">@style/MdListItem.SingleLine.AvatarWithText</item>

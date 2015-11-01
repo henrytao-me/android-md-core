@@ -52,18 +52,16 @@ public class MdIconToggle extends AppCompatCheckBox {
   private int mPaddingTop;
 
   public MdIconToggle(Context context) {
-    super(context);
-    initFromAttributes(null);
+    this(context, null);
   }
 
   public MdIconToggle(Context context, AttributeSet attrs) {
-    super(context, attrs);
-    initFromAttributes(attrs);
+    this(context, attrs, R.attr.MdIconToggleStyle);
   }
 
   public MdIconToggle(Context context, AttributeSet attrs, int defStyleAttr) {
     super(context, attrs, defStyleAttr);
-    initFromAttributes(attrs);
+    initFromAttributes(attrs, defStyleAttr > 0 ? defStyleAttr : R.attr.MdIconToggleStyle);
   }
 
   @Override
@@ -79,8 +77,8 @@ public class MdIconToggle extends AppCompatCheckBox {
       canvas.translate(mPaddingLeft, 0);
     }
     super.onDraw(canvas);
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-      Drawable background = getBackground();
+    Drawable background = getBackground();
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && background != null) {
       Rect bounds = background.getBounds();
       int size = Math.abs(bounds.bottom - bounds.top);
       int top = bounds.top;
@@ -91,7 +89,7 @@ public class MdIconToggle extends AppCompatCheckBox {
     }
   }
 
-  protected void initFromAttributes(AttributeSet attrs) {
+  protected void initFromAttributes(AttributeSet attrs, int defStyleAttr) {
     Context context = getContext();
 
     mPaddingLeft = getPaddingLeft();
@@ -118,7 +116,7 @@ public class MdIconToggle extends AppCompatCheckBox {
     });
 
     if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-      TypedArray a = getContext().getTheme().obtainStyledAttributes(attrs, R.styleable.CompoundButton, 0, 0);
+      TypedArray a = getContext().getTheme().obtainStyledAttributes(attrs, R.styleable.CompoundButton, defStyleAttr, 0);
       int buttonTintId = 0;
       try {
         buttonTintId = a.getResourceId(R.styleable.CompoundButton_buttonTint, 0);

@@ -27,6 +27,7 @@ import android.content.res.TypedArray;
 import android.content.res.XmlResourceParser;
 import android.graphics.Color;
 import android.os.Build;
+import android.support.v4.graphics.ColorUtils;
 import android.util.AttributeSet;
 import android.util.StateSet;
 import android.util.TypedValue;
@@ -158,9 +159,7 @@ public class ResourceUtils {
     if (alphaMod == 1.0f) {
       return baseColor;
     }
-    int baseAlpha = Color.alpha(baseColor);
-    int alpha = (int) (baseAlpha * alphaMod + 0.5f);
-    alpha = Math.min(Math.max(alpha, 0), 255);
-    return (baseColor & 0xFFFFFF) | (alpha << 24);
+    int alpha = Math.min(Math.max((int) (alphaMod * 255), 0), 255);
+    return ColorUtils.setAlphaComponent(baseColor, alpha);
   }
 }
