@@ -147,7 +147,11 @@
     <item name="MdButtonBorderlessStyle">@style/MdButton.Borderless</item>
     <item name="MdButtonBorderlessColoredStyle">@style/MdButton.Borderless.Colored</item>
 
+    <item name="mdIconColor_active">@color/mdIconColor_active_dark</item>
+    <item name="mdIconColor_inactive">@color/mdIconColor_inactive_dark</item>
     <item name="MdIconToggleStyle">@style/MdIconToggle</item>
+
+    <item name="MdImageViewStyle">@style/MdImageView</item>
 
     <item name="MdListItemSingleLineTextOnlyStyle">@style/MdListItem.SingleLine.TextOnly</item>
     <item name="MdListItemSingleLineIconWithTextStyle">@style/MdListItem.SingleLine.IconWithText</item>

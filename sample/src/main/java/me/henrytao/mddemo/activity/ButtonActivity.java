@@ -29,6 +29,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import me.henrytao.mdcore.utils.AlertDialogBuilder;
 import me.henrytao.mdcore.widgets.MdIconToggle;
+import me.henrytao.mdcore.widgets.MdImageView;
 import me.henrytao.mddemo.R;
 import me.henrytao.mddemo.utils.DialogUtils;
 
@@ -41,6 +42,8 @@ public class ButtonActivity extends BaseLayoutActivity {
   @Bind(R.id.btn_dialog) Button vBtnDialog;
 
   @Bind(R.id.btn_dialog_2) Button vBtnDialog2;
+
+  @Bind(R.id.icon_inactivated) MdImageView vIconActivated;
 
   @Bind(R.id.toggle_up) MdIconToggle vMdIconToggleUp;
 
@@ -73,5 +76,7 @@ public class ButtonActivity extends BaseLayoutActivity {
       mCount += 1;
       vMdIconToggleUp.setText(String.valueOf(mCount));
     });
+
+    vIconActivated.setActivated(true);
   }
 }

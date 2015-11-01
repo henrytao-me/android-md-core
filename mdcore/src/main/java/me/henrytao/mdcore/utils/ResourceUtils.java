@@ -161,5 +161,9 @@ public class ResourceUtils {
     }
     int alpha = Math.min(Math.max((int) (alphaMod * 255), 0), 255);
     return ColorUtils.setAlphaComponent(baseColor, alpha);
+    //int baseAlpha = Color.alpha(baseColor);
+    //int alpha = (int) (baseAlpha * alphaMod + 0.5f);
+    //alpha = Math.min(Math.max(alpha, 0), 255);
+    //return (baseColor & 0xFFFFFF) | (alpha << 24);
   }
 }

@@ -29,11 +29,11 @@
   <color name="mdColorDivider_dark">#1EFFFFFF</color>
 
   <!-- Icon color on light background: 54%:8A 26%:42 -->
-  <color name="mdIconColor_light">#8A000000</color>
+  <color name="mdIconColor_active_light">#8A000000</color>
   <color name="mdIconColor_inactive_light">#42000000</color>
 
   <!-- Icon color on dark background: 100%:8A 30%:4C -->
-  <color name="mdIconColor_dark">#FFFFFFFF</color>
+  <color name="mdIconColor_active_dark">#FFFFFFFF</color>
   <color name="mdIconColor_inactive_dark">#4CFFFFFF</color>
 
   <!-- 100 - 500 - 700 - A100 - A200 - A400 - in the palette -->
@@ -152,6 +152,8 @@
   <color name="mdColor_brown">#795548</color>
   <color name="mdColor_brown_dark">#5D4037</color>
   <color name="mdColor_brown_light">#D7CCC8</color>
+
+  <color name="mdColor_brown_alpha">#90795548</color>
 
   <color name="mdColor_grey">#9E9E9E</color>
   <color name="mdColor_grey_dark">#616161</color>
