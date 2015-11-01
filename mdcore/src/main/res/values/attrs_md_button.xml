@@ -20,9 +20,4 @@
 
     <attr name="mdButton_Colored_textColor" format="color|reference" />
   </declare-styleable>
-
-  <declare-styleable name="MdIconToggle">
-
-    <attr name="customTint" format="reference" />
-  </declare-styleable>
 </resources>

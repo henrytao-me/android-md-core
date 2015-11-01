@@ -28,6 +28,7 @@ import android.widget.CheckBox;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import me.henrytao.mdcore.utils.AlertDialogBuilder;
+import me.henrytao.mdcore.widgets.MdIconToggle;
 import me.henrytao.mddemo.R;
 import me.henrytao.mddemo.utils.DialogUtils;
 
@@ -37,11 +38,13 @@ public class ButtonActivity extends BaseLayoutActivity {
     return new Intent(context, ButtonActivity.class);
   }
 
-  @Bind(R.id.btn_dialog)
-  Button vBtnDialog;
+  @Bind(R.id.btn_dialog) Button vBtnDialog;
 
-  @Bind(R.id.btn_dialog_2)
-  Button vBtnDialog2;
+  @Bind(R.id.btn_dialog_2) Button vBtnDialog2;
+
+  @Bind(R.id.toggle_up) MdIconToggle vMdIconToggleUp;
+
+  private int mCount;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +67,11 @@ public class ButtonActivity extends BaseLayoutActivity {
             positiveButton.setEnabled(checkBox.isChecked());
           })
           .show();
+    });
+
+    vMdIconToggleUp.setOnCheckedChangeListener((buttonView, isChecked) -> {
+      mCount += 1;
+      vMdIconToggleUp.setText(String.valueOf(mCount));
     });
   }
 }
