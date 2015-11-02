@@ -19,7 +19,7 @@
   android:layout_width="match_parent"
   android:layout_height="wrap_content">
 
-  <me.henrytao.mdcore.widgets.MdImageView
+  <me.henrytao.mdcore.widgets.MdIcon
     android:id="@android:id/icon1"
     tools:src="@drawable/ic_blank_circle"
     style="@style/Base.MdListItem.Avatar.Top" />

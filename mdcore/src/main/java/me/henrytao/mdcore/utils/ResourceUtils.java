@@ -29,6 +29,7 @@ import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.support.annotation.XmlRes;
 import android.support.v4.graphics.ColorUtils;
 import android.support.v4.graphics.drawable.DrawableCompat;
 import android.util.AttributeSet;
@@ -49,9 +50,24 @@ import me.henrytao.mdcore.R;
  */
 public class ResourceUtils {
 
-  public static Drawable convertDrawableToTint(Context context, Drawable drawable) {
+  public static Drawable convertDrawableToTint(Context context, Drawable drawable, Palette palette) {
     try {
-      return ResourceUtils.createDrawableTint(drawable, null, createColorStateListFromResId(context, R.color.md_image_view_color), null);
+      int resId = 0;
+      switch (palette) {
+        case PRIMARY:
+          resId = ResourceUtils.getResourceIdFromAttribute(context, R.attr.mdIconColor_primaryPalette);
+          break;
+        case ACCENT:
+          resId = ResourceUtils.getResourceIdFromAttribute(context, R.attr.mdIconColor_accentPalette);
+          break;
+        case WARN:
+          resId = ResourceUtils.getResourceIdFromAttribute(context, R.attr.mdIconColor_warnPalette);
+          break;
+        case BACKGROUND:
+          resId = ResourceUtils.getResourceIdFromAttribute(context, R.attr.mdIconColor_backgroundPalette);
+          break;
+      }
+      return ResourceUtils.createDrawableTint(drawable, null, createColorStateListFromResId(context, resId), null);
     } catch (IOException e) {
       e.printStackTrace();
     } catch (XmlPullParserException e) {
@@ -60,7 +76,8 @@ public class ResourceUtils {
     return drawable;
   }
 
-  public static ColorStateList createColorStateListFromResId(Context context, int resId) throws IOException, XmlPullParserException {
+  public static ColorStateList createColorStateListFromResId(Context context, @XmlRes int resId)
+      throws IOException, XmlPullParserException {
     XmlResourceParser parser = context.getResources().getXml(resId);
     AttributeSet attrs = Xml.asAttributeSet(parser);
     Resources r = context.getResources();
@@ -203,5 +220,9 @@ public class ResourceUtils {
     int alpha = (int) (Color.alpha(baseColor) * alphaMod + 0.5f);
     alpha = Math.min(Math.max(alpha, 0), 255);
     return ColorUtils.setAlphaComponent(baseColor, alpha);
+  }
+
+  public enum Palette {
+    PRIMARY, ACCENT, WARN, BACKGROUND
   }
 }

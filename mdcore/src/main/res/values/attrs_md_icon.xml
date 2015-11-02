@@ -16,9 +16,9 @@
 
 <resources>
 
-  <attr name="MdImageViewStyle" format="reference" />
+  <attr name="MdIconStyle" format="reference" />
 
-  <declare-styleable name="MdImageView">
+  <declare-styleable name="MdIcon">
     <attr name="enabled" format="boolean|reference" />
     <attr name="tint" format="color|reference" />
     <attr name="tintMode" format="integer">

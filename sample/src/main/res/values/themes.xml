@@ -22,14 +22,10 @@
 
   <style name="Base.AppTheme.Light" parent="MdTheme.Light">
     <item name="bottomSheetStyle">@style/BottomSheet.StyleDialog.Light</item>
-
-    <item name="ic_toolbar_color_lens">@drawable/ic_toolbar_color_lens</item>
   </style>
 
   <style name="Base.AppTheme.Dark" parent="MdTheme.Dark">
     <item name="bottomSheetStyle">@style/BottomSheet.StyleDialog.Dark</item>
-
-    <item name="ic_toolbar_color_lens">@drawable/ic_toolbar_color_lens_white</item>
   </style>
 
   <!-- ////////////////////////////////////////////////////////////////////////// -->

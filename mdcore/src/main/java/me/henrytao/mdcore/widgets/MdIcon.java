@@ -35,7 +35,7 @@ import me.henrytao.mdcore.utils.ResourceUtils;
 /**
  * Created by henrytao on 11/1/15.
  */
-public class MdImageView extends AppCompatImageView {
+public class MdIcon extends AppCompatImageView {
 
   private int mImageTintId;
 
@@ -43,15 +43,15 @@ public class MdImageView extends AppCompatImageView {
 
   private PorterDuff.Mode mImageTintMode;
 
-  public MdImageView(Context context) {
+  public MdIcon(Context context) {
     this(context, null);
   }
 
-  public MdImageView(Context context, AttributeSet attrs) {
-    this(context, attrs, R.attr.MdImageViewStyle);
+  public MdIcon(Context context, AttributeSet attrs) {
+    this(context, attrs, R.attr.MdIconStyle);
   }
 
-  public MdImageView(Context context, AttributeSet attrs, int defStyleAttr) {
+  public MdIcon(Context context, AttributeSet attrs, int defStyleAttr) {
     super(context, attrs, defStyleAttr);
     initFromAttributes(attrs, defStyleAttr);
   }
@@ -90,11 +90,11 @@ public class MdImageView extends AppCompatImageView {
     Context context = getContext();
 
     boolean enabled = true;
-    TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.MdImageView, defStyleAttr, 0);
+    TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.MdIcon, defStyleAttr, 0);
     try {
-      enabled = a.getBoolean(R.styleable.MdImageView_enabled, enabled);
-      mImageTintId = a.getResourceId(R.styleable.MdImageView_tint, 0);
-      mImageTintMode = DrawableUtils.parseTintMode(a.getInt(R.styleable.MdImageView_tintMode, -1), null);
+      enabled = a.getBoolean(R.styleable.MdIcon_enabled, enabled);
+      mImageTintId = a.getResourceId(R.styleable.MdIcon_tint, 0);
+      mImageTintMode = DrawableUtils.parseTintMode(a.getInt(R.styleable.MdIcon_tintMode, -1), null);
     } finally {
       a.recycle();
     }

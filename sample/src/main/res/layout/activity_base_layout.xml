@@ -119,7 +119,7 @@
         app:mdli_title="@string/text_donate"
         app:mdli_type="single_line_icon_with_text">
 
-        <me.henrytao.mdcore.widgets.MdImageView
+        <me.henrytao.mdcore.widgets.MdIcon
           android:id="@android:id/icon2"
           tools:src="?attr/ic_blank_circle"
           style="@style/Base.MdListItem.Icon" />
@@ -141,7 +141,7 @@
         app:mdli_title="@string/text_help_and_feedback"
         app:mdli_type="single_line_icon_with_text">
 
-        <me.henrytao.mdcore.widgets.MdImageView
+        <me.henrytao.mdcore.widgets.MdIcon
           android:id="@android:id/icon2"
           tools:src="?attr/ic_blank_circle"
           style="@style/Base.MdListItem.Icon" />
