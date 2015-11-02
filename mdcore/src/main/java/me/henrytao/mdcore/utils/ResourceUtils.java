@@ -42,10 +42,23 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import me.henrytao.mdcore.R;
+
 /**
  * Created by henrytao on 10/10/15.
  */
 public class ResourceUtils {
+
+  public static Drawable convertDrawableToTint(Context context, Drawable drawable) {
+    try {
+      return ResourceUtils.createDrawableTint(drawable, null, createColorStateListFromResId(context, R.color.md_image_view_color), null);
+    } catch (IOException e) {
+      e.printStackTrace();
+    } catch (XmlPullParserException e) {
+      e.printStackTrace();
+    }
+    return drawable;
+  }
 
   public static ColorStateList createColorStateListFromResId(Context context, int resId) throws IOException, XmlPullParserException {
     XmlResourceParser parser = context.getResources().getXml(resId);
@@ -121,7 +134,7 @@ public class ResourceUtils {
       if (tintMode != null) {
         DrawableCompat.setTintMode(drawable, tintMode);
       }
-      if (drawable.isStateful()) {
+      if (drawable.isStateful() && drawableState != null) {
         drawable.setState(drawableState);
       }
     }
@@ -161,6 +174,15 @@ public class ResourceUtils {
     TypedValue a = new TypedValue();
     context.getTheme().resolveAttribute(attrId, a, true);
     return a.getFloat();
+  }
+
+  public static int getResourceIdFromAttribute(Context context, int attrId) {
+    if (attrId == 0) {
+      return 0;
+    }
+    TypedValue a = new TypedValue();
+    context.getTheme().resolveAttribute(attrId, a, true);
+    return a.resourceId;
   }
 
   public static int getStatusBarSize(Context context) {

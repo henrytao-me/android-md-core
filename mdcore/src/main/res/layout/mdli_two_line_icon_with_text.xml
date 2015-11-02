@@ -21,7 +21,7 @@
 
   <me.henrytao.mdcore.widgets.MdImageView
     android:id="@android:id/icon2"
-    tools:src="?attr/ic_blank_circle"
+    tools:src="@drawable/ic_blank_circle"
     style="@style/Base.MdListItem.Icon" />
 
   <LinearLayout style="@style/Base.MdListItem.Wrapper">

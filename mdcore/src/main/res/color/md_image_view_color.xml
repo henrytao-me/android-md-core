@@ -15,6 +15,8 @@
   -->
 
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-  <item android:color="?attr/mdIconColor_active" android:state_activated="true" />
-  <item android:color="?attr/mdIconColor_inactive" />
+  <!--<item android:color="?attr/mdIconColor_active" android:state_activated="true" />-->
+  <!--<item android:color="?attr/mdIconColor_inactive" />-->
+  <item android:color="?attr/mdIconColor_inactive" android:state_enabled="false" />
+  <item android:color="?attr/mdIconColor_active" />
 </selector>

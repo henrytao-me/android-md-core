@@ -23,6 +23,7 @@ import android.support.v7.widget.Toolbar;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import me.henrytao.mdcore.utils.ResourceUtils;
 import me.henrytao.mddemo.R;
 
 public class InfoActivity extends BaseActivity {
@@ -42,5 +43,6 @@ public class InfoActivity extends BaseActivity {
 
     setSupportActionBar(vToolbar);
     vToolbar.setNavigationOnClickListener(v -> onBackPressed());
+    vToolbar.setNavigationIcon(ResourceUtils.convertDrawableToTint(this, vToolbar.getNavigationIcon()));
   }
 }
