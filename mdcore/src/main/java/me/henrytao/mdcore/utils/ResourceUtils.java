@@ -26,8 +26,11 @@ import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.content.res.XmlResourceParser;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.v4.graphics.ColorUtils;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.util.AttributeSet;
 import android.util.StateSet;
 import android.util.TypedValue;
@@ -39,10 +42,23 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import me.henrytao.mdcore.R;
+
 /**
  * Created by henrytao on 10/10/15.
  */
 public class ResourceUtils {
+
+  public static Drawable convertDrawableToTint(Context context, Drawable drawable) {
+    try {
+      return ResourceUtils.createDrawableTint(drawable, null, createColorStateListFromResId(context, R.color.md_image_view_color), null);
+    } catch (IOException e) {
+      e.printStackTrace();
+    } catch (XmlPullParserException e) {
+      e.printStackTrace();
+    }
+    return drawable;
+  }
 
   public static ColorStateList createColorStateListFromResId(Context context, int resId) throws IOException, XmlPullParserException {
     XmlResourceParser parser = context.getResources().getXml(resId);
@@ -109,6 +125,22 @@ public class ResourceUtils {
     return new ColorStateList(states, colors);
   }
 
+  public static Drawable createDrawableTint(Drawable drawable, int[] drawableState, ColorStateList tintList, PorterDuff.Mode tintMode) {
+    if (drawable != null && (tintList != null || tintMode != null)) {
+      drawable = DrawableCompat.wrap(drawable).mutate();
+      if (tintList != null) {
+        DrawableCompat.setTintList(drawable, tintList);
+      }
+      if (tintMode != null) {
+        DrawableCompat.setTintMode(drawable, tintMode);
+      }
+      if (drawable.isStateful() && drawableState != null) {
+        drawable.setState(drawableState);
+      }
+    }
+    return drawable;
+  }
+
   public static void enableTranslucentStatus(Activity activity) {
     Window window = activity.getWindow();
     window.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
@@ -144,6 +176,15 @@ public class ResourceUtils {
     return a.getFloat();
   }
 
+  public static int getResourceIdFromAttribute(Context context, int attrId) {
+    if (attrId == 0) {
+      return 0;
+    }
+    TypedValue a = new TypedValue();
+    context.getTheme().resolveAttribute(attrId, a, true);
+    return a.resourceId;
+  }
+
   public static int getStatusBarSize(Context context) {
     int statusBarSize = 0;
     if (context != null) {
@@ -155,11 +196,12 @@ public class ResourceUtils {
     return statusBarSize;
   }
 
-  private static int modulateColorAlpha(int baseColor, float alphaMod) {
+  public static int modulateColorAlpha(int baseColor, float alphaMod) {
     if (alphaMod == 1.0f) {
       return baseColor;
     }
-    int alpha = Math.min(Math.max((int) (alphaMod * 255), 0), 255);
+    int alpha = (int) (Color.alpha(baseColor) * alphaMod + 0.5f);
+    alpha = Math.min(Math.max(alpha, 0), 255);
     return ColorUtils.setAlphaComponent(baseColor, alpha);
   }
 }

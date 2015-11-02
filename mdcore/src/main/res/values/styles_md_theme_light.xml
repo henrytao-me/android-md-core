@@ -147,7 +147,11 @@
     <item name="MdButtonBorderlessStyle">@style/MdButton.Borderless</item>
     <item name="MdButtonBorderlessColoredStyle">@style/MdButton.Borderless.Colored</item>
 
+    <item name="mdIconColor_active">@color/mdIconColor_active_light</item>
+    <item name="mdIconColor_inactive">@color/mdIconColor_inactive_light</item>
     <item name="MdIconToggleStyle">@style/MdIconToggle</item>
+
+    <item name="MdImageViewStyle">@style/MdImageView</item>
 
     <item name="MdListItemSingleLineTextOnlyStyle">@style/MdListItem.SingleLine.TextOnly</item>
     <item name="MdListItemSingleLineIconWithTextStyle">@style/MdListItem.SingleLine.IconWithText</item>
@@ -163,10 +167,6 @@
     <item name="MdListItemThreeLineIconWithTextStyle">@style/MdListItem.ThreeLine.IconWithText</item>
     <item name="MdListItemThreeLineAvatarWithTextStyle">@style/MdListItem.ThreeLine.AvatarWithText</item>
     <item name="MdListItemThreeLineAvatarWithTextAndIconStyle">@style/MdListItem.ThreeLine.AvatarWithTextAndIcon</item>
-
-    <item name="ic_toolbar_arrow_back">@drawable/ic_toolbar_arrow_back</item>
-    <item name="ic_blank_circle">@drawable/ic_blank_circle</item>
-    <item name="ic_blank">@drawable/ic_blank</item>
 
     <!-- override material style -->
     <!--colorPrimary: The primary branding color for the app. By default, this is the color applied to the action bar background.-->
@@ -202,6 +202,7 @@
 
     <item name="alertDialogTheme">@style/MdAlertDialog.Theme.Light</item>
 
+    <item name="buttonBarButtonStyle">@style/MdButton.Borderless.Colored</item>
     <item name="buttonStyle">@style/MdButton</item>
     <item name="buttonStyleSmall">@style/MdButton.Small</item>
     <item name="android:textAppearanceButton">@style/MdText.Button</item>

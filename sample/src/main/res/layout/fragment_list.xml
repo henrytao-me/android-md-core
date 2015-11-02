@@ -69,7 +69,7 @@
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
       app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="?attr/ic_blank_circle"
+      app:mdli_icon="@drawable/ic_blank_circle"
       app:mdli_title="@string/text_single_line_item"
       app:mdli_type="single_line_icon_with_text" />
 
@@ -79,7 +79,7 @@
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
       app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="?attr/ic_blank_circle"
+      app:mdli_icon="@drawable/ic_blank_circle"
       app:mdli_title="@string/text_single_line_item"
       app:mdli_type="single_line_icon_with_text" />
 
@@ -89,7 +89,7 @@
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
       app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="?attr/ic_blank_circle"
+      app:mdli_icon="@drawable/ic_blank_circle"
       app:mdli_title="@string/text_single_line_item"
       app:mdli_type="single_line_icon_with_text" />
 
@@ -104,7 +104,7 @@
       android:layout_height="wrap_content"
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
-      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_divider_layout="@layout/mdli_divider_left"
       app:mdli_title="@string/text_single_line_item"
       app:mdli_type="single_line_avatar_with_text" />
@@ -114,7 +114,7 @@
       android:layout_height="wrap_content"
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
-      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_divider_layout="@layout/mdli_divider_left"
       app:mdli_title="@string/text_single_line_item"
       app:mdli_type="single_line_avatar_with_text" />
@@ -124,7 +124,7 @@
       android:layout_height="wrap_content"
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
-      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_divider_layout="@layout/mdli_divider_left"
       app:mdli_title="@string/text_single_line_item"
       app:mdli_type="single_line_avatar_with_text" />
@@ -140,9 +140,9 @@
       android:layout_height="wrap_content"
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
-      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="?attr/ic_blank_circle"
+      app:mdli_icon="@drawable/ic_blank_circle"
       app:mdli_title="@string/text_single_line_item"
       app:mdli_type="single_line_avatar_with_text_and_icon" />
 
@@ -151,9 +151,9 @@
       android:layout_height="wrap_content"
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
-      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="?attr/ic_blank_circle"
+      app:mdli_icon="@drawable/ic_blank_circle"
       app:mdli_title="@string/text_single_line_item"
       app:mdli_type="single_line_avatar_with_text_and_icon" />
 
@@ -162,9 +162,9 @@
       android:layout_height="wrap_content"
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
-      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="?attr/ic_blank_circle"
+      app:mdli_icon="@drawable/ic_blank_circle"
       app:mdli_title="@string/text_single_line_item"
       app:mdli_type="single_line_avatar_with_text_and_icon" />
   </LinearLayout>
@@ -221,7 +221,7 @@
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
       app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="?attr/ic_blank_circle"
+      app:mdli_icon="@drawable/ic_blank_circle"
       app:mdli_subtitle="@string/text_secondary_text"
       app:mdli_title="@string/text_two_line_item"
       app:mdli_type="two_line_icon_with_text" />
@@ -232,7 +232,7 @@
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
       app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="?attr/ic_blank_circle"
+      app:mdli_icon="@drawable/ic_blank_circle"
       app:mdli_subtitle="@string/text_secondary_text"
       app:mdli_title="@string/text_two_line_item"
       app:mdli_type="two_line_icon_with_text" />
@@ -243,7 +243,7 @@
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
       app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="?attr/ic_blank_circle"
+      app:mdli_icon="@drawable/ic_blank_circle"
       app:mdli_subtitle="@string/text_secondary_text"
       app:mdli_title="@string/text_two_line_item"
       app:mdli_type="two_line_icon_with_text" />
@@ -259,7 +259,7 @@
       android:layout_height="wrap_content"
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
-      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_divider_layout="@layout/mdli_divider_left"
       app:mdli_subtitle="@string/text_secondary_text"
       app:mdli_title="@string/text_two_line_item"
@@ -270,7 +270,7 @@
       android:layout_height="wrap_content"
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
-      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_divider_layout="@layout/mdli_divider_left"
       app:mdli_subtitle="@string/text_secondary_text"
       app:mdli_title="@string/text_two_line_item"
@@ -281,7 +281,7 @@
       android:layout_height="wrap_content"
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
-      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_divider_layout="@layout/mdli_divider_left"
       app:mdli_subtitle="@string/text_secondary_text"
       app:mdli_title="@string/text_two_line_item"
@@ -298,9 +298,9 @@
       android:layout_height="wrap_content"
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
-      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="?attr/ic_blank_circle"
+      app:mdli_icon="@drawable/ic_blank_circle"
       app:mdli_subtitle="@string/text_secondary_text"
       app:mdli_title="@string/text_two_line_item"
       app:mdli_type="two_line_avatar_with_text_and_icon" />
@@ -310,9 +310,9 @@
       android:layout_height="wrap_content"
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
-      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="?attr/ic_blank_circle"
+      app:mdli_icon="@drawable/ic_blank_circle"
       app:mdli_subtitle="@string/text_secondary_text"
       app:mdli_title="@string/text_two_line_item"
       app:mdli_type="two_line_avatar_with_text_and_icon" />
@@ -322,9 +322,9 @@
       android:layout_height="wrap_content"
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
-      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="?attr/ic_blank_circle"
+      app:mdli_icon="@drawable/ic_blank_circle"
       app:mdli_subtitle="@string/text_secondary_text"
       app:mdli_title="@string/text_two_line_item"
       app:mdli_type="two_line_avatar_with_text_and_icon" />
@@ -382,7 +382,7 @@
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
       app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="?attr/ic_blank_circle"
+      app:mdli_icon="@drawable/ic_blank_circle"
       app:mdli_subtitle="@string/text_short"
       app:mdli_title="@string/text_three_line_item"
       app:mdli_type="three_line_icon_with_text" />
@@ -393,7 +393,7 @@
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
       app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="?attr/ic_blank_circle"
+      app:mdli_icon="@drawable/ic_blank_circle"
       app:mdli_subtitle="@string/text_short"
       app:mdli_title="@string/text_three_line_item"
       app:mdli_type="three_line_icon_with_text" />
@@ -404,7 +404,7 @@
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
       app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="?attr/ic_blank_circle"
+      app:mdli_icon="@drawable/ic_blank_circle"
       app:mdli_subtitle="@string/text_short"
       app:mdli_title="@string/text_three_line_item"
       app:mdli_type="three_line_icon_with_text" />
@@ -420,7 +420,7 @@
       android:layout_height="wrap_content"
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
-      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_divider_layout="@layout/mdli_divider_left"
       app:mdli_subtitle="@string/text_short"
       app:mdli_title="@string/text_three_line_item"
@@ -431,7 +431,7 @@
       android:layout_height="wrap_content"
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
-      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_divider_layout="@layout/mdli_divider_left"
       app:mdli_subtitle="@string/text_short"
       app:mdli_title="@string/text_three_line_item"
@@ -442,7 +442,7 @@
       android:layout_height="wrap_content"
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
-      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_divider_layout="@layout/mdli_divider_left"
       app:mdli_subtitle="@string/text_short"
       app:mdli_title="@string/text_three_line_item"
@@ -459,9 +459,9 @@
       android:layout_height="wrap_content"
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
-      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="?attr/ic_blank_circle"
+      app:mdli_icon="@drawable/ic_blank_circle"
       app:mdli_subtitle="@string/text_short"
       app:mdli_title="@string/text_three_line_item"
       app:mdli_type="three_line_avatar_with_text_and_icon" />
@@ -471,9 +471,9 @@
       android:layout_height="wrap_content"
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
-      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="?attr/ic_blank_circle"
+      app:mdli_icon="@drawable/ic_blank_circle"
       app:mdli_subtitle="@string/text_short"
       app:mdli_title="@string/text_three_line_item"
       app:mdli_type="three_line_avatar_with_text_and_icon" />
@@ -483,9 +483,9 @@
       android:layout_height="wrap_content"
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
-      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="?attr/ic_blank_circle"
+      app:mdli_icon="@drawable/ic_blank_circle"
       app:mdli_subtitle="@string/text_short"
       app:mdli_title="@string/text_three_line_item"
       app:mdli_type="three_line_avatar_with_text_and_icon" />
@@ -506,7 +506,7 @@
       android:layout_height="wrap_content"
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
-      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_title="@string/text_three_line_item"
       style="@style/MdListItem.SingleLine.AvatarWithText">
 
@@ -514,7 +514,7 @@
         android:id="@android:id/icon1"
         android:layout_alignParentLeft="false"
         android:layout_alignParentRight="true"
-        tools:src="?attr/ic_blank_circle"
+        tools:src="@drawable/ic_blank_circle"
         style="@style/Base.MdListItem.Avatar" />
 
       <TextView
@@ -528,7 +528,7 @@
       android:layout_height="wrap_content"
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
-      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_title="@string/text_three_line_item"
       style="@style/MdListItem.SingleLine.AvatarWithText">
 
@@ -536,7 +536,7 @@
         android:id="@android:id/icon1"
         android:layout_alignParentLeft="false"
         android:layout_alignParentRight="true"
-        tools:src="?attr/ic_blank_circle"
+        tools:src="@drawable/ic_blank_circle"
         style="@style/Base.MdListItem.Avatar" />
 
       <TextView
@@ -550,7 +550,7 @@
       android:layout_height="wrap_content"
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
-      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_title="@string/text_three_line_item"
       style="@style/MdListItem.SingleLine.AvatarWithText">
 
@@ -558,7 +558,7 @@
         android:id="@android:id/icon1"
         android:layout_alignParentLeft="false"
         android:layout_alignParentRight="true"
-        tools:src="?attr/ic_blank_circle"
+        tools:src="@drawable/ic_blank_circle"
         style="@style/Base.MdListItem.Avatar" />
 
       <TextView
@@ -580,7 +580,7 @@
       android:layout_height="wrap_content"
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
-      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_title="@string/text_three_line_item"
       style="@style/MdListItem.SingleLine.AvatarWithText">
 
@@ -588,7 +588,7 @@
         android:id="@android:id/icon1"
         android:layout_alignParentLeft="false"
         android:layout_alignParentRight="true"
-        tools:src="?attr/ic_blank_circle"
+        tools:src="@drawable/ic_blank_circle"
         style="@style/Base.MdListItem.Avatar" />
 
       <TextView
@@ -602,7 +602,7 @@
       android:layout_height="wrap_content"
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
-      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_title="@string/text_three_line_item"
       style="@style/MdListItem.SingleLine.AvatarWithText">
 
@@ -610,7 +610,7 @@
         android:id="@android:id/icon1"
         android:layout_alignParentLeft="false"
         android:layout_alignParentRight="true"
-        tools:src="?attr/ic_blank_circle"
+        tools:src="@drawable/ic_blank_circle"
         style="@style/Base.MdListItem.Avatar" />
 
       <TextView
@@ -624,7 +624,7 @@
       android:layout_height="wrap_content"
       android:background="?attr/selectableItemBackground"
       android:clickable="true"
-      app:mdli_avatar="?attr/ic_blank_circle"
+      app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_title="@string/text_three_line_item"
       style="@style/MdListItem.SingleLine.AvatarWithText">
 
@@ -632,7 +632,7 @@
         android:id="@android:id/icon1"
         android:layout_alignParentLeft="false"
         android:layout_alignParentRight="true"
-        tools:src="?attr/ic_blank_circle"
+        tools:src="@drawable/ic_blank_circle"
         style="@style/Base.MdListItem.Avatar" />
 
       <TextView

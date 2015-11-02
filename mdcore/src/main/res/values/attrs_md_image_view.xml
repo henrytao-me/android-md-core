@@ -16,7 +16,17 @@
 
 <resources>
 
-  <attr name="ic_blank_circle" format="reference" />
-  <attr name="ic_blank" format="reference" />
-  <attr name="ic_toolbar_arrow_back" format="reference" />
+  <attr name="MdImageViewStyle" format="reference" />
+
+  <declare-styleable name="MdImageView">
+    <attr name="enabled" format="boolean|reference" />
+    <attr name="tint" format="color|reference" />
+    <attr name="tintMode" format="integer">
+      <enum name="src_over" value="3" />
+      <enum name="src_in" value="5" />
+      <enum name="src_atop" value="9" />
+      <enum name="multiply" value="14" />
+      <enum name="screen" value="15" />
+    </attr>
+  </declare-styleable>
 </resources>

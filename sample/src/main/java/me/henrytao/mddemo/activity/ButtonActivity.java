@@ -29,6 +29,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import me.henrytao.mdcore.utils.AlertDialogBuilder;
 import me.henrytao.mdcore.widgets.MdIconToggle;
+import me.henrytao.mdcore.widgets.MdImageView;
 import me.henrytao.mddemo.R;
 import me.henrytao.mddemo.utils.DialogUtils;
 

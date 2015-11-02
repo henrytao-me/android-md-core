@@ -27,11 +27,11 @@ ext {
       minSdkVersion    : 8,
       targetSdkVersion : 23,
       versionCode      : 1,
-      versionName      : "1.9.0"
+      versionName      : "1.9.1"
   ]
 
   sample = [
-      minSdkVersion: 9
+      minSdkVersion: 11
   ]
 
   bintray = [

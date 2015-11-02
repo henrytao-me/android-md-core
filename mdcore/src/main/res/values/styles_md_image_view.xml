@@ -14,23 +14,11 @@
   ~ limitations under the License.
   -->
 
-<merge xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:layout_width="match_parent"
-  android:layout_height="wrap_content">
+<resources>
 
-  <me.henrytao.mdcore.widgets.MdImageView
-    android:id="@android:id/icon1"
-    tools:src="@drawable/ic_blank_circle"
-    style="@style/Base.MdListItem.Avatar" />
-
-  <me.henrytao.mdcore.widgets.MdImageView
-    android:id="@android:id/icon2"
-    tools:src="@drawable/ic_blank_circle"
-    style="@style/Base.MdListItem.Icon.Right" />
-
-  <TextView
-    android:id="@android:id/text1"
-    tools:text="List item title"
-    style="@style/Base.MdListItem.Title.LeftRight" />
-</merge>
+  <style name="MdImageView">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="tint">@color/md_image_view_color</item>
+  </style>
+</resources>

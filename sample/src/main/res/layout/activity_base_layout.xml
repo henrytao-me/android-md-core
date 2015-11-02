@@ -115,11 +115,11 @@
         android:layout_height="wrap_content"
         android:background="?attr/selectableItemBackground"
         android:clickable="true"
-        app:mdli_icon="?attr/ic_donate_circle"
+        app:mdli_icon="@drawable/ic_donate_circle"
         app:mdli_title="@string/text_donate"
         app:mdli_type="single_line_icon_with_text">
 
-        <ImageView
+        <me.henrytao.mdcore.widgets.MdImageView
           android:id="@android:id/icon2"
           tools:src="?attr/ic_blank_circle"
           style="@style/Base.MdListItem.Icon" />
@@ -137,11 +137,11 @@
         android:background="?attr/selectableItemBackground"
         android:clickable="true"
         android:textSize="@dimen/mdFontSize_body1"
-        app:mdli_icon="?attr/ic_help"
+        app:mdli_icon="@drawable/ic_help"
         app:mdli_title="@string/text_help_and_feedback"
         app:mdli_type="single_line_icon_with_text">
 
-        <ImageView
+        <me.henrytao.mdcore.widgets.MdImageView
           android:id="@android:id/icon2"
           tools:src="?attr/ic_blank_circle"
           style="@style/Base.MdListItem.Icon" />

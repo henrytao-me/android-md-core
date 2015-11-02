@@ -33,6 +33,7 @@
     android:id="@android:id/button3"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    app:mdb_type="borderless_colored"
     style="?attr/buttonBarNeutralButtonStyle" />
 
   <android.support.v4.widget.Space
@@ -46,11 +47,13 @@
     android:id="@android:id/button2"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    app:mdb_type="borderless_colored"
     style="?attr/buttonBarNegativeButtonStyle" />
 
   <me.henrytao.mdcore.widgets.MdButton
     android:id="@android:id/button1"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    app:mdb_type="borderless_colored"
     style="?attr/buttonBarPositiveButtonStyle" />
 </android.support.v7.internal.widget.ButtonBarLayout>
