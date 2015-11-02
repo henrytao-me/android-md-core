@@ -17,6 +17,6 @@
 <resources>
 
   <style name="MdDrawerArrowToggle" parent="Widget.AppCompat.DrawerArrowToggle">
-    <item name="color">?attr/mdTextColorPrimary_primaryPalette</item>
+    <item name="color">?attr/mdDrawerArrowToggleColor</item>
   </style>
 </resources>
