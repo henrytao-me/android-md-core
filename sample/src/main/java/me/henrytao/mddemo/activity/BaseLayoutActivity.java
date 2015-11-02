@@ -98,6 +98,12 @@ public class BaseLayoutActivity extends BaseActivity implements NavigationView.O
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
     getMenuInflater().inflate(R.menu.menu_main, menu);
+    int i = 0;
+    MenuItem menuItem;
+    for (int n = menu.size(); i < n; i++) {
+      menuItem = menu.getItem(i);
+      menuItem.setIcon(ResourceUtils.convertDrawableToTint(this, menuItem.getIcon(), ResourceUtils.Palette.PRIMARY));
+    }
     return true;
   }
 
