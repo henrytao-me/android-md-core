@@ -17,12 +17,8 @@
 <resources>
 
   <style name="MdImageView">
-    <item name="android:layout_width">@dimen/mdIconSize</item>
-    <item name="android:layout_height">@dimen/mdIconSize</item>
-    <item name="android:paddingTop">@dimen/mdIconPadding</item>
-    <item name="android:paddingLeft">@dimen/mdIconPadding</item>
-    <item name="android:paddingRight">@dimen/mdIconPadding</item>
-    <item name="android:paddingBottom">@dimen/mdIconPadding</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
     <item name="tint">@color/md_image_view_color</item>
   </style>
 </resources>

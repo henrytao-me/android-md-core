@@ -16,8 +16,5 @@
 
 <resources>
 
-  <attr name="ic_donate_circle" format="reference" />
-  <attr name="ic_help" format="reference" />
   <attr name="ic_toolbar_color_lens" format="reference" />
-  <attr name="img_nav_google_logo" format="reference" />
 </resources>

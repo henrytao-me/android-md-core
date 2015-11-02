@@ -81,8 +81,8 @@ public class ButtonActivity extends BaseLayoutActivity {
       vMdIconToggleUp.setText(String.valueOf(mCount));
     });
 
-    vIconActivated.setActivated(true);
-    vIconActivated2.setActivated(true);
-    vIconActivated3.setActivated(true);
+    vIconActivated.setActivated(false);
+    vIconActivated2.setActivated(false);
+    vIconActivated3.setActivated(false);
   }
 }

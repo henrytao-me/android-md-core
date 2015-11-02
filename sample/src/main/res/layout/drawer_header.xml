@@ -24,12 +24,13 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/mdStatusBarSize" />
 
-  <ImageView
+  <me.henrytao.mdcore.widgets.MdImageView
     android:layout_width="match_parent"
     android:layout_height="@dimen/mdIconSize"
     android:layout_margin="@dimen/mdLayoutSpacing"
+    android:padding="0dp"
     android:scaleType="fitStart"
-    android:src="?attr/img_nav_google_logo" />
+    android:src="@drawable/img_nav_google_logo" />
 
   <View
     android:layout_height="@dimen/mdDividerSize_lg"

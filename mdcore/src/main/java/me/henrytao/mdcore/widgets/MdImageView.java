@@ -37,6 +37,8 @@ import me.henrytao.mdcore.utils.ResourceUtils;
  */
 public class MdImageView extends AppCompatImageView {
 
+  private boolean mActivated;
+
   private int mImageTintId;
 
   private ColorStateList mImageTintList;
@@ -54,6 +56,12 @@ public class MdImageView extends AppCompatImageView {
   public MdImageView(Context context, AttributeSet attrs, int defStyleAttr) {
     super(context, attrs, defStyleAttr);
     initFromAttributes(attrs, defStyleAttr);
+  }
+
+  @Override
+  public void setActivated(boolean activated) {
+    mActivated = activated;
+    super.setActivated(activated);
   }
 
   @Override
@@ -91,6 +99,7 @@ public class MdImageView extends AppCompatImageView {
 
     TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.MdImageView, defStyleAttr, 0);
     try {
+      mActivated = a.getBoolean(R.styleable.MdImageView_activated, true);
       mImageTintId = a.getResourceId(R.styleable.MdImageView_tint, 0);
       mImageTintMode = DrawableUtils.parseTintMode(a.getInt(R.styleable.MdImageView_tintMode, -1), null);
     } finally {
@@ -106,6 +115,8 @@ public class MdImageView extends AppCompatImageView {
         e.printStackTrace();
       }
     }
+
+    setActivated(mActivated);
   }
 
   private void invalidateImageTint() {

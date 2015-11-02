@@ -19,6 +19,7 @@
   <attr name="MdImageViewStyle" format="reference" />
 
   <declare-styleable name="MdImageView">
+    <attr name="activated" format="boolean|reference" />
     <attr name="tint" format="color|reference" />
     <attr name="tintMode" format="integer">
       <enum name="src_over" value="3" />
