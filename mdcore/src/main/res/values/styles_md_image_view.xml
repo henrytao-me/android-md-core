@@ -19,6 +19,6 @@
   <style name="MdImageView">
     <item name="android:layout_width">wrap_content</item>
     <item name="android:layout_height">wrap_content</item>
-    <item name="tint">@color/md_image_view_color</item>
+    <item name="tint">?attr/mdIconColor_backgroundPalette</item>
   </style>
 </resources>

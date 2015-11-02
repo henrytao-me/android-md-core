@@ -147,7 +147,9 @@
     <attr name="mdColorDividerInverse_backgroundPalette_light" format="color|reference" />
 
     <!-- icon color -->
-    <attr name="mdIconColor_active" format="color|reference" />
-    <attr name="mdIconColor_inactive" format="color|reference" />
+    <attr name="mdIconColor_primaryPalette" format="color|reference" />
+    <attr name="mdIconColor_accentPalette" format="color|reference" />
+    <attr name="mdIconColor_warnPalette" format="color|reference" />
+    <attr name="mdIconColor_backgroundPalette" format="color|reference" />
   </declare-styleable>
 </resources>

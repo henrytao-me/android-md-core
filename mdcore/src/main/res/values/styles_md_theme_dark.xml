@@ -147,8 +147,10 @@
     <item name="MdButtonBorderlessStyle">@style/MdButton.Borderless</item>
     <item name="MdButtonBorderlessColoredStyle">@style/MdButton.Borderless.Colored</item>
 
-    <item name="mdIconColor_active">@color/mdIconColor_active_dark</item>
-    <item name="mdIconColor_inactive">@color/mdIconColor_inactive_dark</item>
+    <item name="mdIconColor_primaryPalette">@color/md_image_view_color_dark</item>
+    <item name="mdIconColor_accentPalette">@color/md_image_view_color_dark</item>
+    <item name="mdIconColor_warnPalette">@color/md_image_view_color_dark</item>
+    <item name="mdIconColor_backgroundPalette">@color/md_image_view_color_dark</item>
     <item name="MdIconToggleStyle">@style/MdIconToggle</item>
 
     <item name="MdImageViewStyle">@style/MdImageView</item>
