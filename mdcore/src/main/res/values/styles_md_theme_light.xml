@@ -201,6 +201,8 @@
     <item name="android:textColorHighlight">?attr/mdColor_accentPalette_light</item>
     <item name="android:textColorLink">?attr/mdColor_accentPalette</item>
 
+    <item name="drawerArrowStyle">@style/MdDrawerArrowToggle</item>
+
     <item name="alertDialogTheme">@style/MdAlertDialog.Theme.Light</item>
 
     <item name="buttonBarButtonStyle">@style/MdButton.Borderless.Colored</item>
