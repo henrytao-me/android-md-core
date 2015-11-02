@@ -29,6 +29,7 @@ import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.support.annotation.XmlRes;
 import android.support.v4.graphics.ColorUtils;
 import android.support.v4.graphics.drawable.DrawableCompat;
 import android.util.AttributeSet;
@@ -75,7 +76,8 @@ public class ResourceUtils {
     return drawable;
   }
 
-  public static ColorStateList createColorStateListFromResId(Context context, int resId) throws IOException, XmlPullParserException {
+  public static ColorStateList createColorStateListFromResId(Context context, @XmlRes int resId)
+      throws IOException, XmlPullParserException {
     XmlResourceParser parser = context.getResources().getXml(resId);
     AttributeSet attrs = Xml.asAttributeSet(parser);
     Resources r = context.getResources();
