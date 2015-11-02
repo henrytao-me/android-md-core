@@ -24,7 +24,7 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/mdStatusBarSize" />
 
-  <me.henrytao.mdcore.widgets.MdImageView
+  <me.henrytao.mdcore.widgets.MdIcon
     android:layout_width="match_parent"
     android:layout_height="@dimen/mdIconSize"
     android:layout_margin="@dimen/mdLayoutSpacing"
