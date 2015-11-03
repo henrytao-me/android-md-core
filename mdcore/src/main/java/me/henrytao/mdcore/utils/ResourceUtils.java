@@ -36,6 +36,8 @@ import android.util.AttributeSet;
 import android.util.StateSet;
 import android.util.TypedValue;
 import android.util.Xml;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -49,32 +51,6 @@ import me.henrytao.mdcore.R;
  * Created by henrytao on 10/10/15.
  */
 public class ResourceUtils {
-
-  public static Drawable convertDrawableToTint(Context context, Drawable drawable, Palette palette) {
-    try {
-      int resId = 0;
-      switch (palette) {
-        case PRIMARY:
-          resId = ResourceUtils.getResourceIdFromAttribute(context, R.attr.mdIconColor_primaryPalette);
-          break;
-        case ACCENT:
-          resId = ResourceUtils.getResourceIdFromAttribute(context, R.attr.mdIconColor_accentPalette);
-          break;
-        case WARN:
-          resId = ResourceUtils.getResourceIdFromAttribute(context, R.attr.mdIconColor_warnPalette);
-          break;
-        case BACKGROUND:
-          resId = ResourceUtils.getResourceIdFromAttribute(context, R.attr.mdIconColor_backgroundPalette);
-          break;
-      }
-      return ResourceUtils.createDrawableTint(drawable, null, createColorStateListFromResId(context, resId), null);
-    } catch (IOException e) {
-      e.printStackTrace();
-    } catch (XmlPullParserException e) {
-      e.printStackTrace();
-    }
-    return drawable;
-  }
 
   public static ColorStateList createColorStateListFromResId(Context context, @XmlRes int resId)
       throws IOException, XmlPullParserException {
@@ -220,6 +196,50 @@ public class ResourceUtils {
     int alpha = (int) (Color.alpha(baseColor) * alphaMod + 0.5f);
     alpha = Math.min(Math.max(alpha, 0), 255);
     return ColorUtils.setAlphaComponent(baseColor, alpha);
+  }
+
+  public static void supportDrawableTint(Context context, MenuItem menuItem, Palette palette) {
+    if (menuItem != null) {
+      menuItem.setIcon(ResourceUtils.supportDrawableTint(context, menuItem.getIcon(), Palette.PRIMARY));
+      if (menuItem.hasSubMenu()) {
+        supportDrawableTint(context, menuItem.getSubMenu(), palette);
+      }
+    }
+  }
+
+  public static void supportDrawableTint(Context context, Menu menu, Palette palette) {
+    if (menu != null) {
+      int i = 0;
+      for (int n = menu.size(); i < n; i++) {
+        supportDrawableTint(context, menu.getItem(i), palette);
+      }
+    }
+  }
+
+  public static Drawable supportDrawableTint(Context context, Drawable drawable, Palette palette) {
+    try {
+      int resId = 0;
+      switch (palette) {
+        case PRIMARY:
+          resId = ResourceUtils.getResourceIdFromAttribute(context, R.attr.mdIconColor_primaryPalette);
+          break;
+        case ACCENT:
+          resId = ResourceUtils.getResourceIdFromAttribute(context, R.attr.mdIconColor_accentPalette);
+          break;
+        case WARN:
+          resId = ResourceUtils.getResourceIdFromAttribute(context, R.attr.mdIconColor_warnPalette);
+          break;
+        case BACKGROUND:
+          resId = ResourceUtils.getResourceIdFromAttribute(context, R.attr.mdIconColor_backgroundPalette);
+          break;
+      }
+      return ResourceUtils.createDrawableTint(drawable, null, createColorStateListFromResId(context, resId), null);
+    } catch (IOException e) {
+      e.printStackTrace();
+    } catch (XmlPullParserException e) {
+      e.printStackTrace();
+    }
+    return drawable;
   }
 
   public enum Palette {

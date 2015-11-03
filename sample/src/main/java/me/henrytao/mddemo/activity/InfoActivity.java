@@ -43,6 +43,6 @@ public class InfoActivity extends BaseActivity {
 
     setSupportActionBar(vToolbar);
     vToolbar.setNavigationOnClickListener(v -> onBackPressed());
-    vToolbar.setNavigationIcon(ResourceUtils.convertDrawableToTint(this, vToolbar.getNavigationIcon(), ResourceUtils.Palette.PRIMARY));
+    vToolbar.setNavigationIcon(ResourceUtils.supportDrawableTint(this, vToolbar.getNavigationIcon(), ResourceUtils.Palette.PRIMARY));
   }
 }
