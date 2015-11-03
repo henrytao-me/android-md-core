@@ -30,9 +30,9 @@
     <item name="mdColor_warnPalette_dark">@color/mdColor_red_accent_dark</item>
     <item name="mdColor_warnPalette_light">@color/mdColor_red_accent_light</item>
 
-    <item name="mdColor_backgroundPalette">@color/mdColor_background_light</item>
-    <item name="mdColor_backgroundPalette_dark">@color/mdColor_background_light</item>
-    <item name="mdColor_backgroundPalette_light">@color/mdColor_background_light</item>
+    <item name="mdColor_backgroundPalette">@color/mdColor_white</item>
+    <item name="mdColor_backgroundPalette_dark">@color/mdColor_white_dark</item>
+    <item name="mdColor_backgroundPalette_light">@color/mdColor_white_light</item>
 
     <!-- textColor for primary palette -->
     <item name="mdTextColorPrimary_primaryPalette">@color/mdTextColorPrimary_light</item>

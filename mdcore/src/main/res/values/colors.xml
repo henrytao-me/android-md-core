@@ -161,15 +161,11 @@
   <color name="mdColor_blueGrey_dark">#455A64</color>
   <color name="mdColor_blueGrey_light">#CFD8DC</color>
 
-  <color name="mdColor_white">#F5F5F5</color>
-  <color name="mdColor_white_dark">#E0E0E0</color>
+  <color name="mdColor_white">#FAFAFA</color>
+  <color name="mdColor_white_dark">#F5F5F5</color>
   <color name="mdColor_white_light">#FFFFFF</color>
 
-  <color name="mdColor_black">#212121</color>
-  <color name="mdColor_black_dark">#000000</color>
+  <color name="mdColor_black">#303030</color>
+  <color name="mdColor_black_dark">#212121</color>
   <color name="mdColor_black_light">#424242</color>
-
-  <color name="mdColor_background">#FAFAFA</color>
-  <color name="mdColor_background_dark">#303030</color>
-  <color name="mdColor_background_light">#FAFAFA</color>
 </resources>
