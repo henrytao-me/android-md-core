@@ -226,7 +226,7 @@
       </RelativeLayout>
 
       <RelativeLayout
-        android:background="@color/mdColor_background"
+        android:background="@color/mdColor_white"
         style="@style/AppStyle.Grid.Item">
 
         <me.henrytao.mdcore.widgets.MdIcon
@@ -237,7 +237,7 @@
       </RelativeLayout>
 
       <RelativeLayout
-        android:background="@color/mdColor_background"
+        android:background="@color/mdColor_white"
         style="@style/AppStyle.Grid.Item">
 
         <me.henrytao.mdcore.widgets.MdIcon
