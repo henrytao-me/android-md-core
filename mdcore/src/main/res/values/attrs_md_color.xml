@@ -151,5 +151,7 @@
     <attr name="mdIconColor_accentPalette" format="color|reference" />
     <attr name="mdIconColor_warnPalette" format="color|reference" />
     <attr name="mdIconColor_backgroundPalette" format="color|reference" />
+
+    <attr name="mdDrawerArrowToggleColor" format="color|reference" />
   </declare-styleable>
 </resources>

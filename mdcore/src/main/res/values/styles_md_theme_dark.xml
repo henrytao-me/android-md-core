@@ -154,6 +154,8 @@
     <item name="MdIconStyle">@style/MdIcon</item>
     <item name="MdIconToggleStyle">@style/MdIconToggle</item>
 
+    <item name="mdDrawerArrowToggleColor">@color/mdIconColor_active_dark</item>
+
     <item name="MdListItemSingleLineTextOnlyStyle">@style/MdListItem.SingleLine.TextOnly</item>
     <item name="MdListItemSingleLineIconWithTextStyle">@style/MdListItem.SingleLine.IconWithText</item>
     <item name="MdListItemSingleLineAvatarWithTextStyle">@style/MdListItem.SingleLine.AvatarWithText</item>
@@ -200,6 +202,8 @@
     <item name="android:textColorHintInverse">?attr/mdTextColorHintInverse_backgroundPalette</item>
     <item name="android:textColorHighlight">?attr/mdColor_accentPalette_light</item>
     <item name="android:textColorLink">?attr/mdColor_accentPalette</item>
+
+    <item name="drawerArrowStyle">@style/MdDrawerArrowToggle</item>
 
     <item name="alertDialogTheme">@style/MdAlertDialog.Theme.Dark</item>
 
