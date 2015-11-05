@@ -187,8 +187,9 @@
     <item name="colorPrimary">?attr/mdColor_primaryPalette</item>
     <item name="colorPrimaryDark">?attr/mdColor_primaryPalette_dark</item>
     <item name="colorAccent">?attr/mdColor_accentPalette</item>
-    <item name="colorControlNormal">?attr/mdTextColorSecondary_backgroundPalette</item>
+    <item name="colorControlNormal">@color/mdIconColor_active_light</item>
     <item name="colorControlActivated">?attr/mdColor_accentPalette</item>
+    <item name="colorControlDisabled">@color/mdIconColor_inactive_light</item>
 
     <item name="android:textColorPrimary">?attr/mdTextColorPrimary_backgroundPalette</item>
     <item name="android:textColorPrimaryInverse">?attr/mdTextColorPrimaryInverse_backgroundPalette</item>

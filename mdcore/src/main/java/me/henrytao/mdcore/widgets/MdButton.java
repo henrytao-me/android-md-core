@@ -92,7 +92,7 @@ public class MdButton extends AppCompatButton {
       a.recycle();
     }
 
-    if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+    if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
       if (mTextColorId > 0) {
         try {
           setTextColor(ResourceUtils.createColorStateListFromResId(context, mTextColorId));
