@@ -21,12 +21,14 @@
   <style name="MdIconToggle" parent="Widget.AppCompat.CompoundButton.CheckBox">
     <item name="android:layout_width">wrap_content</item>
     <item name="android:layout_height">wrap_content</item>
+    <item name="android:minHeight">48dp</item>
+    <item name="android:minWidth">48dp</item>
     <item name="android:gravity">center</item>
     <item name="android:drawablePadding">8dp</item>
-    <item name="android:paddingTop">10dp</item>
-    <item name="android:paddingLeft">10dp</item>
-    <item name="android:paddingRight">10dp</item>
-    <item name="android:paddingBottom">10dp</item>
+    <item name="android:paddingTop">12dp</item>
+    <item name="android:paddingLeft">12dp</item>
+    <item name="android:paddingRight">12dp</item>
+    <item name="android:paddingBottom">12dp</item>
     <item name="buttonTint">@color/md_control_checkable</item>
   </style>
 </resources>

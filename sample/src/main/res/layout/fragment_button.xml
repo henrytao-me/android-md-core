@@ -163,7 +163,7 @@
         <me.henrytao.mdcore.widgets.MdIconToggle
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:button="@drawable/ic_drawable_favorite" />
+          android:button="@drawable/ic_menu_favorite" />
       </RelativeLayout>
 
       <RelativeLayout style="@style/AppStyle.Grid.Item">
@@ -171,7 +171,7 @@
         <me.henrytao.mdcore.widgets.MdIconToggle
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:button="@drawable/ic_drawable_favorite"
+          android:button="@drawable/ic_menu_favorite"
           android:enabled="false" />
       </RelativeLayout>
 
@@ -181,7 +181,7 @@
           android:id="@+id/toggle_up"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:button="@drawable/ic_drawable_favorite" />
+          android:button="@drawable/ic_menu_favorite" />
       </RelativeLayout>
 
       <RelativeLayout style="@style/AppStyle.Grid.Item">
@@ -189,7 +189,7 @@
         <me.henrytao.mdcore.widgets.MdIconToggle
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:button="@drawable/ic_drawable_favorite"
+          android:button="@drawable/ic_menu_favorite"
           android:enabled="false"
           android:text="10" />
       </RelativeLayout>
