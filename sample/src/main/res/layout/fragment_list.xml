@@ -492,7 +492,7 @@
   </LinearLayout>
 
   <!-- ////////////////////////////////////////////////////////////////////////// -->
-  <!-- ThreeLine -->
+  <!-- ThreeLine Custom -->
   <!-- ////////////////////////////////////////////////////////////////////////// -->
 
   <LinearLayout style="@style/MdList">
@@ -508,7 +508,7 @@
       android:clickable="true"
       app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_title="@string/text_three_line_item"
-      style="@style/MdListItem.SingleLine.AvatarWithText">
+      app:mdli_type="single_line_avatar_with_text">
 
       <ImageView
         android:id="@android:id/icon1"
@@ -530,7 +530,7 @@
       android:clickable="true"
       app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_title="@string/text_three_line_item"
-      style="@style/MdListItem.SingleLine.AvatarWithText">
+      app:mdli_type="single_line_avatar_with_text">
 
       <ImageView
         android:id="@android:id/icon1"
@@ -552,7 +552,7 @@
       android:clickable="true"
       app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_title="@string/text_three_line_item"
-      style="@style/MdListItem.SingleLine.AvatarWithText">
+      app:mdli_type="single_line_avatar_with_text">
 
       <ImageView
         android:id="@android:id/icon1"
@@ -582,7 +582,7 @@
       android:clickable="true"
       app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_title="@string/text_three_line_item"
-      style="@style/MdListItem.SingleLine.AvatarWithText">
+      app:mdli_type="single_line_avatar_with_text">
 
       <ImageView
         android:id="@android:id/icon1"
@@ -604,7 +604,7 @@
       android:clickable="true"
       app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_title="@string/text_three_line_item"
-      style="@style/MdListItem.SingleLine.AvatarWithText">
+      app:mdli_type="single_line_avatar_with_text">
 
       <ImageView
         android:id="@android:id/icon1"
@@ -626,7 +626,7 @@
       android:clickable="true"
       app:mdli_avatar="@drawable/ic_blank_circle"
       app:mdli_title="@string/text_three_line_item"
-      style="@style/MdListItem.SingleLine.AvatarWithText">
+      app:mdli_type="single_line_avatar_with_text">
 
       <ImageView
         android:id="@android:id/icon1"
