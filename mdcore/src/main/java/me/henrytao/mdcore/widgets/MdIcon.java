@@ -94,7 +94,7 @@ public class MdIcon extends AppCompatImageView {
     try {
       enabled = a.getBoolean(R.styleable.MdIcon_enabled, enabled);
       mImageTintId = a.getResourceId(R.styleable.MdIcon_tint, 0);
-      mImageTintMode = DrawableUtils.parseTintMode(a.getInt(R.styleable.MdIcon_tintMode, -1), null);
+      mImageTintMode = ResourceUtils.parseTintMode(a.getInt(R.styleable.MdIcon_tintMode, -1), PorterDuff.Mode.SRC_IN);
     } finally {
       a.recycle();
     }

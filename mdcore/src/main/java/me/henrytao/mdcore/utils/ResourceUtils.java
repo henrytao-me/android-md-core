@@ -198,6 +198,49 @@ public class ResourceUtils {
     return ColorUtils.setAlphaComponent(baseColor, alpha);
   }
 
+  public static PorterDuff.Mode parseTintMode(int value, PorterDuff.Mode defaultMode) {
+    switch (value) {
+      default:
+        return defaultMode;
+      case 0:
+        return PorterDuff.Mode.CLEAR;
+      case 1:
+        return PorterDuff.Mode.SRC;
+      case 2:
+        return PorterDuff.Mode.DST;
+      case 3:
+        return PorterDuff.Mode.SRC_OVER;
+      case 4:
+        return PorterDuff.Mode.DST_OVER;
+      case 5:
+        return PorterDuff.Mode.SRC_IN;
+      case 6:
+        return PorterDuff.Mode.DST_IN;
+      case 7:
+        return PorterDuff.Mode.SRC_OUT;
+      case 8:
+        return PorterDuff.Mode.DST_OUT;
+      case 9:
+        return PorterDuff.Mode.SRC_ATOP;
+      case 10:
+        return PorterDuff.Mode.DST_ATOP;
+      case 11:
+        return PorterDuff.Mode.XOR;
+      case 16:
+        return PorterDuff.Mode.DARKEN;
+      case 17:
+        return PorterDuff.Mode.LIGHTEN;
+      case 13:
+        return PorterDuff.Mode.MULTIPLY;
+      case 14:
+        return PorterDuff.Mode.SCREEN;
+      case 12:
+        return Build.VERSION.SDK_INT >= 11 ? PorterDuff.Mode.valueOf("ADD") : defaultMode;
+      case 15:
+        return Build.VERSION.SDK_INT >= 11 ? PorterDuff.Mode.valueOf("OVERLAY") : defaultMode;
+    }
+  }
+
   public static void supportDrawableTint(Context context, MenuItem menuItem, Palette palette) {
     if (menuItem != null) {
       menuItem.setIcon(ResourceUtils.supportDrawableTint(context, menuItem.getIcon(), Palette.PRIMARY));

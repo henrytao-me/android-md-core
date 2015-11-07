@@ -19,6 +19,7 @@ package me.henrytao.mdcore.widgets;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.annotation.DrawableRes;
@@ -33,6 +34,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import me.henrytao.mdcore.R;
+import me.henrytao.mdcore.utils.ResourceUtils;
 
 /**
  * Created by henrytao on 10/17/15.
@@ -93,6 +95,8 @@ public class MdListItem extends RelativeLayout {
 
   protected Drawable mIcon;
 
+  protected PorterDuff.Mode mIconTintMode;
+
   protected String mSubtitle;
 
   protected String mTitle;
@@ -144,6 +148,7 @@ public class MdListItem extends RelativeLayout {
     setSubtitle(mSubtitle);
     setAvatar(mAvatar);
     setIcon(mIcon);
+    setIconTintMode(mIconTintMode);
   }
 
   public void setAvatar(Drawable drawable) {
@@ -167,6 +172,13 @@ public class MdListItem extends RelativeLayout {
   public void setIcon(@DrawableRes int resId) {
     if (vIcon != null) {
       vIcon.setImageResource(resId);
+    }
+  }
+
+  public void setIconTintMode(PorterDuff.Mode iconTintMode) {
+    mIconTintMode = iconTintMode;
+    if (vIcon != null && vIcon instanceof MdIcon) {
+      ((MdIcon) vIcon).setImageTintMode(mIconTintMode);
     }
   }
 
@@ -204,6 +216,7 @@ public class MdListItem extends RelativeLayout {
       mSubtitle = a.getString(R.styleable.MdListItem_mdli_subtitle);
       mAvatar = a.getDrawable(R.styleable.MdListItem_mdli_avatar);
       mIcon = a.getDrawable(R.styleable.MdListItem_mdli_icon);
+      mIconTintMode = ResourceUtils.parseTintMode(a.getInt(R.styleable.MdListItem_mdli_icon_tintMode, -1), PorterDuff.Mode.SRC_IN);
     } finally {
       a.recycle();
     }
