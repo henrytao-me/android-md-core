@@ -143,4 +143,5 @@
   <string name="title_activity_introduction">Material Design</string>
   <string name="title_activity_button">Button</string>
   <string name="title_activity_fab">Floating Action Button</string>
+  <string name="title_activity_icon">Icon</string>
 </resources>

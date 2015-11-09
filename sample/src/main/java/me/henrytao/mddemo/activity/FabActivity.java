@@ -24,7 +24,7 @@ import android.view.LayoutInflater;
 import butterknife.ButterKnife;
 import me.henrytao.mddemo.R;
 
-public class FabActivity extends BaseLayoutActivity {
+public class FabActivity extends BaseNavigationDrawerActivity {
 
   public static Intent newIntent(Context context) {
     return new Intent(context, FabActivity.class);

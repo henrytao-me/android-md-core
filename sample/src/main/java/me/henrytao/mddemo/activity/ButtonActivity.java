@@ -32,7 +32,7 @@ import me.henrytao.mdcore.widgets.MdIconToggle;
 import me.henrytao.mddemo.R;
 import me.henrytao.mddemo.utils.DialogUtils;
 
-public class ButtonActivity extends BaseLayoutActivity {
+public class ButtonActivity extends BaseNavigationDrawerActivity {
 
   public static Intent newIntent(Context context) {
     return new Intent(context, ButtonActivity.class);

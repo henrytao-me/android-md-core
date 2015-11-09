@@ -44,7 +44,7 @@ import me.henrytao.smoothappbarlayout.SmoothCollapsingToolbarLayout;
 /**
  * Created by henrytao on 10/15/15.
  */
-public class BaseLayoutActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class BaseNavigationDrawerActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
 
   protected static final long DRAWER_CLOSE_DELAY = 200;
 
@@ -105,7 +105,7 @@ public class BaseLayoutActivity extends BaseActivity implements NavigationView.O
   @Override
   public boolean onNavigationItemSelected(final MenuItem item) {
     vDrawerLayout.closeDrawer(GravityCompat.START);
-    vDrawerLayout.postDelayed(() -> BaseLayoutActivity.this.onNavigationItemSelected(item.getItemId()), DRAWER_CLOSE_DELAY);
+    vDrawerLayout.postDelayed(() -> BaseNavigationDrawerActivity.this.onNavigationItemSelected(item.getItemId()), DRAWER_CLOSE_DELAY);
     return true;
   }
 
@@ -131,7 +131,7 @@ public class BaseLayoutActivity extends BaseActivity implements NavigationView.O
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_base_layout);
+    setContentView(R.layout.activity_base_navigation_drawer);
 
     vCollapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar_layout);
     vContainer = (ViewGroup) findViewById(R.id.container);
@@ -165,7 +165,7 @@ public class BaseLayoutActivity extends BaseActivity implements NavigationView.O
 
   protected void onFooterMenuClick(View view) {
     vDrawerLayout.closeDrawer(GravityCompat.START);
-    vDrawerLayout.postDelayed(() -> BaseLayoutActivity.this.onNavigationItemSelected(view.getId()), DRAWER_CLOSE_DELAY);
+    vDrawerLayout.postDelayed(() -> BaseNavigationDrawerActivity.this.onNavigationItemSelected(view.getId()), DRAWER_CLOSE_DELAY);
   }
 
   protected void onNavigationItemSelected(int id) {
