@@ -16,18 +16,38 @@
 
 package me.henrytao.mddemo.activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-public class MainActivity extends BaseActivity {
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import me.henrytao.mdcore.widgets.MdIconToggle;
+import me.henrytao.mddemo.R;
+
+public class IconActivity extends BaseSimpleActivity {
+
+  public static Intent newIntent(Activity activity) {
+    return new Intent(activity, IconActivity.class);
+  }
+
+  @Bind(R.id.toggle_up) MdIconToggle vMdIconToggleUp;
+
+  private int mCount;
+
+  @Override
+  public int getLayoutId() {
+    return R.layout.activity_icon;
+  }
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    Intent intent = IntroductionActivity.newIntent(this);
-    intent = IconActivity.newIntent(this);
-    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-    startActivity(intent);
-    finish();
+    ButterKnife.bind(this);
+
+    vMdIconToggleUp.setOnCheckedChangeListener((buttonView, isChecked) -> {
+      mCount += 1;
+      vMdIconToggleUp.setText(String.valueOf(mCount));
+    });
   }
 }

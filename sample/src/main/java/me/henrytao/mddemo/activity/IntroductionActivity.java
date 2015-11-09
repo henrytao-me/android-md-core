@@ -16,17 +16,17 @@
 
 package me.henrytao.mddemo.activity;
 
-import android.content.Context;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 
 import me.henrytao.mddemo.R;
 
-public class IntroductionActivity extends BaseLayoutActivity {
+public class IntroductionActivity extends BaseNavigationDrawerActivity {
 
-  public static Intent newIntent(Context context) {
-    return new Intent(context, IntroductionActivity.class);
+  public static Intent newIntent(Activity activity) {
+    return new Intent(activity, IntroductionActivity.class);
   }
 
   @Override

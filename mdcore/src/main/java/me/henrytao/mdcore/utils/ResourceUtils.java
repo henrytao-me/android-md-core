@@ -32,6 +32,7 @@ import android.os.Build;
 import android.support.annotation.XmlRes;
 import android.support.v4.graphics.ColorUtils;
 import android.support.v4.graphics.drawable.DrawableCompat;
+import android.support.v7.widget.Toolbar;
 import android.util.AttributeSet;
 import android.util.StateSet;
 import android.util.TypedValue;
@@ -241,24 +242,6 @@ public class ResourceUtils {
     }
   }
 
-  public static void supportDrawableTint(Context context, MenuItem menuItem, Palette palette) {
-    if (menuItem != null) {
-      menuItem.setIcon(ResourceUtils.supportDrawableTint(context, menuItem.getIcon(), Palette.PRIMARY));
-      if (menuItem.hasSubMenu()) {
-        supportDrawableTint(context, menuItem.getSubMenu(), palette);
-      }
-    }
-  }
-
-  public static void supportDrawableTint(Context context, Menu menu, Palette palette) {
-    if (menu != null) {
-      int i = 0;
-      for (int n = menu.size(); i < n; i++) {
-        supportDrawableTint(context, menu.getItem(i), palette);
-      }
-    }
-  }
-
   public static Drawable supportDrawableTint(Context context, Drawable drawable, Palette palette) {
     try {
       int resId = 0;
@@ -283,6 +266,30 @@ public class ResourceUtils {
       e.printStackTrace();
     }
     return drawable;
+  }
+
+  public static void supportDrawableTint(Context context, Menu menu, Palette palette) {
+    if (menu != null) {
+      int i = 0;
+      for (int n = menu.size(); i < n; i++) {
+        supportDrawableTint(context, menu.getItem(i), palette);
+      }
+    }
+  }
+
+  public static void supportDrawableTint(Context context, MenuItem menuItem, Palette palette) {
+    if (menuItem != null) {
+      menuItem.setIcon(ResourceUtils.supportDrawableTint(context, menuItem.getIcon(), Palette.PRIMARY));
+      if (menuItem.hasSubMenu()) {
+        supportDrawableTint(context, menuItem.getSubMenu(), palette);
+      }
+    }
+  }
+
+  public static void supportDrawableTint(Context context, Toolbar toolbar, Palette palette) {
+    if (toolbar != null) {
+      toolbar.setNavigationIcon(supportDrawableTint(context, toolbar.getNavigationIcon(), palette));
+    }
   }
 
   public enum Palette {

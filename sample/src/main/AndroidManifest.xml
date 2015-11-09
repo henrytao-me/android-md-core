@@ -49,5 +49,9 @@
     <activity
       android:label="@string/title_activity_fab"
       android:name=".activity.FabActivity" />
+    <activity
+      android:label="@string/title_activity_icon"
+      android:name=".activity.IconActivity"></activity>
   </application>
+
 </manifest>
