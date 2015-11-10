@@ -57,7 +57,10 @@
       android:name=".activity.ColorActivity" />
     <activity
       android:label="@string/title_activity_typography"
-      android:name=".activity.TypographyActivity"/>
+      android:name=".activity.TypographyActivity" />
+    <activity
+      android:label="@string/title_activity_bottom_sheet"
+      android:name=".activity.BottomSheetActivity"/>
   </application>
 
 </manifest>

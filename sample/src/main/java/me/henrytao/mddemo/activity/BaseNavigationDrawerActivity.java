@@ -194,6 +194,9 @@ public abstract class BaseNavigationDrawerActivity extends BaseActivity implemen
       case R.id.menu_typography:
         intent = TypographyActivity.newIntent(this);
         break;
+      case R.id.menu_bottom_sheet:
+        intent = BottomSheetActivity.newIntent(this);
+        break;
       case R.id.menu_button:
         intent = ButtonActivity.newIntent(this);
         break;
