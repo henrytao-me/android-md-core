@@ -21,7 +21,7 @@ import android.content.Intent;
 
 import me.henrytao.mddemo.R;
 
-public class ListActivity extends BaseSimpleActivity {
+public class ListActivity extends BaseCollapsingToolbarActivity {
 
   public static Intent newIntent(Context context) {
     return new Intent(context, ListActivity.class);

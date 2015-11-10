@@ -25,7 +25,7 @@ import butterknife.ButterKnife;
 import me.henrytao.mdcore.widgets.MdIconToggle;
 import me.henrytao.mddemo.R;
 
-public class IconActivity extends BaseSimpleActivity {
+public class IconActivity extends BaseCollapsingToolbarActivity {
 
   public static Intent newIntent(Activity activity) {
     return new Intent(activity, IconActivity.class);

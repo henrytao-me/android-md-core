@@ -20,27 +20,38 @@ import com.cocosw.bottomsheet.BottomSheet;
 
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import me.henrytao.mdcore.utils.ResourceUtils;
 import me.henrytao.mddemo.R;
 import me.henrytao.mddemo.utils.ThemeUtils;
+import me.henrytao.smoothappbarlayout.SmoothCollapsingToolbarLayout;
 
 /**
  * Created by henrytao on 10/15/15.
  */
-public abstract class BaseSimpleActivity extends BaseActivity {
+public abstract class BaseCollapsingToolbarActivity extends BaseActivity {
 
   @LayoutRes
   public abstract int getLayoutId();
 
+  protected CollapsingToolbarLayout vCollapsingToolbarLayout;
+
   protected ViewGroup vContainer;
 
+  protected SmoothCollapsingToolbarLayout vSmoothCollapsingToolbarLayout;
+
+  protected TextView vTitle;
+
   protected Toolbar vToolbar;
+
+  private CharSequence mTitle;
 
   @Override
   public void onBackPressed() {
@@ -71,16 +82,31 @@ public abstract class BaseSimpleActivity extends BaseActivity {
   }
 
   @Override
+  public void setTitle(CharSequence title) {
+    super.setTitle("");
+    mTitle = title;
+    if (vTitle != null) {
+      vTitle.setText(mTitle);
+    }
+  }
+
+  @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_base_simple);
+    setContentView(R.layout.activity_base_collapsing_toolbar);
 
+    vCollapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar_layout);
     vContainer = (ViewGroup) findViewById(R.id.container);
+    vSmoothCollapsingToolbarLayout = (SmoothCollapsingToolbarLayout) findViewById(R.id.smooth_collapsing_toolbar_layout);
+    vTitle = (TextView) findViewById(R.id.title);
     vToolbar = (Toolbar) findViewById(R.id.toolbar);
 
     setSupportActionBar(vToolbar);
     vToolbar.setNavigationOnClickListener(v -> onBackPressed());
     ResourceUtils.supportDrawableTint(this, vToolbar, ResourceUtils.Palette.PRIMARY);
+
+    vCollapsingToolbarLayout.setTitleEnabled(false);
+    setTitle(getTitle());
 
     if (getLayoutId() > 0) {
       LayoutInflater.from(this).inflate(getLayoutId(), vContainer, true);
