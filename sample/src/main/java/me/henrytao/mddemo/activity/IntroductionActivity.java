@@ -18,8 +18,6 @@ package me.henrytao.mddemo.activity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Bundle;
-import android.view.LayoutInflater;
 
 import me.henrytao.mddemo.R;
 
@@ -30,8 +28,7 @@ public class IntroductionActivity extends BaseNavigationDrawerActivity {
   }
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    LayoutInflater.from(this).inflate(R.layout.fragment_introduction, vContainer, true);
+  public int getLayoutId() {
+    return R.layout.activity_introduction;
   }
 }

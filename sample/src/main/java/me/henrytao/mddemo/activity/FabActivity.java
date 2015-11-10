@@ -18,22 +18,17 @@ package me.henrytao.mddemo.activity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
-import android.view.LayoutInflater;
 
-import butterknife.ButterKnife;
 import me.henrytao.mddemo.R;
 
-public class FabActivity extends BaseNavigationDrawerActivity {
+public class FabActivity extends BaseSimpleActivity {
 
   public static Intent newIntent(Context context) {
     return new Intent(context, FabActivity.class);
   }
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    LayoutInflater.from(this).inflate(R.layout.fragment_fab, vContainer, true);
-    ButterKnife.bind(this);
+  public int getLayoutId() {
+    return R.layout.activity_fab;
   }
 }

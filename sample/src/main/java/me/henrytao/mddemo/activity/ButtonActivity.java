@@ -21,7 +21,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
-import android.view.LayoutInflater;
 import android.widget.Button;
 import android.widget.CheckBox;
 
@@ -32,7 +31,7 @@ import me.henrytao.mdcore.widgets.MdIconToggle;
 import me.henrytao.mddemo.R;
 import me.henrytao.mddemo.utils.DialogUtils;
 
-public class ButtonActivity extends BaseNavigationDrawerActivity {
+public class ButtonActivity extends BaseSimpleActivity {
 
   public static Intent newIntent(Context context) {
     return new Intent(context, ButtonActivity.class);
@@ -47,9 +46,13 @@ public class ButtonActivity extends BaseNavigationDrawerActivity {
   private int mCount;
 
   @Override
+  public int getLayoutId() {
+    return R.layout.activity_button;
+  }
+
+  @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    LayoutInflater.from(this).inflate(R.layout.fragment_button, vContainer, true);
     ButterKnife.bind(this);
 
     vBtnDialog.setOnClickListener(v -> DialogUtils.showInfoDialog(this, getString(R.string.text_button_color_in_dialog_info), null, null));

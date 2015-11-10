@@ -63,8 +63,11 @@ public class ThemeUtils {
     int themeResId = sThemes.containsKey(themeId) ? sThemes.get(themeId) : 0;
     if (themeResId > 0 && themeResId != sCurrentThemeResId) {
       sCurrentThemeResId = themeResId;
+      Intent intent = new Intent(activity, activity.getClass());
+      intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+      intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+      activity.startActivity(intent);
       activity.finish();
-      activity.startActivity(new Intent(activity, activity.getClass()));
     }
   }
 

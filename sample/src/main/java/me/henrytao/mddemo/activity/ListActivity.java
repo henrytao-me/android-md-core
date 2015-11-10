@@ -18,23 +18,25 @@ package me.henrytao.mddemo.activity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
-import android.view.LayoutInflater;
 
-import butterknife.ButterKnife;
 import me.henrytao.mddemo.R;
 
-public class ListActivity extends BaseNavigationDrawerActivity {
+public class ListActivity extends BaseSimpleActivity {
 
   public static Intent newIntent(Context context) {
     return new Intent(context, ListActivity.class);
   }
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    vSmoothCollapsingToolbarLayout.setCollapsedOffsetX(getResources().getDimensionPixelOffset(R.dimen.mdListItemPaddingLeft_lg));
-    LayoutInflater.from(this).inflate(R.layout.fragment_list, vContainer, true);
-    ButterKnife.bind(this);
+  public int getLayoutId() {
+    return R.layout.activity_list;
   }
+
+  //@Override
+  //protected void onCreate(Bundle savedInstanceState) {
+  //  super.onCreate(savedInstanceState);
+  //  vSmoothCollapsingToolbarLayout.setCollapsedOffsetX(getResources().getDimensionPixelOffset(R.dimen.mdListItemPaddingLeft_lg));
+  //  LayoutInflater.from(this).inflate(, vContainer, true);
+  //  ButterKnife.bind(this);
+  //}
 }
