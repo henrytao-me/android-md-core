@@ -16,6 +16,7 @@
 
 package me.henrytao.mddemo.activity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 
@@ -23,20 +24,12 @@ import me.henrytao.mddemo.R;
 
 public class ListActivity extends BaseCollapsingToolbarActivity {
 
-  public static Intent newIntent(Context context) {
-    return new Intent(context, ListActivity.class);
+  public static Intent newIntent(Activity activity) {
+    return new Intent(activity, ListActivity.class);
   }
 
   @Override
   public int getLayoutId() {
     return R.layout.activity_list;
   }
-
-  //@Override
-  //protected void onCreate(Bundle savedInstanceState) {
-  //  super.onCreate(savedInstanceState);
-  //  vSmoothCollapsingToolbarLayout.setCollapsedOffsetX(getResources().getDimensionPixelOffset(R.dimen.mdListItemPaddingLeft_lg));
-  //  LayoutInflater.from(this).inflate(, vContainer, true);
-  //  ButterKnife.bind(this);
-  //}
 }

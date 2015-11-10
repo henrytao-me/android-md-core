@@ -16,7 +16,7 @@
 
 package me.henrytao.mddemo.activity;
 
-import android.content.Context;
+import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -33,8 +33,8 @@ import me.henrytao.mddemo.utils.DialogUtils;
 
 public class ButtonActivity extends BaseCollapsingToolbarActivity {
 
-  public static Intent newIntent(Context context) {
-    return new Intent(context, ButtonActivity.class);
+  public static Intent newIntent(Activity activity) {
+    return new Intent(activity, ButtonActivity.class);
   }
 
   @Bind(R.id.btn_dialog) Button vBtnDialog;

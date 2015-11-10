@@ -65,9 +65,10 @@
   <group android:id="@+id/group_style">
     <item android:title="Style">
       <menu>
-        <!--<item-->
-        <!--android:icon="@drawable/ic_blank_transparent"-->
-        <!--android:title="Color (x)" />-->
+        <item
+          android:id="@+id/menu_color"
+          android:icon="@drawable/ic_blank_transparent"
+          android:title="Color" />
         <item
           android:id="@+id/menu_icon"
           android:icon="@drawable/ic_blank_transparent"

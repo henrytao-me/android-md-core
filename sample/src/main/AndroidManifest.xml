@@ -52,6 +52,9 @@
     <activity
       android:label="@string/title_activity_icon"
       android:name=".activity.IconActivity" />
+    <activity
+      android:label="@string/title_activity_color"
+      android:name=".activity.ColorActivity"/>
   </application>
 
 </manifest>

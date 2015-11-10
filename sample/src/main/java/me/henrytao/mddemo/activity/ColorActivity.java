@@ -17,19 +17,18 @@
 package me.henrytao.mddemo.activity;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 
 import me.henrytao.mddemo.R;
 
-public class InfoActivity extends BaseSimpleActivity {
+public class ColorActivity extends BaseCollapsingToolbarActivity {
 
   public static Intent newIntent(Activity activity) {
-    return new Intent(activity, InfoActivity.class);
+    return new Intent(activity, ColorActivity.class);
   }
 
   @Override
   public int getLayoutId() {
-    return R.layout.activity_info;
+    return R.layout.activity_color;
   }
 }
