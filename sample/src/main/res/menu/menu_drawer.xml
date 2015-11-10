@@ -133,9 +133,10 @@
         <!--<item-->
         <!--android:icon="@drawable/ic_blank_transparent"-->
         <!--android:title="Data tables (x)" />-->
-        <!--<item-->
-        <!--android:icon="@drawable/ic_blank_transparent"-->
-        <!--android:title="Dialogs (x)" />-->
+        <item
+          android:id="@+id/menu_dialog"
+          android:icon="@drawable/ic_blank_transparent"
+          android:title="Dialogs" />
         <!--<item-->
         <!--android:icon="@drawable/ic_blank_transparent"-->
         <!--android:title="Dividers (x)" />-->
