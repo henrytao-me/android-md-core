@@ -67,6 +67,9 @@
     <activity
       android:label="@string/title_activity_divider"
       android:name=".activity.DividerActivity" />
+    <activity
+      android:label="@string/title_activity_subheader"
+      android:name=".activity.SubheaderActivity"/>
   </application>
 
 </manifest>
