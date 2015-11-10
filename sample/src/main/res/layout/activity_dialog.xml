@@ -28,6 +28,7 @@
 
   <LinearLayout
     android:orientation="horizontal"
+    android:paddingTop="@dimen/mdLayoutSpacing"
     style="@style/MdList">
 
     <Button
