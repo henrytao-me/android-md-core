@@ -16,6 +16,7 @@
 
 package me.henrytao.mddemo.activity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 
@@ -23,8 +24,8 @@ import me.henrytao.mddemo.R;
 
 public class FabActivity extends BaseCollapsingToolbarActivity {
 
-  public static Intent newIntent(Context context) {
-    return new Intent(context, FabActivity.class);
+  public static Intent newIntent(Activity activity) {
+    return new Intent(activity, FabActivity.class);
   }
 
   @Override

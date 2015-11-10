@@ -185,6 +185,9 @@ public abstract class BaseNavigationDrawerActivity extends BaseActivity implemen
           intent = IntroductionActivity.newIntent(this);
         }
         break;
+      case R.id.menu_color:
+        intent = ColorActivity.newIntent(this);
+        break;
       case R.id.menu_icon:
         intent = IconActivity.newIntent(this);
         break;
