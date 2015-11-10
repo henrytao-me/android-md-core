@@ -69,7 +69,10 @@
       android:name=".activity.DividerActivity" />
     <activity
       android:label="@string/title_activity_subheader"
-      android:name=".activity.SubheaderActivity"/>
+      android:name=".activity.SubheaderActivity" />
+    <activity
+      android:label="@string/title_activity_toolbar"
+      android:name=".activity.ToolbarActivity"/>
   </application>
 
 </manifest>

@@ -150,4 +150,5 @@
   <string name="title_activity_dialog">Dialog</string>
   <string name="title_activity_divider">Divider</string>
   <string name="title_activity_subheader">Subheader</string>
+  <string name="title_activity_toolbar">Toolbar</string>
 </resources>

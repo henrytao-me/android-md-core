@@ -182,9 +182,10 @@
         <!--<item-->
         <!--android:icon="@drawable/ic_blank_transparent"-->
         <!--android:title="Text fields (x)" />-->
-        <!--<item-->
-        <!--android:icon="@drawable/ic_blank_transparent"-->
-        <!--android:title="Toolbars (x)" />-->
+        <item
+          android:id="@+id/menu_toolbar"
+          android:icon="@drawable/ic_blank_transparent"
+          android:title="Toolbars" />
         <!--<item-->
         <!--android:icon="@drawable/ic_blank_transparent"-->
         <!--android:title="Tooltips (x)" />-->

@@ -215,6 +215,9 @@ public abstract class BaseNavigationDrawerActivity extends BaseActivity implemen
       case R.id.menu_subheader:
         intent = SubheaderActivity.newIntent(this);
         break;
+      case R.id.menu_toolbar:
+        intent = ToolbarActivity.newIntent(this);
+        break;
       case R.id.menu_donate:
         showDonateDialog();
         return;
