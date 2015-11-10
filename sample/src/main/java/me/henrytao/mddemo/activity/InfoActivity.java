@@ -18,31 +18,17 @@ package me.henrytao.mddemo.activity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
-import me.henrytao.mdcore.utils.ResourceUtils;
 import me.henrytao.mddemo.R;
 
-public class InfoActivity extends BaseActivity {
+public class InfoActivity extends BaseSimpleActivity {
 
   public static Intent newIntent(Context context) {
     return new Intent(context, InfoActivity.class);
   }
 
-  @Bind(R.id.toolbar)
-  Toolbar vToolbar;
-
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_info);
-    ButterKnife.bind(this);
-
-    setSupportActionBar(vToolbar);
-    vToolbar.setNavigationOnClickListener(v -> onBackPressed());
-    vToolbar.setNavigationIcon(ResourceUtils.supportDrawableTint(this, vToolbar.getNavigationIcon(), ResourceUtils.Palette.PRIMARY));
+  public int getLayoutId() {
+    return R.layout.activity_info;
   }
 }

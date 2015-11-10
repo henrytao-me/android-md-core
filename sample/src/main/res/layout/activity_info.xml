@@ -14,106 +14,87 @@
   ~ limitations under the License.
   -->
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  tools:context="me.henrytao.mddemo.activity.InfoActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:gravity="center"
+  android:padding="@dimen/mdLayoutSpacing"
+  style="@style/MdList">
 
-  <android.support.v7.widget.Toolbar
-    android:id="@+id/toolbar"
-    app:navigationIcon="@drawable/ic_menu_arrow_back"
-    style="@style/MdToolbar" />
+  <TextView
+    android:layout_marginBottom="@dimen/mdLayoutSpacing"
+    android:layout_marginTop="@dimen/mdLayoutSpacing_sm"
+    android:text="@string/app_code"
+    style="@style/MdText.Headline" />
 
-  <ScrollView
+  <TextView
+    android:layout_marginBottom="@dimen/mdLayoutSpacing"
+    android:gravity="center"
+    android:text="@string/app_description"
+    style="@style/MdText.Body1" />
+
+  <ImageView
+    android:layout_width="@dimen/mdIconSize_lg"
+    android:layout_height="@dimen/mdIconSize_lg"
+    android:layout_marginBottom="@dimen/mdLayoutSpacing"
+    android:src="@drawable/ic_logo" />
+
+  <TextView
+    android:layout_marginBottom="@dimen/mdLayoutSpacing"
+    android:text="@string/app_copyright"
+    style="@style/MdText.Body1" />
+
+  <TextView
+    android:layout_marginBottom="@dimen/mdLayoutSpacing"
+    android:text="@string/text_fork"
+    style="@style/MdText.Body1" />
+
+  <TextView
+    android:layout_marginBottom="@dimen/mdLayoutSpacing"
+    android:autoLink="web"
+    android:text="@string/app_repo"
+    style="@style/MdText.Body1" />
+
+  <View
+    android:layout_marginBottom="@dimen/mdLayoutSpacing"
+    style="@style/MdDivider" />
+
+  <TextView
+    android:layout_marginBottom="@dimen/mdLayoutSpacing"
+    android:text="@string/text_license"
+    style="@style/MdText.Headline" />
+
+  <TextView
+    android:layout_marginBottom="@dimen/mdLayoutSpacing"
+    android:text="@string/app_license"
+    style="@style/MdText.Body1" />
+
+  <View
+    android:layout_marginBottom="@dimen/mdLayoutSpacing"
+    style="@style/MdDivider" />
+
+  <TextView
+    android:layout_marginBottom="@dimen/mdLayoutSpacing"
+    android:text="@string/text_open_sources"
+    style="@style/MdText.Headline" />
+
+  <TextView
+    android:layout_marginBottom="@dimen/mdLayoutSpacing"
+    android:text="@string/text_open_sources_description"
+    style="@style/MdText.Body1" />
+
+  <View
+    android:layout_marginBottom="@dimen/mdLayoutSpacing"
+    style="@style/MdDivider" />
+
+  <TextView
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_below="@+id/toolbar">
+    android:layout_marginBottom="@dimen/mdLayoutSpacing"
+    android:text="@string/text_bottom_sheet"
+    style="@style/MdText.Title" />
 
-    <LinearLayout
-      android:gravity="center"
-      android:padding="@dimen/mdLayoutSpacing"
-      style="@style/MdList">
-
-      <TextView
-        android:layout_marginBottom="@dimen/mdLayoutSpacing"
-        android:layout_marginTop="@dimen/mdLayoutSpacing_sm"
-        android:text="@string/app_code"
-        style="@style/MdText.Headline" />
-
-      <TextView
-        android:layout_marginBottom="@dimen/mdLayoutSpacing"
-        android:gravity="center"
-        android:text="@string/app_description"
-        style="@style/MdText.Body1" />
-
-      <ImageView
-        android:layout_width="@dimen/mdIconSize_lg"
-        android:layout_height="@dimen/mdIconSize_lg"
-        android:layout_marginBottom="@dimen/mdLayoutSpacing"
-        android:src="@drawable/ic_logo" />
-
-      <TextView
-        android:layout_marginBottom="@dimen/mdLayoutSpacing"
-        android:text="@string/app_copyright"
-        style="@style/MdText.Body1" />
-
-      <TextView
-        android:layout_marginBottom="@dimen/mdLayoutSpacing"
-        android:text="@string/text_fork"
-        style="@style/MdText.Body1" />
-
-      <TextView
-        android:layout_marginBottom="@dimen/mdLayoutSpacing"
-        android:autoLink="web"
-        android:text="@string/app_repo"
-        style="@style/MdText.Body1" />
-
-      <View
-        android:layout_marginBottom="@dimen/mdLayoutSpacing"
-        style="@style/MdDivider" />
-
-      <TextView
-        android:layout_marginBottom="@dimen/mdLayoutSpacing"
-        android:text="@string/text_license"
-        style="@style/MdText.Headline" />
-
-      <TextView
-        android:layout_marginBottom="@dimen/mdLayoutSpacing"
-        android:text="@string/app_license"
-        style="@style/MdText.Body1" />
-
-      <View
-        android:layout_marginBottom="@dimen/mdLayoutSpacing"
-        style="@style/MdDivider" />
-
-      <TextView
-        android:layout_marginBottom="@dimen/mdLayoutSpacing"
-        android:text="@string/text_open_sources"
-        style="@style/MdText.Headline" />
-
-      <TextView
-        android:layout_marginBottom="@dimen/mdLayoutSpacing"
-        android:text="@string/text_open_sources_description"
-        style="@style/MdText.Body1" />
-
-      <View
-        android:layout_marginBottom="@dimen/mdLayoutSpacing"
-        style="@style/MdDivider" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_marginBottom="@dimen/mdLayoutSpacing"
-        android:text="@string/text_bottom_sheet"
-        style="@style/MdText.Title" />
-
-      <TextView
-        android:layout_marginBottom="@dimen/mdLayoutSpacing"
-        android:text="@string/text_bottom_sheet_license"
-        style="@style/MdText.Body1" />
-    </LinearLayout>
-  </ScrollView>
-</RelativeLayout>
+  <TextView
+    android:layout_marginBottom="@dimen/mdLayoutSpacing"
+    android:text="@string/text_bottom_sheet_license"
+    style="@style/MdText.Body1" />
+</LinearLayout>
 
 

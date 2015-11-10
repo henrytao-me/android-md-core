@@ -22,6 +22,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.LayoutRes;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -29,6 +30,7 @@ import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -44,7 +46,10 @@ import me.henrytao.smoothappbarlayout.SmoothCollapsingToolbarLayout;
 /**
  * Created by henrytao on 10/15/15.
  */
-public class BaseNavigationDrawerActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
+public abstract class BaseNavigationDrawerActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+  @LayoutRes
+  public abstract int getLayoutId();
 
   protected static final long DRAWER_CLOSE_DELAY = 200;
 
@@ -161,6 +166,10 @@ public class BaseNavigationDrawerActivity extends BaseActivity implements Naviga
 
     vMenuDonate.setOnClickListener(v -> onFooterMenuClick(v));
     vMenuHelpAndFeedback.setOnClickListener(v -> onFooterMenuClick(v));
+
+    if (getLayoutId() > 0) {
+      LayoutInflater.from(this).inflate(getLayoutId(), vContainer, true);
+    }
   }
 
   protected void onFooterMenuClick(View view) {
@@ -176,32 +185,29 @@ public class BaseNavigationDrawerActivity extends BaseActivity implements Naviga
           intent = IntroductionActivity.newIntent(this);
         }
         break;
+      case R.id.menu_icon:
+        intent = IconActivity.newIntent(this);
+        break;
       case R.id.menu_button:
-        if (!(this instanceof ButtonActivity)) {
-          intent = ButtonActivity.newIntent(this);
-        }
+        intent = ButtonActivity.newIntent(this);
         break;
       case R.id.menu_fab:
-        if (!(this instanceof FabActivity)) {
-          intent = FabActivity.newIntent(this);
-        }
+        intent = FabActivity.newIntent(this);
         break;
       case R.id.menu_list:
-        if (!(this instanceof ListActivity)) {
-          intent = ListActivity.newIntent(this);
-        }
+        intent = ListActivity.newIntent(this);
         break;
       case R.id.menu_donate:
         showDonateDialog();
         return;
       case R.id.menu_help_and_feedback:
         startActivity(InfoActivity.newIntent(this));
+        overridePendingTransition(R.anim.enter_rtl, android.R.anim.fade_out);
         return;
     }
     if (intent != null) {
-      intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-      intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
       startActivity(intent);
+      overridePendingTransition(R.anim.enter_rtl, android.R.anim.fade_out);
     }
   }
 

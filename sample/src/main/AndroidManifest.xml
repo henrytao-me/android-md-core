@@ -51,7 +51,7 @@
       android:name=".activity.FabActivity" />
     <activity
       android:label="@string/title_activity_icon"
-      android:name=".activity.IconActivity"></activity>
+      android:name=".activity.IconActivity" />
   </application>
 
 </manifest>
