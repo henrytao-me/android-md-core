@@ -54,7 +54,10 @@
       android:name=".activity.IconActivity" />
     <activity
       android:label="@string/title_activity_color"
-      android:name=".activity.ColorActivity"/>
+      android:name=".activity.ColorActivity" />
+    <activity
+      android:label="@string/title_activity_typography"
+      android:name=".activity.TypographyActivity"/>
   </application>
 
 </manifest>

@@ -76,9 +76,10 @@
         <!--<item-->
         <!--android:icon="@drawable/ic_blank_transparent"-->
         <!--android:title="Imagery (x)" />-->
-        <!--<item-->
-        <!--android:icon="@drawable/ic_blank_transparent"-->
-        <!--android:title="Typography (x)" />-->
+        <item
+          android:id="@+id/menu_typography"
+          android:icon="@drawable/ic_blank_transparent"
+          android:title="Typography" />
         <!--<item-->
         <!--android:icon="@drawable/ic_blank_transparent"-->
         <!--android:title="Writing (x)" />-->

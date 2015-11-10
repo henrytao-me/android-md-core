@@ -145,4 +145,5 @@
   <string name="title_activity_fab">Floating Action Button</string>
   <string name="title_activity_icon">Icon</string>
   <string name="title_activity_color">Color</string>
+  <string name="title_activity_typography">Typography</string>
 </resources>
