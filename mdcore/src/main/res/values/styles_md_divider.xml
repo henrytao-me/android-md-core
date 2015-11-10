@@ -31,19 +31,19 @@
   </style>
 
   <style name="MdDivider.Right">
-    <item name="android:layout_marginLeft">@dimen/mdListItemPaddingRight_lg</item>
+    <item name="android:layout_marginRight">@dimen/mdListItemPaddingRight_lg</item>
   </style>
 
   <style name="MdDivider.RightLarge">
-    <item name="android:layout_marginLeft">@dimen/mdListItemPaddingRight_xlg</item>
+    <item name="android:layout_marginRight">@dimen/mdListItemPaddingRight_xlg</item>
   </style>
 
   <style name="MdDivider.LeftRight" parent="MdDivider.Left">
-    <item name="android:layout_marginLeft">@dimen/mdListItemPaddingRight_lg</item>
+    <item name="android:layout_marginRight">@dimen/mdListItemPaddingRight_lg</item>
   </style>
 
   <style name="MdDivider.LeftRightLarge" parent="MdDivider.Left">
-    <item name="android:layout_marginLeft">@dimen/mdListItemPaddingRight_xlg</item>
+    <item name="android:layout_marginRight">@dimen/mdListItemPaddingRight_xlg</item>
   </style>
 
   <!-- ////////////////////////////////////////////////////////////////////////// -->

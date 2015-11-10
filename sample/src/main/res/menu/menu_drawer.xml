@@ -137,9 +137,10 @@
           android:id="@+id/menu_dialog"
           android:icon="@drawable/ic_blank_transparent"
           android:title="Dialogs" />
-        <!--<item-->
-        <!--android:icon="@drawable/ic_blank_transparent"-->
-        <!--android:title="Dividers (x)" />-->
+        <item
+          android:id="@+id/menu_divider"
+          android:icon="@drawable/ic_blank_transparent"
+          android:title="Dividers" />
         <!--<item-->
         <!--android:icon="@drawable/ic_blank_transparent"-->
         <!--android:title="Grid lists (x)" />-->
@@ -168,9 +169,10 @@
         <!--<item-->
         <!--android:icon="@drawable/ic_blank_transparent"-->
         <!--android:title="Snackbars &amp; toasts (x)" />-->
-        <!--<item-->
-        <!--android:icon="@drawable/ic_blank_transparent"-->
-        <!--android:title="Subheaders (x)" />-->
+        <item
+          android:id="@+id/menu_subheader"
+          android:icon="@drawable/ic_blank_transparent"
+          android:title="Subheaders" />
         <!--<item-->
         <!--android:icon="@drawable/ic_blank_transparent"-->
         <!--android:title="Steppers (x)" />-->
@@ -180,9 +182,10 @@
         <!--<item-->
         <!--android:icon="@drawable/ic_blank_transparent"-->
         <!--android:title="Text fields (x)" />-->
-        <!--<item-->
-        <!--android:icon="@drawable/ic_blank_transparent"-->
-        <!--android:title="Toolbars (x)" />-->
+        <item
+          android:id="@+id/menu_toolbar"
+          android:icon="@drawable/ic_blank_transparent"
+          android:title="Toolbars" />
         <!--<item-->
         <!--android:icon="@drawable/ic_blank_transparent"-->
         <!--android:title="Tooltips (x)" />-->

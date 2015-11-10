@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,57 +14,65 @@
   ~ limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="me.henrytao.mddemo" >
+  package="me.henrytao.mddemo">
 
-    <uses-permission android:name="com.android.vending.BILLING" />
-    <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="com.android.vending.BILLING" />
+  <uses-permission android:name="android.permission.INTERNET" />
 
-    <application
-        android:name=".App"
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
-        <activity
-            android:name=".activity.MainActivity"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+  <application
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:name=".App"
+    android:theme="@style/AppTheme">
+    <activity
+      android:label="@string/app_name"
+      android:name=".activity.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".activity.InfoActivity"
-            android:label="@string/title_activity_info" />
-        <activity
-            android:name=".activity.ListActivity"
-            android:label="@string/title_activity_list" />
-        <activity
-            android:name=".activity.IntroductionActivity"
-            android:label="@string/title_activity_introduction" />
-        <activity
-            android:name=".activity.ButtonActivity"
-            android:label="@string/title_activity_button" />
-        <activity
-            android:name=".activity.FabActivity"
-            android:label="@string/title_activity_fab" />
-        <activity
-            android:name=".activity.IconActivity"
-            android:label="@string/title_activity_icon" />
-        <activity
-            android:name=".activity.ColorActivity"
-            android:label="@string/title_activity_color" />
-        <activity
-            android:name=".activity.TypographyActivity"
-            android:label="@string/title_activity_typography" />
-        <activity
-            android:name=".activity.BottomSheetActivity"
-            android:label="@string/title_activity_bottom_sheet" />
-        <activity
-            android:name=".activity.DialogActivity"
-            android:label="@string/title_activity_dialog" >
-        </activity>
-    </application>
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:label="@string/title_activity_info"
+      android:name=".activity.InfoActivity" />
+    <activity
+      android:label="@string/title_activity_list"
+      android:name=".activity.ListActivity" />
+    <activity
+      android:label="@string/title_activity_introduction"
+      android:name=".activity.IntroductionActivity" />
+    <activity
+      android:label="@string/title_activity_button"
+      android:name=".activity.ButtonActivity" />
+    <activity
+      android:label="@string/title_activity_fab"
+      android:name=".activity.FabActivity" />
+    <activity
+      android:label="@string/title_activity_icon"
+      android:name=".activity.IconActivity" />
+    <activity
+      android:label="@string/title_activity_color"
+      android:name=".activity.ColorActivity" />
+    <activity
+      android:label="@string/title_activity_typography"
+      android:name=".activity.TypographyActivity" />
+    <activity
+      android:label="@string/title_activity_bottom_sheet"
+      android:name=".activity.BottomSheetActivity" />
+    <activity
+      android:label="@string/title_activity_dialog"
+      android:name=".activity.DialogActivity" />
+    <activity
+      android:label="@string/title_activity_divider"
+      android:name=".activity.DividerActivity" />
+    <activity
+      android:label="@string/title_activity_subheader"
+      android:name=".activity.SubheaderActivity" />
+    <activity
+      android:label="@string/title_activity_toolbar"
+      android:name=".activity.ToolbarActivity"/>
+  </application>
 
 </manifest>

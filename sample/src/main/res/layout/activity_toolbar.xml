@@ -14,31 +14,14 @@
   ~ limitations under the License.
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:orientation="vertical"
   android:padding="@dimen/mdLayoutSpacing"
-  tools:context="me.henrytao.mddemo.activity.DialogActivity">
+  tools:context="me.henrytao.mddemo.activity.ToolbarActivity">
 
   <TextView
-    android:text="Implementing dialog is kind of tricky in term of styling and theme. This library already defined for you. Check out MdAlertDialog.Theme.Light and MdAlertDialog.Theme.Dark. Also check out AlertDialogBuilder. It has onShow callback and autoDismiss functionality."
+    android:text="Check out MdToolbar style."
     style="@style/MdText.Body1" />
-
-  <LinearLayout
-    android:orientation="horizontal"
-    android:paddingTop="@dimen/mdLayoutSpacing"
-    style="@style/MdList">
-
-    <Button
-      android:id="@+id/btn_dialog"
-      android:text="@string/text_click_me"
-      style="@style/MdButton" />
-
-    <Button
-      android:id="@+id/btn_dialog_2"
-      android:text="@string/text_click_me"
-      style="@style/MdButton.Colored" />
-  </LinearLayout>
-</LinearLayout>
+</RelativeLayout>
