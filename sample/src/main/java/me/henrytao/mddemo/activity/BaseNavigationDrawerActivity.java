@@ -203,6 +203,9 @@ public abstract class BaseNavigationDrawerActivity extends BaseActivity implemen
       case R.id.menu_fab:
         intent = FabActivity.newIntent(this);
         break;
+      case R.id.menu_card:
+        // TODO: add card activity
+        break;
       case R.id.menu_dialog:
         intent = DialogActivity.newIntent(this);
         break;
