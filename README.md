@@ -1,4 +1,4 @@
-[ ![Download](https://api.bintray.com/packages/henrytao-me/maven/mdcore/images/download.svg) ](https://bintray.com/henrytao-me/maven/mdcore/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/henrytao-me/maven/mdcore/images/download.svg) ](https://bintray.com/henrytao-me/maven/mdcore/_latestVersion) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-android--md--core-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/2469)
 
 android-md-core
 ================
