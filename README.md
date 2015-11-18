@@ -39,11 +39,6 @@ Please note that the app on the Play store is not always the latest version.
  ![Button](./screenshots/all-in-one.jpg)
 
 
-## Usage
-
-- Updating
-
-
 ## Contributing
 
 Any contributions are welcome!  
