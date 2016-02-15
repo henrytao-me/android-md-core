@@ -49,6 +49,8 @@
   <dimen name="mdIconSize">48dp</dimen>
   <dimen name="mdIconSize_sm">40dp</dimen>
   <dimen name="mdIconSize_lg">56dp</dimen>
+  <dimen name="mdIconSize_xlg">64dp</dimen>
+  <dimen name="mdIconSize_xxlg">88dp</dimen>
   <dimen name="mdIconPadding">12dp</dimen>
 
   <dimen name="mdLayoutSpacing">16dp</dimen>
