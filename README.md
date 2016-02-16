@@ -19,7 +19,7 @@ compile "me.henrytao:mdcore:<latest-version>"
 
 ## Demo
 
-[![Get it on Google Play](https://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](https://play.google.com/store/apps/details?id=me.henrytao.mdcoreinaction)
+[![Get it on Google Play](https://raw.githubusercontent.com/henrytao-me/android-md-core/master/screenshots/google-play.png)](https://play.google.com/store/apps/details?id=me.henrytao.mdcoreinaction)
 
 Please note that the app on the Play store is not always the latest version.
 
