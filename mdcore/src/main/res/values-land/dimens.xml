@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~ Copyright 2016 "Henry Tao <hi@henrytao.me>"
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -16,17 +16,7 @@
 
 <resources>
 
-  <dimen name="mdListItemHeight">64dp</dimen>
-  <dimen name="mdListItemHeight_sm">48dp</dimen>
-  <dimen name="mdListItemHeight_lg">72dp</dimen>
-  <dimen name="mdListItemHeight_xlg">88dp</dimen>
-
-  <dimen name="mdListItemPaddingLeft">24dp</dimen>
-  <dimen name="mdListItemPaddingLeft_lg">104dp</dimen>
-  <dimen name="mdListItemPaddingRight">16dp</dimen>
-  <dimen name="mdListItemPaddingRight_lg">72dp</dimen>
-
-  <dimen name="mdActionBarSize">64dp</dimen>
-  <dimen name="mdSecondaryActionBarSize">54dp</dimen>
-  <dimen name="mdSecondaryActionBarSizeWithIcon">82dp</dimen>
+  <dimen name="mdActionBarSize">48dp</dimen>
+  <dimen name="mdSecondaryActionBarSize">42dp</dimen>
+  <dimen name="mdSecondaryActionBarSizeWithIcon">62dp</dimen>
 </resources>
