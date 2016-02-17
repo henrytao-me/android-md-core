@@ -55,4 +55,38 @@
     app:mdli_icon="@drawable/ic_blank_circle"
     app:mdli_title="Check out MdSubHeader style."
     app:mdli_type="single_line_icon_with_text" />
+
+  <TextView
+    android:text="Subheader"
+    style="@style/MdSubHeader.List" />
+
+  <me.henrytao.mdcore.widgets.MdListItem
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    app:mdli_divider_layout="@layout/mdli_divider_left"
+    app:mdli_icon="@drawable/ic_blank_circle"
+    app:mdli_title="Check out MdSubHeader style."
+    app:mdli_type="single_line_icon_with_text" />
+
+  <me.henrytao.mdcore.widgets.MdListItem
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    app:mdli_divider_layout="@layout/mdli_divider_left"
+    app:mdli_icon="@drawable/ic_blank_circle"
+    app:mdli_title="Check out MdSubHeader style."
+    app:mdli_type="single_line_icon_with_text" />
+
+  <me.henrytao.mdcore.widgets.MdListItem
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    app:mdli_divider_layout="@layout/mdli_divider_left"
+    app:mdli_icon="@drawable/ic_blank_circle"
+    app:mdli_title="Check out MdSubHeader style."
+    app:mdli_type="single_line_icon_with_text" />
 </LinearLayout>
