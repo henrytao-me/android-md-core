@@ -30,7 +30,7 @@ import me.henrytao.mdcore.utils.AlertDialogBuilder;
 import me.henrytao.mddemo.R;
 import me.henrytao.mddemo.utils.DialogUtils;
 
-public class DialogActivity extends BaseCollapsingToolbarActivity {
+public class DialogActivity extends BaseSimpleActivity {
 
   public static Intent newIntent(Activity activity) {
     return new Intent(activity, DialogActivity.class);

@@ -21,7 +21,7 @@ import android.content.Intent;
 
 import me.henrytao.mddemo.R;
 
-public class TypographyActivity extends BaseCollapsingToolbarActivity {
+public class TypographyActivity extends BaseSimpleActivity {
 
   public static Intent newIntent(Activity activity) {
     return new Intent(activity, TypographyActivity.class);

@@ -21,7 +21,7 @@ import android.content.Intent;
 
 import me.henrytao.mddemo.R;
 
-public class DividerActivity extends BaseCollapsingToolbarActivity {
+public class DividerActivity extends BaseSimpleActivity {
 
   public static Intent newIntent(Activity activity) {
     return new Intent(activity, DividerActivity.class);

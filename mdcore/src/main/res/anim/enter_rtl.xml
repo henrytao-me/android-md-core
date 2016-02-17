@@ -19,13 +19,8 @@
 
   <translate
     android:duration="@integer/config_activityDefaultDur"
-    android:fromXDelta="50%"
+    android:fromXDelta="100%"
     android:fromYDelta="0%"
     android:toXDelta="0%"
     android:toYDelta="0%" />
-
-  <alpha
-    android:duration="@integer/config_activityShortDur"
-    android:fromAlpha="0.0"
-    android:toAlpha="1.0" />
 </set>
