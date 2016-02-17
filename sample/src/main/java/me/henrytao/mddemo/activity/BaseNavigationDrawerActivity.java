@@ -204,7 +204,7 @@ public abstract class BaseNavigationDrawerActivity extends BaseActivity implemen
         intent = FabActivity.newIntent(this);
         break;
       case R.id.menu_card:
-        // TODO: add card activity
+        intent = CardActivity.newIntent(this);
         break;
       case R.id.menu_dialog:
         intent = DialogActivity.newIntent(this);
@@ -226,12 +226,12 @@ public abstract class BaseNavigationDrawerActivity extends BaseActivity implemen
         return;
       case R.id.menu_help_and_feedback:
         startActivity(InfoActivity.newIntent(this));
-        overridePendingTransition(R.anim.enter_rtl, android.R.anim.fade_out);
+        overridePendingTransition(R.anim.enter_rtl, R.anim.exit_rtl);
         return;
     }
     if (intent != null) {
       startActivity(intent);
-      overridePendingTransition(R.anim.enter_rtl, android.R.anim.fade_out);
+      overridePendingTransition(R.anim.enter_rtl, R.anim.exit_rtl);
     }
   }
 

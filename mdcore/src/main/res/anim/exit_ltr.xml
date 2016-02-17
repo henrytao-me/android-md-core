@@ -18,14 +18,14 @@
   android:shareInterpolator="false">
 
   <translate
-    android:duration="@integer/config_activityShortDur"
+    android:duration="@integer/config_activityDefaultDur"
     android:fromXDelta="0%"
     android:fromYDelta="0%"
-    android:toXDelta="50%"
+    android:toXDelta="100%"
     android:toYDelta="0%" />
 
   <alpha
-    android:duration="@integer/config_activityShortDur"
+    android:duration="@integer/config_activityDefaultDur"
     android:fromAlpha="1.0"
-    android:toAlpha="0.0" />
+    android:toAlpha="0.5" />
 </set>

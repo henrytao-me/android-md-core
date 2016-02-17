@@ -54,6 +54,7 @@
   <dimen name="mdIconPadding">12dp</dimen>
 
   <dimen name="mdLayoutSpacing">16dp</dimen>
+  <dimen name="mdLayoutSpacing_xs">4dp</dimen>
   <dimen name="mdLayoutSpacing_sm">8dp</dimen>
   <dimen name="mdLayoutSpacing_lg">32dp</dimen>
 

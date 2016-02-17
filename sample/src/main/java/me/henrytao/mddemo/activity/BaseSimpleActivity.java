@@ -50,7 +50,7 @@ public abstract class BaseSimpleActivity extends BaseActivity {
     } else {
       super.onBackPressed();
     }
-    overridePendingTransition(0, R.anim.exit_ltr);
+    overridePendingTransition(R.anim.enter_ltr, R.anim.exit_ltr);
   }
 
   @Override

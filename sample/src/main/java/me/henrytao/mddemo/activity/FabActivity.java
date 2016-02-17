@@ -17,12 +17,11 @@
 package me.henrytao.mddemo.activity;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 
 import me.henrytao.mddemo.R;
 
-public class FabActivity extends BaseCollapsingToolbarActivity {
+public class FabActivity extends BaseSimpleActivity {
 
   public static Intent newIntent(Activity activity) {
     return new Intent(activity, FabActivity.class);

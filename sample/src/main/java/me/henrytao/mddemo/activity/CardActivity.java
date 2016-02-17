@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 "Henry Tao <hi@henrytao.me>"
+ * Copyright 2016 "Henry Tao <hi@henrytao.me>"
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,14 +21,14 @@ import android.content.Intent;
 
 import me.henrytao.mddemo.R;
 
-public class TypographyActivity extends BaseSimpleActivity {
+public class CardActivity extends BaseSimpleActivity {
 
   public static Intent newIntent(Activity activity) {
-    return new Intent(activity, TypographyActivity.class);
+    return new Intent(activity, CardActivity.class);
   }
 
   @Override
   public int getLayoutId() {
-    return R.layout.activity_typography;
+    return R.layout.activity_card;
   }
 }

@@ -73,6 +73,9 @@
     <activity
       android:label="@string/title_activity_toolbar"
       android:name=".activity.ToolbarActivity"/>
+    <activity
+      android:label="@string/title_activity_cardview"
+      android:name=".activity.CardActivity"/>
   </application>
 
 </manifest>

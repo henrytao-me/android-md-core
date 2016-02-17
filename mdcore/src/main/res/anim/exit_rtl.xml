@@ -17,15 +17,12 @@
 <set xmlns:android="http://schemas.android.com/apk/res/android"
   android:shareInterpolator="false">
 
-  <translate
-    android:duration="@integer/config_activityShortDur"
-    android:fromXDelta="0%"
-    android:fromYDelta="0%"
-    android:toXDelta="-50%"
-    android:toYDelta="0%" />
-
-  <alpha
-    android:duration="@integer/config_activityShortDur"
-    android:fromAlpha="1.0"
-    android:toAlpha="0.0" />
+  <scale
+    android:duration="@integer/config_activityDefaultDur"
+    android:fromXScale="100%"
+    android:fromYScale="100%"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:toXScale="90%"
+    android:toYScale="90%" />
 </set>

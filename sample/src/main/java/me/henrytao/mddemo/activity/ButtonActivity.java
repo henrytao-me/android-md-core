@@ -31,7 +31,7 @@ import me.henrytao.mdcore.widgets.MdIconToggle;
 import me.henrytao.mddemo.R;
 import me.henrytao.mddemo.utils.DialogUtils;
 
-public class ButtonActivity extends BaseCollapsingToolbarActivity {
+public class ButtonActivity extends BaseSimpleActivity {
 
   public static Intent newIntent(Activity activity) {
     return new Intent(activity, ButtonActivity.class);
