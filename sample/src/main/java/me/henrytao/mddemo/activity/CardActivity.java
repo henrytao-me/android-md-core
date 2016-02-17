@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 "Henry Tao <hi@henrytao.me>"
+ * Copyright 2016 "Henry Tao <hi@henrytao.me>"
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,18 +16,19 @@
 
 package me.henrytao.mddemo.activity;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.os.Bundle;
 
-public class MainActivity extends BaseActivity {
+import me.henrytao.mddemo.R;
+
+public class CardActivity extends BaseSimpleActivity {
+
+  public static Intent newIntent(Activity activity) {
+    return new Intent(activity, CardActivity.class);
+  }
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    Intent intent = IntroductionActivity.newIntent(this);
-    intent = CardActivity.newIntent(this);
-    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-    startActivity(intent);
-    finish();
+  public int getLayoutId() {
+    return R.layout.activity_card;
   }
 }
