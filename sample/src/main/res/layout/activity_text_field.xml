@@ -32,24 +32,18 @@
 
   <FrameLayout
     android:layout_width="match_parent"
-    android:layout_height="72dp"
+    android:layout_height="wrap_content"
     android:background="@color/mdColor_red">
 
     <android.support.design.widget.TextInputLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
       android:layout_marginRight="16dp"
       android:background="@color/mdColor_green"
-      android:paddingTop="14dp">
+      style="@style/MdTextField.FloatingLabel">
 
       <EditText
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:background="@drawable/md_edit_text_background"
-        android:layout_marginRight="32dp"
-        android:paddingBottom="16dp"
         android:hint="Label text"
-        android:text="Input text" />
+        android:text="Input text"
+        style="@style/MdTextField.FloatingLabel.EditText" />
     </android.support.design.widget.TextInputLayout>
   </FrameLayout>
 </LinearLayout>
