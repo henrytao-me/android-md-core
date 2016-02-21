@@ -23,7 +23,6 @@ import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
-import android.support.v7.graphics.drawable.DrawableUtils;
 import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
 
