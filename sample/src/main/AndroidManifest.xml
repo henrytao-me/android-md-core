@@ -76,6 +76,8 @@
     <activity
       android:label="@string/title_activity_cardview"
       android:name=".activity.CardActivity" />
+    <activity
+      android:label="@string/title_activity_text_field"
+      android:name=".activity.TextFieldActivity" />
   </application>
-
 </manifest>

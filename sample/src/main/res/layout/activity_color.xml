@@ -19,7 +19,7 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:padding="@dimen/mdLayoutSpacing"
-  tools:context="me.henrytao.mddemo.activity.ColorActivity">
+  tools:context=".activity.ColorActivity">
 
   <TextView
     android:text="Check out color picker icon on top right corner of every screen. All elements in the app should be adpated to the theme."
