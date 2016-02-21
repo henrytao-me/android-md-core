@@ -25,7 +25,7 @@
     style="@style/MdTextField.FloatingLabel">
 
     <EditText
-      android:hint="Label text"
+      android:hint="Input hint text"
       android:text="Input text"
       style="@style/MdTextField.FloatingLabel.EditText" />
   </android.support.design.widget.TextInputLayout>
@@ -80,7 +80,7 @@
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
         android:hint="Input hint text"
-        style="@style/MdTextField.SingleLineTextField" />
+        style="@style/MdTextField.MultipleLineTextField" />
     </LinearLayout>
   </FrameLayout>
 </LinearLayout>
