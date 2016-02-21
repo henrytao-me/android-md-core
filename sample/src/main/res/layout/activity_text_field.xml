@@ -21,29 +21,66 @@
   style="@style/MdList">
 
   <android.support.design.widget.TextInputLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:background="@color/mdColor_blue"
+    style="@style/MdTextField.FloatingLabel">
 
     <EditText
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:hint="Sample" />
+      android:hint="Label text"
+      android:text="Input text"
+      style="@style/MdTextField.FloatingLabel.EditText" />
   </android.support.design.widget.TextInputLayout>
 
   <FrameLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/mdColor_red">
+    android:background="@color/mdColor_green">
 
-    <android.support.design.widget.TextInputLayout
-      android:layout_marginRight="16dp"
-      android:background="@color/mdColor_green"
-      style="@style/MdTextField.FloatingLabel">
+    <EditText
+      android:hint="Input hint text"
+      style="@style/MdTextField.SingleLineTextField" />
+  </FrameLayout>
+
+  <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mdColor_orange">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <me.henrytao.mdcore.widgets.MdIcon
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="12dp"
+        android:padding="12dp"
+        android:src="@drawable/ic_phone" />
 
       <EditText
-        android:hint="Label text"
-        android:text="Input text"
-        style="@style/MdTextField.FloatingLabel.EditText" />
-    </android.support.design.widget.TextInputLayout>
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:hint="Input hint text"
+        style="@style/MdTextField.SingleLineTextField" />
+    </LinearLayout>
+  </FrameLayout>
+
+  <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mdColor_yellow">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <EditText
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:hint="Input hint text"
+        style="@style/MdTextField.SingleLineTextField" />
+    </LinearLayout>
   </FrameLayout>
 </LinearLayout>

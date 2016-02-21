@@ -16,15 +16,19 @@
 
 <resources>
 
+  <style name="Base.MdEditText" parent="">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">48dp</item>
+    <item name="android:paddingBottom">16dp</item>
+  </style>
+
   <style name="MdTextField.FloatingLabel" parent="">
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">72dp</item>
     <item name="android:paddingTop">14dp</item>
   </style>
 
-  <style name="MdTextField.FloatingLabel.EditText" parent="">
-    <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">48dp</item>
-    <item name="android:paddingBottom">16dp</item>
-  </style>
+  <style name="MdTextField.FloatingLabel.EditText" parent="Base.MdEditText" />
+
+  <style name="MdTextField.SingleLineTextField" parent="Base.MdEditText" />
 </resources>
