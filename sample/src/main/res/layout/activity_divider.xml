@@ -20,7 +20,7 @@
   android:layout_height="match_parent"
   android:orientation="vertical"
   android:padding="@dimen/mdLayoutSpacing"
-  tools:context="me.henrytao.mddemo.activity.DividerActivity">
+  tools:context=".activity.DividerActivity">
 
   <View
     android:layout_marginBottom="@dimen/mdLayoutSpacing"

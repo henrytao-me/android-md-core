@@ -152,4 +152,5 @@
   <string name="title_activity_subheader">Subheader</string>
   <string name="title_activity_toolbar">Toolbar</string>
   <string name="title_activity_cardview">CardView</string>
+  <string name="title_activity_text_field">TextField</string>
 </resources>

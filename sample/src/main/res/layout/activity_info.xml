@@ -15,8 +15,10 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
   android:gravity="center"
   android:padding="@dimen/mdLayoutSpacing"
+  tools:context=".activity.InfoActivity"
   style="@style/MdList">
 
   <TextView

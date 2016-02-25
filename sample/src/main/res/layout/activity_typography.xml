@@ -19,7 +19,7 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:padding="@dimen/mdLayoutSpacing"
-  tools:context="me.henrytao.mddemo.activity.TypographyActivity">
+  tools:context=".activity.TypographyActivity">
 
   <TextView
     android:text="Check out predefined style MdText and dimension mdFontSize."
