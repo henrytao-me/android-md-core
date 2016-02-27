@@ -16,11 +16,8 @@
 
 package me.henrytao.mddemo;
 
-import com.crashlytics.android.Crashlytics;
-
 import android.app.Application;
 
-import io.fabric.sdk.android.Fabric;
 import me.henrytao.mddemo.utils.SharePreferenceUtils;
 
 /**
@@ -41,7 +38,6 @@ public class App extends Application {
   @Override
   public void onCreate() {
     super.onCreate();
-    Fabric.with(this, new Crashlytics());
     SharePreferenceUtils.init(this);
   }
 }
