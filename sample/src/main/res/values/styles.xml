@@ -16,26 +16,6 @@
 
 <resources>
 
-  <style name="BottomSheet.StyleDialog.Light" parent="BottomSheet.Dialog">
-    <item name="android:backgroundDimAmount">0.5</item>
-    <item name="android:windowAnimationStyle">@style/BottomSheet.Animation</item>
-    <item name="android:textColorPrimary">@color/mdTextColorPrimary_light</item>
-    <item name="android:textColorSecondary">@color/mdTextColorSecondary_light</item>
-    <item name="android:textColorHint">@color/mdTextColorHint_light</item>
-    <item name="bs_dialogBackground">@color/mdColor_white_light</item>
-    <item name="bs_dividerColor">@color/mdColor_white_light</item>
-  </style>
-
-  <style name="BottomSheet.StyleDialog.Dark" parent="BottomSheet.Dialog">
-    <item name="android:backgroundDimAmount">0.5</item>
-    <item name="android:windowAnimationStyle">@style/BottomSheet.Animation</item>
-    <item name="android:textColorPrimary">@color/mdTextColorPrimary_dark</item>
-    <item name="android:textColorSecondary">@color/mdTextColorSecondary_dark</item>
-    <item name="android:textColorHint">@color/mdTextColorHint_dark</item>
-    <item name="bs_dialogBackground">@color/mdColor_black_light</item>
-    <item name="bs_dividerColor">@color/mdColor_black_light</item>
-  </style>
-
   <style name="AppStyle.Grid" parent="">
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">wrap_content</item>
@@ -47,9 +27,5 @@
     <item name="android:layout_height">wrap_content</item>
     <item name="android:layout_weight">1</item>
     <item name="android:gravity">center</item>
-  </style>
-
-  <style name="a" parent="Widget.Design.TextInputLayout">
-
   </style>
 </resources>

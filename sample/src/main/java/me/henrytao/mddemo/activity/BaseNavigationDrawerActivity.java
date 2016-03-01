@@ -16,8 +16,6 @@
 
 package me.henrytao.mddemo.activity;
 
-import com.cocosw.bottomsheet.BottomSheet;
-
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -40,7 +38,6 @@ import android.widget.Toast;
 
 import me.henrytao.mdcore.utils.ResourceUtils;
 import me.henrytao.mddemo.R;
-import me.henrytao.mddemo.utils.ThemeUtils;
 import me.henrytao.smoothappbarlayout.SmoothCollapsingToolbarLayout;
 
 /**
@@ -239,12 +236,12 @@ public abstract class BaseNavigationDrawerActivity extends BaseActivity implemen
   }
 
   protected void showThemePicker() {
-    new BottomSheet.Builder(this)
-        .title("Pick your favorite color")
-        .grid()
-        .sheet(R.menu.menu_theme_picker)
-        .listener((dialog, which) -> {
-          ThemeUtils.changeToTheme(this, which);
-        }).show();
+    //new BottomSheet.Builder(this)
+    //    .title("Pick your favorite color")
+    //    .grid()
+    //    .sheet(R.menu.menu_theme_picker)
+    //    .listener((dialog, which) -> {
+    //      ThemeUtils.changeToTheme(this, which);
+    //    }).show();
   }
 }

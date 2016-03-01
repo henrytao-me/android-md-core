@@ -20,13 +20,9 @@
   <!-- Base Theme -->
   <!-- ////////////////////////////////////////////////////////////////////////// -->
 
-  <style name="Base.AppTheme.Light" parent="MdTheme.Light">
-    <item name="bottomSheetStyle">@style/BottomSheet.StyleDialog.Light</item>
-  </style>
+  <style name="Base.AppTheme.Light" parent="MdTheme.Light" />
 
-  <style name="Base.AppTheme.Dark" parent="MdTheme.Dark">
-    <item name="bottomSheetStyle">@style/BottomSheet.StyleDialog.Dark</item>
-  </style>
+  <style name="Base.AppTheme.Dark" parent="MdTheme.Dark" />
 
   <!-- ////////////////////////////////////////////////////////////////////////// -->
   <!-- Default Theme -->

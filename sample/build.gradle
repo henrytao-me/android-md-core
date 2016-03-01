@@ -2,6 +2,17 @@ apply plugin: "com.android.application"
 apply plugin: "me.tatarka.retrolambda"
 
 android {
+  // Gradle Plugin 1.5: http://android-developers.blogspot.com/2016/02/android-support-library-232.html
+  android {
+    defaultConfig {
+      generatedDensities = []
+    }
+    // This is handled for you by the 2.0+ Gradle Plugin
+    aaptOptions {
+      additionalParameters "--no-version-vectors"
+    }
+  }
+
   compileOptions {
     sourceCompatibility rootProject.ext.java.sourceCompatibility
     targetCompatibility rootProject.ext.java.targetCompatibility
@@ -52,8 +63,6 @@ dependencies {
   compile(project(":mdcore")) {
     exclude group: "com.android.support"
   }
-
-  compile rootProject.ext.dependencies["com.cocosw:bottomsheet"]
 
   compile rootProject.ext.dependencies["com.jakewharton:butterknife"]
 
