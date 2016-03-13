@@ -63,6 +63,7 @@ public class DialogUtils {
   public static AlertDialog showInfoDialog(Context context, CharSequence message, DialogInterface.OnClickListener onClickListener,
       DialogInterface.OnDismissListener onDismissListener) {
     AlertDialog alertDialog = new AlertDialogBuilder(context)
+        .setTitle("sample")
         .setMessage(message)
         .setPositiveButton(R.string.text_ok, onClickListener)
         .setOnDismissListener(onDismissListener)
