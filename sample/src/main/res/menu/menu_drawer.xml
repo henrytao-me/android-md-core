@@ -112,10 +112,10 @@
   <group android:id="@+id/group_components">
     <item android:title="Components">
       <menu>
-        <item
-          android:id="@+id/menu_bottom_sheet"
-          android:icon="@drawable/ic_blank_transparent"
-          android:title="Bottom sheets" />
+        <!--<item-->
+        <!--android:id="@+id/menu_bottom_sheet"-->
+        <!--android:icon="@drawable/ic_blank_transparent"-->
+        <!--android:title="Bottom sheets" />-->
         <item
           android:id="@+id/menu_button"
           android:icon="@drawable/ic_blank_transparent"

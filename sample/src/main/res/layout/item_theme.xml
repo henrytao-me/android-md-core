@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~ Copyright 2016 "Henry Tao <hi@henrytao.me>"
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -13,15 +13,25 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:tools="http://schemas.android.com/tools"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:padding="@dimen/mdLayoutSpacing"
-  tools:context="me.henrytao.mddemo.activity.BottomSheetActivity">
+  android:orientation="vertical"
+  android:background="?attr/selectableItemBackground"
+  android:gravity="center"
+  android:padding="@dimen/mdLayoutSpacing">
+
+  <ImageView
+    android:id="@+id/icon"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
 
   <TextView
-    android:autoLink="all"
-    android:text="Google hasn't supported Bottom Sheet officially. In the meantime, check out this library https://github.com/soarcn/BottomSheet"
+    android:id="@+id/title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/mdLayoutSpacing_sm"
+    android:gravity="center"
     style="@style/MdText.Body1" />
-</RelativeLayout>
+</LinearLayout>

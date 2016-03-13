@@ -28,7 +28,6 @@ import android.widget.TextView;
 
 import me.henrytao.mdcore.utils.ResourceUtils;
 import me.henrytao.mddemo.R;
-import me.henrytao.mddemo.utils.ThemeUtils;
 import me.henrytao.smoothappbarlayout.SmoothCollapsingToolbarLayout;
 
 /**

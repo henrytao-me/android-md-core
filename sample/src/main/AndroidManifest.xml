@@ -59,9 +59,6 @@
       android:label="@string/title_activity_typography"
       android:name=".activity.TypographyActivity" />
     <activity
-      android:label="@string/title_activity_bottom_sheet"
-      android:name=".activity.BottomSheetActivity" />
-    <activity
       android:label="@string/title_activity_dialog"
       android:name=".activity.DialogActivity" />
     <activity
