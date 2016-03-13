@@ -17,7 +17,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
-  android:paddingBottom="@dimen/mdLayoutSpacing_lg"
   tools:context=".activity.TextFieldActivity"
   style="@style/MdList">
 
@@ -118,8 +117,7 @@
     android:layout_height="wrap_content"
     android:background="@color/mdColor_yellow">
 
-    <android.support.design.widget.TextInputLayout
-      style="@style/MdTextField.FullTextWithCounter">
+    <android.support.design.widget.TextInputLayout style="@style/MdTextField.FullTextWithCounter">
 
       <EditText
         android:hint="Input hint text"

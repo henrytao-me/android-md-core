@@ -21,11 +21,11 @@
   <!-- ////////////////////////////////////////////////////////////////////////// -->
 
   <style name="Base.AppTheme.Light" parent="MdTheme.Light">
-    <item name="bottomSheetStyle">@style/BottomSheet.StyleDialog.Light</item>
+    <item name="bottomSheetDialogTheme">@style/Theme.Design.Light.BottomSheetDialog</item>
   </style>
 
   <style name="Base.AppTheme.Dark" parent="MdTheme.Dark">
-    <item name="bottomSheetStyle">@style/BottomSheet.StyleDialog.Dark</item>
+    <item name="bottomSheetDialogTheme">@style/Theme.Design.BottomSheetDialog</item>
   </style>
 
   <!-- ////////////////////////////////////////////////////////////////////////// -->

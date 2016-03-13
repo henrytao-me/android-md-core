@@ -16,19 +16,20 @@
 
 package me.henrytao.mddemo.activity;
 
-import com.cocosw.bottomsheet.BottomSheet;
-
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.LayoutRes;
+import android.support.design.widget.BottomSheetDialog;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -40,6 +41,7 @@ import android.widget.Toast;
 
 import me.henrytao.mdcore.utils.ResourceUtils;
 import me.henrytao.mddemo.R;
+import me.henrytao.mddemo.adapter.ThemeAdapter;
 import me.henrytao.mddemo.utils.ThemeUtils;
 import me.henrytao.smoothappbarlayout.SmoothCollapsingToolbarLayout;
 
@@ -194,9 +196,6 @@ public abstract class BaseNavigationDrawerActivity extends BaseActivity implemen
       case R.id.menu_typography:
         intent = TypographyActivity.newIntent(this);
         break;
-      case R.id.menu_bottom_sheet:
-        intent = BottomSheetActivity.newIntent(this);
-        break;
       case R.id.menu_button:
         intent = ButtonActivity.newIntent(this);
         break;
@@ -239,12 +238,12 @@ public abstract class BaseNavigationDrawerActivity extends BaseActivity implemen
   }
 
   protected void showThemePicker() {
-    new BottomSheet.Builder(this)
-        .title("Pick your favorite color")
-        .grid()
-        .sheet(R.menu.menu_theme_picker)
-        .listener((dialog, which) -> {
-          ThemeUtils.changeToTheme(this, which);
-        }).show();
+    BottomSheetDialog dialog = new BottomSheetDialog(this);
+    View view = getLayoutInflater().inflate(R.layout.custom_color_dialog, null, false);
+    RecyclerView recyclerView = (RecyclerView) view.findViewById(android.R.id.list);
+    recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
+    recyclerView.setAdapter(new ThemeAdapter((v, id) -> ThemeUtils.changeToTheme(this, id)));
+    dialog.setContentView(view);
+    dialog.show();
   }
 }

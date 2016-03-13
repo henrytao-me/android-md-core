@@ -16,8 +16,6 @@
 
 package me.henrytao.mddemo.activity;
 
-import com.cocosw.bottomsheet.BottomSheet;
-
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.v7.widget.Toolbar;
@@ -28,7 +26,6 @@ import android.view.ViewGroup;
 
 import me.henrytao.mdcore.utils.ResourceUtils;
 import me.henrytao.mddemo.R;
-import me.henrytao.mddemo.utils.ThemeUtils;
 
 /**
  * Created by henrytao on 10/15/15.
@@ -88,12 +85,12 @@ public abstract class BaseSimpleActivity extends BaseActivity {
   }
 
   protected void showThemePicker() {
-    new BottomSheet.Builder(this)
-        .title("Pick your favorite color")
-        .grid()
-        .sheet(R.menu.menu_theme_picker)
-        .listener((dialog, which) -> {
-          ThemeUtils.changeToTheme(this, which);
-        }).show();
+    //new BottomSheet.Builder(this)
+    //    .title("Pick your favorite color")
+    //    .grid()
+    //    .sheet(R.menu.menu_theme_picker)
+    //    .listener((dialog, which) -> {
+    //      ThemeUtils.changeToTheme(this, which);
+    //    }).show();
   }
 }
