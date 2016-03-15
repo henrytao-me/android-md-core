@@ -18,16 +18,22 @@ package me.henrytao.mddemo.activity;
 
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
+import android.support.design.widget.BottomSheetDialog;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import me.henrytao.mdcore.utils.ResourceUtils;
 import me.henrytao.mddemo.R;
+import me.henrytao.mddemo.adapter.ThemeAdapter;
+import me.henrytao.mddemo.utils.ThemeUtils;
 import me.henrytao.smoothappbarlayout.SmoothCollapsingToolbarLayout;
 
 /**
@@ -111,12 +117,12 @@ public abstract class BaseCollapsingToolbarActivity extends BaseActivity {
   }
 
   protected void showThemePicker() {
-    //new BottomSheet.Builder(this)
-    //    .title("Pick your favorite color")
-    //    .grid()
-    //    .sheet(R.menu.menu_theme_picker)
-    //    .listener((dialog, which) -> {
-    //      ThemeUtils.changeToTheme(this, which);
-    //    }).show();
+    BottomSheetDialog dialog = new BottomSheetDialog(this);
+    View view = getLayoutInflater().inflate(R.layout.custom_color_dialog, null, false);
+    RecyclerView recyclerView = (RecyclerView) view.findViewById(android.R.id.list);
+    recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
+    recyclerView.setAdapter(new ThemeAdapter((v, id) -> ThemeUtils.changeToTheme(this, id)));
+    dialog.setContentView(view);
+    dialog.show();
   }
 }
