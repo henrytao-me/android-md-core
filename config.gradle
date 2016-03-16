@@ -27,7 +27,7 @@ ext {
       minSdkVersion    : 8,
       targetSdkVersion : 23,
       versionCode      : 8,
-      versionName      : "2.0.3"
+      versionName      : "23.1.0"
   ]
 
   sample = [
