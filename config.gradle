@@ -27,7 +27,7 @@ ext {
       minSdkVersion    : 8,
       targetSdkVersion : 23,
       versionCode      : 8,
-      versionName      : "23.1.0"
+      versionName      : "23.1.1"
   ]
 
   sample = [
@@ -61,10 +61,10 @@ ext {
   dependencies = [
       "com.crashlytics.sdk.android:crashlytics": "com.crashlytics.sdk.android:crashlytics:2.5.2@aar",
 
-      "com.android.support:design"             : "com.android.support:design:23.1.0",
-      "com.android.support:appcompat-v7"       : "com.android.support:appcompat-v7:23.1.0",
-      "com.android.support:cardview-v7"        : "com.android.support:cardview-v7:23.1.0",
-      "com.android.support:recyclerview-v7"    : "com.android.support:recyclerview-v7:23.1.0",
+      "com.android.support:design"             : "com.android.support:design:23.1.1",
+      "com.android.support:appcompat-v7"       : "com.android.support:appcompat-v7:23.1.1",
+      "com.android.support:cardview-v7"        : "com.android.support:cardview-v7:23.1.1",
+      "com.android.support:recyclerview-v7"    : "com.android.support:recyclerview-v7:23.1.1",
 
       "me.henrytao:recyclerview"               : "me.henrytao:recyclerview:1.3.0",
       "me.henrytao:smooth-app-bar-layout"      : "me.henrytao:smooth-app-bar-layout:0.2.0",
