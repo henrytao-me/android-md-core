@@ -14,7 +14,8 @@ I am working hard to predefine element styles as many as I can. If you find that
 compile "me.henrytao:mdcore:<latest-version>"
 ```
 
-`android-md-core` is deployed to `jCenter`. Make sure you have `jcenter()` in your project gradle.
+- `android-md-core` is an UI library and pretty much depended on AppCompat and Support Design Library. So that, versioning is quite the same with those libraries from Google.
+- `android-md-core` is deployed to `jCenter`. Make sure you have `jcenter()` in your project gradle.
 
 
 ## Demo
