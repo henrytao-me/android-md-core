@@ -123,8 +123,7 @@
         <item
           android:id="@+id/menu_fab"
           android:icon="@drawable/ic_blank_transparent"
-          android:title="Buttons: Floating Action Button"
-          android:visible="false" />
+          android:title="Buttons: Floating Action Button" />
         <item
           android:id="@+id/menu_card"
           android:icon="@drawable/ic_blank_transparent"

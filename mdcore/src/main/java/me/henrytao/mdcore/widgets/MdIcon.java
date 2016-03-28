@@ -16,8 +16,6 @@
 
 package me.henrytao.mdcore.widgets;
 
-import org.xmlpull.v1.XmlPullParserException;
-
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
@@ -26,8 +24,6 @@ import android.graphics.drawable.Drawable;
 import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
 
-import java.io.IOException;
-
 import me.henrytao.mdcore.R;
 import me.henrytao.mdcore.utils.ResourceUtils;
 
@@ -35,8 +31,6 @@ import me.henrytao.mdcore.utils.ResourceUtils;
  * Created by henrytao on 11/1/15.
  */
 public class MdIcon extends AppCompatImageView {
-
-  private int mImageTintId;
 
   private ColorStateList mImageTintList;
 
@@ -89,26 +83,20 @@ public class MdIcon extends AppCompatImageView {
     Context context = getContext();
 
     boolean enabled = true;
+    ColorStateList imageTintList;
     TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.MdIcon, defStyleAttr, 0);
+    enabled = a.getBoolean(R.styleable.MdIcon_enabled, enabled);
+    mImageTintMode = ResourceUtils.parseTintMode(a.getInt(R.styleable.MdIcon_tintMode, -1), PorterDuff.Mode.SRC_IN);
     try {
-      enabled = a.getBoolean(R.styleable.MdIcon_enabled, enabled);
-      mImageTintId = a.getResourceId(R.styleable.MdIcon_tint, 0);
-      mImageTintMode = ResourceUtils.parseTintMode(a.getInt(R.styleable.MdIcon_tintMode, -1), PorterDuff.Mode.SRC_IN);
-    } finally {
-      a.recycle();
+      imageTintList = ResourceUtils.createColorStateListFromResId(context, a.getResourceId(R.styleable.MdIcon_tint, 0));
+    } catch (Exception ignore) {
+      imageTintList = a.getColorStateList(R.styleable.MdIcon_tint);
     }
-
-    if (mImageTintId > 0) {
-      try {
-        mImageTintList = ResourceUtils.createColorStateListFromResId(context, mImageTintId);
-      } catch (XmlPullParserException e) {
-        e.printStackTrace();
-      } catch (IOException e) {
-        e.printStackTrace();
-      }
-    }
-
+    a.recycle();
     setEnabled(enabled);
+    if (imageTintList != null) {
+      setImageTintList(imageTintList);
+    }
   }
 
   private void invalidateImageTint() {

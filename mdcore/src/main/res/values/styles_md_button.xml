@@ -33,30 +33,18 @@
   <style name="MdButton.Colored" parent="Widget.AppCompat.Button.Colored">
     <item name="android:layout_width">wrap_content</item>
     <item name="android:layout_height">wrap_content</item>
-    <item name="android:textAppearance">@style/Base.MdButton.Colored.TextAppearance</item>
+    <item name="android:textColor">@color/md_button_colored_text_color</item>
   </style>
 
   <style name="MdButton.Borderless.Colored" parent="Widget.AppCompat.Button.Borderless.Colored">
     <item name="android:layout_width">wrap_content</item>
     <item name="android:layout_height">wrap_content</item>
-    <item name="android:textAppearance">@style/Base.MdButton.Borderless.Colored.TextAppearance</item>
+    <item name="android:textColor">@color/md_button_borderless_colored_text_color</item>
   </style>
 
   <style name="MdButton.Small" parent="Widget.AppCompat.Button.Small">
     <item name="android:layout_width">wrap_content</item>
     <item name="android:layout_height">wrap_content</item>
     <item name="android:minHeight">40dp</item>
-  </style>
-
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-  <!-- Base -->
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-
-  <style name="Base.MdButton.Colored.TextAppearance" parent="MdText.Button">
-    <item name="android:textColor">@color/md_button_colored_text_color</item>
-  </style>
-
-  <style name="Base.MdButton.Borderless.Colored.TextAppearance" parent="MdText.Button">
-    <item name="android:textColor">@color/md_button_borderless_colored_text_color</item>
   </style>
 </resources>
