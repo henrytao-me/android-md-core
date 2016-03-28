@@ -53,6 +53,9 @@ import me.henrytao.mdcore.R;
  */
 public class ResourceUtils {
 
+  /**
+   * A temporary fix for android.content.res.ColorStateList.inflate
+   */
   public static ColorStateList createColorStateListFromResId(Context context, @XmlRes int resId)
       throws IOException, XmlPullParserException {
     XmlResourceParser parser = context.getResources().getXml(resId);

@@ -16,15 +16,12 @@
 
 package me.henrytao.mdcore.widgets;
 
-import org.xmlpull.v1.XmlPullParserException;
-
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
-import android.os.Build;
 import android.support.v7.widget.AppCompatButton;
 import android.util.AttributeSet;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -64,10 +61,6 @@ public class MdButton extends AppCompatButton {
     return defStyleAttr;
   }
 
-  protected int mType;
-
-  private int mTextColorId;
-
   public MdButton(Context context) {
     this(context, null);
   }
@@ -84,24 +77,16 @@ public class MdButton extends AppCompatButton {
   protected void initFromAttributes(AttributeSet attrs, int defStyleAttr) {
     Context context = getContext();
 
-    TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.MdButton, defStyleAttr, 0);
+    ColorStateList textColor;
+    TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.TextAppearance, defStyleAttr, 0);
     try {
-      mType = a.getInteger(R.styleable.MdButton_mdb_type, DEFAULT_TYPE);
-      mTextColorId = a.getResourceId(R.styleable.TextAppearance_android_textColor, 0);
-    } finally {
-      a.recycle();
+      textColor = ResourceUtils.createColorStateListFromResId(context, a.getResourceId(R.styleable.TextAppearance_android_textColor, 0));
+    } catch (Exception ignore) {
+      textColor = a.getColorStateList(R.styleable.TextAppearance_android_textColor);
     }
-
-    if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
-      if (mTextColorId > 0) {
-        try {
-          setTextColor(ResourceUtils.createColorStateListFromResId(context, mTextColorId));
-        } catch (XmlPullParserException e) {
-          e.printStackTrace();
-        } catch (IOException e) {
-          e.printStackTrace();
-        }
-      }
+    a.recycle();
+    if (textColor != null) {
+      setTextColor(textColor);
     }
   }
 }
