@@ -147,6 +147,8 @@
     <item name="MdButtonBorderlessStyle">@style/MdButton.Borderless</item>
     <item name="MdButtonBorderlessColoredStyle">@style/MdButton.Borderless.Colored</item>
 
+    <item name="MdFloatingActionButtonStyle">@style/MdFloatingActionButton</item>
+
     <item name="mdIconColor_primaryPalette">@color/md_icon_color_dark</item>
     <item name="mdIconColor_accentPalette">@color/md_icon_color_dark</item>
     <item name="mdIconColor_warnPalette">@color/md_icon_color_dark</item>

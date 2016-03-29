@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~ Copyright 2016 "Henry Tao <hi@henrytao.me>"
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -16,9 +16,9 @@
 
 <resources>
 
-  <style name="MdIcon" parent="">
+  <style name="MdFloatingActionButton" parent="Widget.Design.FloatingActionButton">
     <item name="android:layout_width">wrap_content</item>
     <item name="android:layout_height">wrap_content</item>
-    <item name="tint">?attr/mdIconColor_backgroundPalette</item>
+    <item name="tint">?attr/mdIconColor_accentPalette</item>
   </style>
 </resources>
