@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 "Henry Tao <hi@henrytao.me>"
+ * Copyright 2016 "Henry Tao <hi@henrytao.me>"
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,17 +16,19 @@
 
 package me.henrytao.mddemo.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 
+import me.henrytao.mddemo.R;
+
+/**
+ * Created by henrytao on 4/26/16.
+ */
 public class MainActivity extends BaseActivity {
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
+  protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    Intent intent = IntroductionActivity.newIntent(this);
-    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-    startActivity(intent);
-    finish();
+    setContentView(R.layout.activity_main);
   }
 }

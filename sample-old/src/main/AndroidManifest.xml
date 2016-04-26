@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="me.henrytao.mddemo">
+
+  <uses-permission android:name="com.android.vending.BILLING" />
+  <uses-permission android:name="android.permission.INTERNET" />
+
+  <application
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:name=".App"
+    android:theme="@style/AppTheme">
+    <activity
+      android:label="@string/app_name"
+      android:name=".activity.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:label="@string/title_activity_info"
+      android:name=".activity.InfoActivity" />
+    <activity
+      android:label="@string/title_activity_list"
+      android:name=".activity.ListActivity" />
+    <activity
+      android:label="@string/title_activity_introduction"
+      android:name=".activity.IntroductionActivity" />
+    <activity
+      android:label="@string/title_activity_button"
+      android:name=".activity.ButtonActivity" />
+    <activity
+      android:label="@string/title_activity_fab"
+      android:name=".activity.FabActivity" />
+    <activity
+      android:label="@string/title_activity_icon"
+      android:name=".activity.IconActivity" />
+    <activity
+      android:label="@string/title_activity_color"
+      android:name=".activity.ColorActivity" />
+    <activity
+      android:label="@string/title_activity_typography"
+      android:name=".activity.TypographyActivity" />
+    <activity
+      android:label="@string/title_activity_dialog"
+      android:name=".activity.DialogActivity" />
+    <activity
+      android:label="@string/title_activity_divider"
+      android:name=".activity.DividerActivity" />
+    <activity
+      android:label="@string/title_activity_subheader"
+      android:name=".activity.SubheaderActivity" />
+    <activity
+      android:label="@string/title_activity_toolbar"
+      android:name=".activity.ToolbarActivity" />
+    <activity
+      android:label="@string/title_activity_cardview"
+      android:name=".activity.CardActivity" />
+    <activity
+      android:label="@string/title_activity_text_field"
+      android:name=".activity.TextFieldActivity" />
+  </application>
+</manifest>

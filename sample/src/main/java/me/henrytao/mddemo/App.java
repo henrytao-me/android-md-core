@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 "Henry Tao <hi@henrytao.me>"
+ * Copyright 2016 "Henry Tao <hi@henrytao.me>"
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,26 +18,13 @@ package me.henrytao.mddemo;
 
 import android.app.Application;
 
-import me.henrytao.mddemo.utils.SharePreferenceUtils;
-
 /**
- * Created by henrytao on 10/16/15.
+ * Created by henrytao on 4/26/16.
  */
 public class App extends Application {
-
-  private static App sInstance;
-
-  public static App getInstance() {
-    return sInstance;
-  }
-
-  public App() {
-    sInstance = this;
-  }
 
   @Override
   public void onCreate() {
     super.onCreate();
-    SharePreferenceUtils.init(this);
   }
 }

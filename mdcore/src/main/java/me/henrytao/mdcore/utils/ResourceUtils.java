@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 "Henry Tao <hi@henrytao.me>"
+ * Copyright 2016 "Henry Tao <hi@henrytao.me>"
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,8 +45,6 @@ import android.view.WindowManager;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import me.henrytao.mdcore.R;
 
 /**
  * Created by henrytao on 10/10/15.
@@ -248,20 +246,20 @@ public class ResourceUtils {
   public static Drawable supportDrawableTint(Context context, Drawable drawable, Palette palette) {
     try {
       int resId = 0;
-      switch (palette) {
-        case PRIMARY:
-          resId = ResourceUtils.getResourceIdFromAttribute(context, R.attr.mdIconColor_primaryPalette);
-          break;
-        case ACCENT:
-          resId = ResourceUtils.getResourceIdFromAttribute(context, R.attr.mdIconColor_accentPalette);
-          break;
-        case WARN:
-          resId = ResourceUtils.getResourceIdFromAttribute(context, R.attr.mdIconColor_warnPalette);
-          break;
-        case BACKGROUND:
-          resId = ResourceUtils.getResourceIdFromAttribute(context, R.attr.mdIconColor_backgroundPalette);
-          break;
-      }
+      //switch (palette) {
+      //  case PRIMARY:
+      //    resId = ResourceUtils.getResourceIdFromAttribute(context, R.attr.mdIconColor_primaryPalette);
+      //    break;
+      //  case ACCENT:
+      //    resId = ResourceUtils.getResourceIdFromAttribute(context, R.attr.mdIconColor_accentPalette);
+      //    break;
+      //  case WARN:
+      //    resId = ResourceUtils.getResourceIdFromAttribute(context, R.attr.mdIconColor_warnPalette);
+      //    break;
+      //  case BACKGROUND:
+      //    resId = ResourceUtils.getResourceIdFromAttribute(context, R.attr.mdIconColor_backgroundPalette);
+      //    break;
+      //}
       return ResourceUtils.createDrawableTint(drawable, null, createColorStateListFromResId(context, resId), null);
     } catch (IOException e) {
       e.printStackTrace();

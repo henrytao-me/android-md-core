@@ -1,1 +1,1 @@
-include ':sample', ':mdcore'
+include ':sample-old', ':mdcore-old', ':mdcore', ':sample'

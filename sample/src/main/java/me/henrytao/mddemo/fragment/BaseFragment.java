@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 "Henry Tao <hi@henrytao.me>"
+ * Copyright 2016 "Henry Tao <hi@henrytao.me>"
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,8 +19,8 @@ package me.henrytao.mddemo.fragment;
 import android.support.v4.app.Fragment;
 
 /**
- * Created by henrytao on 10/14/15.
+ * Created by henrytao on 4/26/16.
  */
-public class BaseFragment extends Fragment {
+public abstract class BaseFragment extends Fragment {
 
 }
