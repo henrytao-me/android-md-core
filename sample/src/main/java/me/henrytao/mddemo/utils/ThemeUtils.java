@@ -36,27 +36,27 @@ public class ThemeUtils {
   private static Map<Integer, Integer> sThemes = new HashMap<>();
 
   static {
-    //sThemes.put(R.id.action_theme_red, R.style.AppTheme_Red);
-    //sThemes.put(R.id.action_theme_pink, R.style.AppTheme_Pink);
-    //sThemes.put(R.id.action_theme_purple, R.style.AppTheme_Purple);
-    //sThemes.put(R.id.action_theme_deep_purple, R.style.AppTheme_DeepPurple);
-    //sThemes.put(R.id.action_theme_indigo, R.style.AppTheme_Indigo);
-    //sThemes.put(R.id.action_theme_blue, R.style.AppTheme_Blue);
-    //sThemes.put(R.id.action_theme_light_blue, R.style.AppTheme_LightBlue);
-    //sThemes.put(R.id.action_theme_cyan, R.style.AppTheme_Cyan);
-    //sThemes.put(R.id.action_theme_teal, R.style.AppTheme_Teal);
-    //sThemes.put(R.id.action_theme_green, R.style.AppTheme_Green);
-    //sThemes.put(R.id.action_theme_light_green, R.style.AppTheme_LightGreen);
-    //sThemes.put(R.id.action_theme_lime, R.style.AppTheme_Lime);
-    //sThemes.put(R.id.action_theme_yellow, R.style.AppTheme_Yellow);
-    //sThemes.put(R.id.action_theme_amber, R.style.AppTheme_Amber);
-    //sThemes.put(R.id.action_theme_orange, R.style.AppTheme_Orange);
-    //sThemes.put(R.id.action_theme_deep_orange, R.style.AppTheme_DeepOrange);
-    //sThemes.put(R.id.action_theme_brown, R.style.AppTheme_Brown);
-    //sThemes.put(R.id.action_theme_grey, R.style.AppTheme_Grey);
-    //sThemes.put(R.id.action_theme_blue_grey, R.style.AppTheme_BlueGrey);
-    //sThemes.put(R.id.action_theme_white, R.style.AppTheme_White);
-    //sThemes.put(R.id.action_theme_black, R.style.AppTheme_Black);
+    sThemes.put(R.id.action_theme_red, R.style.AppTheme_Red);
+    sThemes.put(R.id.action_theme_pink, R.style.AppTheme_Pink);
+    sThemes.put(R.id.action_theme_purple, R.style.AppTheme_Purple);
+    sThemes.put(R.id.action_theme_deep_purple, R.style.AppTheme_DeepPurple);
+    sThemes.put(R.id.action_theme_indigo, R.style.AppTheme_Indigo);
+    sThemes.put(R.id.action_theme_blue, R.style.AppTheme_Blue);
+    sThemes.put(R.id.action_theme_light_blue, R.style.AppTheme_LightBlue);
+    sThemes.put(R.id.action_theme_cyan, R.style.AppTheme_Cyan);
+    sThemes.put(R.id.action_theme_teal, R.style.AppTheme_Teal);
+    sThemes.put(R.id.action_theme_green, R.style.AppTheme_Green);
+    sThemes.put(R.id.action_theme_light_green, R.style.AppTheme_LightGreen);
+    sThemes.put(R.id.action_theme_lime, R.style.AppTheme_Lime);
+    sThemes.put(R.id.action_theme_yellow, R.style.AppTheme_Yellow);
+    sThemes.put(R.id.action_theme_amber, R.style.AppTheme_Amber);
+    sThemes.put(R.id.action_theme_orange, R.style.AppTheme_Orange);
+    sThemes.put(R.id.action_theme_deep_orange, R.style.AppTheme_DeepOrange);
+    sThemes.put(R.id.action_theme_brown, R.style.AppTheme_Brown);
+    sThemes.put(R.id.action_theme_grey, R.style.AppTheme_Grey);
+    sThemes.put(R.id.action_theme_blue_grey, R.style.AppTheme_BlueGrey);
+    sThemes.put(R.id.action_theme_white, R.style.AppTheme_White);
+    sThemes.put(R.id.action_theme_black, R.style.AppTheme_Black);
   }
 
   public static void changeToTheme(Activity activity, int themeId) {

@@ -294,6 +294,10 @@ public class MdCompat {
     }
   }
 
+  public static void supportDrawableTint(Context context, Toolbar toolbar) {
+    supportDrawableTint(context, toolbar, Palette.PRIMARY);
+  }
+
   public enum Palette {
     PRIMARY, ACCENT, WARN, BACKGROUND
   }
