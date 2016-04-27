@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package me.henrytao.mddemo;
+package me.henrytao.mdcore.core;
 
-import android.app.Application;
-
-import me.henrytao.mdcore.utils.Ln;
+import android.support.v4.view.LayoutInflaterCompat;
+import android.support.v7.app.AppCompatActivity;
 
 /**
- * Created by henrytao on 4/26/16.
+ * Created by henrytao on 4/27/16.
  */
-public class App extends Application {
+public class MdCore {
 
-  @Override
-  public void onCreate() {
-    super.onCreate();
-    Ln.DEBUG = true;
+  /**
+   * Call this method in Activity.onCreate and before super.onCreate(...)
+   */
+  public static void init(AppCompatActivity activity) {
+    LayoutInflaterCompat.setFactory(activity.getLayoutInflater(), new MdLayoutInflaterFactory(activity.getDelegate()));
   }
 }

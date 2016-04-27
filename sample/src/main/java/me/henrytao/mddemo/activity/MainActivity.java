@@ -18,7 +18,14 @@ package me.henrytao.mddemo.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.view.ViewCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.widget.Toolbar;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import me.henrytao.mdcore.core.MdCore;
+import me.henrytao.mdcore.core.MdCompat;
 import me.henrytao.mddemo.R;
 
 /**
@@ -26,9 +33,25 @@ import me.henrytao.mddemo.R;
  */
 public class MainActivity extends BaseActivity {
 
+  @Bind(R.id.drawer_layout)
+  DrawerLayout vDrawerLayout;
+
+  @Bind(R.id.toolbar)
+  Toolbar vToolbar;
+
   @Override
   protected void onCreate(@Nullable Bundle savedInstanceState) {
+    MdCore.init(this);
     super.onCreate(savedInstanceState);
+
     setContentView(R.layout.activity_main);
+    ButterKnife.bind(this);
+
+    setSupportActionBar(vToolbar);
+
+    boolean isFitSystemWindows = ViewCompat.getFitsSystemWindows(vDrawerLayout);
+    if (isFitSystemWindows) {
+      MdCompat.enableTranslucentStatus(this);
+    }
   }
 }
