@@ -142,6 +142,8 @@
     <item name="mdColorDividerInverse_backgroundPalette_dark">@color/mdColorDivider_light</item>
     <item name="mdColorDividerInverse_backgroundPalette_light">@color/mdColorDivider_light</item>
 
+    <item name="mdDrawerArrowToggleColor">@color/mdIconColor_active_dark</item>
+
     <!-- override material style -->
     <!--colorPrimary: The primary branding color for the app. By default, this is the color applied to the action bar background.-->
     <!--colorPrimaryDark: Dark variant of the primary branding color. By default, this is the color applied to the status bar (via statusBarColor) and navigation bar (via navigationBarColor).-->

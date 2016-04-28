@@ -43,5 +43,5 @@ dependencies {
   compile rootProject.ext.dependencies["com.android.support:recyclerview-v7"]
 }
 
-apply from: "https://raw.githubusercontent.com/henrytao-me/bintray/master/installv1.gradle"
-apply from: "https://raw.githubusercontent.com/henrytao-me/bintray/master/bintrayv1.gradle"
+//apply from: "https://raw.githubusercontent.com/henrytao-me/bintray/master/installv1.gradle"
+//apply from: "https://raw.githubusercontent.com/henrytao-me/bintray/master/bintrayv1.gradle"

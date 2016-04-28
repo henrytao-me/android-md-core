@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <group android:id="@+id/group_material_design">
+    <item android:title="Material Design">
+      <menu>
+        <item
+          android:id="@+id/menu_introduction"
+          android:icon="@drawable/ic_blank_transparent"
+          android:title="Introduction" />
+      </menu>
+    </item>
+  </group>
+
+  <!--<group android:id="@+id/group_what_is_material">-->
+  <!--<item android:title="What is material?">-->
+  <!--<menu>-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Environment (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Material properties (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Elevation and shadows (x)" />-->
+  <!--</menu>-->
+  <!--</item>-->
+  <!--</group>-->
+
+  <!--<group android:id="@+id/Animation">-->
+  <!--<item android:title="Animation">-->
+  <!--<menu>-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Authentic motion (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Responsive interaction (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Meaningful transitions (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Delightful details (x)" />-->
+  <!--</menu>-->
+  <!--</item>-->
+  <!--</group>-->
+
+  <group android:id="@+id/group_style">
+    <item android:title="Style">
+      <menu>
+        <item
+          android:id="@+id/menu_color"
+          android:icon="@drawable/ic_blank_transparent"
+          android:title="Color" />
+        <item
+          android:id="@+id/menu_icon"
+          android:icon="@drawable/ic_blank_transparent"
+          android:title="Icons" />
+        <!--<item-->
+        <!--android:icon="@drawable/ic_blank_transparent"-->
+        <!--android:title="Imagery (x)" />-->
+        <item
+          android:id="@+id/menu_typography"
+          android:icon="@drawable/ic_blank_transparent"
+          android:title="Typography" />
+        <!--<item-->
+        <!--android:icon="@drawable/ic_blank_transparent"-->
+        <!--android:title="Writing (x)" />-->
+      </menu>
+    </item>
+  </group>
+
+  <!--<group android:id="@+id/group_layout">-->
+  <!--<item android:title="Layout">-->
+  <!--<menu>-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Principles (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Units and measurements (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Metrics &amp; keylines (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Structure (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Adaptive UI (x)" />-->
+  <!--</menu>-->
+  <!--</item>-->
+  <!--</group>-->
+
+  <group android:id="@+id/group_components">
+    <item android:title="Components">
+      <menu>
+        <!--<item-->
+        <!--android:id="@+id/menu_bottom_sheet"-->
+        <!--android:icon="@drawable/ic_blank_transparent"-->
+        <!--android:title="Bottom sheets" />-->
+        <item
+          android:id="@+id/menu_button"
+          android:icon="@drawable/ic_blank_transparent"
+          android:title="Buttons" />
+        <item
+          android:id="@+id/menu_fab"
+          android:icon="@drawable/ic_blank_transparent"
+          android:title="Buttons: Floating Action Button" />
+        <item
+          android:id="@+id/menu_card"
+          android:icon="@drawable/ic_blank_transparent"
+          android:title="Cards" />
+        <!--<item-->
+        <!--android:icon="@drawable/ic_blank_transparent"-->
+        <!--android:title="Chips (x)" />-->
+        <!--<item-->
+        <!--android:icon="@drawable/ic_blank_transparent"-->
+        <!--android:title="Data tables (x)" />-->
+        <item
+          android:id="@+id/menu_dialog"
+          android:icon="@drawable/ic_blank_transparent"
+          android:title="Dialogs" />
+        <item
+          android:id="@+id/menu_divider"
+          android:icon="@drawable/ic_blank_transparent"
+          android:title="Dividers" />
+        <!--<item-->
+        <!--android:icon="@drawable/ic_blank_transparent"-->
+        <!--android:title="Grid lists (x)" />-->
+        <item
+          android:id="@+id/menu_list"
+          android:icon="@drawable/ic_blank_transparent"
+          android:title="Lists" />
+        <!--<item-->
+        <!--android:icon="@drawable/ic_blank_transparent"-->
+        <!--android:title="Lists: Controls (x)" />-->
+        <!--<item-->
+        <!--android:icon="@drawable/ic_blank_transparent"-->
+        <!--android:title="Menus (x)" />-->
+        <!--<item-->
+        <!--android:icon="@drawable/ic_blank_transparent"-->
+        <!--android:title="Pickers (x)" />-->
+        <!--<item-->
+        <!--android:icon="@drawable/ic_blank_transparent"-->
+        <!--android:title="Progress &amp; activity (x)" />-->
+        <!--<item-->
+        <!--android:icon="@drawable/ic_blank_transparent"-->
+        <!--android:title="Selection controls (x)" />-->
+        <!--<item-->
+        <!--android:icon="@drawable/ic_blank_transparent"-->
+        <!--android:title="Sliders (x)" />-->
+        <!--<item-->
+        <!--android:icon="@drawable/ic_blank_transparent"-->
+        <!--android:title="Snackbars &amp; toasts (x)" />-->
+        <item
+          android:id="@+id/menu_subheader"
+          android:icon="@drawable/ic_blank_transparent"
+          android:title="Subheaders" />
+        <!--<item-->
+        <!--android:icon="@drawable/ic_blank_transparent"-->
+        <!--android:title="Steppers (x)" />-->
+        <!--<item-->
+        <!--android:icon="@drawable/ic_blank_transparent"-->
+        <!--android:title="Tabs (x)" />-->
+        <item
+          android:id="@+id/menu_text_field"
+          android:icon="@drawable/ic_blank_transparent"
+          android:title="Text fields" />
+        <item
+          android:id="@+id/menu_toolbar"
+          android:icon="@drawable/ic_blank_transparent"
+          android:title="Toolbars" />
+        <!--<item-->
+        <!--android:icon="@drawable/ic_blank_transparent"-->
+        <!--android:title="Tooltips (x)" />-->
+      </menu>
+    </item>
+  </group>
+
+  <!--<group android:id="@+id/group_patterns">-->
+  <!--<item android:title="Patterns">-->
+  <!--<menu>-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Data formats (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Empty states (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Errors (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Gestures (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Fingerprint (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Launch screens (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Loading images (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Navigation (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Navigation drawer (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Navigational transitions (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Notifications (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Permissions (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Scrolling techniques (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Search (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Selection (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Settings (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Swipe to refresh (x)" />-->
+  <!--</menu>-->
+  <!--</item>-->
+  <!--</group>-->
+
+  <!--<group android:id="@+id/group_usablility">-->
+  <!--<item android:title="Usability">-->
+  <!--<menu>-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Accessibility (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Bidirectionality (x)" />-->
+  <!--</menu>-->
+  <!--</item>-->
+  <!--</group>-->
+
+  <!--<group android:id="@+id/group_resources">-->
+  <!--<item android:title="Resources">-->
+  <!--<menu>-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Color palettes (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Devices (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Layout templates (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Roboto &amp; Noto fonts (x)" />-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="Sticker sheets &amp; icons (x)" />-->
+  <!--</menu>-->
+  <!--</item>-->
+  <!--</group>-->
+
+  <!--<group android:id="@+id/group_whats_new">-->
+  <!--<item android:title="What's new">-->
+  <!--<menu>-->
+  <!--<item-->
+  <!--android:icon="@drawable/ic_blank_transparent"-->
+  <!--android:title="What's new (x)" />-->
+  <!--</menu>-->
+  <!--</item>-->
+  <!--</group>-->
+</menu>

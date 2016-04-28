@@ -57,16 +57,15 @@
     </android.support.design.widget.AppBarLayout>
   </android.support.design.widget.CoordinatorLayout>
 
-  <!--<android.support.design.widget.NavigationView-->
-  <!--android:id="@+id/navigation_view"-->
-  <!--android:layout_width="wrap_content"-->
-  <!--android:layout_height="match_parent"-->
-  <!--android:layout_gravity="start"-->
-  <!--android:clipToPadding="false"-->
-  <!--android:fitsSystemWindows="@bool/isFitSystemWindows"-->
-  <!--android:paddingBottom="112dp"-->
-  <!--app:headerLayout="@layout/drawer_header"-->
-  <!--app:itemIconTint="?attr/mdTextColorPrimary_backgroundPalette"-->
-  <!--app:itemTextColor="?attr/mdTextColorPrimary_backgroundPalette"-->
-  <!--app:menu="@menu/menu_drawer" />-->
+  <android.support.design.widget.NavigationView
+    android:id="@+id/navigation_view_left"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="@bool/isFitSystemWindows"
+    app:headerLayout="@layout/drawer_header"
+    app:itemIconTint="?attr/mdTextColorPrimary_backgroundPalette"
+    app:itemTextColor="?attr/mdTextColorPrimary_backgroundPalette"
+    app:menu="@menu/menu_drawer" />
 </android.support.v4.widget.DrawerLayout>
