@@ -18,6 +18,10 @@ apply plugin: "com.android.application"
 apply plugin: "me.tatarka.retrolambda"
 
 android {
+  defaultConfig {
+    vectorDrawables.useSupportLibrary = true
+  }
+
   compileOptions {
     sourceCompatibility rootProject.ext.java.sourceCompatibility
     targetCompatibility rootProject.ext.java.targetCompatibility

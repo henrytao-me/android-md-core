@@ -68,4 +68,16 @@
     app:itemIconTint="?attr/mdTextColorPrimary_backgroundPalette"
     app:itemTextColor="?attr/mdTextColorPrimary_backgroundPalette"
     app:menu="@menu/menu_drawer" />
+
+  <android.support.design.widget.NavigationView
+    android:id="@+id/navigation_view_right"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="end"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="@bool/isFitSystemWindows"
+    app:headerLayout="@layout/drawer_header"
+    app:itemIconTint="?attr/mdTextColorPrimary_backgroundPalette"
+    app:itemTextColor="?attr/mdTextColorPrimary_backgroundPalette"
+    app:menu="@menu/menu_drawer" />
 </android.support.v4.widget.DrawerLayout>
