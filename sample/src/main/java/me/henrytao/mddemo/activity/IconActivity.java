@@ -17,35 +17,42 @@
 package me.henrytao.mddemo.activity;
 
 import android.os.Bundle;
-import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.widget.ImageView;
 
-import me.henrytao.mdcore.core.MdCore;
-import me.henrytao.mddemo.config.Constants;
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import me.henrytao.mddemo.R;
 
 /**
- * Created by henrytao on 4/26/16.
+ * Created by henrytao on 5/2/16.
  */
-public abstract class BaseActivity extends AppCompatActivity {
+public class IconActivity extends BaseActivity {
 
-  @LayoutRes
-  protected abstract int getDefaultLayout();
+  @Bind(R.id.icon)
+  ImageView vIcon;
 
-  @LayoutRes
-  protected abstract int getMdCoreLayout();
+  @Bind(R.id.toolbar)
+  Toolbar vToolbar;
+
+  @Override
+  protected int getDefaultLayout() {
+    return R.layout.activity_icon;
+  }
+
+  @Override
+  protected int getMdCoreLayout() {
+    return R.layout.activity_icon;
+  }
 
   @Override
   protected void onCreate(@Nullable Bundle savedInstanceState) {
-    boolean isMdCoreEnabled = isMdCoreEnabled();
-    if (isMdCoreEnabled) {
-      MdCore.init(this);
-    }
     super.onCreate(savedInstanceState);
-    setContentView(isMdCoreEnabled ? getMdCoreLayout() : getDefaultLayout());
-  }
+    ButterKnife.bind(this);
 
-  public boolean isMdCoreEnabled() {
-    return this instanceof MainActivity || getIntent().getBooleanExtra(Constants.Extra.IS_MD_CORE_ENABLED, false);
+    setSupportActionBar(vToolbar);
+    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    vToolbar.setNavigationOnClickListener(v -> onBackPressed());
   }
 }

@@ -16,6 +16,7 @@
 
 package me.henrytao.mddemo.activity;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.IntDef;
@@ -35,7 +36,6 @@ import java.lang.annotation.RetentionPolicy;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import me.henrytao.mdcore.core.MdCompat;
-import me.henrytao.mdcore.core.MdCore;
 import me.henrytao.mddemo.R;
 import me.henrytao.mddemo.config.Constants;
 
@@ -81,11 +81,18 @@ public class MainActivity extends BaseActivity {
   }
 
   @Override
-  protected void onCreate(@Nullable Bundle savedInstanceState) {
-    MdCore.init(this);
+  protected int getDefaultLayout() {
+    return 0;
+  }
 
+  @Override
+  protected int getMdCoreLayout() {
+    return R.layout.activity_main;
+  }
+
+  @Override
+  protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
     ButterKnife.bind(this);
 
     boolean isFitSystemWindows = ViewCompat.getFitsSystemWindows(vDrawerLayout);
@@ -104,13 +111,22 @@ public class MainActivity extends BaseActivity {
   }
 
   private boolean onNavigationItemSelected(@Gravity int type, MenuItem item) {
-    vDrawerLayout.closeDrawer(GravityCompat.START);
+    vDrawerLayout.closeDrawers();
     vDrawerLayout.postDelayed(() -> onNavigationItemSelected(type, item.getItemId()), Constants.Timer.SHORT);
     return true;
   }
 
-  private void onNavigationItemSelected(int type, int menuItemId) {
-
+  private void onNavigationItemSelected(@Gravity int type, int menuItemId) {
+    Intent intent = null;
+    switch (menuItemId) {
+      case R.id.menu_icon:
+        intent = new Intent(this, IconActivity.class);
+        break;
+    }
+    if (intent != null) {
+      intent.putExtra(Constants.Extra.IS_MD_CORE_ENABLED, type == GravityCompat.START);
+      startActivity(intent);
+    }
   }
 
   @IntDef({GravityCompat.START, GravityCompat.END})

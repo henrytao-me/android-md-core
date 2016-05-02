@@ -25,26 +25,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v4.widget.NestedScrollView
+    <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      app:layout_behavior="@string/appbar_scrolling_view_behavior">
+      android:orientation="vertical"
+      android:gravity="center"
+      android:padding="@dimen/mdLayoutSpacing">
 
-      <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+      <TextView
+        android:text="MdCore is on the left"
+        android:textColor="?attr/mdTextColorHint_backgroundPalette"
+        style="@style/MdText.Subhead1" />
 
-        <FrameLayout
-          android:id="@+id/container"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content" />
+      <TextView
+        android:text="Default material is on the right"
+        android:textColor="?attr/mdTextColorHint_backgroundPalette"
+        style="@style/MdText.Subhead1" />
 
-        <Button
-          android:text="Hello moto"
-          style="@style/MdButton.Colored" />
-      </LinearLayout>
-    </android.support.v4.widget.NestedScrollView>
+      <TextView
+        android:text="Enjoy!"
+        android:textColor="?attr/mdTextColorHint_backgroundPalette"
+        style="@style/MdText.Subhead1" />
+    </LinearLayout>
 
     <android.support.design.widget.AppBarLayout
       android:layout_width="match_parent"

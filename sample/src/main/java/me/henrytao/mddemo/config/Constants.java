@@ -21,6 +21,11 @@ package me.henrytao.mddemo.config;
  */
 public class Constants {
 
+  public interface Extra {
+
+    String IS_MD_CORE_ENABLED = "IS_MD_CORE_ENABLED";
+  }
+
   public interface Timer {
 
     int LONG = 600;

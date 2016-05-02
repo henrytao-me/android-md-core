@@ -17,14 +17,17 @@
 package me.henrytao.mdcore.core;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.support.annotation.NonNull;
 import android.support.v4.view.LayoutInflaterFactory;
 import android.support.v7.app.AppCompatDelegate;
 import android.util.AttributeSet;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 
+import me.henrytao.mdcore.R;
 import me.henrytao.mdcore.utils.Ln;
-import me.henrytao.mdcore.widgets.MdButton;
 
 /**
  * Created by henrytao on 4/27/16.
@@ -32,6 +35,8 @@ import me.henrytao.mdcore.widgets.MdButton;
 public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
 
   private static final String SUPPORT_BUTTON = "Button";
+
+  private static final String SUPPORT_IMAGE_VIEW = "ImageView";
 
   private final AppCompatDelegate mDelegate;
 
@@ -42,10 +47,31 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
   @Override
   public View onCreateView(View parent, String name, Context context, AttributeSet attrs) {
     Ln.d("custom | %s | %s", name, attrs.getClass().toString());
-    switch (name) {
-      case SUPPORT_BUTTON:
-        return new MdButton(context, attrs);
+    //switch (name) {
+    //  case SUPPORT_BUTTON:
+    //    return new MdButton(context, attrs);
+    //  case SUPPORT_IMAGE_VIEW:
+    //    return new MdImageView(context, attrs);
+    //}
+    View view = mDelegate.createView(parent, name, context, attrs);
+    if (view instanceof ImageView) {
+      supportImageView(context, (ImageView) view, attrs);
     }
-    return mDelegate.createView(parent, name, context, attrs);
+    return view;
+  }
+
+  private void supportButton(Context context, Button view, AttributeSet attrs) {
+
+  }
+
+  private void supportImageView(Context context, ImageView view, AttributeSet attrs) {
+    boolean isEnabled = true;
+    TypedArray a = context.getTheme().obtainStyledAttributes(attrs, new int[]{R.attr.enabled}, 0, 0);
+    try {
+      isEnabled = a.getBoolean(0, true);
+    } catch (Exception ignore) {
+    }
+    a.recycle();
+    view.setEnabled(isEnabled);
   }
 }

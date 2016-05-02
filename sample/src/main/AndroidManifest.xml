@@ -37,5 +37,9 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+
+    <activity
+      android:label="@string/title_activity_icon"
+      android:name=".activity.IconActivity" />
   </application>
 </manifest>

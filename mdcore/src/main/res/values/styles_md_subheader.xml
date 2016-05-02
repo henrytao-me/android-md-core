@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+  <!-- List -->
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+  <style name="MdSubHeader.List" parent="Base.MdSubHeader" />
+
+  <style name="MdSubHeader.List.Left" parent="Base.MdSubHeader.Left" />
+
+  <style name="MdSubHeader.List.Right" parent="Base.MdSubHeader.Right" />
+
+  <style name="MdSubHeader.List.RightLarge" parent="Base.MdSubHeader.RightLarge" />
+
+  <style name="MdSubHeader.List.LeftRight" parent="Base.MdSubHeader.LeftRight" />
+
+  <style name="MdSubHeader.List.LeftRightLarge" parent="Base.MdSubHeader.LeftRightLarge" />
+
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+  <!-- Grid -->
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+  <style name="MdSubHeader.Grid" parent="Base.MdSubHeader" />
+
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+  <!-- Menu -->
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+  <style name="MdSubHeader.Menu" parent="Base.MdSubHeader" />
+
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+  <!-- Base -->
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+  <style name="Base.MdSubHeader" parent="MdText.Body2.SingleLine">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">@dimen/mdListItemHeight_sm</item>
+    <item name="android:textColor">?attr/mdTextColorSecondary_backgroundPalette</item>
+    <item name="android:gravity">left|center_vertical</item>
+    <item name="android:paddingLeft">@dimen/mdListItemPaddingLeft</item>
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight</item>
+  </style>
+
+  <style name="Base.MdSubHeader.Left">
+    <item name="android:paddingLeft">@dimen/mdListItemPaddingLeft_lg</item>
+  </style>
+
+  <style name="Base.MdSubHeader.Right">
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight_lg</item>
+  </style>
+
+  <style name="Base.MdSubHeader.RightLarge">
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight_xlg</item>
+  </style>
+
+  <style name="Base.MdSubHeader.LeftRight" parent="Base.MdSubHeader.Left">
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight_lg</item>
+  </style>
+
+  <style name="Base.MdSubHeader.LeftRightLarge" parent="Base.MdSubHeader.Left">
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight_xlg</item>
+  </style>
+</resources>
