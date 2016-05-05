@@ -41,5 +41,8 @@
     <activity
       android:label="@string/title_activity_icon"
       android:name=".activity.IconActivity" />
+    <activity
+      android:label="@string/title_activity_button"
+      android:name=".activity.ButtonActivity" />
   </application>
 </manifest>

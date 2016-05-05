@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package me.henrytao.mdcore.widgets;
+package me.henrytao.mdcore.widgets.internal;
 
 import android.content.Context;
 import android.content.res.TypedArray;

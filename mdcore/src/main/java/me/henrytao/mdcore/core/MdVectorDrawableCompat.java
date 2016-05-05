@@ -57,6 +57,7 @@ public class MdVectorDrawableCompat {
             android.R.attr.tint
         }, 0, 0);
         int tintId = a.getResourceId(0, 0);
+        a.recycle();
         drawable.setTintList(MdCompat.getColorStateList(context, tintId));
       } catch (Exception ignore) {
         ignore.printStackTrace();

@@ -122,6 +122,9 @@ public class MainActivity extends BaseActivity {
       case R.id.menu_icon:
         intent = new Intent(this, IconActivity.class);
         break;
+      case R.id.menu_button:
+        intent = new Intent(this, ButtonActivity.class);
+        break;
     }
     if (intent != null) {
       intent.putExtra(Constants.Extra.IS_MD_CORE_ENABLED, type == GravityCompat.START);
