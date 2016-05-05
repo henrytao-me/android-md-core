@@ -19,7 +19,7 @@ package me.henrytao.mddemo.activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
-import android.widget.ImageView;
+import android.widget.CheckBox;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -30,11 +30,13 @@ import me.henrytao.mddemo.R;
  */
 public class IconActivity extends BaseActivity {
 
-  @Bind(R.id.icon)
-  ImageView vIcon;
+  @Bind(R.id.checkbox1)
+  CheckBox vCheckBox1;
 
   @Bind(R.id.toolbar)
   Toolbar vToolbar;
+
+  private int mCount;
 
   @Override
   protected int getDefaultLayout() {
@@ -54,5 +56,10 @@ public class IconActivity extends BaseActivity {
     setSupportActionBar(vToolbar);
     getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     vToolbar.setNavigationOnClickListener(v -> onBackPressed());
+
+    vCheckBox1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+      mCount++;
+      buttonView.setText(String.valueOf(mCount));
+    });
   }
 }

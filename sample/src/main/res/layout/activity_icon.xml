@@ -46,7 +46,6 @@
         style="@style/MdIcon" />
 
       <ImageView
-        android:id="@+id/icon"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:clickable="true"
         app:enabled="false"
@@ -63,19 +62,33 @@
       android:layout_height="wrap_content"
       android:orientation="horizontal">
 
-      <ImageView
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:clickable="true"
-        app:srcCompat="@drawable/ic_android_black_24dp"
-        style="@style/MdIcon" />
+      <CheckBox
+        android:id="@+id/checkbox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        app:srcCompat="@drawable/ic_favorite_black_24dp" />
 
-      <ImageView
-        android:id="@+id/icon"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:clickable="true"
-        app:enabled="false"
-        app:srcCompat="@drawable/ic_android_black_24dp"
-        style="@style/MdIcon" />
+      <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:drawablePadding="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:srcCompat="@drawable/ic_favorite_black_24dp" />
+
+      <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:drawablePadding="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:srcCompat="@drawable/ic_favorite_black_24dp" />
     </LinearLayout>
   </LinearLayout>
 </LinearLayout>
