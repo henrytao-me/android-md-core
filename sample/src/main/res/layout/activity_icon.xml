@@ -46,7 +46,6 @@
         style="@style/MdIcon" />
 
       <ImageView
-        android:id="@+id/icon"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:clickable="true"
         app:enabled="false"
@@ -63,19 +62,44 @@
       android:layout_height="wrap_content"
       android:orientation="horizontal">
 
-      <ImageView
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:clickable="true"
-        app:srcCompat="@drawable/ic_android_black_24dp"
-        style="@style/MdIcon" />
+      <CheckBox
+        android:id="@+id/checkbox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
-      <ImageView
-        android:id="@+id/icon"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:clickable="true"
-        app:enabled="false"
-        app:srcCompat="@drawable/ic_android_black_24dp"
-        style="@style/MdIcon" />
+      <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+      <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+      android:text="Custom Icon Toggle"
+      style="@style/MdSubHeader.List" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <CheckBox
+        android:id="@+id/checkbox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_favorite_black_24dp" />
+
+      <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_favorite_black_24dp" />
+
+      <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_favorite_black_24dp" />
     </LinearLayout>
   </LinearLayout>
 </LinearLayout>

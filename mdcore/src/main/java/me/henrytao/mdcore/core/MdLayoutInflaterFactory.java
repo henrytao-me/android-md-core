@@ -18,16 +18,20 @@ package me.henrytao.mdcore.core;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
+import android.support.graphics.drawable.VectorDrawableCompat;
 import android.support.v4.view.LayoutInflaterFactory;
 import android.support.v7.app.AppCompatDelegate;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 
 import me.henrytao.mdcore.R;
 import me.henrytao.mdcore.utils.Ln;
+import me.henrytao.mdcore.widgets.MdCheckBox;
 
 /**
  * Created by henrytao on 4/27/16.
@@ -36,7 +40,7 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
 
   private static final String SUPPORT_BUTTON = "Button";
 
-  private static final String SUPPORT_IMAGE_VIEW = "ImageView";
+  private static final String SUPPORT_CHECK_BOX = "CheckBox";
 
   private final AppCompatDelegate mDelegate;
 
@@ -47,15 +51,23 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
   @Override
   public View onCreateView(View parent, String name, Context context, AttributeSet attrs) {
     Ln.d("custom | %s | %s", name, attrs.getClass().toString());
-    //switch (name) {
-    //  case SUPPORT_BUTTON:
-    //    return new MdButton(context, attrs);
-    //  case SUPPORT_IMAGE_VIEW:
-    //    return new MdImageView(context, attrs);
-    //}
-    View view = mDelegate.createView(parent, name, context, attrs);
+    View view;
+    switch (name) {
+      //case SUPPORT_BUTTON:
+      //  return new MdButton(context, attrs);
+      case SUPPORT_CHECK_BOX:
+        view = new MdCheckBox(context, attrs);
+        break;
+      default:
+        // get view from appcompat
+        view = mDelegate.createView(parent, name, context, attrs);
+        break;
+    }
+
     if (view instanceof ImageView) {
       supportImageView(context, (ImageView) view, attrs);
+    } else if (view instanceof CheckBox) {
+      supportCheckBox(context, (CheckBox) view, attrs);
     }
     return view;
   }
@@ -64,9 +76,29 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
 
   }
 
+  private void supportCheckBox(Context context, CheckBox view, AttributeSet attrs) {
+    Drawable drawable = null;
+    TypedArray a = context.getTheme().obtainStyledAttributes(attrs, new int[]{
+        R.attr.srcCompat
+    }, 0, 0);
+    try {
+      int resId = a.getResourceId(0, 0);
+      if (resId > 0) {
+        drawable = VectorDrawableCompat.create(context.getResources(), resId, context.getTheme());
+      }
+    } catch (Exception ignore) {
+    }
+    a.recycle();
+    if (drawable != null) {
+      view.setButtonDrawable(drawable);
+    }
+  }
+
   private void supportImageView(Context context, ImageView view, AttributeSet attrs) {
     boolean isEnabled = true;
-    TypedArray a = context.getTheme().obtainStyledAttributes(attrs, new int[]{R.attr.enabled}, 0, 0);
+    TypedArray a = context.getTheme().obtainStyledAttributes(attrs, new int[]{
+        R.attr.enabled
+    }, 0, 0);
     try {
       isEnabled = a.getBoolean(0, true);
     } catch (Exception ignore) {
