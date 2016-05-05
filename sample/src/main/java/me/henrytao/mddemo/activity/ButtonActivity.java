@@ -16,13 +16,19 @@
 
 package me.henrytao.mddemo.activity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
+import android.widget.Button;
+import android.widget.CheckBox;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import me.henrytao.mddemo.R;
+import me.henrytao.mddemo.utils.DialogUtils;
 
 /**
  * Created by henrytao on 5/5/16.
@@ -50,5 +56,28 @@ public class ButtonActivity extends BaseActivity {
     setSupportActionBar(vToolbar);
     getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     vToolbar.setNavigationOnClickListener(v -> onBackPressed());
+  }
+
+  @OnClick(R.id.btn_dialog_1)
+  protected void onBtnDialog1Click() {
+    DialogUtils.showInfoDialog(this, getString(R.string.text_button_color_in_dialog_info), null, null);
+  }
+
+  @OnClick(R.id.btn_dialog_2)
+  protected void onBtnDialog2Click() {
+    AlertDialog dialog = new AlertDialog.Builder(ButtonActivity.this)
+        .setTitle(getString(R.string.text_custom_dialog))
+        .setView(R.layout.custom_dialog)
+        .setPositiveButton(R.string.text_ok, null)
+        .setNegativeButton(R.string.text_cancel, null)
+        .create();
+    dialog.setOnShowListener(d -> {
+      AlertDialog alertDialog = (AlertDialog) d;
+      Button positiveButton = alertDialog.getButton(DialogInterface.BUTTON_POSITIVE);
+      CheckBox checkBox = (CheckBox) alertDialog.findViewById(R.id.checkbox);
+      checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> positiveButton.setEnabled(isChecked));
+      positiveButton.setEnabled(checkBox.isChecked());
+    });
+    dialog.show();
   }
 }

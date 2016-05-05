@@ -104,5 +104,35 @@
           style="@style/MdButton.Borderless.Colored" />
       </FrameLayout>
     </LinearLayout>
+
+    <TextView
+      android:text="Buttons in dialog"
+      style="@style/MdSubHeader.List" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <FrameLayout style="@style/AppStyle.GridItem">
+
+        <Button
+          android:id="@+id/btn_dialog_1"
+          android:text="@string/text_button"
+          style="@style/MdButton" />
+      </FrameLayout>
+
+      <FrameLayout style="@style/AppStyle.GridItem">
+
+        <Button
+          android:id="@+id/btn_dialog_2"
+          android:text="@string/text_button"
+          style="@style/MdButton" />
+      </FrameLayout>
+
+      <FrameLayout style="@style/AppStyle.GridItem" />
+
+      <FrameLayout style="@style/AppStyle.GridItem" />
+    </LinearLayout>
   </LinearLayout>
 </LinearLayout>
