@@ -149,6 +149,7 @@
     <item name="mdIconColor_warnPalette">@color/md_icon_color_dark</item>
     <item name="mdIconColor_backgroundPalette">@color/md_icon_color_dark</item>
 
+    <item name="MdCheckBoxStyle">@style/MdCheckBox</item>
     <item name="MdIconToggleStyle">@style/MdIconToggle</item>
 
     <!-- override material style -->

@@ -37,11 +37,22 @@ import me.henrytao.mdcore.R;
  */
 public class MdCheckBox extends AppCompatCheckBox {
 
+  private static int getDefStyleAttr(Context context, AttributeSet attrs) {
+    return hasCustomDrawable(context, attrs) ? R.attr.MdIconToggleStyle : R.attr.MdCheckBoxStyle;
+  }
+
+  private static boolean hasCustomDrawable(Context context, AttributeSet attrs) {
+    TypedArray a = context.getTheme().obtainStyledAttributes(attrs, new int[]{
+        R.attr.srcCompat
+    }, 0, 0);
+    boolean result = a.getResourceId(0, 0) > 0;
+    a.recycle();
+    return result;
+  }
+
   private int mDrawablePadding;
 
   private boolean mHasCustomDrawable;
-
-  private boolean mIsLayoutRtl;
 
   private int mMinWidth;
 
@@ -58,17 +69,17 @@ public class MdCheckBox extends AppCompatCheckBox {
   }
 
   public MdCheckBox(Context context, AttributeSet attrs) {
-    this(context, attrs, R.attr.MdIconToggleStyle);
+    this(context, attrs, getDefStyleAttr(context, attrs));
   }
 
   public MdCheckBox(Context context, AttributeSet attrs, int defStyleAttr) {
-    super(context, attrs, defStyleAttr);
-    initFromAttributes(attrs, defStyleAttr > 0 ? defStyleAttr : R.attr.MdIconToggleStyle);
+    super(context, attrs, defStyleAttr > 0 ? defStyleAttr : getDefStyleAttr(context, attrs));
+    initFromAttributes(attrs);
   }
 
   @Override
   protected void onDraw(Canvas canvas) {
-    if (mIsLayoutRtl) {
+    if (isLayoutRtl()) {
       canvas.translate(-mPaddingRight, 0);
     } else {
       canvas.translate(mPaddingLeft, 0);
@@ -76,17 +87,18 @@ public class MdCheckBox extends AppCompatCheckBox {
     super.onDraw(canvas);
     Drawable background = getBackground();
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && background != null) {
+      boolean isLayoutRtl = isLayoutRtl();
       Rect bounds = background.getBounds();
       int top = bounds.top;
       int bottom = bounds.bottom;
-      int left = (mIsLayoutRtl ? getWidth() - mMinWidth : 0) + (!mHasCustomDrawable ? mPaddingLeft / 2 : 0);
-      int right = (mIsLayoutRtl ? getWidth() : mMinWidth) + (mHasCustomDrawable ? mPaddingRight / 2 : 0);
+      int left = (isLayoutRtl ? getWidth() - mMinWidth : 0) + (!mHasCustomDrawable && !isLayoutRtl ? mPaddingLeft : 0);
+      int right = (isLayoutRtl ? getWidth() : mMinWidth) - (!mHasCustomDrawable && isLayoutRtl ? mPaddingRight : 0);
       background.setHotspotBounds(left, top, right, bottom);
     }
   }
 
-  protected void initFromAttributes(AttributeSet attrs, int defStyleAttr) {
-    Context context = getContext();
+  protected void initFromAttributes(AttributeSet attrs) {
+    mHasCustomDrawable = hasCustomDrawable(getContext(), attrs);
 
     mPaddingLeft = getPaddingLeft();
     mPaddingTop = getPaddingTop();
@@ -94,12 +106,6 @@ public class MdCheckBox extends AppCompatCheckBox {
     mPaddingBottom = getPaddingBottom();
     mDrawablePadding = getCompoundDrawablePadding();
     mMinWidth = ViewCompat.getMinimumWidth(this);
-    mIsLayoutRtl = ViewUtils.isLayoutRtl(this);
-
-    TypedArray a = context.getTheme().obtainStyledAttributes(attrs, new int[]{
-        R.attr.srcCompat
-    }, 0, 0);
-    mHasCustomDrawable = a.getResourceId(0, 0) > 0;
 
     invalidatePadding();
     addTextChangedListener(new TextWatcher() {
@@ -121,9 +127,13 @@ public class MdCheckBox extends AppCompatCheckBox {
   }
 
   private void invalidatePadding() {
-    boolean isLayoutRtl = mIsLayoutRtl;
+    boolean isLayoutRtl = isLayoutRtl();
     int adjustedLeft = TextUtils.isEmpty(getText()) ? 0 : mDrawablePadding;
     int adjustedRight = mPaddingLeft + mPaddingRight;
-    setPadding(!isLayoutRtl ? adjustedLeft : adjustedRight, mPaddingTop, isLayoutRtl ? adjustedLeft : adjustedRight, mPaddingBottom);
+    setPadding(!isLayoutRtl ? adjustedLeft : adjustedRight, mPaddingTop, !isLayoutRtl ? adjustedRight : adjustedLeft, mPaddingBottom);
+  }
+
+  private boolean isLayoutRtl() {
+    return ViewUtils.isLayoutRtl(this);
   }
 }
