@@ -51,15 +51,18 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
   @Override
   public View onCreateView(View parent, String name, Context context, AttributeSet attrs) {
     Ln.d("custom | %s | %s", name, attrs.getClass().toString());
+    View view;
     switch (name) {
       //case SUPPORT_BUTTON:
       //  return new MdButton(context, attrs);
       case SUPPORT_CHECK_BOX:
-        return new MdCheckBox(context, attrs);
+        view = new MdCheckBox(context, attrs);
+        break;
+      default:
+        // get view from appcompat
+        view = mDelegate.createView(parent, name, context, attrs);
+        break;
     }
-
-    // get view from appcompat
-    View view = mDelegate.createView(parent, name, context, attrs);
 
     if (view instanceof ImageView) {
       supportImageView(context, (ImageView) view, attrs);

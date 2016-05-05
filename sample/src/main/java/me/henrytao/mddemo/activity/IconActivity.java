@@ -33,6 +33,9 @@ public class IconActivity extends BaseActivity {
   @Bind(R.id.checkbox1)
   CheckBox vCheckBox1;
 
+  @Bind(R.id.checkbox2)
+  CheckBox vCheckBox2;
+
   @Bind(R.id.toolbar)
   Toolbar vToolbar;
 
@@ -58,6 +61,11 @@ public class IconActivity extends BaseActivity {
     vToolbar.setNavigationOnClickListener(v -> onBackPressed());
 
     vCheckBox1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+      mCount++;
+      buttonView.setText(String.valueOf(mCount));
+    });
+
+    vCheckBox2.setOnCheckedChangeListener((buttonView, isChecked) -> {
       mCount++;
       buttonView.setText(String.valueOf(mCount));
     });

@@ -149,6 +149,8 @@
     <item name="mdIconColor_warnPalette">@color/md_icon_color_dark</item>
     <item name="mdIconColor_backgroundPalette">@color/md_icon_color_light</item>
 
+    <item name="MdIconToggleStyle">@style/MdIconToggle</item>
+
     <!-- override material style -->
     <!--colorPrimary: The primary branding color for the app. By default, this is the color applied to the action bar background.-->
     <!--colorPrimaryDark: Dark variant of the primary branding color. By default, this is the color applied to the status bar (via statusBarColor) and navigation bar (via navigationBarColor).-->
