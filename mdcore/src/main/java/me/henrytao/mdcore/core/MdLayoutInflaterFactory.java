@@ -20,7 +20,6 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
-import android.support.graphics.drawable.VectorDrawableCompat;
 import android.support.v4.view.LayoutInflaterFactory;
 import android.support.v7.app.AppCompatDelegate;
 import android.util.AttributeSet;
@@ -84,7 +83,7 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
     try {
       int resId = a.getResourceId(0, 0);
       if (resId > 0) {
-        drawable = VectorDrawableCompat.create(context.getResources(), resId, context.getTheme());
+        drawable = MdVectorDrawableCompat.create(context, resId);
       }
     } catch (Exception ignore) {
     }
