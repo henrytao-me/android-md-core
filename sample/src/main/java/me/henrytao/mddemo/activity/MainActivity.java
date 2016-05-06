@@ -131,6 +131,9 @@ public class MainActivity extends BaseActivity {
       case R.id.menu_card:
         intent = new Intent(this, CardActivity.class);
         break;
+      case R.id.menu_dialog:
+        intent = new Intent(this, DialogActivity.class);
+        break;
     }
     if (intent != null) {
       intent.putExtra(Constants.Extra.IS_MD_CORE_ENABLED, type == GravityCompat.START);

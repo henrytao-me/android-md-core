@@ -118,7 +118,7 @@
 
         <Button
           android:id="@+id/btn_dialog_1"
-          android:text="@string/text_button"
+          android:text="@string/text_click_me"
           style="@style/MdButton" />
       </FrameLayout>
 
@@ -126,7 +126,7 @@
 
         <Button
           android:id="@+id/btn_dialog_2"
-          android:text="@string/text_button"
+          android:text="@string/text_click_me"
           style="@style/MdButton" />
       </FrameLayout>
 

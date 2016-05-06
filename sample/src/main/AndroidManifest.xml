@@ -50,5 +50,8 @@
     <activity
       android:label="@string/title_activity_card"
       android:name=".activity.CardActivity" />
+    <activity
+      android:label="@string/title_activity_dialog"
+      android:name=".activity.DialogActivity" />
   </application>
 </manifest>
