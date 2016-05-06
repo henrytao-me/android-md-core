@@ -124,10 +124,10 @@
           android:id="@+id/menu_fab"
           android:icon="@drawable/ic_blank_transparent"
           android:title="Buttons: Floating Action Button" />
-        <!--<item-->
-        <!--android:id="@+id/menu_card"-->
-        <!--android:icon="@drawable/ic_blank_transparent"-->
-        <!--android:title="Cards" />-->
+        <item
+          android:id="@+id/menu_card"
+          android:icon="@drawable/ic_blank_transparent"
+          android:title="Cards" />
         <!--<item-->
         <!--android:icon="@drawable/ic_blank_transparent"-->
         <!--android:title="Chips (x)" />-->

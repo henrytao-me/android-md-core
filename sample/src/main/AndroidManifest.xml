@@ -47,5 +47,8 @@
     <activity
       android:label="@string/title_activity_fab"
       android:name=".activity.FabActivity" />
+    <activity
+      android:label="@string/title_activity_card"
+      android:name=".activity.CardActivity" />
   </application>
 </manifest>

@@ -150,7 +150,7 @@
     <string name="title_activity_divider">Divider</string>
     <string name="title_activity_subheader">Subheader</string>
     <string name="title_activity_toolbar">Toolbar</string>
-    <string name="title_activity_cardview">CardView</string>
+    <string name="title_activity_card">CardView</string>
     <string name="title_activity_text_field">TextField</string>
   <string name="text_google">Google</string>
 </resources>
