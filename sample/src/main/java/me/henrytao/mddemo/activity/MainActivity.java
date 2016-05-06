@@ -134,6 +134,9 @@ public class MainActivity extends BaseActivity {
       case R.id.menu_dialog:
         intent = new Intent(this, DialogActivity.class);
         break;
+      case R.id.menu_divider:
+        intent = new Intent(this, DividerActivity.class);
+        break;
     }
     if (intent != null) {
       intent.putExtra(Constants.Extra.IS_MD_CORE_ENABLED, type == GravityCompat.START);

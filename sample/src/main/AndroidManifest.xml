@@ -53,5 +53,8 @@
     <activity
       android:label="@string/title_activity_dialog"
       android:name=".activity.DialogActivity" />
+    <activity
+      android:label="@string/title_activity_divider"
+      android:name=".activity.DividerActivity" />
   </application>
 </manifest>
