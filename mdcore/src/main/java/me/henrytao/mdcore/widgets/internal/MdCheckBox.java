@@ -127,10 +127,13 @@ public class MdCheckBox extends AppCompatCheckBox {
   }
 
   private void invalidatePadding() {
-    boolean isLayoutRtl = isLayoutRtl();
     int adjustedLeft = TextUtils.isEmpty(getText()) ? 0 : mDrawablePadding;
     int adjustedRight = mPaddingLeft + mPaddingRight;
-    setPadding(!isLayoutRtl ? adjustedLeft : adjustedRight, mPaddingTop, !isLayoutRtl ? adjustedRight : adjustedLeft, mPaddingBottom);
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+      setPaddingRelative(adjustedLeft, mPaddingTop, adjustedRight, mPaddingBottom);
+    } else {
+      setPadding(adjustedLeft, mPaddingTop, adjustedRight, mPaddingBottom);
+    }
   }
 
   private boolean isLayoutRtl() {
