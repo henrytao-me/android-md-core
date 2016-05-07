@@ -116,6 +116,106 @@
         </RelativeLayout>
 
         <View style="@style/MdDivider" />
+
+        <!-- two line - text only -->
+
+        <RelativeLayout
+          android:background="?attr/selectableItemBackground"
+          android:clickable="true"
+          style="@style/MdListItem.TwoLine.TextOnly">
+
+          <LinearLayout style="@style/Base.MdListItem.Wrapper">
+
+            <TextView
+              android:text="Two Line - Text Only"
+              style="@style/Base.MdListItem.Title" />
+
+            <TextView
+              android:text="Subtitle"
+              style="@style/Base.MdListItem.Subtitle" />
+          </LinearLayout>
+        </RelativeLayout>
+
+        <View style="@style/MdDivider" />
+
+        <!-- two line - icon with text -->
+
+        <RelativeLayout
+          android:background="?attr/selectableItemBackground"
+          android:clickable="true"
+          style="@style/MdListItem.TwoLine.IconWithText">
+
+          <ImageView
+            app:srcCompat="@drawable/ic_blank_icon"
+            style="@style/Base.MdListItem.Icon" />
+
+          <LinearLayout style="@style/Base.MdListItem.Wrapper">
+
+            <TextView
+              android:text="Two Line - Icon With Text"
+              style="@style/Base.MdListItem.Title.Left" />
+
+            <TextView
+              android:text="Subtitle"
+              style="@style/Base.MdListItem.Subtitle.Left" />
+          </LinearLayout>
+        </RelativeLayout>
+
+        <View style="@style/MdDivider" />
+
+        <!-- two line - avatar with text -->
+
+        <RelativeLayout
+          android:background="?attr/selectableItemBackground"
+          android:clickable="true"
+          style="@style/MdListItem.TwoLine.AvatarWithText">
+
+          <ImageView
+            app:srcCompat="@drawable/ic_blank_avatar"
+            style="@style/Base.MdListItem.Avatar" />
+
+          <LinearLayout style="@style/Base.MdListItem.Wrapper">
+
+            <TextView
+              android:text="Two Line - Avatar With Text"
+              style="@style/Base.MdListItem.Title.Left" />
+
+            <TextView
+              android:text="Subtitle"
+              style="@style/Base.MdListItem.Subtitle.Left" />
+          </LinearLayout>
+        </RelativeLayout>
+
+        <View style="@style/MdDivider" />
+
+        <!-- two line - avatar with text and icon -->
+
+        <RelativeLayout
+          android:background="?attr/selectableItemBackground"
+          android:clickable="true"
+          style="@style/MdListItem.TwoLine.AvatarWithTextAndIcon">
+
+          <ImageView
+            app:srcCompat="@drawable/ic_blank_avatar"
+            style="@style/Base.MdListItem.Avatar" />
+
+          <ImageView
+            app:srcCompat="@drawable/ic_blank_icon"
+            style="@style/Base.MdListItem.Icon.Right" />
+
+          <LinearLayout style="@style/Base.MdListItem.Wrapper">
+
+            <TextView
+              android:text="Two Line - Avatar With Text And Icon"
+              style="@style/Base.MdListItem.Title.LeftRight" />
+
+            <TextView
+              android:text="Subtitle"
+              style="@style/Base.MdListItem.Subtitle.LeftRight" />
+          </LinearLayout>
+        </RelativeLayout>
+
+        <View style="@style/MdDivider" />
       </LinearLayout>
     </LinearLayout>
   </ScrollView>
