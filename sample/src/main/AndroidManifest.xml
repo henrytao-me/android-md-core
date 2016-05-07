@@ -59,5 +59,8 @@
     <activity
       android:label="@string/title_activity_subheader"
       android:name=".activity.SubheaderActivity" />
+    <activity
+      android:label="@string/title_activity_list"
+      android:name=".activity.ListActivity" />
   </application>
 </manifest>

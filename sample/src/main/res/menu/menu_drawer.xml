@@ -145,10 +145,10 @@
         <!--<item-->
         <!--android:icon="@drawable/ic_blank_transparent"-->
         <!--android:title="Grid lists (x)" />-->
-        <!--<item-->
-        <!--android:id="@+id/menu_list"-->
-        <!--android:icon="@drawable/ic_blank_transparent"-->
-        <!--android:title="Lists" />-->
+        <item
+          android:id="@+id/menu_list"
+          android:icon="@drawable/ic_blank_transparent"
+          android:title="Lists" />
         <!--<item-->
         <!--android:icon="@drawable/ic_blank_transparent"-->
         <!--android:title="Lists: Controls (x)" />-->

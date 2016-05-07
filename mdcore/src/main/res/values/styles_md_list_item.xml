@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+
+  <style name="MdList">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:orientation">vertical</item>
+  </style>
+
+  <style name="MdListSpacing">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">@dimen/mdListItemSpacing</item>
+  </style>
+
+  <style name="MdListItem.SingleLine.TextOnly" parent="Base.MdListItem">
+    <item name="android:minHeight">@dimen/mdListItemHeight_sm</item>
+  </style>
+
+  <style name="MdListItem.SingleLine.IconWithText" parent="Base.MdListItem">
+    <item name="android:minHeight">@dimen/mdListItemHeight_sm</item>
+  </style>
+
+  <style name="MdListItem.SingleLine.AvatarWithText" parent="Base.MdListItem">
+    <item name="android:minHeight">@dimen/mdListItemHeight</item>
+  </style>
+
+  <style name="MdListItem.SingleLine.AvatarWithTextAndIcon" parent="Base.MdListItem">
+    <item name="android:minHeight">@dimen/mdListItemHeight</item>
+  </style>
+
+  <style name="MdListItem.TwoLine.TextOnly" parent="Base.MdListItem">
+    <item name="android:minHeight">@dimen/mdListItemHeight_lg</item>
+  </style>
+
+  <style name="MdListItem.TwoLine.IconWithText" parent="Base.MdListItem">
+    <item name="android:minHeight">@dimen/mdListItemHeight_lg</item>
+  </style>
+
+  <style name="MdListItem.TwoLine.AvatarWithText" parent="Base.MdListItem">
+    <item name="android:minHeight">@dimen/mdListItemHeight_lg</item>
+  </style>
+
+  <style name="MdListItem.TwoLine.AvatarWithTextAndIcon" parent="Base.MdListItem">
+    <item name="android:minHeight">@dimen/mdListItemHeight_lg</item>
+  </style>
+
+  <style name="MdListItem.ThreeLine.TextOnly" parent="Base.MdListItem">
+    <item name="android:minHeight">@dimen/mdListItemHeight_xlg</item>
+  </style>
+
+  <style name="MdListItem.ThreeLine.IconWithText" parent="Base.MdListItem">
+    <item name="android:minHeight">@dimen/mdListItemHeight_xlg</item>
+  </style>
+
+  <style name="MdListItem.ThreeLine.AvatarWithText" parent="Base.MdListItem">
+    <item name="android:minHeight">@dimen/mdListItemHeight_xlg</item>
+  </style>
+
+  <style name="MdListItem.ThreeLine.AvatarWithTextAndIcon" parent="Base.MdListItem">
+    <item name="android:minHeight">@dimen/mdListItemHeight_xlg</item>
+  </style>
+
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+  <!-- Base -->
+  <!-- ////////////////////////////////////////////////////////////////////////// -->
+
+  <style name="Base.MdListItem" parent="">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+  </style>
+
+  <style name="Base.MdListItem.Wrapper" parent="">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:orientation">vertical</item>
+    <item name="android:layout_centerVertical">true</item>
+    <item name="android:layout_marginTop">@dimen/mdListItemSpacing</item>
+    <item name="android:layout_marginBottom">@dimen/mdListItemSpacing</item>
+  </style>
+
+  <!-- Title -->
+
+  <style name="Base.MdListItem.Title" parent="MdText.Subhead1.SingleLine">
+    <item name="android:layout_marginTop">@dimen/mdListItemLineSpacingExtra</item>
+    <item name="android:layout_marginBottom">@dimen/mdListItemLineSpacingExtra</item>
+    <item name="android:lineSpacingExtra">@dimen/mdListItemLineSpacingExtra</item>
+    <item name="android:paddingLeft">@dimen/mdListItemPaddingLeft</item>
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight</item>
+    <item name="android:layout_centerVertical">true</item>
+  </style>
+
+  <style name="Base.MdListItem.Title.Left">
+    <item name="android:paddingLeft">@dimen/mdListItemPaddingLeft_lg</item>
+  </style>
+
+  <style name="Base.MdListItem.Title.Right">
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight_lg</item>
+  </style>
+
+  <style name="Base.MdListItem.Title.RightLarge">
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight_xlg</item>
+  </style>
+
+  <style name="Base.MdListItem.Title.LeftRight" parent="Base.MdListItem.Title.Left">
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight_lg</item>
+  </style>
+
+  <style name="Base.MdListItem.Title.LeftRightLarge" parent="Base.MdListItem.Title.Left">
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight_xlg</item>
+  </style>
+
+  <!-- MenuTitle -->
+
+  <style name="Base.MdListItem.MenuTitle" parent="MdText.Body2.SingleLine">
+    <item name="android:layout_marginTop">@dimen/mdListItemLineSpacingExtra</item>
+    <item name="android:layout_marginBottom">@dimen/mdListItemLineSpacingExtra</item>
+    <item name="android:lineSpacingExtra">@dimen/mdListItemLineSpacingExtra</item>
+    <item name="android:paddingLeft">@dimen/mdListItemPaddingLeft</item>
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight</item>
+    <item name="android:layout_centerVertical">true</item>
+  </style>
+
+  <style name="Base.MdListItem.MenuTitle.Left">
+    <item name="android:paddingLeft">@dimen/mdListItemPaddingLeft_lg</item>
+  </style>
+
+  <style name="Base.MdListItem.MenuTitle.Right">
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight_lg</item>
+  </style>
+
+  <style name="Base.MdListItem.MenuTitle.RightLarge">
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight_xlg</item>
+  </style>
+
+  <style name="Base.MdListItem.MenuTitle.LeftRight" parent="Base.MdListItem.MenuTitle.Left">
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight_lg</item>
+  </style>
+
+  <style name="Base.MdListItem.MenuTitle.LeftRightLarge" parent="Base.MdListItem.MenuTitle.Left">
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight_xlg</item>
+  </style>
+
+  <!-- Subtitle -->
+
+  <style name="Base.MdListItem.Subtitle" parent="MdText.Body1.SingleLine">
+    <item name="android:textColor">?attr/mdTextColorSecondary_backgroundPalette</item>
+    <item name="android:layout_marginBottom">@dimen/mdListItemLineSpacingExtra</item>
+    <item name="android:lineSpacingExtra">@dimen/mdListItemLineSpacingExtra</item>
+    <item name="android:paddingLeft">@dimen/mdListItemPaddingLeft</item>
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight</item>
+    <item name="android:layout_centerVertical">true</item>
+  </style>
+
+  <style name="Base.MdListItem.Subtitle.Left">
+    <item name="android:paddingLeft">@dimen/mdListItemPaddingLeft_lg</item>
+  </style>
+
+  <style name="Base.MdListItem.Subtitle.Right">
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight_lg</item>
+  </style>
+
+  <style name="Base.MdListItem.Subtitle.RightLarge">
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight_xlg</item>
+  </style>
+
+  <style name="Base.MdListItem.Subtitle.LeftRight" parent="Base.MdListItem.Subtitle.Left">
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight_lg</item>
+  </style>
+
+  <style name="Base.MdListItem.Subtitle.LeftRightLarge" parent="Base.MdListItem.Subtitle.Left">
+    <item name="android:paddingRight">@dimen/mdListItemPaddingRight_xlg</item>
+  </style>
+
+  <!-- Icon -->
+
+  <style name="Base.MdListItem.Icon" parent="">
+    <item name="android:scaleType">fitXY</item>
+    <item name="android:layout_width">@dimen/mdListIconSize</item>
+    <item name="android:layout_height">@dimen/mdListIconSize</item>
+    <item name="android:paddingTop">@dimen/mdListIconPadding</item>
+    <item name="android:paddingLeft">@dimen/mdListIconPadding</item>
+    <item name="android:paddingRight">@dimen/mdListIconPadding</item>
+    <item name="android:paddingBottom">@dimen/mdListIconPadding</item>
+    <item name="android:layout_centerVertical">true</item>
+    <item name="android:layout_marginLeft">4dp</item>
+    <item name="android:layout_marginRight">4dp</item>
+  </style>
+
+  <style name="Base.MdListItem.Icon.Top">
+    <item name="android:layout_centerVertical">false</item>
+    <item name="android:layout_marginTop">4dp</item>
+    <item name="android:layout_marginBottom">4dp</item>
+  </style>
+
+  <style name="Base.MdListItem.Icon.Right">
+    <item name="android:layout_alignParentRight">true</item>
+  </style>
+
+  <style name="Base.MdListItem.Icon.TopRight" parent="Base.MdListItem.Icon.Top">
+    <item name="android:layout_alignParentRight">true</item>
+  </style>
+
+  <!-- Avatar -->
+
+  <style name="Base.MdListItem.Avatar" parent="">
+    <item name="android:scaleType">fitXY</item>
+    <item name="android:layout_width">@dimen/mdListAvatarSize</item>
+    <item name="android:layout_height">@dimen/mdListAvatarSize</item>
+    <item name="android:paddingTop">@dimen/mdListAvatarPadding</item>
+    <item name="android:paddingLeft">@dimen/mdListAvatarPadding</item>
+    <item name="android:paddingRight">@dimen/mdListAvatarPadding</item>
+    <item name="android:paddingBottom">@dimen/mdListAvatarPadding</item>
+    <item name="android:layout_centerVertical">true</item>
+    <item name="android:layout_marginLeft">@dimen/mdListItemPaddingLeft</item>
+    <item name="android:layout_marginRight">@dimen/mdListItemPaddingLeft</item>
+  </style>
+
+  <style name="Base.MdListItem.Avatar.Top">
+    <item name="android:layout_centerVertical">false</item>
+    <item name="android:layout_marginTop">@dimen/mdListItemPaddingLeft</item>
+    <item name="android:layout_marginBottom">@dimen/mdListItemPaddingLeft</item>
+  </style>
+
+  <style name="Base.MdListItem.Avatar.Right">
+    <item name="android:layout_alignParentRight">true</item>
+  </style>
+
+  <style name="Base.MdListItem.Avatar.TopRight" parent="Base.MdListItem.Avatar.Top">
+    <item name="android:layout_alignParentRight">true</item>
+  </style>
+</resources>

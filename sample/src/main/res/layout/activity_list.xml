@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2016 "Henry Tao <hi@henrytao.me>"
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
+
+  <android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    style="@style/MdToolbar" />
+
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:clipToPadding="true"
+    android:paddingTop="@dimen/mdListItemSpacing">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <!-- custom -->
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- single line - text only -->
+
+        <RelativeLayout
+          android:background="?attr/selectableItemBackground"
+          android:clickable="true"
+          style="@style/MdListItem.SingleLine.TextOnly">
+
+          <TextView
+            android:text="Single Line - Text Only"
+            style="@style/Base.MdListItem.Title" />
+        </RelativeLayout>
+
+        <View style="@style/MdDivider" />
+
+        <!-- single line - icon with text -->
+
+        <RelativeLayout
+          android:background="?attr/selectableItemBackground"
+          android:clickable="true"
+          style="@style/MdListItem.SingleLine.IconWithText">
+
+          <ImageView
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            app:srcCompat="@drawable/ic_blank_icon"
+            style="@style/Base.MdListItem.Icon" />
+
+          <TextView
+            android:text="Single Line - Icon With Text"
+            style="@style/Base.MdListItem.Title.Left" />
+        </RelativeLayout>
+
+        <View style="@style/MdDivider" />
+
+        <!-- single line - avatar with text -->
+
+        <RelativeLayout
+          android:background="?attr/selectableItemBackground"
+          android:clickable="true"
+          style="@style/MdListItem.SingleLine.AvatarWithText">
+
+          <ImageView
+            app:srcCompat="@drawable/ic_blank_avatar"
+            style="@style/Base.MdListItem.Avatar" />
+
+          <TextView
+            android:text="Single Line - Avatar With Text"
+            style="@style/Base.MdListItem.Title.Left" />
+        </RelativeLayout>
+
+        <View style="@style/MdDivider" />
+
+        <!-- single line - avatar with text and icon -->
+
+        <RelativeLayout
+          android:background="?attr/selectableItemBackground"
+          android:clickable="true"
+          style="@style/MdListItem.SingleLine.AvatarWithText">
+
+          <ImageView
+            app:srcCompat="@drawable/ic_blank_avatar"
+            style="@style/Base.MdListItem.Avatar" />
+
+          <ImageView
+            app:srcCompat="@drawable/ic_blank_icon"
+            style="@style/Base.MdListItem.Icon.Right" />
+
+          <TextView
+            android:text="Single Line - Avatar With Text And Icon"
+            style="@style/Base.MdListItem.Title.LeftRight" />
+        </RelativeLayout>
+
+        <View style="@style/MdDivider" />
+      </LinearLayout>
+    </LinearLayout>
+  </ScrollView>
+</LinearLayout>
