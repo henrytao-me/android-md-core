@@ -22,10 +22,4 @@
     android:icon="@drawable/ic_palette_black_24dp"
     android:title="@string/text_themes"
     app:showAsAction="always" />
-
-  <item
-    android:id="@+id/menu_item_right_navigation"
-    android:icon="@drawable/ic_google"
-    android:title="@string/text_google"
-    app:showAsAction="always" />
 </menu>

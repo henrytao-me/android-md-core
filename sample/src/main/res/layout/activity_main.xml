@@ -34,17 +34,17 @@
 
       <TextView
         android:text="MdCore is on the left"
-        android:textColor="?attr/mdTextColorHint_backgroundPalette"
+        android:textColor="?attr/mdTextColorSecondary_backgroundPalette"
         style="@style/MdText.Subhead1" />
 
       <TextView
         android:text="Default material is on the right"
-        android:textColor="?attr/mdTextColorHint_backgroundPalette"
+        android:textColor="?attr/mdTextColorSecondary_backgroundPalette"
         style="@style/MdText.Subhead1" />
 
       <TextView
         android:text="Enjoy!"
-        android:textColor="?attr/mdTextColorHint_backgroundPalette"
+        android:textColor="?attr/mdTextColorSecondary_backgroundPalette"
         style="@style/MdText.Subhead1" />
     </LinearLayout>
 

@@ -14,18 +14,17 @@
   ~ limitations under the License.
   -->
 
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
 
-  <item
-    android:id="@+id/menu_item_palette"
-    android:icon="@drawable/ic_palette_black_24dp"
-    android:title="@string/text_themes"
-    app:showAsAction="always" />
+  <TextView
+    android:text="Pick your favorite color"
+    style="@style/MdSubHeader.List" />
 
-  <item
-    android:id="@+id/menu_item_right_navigation"
-    android:icon="@drawable/ic_google"
-    android:title="@string/text_google"
-    app:showAsAction="always" />
-</menu>
+  <android.support.v7.widget.RecyclerView
+    android:id="@android:id/list"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+</LinearLayout>

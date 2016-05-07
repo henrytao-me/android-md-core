@@ -27,7 +27,6 @@ import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 
@@ -66,12 +65,6 @@ public class MainActivity extends BaseActivity {
   }
 
   @Override
-  public boolean onCreateOptionsMenu(Menu menu) {
-    getMenuInflater().inflate(R.menu.menu_main, menu);
-    return super.onCreateOptionsMenu(menu);
-  }
-
-  @Override
   public boolean onOptionsItemSelected(MenuItem item) {
     switch (item.getItemId()) {
       case R.id.menu_item_right_navigation:
@@ -89,6 +82,11 @@ public class MainActivity extends BaseActivity {
   @Override
   protected int getMdCoreLayout() {
     return R.layout.activity_main;
+  }
+
+  @Override
+  protected int getOptionsMenu() {
+    return R.menu.menu_main;
   }
 
   @Override
