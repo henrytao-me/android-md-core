@@ -14,7 +14,7 @@
   ~ limitations under the License.
   -->
 
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
   <!-- ////////////////////////////////////////////////////////////////////////// -->
   <!-- List -->
@@ -48,32 +48,42 @@
   <!-- Base -->
   <!-- ////////////////////////////////////////////////////////////////////////// -->
 
-  <style name="Base.MdSubHeader" parent="MdText.Body2.SingleLine">
+  <style name="BaseLd.Base.MdSubHeader" parent="MdText.Body2.SingleLine">
+    <item name="android:gravity">left|center_vertical</item>
+  </style>
+
+  <style name="Base.MdSubHeader" parent="BaseLd.Base.MdSubHeader">
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">@dimen/mdListItemHeight_sm</item>
     <item name="android:textColor">?attr/mdTextColorSecondary_backgroundPalette</item>
-    <item name="android:gravity">left|center_vertical</item>
     <item name="android:paddingLeft">@dimen/mdListItemPaddingLeft</item>
+    <item name="android:paddingStart" tools:ignore="NewApi">@dimen/mdListItemPaddingLeft</item>
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight</item>
+    <item name="android:paddingEnd" tools:ignore="NewApi">@dimen/mdListItemPaddingRight</item>
   </style>
 
   <style name="Base.MdSubHeader.Left">
     <item name="android:paddingLeft">@dimen/mdListItemPaddingLeft_lg</item>
+    <item name="android:paddingStart" tools:ignore="NewApi">@dimen/mdListItemPaddingLeft_lg</item>
   </style>
 
   <style name="Base.MdSubHeader.Right">
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight_lg</item>
+    <item name="android:paddingEnd" tools:ignore="NewApi">@dimen/mdListItemPaddingRight_lg</item>
   </style>
 
   <style name="Base.MdSubHeader.RightLarge">
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight_xlg</item>
+    <item name="android:paddingEnd" tools:ignore="NewApi">@dimen/mdListItemPaddingRight_xlg</item>
   </style>
 
   <style name="Base.MdSubHeader.LeftRight" parent="Base.MdSubHeader.Left">
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight_lg</item>
+    <item name="android:paddingEnd" tools:ignore="NewApi">@dimen/mdListItemPaddingRight_lg</item>
   </style>
 
   <style name="Base.MdSubHeader.LeftRightLarge" parent="Base.MdSubHeader.Left">
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight_xlg</item>
+    <item name="android:paddingEnd" tools:ignore="NewApi">@dimen/mdListItemPaddingRight_xlg</item>
   </style>
 </resources>
