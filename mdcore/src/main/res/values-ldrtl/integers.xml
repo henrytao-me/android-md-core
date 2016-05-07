@@ -16,7 +16,6 @@
 
 <resources>
 
-  <style name="BaseLd.MdCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
-    <item name="android:gravity">right|center_vertical</item>
-  </style>
+  <integer name="gravity_start_center_vertical">21</integer>
+  <integer name="gravity_end_center_vertical">19</integer>
 </resources>

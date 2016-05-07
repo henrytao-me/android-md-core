@@ -48,13 +48,10 @@
   <!-- Base -->
   <!-- ////////////////////////////////////////////////////////////////////////// -->
 
-  <style name="BaseLd.Base.MdSubHeader" parent="MdText.Body2.SingleLine">
-    <item name="android:gravity">left|center_vertical</item>
-  </style>
-
-  <style name="Base.MdSubHeader" parent="BaseLd.Base.MdSubHeader">
+  <style name="Base.MdSubHeader" parent="MdText.Body2.SingleLine">
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">@dimen/mdListItemHeight_sm</item>
+    <item name="android:gravity">@integer/gravity_start_center_vertical</item>
     <item name="android:textColor">?attr/mdTextColorSecondary_backgroundPalette</item>
     <item name="android:paddingLeft">@dimen/mdListItemPaddingLeft</item>
     <item name="android:paddingStart" tools:ignore="NewApi">@dimen/mdListItemPaddingLeft</item>

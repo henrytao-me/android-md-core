@@ -18,9 +18,10 @@
 
   <attr name="MdCheckBoxStyle" format="reference" />
 
-  <style name="MdCheckBox" parent="BaseLd.MdCheckBox">
+  <style name="MdCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
     <item name="android:layout_width">wrap_content</item>
     <item name="android:layout_height">wrap_content</item>
+    <item name="android:gravity">@integer/gravity_start_center_vertical</item>
     <item name="android:minHeight">48dp</item>
     <item name="android:minWidth">42dp</item>
     <item name="android:drawablePadding">4dp</item>
@@ -28,13 +29,5 @@
     <item name="android:paddingLeft">9dp</item>
     <item name="android:paddingRight">9dp</item>
     <item name="android:paddingBottom">9dp</item>
-  </style>
-
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-  <!-- Base -->
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-
-  <style name="BaseLd.MdCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
-    <item name="android:gravity">left|center_vertical</item>
   </style>
 </resources>
