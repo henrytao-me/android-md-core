@@ -63,6 +63,8 @@
   <dimen name="mdListItemHeight_lg">72dp</dimen>
   <dimen name="mdListItemHeight_xlg">88dp</dimen>
 
+  <dimen name="mdListItemIconMargin">4dp</dimen>
+
   <dimen name="mdListItemPaddingLeft">16dp</dimen>
   <dimen name="mdListItemPaddingLeft_lg">72dp</dimen>
   <dimen name="mdListItemPaddingRight">16dp</dimen>
@@ -81,4 +83,6 @@
   <dimen name="mdActionBarSize">56dp</dimen>
   <dimen name="mdSecondaryActionBarSize">48dp</dimen>
   <dimen name="mdSecondaryActionBarSizeWithIcon">72dp</dimen>
+
+  <dimen name="mdTitleMarginStart">16dp</dimen>
 </resources>

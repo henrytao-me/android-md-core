@@ -197,8 +197,8 @@
     <item name="android:paddingRight">@dimen/mdListIconPadding</item>
     <item name="android:paddingBottom">@dimen/mdListIconPadding</item>
     <item name="android:layout_centerVertical">true</item>
-    <item name="android:layout_marginLeft">4dp</item>
-    <item name="android:layout_marginRight">4dp</item>
+    <item name="android:layout_marginLeft">@dimen/mdListItemIconMargin</item>
+    <item name="android:layout_marginRight">@dimen/mdListItemIconMargin</item>
   </style>
 
   <style name="Base.MdListItem.Icon.Top">
