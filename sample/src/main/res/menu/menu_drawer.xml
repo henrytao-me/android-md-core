@@ -170,10 +170,10 @@
         <!--<item-->
         <!--android:icon="@drawable/ic_blank_transparent"-->
         <!--android:title="Snackbars &amp; toasts (x)" />-->
-        <!--<item-->
-        <!--android:id="@+id/menu_subheader"-->
-        <!--android:icon="@drawable/ic_blank_transparent"-->
-        <!--android:title="Subheaders" />-->
+        <item
+          android:id="@+id/menu_subheader"
+          android:icon="@drawable/ic_blank_transparent"
+          android:title="Subheaders" />
         <!--<item-->
         <!--android:icon="@drawable/ic_blank_transparent"-->
         <!--android:title="Steppers (x)" />-->

@@ -137,6 +137,9 @@ public class MainActivity extends BaseActivity {
       case R.id.menu_divider:
         intent = new Intent(this, DividerActivity.class);
         break;
+      case R.id.menu_subheader:
+        intent = new Intent(this, SubheaderActivity.class);
+        break;
     }
     if (intent != null) {
       intent.putExtra(Constants.Extra.IS_MD_CORE_ENABLED, type == GravityCompat.START);
