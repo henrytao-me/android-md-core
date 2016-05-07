@@ -29,6 +29,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -108,6 +109,11 @@ public class MainActivity extends BaseActivity {
 
     vNavigationViewLeft.setNavigationItemSelectedListener(item -> onNavigationItemSelected(GravityCompat.START, item));
     vNavigationViewRight.setNavigationItemSelectedListener(item -> onNavigationItemSelected(GravityCompat.END, item));
+
+    ImageView leftLogo = (ImageView) vNavigationViewLeft.getHeaderView(0).findViewById(R.id.google_logo);
+    MdCompat.supportDrawableTint(this, leftLogo.getDrawable(), MdCompat.Palette.BACKGROUND);
+    ImageView rightLogo = (ImageView) vNavigationViewRight.getHeaderView(0).findViewById(R.id.google_logo);
+    MdCompat.supportDrawableTint(this, rightLogo.getDrawable(), MdCompat.Palette.BACKGROUND);
   }
 
   private boolean onNavigationItemSelected(@Gravity int type, MenuItem item) {
