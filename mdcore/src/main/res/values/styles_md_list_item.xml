@@ -14,7 +14,7 @@
   ~ limitations under the License.
   -->
 
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
   <style name="MdList">
     <item name="android:layout_width">match_parent</item>
@@ -100,28 +100,35 @@
     <item name="android:layout_marginBottom">@dimen/mdListItemLineSpacingExtra</item>
     <item name="android:lineSpacingExtra">@dimen/mdListItemLineSpacingExtra</item>
     <item name="android:paddingLeft">@dimen/mdListItemPaddingLeft</item>
+    <item name="android:paddingStart" tools:ignore="NewApi">@dimen/mdListItemPaddingLeft</item>
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight</item>
+    <item name="android:paddingEnd" tools:ignore="NewApi">@dimen/mdListItemPaddingRight</item>
     <item name="android:layout_centerVertical">true</item>
   </style>
 
   <style name="Base.MdListItem.Title.Left">
     <item name="android:paddingLeft">@dimen/mdListItemPaddingLeft_lg</item>
+    <item name="android:paddingStart" tools:ignore="NewApi">@dimen/mdListItemPaddingLeft_lg</item>
   </style>
 
   <style name="Base.MdListItem.Title.Right">
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight_lg</item>
+    <item name="android:paddingEnd" tools:ignore="NewApi">@dimen/mdListItemPaddingRight_lg</item>
   </style>
 
   <style name="Base.MdListItem.Title.RightLarge">
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight_xlg</item>
+    <item name="android:paddingEnd" tools:ignore="NewApi">@dimen/mdListItemPaddingRight_xlg</item>
   </style>
 
   <style name="Base.MdListItem.Title.LeftRight" parent="Base.MdListItem.Title.Left">
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight_lg</item>
+    <item name="android:paddingEnd" tools:ignore="NewApi">@dimen/mdListItemPaddingRight_lg</item>
   </style>
 
   <style name="Base.MdListItem.Title.LeftRightLarge" parent="Base.MdListItem.Title.Left">
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight_xlg</item>
+    <item name="android:paddingEnd" tools:ignore="NewApi">@dimen/mdListItemPaddingRight_xlg</item>
   </style>
 
   <!-- MenuTitle -->
@@ -131,28 +138,35 @@
     <item name="android:layout_marginBottom">@dimen/mdListItemLineSpacingExtra</item>
     <item name="android:lineSpacingExtra">@dimen/mdListItemLineSpacingExtra</item>
     <item name="android:paddingLeft">@dimen/mdListItemPaddingLeft</item>
+    <item name="android:paddingStart" tools:ignore="NewApi">@dimen/mdListItemPaddingLeft</item>
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight</item>
+    <item name="android:paddingEnd" tools:ignore="NewApi">@dimen/mdListItemPaddingRight</item>
     <item name="android:layout_centerVertical">true</item>
   </style>
 
   <style name="Base.MdListItem.MenuTitle.Left">
     <item name="android:paddingLeft">@dimen/mdListItemPaddingLeft_lg</item>
+    <item name="android:paddingStart" tools:ignore="NewApi">@dimen/mdListItemPaddingLeft_lg</item>
   </style>
 
   <style name="Base.MdListItem.MenuTitle.Right">
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight_lg</item>
+    <item name="android:paddingEnd" tools:ignore="NewApi">@dimen/mdListItemPaddingRight_lg</item>
   </style>
 
   <style name="Base.MdListItem.MenuTitle.RightLarge">
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight_xlg</item>
+    <item name="android:paddingEnd" tools:ignore="NewApi">@dimen/mdListItemPaddingRight_xlg</item>
   </style>
 
   <style name="Base.MdListItem.MenuTitle.LeftRight" parent="Base.MdListItem.MenuTitle.Left">
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight_lg</item>
+    <item name="android:paddingEnd" tools:ignore="NewApi">@dimen/mdListItemPaddingRight_lg</item>
   </style>
 
   <style name="Base.MdListItem.MenuTitle.LeftRightLarge" parent="Base.MdListItem.MenuTitle.Left">
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight_xlg</item>
+    <item name="android:paddingEnd" tools:ignore="NewApi">@dimen/mdListItemPaddingRight_xlg</item>
   </style>
 
   <!-- Subtitle -->
@@ -162,28 +176,35 @@
     <item name="android:layout_marginBottom">@dimen/mdListItemLineSpacingExtra</item>
     <item name="android:lineSpacingExtra">@dimen/mdListItemLineSpacingExtra</item>
     <item name="android:paddingLeft">@dimen/mdListItemPaddingLeft</item>
+    <item name="android:paddingStart" tools:ignore="NewApi">@dimen/mdListItemPaddingLeft</item>
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight</item>
+    <item name="android:paddingEnd" tools:ignore="NewApi">@dimen/mdListItemPaddingRight</item>
     <item name="android:layout_centerVertical">true</item>
   </style>
 
   <style name="Base.MdListItem.Subtitle.Left">
     <item name="android:paddingLeft">@dimen/mdListItemPaddingLeft_lg</item>
+    <item name="android:paddingStart" tools:ignore="NewApi">@dimen/mdListItemPaddingLeft_lg</item>
   </style>
 
   <style name="Base.MdListItem.Subtitle.Right">
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight_lg</item>
+    <item name="android:paddingEnd" tools:ignore="NewApi">@dimen/mdListItemPaddingRight_lg</item>
   </style>
 
   <style name="Base.MdListItem.Subtitle.RightLarge">
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight_xlg</item>
+    <item name="android:paddingEnd" tools:ignore="NewApi">@dimen/mdListItemPaddingRight_xlg</item>
   </style>
 
   <style name="Base.MdListItem.Subtitle.LeftRight" parent="Base.MdListItem.Subtitle.Left">
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight_lg</item>
+    <item name="android:paddingEnd" tools:ignore="NewApi">@dimen/mdListItemPaddingRight_lg</item>
   </style>
 
   <style name="Base.MdListItem.Subtitle.LeftRightLarge" parent="Base.MdListItem.Subtitle.Left">
     <item name="android:paddingRight">@dimen/mdListItemPaddingRight_xlg</item>
+    <item name="android:paddingEnd" tools:ignore="NewApi">@dimen/mdListItemPaddingRight_xlg</item>
   </style>
 
   <!-- Icon -->
@@ -194,11 +215,15 @@
     <item name="android:layout_height">@dimen/mdListIconSize</item>
     <item name="android:paddingTop">@dimen/mdListIconPadding</item>
     <item name="android:paddingLeft">@dimen/mdListIconPadding</item>
+    <item name="android:paddingStart" tools:ignore="NewApi">@dimen/mdListIconPadding</item>
     <item name="android:paddingRight">@dimen/mdListIconPadding</item>
+    <item name="android:paddingEnd" tools:ignore="NewApi">@dimen/mdListIconPadding</item>
     <item name="android:paddingBottom">@dimen/mdListIconPadding</item>
     <item name="android:layout_centerVertical">true</item>
     <item name="android:layout_marginLeft">@dimen/mdListItemIconMargin</item>
+    <item name="android:layout_marginStart" tools:ignore="NewApi">@dimen/mdListItemIconMargin</item>
     <item name="android:layout_marginRight">@dimen/mdListItemIconMargin</item>
+    <item name="android:layout_marginEnd" tools:ignore="NewApi">@dimen/mdListItemIconMargin</item>
   </style>
 
   <style name="Base.MdListItem.Icon.Top">
@@ -209,10 +234,12 @@
 
   <style name="Base.MdListItem.Icon.Right">
     <item name="android:layout_alignParentRight">true</item>
+    <item name="android:layout_alignParentEnd" tools:ignore="NewApi">true</item>
   </style>
 
   <style name="Base.MdListItem.Icon.TopRight" parent="Base.MdListItem.Icon.Top">
     <item name="android:layout_alignParentRight">true</item>
+    <item name="android:layout_alignParentEnd" tools:ignore="NewApi">true</item>
   </style>
 
   <!-- Avatar -->
@@ -223,11 +250,15 @@
     <item name="android:layout_height">@dimen/mdListAvatarSize</item>
     <item name="android:paddingTop">@dimen/mdListAvatarPadding</item>
     <item name="android:paddingLeft">@dimen/mdListAvatarPadding</item>
+    <item name="android:paddingStart" tools:ignore="NewApi">@dimen/mdListAvatarPadding</item>
     <item name="android:paddingRight">@dimen/mdListAvatarPadding</item>
+    <item name="android:paddingEnd" tools:ignore="NewApi">@dimen/mdListAvatarPadding</item>
     <item name="android:paddingBottom">@dimen/mdListAvatarPadding</item>
     <item name="android:layout_centerVertical">true</item>
     <item name="android:layout_marginLeft">@dimen/mdListItemPaddingLeft</item>
+    <item name="android:layout_marginStart" tools:ignore="NewApi">@dimen/mdListItemPaddingLeft</item>
     <item name="android:layout_marginRight">@dimen/mdListItemPaddingLeft</item>
+    <item name="android:layout_marginEnd" tools:ignore="NewApi">@dimen/mdListItemPaddingLeft</item>
   </style>
 
   <style name="Base.MdListItem.Avatar.Top">
@@ -238,9 +269,11 @@
 
   <style name="Base.MdListItem.Avatar.Right">
     <item name="android:layout_alignParentRight">true</item>
+    <item name="android:layout_alignParentEnd" tools:ignore="NewApi">true</item>
   </style>
 
   <style name="Base.MdListItem.Avatar.TopRight" parent="Base.MdListItem.Avatar.Top">
     <item name="android:layout_alignParentRight">true</item>
+    <item name="android:layout_alignParentEnd" tools:ignore="NewApi">true</item>
   </style>
 </resources>
