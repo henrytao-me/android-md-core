@@ -65,5 +65,8 @@
     <activity
       android:label="@string/title_activity_text_field"
       android:name=".activity.TextFieldActivity" />
+    <activity
+      android:label="@string/text_info"
+      android:name=".activity.InfoActivity" />
   </application>
 </manifest>
