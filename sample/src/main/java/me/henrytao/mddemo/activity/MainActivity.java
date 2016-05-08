@@ -85,7 +85,7 @@ public class MainActivity extends BaseActivity {
   }
 
   @Override
-  protected int getOptionsMenu() {
+  protected int getOptionsMenuId() {
     return R.menu.menu_main;
   }
 
@@ -146,6 +146,9 @@ public class MainActivity extends BaseActivity {
         break;
       case R.id.menu_list:
         intent = new Intent(this, ListActivity.class);
+        break;
+      case R.id.menu_text_field:
+        intent = new Intent(this, TextFieldActivity.class);
         break;
     }
     if (intent != null) {

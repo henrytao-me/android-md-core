@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!--
+<!--
   ~ Copyright 2016 "Henry Tao <hi@henrytao.me>"
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,12 +14,9 @@
   ~ limitations under the License.
   -->
 
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto">
-
-  <item
-    android:id="@+id/menu_item_palette"
-    android:icon="@drawable/ic_palette_black_24dp"
-    android:title="@string/text_themes"
-    app:showAsAction="always" />
-</menu>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+  android:drawable="@android:color/transparent"
+  android:insetBottom="@dimen/abc_edit_text_inset_bottom_material"
+  android:insetLeft="@dimen/abc_edit_text_inset_horizontal_material"
+  android:insetRight="@dimen/abc_edit_text_inset_horizontal_material"
+  android:insetTop="@dimen/abc_edit_text_inset_top_material" />

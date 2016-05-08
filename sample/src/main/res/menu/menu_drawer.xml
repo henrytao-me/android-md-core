@@ -180,10 +180,10 @@
         <!--<item-->
         <!--android:icon="@drawable/ic_blank_transparent"-->
         <!--android:title="Tabs (x)" />-->
-        <!--<item-->
-        <!--android:id="@+id/menu_text_field"-->
-        <!--android:icon="@drawable/ic_blank_transparent"-->
-        <!--android:title="Text fields" />-->
+        <item
+          android:id="@+id/menu_text_field"
+          android:icon="@drawable/ic_blank_transparent"
+          android:title="Text fields" />
         <!--<item-->
         <!--android:id="@+id/menu_toolbar"-->
         <!--android:icon="@drawable/ic_blank_transparent"-->

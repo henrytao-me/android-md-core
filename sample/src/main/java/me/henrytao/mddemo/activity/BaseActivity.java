@@ -18,6 +18,7 @@ package me.henrytao.mddemo.activity;
 
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
+import android.support.annotation.MenuRes;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomSheetDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -46,8 +47,8 @@ public abstract class BaseActivity extends AppCompatActivity {
 
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
-    if (getOptionsMenu() > 0) {
-      getMenuInflater().inflate(getOptionsMenu(), menu);
+    if (getOptionsMenuId() > 0) {
+      getMenuInflater().inflate(getOptionsMenuId(), menu);
     }
     return super.onCreateOptionsMenu(menu);
   }
@@ -77,8 +78,8 @@ public abstract class BaseActivity extends AppCompatActivity {
     return this instanceof MainActivity || getIntent().getBooleanExtra(Constants.Extra.IS_MD_CORE_ENABLED, false);
   }
 
-  protected int getOptionsMenu() {
-    //return R.menu.menu_default;
+  @MenuRes
+  protected int getOptionsMenuId() {
     return 0;
   }
 
