@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~ Copyright 2016 "Henry Tao <hi@henrytao.me>"
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -18,13 +18,14 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:orientation="vertical"
-  android:paddingLeft="@dimen/mdDialogPadding_inset"
-  android:paddingRight="@dimen/mdDialogPadding_inset"
   android:paddingTop="@dimen/mdDialogPadding_inset">
 
   <CheckBox
     android:id="@+id/checkbox"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:minWidth="48dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
     android:text="Check here to enable positive button" />
 </LinearLayout>

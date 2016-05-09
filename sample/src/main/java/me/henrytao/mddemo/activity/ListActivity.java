@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 "Henry Tao <hi@henrytao.me>"
+ * Copyright 2016 "Henry Tao <hi@henrytao.me>"
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,19 +16,39 @@
 
 package me.henrytao.mddemo.activity;
 
-import android.app.Activity;
-import android.content.Intent;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.widget.Toolbar;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import me.henrytao.mddemo.R;
 
-public class ListActivity extends BaseSimpleActivity {
+/**
+ * Created by henrytao on 5/5/16.
+ */
+public class ListActivity extends BaseActivity {
 
-  public static Intent newIntent(Activity activity) {
-    return new Intent(activity, ListActivity.class);
+  @Bind(R.id.toolbar)
+  Toolbar vToolbar;
+
+  @Override
+  protected int getDefaultLayout() {
+    return R.layout.activity_list;
   }
 
   @Override
-  public int getLayoutId() {
+  protected int getMdCoreLayout() {
     return R.layout.activity_list;
+  }
+
+  @Override
+  protected void onCreate(@Nullable Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    ButterKnife.bind(this);
+
+    setSupportActionBar(vToolbar);
+    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    vToolbar.setNavigationOnClickListener(v -> onBackPressed());
   }
 }

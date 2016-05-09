@@ -14,7 +14,7 @@
   ~ limitations under the License.
   -->
 
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
   <!-- ////////////////////////////////////////////////////////////////////////// -->
   <!-- Horizontal -->
@@ -28,22 +28,27 @@
 
   <style name="MdDivider.Left">
     <item name="android:layout_marginLeft">@dimen/mdListItemPaddingLeft_lg</item>
+    <item name="android:layout_marginStart" tools:ignore="NewApi">@dimen/mdListItemPaddingLeft_lg</item>
   </style>
 
   <style name="MdDivider.Right">
     <item name="android:layout_marginRight">@dimen/mdListItemPaddingRight_lg</item>
+    <item name="android:layout_marginEnd" tools:ignore="NewApi">@dimen/mdListItemPaddingRight_lg</item>
   </style>
 
   <style name="MdDivider.RightLarge">
     <item name="android:layout_marginRight">@dimen/mdListItemPaddingRight_xlg</item>
+    <item name="android:layout_marginEnd" tools:ignore="NewApi">@dimen/mdListItemPaddingRight_xlg</item>
   </style>
 
   <style name="MdDivider.LeftRight" parent="MdDivider.Left">
     <item name="android:layout_marginRight">@dimen/mdListItemPaddingRight_lg</item>
+    <item name="android:layout_marginEnd" tools:ignore="NewApi">@dimen/mdListItemPaddingRight_lg</item>
   </style>
 
   <style name="MdDivider.LeftRightLarge" parent="MdDivider.Left">
     <item name="android:layout_marginRight">@dimen/mdListItemPaddingRight_xlg</item>
+    <item name="android:layout_marginEnd" tools:ignore="NewApi">@dimen/mdListItemPaddingRight_xlg</item>
   </style>
 
   <!-- ////////////////////////////////////////////////////////////////////////// -->

@@ -26,12 +26,8 @@ ext {
       applicationId    : "me.henrytao.mdcoreinaction",
       minSdkVersion    : 8,
       targetSdkVersion : 23,
-      versionCode      : 11,
-      versionName      : "23.2.1.2"
-  ]
-
-  sample = [
-      minSdkVersion: 11
+      versionCode      : 12,
+      versionName      : "23.2.0.1"
   ]
 
   bintray = [
@@ -61,17 +57,11 @@ ext {
   dependencies = [
       "com.crashlytics.sdk.android:crashlytics": "com.crashlytics.sdk.android:crashlytics:2.5.2@aar",
 
-      "com.android.support:design"             : "com.android.support:design:23.2.1",
-      "com.android.support:appcompat-v7"       : "com.android.support:appcompat-v7:23.2.1",
-      "com.android.support:cardview-v7"        : "com.android.support:cardview-v7:23.2.1",
-      "com.android.support:recyclerview-v7"    : "com.android.support:recyclerview-v7:23.2.1",
+      "com.android.support:design"             : "com.android.support:design:23.2.0",
+      "com.android.support:appcompat-v7"       : "com.android.support:appcompat-v7:23.2.0",
+      "com.android.support:cardview-v7"        : "com.android.support:cardview-v7:23.2.0",
+      "com.android.support:recyclerview-v7"    : "com.android.support:recyclerview-v7:23.2.0",
 
-      "me.henrytao:recyclerview"               : "me.henrytao:recyclerview:2.0.0",
-      "me.henrytao:smooth-app-bar-layout"      : "me.henrytao:smooth-app-bar-layout:1.0.4",
-
-      "com.jakewharton:butterknife"            : "com.jakewharton:butterknife:7.0.1",
-
-      "io.reactivex:rxjava"                    : "io.reactivex:rxjava:1.0.14",
-      "io.reactivex:rxandroid"                 : "io.reactivex:rxandroid:1.0.1"
+      "com.jakewharton:butterknife"            : "com.jakewharton:butterknife:7.0.1"
   ]
 }

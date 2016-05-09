@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~ Copyright 2016 "Henry Tao <hi@henrytao.me>"
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -22,15 +22,17 @@
   <View
     android:id="@+id/translucent_status_holder"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/mdStatusBarSize" />
+    android:layout_height="@dimen/statusBarSizeInTranslucentMode" />
 
-  <me.henrytao.mdcore.widgets.MdIcon
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/mdIconSize"
-    android:layout_margin="@dimen/mdLayoutSpacing"
+  <ImageView
+    android:id="@+id/google_logo"
+    android:layout_width="96dp"
+    android:layout_height="48dp"
+    android:layout_gravity="@integer/gravity_start_center_vertical"
+    android:layout_margin="@dimen/mdListItemPaddingLeft"
     android:padding="0dp"
-    android:scaleType="fitStart"
-    android:src="@drawable/img_nav_google_logo" />
+    android:scaleType="fitXY"
+    android:src="@drawable/img_google_logo" />
 
   <View
     android:layout_height="@dimen/mdDividerSize_lg"

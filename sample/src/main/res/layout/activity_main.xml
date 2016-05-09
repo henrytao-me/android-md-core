@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2016 "Henry Tao <hi@henrytao.me>"
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/drawer_layout"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:fitsSystemWindows="@bool/isFitSystemWindows">
+
+  <android.support.design.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:gravity="center"
+      android:padding="@dimen/mdLayoutSpacing">
+
+      <TextView
+        android:text="MdCore is on the left"
+        android:textColor="?attr/mdTextColorSecondary_backgroundPalette"
+        style="@style/MdText.Subhead1" />
+
+      <TextView
+        android:text="Default material is on the right"
+        android:textColor="?attr/mdTextColorSecondary_backgroundPalette"
+        style="@style/MdText.Subhead1" />
+
+      <TextView
+        android:text="Enjoy!"
+        android:textColor="?attr/mdTextColorSecondary_backgroundPalette"
+        style="@style/MdText.Subhead1" />
+    </LinearLayout>
+
+    <android.support.design.widget.AppBarLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:layout_collapseMode="pin"
+        style="@style/MdToolbar" />
+    </android.support.design.widget.AppBarLayout>
+  </android.support.design.widget.CoordinatorLayout>
+
+  <android.support.design.widget.NavigationView
+    android:id="@+id/navigation_view_left"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="@bool/isFitSystemWindows"
+    app:headerLayout="@layout/drawer_header"
+    app:itemIconTint="?attr/mdTextColorPrimary_backgroundPalette"
+    app:itemTextColor="?attr/mdTextColorPrimary_backgroundPalette"
+    app:menu="@menu/menu_drawer" />
+
+  <android.support.design.widget.NavigationView
+    android:id="@+id/navigation_view_right"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="end"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="@bool/isFitSystemWindows"
+    app:headerLayout="@layout/drawer_header"
+    app:itemIconTint="?attr/mdTextColorPrimary_backgroundPalette"
+    app:itemTextColor="?attr/mdTextColorPrimary_backgroundPalette"
+    app:menu="@menu/menu_drawer" />
+</android.support.v4.widget.DrawerLayout>

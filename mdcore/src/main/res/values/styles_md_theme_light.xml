@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~ Copyright 2016 "Henry Tao <hi@henrytao.me>"
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -142,36 +142,15 @@
     <item name="mdColorDividerInverse_backgroundPalette_dark">@color/mdColorDivider_dark</item>
     <item name="mdColorDividerInverse_backgroundPalette_light">@color/mdColorDivider_dark</item>
 
-    <item name="MdButtonStyle">@style/MdButton</item>
-    <item name="MdButtonColoredStyle">@style/MdButton.Colored</item>
-    <item name="MdButtonBorderlessStyle">@style/MdButton.Borderless</item>
-    <item name="MdButtonBorderlessColoredStyle">@style/MdButton.Borderless.Colored</item>
-
-    <item name="MdFloatingActionButtonStyle">@style/MdFloatingActionButton</item>
+    <item name="mdDrawerArrowToggleColor">@color/mdIconColor_active_light</item>
 
     <item name="mdIconColor_primaryPalette">@color/md_icon_color_light</item>
     <item name="mdIconColor_accentPalette">@color/md_icon_color_dark</item>
     <item name="mdIconColor_warnPalette">@color/md_icon_color_dark</item>
     <item name="mdIconColor_backgroundPalette">@color/md_icon_color_light</item>
-    <item name="MdIconStyle">@style/MdIcon</item>
+
+    <item name="MdCheckBoxStyle">@style/MdCheckBox</item>
     <item name="MdIconToggleStyle">@style/MdIconToggle</item>
-
-    <item name="mdDrawerArrowToggleColor">@color/mdIconColor_active_light</item>
-
-    <item name="MdListItemSingleLineTextOnlyStyle">@style/MdListItem.SingleLine.TextOnly</item>
-    <item name="MdListItemSingleLineIconWithTextStyle">@style/MdListItem.SingleLine.IconWithText</item>
-    <item name="MdListItemSingleLineAvatarWithTextStyle">@style/MdListItem.SingleLine.AvatarWithText</item>
-    <item name="MdListItemSingleLineAvatarWithTextAndIconStyle">@style/MdListItem.SingleLine.AvatarWithTextAndIcon</item>
-
-    <item name="MdListItemTwoLineTextOnlyStyle">@style/MdListItem.TwoLine.TextOnly</item>
-    <item name="MdListItemTwoLineIconWithTextStyle">@style/MdListItem.TwoLine.IconWithText</item>
-    <item name="MdListItemTwoLineAvatarWithTextStyle">@style/MdListItem.TwoLine.AvatarWithText</item>
-    <item name="MdListItemTwoLineAvatarWithTextAndIconStyle">@style/MdListItem.TwoLine.AvatarWithTextAndIcon</item>
-
-    <item name="MdListItemThreeLineTextOnlyStyle">@style/MdListItem.ThreeLine.TextOnly</item>
-    <item name="MdListItemThreeLineIconWithTextStyle">@style/MdListItem.ThreeLine.IconWithText</item>
-    <item name="MdListItemThreeLineAvatarWithTextStyle">@style/MdListItem.ThreeLine.AvatarWithText</item>
-    <item name="MdListItemThreeLineAvatarWithTextAndIconStyle">@style/MdListItem.ThreeLine.AvatarWithTextAndIcon</item>
 
     <!-- override material style -->
     <!--colorPrimary: The primary branding color for the app. By default, this is the color applied to the action bar background.-->
@@ -205,6 +184,8 @@
     <item name="android:textColorHintInverse">?attr/mdTextColorHintInverse_backgroundPalette</item>
     <item name="android:textColorHighlight">?attr/mdColor_accentPalette_light</item>
     <item name="android:textColorLink">?attr/mdColor_accentPalette</item>
+
+    <item name="textColorError">?attr/mdColor_warnPalette</item>
 
     <item name="drawerArrowStyle">@style/MdDrawerArrowToggle</item>
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~ Copyright 2016 "Henry Tao <hi@henrytao.me>"
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -16,629 +16,326 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:tools="http://schemas.android.com/tools"
-  tools:context=".activity.ListActivity"
-  style="@style/MdList">
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
 
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-  <!-- SingleLine -->
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
+  <android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    style="@style/MdToolbar" />
 
-  <LinearLayout style="@style/MdList">
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:clipToPadding="false"
+    android:paddingBottom="@dimen/mdListItemSpacing"
+    android:paddingTop="@dimen/mdListItemSpacing">
 
-    <TextView
-      android:text="Single Line - Text Only"
-      style="@style/MdSubHeader.List" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
+    <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_divider_layout="@layout/mdli_divider"
-      app:mdli_title="@string/text_single_line_item"
-      app:mdli_type="single_line_text_only" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_divider_layout="@layout/mdli_divider"
-      app:mdli_title="@string/text_single_line_item"
-      app:mdli_type="single_line_text_only" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_divider_layout="@layout/mdli_divider"
-      app:mdli_title="@string/text_single_line_item"
-      app:mdli_type="single_line_text_only" />
-
-    <!-- ////////////////////////////////////////////////////////////////////////// -->
-
-    <TextView
-      android:text="Single Line - Icon with text"
-      style="@style/MdSubHeader.List" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="@drawable/ic_blank_circle"
-      app:mdli_title="@string/text_single_line_item"
-      app:mdli_type="single_line_icon_with_text" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="@drawable/ic_blank_circle"
-      app:mdli_title="@string/text_single_line_item"
-      app:mdli_type="single_line_icon_with_text" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="@drawable/ic_blank_circle"
-      app:mdli_title="@string/text_single_line_item"
-      app:mdli_type="single_line_icon_with_text" />
-
-    <!-- ////////////////////////////////////////////////////////////////////////// -->
-
-    <TextView
-      android:text="Single Line - Avatar with text"
-      style="@style/MdSubHeader.List" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_avatar="@drawable/ic_blank_circle"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_title="@string/text_single_line_item"
-      app:mdli_type="single_line_avatar_with_text" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_avatar="@drawable/ic_blank_circle"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_title="@string/text_single_line_item"
-      app:mdli_type="single_line_avatar_with_text" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_avatar="@drawable/ic_blank_circle"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_title="@string/text_single_line_item"
-      app:mdli_type="single_line_avatar_with_text" />
-
-    <!-- ////////////////////////////////////////////////////////////////////////// -->
-
-    <TextView
-      android:text="Single Line - Avatar with text and icon"
-      style="@style/MdSubHeader.List" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_avatar="@drawable/ic_blank_circle"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="@drawable/ic_blank_circle"
-      app:mdli_title="@string/text_single_line_item"
-      app:mdli_type="single_line_avatar_with_text_and_icon" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_avatar="@drawable/ic_blank_circle"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="@drawable/ic_blank_circle"
-      app:mdli_title="@string/text_single_line_item"
-      app:mdli_type="single_line_avatar_with_text_and_icon" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_avatar="@drawable/ic_blank_circle"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="@drawable/ic_blank_circle"
-      app:mdli_title="@string/text_single_line_item"
-      app:mdli_type="single_line_avatar_with_text_and_icon" />
-  </LinearLayout>
-
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-  <!-- TwoLine -->
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-
-  <LinearLayout style="@style/MdList">
-
-    <TextView
-      android:text="Two Line - Text Only"
-      style="@style/MdSubHeader.List" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_divider_layout="@layout/mdli_divider"
-      app:mdli_subtitle="@string/text_secondary_text"
-      app:mdli_title="@string/text_two_line_item"
-      app:mdli_type="two_line_text_only" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_divider_layout="@layout/mdli_divider"
-      app:mdli_subtitle="@string/text_secondary_text"
-      app:mdli_title="@string/text_two_line_item"
-      app:mdli_type="two_line_text_only" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_divider_layout="@layout/mdli_divider"
-      app:mdli_subtitle="@string/text_secondary_text"
-      app:mdli_title="@string/text_two_line_item"
-      app:mdli_type="two_line_text_only" />
-
-    <!-- ////////////////////////////////////////////////////////////////////////// -->
-
-    <TextView
-      android:text="Two Line - Icon with text"
-      style="@style/MdSubHeader.List" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="@drawable/ic_blank_circle"
-      app:mdli_subtitle="@string/text_secondary_text"
-      app:mdli_title="@string/text_two_line_item"
-      app:mdli_type="two_line_icon_with_text" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="@drawable/ic_blank_circle"
-      app:mdli_subtitle="@string/text_secondary_text"
-      app:mdli_title="@string/text_two_line_item"
-      app:mdli_type="two_line_icon_with_text" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="@drawable/ic_blank_circle"
-      app:mdli_subtitle="@string/text_secondary_text"
-      app:mdli_title="@string/text_two_line_item"
-      app:mdli_type="two_line_icon_with_text" />
-
-    <!-- ////////////////////////////////////////////////////////////////////////// -->
-
-    <TextView
-      android:text="Two Line - Avatar with text"
-      style="@style/MdSubHeader.List" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_avatar="@drawable/ic_blank_circle"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_subtitle="@string/text_secondary_text"
-      app:mdli_title="@string/text_two_line_item"
-      app:mdli_type="two_line_avatar_with_text" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_avatar="@drawable/ic_blank_circle"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_subtitle="@string/text_secondary_text"
-      app:mdli_title="@string/text_two_line_item"
-      app:mdli_type="two_line_avatar_with_text" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_avatar="@drawable/ic_blank_circle"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_subtitle="@string/text_secondary_text"
-      app:mdli_title="@string/text_two_line_item"
-      app:mdli_type="two_line_avatar_with_text" />
-
-    <!-- ////////////////////////////////////////////////////////////////////////// -->
-
-    <TextView
-      android:text="Two Line - Avatar with text and icon"
-      style="@style/MdSubHeader.List" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_avatar="@drawable/ic_blank_circle"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="@drawable/ic_blank_circle"
-      app:mdli_subtitle="@string/text_secondary_text"
-      app:mdli_title="@string/text_two_line_item"
-      app:mdli_type="two_line_avatar_with_text_and_icon" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_avatar="@drawable/ic_blank_circle"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="@drawable/ic_blank_circle"
-      app:mdli_subtitle="@string/text_secondary_text"
-      app:mdli_title="@string/text_two_line_item"
-      app:mdli_type="two_line_avatar_with_text_and_icon" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_avatar="@drawable/ic_blank_circle"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="@drawable/ic_blank_circle"
-      app:mdli_subtitle="@string/text_secondary_text"
-      app:mdli_title="@string/text_two_line_item"
-      app:mdli_type="two_line_avatar_with_text_and_icon" />
-  </LinearLayout>
-
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-  <!-- ThreeLine -->
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-
-  <LinearLayout style="@style/MdList">
-
-    <TextView
-      android:text="Three Line - Text Only"
-      style="@style/MdSubHeader.List" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_divider_layout="@layout/mdli_divider"
-      app:mdli_subtitle="@string/text_short"
-      app:mdli_title="@string/text_three_line_item"
-      app:mdli_type="three_line_text_only" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_divider_layout="@layout/mdli_divider"
-      app:mdli_subtitle="@string/text_short"
-      app:mdli_title="@string/text_three_line_item"
-      app:mdli_type="three_line_text_only" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_divider_layout="@layout/mdli_divider"
-      app:mdli_subtitle="@string/text_short"
-      app:mdli_title="@string/text_three_line_item"
-      app:mdli_type="three_line_text_only" />
-
-    <!-- ////////////////////////////////////////////////////////////////////////// -->
-
-    <TextView
-      android:text="Three Line - Icon with text"
-      style="@style/MdSubHeader.List" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="@drawable/ic_blank_circle"
-      app:mdli_subtitle="@string/text_short"
-      app:mdli_title="@string/text_three_line_item"
-      app:mdli_type="three_line_icon_with_text" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="@drawable/ic_blank_circle"
-      app:mdli_subtitle="@string/text_short"
-      app:mdli_title="@string/text_three_line_item"
-      app:mdli_type="three_line_icon_with_text" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="@drawable/ic_blank_circle"
-      app:mdli_subtitle="@string/text_short"
-      app:mdli_title="@string/text_three_line_item"
-      app:mdli_type="three_line_icon_with_text" />
-
-    <!-- ////////////////////////////////////////////////////////////////////////// -->
-
-    <TextView
-      android:text="Three Line - Avatar with text"
-      style="@style/MdSubHeader.List" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_avatar="@drawable/ic_blank_circle"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_subtitle="@string/text_short"
-      app:mdli_title="@string/text_three_line_item"
-      app:mdli_type="three_line_avatar_with_text" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_avatar="@drawable/ic_blank_circle"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_subtitle="@string/text_short"
-      app:mdli_title="@string/text_three_line_item"
-      app:mdli_type="three_line_avatar_with_text" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_avatar="@drawable/ic_blank_circle"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_subtitle="@string/text_short"
-      app:mdli_title="@string/text_three_line_item"
-      app:mdli_type="three_line_avatar_with_text" />
-
-    <!-- ////////////////////////////////////////////////////////////////////////// -->
-
-    <TextView
-      android:text="Three Line - Avatar with text and icon"
-      style="@style/MdSubHeader.List" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_avatar="@drawable/ic_blank_circle"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="@drawable/ic_blank_circle"
-      app:mdli_subtitle="@string/text_short"
-      app:mdli_title="@string/text_three_line_item"
-      app:mdli_type="three_line_avatar_with_text_and_icon" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_avatar="@drawable/ic_blank_circle"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="@drawable/ic_blank_circle"
-      app:mdli_subtitle="@string/text_short"
-      app:mdli_title="@string/text_three_line_item"
-      app:mdli_type="three_line_avatar_with_text_and_icon" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_avatar="@drawable/ic_blank_circle"
-      app:mdli_divider_layout="@layout/mdli_divider_left"
-      app:mdli_icon="@drawable/ic_blank_circle"
-      app:mdli_subtitle="@string/text_short"
-      app:mdli_title="@string/text_three_line_item"
-      app:mdli_type="three_line_avatar_with_text_and_icon" />
-  </LinearLayout>
-
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-  <!-- ThreeLine Custom -->
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-
-  <LinearLayout style="@style/MdList">
-
-    <TextView
-      android:text="Custom ListItem - Section 1"
-      style="@style/MdSubHeader.List" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_avatar="@drawable/ic_blank_circle"
-      app:mdli_title="@string/text_three_line_item"
-      app:mdli_type="single_line_avatar_with_text">
-
-      <ImageView
-        android:id="@android:id/icon1"
-        android:layout_alignParentLeft="false"
-        android:layout_alignParentRight="true"
-        tools:src="@drawable/ic_blank_circle"
-        style="@style/Base.MdListItem.Avatar" />
-
-      <TextView
-        android:id="@android:id/text1"
-        tools:text="List item title"
-        style="@style/Base.MdListItem.Title.Left" />
-    </me.henrytao.mdcore.widgets.MdListItem>
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_avatar="@drawable/ic_blank_circle"
-      app:mdli_title="@string/text_three_line_item"
-      app:mdli_type="single_line_avatar_with_text">
-
-      <ImageView
-        android:id="@android:id/icon1"
-        android:layout_alignParentLeft="false"
-        android:layout_alignParentRight="true"
-        tools:src="@drawable/ic_blank_circle"
-        style="@style/Base.MdListItem.Avatar" />
-
-      <TextView
-        android:id="@android:id/text1"
-        tools:text="List item title"
-        style="@style/Base.MdListItem.Title.Left" />
-    </me.henrytao.mdcore.widgets.MdListItem>
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_avatar="@drawable/ic_blank_circle"
-      app:mdli_title="@string/text_three_line_item"
-      app:mdli_type="single_line_avatar_with_text">
-
-      <ImageView
-        android:id="@android:id/icon1"
-        android:layout_alignParentLeft="false"
-        android:layout_alignParentRight="true"
-        tools:src="@drawable/ic_blank_circle"
-        style="@style/Base.MdListItem.Avatar" />
-
-      <TextView
-        android:id="@android:id/text1"
-        tools:text="List item title"
-        style="@style/Base.MdListItem.Title.Left" />
-
-      <View
-        android:layout_alignParentBottom="true"
-        style="@style/MdDivider.Left" />
-    </me.henrytao.mdcore.widgets.MdListItem>
-
-    <TextView
-      android:text="Custom ListItem - Section 2"
-      style="@style/MdSubHeader.List" />
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_avatar="@drawable/ic_blank_circle"
-      app:mdli_title="@string/text_three_line_item"
-      app:mdli_type="single_line_avatar_with_text">
-
-      <ImageView
-        android:id="@android:id/icon1"
-        android:layout_alignParentLeft="false"
-        android:layout_alignParentRight="true"
-        tools:src="@drawable/ic_blank_circle"
-        style="@style/Base.MdListItem.Avatar" />
-
-      <TextView
-        android:id="@android:id/text1"
-        tools:text="List item title"
-        style="@style/Base.MdListItem.Title.Left" />
-    </me.henrytao.mdcore.widgets.MdListItem>
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_avatar="@drawable/ic_blank_circle"
-      app:mdli_title="@string/text_three_line_item"
-      app:mdli_type="single_line_avatar_with_text">
-
-      <ImageView
-        android:id="@android:id/icon1"
-        android:layout_alignParentLeft="false"
-        android:layout_alignParentRight="true"
-        tools:src="@drawable/ic_blank_circle"
-        style="@style/Base.MdListItem.Avatar" />
-
-      <TextView
-        android:id="@android:id/text1"
-        tools:text="List item title"
-        style="@style/Base.MdListItem.Title.Left" />
-    </me.henrytao.mdcore.widgets.MdListItem>
-
-    <me.henrytao.mdcore.widgets.MdListItem
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="?attr/selectableItemBackground"
-      android:clickable="true"
-      app:mdli_avatar="@drawable/ic_blank_circle"
-      app:mdli_title="@string/text_three_line_item"
-      app:mdli_type="single_line_avatar_with_text">
-
-      <ImageView
-        android:id="@android:id/icon1"
-        android:layout_alignParentLeft="false"
-        android:layout_alignParentRight="true"
-        tools:src="@drawable/ic_blank_circle"
-        style="@style/Base.MdListItem.Avatar" />
-
-      <TextView
-        android:id="@android:id/text1"
-        tools:text="List item title"
-        style="@style/Base.MdListItem.Title.Left" />
-    </me.henrytao.mdcore.widgets.MdListItem>
-  </LinearLayout>
+      android:orientation="vertical">
+
+      <!-- custom -->
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- single line - text only -->
+
+        <RelativeLayout
+          android:background="?attr/selectableItemBackground"
+          android:clickable="true"
+          style="@style/MdListItem.SingleLine.TextOnly">
+
+          <TextView
+            android:text="Single Line - Text Only"
+            style="@style/Base.MdListItem.Title" />
+        </RelativeLayout>
+
+        <View style="@style/MdDivider" />
+
+        <!-- single line - icon with text -->
+
+        <RelativeLayout
+          android:background="?attr/selectableItemBackground"
+          android:clickable="true"
+          style="@style/MdListItem.SingleLine.IconWithText">
+
+          <TextView
+            android:text="Single Line - Icon With Text"
+            style="@style/Base.MdListItem.Title.Left" />
+
+          <ImageView
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            app:srcCompat="@drawable/ic_blank_icon"
+            style="@style/Base.MdListItem.Icon" />
+        </RelativeLayout>
+
+        <View style="@style/MdDivider" />
+
+        <!-- single line - avatar with text -->
+
+        <RelativeLayout
+          android:background="?attr/selectableItemBackground"
+          android:clickable="true"
+          style="@style/MdListItem.SingleLine.AvatarWithText">
+
+          <TextView
+            android:text="Single Line - Avatar With Text"
+            style="@style/Base.MdListItem.Title.Left" />
+
+          <ImageView
+            app:srcCompat="@drawable/ic_blank_avatar"
+            style="@style/Base.MdListItem.Avatar" />
+        </RelativeLayout>
+
+        <View style="@style/MdDivider" />
+
+        <!-- single line - avatar with text and icon -->
+
+        <RelativeLayout
+          android:background="?attr/selectableItemBackground"
+          android:clickable="true"
+          style="@style/MdListItem.SingleLine.AvatarWithText">
+
+          <TextView
+            android:text="Single Line - Avatar With Text And Icon"
+            style="@style/Base.MdListItem.Title.LeftRight" />
+
+          <ImageView
+            app:srcCompat="@drawable/ic_blank_avatar"
+            style="@style/Base.MdListItem.Avatar" />
+
+          <ImageView
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            app:srcCompat="@drawable/ic_blank_icon"
+            style="@style/Base.MdListItem.Icon.Right" />
+        </RelativeLayout>
+
+        <View style="@style/MdDivider" />
+
+        <!-- two line - text only -->
+
+        <RelativeLayout
+          android:background="?attr/selectableItemBackground"
+          android:clickable="true"
+          style="@style/MdListItem.TwoLine.TextOnly">
+
+          <LinearLayout style="@style/Base.MdListItem.Wrapper">
+
+            <TextView
+              android:text="Two Line - Text Only"
+              style="@style/Base.MdListItem.Title" />
+
+            <TextView
+              android:text="Subtitle"
+              style="@style/Base.MdListItem.Subtitle" />
+          </LinearLayout>
+        </RelativeLayout>
+
+        <View style="@style/MdDivider" />
+
+        <!-- two line - icon with text -->
+
+        <RelativeLayout
+          android:background="?attr/selectableItemBackground"
+          android:clickable="true"
+          style="@style/MdListItem.TwoLine.IconWithText">
+
+          <LinearLayout style="@style/Base.MdListItem.Wrapper">
+
+            <TextView
+              android:text="Two Line - Icon With Text"
+              style="@style/Base.MdListItem.Title.Left" />
+
+            <TextView
+              android:text="Subtitle"
+              style="@style/Base.MdListItem.Subtitle.Left" />
+          </LinearLayout>
+
+          <ImageView
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            app:srcCompat="@drawable/ic_blank_icon"
+            style="@style/Base.MdListItem.Icon" />
+        </RelativeLayout>
+
+        <View style="@style/MdDivider" />
+
+        <!-- two line - avatar with text -->
+
+        <RelativeLayout
+          android:background="?attr/selectableItemBackground"
+          android:clickable="true"
+          style="@style/MdListItem.TwoLine.AvatarWithText">
+
+          <LinearLayout style="@style/Base.MdListItem.Wrapper">
+
+            <TextView
+              android:text="Two Line - Avatar With Text"
+              style="@style/Base.MdListItem.Title.Left" />
+
+            <TextView
+              android:text="Subtitle"
+              style="@style/Base.MdListItem.Subtitle.Left" />
+          </LinearLayout>
+
+          <ImageView
+            app:srcCompat="@drawable/ic_blank_avatar"
+            style="@style/Base.MdListItem.Avatar" />
+        </RelativeLayout>
+
+        <View style="@style/MdDivider" />
+
+        <!-- two line - avatar with text and icon -->
+
+        <RelativeLayout
+          android:background="?attr/selectableItemBackground"
+          android:clickable="true"
+          style="@style/MdListItem.TwoLine.AvatarWithTextAndIcon">
+
+          <LinearLayout style="@style/Base.MdListItem.Wrapper">
+
+            <TextView
+              android:text="Two Line - Avatar With Text And Icon"
+              style="@style/Base.MdListItem.Title.LeftRight" />
+
+            <TextView
+              android:text="Subtitle"
+              style="@style/Base.MdListItem.Subtitle.LeftRight" />
+          </LinearLayout>
+
+          <ImageView
+            app:srcCompat="@drawable/ic_blank_avatar"
+            style="@style/Base.MdListItem.Avatar" />
+
+          <ImageView
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            app:srcCompat="@drawable/ic_blank_icon"
+            style="@style/Base.MdListItem.Icon.Right" />
+        </RelativeLayout>
+
+        <View style="@style/MdDivider" />
+
+        <!-- three line - text only -->
+
+        <RelativeLayout
+          android:background="?attr/selectableItemBackground"
+          android:clickable="true"
+          style="@style/MdListItem.ThreeLine.TextOnly">
+
+          <LinearLayout style="@style/Base.MdListItem.Wrapper">
+
+            <TextView
+              android:text="Three Line - Text Only"
+              style="@style/Base.MdListItem.Title" />
+
+            <TextView
+              android:maxLines="2"
+              android:singleLine="false"
+              android:text="@string/text_long"
+              style="@style/Base.MdListItem.Subtitle" />
+          </LinearLayout>
+        </RelativeLayout>
+
+        <View style="@style/MdDivider" />
+
+        <!-- three line - icon with text -->
+
+        <RelativeLayout
+          android:background="?attr/selectableItemBackground"
+          android:clickable="true"
+          style="@style/MdListItem.ThreeLine.IconWithText">
+
+          <LinearLayout style="@style/Base.MdListItem.Wrapper">
+
+            <TextView
+              android:text="Three Line - Icon With Text"
+              style="@style/Base.MdListItem.Title.Left" />
+
+            <TextView
+              android:maxLines="2"
+              android:singleLine="false"
+              android:text="@string/text_long"
+              style="@style/Base.MdListItem.Subtitle.Left" />
+          </LinearLayout>
+
+          <ImageView
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            app:srcCompat="@drawable/ic_blank_icon"
+            style="@style/Base.MdListItem.Icon.Top" />
+        </RelativeLayout>
+
+        <View style="@style/MdDivider" />
+
+        <!-- three line - avatar with text -->
+
+        <RelativeLayout
+          android:background="?attr/selectableItemBackground"
+          android:clickable="true"
+          style="@style/MdListItem.ThreeLine.AvatarWithText">
+
+          <LinearLayout style="@style/Base.MdListItem.Wrapper">
+
+            <TextView
+              android:text="Three Line - Avatar With Text"
+              style="@style/Base.MdListItem.Title.Left" />
+
+            <TextView
+              android:maxLines="2"
+              android:singleLine="false"
+              android:text="@string/text_long"
+              style="@style/Base.MdListItem.Subtitle.Left" />
+          </LinearLayout>
+
+          <ImageView
+            app:srcCompat="@drawable/ic_blank_avatar"
+            style="@style/Base.MdListItem.Avatar.Top" />
+        </RelativeLayout>
+
+        <View style="@style/MdDivider" />
+
+        <!-- three line - avatar with text and icon -->
+
+        <RelativeLayout
+          android:background="?attr/selectableItemBackground"
+          android:clickable="true"
+          style="@style/MdListItem.ThreeLine.AvatarWithTextAndIcon">
+
+          <LinearLayout style="@style/Base.MdListItem.Wrapper">
+
+            <TextView
+              android:text="Three Line - Avatar With Text And Icon"
+              style="@style/Base.MdListItem.Title.LeftRight" />
+
+            <TextView
+              android:maxLines="2"
+              android:singleLine="false"
+              android:text="@string/text_long"
+              style="@style/Base.MdListItem.Subtitle.LeftRight" />
+          </LinearLayout>
+
+          <ImageView
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            app:srcCompat="@drawable/ic_blank_icon"
+            style="@style/Base.MdListItem.Icon.TopRight" />
+
+          <ImageView
+            app:srcCompat="@drawable/ic_blank_avatar"
+            style="@style/Base.MdListItem.Avatar.Top" />
+        </RelativeLayout>
+
+        <View style="@style/MdDivider" />
+      </LinearLayout>
+    </LinearLayout>
+  </ScrollView>
 </LinearLayout>

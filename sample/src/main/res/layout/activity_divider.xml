@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~ Copyright 2016 "Henry Tao <hi@henrytao.me>"
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -15,40 +15,48 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:orientation="vertical"
-  android:padding="@dimen/mdLayoutSpacing"
-  tools:context=".activity.DividerActivity">
+  android:orientation="vertical">
 
-  <View
-    android:layout_marginBottom="@dimen/mdLayoutSpacing"
-    android:layout_marginTop="@dimen/mdLayoutSpacing"
-    style="@style/MdDivider" />
+  <android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    style="@style/MdToolbar" />
 
-  <View
-    android:layout_marginBottom="@dimen/mdLayoutSpacing"
-    android:layout_marginTop="@dimen/mdLayoutSpacing"
-    style="@style/MdDivider.Left" />
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="vertical">
 
-  <View
-    android:layout_marginBottom="@dimen/mdLayoutSpacing"
-    android:layout_marginTop="@dimen/mdLayoutSpacing"
-    style="@style/MdDivider.LeftRight" />
+    <View
+      android:layout_marginBottom="@dimen/mdLayoutSpacing"
+      android:layout_marginTop="@dimen/mdLayoutSpacing"
+      style="@style/MdDivider" />
 
-  <View
-    android:layout_marginBottom="@dimen/mdLayoutSpacing"
-    android:layout_marginTop="@dimen/mdLayoutSpacing"
-    style="@style/MdDivider.LeftRightLarge" />
+    <View
+      android:layout_marginBottom="@dimen/mdLayoutSpacing"
+      android:layout_marginTop="@dimen/mdLayoutSpacing"
+      style="@style/MdDivider.Left" />
 
-  <View
-    android:layout_marginBottom="@dimen/mdLayoutSpacing"
-    android:layout_marginTop="@dimen/mdLayoutSpacing"
-    style="@style/MdDivider.Right" />
+    <View
+      android:layout_marginBottom="@dimen/mdLayoutSpacing"
+      android:layout_marginTop="@dimen/mdLayoutSpacing"
+      style="@style/MdDivider.LeftRight" />
 
-  <View
-    android:layout_marginBottom="@dimen/mdLayoutSpacing"
-    android:layout_marginTop="@dimen/mdLayoutSpacing"
-    style="@style/MdDivider.RightLarge" />
+    <View
+      android:layout_marginBottom="@dimen/mdLayoutSpacing"
+      android:layout_marginTop="@dimen/mdLayoutSpacing"
+      style="@style/MdDivider.LeftRightLarge" />
+
+    <View
+      android:layout_marginBottom="@dimen/mdLayoutSpacing"
+      android:layout_marginTop="@dimen/mdLayoutSpacing"
+      style="@style/MdDivider.Right" />
+
+    <View
+      android:layout_marginBottom="@dimen/mdLayoutSpacing"
+      android:layout_marginTop="@dimen/mdLayoutSpacing"
+      style="@style/MdDivider.RightLarge" />
+  </LinearLayout>
 </LinearLayout>

@@ -36,6 +36,6 @@
   </style>
 
   <style name="Base.MdAlertDialog.Style.Light" parent="AlertDialog.AppCompat.Light">
-    <item name="android:layout">@layout/md_alert_dialog_layout</item>
+    <!--<item name="android:layout">@layout/md_alert_dialog_layout</item>-->
   </style>
 </resources>

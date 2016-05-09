@@ -19,6 +19,6 @@
   <style name="MdFloatingActionButton" parent="Widget.Design.FloatingActionButton">
     <item name="android:layout_width">wrap_content</item>
     <item name="android:layout_height">wrap_content</item>
-    <item name="tint">?attr/mdIconColor_accentPalette</item>
+    <item name="backgroundTint">?attr/mdColor_accentPalette</item>
   </style>
 </resources>

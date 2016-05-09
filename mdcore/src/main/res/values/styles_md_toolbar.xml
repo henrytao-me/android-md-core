@@ -20,6 +20,7 @@
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">?attr/actionBarSize</item>
     <item name="android:background">?attr/mdColor_primaryPalette</item>
+    <item name="titleMarginStart">@dimen/mdTitleMarginStart</item>
     <item name="titleTextAppearance">@style/MdToolbar.Title</item>
     <item name="subtitleTextAppearance">@style/MdToolbar.Subtitle</item>
   </style>

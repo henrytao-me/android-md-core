@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~ Copyright 2016 "Henry Tao <hi@henrytao.me>"
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -15,184 +15,124 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:paddingBottom="@dimen/mdLayoutSpacing_lg"
-  tools:context=".activity.ButtonActivity"
-  style="@style/MdList">
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
 
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-  <!-- Button -->
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
+  <android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    style="@style/MdToolbar" />
 
-  <LinearLayout style="@style/MdList">
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="vertical">
 
     <TextView
       android:text="Button types"
       style="@style/MdSubHeader.List" />
 
-    <LinearLayout style="@style/AppStyle.Grid">
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
 
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
-
-        <me.henrytao.mdcore.widgets.MdButton
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="@string/text_button" />
-      </RelativeLayout>
-
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
-
-        <me.henrytao.mdcore.widgets.MdButton
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:enabled="false"
-          android:text="@string/text_button" />
-      </RelativeLayout>
-
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
-
-        <me.henrytao.mdcore.widgets.MdButton
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="@string/text_button"
-          app:mdb_type="borderless" />
-      </RelativeLayout>
-
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
-
-        <me.henrytao.mdcore.widgets.MdButton
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:enabled="false"
-          android:text="@string/text_button"
-          app:mdb_type="borderless" />
-      </RelativeLayout>
-    </LinearLayout>
-
-    <LinearLayout style="@style/AppStyle.Grid">
-
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
-
-        <me.henrytao.mdcore.widgets.MdButton
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="@string/text_button"
-          app:mdb_type="colored" />
-      </RelativeLayout>
-
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
-
-        <me.henrytao.mdcore.widgets.MdButton
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:enabled="false"
-          android:text="@string/text_button"
-          app:mdb_type="colored" />
-      </RelativeLayout>
-
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
-
-        <me.henrytao.mdcore.widgets.MdButton
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="@string/text_button"
-          app:mdb_type="borderless_colored" />
-      </RelativeLayout>
-
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
-
-        <me.henrytao.mdcore.widgets.MdButton
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:enabled="false"
-          android:text="@string/text_button"
-          app:mdb_type="borderless_colored" />
-      </RelativeLayout>
-    </LinearLayout>
-  </LinearLayout>
-
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-  <!-- Buttons in dialogs -->
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-
-  <LinearLayout style="@style/MdList">
-
-    <TextView
-      android:text="Buttons in dialogs"
-      style="@style/MdSubHeader.List" />
-
-    <LinearLayout style="@style/AppStyle.Grid">
-
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
+      <FrameLayout style="@style/AppStyle.GridItem">
 
         <Button
-          android:id="@+id/btn_dialog"
+          android:text="@string/text_button"
+          style="@style/MdButton" />
+      </FrameLayout>
+
+      <FrameLayout style="@style/AppStyle.GridItem">
+
+        <Button
+          android:enabled="false"
+          android:text="@string/text_button"
+          style="@style/MdButton" />
+      </FrameLayout>
+
+      <FrameLayout style="@style/AppStyle.GridItem">
+
+        <Button
+          android:text="@string/text_button"
+          style="@style/MdButton.Borderless" />
+      </FrameLayout>
+
+      <FrameLayout style="@style/AppStyle.GridItem">
+
+        <Button
+          android:enabled="false"
+          android:text="@string/text_button"
+          style="@style/MdButton.Borderless" />
+      </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <FrameLayout style="@style/AppStyle.GridItem">
+
+        <Button
+          android:text="@string/text_button"
+          style="@style/MdButton.Colored" />
+      </FrameLayout>
+
+      <FrameLayout style="@style/AppStyle.GridItem">
+
+        <Button
+          android:enabled="false"
+          android:text="@string/text_button"
+          style="@style/MdButton.Colored" />
+      </FrameLayout>
+
+      <FrameLayout style="@style/AppStyle.GridItem">
+
+        <Button
+          android:text="@string/text_button"
+          style="@style/MdButton.Borderless.Colored" />
+      </FrameLayout>
+
+      <FrameLayout style="@style/AppStyle.GridItem">
+
+        <Button
+          android:enabled="false"
+          android:text="@string/text_button"
+          style="@style/MdButton.Borderless.Colored" />
+      </FrameLayout>
+    </LinearLayout>
+
+    <TextView
+      android:text="Buttons in dialog"
+      style="@style/MdSubHeader.List" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <FrameLayout style="@style/AppStyle.GridItem">
+
+        <Button
+          android:id="@+id/btn_dialog_1"
           android:text="@string/text_click_me"
           style="@style/MdButton" />
-      </RelativeLayout>
+      </FrameLayout>
 
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
+      <FrameLayout style="@style/AppStyle.GridItem">
 
         <Button
           android:id="@+id/btn_dialog_2"
           android:text="@string/text_click_me"
           style="@style/MdButton" />
-      </RelativeLayout>
+      </FrameLayout>
 
-      <RelativeLayout style="@style/AppStyle.Grid.Item" />
+      <FrameLayout style="@style/AppStyle.GridItem" />
 
-      <RelativeLayout style="@style/AppStyle.Grid.Item" />
-    </LinearLayout>
-  </LinearLayout>
-
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-  <!-- ImageButton -->
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-
-  <LinearLayout style="@style/MdList">
-
-    <TextView
-      android:text="Icon toggles"
-      style="@style/MdSubHeader.List" />
-
-    <LinearLayout style="@style/AppStyle.Grid">
-
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
-
-        <me.henrytao.mdcore.widgets.MdIconToggle
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:button="@drawable/ic_menu_favorite" />
-      </RelativeLayout>
-
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
-
-        <me.henrytao.mdcore.widgets.MdIconToggle
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:button="@drawable/ic_menu_favorite"
-          android:enabled="false" />
-      </RelativeLayout>
-
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
-
-        <me.henrytao.mdcore.widgets.MdIconToggle
-          android:id="@+id/toggle_up"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:button="@drawable/ic_menu_favorite" />
-      </RelativeLayout>
-
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
-
-        <me.henrytao.mdcore.widgets.MdIconToggle
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:button="@drawable/ic_menu_favorite"
-          android:enabled="false"
-          android:text="10" />
-      </RelativeLayout>
+      <FrameLayout style="@style/AppStyle.GridItem" />
     </LinearLayout>
   </LinearLayout>
 </LinearLayout>

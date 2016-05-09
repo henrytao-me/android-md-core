@@ -18,4 +18,18 @@
 
   <integer name="config_activityShortDur">150</integer>
   <integer name="config_activityDefaultDur">220</integer>
+
+  <integer name="gravity_bottom">80</integer>
+  <integer name="gravity_center">17</integer>
+  <integer name="gravity_center_horizontal">1</integer>
+  <integer name="gravity_center_vertical">16</integer>
+  <integer name="gravity_end">8388613</integer>
+  <integer name="gravity_left">3</integer>
+  <integer name="gravity_no_gravity">0</integer>
+  <integer name="gravity_right">5</integer>
+  <integer name="gravity_start">8388611</integer>
+  <integer name="gravity_top">48</integer>
+
+  <integer name="gravity_start_center_vertical">19</integer>
+  <integer name="gravity_end_center_vertical">21</integer>
 </resources>

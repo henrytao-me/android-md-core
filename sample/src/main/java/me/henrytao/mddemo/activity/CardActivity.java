@@ -16,19 +16,39 @@
 
 package me.henrytao.mddemo.activity;
 
-import android.app.Activity;
-import android.content.Intent;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.widget.Toolbar;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import me.henrytao.mddemo.R;
 
-public class CardActivity extends BaseSimpleActivity {
+/**
+ * Created by henrytao on 5/2/16.
+ */
+public class CardActivity extends BaseActivity {
 
-  public static Intent newIntent(Activity activity) {
-    return new Intent(activity, CardActivity.class);
+  @Bind(R.id.toolbar)
+  Toolbar vToolbar;
+
+  @Override
+  protected int getDefaultLayout() {
+    return R.layout.activity_card;
   }
 
   @Override
-  public int getLayoutId() {
+  protected int getMdCoreLayout() {
     return R.layout.activity_card;
+  }
+
+  @Override
+  protected void onCreate(@Nullable Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    ButterKnife.bind(this);
+
+    setSupportActionBar(vToolbar);
+    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    vToolbar.setNavigationOnClickListener(v -> onBackPressed());
   }
 }

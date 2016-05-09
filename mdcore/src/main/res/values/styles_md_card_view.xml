@@ -16,7 +16,7 @@
 
 <resources>
 
-  <style name="MdCardView">
+  <style name="MdCardView.Card" parent="">
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">wrap_content</item>
     <item name="android:layout_marginTop">@dimen/mdLayoutSpacing_xs</item>
@@ -35,11 +35,27 @@
     <item name="android:paddingBottom">@dimen/mdLayoutSpacing_xs</item>
   </style>
 
-  <style name="MdCardView.Full">
+  <style name="MdCardView.Card.Full">
     <item name="android:layout_marginTop">0dp</item>
     <item name="android:layout_marginLeft">-2dp</item>
     <item name="android:layout_marginRight">-2dp</item>
     <item name="android:layout_marginBottom">0dp</item>
     <item name="cardCornerRadius">0dp</item>
+  </style>
+
+  <!-- Small -->
+
+  <style name="MdCardView.Card.Small">
+    <item name="android:layout_marginTop">2dp</item>
+    <item name="android:layout_marginLeft">2dp</item>
+    <item name="android:layout_marginRight">2dp</item>
+    <item name="android:layout_marginBottom">2dp</item>
+  </style>
+
+  <style name="MdCardView.Wrapper.Small">
+    <item name="android:paddingTop">2dp</item>
+    <item name="android:paddingLeft">2dp</item>
+    <item name="android:paddingRight">2dp</item>
+    <item name="android:paddingBottom">2dp</item>
   </style>
 </resources>

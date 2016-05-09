@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 "Henry Tao <hi@henrytao.me>"
+ * Copyright 2016 "Henry Tao <hi@henrytao.me>"
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -65,8 +65,8 @@ public class ThemeUtils {
       sCurrentThemeResId = themeResId;
       Intent intent = new Intent(activity, activity.getClass());
       intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-      intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
       activity.startActivity(intent);
+      activity.overridePendingTransition(0, 0);
       activity.finish();
     }
   }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~ Copyright 2016 "Henry Tao <hi@henrytao.me>"
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -16,47 +16,88 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:tools="http://schemas.android.com/tools"
-  tools:context=".activity.FabActivity"
-  style="@style/MdList">
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
 
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-  <!-- Button -->
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
+  <android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    style="@style/MdToolbar" />
 
-  <LinearLayout style="@style/MdList">
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="vertical">
 
     <TextView
       android:text="Button types"
       style="@style/MdSubHeader.List" />
 
-    <LinearLayout style="@style/AppStyle.Grid">
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
 
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
-
-        <me.henrytao.mdcore.widgets.MdFloatingActionButton
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_margin="@dimen/mdLayoutSpacing"
-          android:clickable="true"
-          android:src="@drawable/ic_add_white"
-          app:fabSize="normal" />
-      </RelativeLayout>
-
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
+      <FrameLayout style="@style/AppStyle.GridItem">
 
         <android.support.design.widget.FloatingActionButton
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
           android:layout_margin="@dimen/mdLayoutSpacing"
           android:clickable="true"
-          android:src="@drawable/ic_add_white"
-          app:fabSize="mini" />
-      </RelativeLayout>
+          app:fabSize="normal"
+          app:srcCompat="@drawable/ic_add_black_24dp"
+          style="@style/MdFloatingActionButton" />
+      </FrameLayout>
 
-      <RelativeLayout style="@style/AppStyle.Grid.Item" />
+      <FrameLayout style="@style/AppStyle.GridItem">
 
-      <RelativeLayout style="@style/AppStyle.Grid.Item" />
+        <android.support.design.widget.FloatingActionButton
+          android:layout_margin="@dimen/mdLayoutSpacing"
+          android:clickable="true"
+          app:fabSize="mini"
+          app:srcCompat="@drawable/ic_add_black_24dp"
+          style="@style/MdFloatingActionButton" />
+      </FrameLayout>
+
+      <FrameLayout style="@style/AppStyle.GridItem" />
+
+      <FrameLayout style="@style/AppStyle.GridItem" />
+    </LinearLayout>
+
+    <TextView
+      android:text="Custom color"
+      style="@style/MdSubHeader.List" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <FrameLayout style="@style/AppStyle.GridItem">
+
+        <android.support.design.widget.FloatingActionButton
+          android:layout_margin="@dimen/mdLayoutSpacing"
+          android:clickable="true"
+          app:backgroundTint="?attr/mdColor_primaryPalette"
+          app:fabSize="normal"
+          app:srcCompat="@drawable/ic_add_black_24dp"
+          style="@style/MdFloatingActionButton" />
+      </FrameLayout>
+
+      <FrameLayout style="@style/AppStyle.GridItem">
+
+        <android.support.design.widget.FloatingActionButton
+          android:layout_margin="@dimen/mdLayoutSpacing"
+          android:clickable="true"
+          app:backgroundTint="?attr/mdColor_warnPalette"
+          app:fabSize="mini"
+          app:srcCompat="@drawable/ic_add_black_24dp"
+          style="@style/MdFloatingActionButton" />
+      </FrameLayout>
+
+      <FrameLayout style="@style/AppStyle.GridItem" />
+
+      <FrameLayout style="@style/AppStyle.GridItem" />
     </LinearLayout>
   </LinearLayout>
 </LinearLayout>

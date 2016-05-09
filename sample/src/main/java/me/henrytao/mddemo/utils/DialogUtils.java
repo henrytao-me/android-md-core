@@ -20,7 +20,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
 
-import me.henrytao.mdcore.utils.AlertDialogBuilder;
 import me.henrytao.mddemo.R;
 
 /**
@@ -30,7 +29,7 @@ public class DialogUtils {
 
   public static AlertDialog showConfirmDialog(Context context, CharSequence message, int positiveTextId, int negativeTextId,
       DialogInterface.OnClickListener onPositiveClickListener, DialogInterface.OnClickListener onNegativeClickListener) {
-    AlertDialog alertDialog = new AlertDialogBuilder(context)
+    AlertDialog alertDialog = new AlertDialog.Builder(context)
         .setMessage(message)
         .setPositiveButton(positiveTextId, onPositiveClickListener)
         .setNegativeButton(negativeTextId, onNegativeClickListener)
@@ -62,7 +61,7 @@ public class DialogUtils {
 
   public static AlertDialog showInfoDialog(Context context, CharSequence message, DialogInterface.OnClickListener onClickListener,
       DialogInterface.OnDismissListener onDismissListener) {
-    AlertDialog alertDialog = new AlertDialogBuilder(context)
+    AlertDialog alertDialog = new AlertDialog.Builder(context)
         .setTitle("sample")
         .setMessage(message)
         .setPositiveButton(R.string.text_ok, onClickListener)
@@ -74,7 +73,7 @@ public class DialogUtils {
 
   public static AlertDialog showInfoDialog(Context context, int titleId, int messageId, DialogInterface.OnClickListener onClickListener,
       DialogInterface.OnDismissListener onDismissListener) {
-    AlertDialog alertDialog = new AlertDialogBuilder(context)
+    AlertDialog alertDialog = new AlertDialog.Builder(context)
         .setTitle(titleId)
         .setMessage(messageId)
         .setPositiveButton(R.string.text_ok, onClickListener)

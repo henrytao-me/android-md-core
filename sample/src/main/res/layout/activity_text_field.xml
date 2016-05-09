@@ -16,113 +16,99 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:tools="http://schemas.android.com/tools"
-  tools:context=".activity.TextFieldActivity"
-  style="@style/MdList">
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
 
-  <FrameLayout
+  <android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    style="@style/MdToolbar" />
+
+  <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/mdColor_blue">
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="vertical">
 
-    <android.support.design.widget.TextInputLayout style="@style/MdTextField.FloatingLabel">
+    <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/mdColor_green">
 
       <EditText
-        android:hint="Input hint text"
-        android:text="Input text"
-        style="@style/MdTextField.FloatingLabel.EditText" />
-    </android.support.design.widget.TextInputLayout>
-  </FrameLayout>
+        android:hint="Text field"
+        style="@style/MdTextField.TextOnly" />
+    </FrameLayout>
 
-  <FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/mdColor_yellow">
+    <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/mdColor_blue">
 
-    <android.support.design.widget.TextInputLayout style="@style/MdTextField.FloatingLabel">
+      <LinearLayout style="@style/MdTextField.TextWithIcon">
 
-      <EditText
-        android:hint="Input hint text"
-        android:text="Input text"
-        style="@style/MdTextField.FloatingLabel.EditText" />
-    </android.support.design.widget.TextInputLayout>
-  </FrameLayout>
+        <ImageView
+          app:srcCompat="@drawable/ic_call_black_24dp"
+          style="@style/MdTextField.TextWithIcon.Icon" />
 
-  <FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/mdColor_green">
+        <EditText
+          android:hint="Text field with icon"
+          style="@style/MdTextField.TextWithIcon.Text" />
+      </LinearLayout>
+    </FrameLayout>
 
-    <EditText
-      android:hint="Input hint text"
-      style="@style/MdTextField.EditText" />
-  </FrameLayout>
+    <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/mdColor_orange">
 
-  <FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/mdColor_orange">
+      <android.support.design.widget.TextInputLayout style="@style/MdTextField.TextWithLabel">
 
-    <LinearLayout style="@style/MdTextField.TextWithIcon">
+        <EditText
+          android:hint="Text field with label"
+          style="@style/MdTextField.TextWithLabel.Text" />
+      </android.support.design.widget.TextInputLayout>
+    </FrameLayout>
 
-      <me.henrytao.mdcore.widgets.MdIcon
-        android:src="@drawable/ic_phone"
-        style="@style/MdTextField.TextWithIcon.Icon" />
+    <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/mdColor_blueGrey_light">
 
-      <EditText
-        android:hint="Input hint text"
-        style="@style/MdTextField.EditText" />
-    </LinearLayout>
-  </FrameLayout>
+      <android.support.design.widget.TextInputLayout
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
+        style="@style/MdTextField.TextWithLabel">
 
-  <FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/mdColor_yellow">
+        <EditText
+          android:hint="Text field with label and character counter"
+          style="@style/MdTextField.TextWithLabel.Text" />
+      </android.support.design.widget.TextInputLayout>
+    </FrameLayout>
 
-    <EditText
-      android:hint="Input hint text"
-      style="@style/MdTextField.EditText" />
-  </FrameLayout>
-
-  <FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/mdColor_blueGrey_light">
-
-    <EditText
-      android:hint="Input hint text"
-      style="@style/MdTextField.EditText.FullWidth" />
-  </FrameLayout>
-
-  <FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/mdColor_blue">
-
-    <android.support.design.widget.TextInputLayout
-      app:counterEnabled="true"
-      app:counterMaxLength="20"
-      style="@style/MdTextField.FloatingLabel">
+    <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/mdColor_blue">
 
       <EditText
-        android:hint="Input hint text"
-        android:text="Input text"
-        style="@style/MdTextField.FloatingLabel.EditText" />
-    </android.support.design.widget.TextInputLayout>
-  </FrameLayout>
+        android:hint="Full-width text field"
+        style="@style/MdTextField.FullWidthText" />
+    </FrameLayout>
 
-  <FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/mdColor_yellow">
+    <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/mdColor_yellow">
 
-    <android.support.design.widget.TextInputLayout style="@style/MdTextField.FullTextWithCounter">
+      <android.support.design.widget.TextInputLayout
+        app:counterMaxLength="20"
+        style="@style/MdTextField.FullWidthTextAndCounter">
 
-      <EditText
-        android:hint="Input hint text"
-        android:text="Input text"
-        style="@style/MdTextField.FullTextWithCounter.EditText" />
-    </android.support.design.widget.TextInputLayout>
-  </FrameLayout>
+        <EditText
+          android:hint="Full-width text field with character counter"
+          style="@style/MdTextField.FullWidthTextAndCounter.Text" />
+      </android.support.design.widget.TextInputLayout>
+    </FrameLayout>
+  </LinearLayout>
 </LinearLayout>

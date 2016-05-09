@@ -16,27 +16,39 @@
 
 package me.henrytao.mddemo.activity;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.widget.Toolbar;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
 import me.henrytao.mddemo.R;
 
-public class TextFieldActivity extends BaseSimpleActivity {
+/**
+ * Created by henrytao on 5/5/16.
+ */
+public class TextFieldActivity extends BaseActivity {
 
-  public static Intent newIntent(Activity activity) {
-    return new Intent(activity, TextFieldActivity.class);
-  }
+  @Bind(R.id.toolbar)
+  Toolbar vToolbar;
 
   @Override
-  public int getLayoutId() {
+  protected int getDefaultLayout() {
     return R.layout.activity_text_field;
   }
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
+  protected int getMdCoreLayout() {
+    return R.layout.activity_text_field;
+  }
+
+  @Override
+  protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     ButterKnife.bind(this);
+
+    setSupportActionBar(vToolbar);
+    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    vToolbar.setNavigationOnClickListener(v -> onBackPressed());
   }
 }

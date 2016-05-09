@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 "Henry Tao <hi@henrytao.me>"
+ * Copyright 2016 "Henry Tao <hi@henrytao.me>"
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,38 +16,58 @@
 
 package me.henrytao.mddemo.activity;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.widget.Toolbar;
+import android.widget.CheckBox;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import me.henrytao.mdcore.widgets.MdIconToggle;
 import me.henrytao.mddemo.R;
 
-public class IconActivity extends BaseSimpleActivity {
+/**
+ * Created by henrytao on 5/2/16.
+ */
+public class IconActivity extends BaseActivity {
 
-  public static Intent newIntent(Activity activity) {
-    return new Intent(activity, IconActivity.class);
-  }
+  @Bind(R.id.checkbox1)
+  CheckBox vCheckBox1;
 
-  @Bind(R.id.toggle_up) MdIconToggle vMdIconToggleUp;
+  @Bind(R.id.checkbox2)
+  CheckBox vCheckBox2;
+
+  @Bind(R.id.toolbar)
+  Toolbar vToolbar;
 
   private int mCount;
 
   @Override
-  public int getLayoutId() {
+  protected int getDefaultLayout() {
     return R.layout.activity_icon;
   }
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
+  protected int getMdCoreLayout() {
+    return R.layout.activity_icon;
+  }
+
+  @Override
+  protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     ButterKnife.bind(this);
 
-    vMdIconToggleUp.setOnCheckedChangeListener((buttonView, isChecked) -> {
-      mCount += 1;
-      vMdIconToggleUp.setText(String.valueOf(mCount));
+    setSupportActionBar(vToolbar);
+    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    vToolbar.setNavigationOnClickListener(v -> onBackPressed());
+
+    vCheckBox1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+      mCount++;
+      buttonView.setText(String.valueOf(mCount));
+    });
+
+    vCheckBox2.setOnCheckedChangeListener((buttonView, isChecked) -> {
+      mCount++;
+      buttonView.setText(String.valueOf(mCount));
     });
   }
 }

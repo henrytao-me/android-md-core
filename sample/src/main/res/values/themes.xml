@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~ Copyright 2016 "Henry Tao <hi@henrytao.me>"
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -27,7 +27,6 @@
   <style name="Base.AppTheme.Dark" parent="MdTheme.Dark">
     <item name="bottomSheetDialogTheme">@style/Theme.Design.BottomSheetDialog</item>
   </style>
-
   <!-- ////////////////////////////////////////////////////////////////////////// -->
   <!-- Default Theme -->
   <!-- ////////////////////////////////////////////////////////////////////////// -->
@@ -35,7 +34,6 @@
   <style name="AppTheme" parent="Base.AppTheme.Light">
 
   </style>
-
   <!-- ////////////////////////////////////////////////////////////////////////// -->
   <!-- Themes -->
   <!-- ////////////////////////////////////////////////////////////////////////// -->

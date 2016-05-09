@@ -21,8 +21,10 @@
   <dimen name="mdListItemHeight_lg">72dp</dimen>
   <dimen name="mdListItemHeight_xlg">88dp</dimen>
 
+  <dimen name="mdListItemIconMargin">12dp</dimen>
+
   <dimen name="mdListItemPaddingLeft">24dp</dimen>
-  <dimen name="mdListItemPaddingLeft_lg">104dp</dimen>
+  <dimen name="mdListItemPaddingLeft_lg">80dp</dimen>
   <dimen name="mdListItemPaddingRight">16dp</dimen>
   <dimen name="mdListItemPaddingRight_lg">72dp</dimen>
 

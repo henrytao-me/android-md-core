@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright 2015 "Henry Tao <hi@henrytao.me>"
+  ~ Copyright 2016 "Henry Tao <hi@henrytao.me>"
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -16,135 +16,92 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:paddingBottom="@dimen/mdLayoutSpacing_lg"
-  tools:context=".activity.IconActivity"
-  style="@style/MdList">
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
 
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-  <!-- Icon Toggle -->
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
+  <android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    style="@style/MdToolbar" />
 
-  <LinearLayout style="@style/MdList">
-
-    <TextView
-      android:text="Icon toggle"
-      style="@style/MdSubHeader.List" />
-
-    <LinearLayout style="@style/AppStyle.Grid">
-
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
-
-        <me.henrytao.mdcore.widgets.MdIconToggle
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:button="@drawable/ic_menu_favorite" />
-      </RelativeLayout>
-
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
-
-        <me.henrytao.mdcore.widgets.MdIconToggle
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:button="@drawable/ic_menu_favorite"
-          android:enabled="false" />
-      </RelativeLayout>
-
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
-
-        <me.henrytao.mdcore.widgets.MdIconToggle
-          android:id="@+id/toggle_up"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:button="@drawable/ic_menu_favorite" />
-      </RelativeLayout>
-
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
-
-        <me.henrytao.mdcore.widgets.MdIconToggle
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:button="@drawable/ic_menu_favorite"
-          android:enabled="false"
-          android:text="10" />
-      </RelativeLayout>
-    </LinearLayout>
-  </LinearLayout>
-
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-  <!-- Icon -->
-  <!-- ////////////////////////////////////////////////////////////////////////// -->
-
-  <LinearLayout style="@style/MdList">
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="vertical">
 
     <TextView
       android:text="Icon"
       style="@style/MdSubHeader.List" />
 
-    <LinearLayout style="@style/AppStyle.Grid">
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
 
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
+      <ImageView
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_android_black_24dp"
+        style="@style/MdIcon" />
 
-        <me.henrytao.mdcore.widgets.MdIcon
-          android:layout_width="@dimen/mdIconSize"
-          android:layout_height="@dimen/mdIconSize"
-          android:src="@drawable/ic_android" />
-      </RelativeLayout>
+      <ImageView
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        app:enabled="false"
+        app:srcCompat="@drawable/ic_android_black_24dp"
+        style="@style/MdIcon" />
+    </LinearLayout>
 
-      <RelativeLayout style="@style/AppStyle.Grid.Item">
+    <TextView
+      android:text="Icon Toggle"
+      style="@style/MdSubHeader.List" />
 
-        <me.henrytao.mdcore.widgets.MdIcon
-          android:layout_width="@dimen/mdIconSize"
-          android:layout_height="@dimen/mdIconSize"
-          android:src="@drawable/ic_android"
-          app:enabled="false" />
-      </RelativeLayout>
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
 
-      <RelativeLayout
-        android:background="@color/mdColor_white"
-        style="@style/AppStyle.Grid.Item">
+      <CheckBox
+        android:id="@+id/checkbox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
-        <me.henrytao.mdcore.widgets.MdIcon
-          android:layout_width="@dimen/mdIconSize"
-          android:layout_height="@dimen/mdIconSize"
-          android:src="@drawable/ic_android"
-          app:tint="@color/md_icon_color_light" />
-      </RelativeLayout>
+      <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
-      <RelativeLayout
-        android:background="@color/mdColor_white"
-        style="@style/AppStyle.Grid.Item">
+      <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false" />
+    </LinearLayout>
 
-        <me.henrytao.mdcore.widgets.MdIcon
-          android:layout_width="@dimen/mdIconSize"
-          android:layout_height="@dimen/mdIconSize"
-          android:src="@drawable/ic_android"
-          app:enabled="false"
-          app:tint="@color/md_icon_color_light" />
-      </RelativeLayout>
+    <TextView
+      android:text="Custom Icon Toggle"
+      style="@style/MdSubHeader.List" />
 
-      <RelativeLayout
-        android:background="@color/mdColor_pink"
-        style="@style/AppStyle.Grid.Item">
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
 
-        <me.henrytao.mdcore.widgets.MdIcon
-          android:layout_width="@dimen/mdIconSize"
-          android:layout_height="@dimen/mdIconSize"
-          android:src="@drawable/ic_android"
-          app:tint="@color/md_icon_color_dark" />
-      </RelativeLayout>
+      <CheckBox
+        android:id="@+id/checkbox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_favorite_black_24dp" />
 
-      <RelativeLayout
-        android:background="@color/mdColor_pink"
-        style="@style/AppStyle.Grid.Item">
+      <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_favorite_black_24dp" />
 
-        <me.henrytao.mdcore.widgets.MdIcon
-          android:layout_width="@dimen/mdIconSize"
-          android:layout_height="@dimen/mdIconSize"
-          android:src="@drawable/ic_android"
-          app:enabled="false"
-          app:tint="@color/md_icon_color_dark" />
-      </RelativeLayout>
+      <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        app:srcCompat="@drawable/ic_favorite_black_24dp" />
     </LinearLayout>
   </LinearLayout>
 </LinearLayout>
