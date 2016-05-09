@@ -32,7 +32,7 @@ android {
 
   defaultConfig {
     applicationId rootProject.ext.android.applicationId
-    minSdkVersion rootProject.ext.sample.minSdkVersion
+    minSdkVersion rootProject.ext.android.minSdkVersion
     targetSdkVersion rootProject.ext.android.targetSdkVersion
     versionCode rootProject.ext.android.versionCode
     versionName rootProject.ext.android.versionName
@@ -68,7 +68,4 @@ dependencies {
   }
 
   compile rootProject.ext.dependencies["com.jakewharton:butterknife"]
-
-  compile rootProject.ext.dependencies["io.reactivex:rxjava"]
-  compile rootProject.ext.dependencies["io.reactivex:rxandroid"]
 }
