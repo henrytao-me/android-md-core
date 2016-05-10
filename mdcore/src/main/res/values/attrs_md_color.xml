@@ -155,6 +155,12 @@
     <attr name="mdIconColor_warnPalette" format="color|reference" />
     <attr name="mdIconColor_backgroundPalette" format="color|reference" />
 
+    <attr name="mdIconSelectedColor_primaryPalette" format="color|reference" />
+    <attr name="mdIconSelectedColor_accentPalette" format="color|reference" />
+    <attr name="mdIconSelectedColor_warnPalette" format="color|reference" />
+    <attr name="mdIconSelectedColor_backgroundPalette" format="color|reference" />
+
+    <!-- drawer arrow -->
     <attr name="mdDrawerArrowToggleColor" format="color|reference" />
   </declare-styleable>
 </resources>

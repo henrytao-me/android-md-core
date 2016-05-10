@@ -149,6 +149,11 @@
     <item name="mdIconColor_warnPalette">@color/md_icon_color_dark</item>
     <item name="mdIconColor_backgroundPalette">@color/md_icon_color_light</item>
 
+    <item name="mdIconSelectedColor_primaryPalette">@color/md_icon_selected_color_light</item>
+    <item name="mdIconSelectedColor_accentPalette">@color/md_icon_selected_color_dark</item>
+    <item name="mdIconSelectedColor_warnPalette">@color/md_icon_selected_color_dark</item>
+    <item name="mdIconSelectedColor_backgroundPalette">@color/md_icon_selected_color_light</item>
+
     <item name="MdCheckBoxStyle">@style/MdCheckBox</item>
     <item name="MdIconToggleStyle">@style/MdIconToggle</item>
 
