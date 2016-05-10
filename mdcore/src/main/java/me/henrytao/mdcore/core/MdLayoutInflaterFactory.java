@@ -56,9 +56,7 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
 
   private static final int FONT_WEIGHT_THIN = 10;
 
-  private static final String SUPPORT_CHECK_BOX = "CheckBox";
-
-  private static final Map<String, Typeface> sFontCaches = new HashMap<>();
+  private static final Map<String, Typeface> sTypefaceCaches = new HashMap<>();
 
   private final AppCompatDelegate mDelegate;
 
@@ -71,31 +69,24 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
     Ln.d("custom | %s | %s", name, attrs.getClass().toString());
 
     View view;
-    switch (name) {
-      case SUPPORT_CHECK_BOX:
-        view = new MdCheckBox(context, attrs);
-        break;
-      default:
-        view = mDelegate.createView(parent, name, context, attrs);
-        break;
+    if (TextUtils.equals(name, "checkbox")) {
+      view = new MdCheckBox(context, attrs);
+    } else {
+      view = mDelegate.createView(parent, name, context, attrs);
     }
 
-    if (view instanceof ImageView) {
-      supportImageView(context, (ImageView) view, attrs);
-    }
-    if (view instanceof CheckBox) {
-      supportCheckBox(context, (CheckBox) view, attrs);
-    }
-    if (view instanceof Button) {
-      supportButton(context, (Button) view, attrs);
-    }
-    if (view instanceof TextView) {
-      supportTextView(context, (TextView) view, attrs);
-    }
+    supportImageView(context, view instanceof ImageView ? (ImageView) view : null, attrs);
+    supportCheckBox(context, view instanceof CheckBox ? (CheckBox) view : null, attrs);
+    supportButton(context, view instanceof Button ? (Button) view : null, attrs);
+    supportTextView(context, view instanceof TextView ? (TextView) view : null, attrs);
+
     return view;
   }
 
-  private void supportButton(Context context, Button view, AttributeSet attrs) {
+  protected void supportButton(Context context, Button button, AttributeSet attrs) {
+    if (button == null) {
+      return;
+    }
     ColorStateList textColor;
     TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.TextAppearance, 0, 0);
     try {
@@ -105,11 +96,14 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
     }
     a.recycle();
     if (textColor != null) {
-      view.setTextColor(textColor);
+      button.setTextColor(textColor);
     }
   }
 
-  private void supportCheckBox(Context context, CheckBox view, AttributeSet attrs) {
+  protected void supportCheckBox(Context context, CheckBox checkBox, AttributeSet attrs) {
+    if (checkBox == null) {
+      return;
+    }
     Drawable drawable = null;
     TypedArray a = context.getTheme().obtainStyledAttributes(attrs, new int[]{
         R.attr.srcCompat
@@ -123,11 +117,14 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
     }
     a.recycle();
     if (drawable != null) {
-      view.setButtonDrawable(drawable);
+      checkBox.setButtonDrawable(drawable);
     }
   }
 
-  private void supportImageView(Context context, ImageView view, AttributeSet attrs) {
+  protected void supportImageView(Context context, ImageView imageView, AttributeSet attrs) {
+    if (imageView == null) {
+      return;
+    }
     boolean isEnabled = true;
     TypedArray a = context.getTheme().obtainStyledAttributes(attrs, new int[]{
         R.attr.enabled
@@ -137,10 +134,13 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
     } catch (Exception ignore) {
     }
     a.recycle();
-    view.setEnabled(isEnabled);
+    imageView.setEnabled(isEnabled);
   }
 
-  private void supportTextView(Context context, TextView view, AttributeSet attrs) {
+  protected void supportTextView(Context context, TextView textView, AttributeSet attrs) {
+    if (textView == null) {
+      return;
+    }
     String typography = null;
     int fontWeight = 0;
 
@@ -153,13 +153,7 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
     a.recycle();
 
     Typeface typeface = null;
-    if (!TextUtils.isEmpty(typography)) {
-      if (!sFontCaches.containsKey(typography)) {
-        sFontCaches.put(typography, Typeface.createFromAsset(context.getAssets(), typography));
-      }
-      typeface = sFontCaches.get(typography);
-    } else if (fontWeight > 0) {
-      typography = null;
+    if (TextUtils.isEmpty(typography) && fontWeight > 0) {
       switch (fontWeight) {
         case FONT_WEIGHT_THIN:
           typography = MdCompat.getStringFromAttribute(context, R.attr.mdTypography_thin);
@@ -180,15 +174,19 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
           typography = MdCompat.getStringFromAttribute(context, R.attr.mdTypography_black);
           break;
       }
-      if (!TextUtils.isEmpty(typography)) {
-        if (!sFontCaches.containsKey(typography)) {
-          sFontCaches.put(typography, Typeface.createFromAsset(context.getAssets(), typography));
-        }
-        typeface = sFontCaches.get(typography);
-      }
+    }
+    if (!TextUtils.isEmpty(typography)) {
+      typeface = getTypeface(context, typography);
     }
     if (typeface != null) {
-      view.setTypeface(typeface);
+      textView.setTypeface(typeface);
     }
+  }
+
+  private Typeface getTypeface(Context context, String typography) {
+    if (!sTypefaceCaches.containsKey(typography)) {
+      sTypefaceCaches.put(typography, Typeface.createFromAsset(context.getAssets(), typography));
+    }
+    return sTypefaceCaches.get(typography);
   }
 }
