@@ -23,11 +23,37 @@
   <style name="Base.AppTheme.Light" parent="MdTheme.Light">
     <item name="bottomSheetDialogTheme">@style/Theme.Design.Light.BottomSheetDialog</item>
 
+    <item name="mdTypography_thin">fonts/roboto/Roboto-Thin.ttf</item>
+    <item name="mdTypography_light">fonts/roboto/Roboto-Light.ttf</item>
+    <item name="mdTypography_regular">fonts/roboto/Roboto-Regular.ttf</item>
+    <item name="mdTypography_medium">fonts/roboto/Roboto-Medium.ttf</item>
     <item name="mdTypography_bold">fonts/roboto/Roboto-Bold.ttf</item>
+    <item name="mdTypography_black">fonts/roboto/Roboto-Black.ttf</item>
+
+    <!--<item name="mdTypography_thin">fonts/custom/Cookie-Regular.ttf</item>-->
+    <!--<item name="mdTypography_light">fonts/custom/Cookie-Regular.ttf</item>-->
+    <!--<item name="mdTypography_regular">fonts/custom/Cookie-Regular.ttf</item>-->
+    <!--<item name="mdTypography_medium">fonts/custom/Cookie-Regular.ttf</item>-->
+    <!--<item name="mdTypography_bold">fonts/custom/Cookie-Regular.ttf</item>-->
+    <!--<item name="mdTypography_black">fonts/custom/Cookie-Regular.ttf</item>-->
   </style>
 
   <style name="Base.AppTheme.Dark" parent="MdTheme.Dark">
     <item name="bottomSheetDialogTheme">@style/Theme.Design.BottomSheetDialog</item>
+
+    <item name="mdTypography_thin">fonts/roboto/Roboto-Thin.ttf</item>
+    <item name="mdTypography_light">fonts/roboto/Roboto-Light.ttf</item>
+    <item name="mdTypography_regular">fonts/roboto/Roboto-Regular.ttf</item>
+    <item name="mdTypography_medium">fonts/roboto/Roboto-Medium.ttf</item>
+    <item name="mdTypography_bold">fonts/roboto/Roboto-Bold.ttf</item>
+    <item name="mdTypography_black">fonts/roboto/Roboto-Black.ttf</item>
+
+    <!--<item name="mdTypography_thin">fonts/custom/Cookie-Regular.ttf</item>-->
+    <!--<item name="mdTypography_light">fonts/custom/Cookie-Regular.ttf</item>-->
+    <!--<item name="mdTypography_regular">fonts/custom/Cookie-Regular.ttf</item>-->
+    <!--<item name="mdTypography_medium">fonts/custom/Cookie-Regular.ttf</item>-->
+    <!--<item name="mdTypography_bold">fonts/custom/Cookie-Regular.ttf</item>-->
+    <!--<item name="mdTypography_black">fonts/custom/Cookie-Regular.ttf</item>-->
   </style>
   <!-- ////////////////////////////////////////////////////////////////////////// -->
   <!-- Default Theme -->

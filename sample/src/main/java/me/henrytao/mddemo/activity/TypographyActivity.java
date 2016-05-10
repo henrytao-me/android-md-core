@@ -16,11 +16,9 @@
 
 package me.henrytao.mddemo.activity;
 
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
-import android.widget.TextView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -30,9 +28,6 @@ import me.henrytao.mddemo.R;
  * Created by henrytao on 5/5/16.
  */
 public class TypographyActivity extends BaseActivity {
-
-  @Bind(R.id.font)
-  TextView vFont;
 
   @Bind(R.id.toolbar)
   Toolbar vToolbar;
@@ -55,9 +50,5 @@ public class TypographyActivity extends BaseActivity {
     setSupportActionBar(vToolbar);
     getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     vToolbar.setNavigationOnClickListener(v -> onBackPressed());
-
-    String name = "fonts/roboto/Roboto-Bold.ttf";
-    Typeface typeface = Typeface.createFromAsset(getAssets(), name);
-    vFont.setTypeface(typeface);
   }
 }

@@ -25,32 +25,66 @@
     android:id="@+id/toolbar"
     style="@style/MdToolbar" />
 
-  <LinearLayout
+  <android.support.v4.widget.NestedScrollView
     android:layout_width="match_parent"
     android:layout_height="0dp"
-    android:layout_weight="1"
-    android:orientation="vertical">
+    android:layout_weight="1">
 
-    <TextView
-      android:text="Headline"
-      style="@style/MdText.Headline" />
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="@dimen/mdLayoutSpacing">
 
-    <TextView
-      android:id="@+id/font"
-      android:text="Headline"
-      style="@style/MdText.Headline" />
+      <TextView
+        android:text="Display 4"
+        style="@style/MdText.Display4" />
 
-    <TextView
-      android:text="Headline"
-      app:mdFontWeight="bold"
-      app:mdTypography="fonts/roboto/Roboto-Bold.ttf"
-      tools:ignore="MissingPrefix"
-      style="@style/MdText.Headline" />
+      <TextView
+        android:text="Display 3"
+        style="@style/MdText.Display3" />
 
-    <TextView
-      android:text="Headline"
-      app:mdFontWeight="thin"
-      tools:ignore="MissingPrefix"
-      style="@style/MdText.Headline" />
-  </LinearLayout>
+      <TextView
+        android:text="Display 2"
+        style="@style/MdText.Display2" />
+
+      <TextView
+        android:text="Display 1"
+        style="@style/MdText.Display1" />
+
+      <TextView
+        android:text="Headline"
+        style="@style/MdText.Headline" />
+
+      <TextView
+        android:text="Title"
+        style="@style/MdText.Title" />
+
+      <TextView
+        android:text="Subheading"
+        style="@style/MdText.Subhead1" />
+
+      <TextView
+        android:text="Body 2"
+        style="@style/MdText.Body2" />
+
+      <TextView
+        android:text="Body 1"
+        style="@style/MdText.Body1" />
+
+      <TextView
+        android:text="Caption"
+        style="@style/MdText.Caption" />
+
+      <TextView
+        android:text="Button"
+        style="@style/MdText.Button" />
+
+      <TextView
+        android:text="Custom font"
+        app:mdTypography="fonts/custom/Cookie-Regular.ttf"
+        tools:ignore="MissingPrefix"
+        style="@style/MdText.Display1" />
+    </LinearLayout>
+  </android.support.v4.widget.NestedScrollView>
 </LinearLayout>

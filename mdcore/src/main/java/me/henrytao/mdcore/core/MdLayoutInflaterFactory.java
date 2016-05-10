@@ -69,7 +69,7 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
     Ln.d("custom | %s | %s", name, attrs.getClass().toString());
 
     View view;
-    if (TextUtils.equals(name, "checkbox")) {
+    if (TextUtils.equals(name, "CheckBox")) {
       view = new MdCheckBox(context, attrs);
     } else {
       view = mDelegate.createView(parent, name, context, attrs);
