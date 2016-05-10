@@ -22,6 +22,8 @@
 
   <style name="Base.AppTheme.Light" parent="MdTheme.Light">
     <item name="bottomSheetDialogTheme">@style/Theme.Design.Light.BottomSheetDialog</item>
+
+    <item name="mdTypography_bold">fonts/roboto/Roboto-Bold.ttf</item>
   </style>
 
   <style name="Base.AppTheme.Dark" parent="MdTheme.Dark">

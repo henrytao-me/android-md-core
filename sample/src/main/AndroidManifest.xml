@@ -68,5 +68,8 @@
     <activity
       android:label="@string/text_info"
       android:name=".activity.InfoActivity" />
+    <activity
+      android:label="@string/title_activity_typography"
+      android:name=".activity.TypographyActivity" />
   </application>
 </manifest>
