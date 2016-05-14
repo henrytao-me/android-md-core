@@ -70,7 +70,7 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
     supportImageView(context, view instanceof ImageView ? (ImageView) view : null, attrs);
     supportCheckBox(context, view instanceof CheckBox ? (CheckBox) view : null, attrs);
     supportButton(context, view instanceof Button ? (Button) view : null, attrs);
-    supportTextView(context, view instanceof TextView ? (TextView) view : null, attrs);
+    supportTypeface(context, view instanceof TextView ? (TextView) view : null, attrs);
   }
 
   protected void supportButton(Context context, Button button, AttributeSet attrs) {
@@ -78,11 +78,13 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
       return;
     }
     ColorStateList textColor;
-    TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.TextAppearance, 0, 0);
+    TypedArray a = context.getTheme().obtainStyledAttributes(attrs, new int[]{
+        android.R.attr.textColor
+    }, R.attr.buttonStyle, 0);
     try {
-      textColor = MdCompat.getColorStateList(context, a.getResourceId(R.styleable.TextAppearance_android_textColor, 0));
+      textColor = MdCompat.getColorStateList(context, a.getResourceId(0, 0));
     } catch (Exception ignore) {
-      textColor = a.getColorStateList(R.styleable.TextAppearance_android_textColor);
+      textColor = a.getColorStateList(0);
     }
     a.recycle();
     if (textColor != null) {
@@ -127,11 +129,11 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
     imageView.setEnabled(isEnabled);
   }
 
-  protected void supportTextView(Context context, TextView textView, AttributeSet attrs) {
+  protected void supportTypeface(Context context, TextView textView, AttributeSet attrs) {
     if (textView == null) {
       return;
     }
-    Typeface typeface = Typography.getTypeface(context, attrs, 0, 0);
+    Typeface typeface = Typography.getTypeface(context, attrs, textView instanceof Button ? R.attr.buttonStyle : 0, 0);
     if (typeface != null && textView.getTypeface() != typeface) {
       textView.setTypeface(typeface);
     }

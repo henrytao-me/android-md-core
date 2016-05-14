@@ -196,9 +196,8 @@
 
     <item name="alertDialogTheme">@style/MdAlertDialog.Theme.Dark</item>
 
-    <item name="buttonBarButtonStyle">@style/MdButton.Borderless.Colored</item>
     <item name="buttonStyle">@style/MdButton</item>
     <item name="buttonStyleSmall">@style/MdButton.Small</item>
-    <item name="android:textAppearanceButton">@style/MdText.Button</item>
+    <item name="buttonBarButtonStyle">@style/MdButton.Borderless.Colored</item>
   </style>
 </resources>
