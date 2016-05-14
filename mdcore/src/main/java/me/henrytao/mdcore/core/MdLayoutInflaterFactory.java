@@ -32,31 +32,16 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import me.henrytao.mdcore.R;
 import me.henrytao.mdcore.utils.Ln;
+import me.henrytao.mdcore.utils.Typography;
 import me.henrytao.mdcore.widgets.internal.MdCheckBox;
+import me.henrytao.mdcore.widgets.internal.MdToolbar;
 
 /**
  * Created by henrytao on 4/27/16.
  */
 public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
-
-  private static final int FONT_WEIGHT_BLACK = 60;
-
-  private static final int FONT_WEIGHT_BOLD = 50;
-
-  private static final int FONT_WEIGHT_LIGHT = 20;
-
-  private static final int FONT_WEIGHT_MEDIUM = 40;
-
-  private static final int FONT_WEIGHT_REGULAR = 30;
-
-  private static final int FONT_WEIGHT_THIN = 10;
-
-  private static final Map<String, Typeface> sTypefaceCaches = new HashMap<>();
 
   private final AppCompatDelegate mDelegate;
 
@@ -67,20 +52,25 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
   @Override
   public View onCreateView(View parent, String name, Context context, AttributeSet attrs) {
     Ln.d("custom | %s | %s", name, attrs.getClass().toString());
+    View view = onCreateCustomView(parent, name, context, attrs);
+    onSupportView(view, parent, name, context, attrs);
+    return view;
+  }
 
-    View view;
+  protected View onCreateCustomView(View parent, String name, Context context, AttributeSet attrs) {
     if (TextUtils.equals(name, "CheckBox")) {
-      view = new MdCheckBox(context, attrs);
-    } else {
-      view = mDelegate.createView(parent, name, context, attrs);
+      return new MdCheckBox(context, attrs);
+    } else if (TextUtils.equals(name, "android.support.v7.widget.Toolbar")) {
+      return new MdToolbar(context, attrs);
     }
+    return mDelegate.createView(parent, name, context, attrs);
+  }
 
+  protected void onSupportView(View view, View parent, String name, Context context, AttributeSet attrs) {
     supportImageView(context, view instanceof ImageView ? (ImageView) view : null, attrs);
     supportCheckBox(context, view instanceof CheckBox ? (CheckBox) view : null, attrs);
     supportButton(context, view instanceof Button ? (Button) view : null, attrs);
     supportTextView(context, view instanceof TextView ? (TextView) view : null, attrs);
-
-    return view;
   }
 
   protected void supportButton(Context context, Button button, AttributeSet attrs) {
@@ -141,52 +131,9 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
     if (textView == null) {
       return;
     }
-    String typography = null;
-    int fontWeight = 0;
-
-    TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.MdTypography, 0, 0);
-    try {
-      fontWeight = a.getInt(R.styleable.MdTypography_mdFontWeight, 0);
-      typography = a.getString(R.styleable.MdTypography_mdTypography);
-    } catch (Exception ignore) {
-    }
-    a.recycle();
-
-    Typeface typeface = null;
-    if (TextUtils.isEmpty(typography) && fontWeight > 0) {
-      switch (fontWeight) {
-        case FONT_WEIGHT_THIN:
-          typography = MdCompat.getStringFromAttribute(context, R.attr.mdTypography_thin);
-          break;
-        case FONT_WEIGHT_LIGHT:
-          typography = MdCompat.getStringFromAttribute(context, R.attr.mdTypography_light);
-          break;
-        case FONT_WEIGHT_REGULAR:
-          typography = MdCompat.getStringFromAttribute(context, R.attr.mdTypography_regular);
-          break;
-        case FONT_WEIGHT_MEDIUM:
-          typography = MdCompat.getStringFromAttribute(context, R.attr.mdTypography_medium);
-          break;
-        case FONT_WEIGHT_BOLD:
-          typography = MdCompat.getStringFromAttribute(context, R.attr.mdTypography_bold);
-          break;
-        case FONT_WEIGHT_BLACK:
-          typography = MdCompat.getStringFromAttribute(context, R.attr.mdTypography_black);
-          break;
-      }
-    }
-    if (!TextUtils.isEmpty(typography)) {
-      typeface = getTypeface(context, typography);
-    }
-    if (typeface != null) {
+    Typeface typeface = Typography.getTypeface(context, attrs, 0, 0);
+    if (typeface != null && textView.getTypeface() != typeface) {
       textView.setTypeface(typeface);
     }
-  }
-
-  private Typeface getTypeface(Context context, String typography) {
-    if (!sTypefaceCaches.containsKey(typography)) {
-      sTypefaceCaches.put(typography, Typeface.createFromAsset(context.getAssets(), typography));
-    }
-    return sTypefaceCaches.get(typography);
   }
 }

@@ -23,6 +23,7 @@
     <item name="titleMarginStart">@dimen/mdTitleMarginStart</item>
     <item name="titleTextAppearance">@style/MdToolbar.Title</item>
     <item name="subtitleTextAppearance">@style/MdToolbar.Subtitle</item>
+    <item name="mdFontWeight">@integer/mdFontWeight_title</item>
   </style>
 
   <style name="MdToolbar.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
