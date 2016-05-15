@@ -17,13 +17,13 @@
 package me.henrytao.mdcore.widgets.internal;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
 import android.util.AttributeSet;
-import android.view.View;
-import android.widget.TextView;
 
+import me.henrytao.mdcore.R;
 import me.henrytao.mdcore.utils.Typography;
 
 /**
@@ -33,47 +33,46 @@ public class MdToolbar extends Toolbar {
 
   private boolean mInit;
 
-  private Typeface mTypeface;
+  private Typeface mSubtitleTypeface;
+
+  private Typeface mTitleTypeface;
 
   public MdToolbar(Context context) {
-    super(context);
-    initFromAttributes(null, 0);
+    this(context, null);
   }
 
   public MdToolbar(Context context, @Nullable AttributeSet attrs) {
-    super(context, attrs);
-    initFromAttributes(attrs, 0);
+    this(context, attrs, R.attr.toolbarStyle);
   }
 
   public MdToolbar(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-    super(context, attrs, defStyleAttr);
-    initFromAttributes(attrs, defStyleAttr);
+    super(context, attrs, defStyleAttr > 0 ? defStyleAttr : R.attr.toolbarStyle);
+    initFromAttributes(attrs, defStyleAttr > 0 ? defStyleAttr : R.attr.toolbarStyle);
   }
 
   @Override
   public void setSubtitle(CharSequence subtitle) {
-    super.setSubtitle(subtitle);
-    syncTypeface();
+    super.setSubtitle(Typography.applyTypeface(subtitle, mSubtitleTypeface));
   }
 
   @Override
   public void setTitle(CharSequence title) {
-    super.setTitle(title);
-    syncTypeface();
+    super.setTitle(Typography.applyTypeface(title, mTitleTypeface));
   }
 
   private void initFromAttributes(AttributeSet attrs, int defStyleAttr) {
-    mTypeface = Typography.getTypeface(getContext(), attrs, defStyleAttr, 0);
-  }
-
-  private void syncTypeface() {
-    int n = getChildCount();
-    View child;
-    for (int i = 0; i < n; i++) {
-      child = getChildAt(i);
-      if (child instanceof TextView && ((TextView) child).getTypeface() != mTypeface) {
-        ((TextView) child).setTypeface(mTypeface);
-      }
+    TypedArray a = getContext().getTheme().obtainStyledAttributes(attrs, new int[]{
+        R.attr.titleTextAppearance,
+        R.attr.subtitleTextAppearance
+    }, defStyleAttr, 0);
+    int titleTextAppearanceResourceId = a.getResourceId(0, 0);
+    int subtitleTextAppearanceResourceId = a.getResourceId(1, 0);
+    a.recycle();
+    if (titleTextAppearanceResourceId > 0) {
+      mTitleTypeface = Typography.getTypeface(getContext(), titleTextAppearanceResourceId);
+    }
+    if (subtitleTextAppearanceResourceId > 0) {
+      mSubtitleTypeface = Typography.getTypeface(getContext(), subtitleTextAppearanceResourceId);
     }
   }
 }
