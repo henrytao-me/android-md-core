@@ -60,6 +60,10 @@ public class Typography {
     return s;
   }
 
+  public static Typeface getDefaultTypeface(Context context) {
+    return getTypeface(context, MdCompat.getStringFromAttribute(context, R.attr.mdTypography_default));
+  }
+
   public static Typeface getTypeface(Context context, @StyleRes int resId) {
     String typography = null;
     int fontWeight = 0;

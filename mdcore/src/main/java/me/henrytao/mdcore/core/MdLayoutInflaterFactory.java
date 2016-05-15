@@ -137,6 +137,7 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
       return;
     }
     Typeface typeface = Typography.getTypeface(context, attrs, textView instanceof Button ? R.attr.buttonStyle : 0, 0);
+    typeface = typeface != null ? typeface : Typography.getDefaultTypeface(context);
     if (typeface != null && textView.getTypeface() != typeface) {
       textView.setTypeface(typeface);
     }

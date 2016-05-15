@@ -18,6 +18,7 @@
 
   <declare-styleable name="MdTypography">
 
+    <attr name="mdTypography_default" format="string|reference" />
     <attr name="mdTypography_thin" format="string|reference" />
     <attr name="mdTypography_light" format="string|reference" />
     <attr name="mdTypography_regular" format="string|reference" />

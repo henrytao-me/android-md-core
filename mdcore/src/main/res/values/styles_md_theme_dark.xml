@@ -154,6 +154,14 @@
     <item name="mdIconSelectedColor_warnPalette">@color/md_icon_selected_color_dark</item>
     <item name="mdIconSelectedColor_backgroundPalette">@color/md_icon_selected_color_dark</item>
 
+    <item name="mdTypography_default">@null</item>
+    <item name="mdTypography_thin">@null</item>
+    <item name="mdTypography_light">@null</item>
+    <item name="mdTypography_regular">@null</item>
+    <item name="mdTypography_medium">@null</item>
+    <item name="mdTypography_bold">@null</item>
+    <item name="mdTypography_black">@null</item>
+
     <item name="MdCheckBoxStyle">@style/MdCheckBox</item>
     <item name="MdIconToggleStyle">@style/MdIconToggle</item>
 
