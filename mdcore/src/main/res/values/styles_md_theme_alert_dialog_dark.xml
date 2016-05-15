@@ -33,14 +33,14 @@
     <item name="buttonStyleSmall">@style/MdButton.Small</item>
     <item name="buttonBarButtonStyle">@style/MdButton.Borderless.Colored</item>
 
-    <item name="android:windowTitleStyle">@style/Base.MdAlertDialog.WindowTitleStyle</item>
+    <item name="android:windowTitleStyle">@style/Base.MdAlertDialog.WindowTitleStyle.Dark</item>
   </style>
 
   <style name="Base.MdAlertDialog.Style.Dark" parent="AlertDialog.AppCompat">
     <!-- do nothing -->
   </style>
 
-  <style name="Base.MdAlertDialog.WindowTitleStyle" parent="RtlOverlay.DialogWindowTitle.AppCompat">
+  <style name="Base.MdAlertDialog.WindowTitleStyle.Dark" parent="RtlOverlay.DialogWindowTitle.AppCompat">
     <item name="mdFontWeight">@integer/mdFontWeight_title</item>
   </style>
 </resources>
