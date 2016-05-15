@@ -147,6 +147,9 @@ public class Typography {
   }
 
   public static Typeface getTypeface(Context context, String typography) {
+    if (TextUtils.isEmpty(typography)) {
+      return null;
+    }
     if (!sTypefaceCaches.containsKey(typography)) {
       sTypefaceCaches.put(typography, Typeface.createFromAsset(context.getAssets(), typography));
     }
