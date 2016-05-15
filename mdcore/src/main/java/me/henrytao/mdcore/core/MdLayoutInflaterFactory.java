@@ -24,6 +24,7 @@ import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.v4.view.LayoutInflaterFactory;
 import android.support.v7.app.AppCompatDelegate;
+import android.support.v7.widget.DialogTitle;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
@@ -62,6 +63,8 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
       return new MdCheckBox(context, attrs);
     } else if (TextUtils.equals(name, "android.support.v7.widget.Toolbar")) {
       return new MdToolbar(context, attrs);
+    } else if (TextUtils.equals(name, "android.support.v7.widget.DialogTitle")) {
+      return new DialogTitle(context, attrs);
     }
     return mDelegate.createView(parent, name, context, attrs);
   }
