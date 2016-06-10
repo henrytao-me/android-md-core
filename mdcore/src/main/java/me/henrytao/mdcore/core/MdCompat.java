@@ -86,6 +86,14 @@ public class MdCompat {
     return size;
   }
 
+  public static boolean getBooleanFromAttribute(Context context, int attrId) {
+    if (attrId == 0) {
+      return false;
+    }
+    TypedArray array = context.getTheme().obtainStyledAttributes(new int[]{R.attr.isLightTheme});
+    return array.getBoolean(0, false);
+  }
+
   public static int getColorFromAttribute(Context context, int attrId) {
     if (attrId == 0) {
       return 0;
@@ -190,6 +198,10 @@ public class MdCompat {
       }
     }
     return statusBarSize;
+  }
+
+  public static boolean isLightTheme(Context context) {
+    return getBooleanFromAttribute(context, R.attr.isLightTheme);
   }
 
   public static int modulateColorAlpha(int baseColor, float alphaMod) {

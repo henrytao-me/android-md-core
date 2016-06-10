@@ -1,5 +1,10 @@
 # android-md-core releases #
 
+### Version 3.0.2 – Jun 10th 2016 ###
+
+- Add util method to detect isLightTheme
+
+
 ### Version 3.0.1 – May 26th 2016 ###
 
 - Hug refactor
