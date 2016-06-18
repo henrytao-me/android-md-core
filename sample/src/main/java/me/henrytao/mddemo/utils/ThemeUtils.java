@@ -17,7 +17,9 @@
 package me.henrytao.mddemo.utils;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,9 +31,11 @@ import me.henrytao.mddemo.R;
  */
 public class ThemeUtils {
 
+  private static final String KEY_THEME_ID = "KEY_THEME_ID";
+
   public static int DEFAULT_THEME_RES_ID = R.style.AppTheme;
 
-  private static int sCurrentThemeResId = DEFAULT_THEME_RES_ID;
+  private static SharedPreferences sSharedPreferences;
 
   private static Map<Integer, Integer> sThemes = new HashMap<>();
 
@@ -61,8 +65,8 @@ public class ThemeUtils {
 
   public static void changeToTheme(Activity activity, int themeId) {
     int themeResId = sThemes.containsKey(themeId) ? sThemes.get(themeId) : 0;
-    if (themeResId > 0 && themeResId != sCurrentThemeResId) {
-      sCurrentThemeResId = themeResId;
+    if (themeResId > 0 && themeResId != getThemeId(activity)) {
+      setThemeId(activity, themeResId);
       Intent intent = new Intent(activity, activity.getClass());
       intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
       activity.startActivity(intent);
@@ -72,6 +76,24 @@ public class ThemeUtils {
   }
 
   public static void onCreate(Activity activity) {
-    activity.setTheme(sCurrentThemeResId);
+    activity.setTheme(getThemeId(activity));
+  }
+
+  private static SharedPreferences getSharedPreferences(Context context) {
+    if (sSharedPreferences == null) {
+      sSharedPreferences = context.getSharedPreferences("any-key", Context.MODE_PRIVATE);
+    }
+    return sSharedPreferences;
+  }
+
+  private static int getThemeId(Context context) {
+    return getSharedPreferences(context).getInt(KEY_THEME_ID, DEFAULT_THEME_RES_ID);
+  }
+
+  private static void setThemeId(Context context, int themeId) {
+    getSharedPreferences(context)
+        .edit()
+        .putInt(KEY_THEME_ID, themeId)
+        .commit();
   }
 }
