@@ -1,5 +1,10 @@
 # android-md-core releases #
 
+### Version 3.1.0 – July 07th 2016 ###
+
+- Support typography
+
+
 ### Version 3.0.2 – Jun 10th 2016 ###
 
 - Add util method to detect isLightTheme
