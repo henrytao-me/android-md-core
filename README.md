@@ -18,6 +18,35 @@ compile "me.henrytao:mdcore:<latest-version>"
 - `android-md-core` is deployed to `jCenter`. Make sure you have `jcenter()` in your project gradle.
 
 
+## Usages
+
+**STEP 1.** Setup `BaseActivity`
+
+```java
+public abstract class BaseActivity extends AppCompatActivity {
+
+  @Override
+  protected void onCreate(@Nullable Bundle savedInstanceState) {
+    // This method should be called before calling super
+    MdCore.init(this);
+    super.onCreate(savedInstanceState);
+  }
+}
+```
+
+**STEP 2.** Setup theme using either `MdTheme.Light` or `MdTheme.Dark`
+
+```xml
+<style name="AppTheme" parent="MdTheme.Light">
+
+</style>
+
+<style name="AppTheme.Dark" parent="MdTheme.Dark">
+
+</style>
+```
+
+
 ## Demo
 
 [![Get it on Google Play](https://raw.githubusercontent.com/henrytao-me/android-md-core/master/screenshots/google-play.png)](https://play.google.com/store/apps/details?id=me.henrytao.mdcoreinaction)
