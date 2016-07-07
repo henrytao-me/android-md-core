@@ -153,6 +153,9 @@ public class MainActivity extends BaseActivity {
       case R.id.menu_help_and_feedback:
         intent = new Intent(this, InfoActivity.class);
         break;
+      case R.id.menu_typography:
+        intent = new Intent(this, TypographyActivity.class);
+        break;
     }
     if (intent != null) {
       intent.putExtra(Constants.Extra.IS_MD_CORE_ENABLED, type == GravityCompat.START);

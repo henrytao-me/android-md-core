@@ -50,7 +50,8 @@
           <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="CardView" />
+            android:text="CardView"
+            style="@style/MdText.Body1" />
         </FrameLayout>
       </android.support.v7.widget.CardView>
 
@@ -69,7 +70,8 @@
           <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="CardView" />
+            android:text="CardView"
+            style="@style/MdText.Body1" />
         </FrameLayout>
       </android.support.v7.widget.CardView>
     </LinearLayout>
@@ -93,7 +95,8 @@
           <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="CardView" />
+            android:text="CardView"
+            style="@style/MdText.Body1" />
         </FrameLayout>
       </android.support.v7.widget.CardView>
 
@@ -109,7 +112,8 @@
           <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="CardView" />
+            android:text="CardView"
+            style="@style/MdText.Body1" />
         </FrameLayout>
       </android.support.v7.widget.CardView>
     </LinearLayout>
@@ -134,7 +138,8 @@
           <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="CardView Small" />
+            android:text="CardView Small"
+            style="@style/MdText.Body1" />
         </FrameLayout>
       </android.support.v7.widget.CardView>
 
@@ -153,7 +158,8 @@
           <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="CardView Small" />
+            android:text="CardView Small"
+            style="@style/MdText.Body1" />
         </FrameLayout>
       </android.support.v7.widget.CardView>
     </LinearLayout>
@@ -177,7 +183,8 @@
           <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="CardView Small" />
+            android:text="CardView Small"
+            style="@style/MdText.Body1" />
         </FrameLayout>
       </android.support.v7.widget.CardView>
 
@@ -193,7 +200,8 @@
           <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="CardView Small" />
+            android:text="CardView Small"
+            style="@style/MdText.Body1" />
         </FrameLayout>
       </android.support.v7.widget.CardView>
     </LinearLayout>

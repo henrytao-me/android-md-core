@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2016 "Henry Tao <hi@henrytao.me>"
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+
+  <integer name="mdFontWeight_button">@integer/mdFontWeight_bold</integer>
+  <integer name="mdFontWeight_caption">@integer/mdFontWeight_regular</integer>
+  <integer name="mdFontWeight_body1">@integer/mdFontWeight_regular</integer>
+  <integer name="mdFontWeight_body2">@integer/mdFontWeight_bold</integer>
+  <integer name="mdFontWeight_subhead1">@integer/mdFontWeight_regular</integer>
+  <integer name="mdFontWeight_subhead2">@integer/mdFontWeight_regular</integer>
+  <integer name="mdFontWeight_title">@integer/mdFontWeight_bold</integer>
+  <integer name="mdFontWeight_headline">@integer/mdFontWeight_regular</integer>
+  <integer name="mdFontWeight_display1">@integer/mdFontWeight_regular</integer>
+  <integer name="mdFontWeight_display2">@integer/mdFontWeight_regular</integer>
+  <integer name="mdFontWeight_display3">@integer/mdFontWeight_regular</integer>
+  <integer name="mdFontWeight_display4">@integer/mdFontWeight_regular</integer>
+</resources>

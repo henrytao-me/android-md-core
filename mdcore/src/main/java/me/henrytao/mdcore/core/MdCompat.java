@@ -33,6 +33,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.graphics.ColorUtils;
 import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.StateSet;
 import android.util.TypedValue;
@@ -184,9 +185,9 @@ public class MdCompat {
     if (attrId == 0) {
       return 0;
     }
-    TypedValue a = new TypedValue();
-    context.getTheme().resolveAttribute(attrId, a, true);
-    return a.resourceId;
+    TypedValue typedValue = new TypedValue();
+    context.getTheme().resolveAttribute(attrId, typedValue, true);
+    return typedValue.resourceId;
   }
 
   public static int getStatusBarSize(Context context) {
@@ -198,6 +199,16 @@ public class MdCompat {
       }
     }
     return statusBarSize;
+  }
+
+  public static String getStringFromAttribute(Context context, int attrId) {
+    if (attrId == 0) {
+      return null;
+    }
+    TypedValue typedValue = new TypedValue();
+    context.getTheme().resolveAttribute(attrId, typedValue, true);
+    CharSequence result = typedValue.string;
+    return !TextUtils.isEmpty(result) ? result.toString() : null;
   }
 
   public static boolean isLightTheme(Context context) {

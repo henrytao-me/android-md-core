@@ -20,6 +20,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Rect;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.v4.view.ViewCompat;
@@ -31,6 +32,7 @@ import android.text.TextWatcher;
 import android.util.AttributeSet;
 
 import me.henrytao.mdcore.R;
+import me.henrytao.mdcore.utils.Typography;
 
 /**
  * Created by henrytao on 5/3/16.
@@ -74,7 +76,7 @@ public class MdCheckBox extends AppCompatCheckBox {
 
   public MdCheckBox(Context context, AttributeSet attrs, int defStyleAttr) {
     super(context, attrs, defStyleAttr > 0 ? defStyleAttr : getDefStyleAttr(context, attrs));
-    initFromAttributes(attrs);
+    initFromAttributes(attrs, defStyleAttr > 0 ? defStyleAttr : getDefStyleAttr(context, attrs));
   }
 
   @Override
@@ -97,7 +99,12 @@ public class MdCheckBox extends AppCompatCheckBox {
     }
   }
 
-  protected void initFromAttributes(AttributeSet attrs) {
+  protected void initFromAttributes(AttributeSet attrs, int defStyleAttr) {
+    Typeface typeface = Typography.getTypeface(getContext(), attrs, defStyleAttr, 0);
+    if (typeface != null) {
+      setTypeface(typeface);
+    }
+
     mHasCustomDrawable = hasCustomDrawable(getContext(), attrs);
 
     mPaddingLeft = getPaddingLeft();
