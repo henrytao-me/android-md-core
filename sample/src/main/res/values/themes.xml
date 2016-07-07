@@ -14,7 +14,7 @@
   ~ limitations under the License.
   -->
 
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
   <!-- ////////////////////////////////////////////////////////////////////////// -->
   <!-- Base Theme -->
@@ -33,6 +33,7 @@
 
   <style name="AppTheme" parent="Base.AppTheme.Light">
 
+    <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
   </style>
   <!-- ////////////////////////////////////////////////////////////////////////// -->
   <!-- Themes -->
@@ -291,6 +292,8 @@
     <item name="mdColorDividerInverse_primaryPalette">@color/mdColorDivider_dark</item>
     <item name="mdColorDividerInverse_primaryPalette_dark">@color/mdColorDivider_dark</item>
     <item name="mdColorDividerInverse_primaryPalette_light">@color/mdColorDivider_dark</item>
+
+    <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
   </style>
 
   <style name="AppTheme.Black" parent="Base.AppTheme.Dark">
