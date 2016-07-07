@@ -19,26 +19,30 @@ package me.henrytao.mdcore.core;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.v4.view.LayoutInflaterFactory;
 import android.support.v7.app.AppCompatDelegate;
+import android.support.v7.widget.DialogTitle;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import me.henrytao.mdcore.R;
 import me.henrytao.mdcore.utils.Ln;
+import me.henrytao.mdcore.utils.Typography;
 import me.henrytao.mdcore.widgets.internal.MdCheckBox;
+import me.henrytao.mdcore.widgets.internal.MdToolbar;
 
 /**
  * Created by henrytao on 4/27/16.
  */
 public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
-
-  private static final String SUPPORT_CHECK_BOX = "CheckBox";
 
   private final AppCompatDelegate mDelegate;
 
@@ -49,42 +53,52 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
   @Override
   public View onCreateView(View parent, String name, Context context, AttributeSet attrs) {
     Ln.d("custom | %s | %s", name, attrs.getClass().toString());
-
-    View view;
-    switch (name) {
-      case SUPPORT_CHECK_BOX:
-        view = new MdCheckBox(context, attrs);
-        break;
-      default:
-        view = mDelegate.createView(parent, name, context, attrs);
-        break;
-    }
-
-    if (view instanceof ImageView) {
-      supportImageView(context, (ImageView) view, attrs);
-    } else if (view instanceof CheckBox) {
-      supportCheckBox(context, (CheckBox) view, attrs);
-    } else if (view instanceof Button) {
-      supportButton(context, (Button) view, attrs);
-    }
+    View view = onCreateCustomView(parent, name, context, attrs);
+    onSupportView(view, parent, name, context, attrs);
     return view;
   }
 
-  private void supportButton(Context context, Button view, AttributeSet attrs) {
+  protected View onCreateCustomView(View parent, String name, Context context, AttributeSet attrs) {
+    if (TextUtils.equals(name, "CheckBox")) {
+      return new MdCheckBox(context, attrs);
+    } else if (TextUtils.equals(name, "android.support.v7.widget.Toolbar")) {
+      return new MdToolbar(context, attrs);
+    } else if (TextUtils.equals(name, "android.support.v7.widget.DialogTitle")) {
+      return new DialogTitle(context, attrs);
+    }
+    return mDelegate.createView(parent, name, context, attrs);
+  }
+
+  protected void onSupportView(View view, View parent, String name, Context context, AttributeSet attrs) {
+    supportImageView(context, view instanceof ImageView ? (ImageView) view : null, attrs);
+    supportCheckBox(context, view instanceof CheckBox ? (CheckBox) view : null, attrs);
+    supportButton(context, view instanceof Button ? (Button) view : null, attrs);
+    supportTypeface(context, view instanceof TextView ? (TextView) view : null, attrs);
+  }
+
+  protected void supportButton(Context context, Button button, AttributeSet attrs) {
+    if (button == null) {
+      return;
+    }
     ColorStateList textColor;
-    TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.TextAppearance, 0, 0);
+    TypedArray a = context.getTheme().obtainStyledAttributes(attrs, new int[]{
+        android.R.attr.textColor
+    }, R.attr.buttonStyle, 0);
     try {
-      textColor = MdCompat.getColorStateList(context, a.getResourceId(R.styleable.TextAppearance_android_textColor, 0));
+      textColor = MdCompat.getColorStateList(context, a.getResourceId(0, 0));
     } catch (Exception ignore) {
-      textColor = a.getColorStateList(R.styleable.TextAppearance_android_textColor);
+      textColor = a.getColorStateList(0);
     }
     a.recycle();
     if (textColor != null) {
-      view.setTextColor(textColor);
+      button.setTextColor(textColor);
     }
   }
 
-  private void supportCheckBox(Context context, CheckBox view, AttributeSet attrs) {
+  protected void supportCheckBox(Context context, CheckBox checkBox, AttributeSet attrs) {
+    if (checkBox == null) {
+      return;
+    }
     Drawable drawable = null;
     TypedArray a = context.getTheme().obtainStyledAttributes(attrs, new int[]{
         R.attr.srcCompat
@@ -98,11 +112,14 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
     }
     a.recycle();
     if (drawable != null) {
-      view.setButtonDrawable(drawable);
+      checkBox.setButtonDrawable(drawable);
     }
   }
 
-  private void supportImageView(Context context, ImageView view, AttributeSet attrs) {
+  protected void supportImageView(Context context, ImageView imageView, AttributeSet attrs) {
+    if (imageView == null) {
+      return;
+    }
     boolean isEnabled = true;
     TypedArray a = context.getTheme().obtainStyledAttributes(attrs, new int[]{
         R.attr.enabled
@@ -112,6 +129,17 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
     } catch (Exception ignore) {
     }
     a.recycle();
-    view.setEnabled(isEnabled);
+    imageView.setEnabled(isEnabled);
+  }
+
+  protected void supportTypeface(Context context, TextView textView, AttributeSet attrs) {
+    if (textView == null) {
+      return;
+    }
+    Typeface typeface = Typography.getTypeface(context, attrs, textView instanceof Button ? R.attr.buttonStyle : 0, 0);
+    typeface = typeface != null ? typeface : Typography.getDefaultTypeface(context);
+    if (typeface != null && textView.getTypeface() != typeface) {
+      textView.setTypeface(typeface);
+    }
   }
 }
