@@ -55,6 +55,9 @@ public class Typography {
   private static final Map<String, Typeface> sTypefaceCaches = new HashMap<>();
 
   public static CharSequence applyTypeface(CharSequence text, Typeface typeface) {
+    if (text == null) {
+      return null;
+    }
     SpannableString s = new SpannableString(text);
     s.setSpan(new TypefaceSpan(typeface), 0, s.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
     return s;
