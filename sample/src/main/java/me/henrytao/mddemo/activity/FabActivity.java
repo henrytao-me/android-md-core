@@ -73,6 +73,8 @@ public class FabActivity extends BaseActivity {
     //popupWindow.getContentView().setFocusableInTouchMode(true);
     //popupWindow.showAsDropDown(getWindow().getDecorView());
 
+
+
     View sheet = getLayoutInflater().inflate(R.layout.custom_fab_sheet_window, null, false);
     new FabSheetWindow(vFabPopupWindow, sheet).show();
   }

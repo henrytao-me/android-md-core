@@ -16,6 +16,7 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.FrameLayout;
 
 import me.henrytao.mdcore.core.MdCompat;
+import me.henrytao.mdcore.widgets.arcanimator.AlphaAnimator;
 import me.henrytao.mdcore.widgets.arcanimator.ArcAnimator;
 import me.henrytao.mdcore.widgets.arcanimator.Side;
 
@@ -31,126 +32,97 @@ public class FabSheetWindow {
 
   private final static DecelerateInterpolator DECELERATE = new DecelerateInterpolator();
 
-  private final int mCurrentX;
-
-  private final int mCurrentY;
-
-  private final int mDegree;
-
-  private final View mSheet;
-
-  private final int mTargetX;
-
-  private final int mTargetY;
-
-  private FrameLayout mContainer;
+  private final FabInfo mFabInfo;
 
   private Context mContext;
 
-  private FloatingActionButton mFab;
+  private int mDegree;
 
-  private ViewGroup mRoot;
+  private boolean mIsCreated;
+
+  private ViewGroup vContent;
+
+  private FloatingActionButton vFab;
+
+  private ViewGroup vOverlay;
+
+  private ViewGroup vRoot;
+
+  private View vSheet;
+
+  private CircularRevealFrameLayout vSheetContainer;
 
   public FabSheetWindow(FloatingActionButton fab, View sheet) {
-    mFab = fab;
-    mSheet = sheet;
-    mRoot = (ViewGroup) fab.getRootView();
-    mContext = fab.getContext();
-
-    int diff = MdCompat.dpToPx(16);
-    mCurrentX = (int) ViewCompat.getX(mFab);
-    mCurrentY = (int) ViewCompat.getY(mFab);
-    mTargetX = mCurrentX - diff * 2;
-    mTargetY = mCurrentY - diff;
-    mDegree = 15;
+    mContext = fab.getContext().getApplicationContext();
+    vFab = fab;
+    vSheet = sheet;
+    mDegree = 45;
+    mFabInfo = new FabInfo(vFab);
   }
 
   public void dismiss() {
-    if (mContainer != null) {
-      mRoot.removeView(mContainer);
-    }
-    mContext = null;
-    mFab = null;
-    mRoot = null;
+  }
+
+  public FabInfo.Pointer getTargetRelativePointer() {
+    FabInfo.Pointer distance = getTargetDistance();
+    return new FabInfo.Pointer(mFabInfo.relativeCenter.x - distance.x, mFabInfo.relativeCenter.y - distance.y);
   }
 
   public void show() {
-    //mContainer = new FrameLayout(mContext);
-    //mContainer.setLayoutParams(new FrameLayout.LayoutParams(
-    //    ViewGroup.LayoutParams.MATCH_PARENT,
-    //    ViewGroup.LayoutParams.MATCH_PARENT));
-    //mContainer.setBackgroundColor(Color.parseColor("#4C000000"));
-    //mRoot.addView(mContainer);
-    //int cx = mFab.getWidth() / 2;
-    //int cy = mFab.getHeight() / 2;
-    //float initalRadius = (float) Math.hypot(cx, cy);
-    //Animator anim = ViewAnimationUtils.createCircularReveal(mFab, cx, cy, initalRadius, 0);
-    //anim.addListener(new AnimatorListenerAdapter() {
-    //  @Override
-    //  public void onAnimationEnd(Animator animation) {
-    //    super.onAnimationEnd(animation);
-    //    mFab.setVisibility(View.INVISIBLE);
-    //  }
-    //});
-    //anim.start();
+    if (!mIsCreated) {
+      mIsCreated = true;
+      onCreateView();
+    }
 
-    //Animation fabAnimation = AnimationUtils.loadAnimation(mContext, R.anim.fsw_fab_animation);
-    //mFab.startAnimation(fabAnimation);
+    Animator fabAnimation = createFabShowAnimation().setDuration(200);
+    Animator sheetAnimation = createSheetShowAnimation().setDuration(200);
+    Animator overlayAnimation = createOverlayShowAnimation().setDuration(200);
 
-    //if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.HONEYCOMB) {
-    //  ValueAnimator animator = ValueAnimator.ofFloat(0, 1);
-    //  animator.setDuration(2000);
-    //  animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-    //    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    //    @Override
-    //    public void onAnimationUpdate(ValueAnimator animation) {
-    //      float value = (Float) animation.getAnimatedValue();
-    //      mFab.setTranslationX(-(float) (200 * Math.sin(value * Math.PI)));
-    //      mFab.setTranslationY(-(float) (200 * Math.cos(value * Math.PI)));
-    //    }
-    //  });
-    //  animator.addListener(new AnimatorListenerAdapter() {
-    //
-    //  });
-    //  animator.start();
-    //}
+    sheetAnimation.setStartDelay(150);
+    overlayAnimation.setStartDelay(100);
 
-    //FrameLayout view = new FrameLayout(mContext);
-    //view.setLayoutParams(new FrameLayout.LayoutParams(
-    //    ViewGroup.LayoutParams.MATCH_PARENT,
-    //    ViewGroup.LayoutParams.MATCH_PARENT));
-    //view.setBackgroundColor(Color.parseColor("#4C000000"));
-    //view.setVisibility(View.INVISIBLE);
-    //mRoot.addView(view);
-    //int cx = mRoot.getWidth() / 2;
-    //int cy = mRoot.getHeight() / 2;
-    //float finalRadius = (float) Math.hypot(cx, cy);
-    //Animator animator = ViewAnimationUtils.createCircularReveal(view, cx, cy, 0, finalRadius);
-    //view.setVisibility(View.VISIBLE);
-    //animator.start();
-
-    //CircularRevealFrameLayout view = new CircularRevealFrameLayout(mContext);
-    //view.setLayoutParams(new FrameLayout.LayoutParams(
-    //    ViewGroup.LayoutParams.MATCH_PARENT,
-    //    ViewGroup.LayoutParams.MATCH_PARENT));
-    //view.setBackgroundColor(Color.parseColor("#4C000000"));
-    ////view.setVisibility(View.INVISIBLE);
-    //mRoot.addView(view);
-    //int cx = mRoot.getWidth() / 2;
-    //int cy = mRoot.getHeight() / 2;
-    //float finalRadius = (float) Math.hypot(cx, cy);
-    ////Animator animator = createCheckoutRevealAnimator(view, cx, cy + 300, 0, finalRadius + 300);
-    ////view.setVisibility(View.VISIBLE);
-    ////animator.start();
-    //Animator animator = MdCompat.createCircularReveal(view, cx, cy + 300, 0, finalRadius + 300);
-    //animator.start();
-
-    createFabShowAnimation().start();
-    createSheetShowAnimation().start();
+    fabAnimation.start();
+    sheetAnimation.start();
+    overlayAnimation.start();
   }
 
   protected void onCreateView() {
+    vRoot = (ViewGroup) vFab.getRootView();
 
+    vOverlay = new FrameLayout(mContext);
+    vOverlay.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+    vOverlay.setBackgroundColor(Color.parseColor("#4C000000"));
+    vRoot.addView(vOverlay);
+
+    vContent = new FrameLayout(mContext);
+    vContent.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+    vRoot.addView(vContent);
+
+    vSheetContainer = new CircularRevealFrameLayout(mContext);
+    vSheetContainer.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+    vSheetContainer.addView(vSheet, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+    vContent.addView(vSheetContainer);
+
+    vOverlay.measure(0, 0);
+    vContent.measure(0, 0);
+
+    ViewCompat.setX(vSheetContainer, mFabInfo.bottomRight.x - vSheetContainer.getMeasuredWidth());
+    ViewCompat.setY(vSheetContainer, mFabInfo.bottomRight.y - vSheetContainer.getMeasuredHeight());
+
+    //FrameLayout a = new FrameLayout(mContext);
+    //a.setLayoutParams(new FrameLayout.LayoutParams(mFabInfo.width, mFabInfo.height));
+    //a.setBackgroundColor(Color.parseColor("#4C000000"));
+    //vRoot.addView(a);
+    //ViewCompat.setX(a, mFabInfo.topLeft.x);
+    //ViewCompat.setY(a, mFabInfo.topLeft.y);
+    //
+    //FrameLayout b = new FrameLayout(mContext);
+    //b.setLayoutParams(new FrameLayout.LayoutParams(mFabInfo.width, mFabInfo.height));
+    //b.setBackgroundColor(Color.parseColor("#4C000000"));
+    //vRoot.addView(b);
+    //FabInfo.Pointer target = getTargetAbsolutePointer();
+    //ViewCompat.setX(b, target.x - mFabInfo.width / 2);
+    //ViewCompat.setY(b, target.y - mFabInfo.height / 2);
   }
 
   protected void onDestroyView() {
@@ -158,24 +130,86 @@ public class FabSheetWindow {
   }
 
   private Animator createFabShowAnimation() {
-    ValueAnimator animator = ArcAnimator
-        .create(mFab, mTargetX, mTargetY, mDegree, Side.LEFT)
-        .setDuration(200);
+    FabInfo.Pointer target = getTargetRelativePointer();
+    ValueAnimator animator = ArcAnimator.create(vFab, target.x, target.y, mDegree, Side.LEFT);
+    animator.setInterpolator(ACCELERATE);
+    return animator;
+  }
+
+  private Animator createOverlayShowAnimation() {
+    Animator animator = AlphaAnimator.create(vOverlay, 0.0f, 1.0f);
     animator.setInterpolator(ACCELERATE);
     return animator;
   }
 
   private Animator createSheetShowAnimation() {
-    CircularRevealFrameLayout view = new CircularRevealFrameLayout(mContext);
-    view.setLayoutParams(new FrameLayout.LayoutParams(MdCompat.dpToPx(200), MdCompat.dpToPx(400)));
-    view.setBackgroundColor(Color.parseColor("#4C000000"));
-    mRoot.addView(view);
-    int dx = view.getMeasuredWidth() / 2;
-    int dy = view.getMeasuredHeight() / 2;
+    int dx = vSheetContainer.getMeasuredWidth() / 2;
+    int dy = vSheetContainer.getMeasuredHeight() / 2;
     float radius = (float) Math.hypot(dx, dy);
-    Animator animator = MdCompat.createCircularReveal(view, dx, dy, 0, radius);
-    animator.setDuration(500);
+    Animator animator = MdCompat.createCircularReveal(vSheetContainer, dx, dy, 0, radius);
     animator.setInterpolator(ACCELERATE_DECELERATE);
     return animator;
+  }
+
+  private FabInfo.Pointer getTargetAbsolutePointer() {
+    FabInfo.Pointer distance = getTargetDistance();
+    return new FabInfo.Pointer(mFabInfo.center.x - distance.x, mFabInfo.center.y - distance.y);
+  }
+
+  private FabInfo.Pointer getTargetDistance() {
+    float sheetX = mFabInfo.bottomRight.x - vSheetContainer.getMeasuredWidth();
+    float sheetY = mFabInfo.bottomRight.y - vSheetContainer.getMeasuredHeight();
+    float targetX = sheetX + vSheetContainer.getMeasuredWidth() / 2;
+    float targetY = sheetY + vSheetContainer.getMeasuredHeight() / 2;
+    return new FabInfo.Pointer(mFabInfo.center.x - targetX, mFabInfo.center.y - targetY);
+  }
+
+  private static class FabInfo {
+
+    private final Pointer bottomRight;
+
+    private final Pointer center;
+
+    private final int height;
+
+    private final Pointer relativeBottomRight;
+
+    private final Pointer relativeCenter;
+
+    private final Pointer relativeTopLeft;
+
+    private final Pointer topLeft;
+
+    private final int width;
+
+    FabInfo(FloatingActionButton fab) {
+      int[] location = new int[2];
+      fab.getLocationInWindow(location);
+
+      width = fab.getMeasuredWidth();
+      height = fab.getMeasuredHeight();
+      topLeft = new Pointer(location[0], location[1]);
+      center = new Pointer(topLeft.x + width / 2, topLeft.y + height / 2);
+      bottomRight = new Pointer(topLeft.x + width, topLeft.y + height);
+      relativeTopLeft = new Pointer(ViewCompat.getX(fab), ViewCompat.getY(fab));
+      relativeCenter = new Pointer(relativeTopLeft.x + width / 2, relativeTopLeft.y + height / 2);
+      relativeBottomRight = new Pointer(relativeTopLeft.x + width, relativeTopLeft.y + height);
+    }
+
+    private static class Pointer {
+
+      private final int x;
+
+      private final int y;
+
+      Pointer(int x, int y) {
+        this.x = x;
+        this.y = y;
+      }
+
+      Pointer(float x, float y) {
+        this((int) x, (int) y);
+      }
+    }
   }
 }

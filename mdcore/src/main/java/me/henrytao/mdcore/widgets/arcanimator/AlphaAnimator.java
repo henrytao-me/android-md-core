@@ -19,7 +19,7 @@ package me.henrytao.mdcore.widgets.arcanimator;
 import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
 import android.os.Build;
-import android.support.v4.view.ViewCompat;
+import android.support.annotation.FloatRange;
 import android.view.View;
 
 import java.lang.ref.WeakReference;
@@ -28,26 +28,41 @@ import java.lang.ref.WeakReference;
  * Created by henrytao on 8/15/16.
  */
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-public class ArcAnimator extends ValueAnimator {
+public class AlphaAnimator extends ValueAnimator {
 
-  public static ArcAnimator create(View target, float endX, float endY, float degree, Side side) {
-    ArcMetric arcMetric = ArcMetric.evaluate(Utils.centerX(target), Utils.centerY(target), endX, endY, degree, side);
-    return new ArcAnimator(arcMetric, target);
+  public static AlphaAnimator create(View target, @FloatRange(from = 0.0f, to = 1.0f) float fromAlpha,
+      @FloatRange(from = 0.0f, to = 1.0f) float toAlpha) {
+    return new AlphaAnimator(target, fromAlpha, toAlpha);
   }
 
-  protected ArcAnimator(ArcMetric arcMetric, View target) {
-    setFloatValues(arcMetric.getStartDegree(), arcMetric.getEndDegree());
-    addUpdateListener(new AnimatorUpdateListener(arcMetric, target));
+  private final float mFromAlpha;
+
+  private final WeakReference<View> mTarget;
+
+  private final float mToAlpha;
+
+  protected AlphaAnimator(View target, float fromAlpha, float toAlpha) {
+    mTarget = new WeakReference<>(target);
+    mFromAlpha = fromAlpha;
+    mToAlpha = toAlpha;
+    setFloatValues(fromAlpha, toAlpha);
+    addUpdateListener(new AnimatorUpdateListener(target));
+  }
+
+  @Override
+  public void start() {
+    View target = mTarget.get();
+    if (target != null) {
+      target.setAlpha(mFromAlpha);
+    }
+    super.start();
   }
 
   private static class AnimatorUpdateListener implements ValueAnimator.AnimatorUpdateListener {
 
-    private final ArcMetric mArcMetric;
-
     private final WeakReference<View> mTarget;
 
-    public AnimatorUpdateListener(ArcMetric arcMetric, View target) {
-      mArcMetric = arcMetric;
+    public AnimatorUpdateListener(View target) {
       mTarget = new WeakReference<>(target);
     }
 
@@ -55,11 +70,8 @@ public class ArcAnimator extends ValueAnimator {
     public void onAnimationUpdate(ValueAnimator animation) {
       View target = mTarget.get();
       if (target != null) {
-        float degree = (float) animation.getAnimatedValue();
-        float x = mArcMetric.getAxisPoint().x + mArcMetric.mRadius * Utils.cos(degree);
-        float y = mArcMetric.getAxisPoint().y - mArcMetric.mRadius * Utils.sin(degree);
-        ViewCompat.setX(target, x - target.getMeasuredWidth() / 2);
-        ViewCompat.setY(target, y - target.getMeasuredHeight() / 2);
+        float alpha = (float) animation.getAnimatedValue();
+        target.setAlpha(alpha);
       }
     }
   }

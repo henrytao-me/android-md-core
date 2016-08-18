@@ -33,11 +33,11 @@ class Utils {
   }
 
   public static float centerX(View view) {
-    return ViewCompat.getX(view) + view.getWidth() / 2;
+    return ViewCompat.getX(view) + view.getMeasuredWidth() / 2;
   }
 
   public static float centerY(View view) {
-    return ViewCompat.getY(view) + view.getHeight() / 2;
+    return ViewCompat.getY(view) + view.getMeasuredHeight() / 2;
   }
 
   public static float cos(double degree) {
