@@ -100,4 +100,13 @@
       <FrameLayout style="@style/AppStyle.GridItem" />
     </LinearLayout>
   </LinearLayout>
+
+  <android.support.design.widget.FloatingActionButton
+    android:id="@+id/fab_popup_window"
+    android:layout_gravity="right"
+    android:layout_margin="@dimen/mdLayoutSpacing"
+    android:clickable="true"
+    app:fabSize="normal"
+    app:srcCompat="@drawable/ic_add_black_24dp"
+    style="@style/MdFloatingActionButton" />
 </LinearLayout>

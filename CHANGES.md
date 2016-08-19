@@ -1,18 +1,24 @@
 # android-md-core releases #
 
+### Version 3.2.0 - August 19th 2016 ###
+
+- Added FabSheetWindow - https://material-design.storage.googleapis.com/publish/material_v_8/material_ext_publish/0B8v7jImPsDi-TjBicTdvQjg4M1E/components-buttons-fab-transition_card_02.webm
+- Added ArcAnimator
+- Added CircularRevealFrameLayout
+
 ### Version 3.1.0 – July 07th 2016 ###
 
-- Support typography
+- Supported typography
 
 
 ### Version 3.0.2 – Jun 10th 2016 ###
 
-- Add util method to detect isLightTheme
+- Added util method to detect isLightTheme
 
 
 ### Version 3.0.1 – May 26th 2016 ###
 
-- Hug refactor
+- Huge refactor
 - Support from v23.2.0 with VectorDrawableCompat
 
 

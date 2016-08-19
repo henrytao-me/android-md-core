@@ -19,6 +19,9 @@ package me.henrytao.mdcore.core;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
+import android.animation.Animator;
+import android.animation.ObjectAnimator;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -40,19 +43,66 @@ import android.util.TypedValue;
 import android.util.Xml;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewAnimationUtils;
 import android.view.Window;
 import android.view.WindowManager;
 
 import java.io.IOException;
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
 import me.henrytao.mdcore.R;
+import me.henrytao.mdcore.widgets.CircularRevealFrameLayout;
 
 /**
  * Created by henrytao on 10/10/15.
  */
 public class MdCompat {
+
+  @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+  public static Animator createCircularReveal(CircularRevealFrameLayout view, int centerX, int centerY, float startRadius,
+      float endRadius) {
+    final Animator animator;
+    final WeakReference<CircularRevealFrameLayout> viewRef = new WeakReference<>(view);
+    viewRef.get().setVisibility(View.INVISIBLE);
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+      animator = ViewAnimationUtils.createCircularReveal(view, centerX, centerY, startRadius, endRadius);
+    } else {
+      view.setClipOutLines(true);
+      view.setClipCenter(centerX, centerY);
+      animator = ObjectAnimator.ofFloat(view, "Radius", startRadius, endRadius);
+    }
+    animator.addListener(new Animator.AnimatorListener() {
+      @Override
+      public void onAnimationCancel(Animator animation) {
+
+      }
+
+      @Override
+      public void onAnimationEnd(Animator animation) {
+        CircularRevealFrameLayout view = viewRef.get();
+        if (view != null) {
+          view.setClipOutLines(false);
+        }
+      }
+
+      @Override
+      public void onAnimationRepeat(Animator animation) {
+
+      }
+
+      @Override
+      public void onAnimationStart(Animator animation) {
+        CircularRevealFrameLayout view = viewRef.get();
+        if (view != null) {
+          view.setVisibility(View.VISIBLE);
+        }
+      }
+    });
+    return animator;
+  }
 
   public static Drawable createDrawableTint(Drawable drawable, int[] drawableState, ColorStateList tintList, PorterDuff.Mode tintMode) {
     if (drawable != null && (tintList != null || tintMode != null)) {
@@ -68,6 +118,10 @@ public class MdCompat {
       }
     }
     return drawable;
+  }
+
+  public static int dpToPx(int dp) {
+    return (int) (dp * Resources.getSystem().getDisplayMetrics().density);
   }
 
   public static void enableTranslucentStatus(Activity activity) {
@@ -265,6 +319,10 @@ public class MdCompat {
       case 15:
         return Build.VERSION.SDK_INT >= 11 ? PorterDuff.Mode.valueOf("OVERLAY") : defaultMode;
     }
+  }
+
+  public static int pxToDp(int px) {
+    return (int) (px / Resources.getSystem().getDisplayMetrics().density);
   }
 
   public static Drawable supportDrawableTint(Context context, Drawable drawable, Palette palette) {
