@@ -16,9 +16,6 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.FrameLayout;
 
-import java.lang.ref.WeakReference;
-
-import me.henrytao.mdcore.R;
 import me.henrytao.mdcore.core.MdCompat;
 import me.henrytao.mdcore.widgets.arcanimator.AlphaAnimator;
 import me.henrytao.mdcore.widgets.arcanimator.ArcAnimator;
@@ -30,13 +27,21 @@ import me.henrytao.mdcore.widgets.arcanimator.Side;
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class FabSheetWindow {
 
-  private final static AccelerateInterpolator ACCELERATE = new AccelerateInterpolator();
+  private static final AccelerateInterpolator ACCELERATE = new AccelerateInterpolator();
 
-  private final static AccelerateDecelerateInterpolator ACCELERATE_DECELERATE = new AccelerateDecelerateInterpolator();
+  private static final AccelerateDecelerateInterpolator ACCELERATE_DECELERATE = new AccelerateDecelerateInterpolator();
 
-  private static final int ANIMATION_COUNT = 3;
+  private static final DecelerateInterpolator DECELERATE = new DecelerateInterpolator();
 
-  private final static DecelerateInterpolator DECELERATE = new DecelerateInterpolator();
+  private static final int DEGREE = 45;
+
+  private static final long DURATION = 200;
+
+  private static final int FAB_SIZE = 48;
+
+  public static FabSheetWindow create(FloatingActionButton fab, View sheet) {
+    return new FabSheetWindow(fab, sheet);
+  }
 
   private static void onAnimationEnd(Animator animation, @NonNull final OnAnimationEndListener onAnimationEndListener) {
     animation.addListener(new Animator.AnimatorListener() {
@@ -66,9 +71,19 @@ public class FabSheetWindow {
 
   private Context mContext;
 
-  private int mDegree;
+  private int mDegree = DEGREE;
+
+  private long mDuration = DURATION;
+
+  private Animator mFabAnimation;
 
   private boolean mIsCreated;
+
+  private Animator mOverlayAnimation;
+
+  private Animator mSheetAnimation;
+
+  private boolean mShowing;
 
   private ViewGroup vContent;
 
@@ -82,12 +97,15 @@ public class FabSheetWindow {
 
   private CircularRevealFrameLayout vSheetContainer;
 
-  public FabSheetWindow(FloatingActionButton fab, View sheet) {
+  protected FabSheetWindow(FloatingActionButton fab, View sheet) {
     mContext = fab.getContext().getApplicationContext();
     vFab = fab;
     vSheet = sheet;
-    mDegree = 45;
     mFabInfo = new FabInfo(vFab);
+  }
+
+  public void destroy() {
+    onDestroyView();
   }
 
   public void dismiss() {
@@ -98,39 +116,54 @@ public class FabSheetWindow {
       return;
     }
 
-    Animator fabAnimation = createFabDimissAnimation().setDuration(200);
-    Animator sheetAnimation = createSheetDismissAnimation().setDuration(200);
-    Animator overlayAnimation = createOverlayDismissAnimation().setDuration(200);
+    mFabAnimation = createFabDimissAnimation().setDuration(getDuration());
+    mSheetAnimation = createSheetDismissAnimation().setDuration(getDuration());
+    mOverlayAnimation = createOverlayDismissAnimation().setDuration(getDuration());
 
-    fabAnimation.setStartDelay(200);
+    mFabAnimation.setStartDelay(getDuration());
 
-    vFab.setTag(R.id.tag_animating, true);
-    vSheetContainer.setTag(R.id.tag_animating, true);
-    vOverlay.setTag(R.id.tag_animating, true);
-    onAnimationEnd(fabAnimation, new OnAnimationEndListener() {
+    onAnimationEnd(mFabAnimation, new OnAnimationEndListener() {
       @Override
       public void onAnimationEnd(Animator animation) {
-        vFab.setTag(R.id.tag_animating, false);
+        mShowing = false;
       }
     });
-    onAnimationEnd(sheetAnimation, new OnAnimationEndListener() {
+    onAnimationEnd(mSheetAnimation, new OnAnimationEndListener() {
       @Override
       public void onAnimationEnd(Animator animation) {
         vSheetContainer.setVisibility(View.GONE);
-        vSheetContainer.setTag(R.id.tag_animating, false);
       }
     });
-    onAnimationEnd(overlayAnimation, new OnAnimationEndListener() {
+    onAnimationEnd(mOverlayAnimation, new OnAnimationEndListener() {
       @Override
       public void onAnimationEnd(Animator animation) {
         vOverlay.setVisibility(View.GONE);
-        vOverlay.setTag(R.id.tag_animating, false);
       }
     });
 
-    fabAnimation.start();
-    sheetAnimation.start();
-    overlayAnimation.start();
+    mFabAnimation.start();
+    mSheetAnimation.start();
+    mOverlayAnimation.start();
+  }
+
+  public int getDegree() {
+    return mDegree;
+  }
+
+  public void setDegree(int degree) {
+    mDegree = degree;
+  }
+
+  public long getDuration() {
+    return mDuration;
+  }
+
+  public void setDuration(long duration) {
+    mDuration = duration;
+  }
+
+  public boolean isShowing() {
+    return mShowing;
   }
 
   public void show() {
@@ -142,38 +175,18 @@ public class FabSheetWindow {
       return;
     }
 
-    Animator fabAnimation = createFabShowAnimation().setDuration(200);
-    Animator sheetAnimation = createSheetShowAnimation().setDuration(200);
-    Animator overlayAnimation = createOverlayShowAnimation().setDuration(200);
+    mShowing = true;
 
-    sheetAnimation.setStartDelay(200);
-    overlayAnimation.setStartDelay(100);
+    mFabAnimation = createFabShowAnimation().setDuration(getDuration());
+    mSheetAnimation = createSheetShowAnimation().setDuration(getDuration());
+    mOverlayAnimation = createOverlayShowAnimation().setDuration(getDuration());
 
-    vFab.setTag(R.id.tag_animating, true);
-    vSheetContainer.setTag(R.id.tag_animating, true);
-    vOverlay.setTag(R.id.tag_animating, true);
-    onAnimationEnd(fabAnimation, new OnAnimationEndListener() {
-      @Override
-      public void onAnimationEnd(Animator animation) {
-        vFab.setTag(R.id.tag_animating, false);
-      }
-    });
-    onAnimationEnd(sheetAnimation, new OnAnimationEndListener() {
-      @Override
-      public void onAnimationEnd(Animator animation) {
-        vSheetContainer.setTag(R.id.tag_animating, false);
-      }
-    });
-    onAnimationEnd(overlayAnimation, new OnAnimationEndListener() {
-      @Override
-      public void onAnimationEnd(Animator animation) {
-        vOverlay.setTag(R.id.tag_animating, false);
-      }
-    });
+    mSheetAnimation.setStartDelay(getDuration());
+    mOverlayAnimation.setStartDelay(getDuration() / 2);
 
-    fabAnimation.start();
-    sheetAnimation.start();
-    overlayAnimation.start();
+    mFabAnimation.start();
+    mSheetAnimation.start();
+    mOverlayAnimation.start();
   }
 
   protected void onCreateView() {
@@ -208,18 +221,38 @@ public class FabSheetWindow {
   }
 
   protected void onDestroyView() {
-
+    mContext = null;
+    if (mFabAnimation != null) {
+      mFabAnimation.end();
+    }
+    mFabAnimation = null;
+    if (mOverlayAnimation != null) {
+      mOverlayAnimation.end();
+    }
+    mOverlayAnimation = null;
+    if (mSheetAnimation != null) {
+      mSheetAnimation.end();
+    }
+    mSheetAnimation = null;
+    vRoot.removeView(vOverlay);
+    vRoot.removeView(vContent);
+    vRoot = null;
+    vOverlay = null;
+    vContent = null;
+    vSheetContainer = null;
+    vSheet = null;
+    vFab = null;
   }
 
   private Animator createFabDimissAnimation() {
-    ValueAnimator animator = ArcAnimator.create(vFab, mFabInfo.relativeCenter.x, mFabInfo.relativeCenter.y, mDegree, Side.LEFT);
+    ValueAnimator animator = ArcAnimator.create(vFab, mFabInfo.relativeCenter.x, mFabInfo.relativeCenter.y, getDegree(), Side.LEFT);
     animator.setInterpolator(DECELERATE);
     return animator;
   }
 
   private Animator createFabShowAnimation() {
     FabInfo.Pointer target = getTargetRelativePointer();
-    ValueAnimator animator = ArcAnimator.create(vFab, target.x, target.y, mDegree, Side.LEFT);
+    ValueAnimator animator = ArcAnimator.create(vFab, target.x, target.y, getDegree(), Side.LEFT);
     animator.setInterpolator(ACCELERATE);
     return animator;
   }
@@ -273,13 +306,8 @@ public class FabSheetWindow {
   }
 
   private boolean isAnimating() {
-    try {
-      return (boolean) vFab.getTag(R.id.tag_animating) ||
-          (boolean) vSheetContainer.getTag(R.id.tag_animating) ||
-          (boolean) vOverlay.getTag(R.id.tag_animating);
-    } catch (Exception ignore) {
-    }
-    return false;
+    return mFabAnimation != null && mSheetAnimation != null && mOverlayAnimation != null &&
+        (mFabAnimation.isRunning() || mSheetAnimation.isRunning() || mOverlayAnimation.isRunning());
   }
 
   private interface OnAnimationEndListener {
@@ -319,7 +347,7 @@ public class FabSheetWindow {
       relativeTopLeft = new Pointer(ViewCompat.getX(fab), ViewCompat.getY(fab));
       relativeCenter = new Pointer(relativeTopLeft.x + width / 2, relativeTopLeft.y + height / 2);
       relativeBottomRight = new Pointer(relativeTopLeft.x + width, relativeTopLeft.y + height);
-      radius = Math.min(width / 2, MdCompat.dpToPx(56));
+      radius = Math.min(width / 2, MdCompat.dpToPx(FAB_SIZE));
     }
 
     private static class Pointer {

@@ -59,23 +59,7 @@ public class FabActivity extends BaseActivity {
 
   @OnClick(R.id.fab_popup_window)
   protected void onFabPopupWindowClick() {
-
-    //FrameLayout frameLayout = new FrameLayout(this);
-    //FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-    //    ViewGroup.LayoutParams.MATCH_PARENT);
-    //frameLayout.setLayoutParams(layoutParams);
-    //frameLayout.setBackgroundColor(Color.parseColor("#4C000000"));
-
-    //PopupWindow popupWindow = new PopupWindow(frameLayout, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-    //popupWindow.setOutsideTouchable(true);
-    //popupWindow.setFocusable(true);
-    //popupWindow.setAnimationStyle(0);
-    //popupWindow.getContentView().setFocusableInTouchMode(true);
-    //popupWindow.showAsDropDown(getWindow().getDecorView());
-
-
-
     View sheet = getLayoutInflater().inflate(R.layout.custom_fab_sheet_window, null, false);
-    new FabSheetWindow(vFabPopupWindow, sheet).show();
+    FabSheetWindow.create(vFabPopupWindow, sheet).show();
   }
 }
