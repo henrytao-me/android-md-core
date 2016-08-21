@@ -96,6 +96,10 @@ public class FabSheetWindow {
 
   private boolean mIsCreated;
 
+  private OnDismissListener mOnDismissListener;
+
+  private OnShowListener mOnShowListener;
+
   private Animator mOverlayAnimation;
 
   private Animator mSheetAnimation;
@@ -114,7 +118,8 @@ public class FabSheetWindow {
 
   private CircularRevealFrameLayout vSheetContainer;
 
-  private FabSheetWindow(FloatingActionButton fab, View sheet, int backgroundColor, int degree, long duration, Integer fabMaxBottom) {
+  private FabSheetWindow(FloatingActionButton fab, View sheet, int backgroundColor, int degree, long duration, Integer fabMaxBottom,
+      OnShowListener onShowListener, OnDismissListener onDismissListener) {
     mContext = fab.getContext().getApplicationContext();
     vFab = fab;
     vSheet = sheet;
@@ -122,6 +127,8 @@ public class FabSheetWindow {
     mDegree = degree;
     mDuration = duration;
     mFabMaxBottom = fabMaxBottom;
+    mOnShowListener = onShowListener;
+    mOnDismissListener = onDismissListener;
   }
 
   public void destroy() {
@@ -146,6 +153,9 @@ public class FabSheetWindow {
       @Override
       public void onAnimationEnd(Animator animation) {
         mShowing = false;
+        if (mOnDismissListener != null) {
+          mOnDismissListener.onDismiss(FabSheetWindow.this);
+        }
       }
     });
     onAnimationEnd(mSheetAnimation, new OnAnimationEndListener() {
@@ -222,6 +232,15 @@ public class FabSheetWindow {
       @Override
       public void onAnimationStart(Animator animation) {
         vOverlay.setVisibility(View.VISIBLE);
+      }
+    });
+
+    onAnimationEnd(mSheetAnimation, new OnAnimationEndListener() {
+      @Override
+      public void onAnimationEnd(Animator animation) {
+        if (mOnShowListener != null) {
+          mOnShowListener.onShow(FabSheetWindow.this);
+        }
       }
     });
 
@@ -356,6 +375,8 @@ public class FabSheetWindow {
     vSheetContainer = null;
     vSheet = null;
     vFab = null;
+    mOnShowListener = null;
+    mOnDismissListener = null;
   }
 
   private interface OnAnimationEndListener {
@@ -370,12 +391,12 @@ public class FabSheetWindow {
 
   public interface OnDismissListener {
 
-    void onDismiss();
+    void onDismiss(FabSheetWindow fsw);
   }
 
   public interface OnShowListener {
 
-    void onShow();
+    void onShow(FabSheetWindow fsw);
   }
 
   public static class Builder {
@@ -394,6 +415,10 @@ public class FabSheetWindow {
 
     private Integer mFabMaxBottom = null;
 
+    private OnDismissListener mOnDismissListener;
+
+    private OnShowListener mOnShowListener;
+
     private FloatingActionButton vFab;
 
     private View vSheet;
@@ -404,7 +429,7 @@ public class FabSheetWindow {
     }
 
     public FabSheetWindow build() {
-      return new FabSheetWindow(vFab, vSheet, mBackgroundColor, mDegree, mDuration, mFabMaxBottom);
+      return new FabSheetWindow(vFab, vSheet, mBackgroundColor, mDegree, mDuration, mFabMaxBottom, mOnShowListener, mOnDismissListener);
     }
 
     public Builder setBackgroundColor(@ColorInt int backgroundColor) {
@@ -424,6 +449,16 @@ public class FabSheetWindow {
 
     public Builder setFabMaxBottom(int fabMaxBottom) {
       mFabMaxBottom = fabMaxBottom;
+      return this;
+    }
+
+    public Builder setOnDismissListener(OnDismissListener onDismissListener) {
+      mOnDismissListener = onDismissListener;
+      return this;
+    }
+
+    public Builder setOnShowListener(OnShowListener onShowListener) {
+      mOnShowListener = onShowListener;
       return this;
     }
   }
