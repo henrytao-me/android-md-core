@@ -26,8 +26,8 @@ ext {
       applicationId    : "me.henrytao.mdcoreinaction",
       minSdkVersion    : 8,
       targetSdkVersion : 23,
-      versionCode      : 16,
-      versionName      : "3.2.0"
+      versionCode      : 17,
+      versionName      : "3.3.0"
   ]
 
   bintray = [
