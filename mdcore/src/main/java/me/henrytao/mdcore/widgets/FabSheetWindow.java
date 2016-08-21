@@ -29,19 +29,7 @@ public class FabSheetWindow {
 
   private static final AccelerateInterpolator ACCELERATE = new AccelerateInterpolator();
 
-  private static final int BACKGROUND_COLOR = Color.parseColor("#4C000000");
-
   private static final DecelerateInterpolator DECELERATE = new DecelerateInterpolator();
-
-  private static final int DEGREE = 45;
-
-  private static final long DURATION = 200;
-
-  private static final int FAB_SIZE = 48;
-
-  public static FabSheetWindow create(FloatingActionButton fab, View sheet) {
-    return new FabSheetWindow(fab, sheet);
-  }
 
   private static void onAnimationEnd(Animator animation, @NonNull final OnAnimationEndListener onAnimationEndListener) {
     animation.addListener(new Animator.AnimatorListener() {
@@ -92,19 +80,19 @@ public class FabSheetWindow {
     });
   }
 
-  private int mBackgroundColor = BACKGROUND_COLOR;
+  private final int mBackgroundColor;
+
+  private final int mDegree;
+
+  private final long mDuration;
+
+  private final Integer mFabMaxBottom;
 
   private Context mContext;
-
-  private int mDegree = DEGREE;
-
-  private long mDuration = DURATION;
 
   private Animator mFabAnimation;
 
   private FabInfo mFabInfo;
-
-  private Integer mFabMaxBottom = null;
 
   private boolean mIsCreated;
 
@@ -126,10 +114,14 @@ public class FabSheetWindow {
 
   private CircularRevealFrameLayout vSheetContainer;
 
-  private FabSheetWindow(FloatingActionButton fab, View sheet) {
+  private FabSheetWindow(FloatingActionButton fab, View sheet, int backgroundColor, int degree, long duration, Integer fabMaxBottom) {
     mContext = fab.getContext().getApplicationContext();
     vFab = fab;
     vSheet = sheet;
+    mBackgroundColor = backgroundColor;
+    mDegree = degree;
+    mDuration = duration;
+    mFabMaxBottom = fabMaxBottom;
   }
 
   public void destroy() {
@@ -197,22 +189,6 @@ public class FabSheetWindow {
     ViewCompat.setY(vFab, mFabInfo.relativeTopLeft.y);
     vSheetContainer.setVisibility(View.GONE);
     vOverlay.setVisibility(View.GONE);
-  }
-
-  public void setBackgroundColor(@ColorInt int backgroundColor) {
-    mBackgroundColor = backgroundColor;
-  }
-
-  public void setDegree(int degree) {
-    mDegree = degree;
-  }
-
-  public void setDuration(long duration) {
-    mDuration = duration;
-  }
-
-  public void setFabMaxBottom(int fabMaxBottom) {
-    mFabMaxBottom = fabMaxBottom;
   }
 
   public void show() {
@@ -392,7 +368,69 @@ public class FabSheetWindow {
     void onAnimationStart(Animator animation);
   }
 
+  public interface OnDismissListener {
+
+    void onDismiss();
+  }
+
+  public interface OnShowListener {
+
+    void onShow();
+  }
+
+  public static class Builder {
+
+    private static final int BACKGROUND_COLOR = Color.parseColor("#4C000000");
+
+    private static final int DEGREE = 45;
+
+    private static final long DURATION = 200;
+
+    private int mBackgroundColor = BACKGROUND_COLOR;
+
+    private int mDegree = DEGREE;
+
+    private long mDuration = DURATION;
+
+    private Integer mFabMaxBottom = null;
+
+    private FloatingActionButton vFab;
+
+    private View vSheet;
+
+    public Builder(FloatingActionButton fab, View sheet) {
+      vFab = fab;
+      vSheet = sheet;
+    }
+
+    public FabSheetWindow build() {
+      return new FabSheetWindow(vFab, vSheet, mBackgroundColor, mDegree, mDuration, mFabMaxBottom);
+    }
+
+    public Builder setBackgroundColor(@ColorInt int backgroundColor) {
+      mBackgroundColor = backgroundColor;
+      return this;
+    }
+
+    public Builder setDegree(int degree) {
+      mDegree = degree;
+      return this;
+    }
+
+    public Builder setDuration(long duration) {
+      mDuration = duration;
+      return this;
+    }
+
+    public Builder setFabMaxBottom(int fabMaxBottom) {
+      mFabMaxBottom = fabMaxBottom;
+      return this;
+    }
+  }
+
   private static class FabInfo {
+
+    private static final int FAB_SIZE = 48;
 
     private final Pointer bottomRight;
 

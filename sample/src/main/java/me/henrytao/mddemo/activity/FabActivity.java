@@ -60,6 +60,7 @@ public class FabActivity extends BaseActivity {
   @OnClick(R.id.fab_popup_window)
   protected void onFabPopupWindowClick() {
     View sheet = getLayoutInflater().inflate(R.layout.custom_fab_sheet_window, null, false);
-    FabSheetWindow.create(vFabPopupWindow, sheet).show();
+    FabSheetWindow fabSheetWindow = new FabSheetWindow.Builder(vFabPopupWindow, sheet).build();
+    fabSheetWindow.show();
   }
 }
