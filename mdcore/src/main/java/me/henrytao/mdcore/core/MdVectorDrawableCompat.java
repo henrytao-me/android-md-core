@@ -66,4 +66,28 @@ public class MdVectorDrawableCompat {
 
     return drawable;
   }
+
+  @Nullable
+  public static VectorDrawableCompat getFromAttribute(@NonNull Context context, AttributeSet attrs, int attrId) {
+    VectorDrawableCompat drawable = null;
+    TypedArray a = context.getTheme().obtainStyledAttributes(attrs, new int[]{attrId}, 0, 0);
+    try {
+      int resId = a.getResourceId(0, 0);
+      if (resId > 0) {
+        drawable = MdVectorDrawableCompat.create(context, resId);
+      }
+    } catch (Exception ignore) {
+    }
+    a.recycle();
+    return drawable;
+  }
+
+  @NonNull
+  public static VectorDrawableCompat[] getFromAttribute(@NonNull Context context, AttributeSet attrs, int... attrIds) {
+    VectorDrawableCompat[] drawables = new VectorDrawableCompat[attrIds.length];
+    for (int i = 0; i < attrIds.length; i++) {
+      drawables[i] = getFromAttribute(context, attrs, attrIds[i]);
+    }
+    return drawables;
+  }
 }

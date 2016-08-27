@@ -21,6 +21,7 @@ import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v4.view.LayoutInflaterFactory;
 import android.support.v7.app.AppCompatDelegate;
@@ -73,11 +74,11 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
     supportImageView(context, view instanceof ImageView ? (ImageView) view : null, attrs);
     supportCheckBox(context, view instanceof CheckBox ? (CheckBox) view : null, attrs);
     supportButton(context, view instanceof Button ? (Button) view : null, attrs);
-    supportTypeface(context, view instanceof TextView ? (TextView) view : null, attrs);
+    supportTextView(context, view instanceof TextView ? (TextView) view : null, attrs);
   }
 
-  protected void supportButton(Context context, Button button, AttributeSet attrs) {
-    if (button == null) {
+  protected void supportButton(Context context, Button view, AttributeSet attrs) {
+    if (view == null) {
       return;
     }
     ColorStateList textColor;
@@ -91,35 +92,25 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
     }
     a.recycle();
     if (textColor != null) {
-      button.setTextColor(textColor);
+      view.setTextColor(textColor);
     }
   }
 
-  protected void supportCheckBox(Context context, CheckBox checkBox, AttributeSet attrs) {
-    if (checkBox == null) {
+  protected void supportCheckBox(Context context, CheckBox view, AttributeSet attrs) {
+    if (view == null) {
       return;
     }
-    Drawable drawable = null;
-    TypedArray a = context.getTheme().obtainStyledAttributes(attrs, new int[]{
-        R.attr.srcCompat
-    }, 0, 0);
-    try {
-      int resId = a.getResourceId(0, 0);
-      if (resId > 0) {
-        drawable = MdVectorDrawableCompat.create(context, resId);
-      }
-    } catch (Exception ignore) {
-    }
-    a.recycle();
+    Drawable drawable = MdVectorDrawableCompat.getFromAttribute(context, attrs, R.attr.srcCompat);
     if (drawable != null) {
-      checkBox.setButtonDrawable(drawable);
+      view.setButtonDrawable(drawable);
     }
   }
 
-  protected void supportImageView(Context context, ImageView imageView, AttributeSet attrs) {
-    if (imageView == null) {
+  protected void supportImageView(Context context, ImageView view, AttributeSet attrs) {
+    if (view == null) {
       return;
     }
+    supportVectorDrawable(context, view, attrs);
     boolean isEnabled = true;
     TypedArray a = context.getTheme().obtainStyledAttributes(attrs, new int[]{
         R.attr.enabled
@@ -129,17 +120,53 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
     } catch (Exception ignore) {
     }
     a.recycle();
-    imageView.setEnabled(isEnabled);
+    view.setEnabled(isEnabled);
   }
 
-  protected void supportTypeface(Context context, TextView textView, AttributeSet attrs) {
-    if (textView == null) {
+  protected void supportTextView(Context context, TextView view, AttributeSet attrs) {
+    if (view == null) {
       return;
     }
-    Typeface typeface = Typography.getTypeface(context, attrs, textView instanceof Button ? R.attr.buttonStyle : 0, 0);
+    supportTypeface(context, view, attrs);
+    supportVectorDrawable(context, view, attrs);
+  }
+
+  protected void supportTypeface(Context context, TextView view, AttributeSet attrs) {
+    if (view == null) {
+      return;
+    }
+    Typeface typeface = Typography.getTypeface(context, attrs, view instanceof Button ? R.attr.buttonStyle : 0, 0);
     typeface = typeface != null ? typeface : Typography.getDefaultTypeface(context);
-    if (typeface != null && textView.getTypeface() != typeface) {
-      textView.setTypeface(typeface);
+    if (typeface != null && view.getTypeface() != typeface) {
+      view.setTypeface(typeface);
+    }
+  }
+
+  protected void supportVectorDrawable(Context context, ImageView view, AttributeSet attrs) {
+    Drawable srcCompat = MdVectorDrawableCompat.getFromAttribute(context, attrs, R.attr.srcCompat);
+    if (srcCompat != null) {
+      view.setImageDrawable(srcCompat);
+    }
+  }
+
+  protected void supportVectorDrawable(Context context, TextView view, AttributeSet attrs) {
+    Drawable[] drawables = MdVectorDrawableCompat.getFromAttribute(context, attrs,
+        R.attr.drawableLeftCompat, R.attr.drawableTopCompat, R.attr.drawableRightCompat, R.attr.drawableBottomCompat,
+        R.attr.drawableStartCompat, R.attr.drawableEndCompat);
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+      view.setCompoundDrawablesRelativeWithIntrinsicBounds(
+          drawables[4] != null ? drawables[4] : drawables[0],
+          drawables[1],
+          drawables[5] != null ? drawables[5] : drawables[2],
+          drawables[3]
+      );
+    } else {
+      view.setCompoundDrawablesWithIntrinsicBounds(
+          drawables[4] != null ? drawables[4] : drawables[0],
+          drawables[1],
+          drawables[5] != null ? drawables[5] : drawables[2],
+          drawables[3]
+      );
     }
   }
 }

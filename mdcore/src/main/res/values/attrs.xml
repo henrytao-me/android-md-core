@@ -17,4 +17,10 @@
 <resources>
 
   <attr name="enabled" format="boolean" />
+  <attr name="drawableLeftCompat" format="reference" />
+  <attr name="drawableRightCompat" format="reference" />
+  <attr name="drawableTopCompat" format="reference" />
+  <attr name="drawableBottomCompat" format="reference" />
+  <attr name="drawableStartCompat" format="reference" />
+  <attr name="drawableEndCompat" format="reference" />
 </resources>
