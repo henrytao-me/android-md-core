@@ -1,5 +1,10 @@
 # android-md-core releases #
 
+### Version 3.3.2 - August 27th 2016 ###
+
+- Support VectorDrawable for drawableLeftCompat, drawableRightCompat, drawableTopCompat, drawableBottomCompat, drawableStartCompat, drawableEndCompat
+
+
 ### Version 3.3.0 - August 21th 2016 ###
 
 - Polished FabSheetWindow with Builder and listeners

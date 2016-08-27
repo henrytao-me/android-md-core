@@ -58,6 +58,11 @@
   <dimen name="mdLayoutSpacing_sm">8dp</dimen>
   <dimen name="mdLayoutSpacing_lg">32dp</dimen>
 
+  <dimen name="mdLayoutSpacingInverse">-16dp</dimen>
+  <dimen name="mdLayoutSpacingInverse_xs">-4dp</dimen>
+  <dimen name="mdLayoutSpacingInverse_sm">-8dp</dimen>
+  <dimen name="mdLayoutSpacingInverse_lg">-32dp</dimen>
+
   <dimen name="mdListItemHeight">56dp</dimen>
   <dimen name="mdListItemHeight_sm">48dp</dimen>
   <dimen name="mdListItemHeight_lg">72dp</dimen>
