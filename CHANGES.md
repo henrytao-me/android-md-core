@@ -1,5 +1,10 @@
 # android-md-core releases #
 
+### Version 3.3.3 - September 8th 2016 ###
+
+- Fixed toolbar title and subtitle in landscape mode
+
+
 ### Version 3.3.2 - August 27th 2016 ###
 
 - Support VectorDrawable for drawableLeftCompat, drawableRightCompat, drawableTopCompat, drawableBottomCompat, drawableStartCompat, drawableEndCompat
