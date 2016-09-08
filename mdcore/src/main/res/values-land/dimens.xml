@@ -19,4 +19,7 @@
   <dimen name="mdActionBarSize">48dp</dimen>
   <dimen name="mdSecondaryActionBarSize">42dp</dimen>
   <dimen name="mdSecondaryActionBarSizeWithIcon">62dp</dimen>
+
+  <dimen name="mdFontSize_toolbarTitle">18dp</dimen>
+  <dimen name="mdFontSize_toolbarSubtitle">12dp</dimen>
 </resources>
