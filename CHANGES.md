@@ -1,5 +1,10 @@
 # android-md-core releases #
 
+### Version 3.3.4 - September 9th 2016 ###
+
+- Fixed toolbar title and subtitle singleline
+
+
 ### Version 3.3.3 - September 8th 2016 ###
 
 - Fixed toolbar title and subtitle in landscape mode

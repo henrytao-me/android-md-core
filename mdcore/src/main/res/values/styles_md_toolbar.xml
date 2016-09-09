@@ -31,6 +31,8 @@
     <item name="android:textSize">@dimen/mdFontSize_toolbarTitle</item>
     <item name="android:textColor">?attr/mdTextColorPrimary_primaryPalette</item>
     <item name="mdFontWeight">@integer/mdFontWeight_title</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:ellipsize">end</item>
   </style>
 
   <style name="MdToolbar.Subtitle" parent="TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
@@ -39,5 +41,7 @@
     <item name="android:textSize">@dimen/mdFontSize_toolbarSubtitle</item>
     <item name="android:textColor">?attr/mdTextColorSecondary_primaryPalette</item>
     <item name="mdFontWeight">@integer/mdFontWeight_subhead1</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:ellipsize">end</item>
   </style>
 </resources>
