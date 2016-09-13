@@ -1,5 +1,10 @@
 # android-md-core releases #
 
+### Version 3.3.5 - September 13th 2016 ###
+
+- Fixed drawableLeft issue
+
+
 ### Version 3.3.4 - September 9th 2016 ###
 
 - Fixed toolbar title and subtitle singleline
