@@ -150,23 +150,43 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
   }
 
   protected void supportVectorDrawable(Context context, TextView view, AttributeSet attrs) {
-    Drawable[] drawables = MdVectorDrawableCompat.getFromAttribute(context, attrs,
+    Drawable[] drawablesCompat = MdVectorDrawableCompat.getFromAttribute(context, attrs,
         R.attr.drawableLeftCompat, R.attr.drawableTopCompat, R.attr.drawableRightCompat, R.attr.drawableBottomCompat,
         R.attr.drawableStartCompat, R.attr.drawableEndCompat);
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-      view.setCompoundDrawablesRelativeWithIntrinsicBounds(
-          drawables[4] != null ? drawables[4] : drawables[0],
-          drawables[1],
-          drawables[5] != null ? drawables[5] : drawables[2],
-          drawables[3]
-      );
-    } else {
-      view.setCompoundDrawablesWithIntrinsicBounds(
-          drawables[4] != null ? drawables[4] : drawables[0],
-          drawables[1],
-          drawables[5] != null ? drawables[5] : drawables[2],
-          drawables[3]
-      );
+    boolean shouldInitiate = false;
+    for (Drawable drawable : drawablesCompat) {
+      if (drawable != null) {
+        shouldInitiate = true;
+        break;
+      }
     }
+    if (shouldInitiate) {
+      Drawable[] drawables = view.getCompoundDrawables();
+      Drawable[] drawablesRelative;
+      if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN_MR1) {
+        drawablesRelative = view.getCompoundDrawablesRelative();
+      } else {
+        drawablesRelative = drawables;
+      }
+      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+        view.setCompoundDrawablesRelativeWithIntrinsicBounds(
+            getDrawable(drawablesCompat[4] != null ? drawablesCompat[4] : drawablesCompat[0], drawablesRelative[0], drawables[0]),
+            getDrawable(drawablesCompat[1], drawablesRelative[1], drawables[1]),
+            getDrawable(drawablesCompat[5] != null ? drawablesCompat[5] : drawablesCompat[2], drawablesRelative[2], drawables[2]),
+            getDrawable(drawablesCompat[3], drawablesRelative[3], drawables[3])
+        );
+      } else {
+        view.setCompoundDrawablesWithIntrinsicBounds(
+            getDrawable(drawablesCompat[4] != null ? drawablesCompat[4] : drawablesCompat[0], drawablesRelative[0], drawables[0]),
+            getDrawable(drawablesCompat[1], drawablesRelative[1], drawables[1]),
+            getDrawable(drawablesCompat[5] != null ? drawablesCompat[5] : drawablesCompat[2], drawablesRelative[2], drawables[2]),
+            getDrawable(drawablesCompat[3], drawablesRelative[3], drawables[3])
+        );
+      }
+    }
+  }
+
+  private Drawable getDrawable(Drawable compat, Drawable relative, Drawable normal) {
+    return compat != null ? compat : (relative != null ? relative : normal);
   }
 }
