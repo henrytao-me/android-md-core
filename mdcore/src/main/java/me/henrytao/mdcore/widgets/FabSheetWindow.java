@@ -176,6 +176,15 @@ public class FabSheetWindow {
     mOverlayAnimation.start();
   }
 
+  public void invalidate() {
+    if (mIsCreated) {
+      vOverlay.invalidate();
+      vContent.invalidate();
+      ViewCompat.setX(vSheetContainer, mFabInfo.bottomRight.x - vSheetContainer.getMeasuredWidth());
+      ViewCompat.setY(vSheetContainer, mFabInfo.bottomRight.y - vSheetContainer.getMeasuredHeight());
+    }
+  }
+
   public boolean isShowing() {
     return mShowing;
   }
@@ -210,6 +219,8 @@ public class FabSheetWindow {
       return;
     }
     mShowing = true;
+
+    invalidate();
 
     vFab.setVisibility(View.VISIBLE);
     vSheetContainer.setVisibility(View.INVISIBLE);
@@ -342,8 +353,7 @@ public class FabSheetWindow {
     vOverlay.measure(0, 0);
     vContent.measure(0, 0);
 
-    ViewCompat.setX(vSheetContainer, mFabInfo.bottomRight.x - vSheetContainer.getMeasuredWidth());
-    ViewCompat.setY(vSheetContainer, mFabInfo.bottomRight.y - vSheetContainer.getMeasuredHeight());
+    invalidate();
 
     vOverlay.setOnClickListener(new View.OnClickListener() {
       @Override
