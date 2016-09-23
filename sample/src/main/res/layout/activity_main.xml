@@ -66,10 +66,44 @@
     android:layout_gravity="start"
     android:clipToPadding="false"
     android:fitsSystemWindows="@bool/isFitSystemWindows"
+    android:paddingBottom="112dp"
     app:headerLayout="@layout/drawer_header"
     app:itemIconTint="?attr/mdTextColorPrimary_backgroundPalette"
     app:itemTextColor="?attr/mdTextColorPrimary_backgroundPalette"
-    app:menu="@menu/menu_drawer" />
+    app:menu="@menu/menu_drawer">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom"
+      android:layout_marginBottom="-112dp"
+      android:orientation="vertical">
+
+      <View style="@style/MdDivider" />
+
+      <View style="@style/MdListSpacing" />
+
+      <TextView
+        android:text="About"
+        style="@style/MdSubHeader.List" />
+
+      <RelativeLayout
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        style="@style/MdListItem.SingleLine.IconWithText">
+
+        <TextView
+          android:text="@string/text_help_and_feedback"
+          style="@style/Base.MdListItem.Title.Left" />
+
+        <ImageView
+          android:src="@drawable/ic_blank_transparent"
+          style="@style/Base.MdListItem.Icon" />
+      </RelativeLayout>
+
+      <View style="@style/MdListSpacing" />
+    </LinearLayout>
+  </android.support.design.widget.NavigationView>
 
   <android.support.design.widget.NavigationView
     android:id="@+id/navigation_view_right"
@@ -78,8 +112,42 @@
     android:layout_gravity="end"
     android:clipToPadding="false"
     android:fitsSystemWindows="@bool/isFitSystemWindows"
+    android:paddingBottom="112dp"
     app:headerLayout="@layout/drawer_header"
     app:itemIconTint="?attr/mdTextColorPrimary_backgroundPalette"
     app:itemTextColor="?attr/mdTextColorPrimary_backgroundPalette"
-    app:menu="@menu/menu_drawer" />
+    app:menu="@menu/menu_drawer">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom"
+      android:layout_marginBottom="-112dp"
+      android:orientation="vertical">
+
+      <View style="@style/MdDivider" />
+
+      <View style="@style/MdListSpacing" />
+
+      <TextView
+        android:text="About"
+        style="@style/MdSubHeader.List" />
+
+      <RelativeLayout
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        style="@style/MdListItem.SingleLine.IconWithText">
+
+        <TextView
+          android:text="@string/text_help_and_feedback"
+          style="@style/Base.MdListItem.Title.Left" />
+
+        <ImageView
+          android:src="@drawable/ic_blank_transparent"
+          style="@style/Base.MdListItem.Icon" />
+      </RelativeLayout>
+
+      <View style="@style/MdListSpacing" />
+    </LinearLayout>
+  </android.support.design.widget.NavigationView>
 </android.support.v4.widget.DrawerLayout>

@@ -298,14 +298,14 @@
   <!--</item>-->
   <!--</group>-->
 
-  <group android:id="@+id/group_about">
-    <item android:title="About">
-      <menu>
-        <item
-          android:id="@+id/menu_help_and_feedback"
-          android:icon="@drawable/ic_blank_transparent"
-          android:title="@string/text_help_and_feedback" />
-      </menu>
-    </item>
-  </group>
+  <!--<group android:id="@+id/group_about">-->
+    <!--<item android:title="About">-->
+      <!--<menu>-->
+        <!--<item-->
+          <!--android:id="@+id/menu_help_and_feedback"-->
+          <!--android:icon="@drawable/ic_blank_transparent"-->
+          <!--android:title="@string/text_help_and_feedback" />-->
+      <!--</menu>-->
+    <!--</item>-->
+  <!--</group>-->
 </menu>

@@ -150,9 +150,9 @@ public class MainActivity extends BaseActivity {
       case R.id.menu_text_field:
         intent = new Intent(this, TextFieldActivity.class);
         break;
-      case R.id.menu_help_and_feedback:
-        intent = new Intent(this, InfoActivity.class);
-        break;
+      //case R.id.menu_help_and_feedback:
+      //  intent = new Intent(this, InfoActivity.class);
+      //  break;
       case R.id.menu_typography:
         intent = new Intent(this, TypographyActivity.class);
         break;
