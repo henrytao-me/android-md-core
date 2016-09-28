@@ -1,5 +1,10 @@
 # android-md-core releases #
 
+### Version 3.3.6 - September 28th 2016 ###
+
+- Improved FabSheetWindow
+
+
 ### Version 3.3.5 - September 13th 2016 ###
 
 - Fixed drawableLeft issue
