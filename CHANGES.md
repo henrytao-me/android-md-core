@@ -1,5 +1,10 @@
 # android-md-core releases #
 
+### Version 3.3.7 - October 16th 2016 ###
+
+- Removed singleline in TextView style
+
+
 ### Version 3.3.6 - September 28th 2016 ###
 
 - Improved FabSheetWindow
