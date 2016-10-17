@@ -35,13 +35,13 @@
   <dimen name="mdFontSize_display3">56sp</dimen>
   <dimen name="mdFontSize_display4">112sp</dimen>
 
-  <dimen name="mdLineSpacingExtra_body1">8sp</dimen>
-  <dimen name="mdLineSpacingExtra_body2">10sp</dimen>
-  <dimen name="mdLineSpacingExtra_subhead1">8sp</dimen>
-  <dimen name="mdLineSpacingExtra_subhead2">12sp</dimen>
-  <dimen name="mdLineSpacingExtra_headline">8sp</dimen>
-  <dimen name="mdLineSpacingExtra_display1">6sp</dimen>
-  <dimen name="mdLineSpacingExtra_display2">3sp</dimen>
+  <dimen name="mdLeading_body1">20dp</dimen>
+  <dimen name="mdLeading_body2">24dp</dimen>
+  <dimen name="mdLeading_subhead1">24dp</dimen>
+  <dimen name="mdLeading_subhead2">28dp</dimen>
+  <dimen name="mdLeading_headline">32dp</dimen>
+  <dimen name="mdLeading_display1">40dp</dimen>
+  <dimen name="mdLeading_display2">48dp</dimen>
 
   <dimen name="mdFontSize_toolbarTitle">20dp</dimen>
   <dimen name="mdFontSize_toolbarSubtitle">16dp</dimen>

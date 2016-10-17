@@ -85,6 +85,24 @@
         app:mdTypography="fonts/custom/Cookie-Regular.ttf"
         tools:ignore="MissingPrefix"
         style="@style/MdText.Display1" />
+
+      <View style="@style/MdDivider" />
+
+      <TextView
+        android:text="@string/sample_others"
+        style="@style/MdText.Display2" />
+
+      <TextView
+        android:text="@string/sample_science"
+        style="@style/MdText.Subhead1" />
+
+      <TextView
+        android:text="@string/sample_others"
+        style="@style/MdText.Headline" />
+
+      <TextView
+        android:text="@string/sample_science"
+        style="@style/MdText.Body1" />
     </LinearLayout>
   </android.support.v4.widget.NestedScrollView>
 </LinearLayout>

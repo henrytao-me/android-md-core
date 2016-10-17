@@ -1,5 +1,10 @@
 # android-md-core releases #
 
+### Version 3.3.8 - October 17th 2016 ###
+
+- Added leading for TextView
+
+
 ### Version 3.3.7 - October 16th 2016 ###
 
 - Removed singleline in TextView style
