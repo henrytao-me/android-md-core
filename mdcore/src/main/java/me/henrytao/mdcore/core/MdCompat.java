@@ -29,6 +29,7 @@ import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.content.res.XmlResourceParser;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -47,6 +48,7 @@ import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import java.io.IOException;
 import java.lang.ref.WeakReference;
@@ -60,6 +62,15 @@ import me.henrytao.mdcore.widgets.CircularRevealFrameLayout;
  * Created by henrytao on 10/10/15.
  */
 public class MdCompat {
+
+  public static void applyLeading(TextView view, int dimensionPixelSize) {
+    float spacing = 0;
+    if (dimensionPixelSize > 0) {
+      Paint.FontMetricsInt metrics = view.getPaint().getFontMetricsInt();
+      spacing = dimensionPixelSize - (metrics.descent - metrics.ascent);
+    }
+    view.setLineSpacing(spacing, 1);
+  }
 
   @TargetApi(Build.VERSION_CODES.HONEYCOMB)
   public static Animator createCircularReveal(CircularRevealFrameLayout view, int centerX, int centerY, float startRadius,

@@ -154,4 +154,6 @@
   <string name="title_activity_card">CardView</string>
   <string name="title_activity_text_field">TextField</string>
   <string name="text_google">Google</string>
+  <string name="sample_others">Others have failed, I will not.</string>
+  <string name="sample_science">Science, my boy, is made up of mistakes, but they are mistakes which it is useful to make, because they lead little by little to the truth.</string>
 </resources>

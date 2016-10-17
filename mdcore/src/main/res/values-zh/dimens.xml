@@ -29,11 +29,11 @@
   <dimen name="mdFontSize_display3">56sp</dimen>
   <dimen name="mdFontSize_display4">112sp</dimen>
 
-  <dimen name="mdLineSpacingExtra_body1">8sp</dimen>
-  <dimen name="mdLineSpacingExtra_body2">11sp</dimen>
-  <dimen name="mdLineSpacingExtra_subhead1">9sp</dimen>
-  <dimen name="mdLineSpacingExtra_subhead2">13sp</dimen>
-  <dimen name="mdLineSpacingExtra_headline">10sp</dimen>
-  <dimen name="mdLineSpacingExtra_display1">14sp</dimen>
-  <dimen name="mdLineSpacingExtra_display2">18sp</dimen>
+  <dimen name="mdLeading_body1">23dp</dimen>
+  <dimen name="mdLeading_body2">26dp</dimen>
+  <dimen name="mdLeading_subhead1">26dp</dimen>
+  <dimen name="mdLeading_subhead2">30dp</dimen>
+  <dimen name="mdLeading_headline">34dp</dimen>
+  <dimen name="mdLeading_display1">48dp</dimen>
+  <dimen name="mdLeading_display2">63dp</dimen>
 </resources>

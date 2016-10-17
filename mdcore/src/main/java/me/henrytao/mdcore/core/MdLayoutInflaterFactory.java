@@ -129,6 +129,7 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
     }
     supportTypeface(context, view, attrs);
     supportVectorDrawable(context, view, attrs);
+    supportLeading(context, view, attrs);
   }
 
   protected void supportTypeface(Context context, TextView view, AttributeSet attrs) {
@@ -188,5 +189,18 @@ public class MdLayoutInflaterFactory implements LayoutInflaterFactory {
 
   private Drawable getDrawable(Drawable compat, Drawable relative, Drawable normal) {
     return compat != null ? compat : (relative != null ? relative : normal);
+  }
+
+  private void supportLeading(Context context, TextView view, AttributeSet attrs) {
+    int leading = 0;
+    TypedArray a = context.getTheme().obtainStyledAttributes(attrs, new int[]{
+        R.attr.mdLeading
+    }, 0, 0);
+    try {
+      leading = a.getDimensionPixelSize(0, 0);
+    } catch (Exception ignore) {
+    }
+    a.recycle();
+    MdCompat.applyLeading(view, leading);
   }
 }

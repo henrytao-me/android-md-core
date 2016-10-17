@@ -37,13 +37,12 @@
   <style name="MdText.Body1" parent="TextAppearance.AppCompat.Body1">
     <item name="android:layout_width">wrap_content</item>
     <item name="android:layout_height">wrap_content</item>
-    <item name="android:lineSpacingExtra">@dimen/mdLineSpacingExtra_body1</item>
     <item name="android:textSize">@dimen/mdFontSize_body1</item>
     <item name="mdFontWeight">@integer/mdFontWeight_body1</item>
+    <item name="mdLeading">@dimen/mdLeading_body1</item>
   </style>
 
   <style name="MdText.Body1.SingleLine">
-    <item name="android:lineSpacingExtra">0sp</item>
     <item name="android:ellipsize">end</item>
     <item name="android:maxLines">1</item>
   </style>
@@ -51,13 +50,12 @@
   <style name="MdText.Body2" parent="TextAppearance.AppCompat.Body2">
     <item name="android:layout_width">wrap_content</item>
     <item name="android:layout_height">wrap_content</item>
-    <item name="android:lineSpacingExtra">@dimen/mdLineSpacingExtra_body2</item>
     <item name="android:textSize">@dimen/mdFontSize_body2</item>
     <item name="mdFontWeight">@integer/mdFontWeight_body2</item>
+    <item name="mdLeading">@dimen/mdLeading_body2</item>
   </style>
 
   <style name="MdText.Body2.SingleLine">
-    <item name="android:lineSpacingExtra">0sp</item>
     <item name="android:ellipsize">end</item>
     <item name="android:maxLines">1</item>
   </style>
@@ -65,9 +63,9 @@
   <style name="MdText.Subhead1" parent="TextAppearance.AppCompat.Subhead">
     <item name="android:layout_width">wrap_content</item>
     <item name="android:layout_height">wrap_content</item>
-    <item name="android:lineSpacingExtra">@dimen/mdLineSpacingExtra_subhead1</item>
     <item name="android:textSize">@dimen/mdFontSize_subhead1</item>
     <item name="mdFontWeight">@integer/mdFontWeight_subhead1</item>
+    <item name="mdLeading">@dimen/mdLeading_subhead1</item>
   </style>
 
   <style name="MdText.Subhead1.SingleLine">
@@ -79,13 +77,12 @@
   <style name="MdText.Subhead2" parent="TextAppearance.AppCompat.Subhead">
     <item name="android:layout_width">wrap_content</item>
     <item name="android:layout_height">wrap_content</item>
-    <item name="android:lineSpacingExtra">@dimen/mdLineSpacingExtra_subhead2</item>
     <item name="android:textSize">@dimen/mdFontSize_subhead2</item>
     <item name="mdFontWeight">@integer/mdFontWeight_subhead2</item>
+    <item name="mdLeading">@dimen/mdLeading_subhead2</item>
   </style>
 
   <style name="MdText.Subhead2.SingleLine">
-    <item name="android:lineSpacingExtra">0sp</item>
     <item name="android:ellipsize">end</item>
     <item name="android:maxLines">1</item>
   </style>
@@ -102,13 +99,12 @@
   <style name="MdText.Headline" parent="TextAppearance.AppCompat.Headline">
     <item name="android:layout_width">wrap_content</item>
     <item name="android:layout_height">wrap_content</item>
-    <item name="android:lineSpacingExtra">@dimen/mdLineSpacingExtra_headline</item>
     <item name="android:textSize">@dimen/mdFontSize_headline</item>
     <item name="mdFontWeight">@integer/mdFontWeight_headline</item>
+    <item name="mdLeading">@dimen/mdLeading_headline</item>
   </style>
 
   <style name="MdText.Headline.SingleLine">
-    <item name="android:lineSpacingExtra">0sp</item>
     <item name="android:ellipsize">end</item>
     <item name="android:maxLines">1</item>
   </style>
@@ -116,13 +112,12 @@
   <style name="MdText.Display1" parent="TextAppearance.AppCompat.Display1">
     <item name="android:layout_width">wrap_content</item>
     <item name="android:layout_height">wrap_content</item>
-    <item name="android:lineSpacingExtra">@dimen/mdLineSpacingExtra_display1</item>
     <item name="android:textSize">@dimen/mdFontSize_display1</item>
     <item name="mdFontWeight">@integer/mdFontWeight_display1</item>
+    <item name="mdLeading">@dimen/mdLeading_display1</item>
   </style>
 
   <style name="MdText.Display1.SingleLine">
-    <item name="android:lineSpacingExtra">0sp</item>
     <item name="android:ellipsize">end</item>
     <item name="android:maxLines">1</item>
   </style>
@@ -130,13 +125,12 @@
   <style name="MdText.Display2" parent="TextAppearance.AppCompat.Display2">
     <item name="android:layout_width">wrap_content</item>
     <item name="android:layout_height">wrap_content</item>
-    <item name="android:lineSpacingExtra">@dimen/mdLineSpacingExtra_display2</item>
     <item name="android:textSize">@dimen/mdFontSize_display2</item>
     <item name="mdFontWeight">@integer/mdFontWeight_display2</item>
+    <item name="mdLeading">@dimen/mdLeading_display2</item>
   </style>
 
   <style name="MdText.Display2.SingleLine">
-    <item name="android:lineSpacingExtra">0sp</item>
     <item name="android:ellipsize">end</item>
     <item name="android:maxLines">1</item>
   </style>
