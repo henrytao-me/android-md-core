@@ -31,8 +31,6 @@ import me.henrytao.mdcore.utils.Typography;
  */
 public class MdToolbar extends Toolbar {
 
-  private boolean mInit;
-
   private Typeface mSubtitleTypeface;
 
   private Typeface mTitleTypeface;
@@ -58,6 +56,14 @@ public class MdToolbar extends Toolbar {
   @Override
   public void setTitle(CharSequence title) {
     super.setTitle(Typography.applyTypeface(title, mTitleTypeface));
+  }
+
+  public void setSubtitleTypeface(Typeface subtitleTypeface) {
+    mSubtitleTypeface = subtitleTypeface;
+  }
+
+  public void setTitleTypeface(Typeface titleTypeface) {
+    mTitleTypeface = titleTypeface;
   }
 
   private void initFromAttributes(AttributeSet attrs, int defStyleAttr) {
