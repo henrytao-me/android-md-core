@@ -1,5 +1,9 @@
 # android-md-core releases #
 
+### Version 3.3.9 - October 17th 2016 ###
+
+- Updated API for MdToolbar
+
 ### Version 3.3.8 - October 17th 2016 ###
 
 - Added leading for TextView
