@@ -56,6 +56,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import me.henrytao.mdcore.R;
+import me.henrytao.mdcore.utils.Ln;
 import me.henrytao.mdcore.widgets.CircularRevealFrameLayout;
 
 /**
@@ -354,10 +355,8 @@ public class MdCompat {
           break;
       }
       return MdCompat.createDrawableTint(drawable, null, getColorStateList(context, resId), null);
-    } catch (IOException e) {
-      e.printStackTrace();
-    } catch (XmlPullParserException e) {
-      e.printStackTrace();
+    } catch (IOException | XmlPullParserException e) {
+      Ln.d(e);
     }
     return drawable;
   }

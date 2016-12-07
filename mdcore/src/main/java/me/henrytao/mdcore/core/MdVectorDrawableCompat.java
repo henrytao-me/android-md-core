@@ -30,6 +30,8 @@ import android.support.graphics.drawable.VectorDrawableCompat;
 import android.util.AttributeSet;
 import android.util.Xml;
 
+import me.henrytao.mdcore.utils.Ln;
+
 /**
  * Created by henrytao on 5/5/16.
  */
@@ -59,8 +61,8 @@ public class MdVectorDrawableCompat {
         int tintId = a.getResourceId(0, 0);
         a.recycle();
         drawable.setTintList(MdCompat.getColorStateList(context, tintId));
-      } catch (Exception ignore) {
-        ignore.printStackTrace();
+      } catch (Exception e) {
+        Ln.d(e);
       }
     }
 
